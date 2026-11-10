@@ -167,3 +167,13 @@ Vercel's disk is ephemeral. Parsed quarters are `series_quarter`, keyed by symbo
 `/api/feed` returns a stored snapshot when one exists for that as-of, window, symbol list, and thresholds. Otherwise it computes and stores. `/api/ledger` returns `{progress, ledger}` and does one uncached stage per call (discover, then the series, then one guidance batch) so a cold ticker stays inside 60 seconds. The client repeats until `stage` is `complete`. `/api/alerts/config` is the defaults, 5% and 2.5x.
 
 `scripts/snapshot.py` wrote the 6 Nov 2026 feeds (24h and 72h, default portfolio, default thresholds) and the ledgers for MARICO, ASIANPAINT, TITAN, CGPOWER, and DMART into Supabase and into `data/snapshot`. The 24h feed was 2 cards and 5 alerts, the 72h feed 10 cards and 8 alerts, both at 0 model tokens because the extractions were already cached. CG Power and DMart needed a fresh guidance pass (about 13,400 and 5,600 tokens). If Supabase is paused, those same JSON files are what the API serves. A ticker with no file, such as a cold PIDILITIND, still needs the live cache and NSE.
+
+Production is `https://finn-r4y3.vercel.app`. Checked 10 Nov 2026 after the env vars were set.
+
+| Call | Seconds | Result |
+| --- | --- | --- |
+| `GET /api/feed?as_of=2026-11-06&hours=72` | 1.44 | `source=cache`, 10 cards, 8 alerts, 0 tokens. Window 3 Nov 23:59:59 to 6 Nov 23:59:59. |
+| `GET /api/ledger?symbol=MARICO` | 0.94 | `source=cache`, complete 7/7, 0 tokens. Verdict: +144 bps against 140–150 bps, 16.51% against at least 10%, 25.76% against 17–19%. |
+| PIDILITIND, 9 calls | 6.44, 11.11, 17.83, 9.59, 6.06, 5.81, 7.80, 4.69, 10.42 | discover 7/7, series 6/10, then one transcript per call until complete 7/7. About 21,100 guidance tokens plus one verdict. Slowest call 17.83s. |
+
+BSE stays out of this path: 403 from Washington and from Mumbai. NSE answered from Mumbai, which is why the function region is `bom1`. The 6 Nov feed is the stored replay, not a live re-download. PIDILITIND had no snapshot file, so those nine calls were live. The verdict it stored compares a 23.96% margin with a "at least 200 bps" promise and marks it missed. That comparison is not trusted until the basis-point row is checked.
