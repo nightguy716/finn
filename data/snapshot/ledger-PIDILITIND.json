@@ -1,0 +1,439 @@
+{
+  "symbol": "PIDILITIND",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 1,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 24,
+    "pages_dropped_by_prefilter": 2,
+    "dropped_pages": [
+      {
+        "period": "2026-03-31",
+        "page": 7
+      },
+      {
+        "period": "2026-03-31",
+        "page": 18
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 4297.59,
+    "ebitda_margin_pct": 20.42,
+    "pat": 614.53,
+    "ttm_revenue": 16142.43,
+    "ttm_pat": 2684.22,
+    "ttm_ebitda_margin_pct": 23.54,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 4297.59,
+        "ebitda": 877.48,
+        "ebitda_margin_pct": 20.42,
+        "pat": 614.53,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 4551.55,
+        "ebitda": 1208.3,
+        "ebitda_margin_pct": 26.55,
+        "pat": 872.41,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 3583.38,
+        "ebitda": 824.87,
+        "ebitda_margin_pct": 23.02,
+        "pat": 579.27,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 3709.91,
+        "ebitda": 888.71,
+        "ebitda_margin_pct": 23.96,
+        "pat": 618.01,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 3554.44,
+        "ebitda": 850.73,
+        "ebitda_margin_pct": 23.93,
+        "pat": 579.23,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 3753.1,
+        "ebitda": 940.98,
+        "ebitda_margin_pct": 25.07,
+        "pat": 672.41,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Volume growth at least 11% for 2025-12-31",
+      "source_quote": "If you look at our total domestic business, which is made up of both Consumer, Bazaar as well as the B2B business, that reported underlying",
+      "page": 3,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ecbc316a-5f8d-4143-8061-df7980b55a66.pdf",
+      "speaker": "",
+      "period_promised": "2025-12-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 11%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "Not in the quote: 11",
+      "scope": "geography",
+      "scope_name": "domestic business",
+      "metric_key": "volume_growth",
+      "target_low": 11.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-01",
+      "calls": [
+        {
+          "date": "2026-02-01",
+          "call_period": "2025-12-31",
+          "page": 3,
+          "quote": "If you look at our total domestic business, which is made up of both Consumer, Bazaar as well as the B2B business, that reported underlying",
+          "document": "AnnPdfOpen.aspx?Pname=ecbc316a-5f8d-4143-8061-df7980b55a66.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 20\u201324% for FY2027",
+      "source_quote": "we have guided a corridor of 20% to 24%. We stay committed to that guidance.",
+      "page": 12,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=badde5e7-23d3-4f3f-8c8f-4075465709a8.pdf",
+      "speaker": "Sudhanshu Vats",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20\u201324%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 20.0,
+      "target_high": 24.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-01",
+      "calls": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 12,
+          "quote": "we have guided a corridor of 20% to 24%. We stay committed to that guidance.",
+          "document": "AnnPdfOpen.aspx?Pname=badde5e7-23d3-4f3f-8c8f-4075465709a8.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 7\u20138% for FY2025",
+      "source_quote": "waterproofing volume trends have behaved versus 7%-8% volume growth that we have clocked for C&B for FY25.",
+      "page": 16,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=654252c5-fb4c-4abe-91d6-e40111e87bac.pdf",
+      "speaker": "Latika Chopra",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20138%",
+      "status": "segment_level",
+      "note": "C&B guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "scope": "segment",
+      "scope_name": "C&B",
+      "metric_key": "volume_growth",
+      "target_low": 7.0,
+      "target_high": 8.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-01",
+      "calls": [
+        {
+          "date": "2025-05-01",
+          "call_period": "2025-03-31",
+          "page": 16,
+          "quote": "waterproofing volume trends have behaved versus 7%-8% volume growth that we have clocked for C&B for FY25.",
+          "document": "AnnPdfOpen.aspx?Pname=654252c5-fb4c-4abe-91d6-e40111e87bac.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex 3\u20135% for FY2027",
+      "source_quote": "Our capex tends to be actually 3% to 5% of our revenue turnover.",
+      "page": 15,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=badde5e7-23d3-4f3f-8c8f-4075465709a8.pdf",
+      "speaker": "Sudhanshu Vats",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3\u20135%",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 3.0,
+      "target_high": 5.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-01",
+      "calls": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 15,
+          "quote": "Our capex tends to be actually 3% to 5% of our revenue turnover.",
+          "document": "AnnPdfOpen.aspx?Pname=badde5e7-23d3-4f3f-8c8f-4075465709a8.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 20\u201324% for an unnamed period",
+      "source_quote": "We have always called out that we are very comfortable to operate within an EBITDA corridor of 20% to 24%.",
+      "page": 8,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6a2bb53f-48f2-4cc3-ae99-19720542aa0f.pdf",
+      "speaker": "Sandeep Batra",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20\u201324%",
+      "status": "not_scored",
+      "note": "The period is not stated.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 20.0,
+      "target_high": 24.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-01",
+      "calls": [
+        {
+          "date": "2025-11-01",
+          "call_period": "2025-09-30",
+          "page": 8,
+          "quote": "We have always called out that we are very comfortable to operate within an EBITDA corridor of 20% to 24%.",
+          "document": "AnnPdfOpen.aspx?Pname=6a2bb53f-48f2-4cc3-ae99-19720542aa0f.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex 3\u20135% for an unnamed period",
+      "source_quote": "our capex will be anywhere between 3% to 5% of sales.",
+      "page": 9,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6a2bb53f-48f2-4cc3-ae99-19720542aa0f.pdf",
+      "speaker": "Sandeep Batra",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3\u20135%",
+      "status": "not_scored",
+      "note": "The period is not stated.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 3.0,
+      "target_high": 5.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-01",
+      "calls": [
+        {
+          "date": "2025-11-01",
+          "call_period": "2025-09-30",
+          "page": 9,
+          "quote": "our capex will be anywhere between 3% to 5% of sales.",
+          "document": "AnnPdfOpen.aspx?Pname=6a2bb53f-48f2-4cc3-ae99-19720542aa0f.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 10.2% for 2025-03-31",
+      "source_quote": "So, the quarter's standalone revenue growth was 10.2%.",
+      "page": 3,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=654252c5-fb4c-4abe-91d6-e40111e87bac.pdf",
+      "speaker": "Arun Baid",
+      "period_promised": "2025-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10.2%",
+      "status": "not_scored",
+      "note": "The quote is standalone, not the consolidated series.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 10.2,
+      "target_high": 10.2,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-01",
+      "calls": [
+        {
+          "date": "2025-05-01",
+          "call_period": "2025-03-31",
+          "page": 3,
+          "quote": "So, the quarter's standalone revenue growth was 10.2%.",
+          "document": "AnnPdfOpen.aspx?Pname=654252c5-fb4c-4abe-91d6-e40111e87bac.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 9.3% for 2025-12-31",
+      "source_quote": "In the current quarter, our stand-alone revenue was INR3,425 crores, nominal growth of 11%, but the underlying volume growth (\u2018UVG\u2019) was 9.3%.",
+      "page": 3,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ecbc316a-5f8d-4143-8061-df7980b55a66.pdf",
+      "speaker": "",
+      "period_promised": "2025-12-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "9.3%",
+      "status": "not_scored",
+      "note": "The quote is standalone, not the consolidated series.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 9.3,
+      "target_high": 9.3,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-01",
+      "calls": [
+        {
+          "date": "2026-02-01",
+          "call_period": "2025-12-31",
+          "page": 3,
+          "quote": "In the current quarter, our stand-alone revenue was INR3,425 crores, nominal growth of 11%, but the underlying volume growth (\u2018UVG\u2019) was 9.3%.",
+          "document": "AnnPdfOpen.aspx?Pname=ecbc316a-5f8d-4143-8061-df7980b55a66.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin at least 200 bps for 2025-12-31",
+      "source_quote": "Our gross margins at a stand-alone level improved by about 200 basis points as input prices remained benign.",
+      "page": 4,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ecbc316a-5f8d-4143-8061-df7980b55a66.pdf",
+      "speaker": "",
+      "period_promised": "2025-12-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 200 bps",
+      "status": "not_scored",
+      "note": "The quote is a standalone gross margin, not the consolidated EBITDA margin.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 200.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-01",
+      "calls": [
+        {
+          "date": "2026-02-01",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "Our gross margins at a stand-alone level improved by about 200 basis points as input prices remained benign.",
+          "document": "AnnPdfOpen.aspx?Pname=ecbc316a-5f8d-4143-8061-df7980b55a66.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.24,
+    "series": 0.73,
+    "guidance": 1.18,
+    "check": 0.0,
+    "verdict": 0.06,
+    "total": 2.21
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 7,
+      "tokens": 0,
+      "dropped": 1
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

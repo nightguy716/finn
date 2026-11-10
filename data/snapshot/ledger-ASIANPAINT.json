@@ -176,7 +176,7 @@
       "period_promised": "FY2026",
       "actual": "18.37%",
       "actual_value": 18.37,
-      "actual_detail": "",
+      "actual_detail": "FY2026 EBITDA margin 18.37%.",
       "promised": "18\u201320%",
       "status": "delivered",
       "note": "",
@@ -415,38 +415,6 @@
       ]
     },
     {
-      "promise": "Volume growth 8\u20139% for an unnamed period",
-      "source_quote": "we feel that it would be reasonable to expect to see a volume growth of about 8% to 9% going forward.",
-      "page": 29,
-      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf",
-      "speaker": "Amit Syngle",
-      "period_promised": "",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "8\u20139%",
-      "status": "not_checkable",
-      "note": "Volume and capex cannot be verified from the quarterly series.",
-      "quote_check": "ok",
-      "scope": "consolidated",
-      "scope_name": "",
-      "metric_key": "volume_growth",
-      "target_low": 8.0,
-      "target_high": 9.0,
-      "call_period": "2026-09-30",
-      "call_date": "2026-11-03",
-      "calls": [
-        {
-          "date": "2026-11-03",
-          "call_period": "2026-09-30",
-          "page": 29,
-          "quote": "we feel that it would be reasonable to expect to see a volume growth of about 8% to 9% going forward.",
-          "document": "ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf"
-        }
-      ],
-      "revisions": []
-    },
-    {
       "promise": "Volume growth 8\u201310% for 2026-03-31",
       "source_quote": "anything in the volume, in the current context, which is between that 8% - 10% is a good growth",
       "page": 34,
@@ -533,6 +501,38 @@
           "quote": "I've spoken of that 8-10% as an overall volume band for the entire year."
         }
       ]
+    },
+    {
+      "promise": "Volume growth 8\u20139% for an unnamed period",
+      "source_quote": "we feel that it would be reasonable to expect to see a volume growth of about 8% to 9% going forward.",
+      "page": 29,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u20139%",
+      "status": "not_scored",
+      "note": "The period is not stated.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 8.0,
+      "target_high": 9.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-03",
+      "calls": [
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "page": 29,
+          "quote": "we feel that it would be reasonable to expect to see a volume growth of about 8% to 9% going forward.",
+          "document": "ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf"
+        }
+      ],
+      "revisions": []
     }
   ],
   "long_term_targets": [],
@@ -628,19 +628,19 @@
       }
     ]
   },
-  "verdict": "Against the promised EBITDA margin of 18\u201320% for FY2027, the actual H1 FY2027 EBITDA margin was 18.16% compared to 17.91% a year earlier. Furthermore, the actual EBITDA margin delivered for FY2026 was 18.37% against the promised 18\u201320%.",
+  "verdict": "An actual EBITDA margin of 18.37% was delivered against the promised 18\u201320% for FY2026. For FY2027, the actual H1 EBITDA margin reached 18.16% against the promised 18\u201320%, up 25 bps from 17.91% a year earlier.",
   "progress": {
     "stage": "complete",
     "done": 7,
     "total": 7
   },
   "timing": {
-    "discover": 1.03,
-    "series": 0.84,
-    "guidance": 1.5,
+    "discover": 0.7,
+    "series": 0.64,
+    "guidance": 1.35,
     "check": 0.0,
-    "verdict": 0.1,
-    "total": 3.47
+    "verdict": 0.06,
+    "total": 2.75
   },
   "usage": {
     "guidance": {
@@ -653,7 +653,7 @@
       "calls": 0,
       "cache_hits": 1,
       "tokens": 0,
-      "model": "gemini-3.5-flash-lite"
+      "model": "gemini-3.6-flash"
     },
     "total_tokens": 0
   }

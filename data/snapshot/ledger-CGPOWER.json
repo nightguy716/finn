@@ -137,18 +137,18 @@
     "total": 6
   },
   "timing": {
-    "discover": 1.2,
-    "series": 0.78,
-    "guidance": 6.31,
+    "discover": 0.86,
+    "series": 0.79,
+    "guidance": 1.3,
     "check": 0.0,
-    "verdict": 0.11,
-    "total": 8.4
+    "verdict": 0.06,
+    "total": 3.01
   },
   "usage": {
     "guidance": {
-      "calls": 2,
-      "cache_hits": 3,
-      "tokens": 4231,
+      "calls": 0,
+      "cache_hits": 6,
+      "tokens": 0,
       "dropped": 0
     },
     "verdict": {
@@ -157,6 +157,6 @@
       "tokens": 0,
       "model": ""
     },
-    "total_tokens": 4231
+    "total_tokens": 0
   }
 }

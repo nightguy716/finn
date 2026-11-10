@@ -231,6 +231,52 @@ class PromiseTests(unittest.TestCase):
         self.assertEqual(apply_word_bands(evidence, None, None, "revenue_growth"), (10.0, None))
         self.assertEqual(apply_word_bands(evidence, None, None, "ebitda_growth"), (17.0, 19.0))
 
+    def test_a_basis_point_promise_is_a_change_and_a_gross_margin_is_not_scored(self):
+        quarters = [
+            quarter("2025-12-31", 100, 20, 10, 20),
+            quarter("2024-12-31", 100, 18, 8, 18),
+        ]
+        change = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 200,
+                "target_high": None,
+                "direction": "",
+                "horizon": "quarter",
+                "target_period": "2025-12-31",
+                "evidence": "We expect EBITDA margin to expand by about 200 basis points",
+                "page": 4,
+                "source_document": "https://example/p.pdf",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            quarters,
+            date(2026, 11, 10),
+        )
+        self.assertEqual(change["status"], "delivered")
+        self.assertEqual(change["actual"], "+200 bps")
+        self.assertNotIn("%", change["actual"])
+        gross = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 200,
+                "target_high": None,
+                "direction": "",
+                "horizon": "quarter",
+                "target_period": "2025-12-31",
+                "evidence": "Our gross margins at a stand-alone level improved by about 200 basis points as input prices remained benign.",
+                "page": 4,
+                "source_document": "https://example/p.pdf",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            quarters,
+            date(2026, 11, 10),
+        )
+        self.assertEqual(gross["status"], "not_scored")
+        self.assertIsNone(gross["actual"])
+        self.assertIn("gross", gross["note"])
+
     def test_a_reported_margin_is_not_scored(self):
         row = judge_promise(
             {

@@ -356,7 +356,7 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
     direction = promise.get("direction") or ""
     if low is None and high is None and not _MOVEMENT.search(evidence):
         return None
-    if _reported_result(evidence):
+    if _reported_result(evidence) and not _other_margin(evidence):
         return None
     bps = bool(re.search(r"basis point|\bbps\b", evidence, re.I))
     row = {
@@ -387,6 +387,9 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         row["status"] = "low_confidence"
         row["note"] = "The quoted sentence does not name the metric."
         return row
+    blocked = _unit_block(row, key, bps)
+    if blocked:
+        return row
     if row["scope"] in ("segment", "geography", "other"):
         row["status"] = "segment_level"
         named = row["scope_name"] or row["scope"]
@@ -412,10 +415,12 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         row["note"] = "The quote does not name a quarter or a fiscal year."
         return row
     if kind == "fiscal_year" and latest is not None and end > latest:
-        measured, detail = _ytd_measure(key, end.year, latest, by_period, bps)
+        measured, detail, unit = _ytd_measure(key, end.year, latest, by_period, bps)
         if measured is None:
             row["status"] = "pending"
             row["note"] = detail
+            return row
+        if _reject_scored(row, key, bps, measured, unit, direction):
             return row
         row["status"] = compare_tracking(measured, low, high)
         row["actual_value"] = measured
@@ -429,12 +434,14 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         row["note"] = f"The period ends {end.isoformat()}, after the latest reported quarter {shown}."
         return row
     if kind == "fiscal_year":
-        measured, note = _fy_measure(key, end.year, by_period, direction, low, high)
+        measured, note, unit = _fy_measure(key, end.year, by_period, direction, low, high, bps)
     else:
-        measured, note = _quarter_measure(key, end, by_period, direction, low, high)
+        measured, note, unit = _quarter_measure(key, end, by_period, direction, low, high, bps)
     if measured is None:
         row["status"] = "pending" if "outside" in note or "missing" in note else "not_checkable"
         row["note"] = note
+        return row
+    if _reject_scored(row, key, bps, measured, unit, direction):
         return row
     status = compare_target(measured, low, high, direction if low is None and high is None else "")
     if status == "not_checkable":
@@ -442,16 +449,86 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         return row
     row["status"] = status
     row["actual_value"] = measured
-    row["actual"] = f"{measured:g}%"
+    row["actual"] = _format_actual(measured, bps)
     row["actual_detail"] = note
     return row
+
+
+def _other_margin(evidence: str) -> bool:
+    gross = bool(re.search(r"gross margin", evidence or "", re.I)) and not re.search(r"\bebitda\b|\bpbdit\b", evidence or "", re.I)
+    alone = bool(re.search(r"stand-?alone", evidence or "", re.I))
+    return gross or alone
+
+
+def _unit_block(row: dict, key: str, bps: bool) -> bool:
+    """Refuse a row whose quote is a different margin or a different reporting basis."""
+    evidence = row.get("source_quote") or ""
+    gross = bool(re.search(r"gross margin", evidence, re.I)) and not re.search(r"\bebitda\b|\bpbdit\b", evidence, re.I)
+    alone = bool(re.search(r"stand-?alone", evidence, re.I))
+    if gross or alone:
+        if gross and alone and key == "ebitda_margin":
+            reason = "The quote is a standalone gross margin, not the consolidated EBITDA margin."
+        elif gross and key == "ebitda_margin":
+            reason = "The quote is a gross margin, not the EBITDA margin."
+        elif alone:
+            reason = "The quote is standalone, not the consolidated series."
+        else:
+            reason = "The quote is a gross margin, not the consolidated EBITDA margin."
+        _not_scored(row, reason)
+        return True
+    if bps and key != "ebitda_margin":
+        _not_scored(row, "A basis-point figure is a margin change, not this metric.")
+        return True
+    if not row.get("period_promised"):
+        _not_scored(row, "The period is not stated.")
+        return True
+    if (row.get("scope") or "") not in ("consolidated", "segment", "geography", "other"):
+        _not_scored(row, "The scope is not stated.")
+        return True
+    return False
+
+
+def _expected_unit(key: str, bps: bool, low, high, direction: str) -> str:
+    """What kind of number the promise is asking to be scored against."""
+    if bps:
+        return "bps_change"
+    if key in ("revenue_growth", "ebitda_growth", "pat_growth"):
+        return "pct_change"
+    if key == "ebitda_margin" and low is None and high is None and direction:
+        return "pp_change"
+    return "pct_level"
+
+
+def _reject_scored(row: dict, key: str, bps: bool, measured, unit: str, direction: str = "") -> bool:
+    """A scored status needs the promise and the actual in the same kind of number."""
+    if measured is None or not unit:
+        _not_scored(row, "There is no actual in the same unit as the promise.")
+        return True
+    expected = _expected_unit(key, bps, row.get("target_low"), row.get("target_high"), direction)
+    if unit != expected:
+        _not_scored(row, "The promise and the actual are not in the same unit.")
+        return True
+    if bps and not re.search(r"basis point|\bbps\b", row.get("source_quote") or "", re.I):
+        _not_scored(row, "The quote does not state basis points.")
+        return True
+    if key == "ebitda_margin" and not bps and re.search(r"basis point|\bbps\b", row.get("source_quote") or "", re.I):
+        _not_scored(row, "The quote is a basis-point change, not a margin level.")
+        return True
+    return False
+
+
+def _not_scored(row: dict, reason: str) -> None:
+    row["status"] = "not_scored"
+    row["note"] = reason
+    row["actual"] = None
+    row["actual_value"] = None
 
 
 def merge_rows(rows: list[dict]) -> tuple[list[dict], list[dict], dict]:
     """One row per metric and period. Repeats list the calls. A changed number is a revision."""
     groups: dict[tuple, list[dict]] = {}
     for row in rows:
-        confidence = "low" if row["status"] == "low_confidence" else "named"
+        confidence = "low" if row["status"] in ("low_confidence", "not_scored") else "named"
         groups.setdefault(
             (row["metric_key"], row["period_promised"], _unit(row), confidence, row.get("scope") or "consolidated"),
             [],
@@ -531,7 +608,7 @@ def _reported_result(evidence: str) -> bool:
     if re.search(r"guidan|expect|target|outlook|\baim\b|aspire|maintain|going forward|next year|full year|this year", evidence or "", re.I):
         return False
     return re.search(
-        r"\b(delivered|have gone|has gone|have achieved|was |were |stood at|we've got|we got|driven by|been able|over the quarters?|grew by|growth has been)\b",
+        r"\b(delivered|have gone|has gone|have achieved|was |were |stood at|we've got|we got|driven by|been able|over the quarters?|grew by|growth has been|improved|expanded by)\b",
         evidence or "",
         re.I,
     ) is not None
@@ -936,81 +1013,91 @@ def _verdict(symbol: str, coverage: dict, rows: list[dict], revisions: dict, cac
     return line
 
 
-def _fy_measure(key, year, by_period, direction, low, high):
+def _fy_measure(key, year, by_period, direction, low, high, bps: bool = False):
     quarters = _fy_quarters(year)
     rows = [by_period.get(day.isoformat()) for day in quarters]
     if any(row is None or row.get("revenue") is None for row in rows):
         missing = [day.isoformat() for day, row in zip(quarters, rows) if row is None or row.get("revenue") is None]
-        return None, "FY" + str(year) + " is missing " + ", ".join(missing) + ", so the year is not checked."
+        return None, "FY" + str(year) + " is missing " + ", ".join(missing) + ", so the year is not checked.", None
     if key == "ebitda_margin":
         level = _span_margin(quarters, by_period)
         if level is None:
-            return None, f"FY{year} EBITDA is missing in a quarter, so the margin is not checked."
-        if low is None and high is None and direction:
+            return None, f"FY{year} EBITDA is missing in a quarter, so the margin is not checked.", None
+        if bps or (low is None and high is None and direction):
             base = _fy_margin(year - 1, by_period)
             if base is None:
-                return None, f"FY{year - 1} is outside the series, so a change in margin cannot be checked."
-            return round(level - base, 2), ""
-        return level, ""
+                return None, f"FY{year - 1} is outside the series, so a change in margin cannot be checked.", None
+            change = round((level - base) * 100) if bps else round(level - base, 2)
+            if bps:
+                return change, f"FY{year} EBITDA margin {level:.2f}% versus {base:.2f}% a year earlier ({change:+d} bps)", "bps_change"
+            return change, "", "pp_change"
+        return level, f"FY{year} EBITDA margin {level:.2f}%.", "pct_level"
     current = _fy_sum(year, by_period, _field(key))
     base = _fy_sum(year - 1, by_period, _field(key))
     if current is None or base in (None, 0):
-        return None, f"The year before FY{year} is outside the series, so growth is not checked."
-    return round((current / base - 1.0) * 100.0, 2), ""
+        return None, f"The year before FY{year} is outside the series, so growth is not checked.", None
+    return round((current / base - 1.0) * 100.0, 2), "", "pct_change"
 
 
 def _ytd_measure(key, year, latest: date, by_period, bps: bool):
     days = [day for day in _fy_quarters(year) if day <= latest]
     if not days:
-        return None, f"No quarter of FY{year} has been reported."
+        return None, f"No quarter of FY{year} has been reported.", None
     prior = [_shift_year(day) for day in days]
     label = {1: "Q1", 2: "H1", 3: "9M"}[len(days)]
     if key == "ebitda_margin":
         current = _span_margin(days, by_period)
         base = _span_margin(prior, by_period)
         if current is None:
-            return None, f"{label} FY{year} is missing a quarter, so the margin is not tracked."
+            return None, f"{label} FY{year} is missing a quarter, so the margin is not tracked.", None
         if base is None:
-            return None, f"The year-ago {label} is not in the series, so the margin is not tracked."
+            return None, f"The year-ago {label} is not in the series, so the margin is not tracked.", None
         change = round((current - base) * 100)
         detail = (
             f"{label} FY{year} EBITDA margin {current:.2f}% versus {base:.2f}% a year earlier ({change:+d} bps)"
         )
-        return (change if bps else current), detail
+        if bps:
+            return change, detail, "bps_change"
+        return current, detail, "pct_level"
     field = _field(key)
     current = _span_sum(days, by_period, field)
     base = _span_sum(prior, by_period, field)
     if current is None:
-        return None, f"{label} FY{year} is missing a quarter, so growth is not tracked."
+        return None, f"{label} FY{year} is missing a quarter, so growth is not tracked.", None
     if base in (None, 0):
-        return None, f"The year-ago {label} is not in the series, so growth is not tracked."
+        return None, f"The year-ago {label} is not in the series, so growth is not tracked.", None
     growth = round((current / base - 1.0) * 100.0, 2)
     name = {"ebitda": "EBITDA", "pat": "PAT", "revenue": "revenue"}[field]
     detail = f"{label} FY{year} {name} {current:,.2f} versus {label} FY{year - 1} {name} {base:,.2f}"
-    return growth, detail
+    return growth, detail, "pct_change"
 
 
-def _quarter_measure(key, end: date, by_period, direction, low, high):
+def _quarter_measure(key, end: date, by_period, direction, low, high, bps: bool = False):
     row = by_period.get(end.isoformat())
     if row is None or row.get("revenue") is None:
-        return None, f"{end.isoformat()} has no quarter figures."
+        return None, f"{end.isoformat()} has no quarter figures.", None
     if key == "ebitda_margin":
         level = row.get("ebitda_margin_pct")
         if level is None:
-            return None, f"{end.isoformat()} has no EBITDA margin."
-        if low is None and high is None and direction:
+            return None, f"{end.isoformat()} has no EBITDA margin.", None
+        if bps or (low is None and high is None and direction):
             base = _margin_on(_shift_year(end), by_period)
             if base is None:
-                return None, f"The year-ago margin for {end.isoformat()} is not in the series."
-            return round(level - base, 2), ""
-        return level, ""
+                return None, f"The year-ago margin for {end.isoformat()} is not in the series.", None
+            change = round((level - base) * 100) if bps else round(level - base, 2)
+            if bps:
+                return change, (
+                    f"{end.isoformat()} EBITDA margin {level:.2f}% versus {base:.2f}% a year earlier ({change:+d} bps)"
+                ), "bps_change"
+            return change, "", "pp_change"
+        return level, f"{end.isoformat()} EBITDA margin {level:.2f}%.", "pct_level"
     field = _field(key)
     current = row.get(field)
     base_row = by_period.get(_shift_year(end).isoformat())
     base = None if base_row is None else base_row.get(field)
     if current is None or base in (None, 0):
-        return None, f"The year-ago {field} for {end.isoformat()} is not in the series."
-    return round((current / base - 1.0) * 100.0, 2), ""
+        return None, f"The year-ago {field} for {end.isoformat()} is not in the series.", None
+    return round((current / base - 1.0) * 100.0, 2), "", "pct_change"
 
 
 def _fy_quarters(year: int) -> list[date]:
