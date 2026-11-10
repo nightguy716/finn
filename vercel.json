@@ -1,9 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "regions": ["iad1"],
+  "regions": ["bom1"],
   "functions": {
     "api/probe.py": {
-      "maxDuration": 60,
+      "maxDuration": 120,
       "excludeFiles": "{spike/**,.venv/**,**/.venv/**}"
     }
   }
