@@ -4,6 +4,8 @@ import unittest
 from datetime import date
 
 from finn_core.ledger import (
+    _carry_stated_basis,
+    apply_verification,
     apply_word_bands,
     assign_scope,
     compare_target,
@@ -11,7 +13,9 @@ from finn_core.ledger import (
     judge_promise,
     merge_rows,
     on_page,
+    passage_around,
     quote_check,
+    read_basis,
     select_pages,
 )
 from finn_core.series import apply_half_year, subtract_quarter
@@ -462,6 +466,8 @@ class PromiseTests(unittest.TestCase):
         self.assertEqual(delivered["status"], "delivered")
         self.assertEqual(delivered["actual"], "18.37%")
         self.assertEqual(delivered["unit"], "percent")
+        self.assertEqual(open_year["definition_note"], "Company says PBDIT; we compute EBITDA excluding other income")
+        self.assertEqual(delivered["definition_note"], "Company says PBDIT; we compute EBITDA excluding other income")
 
     def test_a_reported_margin_is_not_scored(self):
         row = judge_promise(
@@ -515,6 +521,127 @@ class PromiseTests(unittest.TestCase):
         self.assertEqual(summary["maintained"], 1)
         self.assertEqual(summary["raised"], 1)
         self.assertEqual(len(rows[0]["calls"]) if rows else len(long_term[0]["calls"]), 3)
+
+    def test_passage_basis_and_verifier_decide_a_score(self):
+        page = "One. Two. Three. We expect revenue growth of 1.5% to 3% in constant currency. Four. Five. Six. Seven."
+        quote = "We expect revenue growth of 1.5% to 3% in constant currency."
+        passage = passage_around(page, quote)
+        self.assertIn("Three.", passage)
+        self.assertIn("Six.", passage)
+        self.assertNotIn("Seven.", passage)
+        self.assertEqual(read_basis(passage, "reported"), "constant_currency")
+        self.assertEqual(read_basis(passage, "reported", quote), "constant_currency")
+        neighbor = (
+            "The international business will grow in constant currency. "
+            "We expect consolidated revenue growth of 10%. Costs are stable."
+        )
+        self.assertEqual(
+            read_basis(neighbor, "reported", "We expect consolidated revenue growth of 10%."),
+            "reported",
+        )
+        self.assertEqual(read_basis("Revenue growth of 10% for the year.", "reported"), "reported")
+        scored = {
+            "status": "tracking_ahead",
+            "actual": "12.32%",
+            "actual_value": 12.32,
+            "basis": "constant_currency",
+            "source_quote": quote,
+            "passage": passage,
+            "note": "",
+        }
+        apply_verification(scored, {"consolidated": True, "reported_basis": False, "independent_of_named_event": True, "metric_named": True, "conditional_on": "", "caveat": ""})
+        self.assertEqual(scored["status"], "not_scored")
+        self.assertIsNone(scored["actual"])
+        self.assertIn("Constant-currency", scored["note"])
+        self.assertFalse(scored["verifier"]["reported_basis"])
+        event = {
+            "status": "tracking_behind",
+            "actual": "-52 bps",
+            "actual_value": -52,
+            "basis": "reported",
+            "source_quote": "Ice Cream demerger is expected to result in an improvement of 50-60 bps",
+            "note": "",
+        }
+        apply_verification(
+            event,
+            {
+                "consolidated": True,
+                "reported_basis": True,
+                "independent_of_named_event": False,
+                "metric_named": True,
+                "conditional_on": "Ice Cream demerger",
+                "caveat": "",
+                "independent_of_named_event_evidence": "Ice Cream demerger is expected to result in an improvement of 50-60 bps",
+            },
+        )
+        self.assertEqual(event["status"], "not_scored")
+        self.assertEqual(event["conditional_on"], "Ice Cream demerger")
+        self.assertIn("Ice Cream demerger", event["note"])
+        kept = {"status": "tracking_ahead", "actual": "16.51%", "actual_value": 16.51, "basis": "reported", "source_quote": "double-digit revenue growth", "note": "kept"}
+        apply_verification(
+            kept,
+            {
+                "consolidated": True,
+                "reported_basis": True,
+                "independent_of_named_event": True,
+                "metric_named": True,
+                "conditional_on": "",
+                "caveat": "subject to stable macros",
+            },
+        )
+        self.assertEqual(kept["status"], "tracking_ahead")
+        self.assertEqual(kept["actual"], "16.51%")
+        self.assertEqual(kept["caveat"], "subject to stable macros")
+        margin = {
+            "status": "tracking_ahead",
+            "actual": "23.7%",
+            "actual_value": 23.7,
+            "basis": "not_stated",
+            "metric_key": "ebitda_margin",
+            "source_quote": "Our operating margins guidance for the year is 20% to 22%.",
+            "note": "kept",
+        }
+        apply_verification(
+            margin,
+            {
+                "consolidated": True,
+                "reported_basis": True,
+                "independent_of_named_event": False,
+                "metric_named": True,
+                "conditional_on": "Stratus acquisition",
+                "independent_of_named_event_evidence": "excludes Versent JV and Optimum Healthcare acquisitions that are yet to be closed",
+                "caveat": "",
+            },
+        )
+        self.assertEqual(margin["status"], "tracking_ahead")
+        self.assertIsNone(margin["conditional_on"] if "conditional_on" in margin else None)
+        same_filing = [
+            {
+                "source_document": "doc",
+                "scope": "consolidated",
+                "metric_key": "revenue_growth",
+                "basis": "constant_currency",
+                "evidence": "revenue growth guidance of 1.5% to 3% in constant currency terms",
+            },
+            {
+                "source_document": "doc",
+                "scope": "consolidated",
+                "metric_key": "revenue_growth",
+                "basis": "not_stated",
+                "evidence": "we are revising our revenue guidance to 1.5% to 3%",
+            },
+            {
+                "source_document": "doc",
+                "scope": "consolidated",
+                "metric_key": "ebitda_margin",
+                "basis": "not_stated",
+                "evidence": "operating margin guidance is 20% to 22%",
+            },
+        ]
+        _carry_stated_basis(same_filing)
+        self.assertEqual(same_filing[1]["basis"], "constant_currency")
+        self.assertIn("same filing", same_filing[1]["basis_note"])
+        self.assertEqual(same_filing[2]["basis"], "not_stated")
 
 
 if __name__ == "__main__":

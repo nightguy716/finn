@@ -27,6 +27,7 @@ SERIES_QUARTERS = 10
 CHART_QUARTERS = 6
 GUIDANCE_VERSION = "v3"
 VERDICT_VERSION = "v2"
+VERIFY_VERSION = "v2"
 _FORWARD = re.compile(
     r"guidan\w*|expect\w*|target\w*|outlook|\baim(?:ing|ed)?\b|going forward|"
     r"next year|next quarter|coming quarter|full year|fy\s*'?\d{2}|\bcapex\b|volume growth|"
@@ -79,6 +80,8 @@ GUIDANCE_SCHEMA = {
                     "scope_name": {"type": "STRING"},
                     "unit": {"type": "STRING"},
                     "kind": {"type": "STRING"},
+                    "basis": {"type": "STRING"},
+                    "conditional_on": {"type": "STRING"},
                 },
                 "required": [
                     "metric_key",
@@ -94,6 +97,8 @@ GUIDANCE_SCHEMA = {
                     "scope_name",
                     "unit",
                     "kind",
+                    "basis",
+                    "conditional_on",
                 ],
             },
         }
@@ -132,6 +137,7 @@ def promise_ledger(
     usage = {
         "guidance": {"calls": 0, "cache_hits": 0, "tokens": 0, "dropped": 0},
         "verdict": {"calls": 0, "cache_hits": 0, "tokens": 0, "model": ""},
+        "verify": {"calls": 0, "cache_hits": 0, "tokens": 0, "model": ""},
         "total_tokens": 0,
     }
 
@@ -176,6 +182,7 @@ def promise_ledger(
         lambda: _guidance_rows(symbol, transcripts, cache, client, usage, max_guidance_calls),
     )
     checked = stage("check", lambda: _check_rows(promises, series["quarters"], as_of))
+    checked = stage("verify", lambda: verify_scored(symbol, checked, cache, usage))
     rows, long_term, revisions = merge_rows(checked)
     covered = _coverage(transcripts, series["quarters"])
     shot = _snapshot(series["quarters"])
@@ -187,7 +194,7 @@ def promise_ledger(
         verdict = ""
         timing["verdict"] = 0.0
         progress = {"stage": "guidance", "done": done, "total": total}
-    usage["total_tokens"] = usage["guidance"]["tokens"] + usage["verdict"]["tokens"]
+    usage["total_tokens"] = usage["guidance"]["tokens"] + usage["verdict"]["tokens"] + usage["verify"]["tokens"]
     timing["total"] = round(sum(timing.values()), 2)
     return {
         "symbol": symbol,
@@ -439,6 +446,16 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         "quote_check": quote_check(evidence, low, high, unit),
         "unit": unit,
         "kind": kind,
+        "passage": promise.get("passage") or evidence,
+        "basis": read_basis(promise.get("passage") or evidence, promise.get("basis"), evidence),
+        "conditional_on": promise.get("conditional_on") or None,
+        "basis_note": promise.get("basis_note") or "",
+        "caveat": "",
+        "definition_note": (
+            "Company says PBDIT; we compute EBITDA excluding other income"
+            if key == "ebitda_margin" and re.search(r"\bpbdit\b", evidence, re.I)
+            else ""
+        ),
         "scope": promise.get("scope") or "consolidated",
         "scope_name": promise.get("scope_name") or "",
         "metric_key": key,
@@ -783,11 +800,16 @@ def _guidance_rows(symbol, transcripts, cache, client, usage, max_calls: int):
                 bucket["tokens"] += tokens
             if not error:
                 done += 1
+        by_page = {page["page"]: page.get("text") or "" for page in pages}
         for promise in batch:
             stamped = dict(promise)
             stamped["call_period"] = item["period"]
             stamped["call_date"] = item.get("date") or item["period"]
+            stamped["passage"] = passage_around(by_page.get(stamped.get("page")) or "", stamped.get("evidence") or "")
+            stamped["basis"] = read_basis(stamped["passage"], stamped.get("basis"), stamped.get("evidence") or "")
+            stamped["conditional_on"] = _named_event(stamped.get("conditional_on"))
             promises.append(stamped)
+    _carry_stated_basis(promises)
     fy26 = sum(1 for promise in promises if promise.get("target_period") == "FY2026")
     next_quarter = sum(1 for promise in promises if _is_next_quarter(promise))
     lookback = {
@@ -834,6 +856,12 @@ def _promises_for_document(symbol, item, document, cache, pages) -> tuple[list[d
         "kind is level or change. A growth rate or a basis-point move is a change. "
         "A margin percent, or a revenue amount, is a level. "
         "A basis-point range stays in basis points. direction is up, down, or empty. "
+        "Read the quote and about three sentences either side of it on the same page. "
+        "basis is reported, constant_currency, pro_forma, other, or not_stated. "
+        "If this promise is in constant currency, including when those words are in its own sentence, basis is constant_currency. "
+        "A constant-currency figure for a different business or metric does not set this promise's basis. "
+        "conditional_on is the named corporate event the number depends on, such as a demerger, merger, "
+        "acquisition, or sale, or empty. A general condition such as stable macros is not an event. "
         "Record a stated basis-point range for this year's margin even when the same answer also discusses growth. "
         "At most 8 promises. Use nothing beyond these pages.\n\n"
         + body
@@ -921,6 +949,9 @@ def _clean_promise(raw: dict, by_page: dict, url: str) -> dict | None:
         "scope_name": scope_name,
         "unit": unit if unit in UNITS else "other",
         "kind": read_kind(unit, key, evidence),
+        "basis": read_basis(passage_around(text, evidence), raw.get("basis"), evidence),
+        "conditional_on": _named_event(raw.get("conditional_on")),
+        "passage": passage_around(text, evidence),
     }
 
 
@@ -982,6 +1013,291 @@ def _infer_metric(evidence: str) -> str | None:
     if len(hits) == 1:
         return hits[0]
     return None
+
+
+def passage_around(page: str, quote: str, radius: int = 3) -> str:
+    """The quote plus about three sentences either side on the same page."""
+    text = " ".join((page or "").split())
+    needle = " ".join((quote or "").split())
+    if not text:
+        return needle
+    sentences = [part for part in re.split(r"(?<=[.!?])\s+(?=[A-Z])", text) if part]
+    if not sentences:
+        return text
+    key = needle[:80].lower()
+    at = None
+    for index, sentence in enumerate(sentences):
+        if key and (key[:40] in sentence.lower() or sentence.lower()[:40] in key):
+            at = index
+            break
+    if at is None:
+        found = text.lower().find(key[:40]) if key else -1
+        if found < 0:
+            return needle or text[:800]
+        return text[max(0, found - 500): found + len(needle) + 500]
+    start = max(0, at - radius)
+    end = min(len(sentences), at + radius + 1)
+    return " ".join(sentences[start:end])
+
+
+def read_basis(passage: str, stated, quote: str = "") -> str:
+    """Constant currency in this promise's sentence decides the basis. A neighboring sentence does not."""
+    text = _basis_window(passage or "", quote or "")
+    if re.search(r"constant[- ]currency", text, re.I):
+        return "constant_currency"
+    if re.search(r"pro[- ]?forma", text, re.I):
+        return "pro_forma"
+    basis = str(stated or "").strip().lower().replace(" ", "_")
+    if basis in ("reported", "constant_currency", "pro_forma", "other", "not_stated"):
+        return basis
+    return "not_stated"
+
+
+def _basis_window(passage: str, quote: str) -> str:
+    text = " ".join((passage or "").split())
+    needle = " ".join((quote or "").split())
+    if not text or not needle:
+        return text or needle
+    sentences = [part for part in re.split(r"(?<=[.!?])\s+(?=[A-Z])", text) if part]
+    key = needle[:80].lower()
+    for sentence in sentences:
+        if key[:40] in sentence.lower() or sentence.lower()[:40] in key:
+            return sentence
+    return needle
+
+
+def _carry_stated_basis(promises: list[dict]) -> None:
+    """A filing that states consolidated revenue guidance in constant currency keeps that basis when a later sentence drops the words."""
+    grouped: dict[str, list[dict]] = {}
+    for promise in promises:
+        grouped.setdefault(promise.get("source_document") or "", []).append(promise)
+    for group in grouped.values():
+        stated = any(
+            (promise.get("scope") or "consolidated") == "consolidated"
+            and promise.get("metric_key") == "revenue_growth"
+            and promise.get("basis") == "constant_currency"
+            and re.search(r"guidance", promise.get("evidence") or "", re.I)
+            for promise in group
+        )
+        if not stated:
+            continue
+        for promise in group:
+            if promise.get("metric_key") != "revenue_growth":
+                continue
+            if (promise.get("scope") or "consolidated") != "consolidated":
+                continue
+            if promise.get("basis") != "not_stated":
+                continue
+            evidence = promise.get("evidence") or ""
+            if re.search(r"\brupee\b|\binr\b|reported basis", evidence, re.I):
+                continue
+            promise["basis"] = "constant_currency"
+            promise["basis_note"] = "The same filing states this revenue guidance in constant currency."
+
+
+def _named_event(value) -> str | None:
+    text = " ".join(str(value or "").split())
+    if not text or text.lower() in ("null", "none", "n/a", "na"):
+        return None
+    return text
+
+
+VERIFY_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "consolidated": {"type": "BOOLEAN"},
+        "consolidated_evidence": {"type": "STRING"},
+        "reported_basis": {"type": "BOOLEAN"},
+        "reported_basis_evidence": {"type": "STRING"},
+        "independent_of_named_event": {"type": "BOOLEAN"},
+        "independent_of_named_event_evidence": {"type": "STRING"},
+        "metric_named": {"type": "BOOLEAN"},
+        "metric_named_evidence": {"type": "STRING"},
+        "conditional_on": {"type": "STRING"},
+        "caveat": {"type": "STRING"},
+    },
+    "required": [
+        "consolidated",
+        "consolidated_evidence",
+        "reported_basis",
+        "reported_basis_evidence",
+        "independent_of_named_event",
+        "independent_of_named_event_evidence",
+        "metric_named",
+        "metric_named_evidence",
+        "conditional_on",
+        "caveat",
+    ],
+}
+
+
+def apply_verification(row: dict, decision: dict) -> dict:
+    """A scored row stays scored only when every verifier flag is true and the basis is reported."""
+    flags = {
+        "consolidated": bool(decision.get("consolidated")),
+        "reported_basis": bool(decision.get("reported_basis")),
+        "independent_of_named_event": bool(decision.get("independent_of_named_event")),
+        "metric_named": bool(decision.get("metric_named")),
+    }
+    event = _named_event(decision.get("conditional_on"))
+    if not flags["independent_of_named_event"] and not _event_binds(row, decision):
+        flags["independent_of_named_event"] = True
+        event = None
+    row["verifier"] = {
+        **flags,
+        "model": str(decision.get("model") or ""),
+        "evidence": {
+            "consolidated": str(decision.get("consolidated_evidence") or ""),
+            "reported_basis": str(decision.get("reported_basis_evidence") or ""),
+            "independent_of_named_event": str(decision.get("independent_of_named_event_evidence") or ""),
+            "metric_named": str(decision.get("metric_named_evidence") or ""),
+        },
+    }
+    caveat = " ".join(str(decision.get("caveat") or "").split())
+    if caveat and _CAVEAT_WORD.search(caveat) and not re.search(r"\d", caveat):
+        row["caveat"] = caveat
+    if event and not flags["independent_of_named_event"]:
+        row["conditional_on"] = event
+    if row.get("basis") == "constant_currency":
+        _not_scored(row, row.get("basis_note") or "Constant-currency guidance is not the consolidated rupee series.")
+        return row
+    if row.get("basis") == "pro_forma":
+        _not_scored(row, "Pro-forma guidance is not the reported consolidated series.")
+        return row
+    reasons = []
+    if not flags["consolidated"]:
+        reasons.append("The guidance is not for the consolidated company.")
+    if not flags["reported_basis"]:
+        reasons.append("The guidance is not on a reported basis.")
+    if not flags["independent_of_named_event"]:
+        name = event or "a named corporate event"
+        row["conditional_on"] = name
+        reasons.append(f"The guidance depends on {name}.")
+    if not flags["metric_named"]:
+        reasons.append("The passage does not name the metric being scored.")
+    if reasons:
+        _not_scored(row, " ".join(reasons))
+    return row
+
+
+def _event_binds(row: dict, decision: dict) -> bool:
+    """An event unscores a row only when it qualifies this quote, not a neighboring metric."""
+    quote = row.get("source_quote") or ""
+    evidence = str(decision.get("independent_of_named_event_evidence") or "")
+    if _EVENT_WORD.search(quote):
+        return True
+    metric = _METRIC_WORDS.get(row.get("metric_key") or "")
+    return bool(metric and metric.search(evidence) and _EVENT_WORD.search(evidence))
+
+
+_EVENT_WORD = re.compile(r"demerger|merger|acquisition|dispos|spin-?off|scheme of arrangement", re.I)
+_CAVEAT_WORD = re.compile(
+    r"subject to|assum|macro|demand|commodit|inflat|disruption|geopolit|monsoon|weather|unless|contingent|provid",
+    re.I,
+)
+
+
+def verify_scored(symbol: str, rows: list[dict], cache, usage: dict) -> list[dict]:
+    """Ask the stronger model about each row that arithmetic would score. Cache by document and row."""
+    bucket = usage.setdefault("verify", {"calls": 0, "cache_hits": 0, "tokens": 0, "model": ""})
+    for row in rows:
+        if row.get("status") not in _SCORED:
+            continue
+        decision = _verifier_decision(symbol, row, cache, bucket)
+        if decision.get("error"):
+            row["verifier"] = {"error": decision["error"]}
+            if row.get("basis") in ("constant_currency", "pro_forma"):
+                apply_verification(row, _verify_clear())
+            continue
+        apply_verification(row, decision)
+    return rows
+
+
+def _verify_clear() -> dict:
+    return {
+        "consolidated": True,
+        "reported_basis": True,
+        "independent_of_named_event": True,
+        "metric_named": True,
+        "conditional_on": "",
+        "caveat": "",
+    }
+
+
+def _verifier_decision(symbol: str, row: dict, cache, bucket: dict) -> dict:
+    document = row.get("source_document") or ""
+    row_key = hashlib.sha1(
+        "\n".join((document, str(row.get("page") or ""), row.get("metric_key") or "", row.get("source_quote") or "")).encode()
+    ).hexdigest()[:20]
+    if cache is not None:
+        cached = cache.get("guidance_verify", symbol, document[-180:], f"{VERIFY_VERSION}:{row_key}")
+        if isinstance(cached, dict) and "decision" in cached:
+            bucket["cache_hits"] += 1
+            bucket["model"] = (cached.get("usage") or {}).get("model") or bucket.get("model") or ""
+            return cached["decision"]
+    passage = row.get("passage") or row.get("source_quote") or ""
+    prompt = (
+        "Decide whether this management promise can be compared with the consolidated reported figures. "
+        "Use the passage, not outside knowledge of the company.\n"
+        "consolidated is false only when this promise's number is limited to a division, brand, geography, or subsidiary. "
+        "A nearby mention of standalone or a segment does not make a company-level promise false.\n"
+        "reported_basis is false only when the quoted promise itself is in constant currency, pro forma, or another non-reported basis, "
+        "including when the sentence just before or after says that this number is in constant currency. "
+        "Constant currency for a different business, segment, or metric in a neighboring sentence does not apply. "
+        "If this promise names no basis, reported_basis is true.\n"
+        "independent_of_named_event is false only when the number depends on a named corporate event: "
+        "a demerger, merger, acquisition, disposal, spin-off, or scheme. "
+        "If there is no such event, the flag is true and conditional_on is empty. "
+        "Commodity prices, demand, and 'subject to stable macros' are not events. Put those in caveat.\n"
+        "metric_named is true when the quote or the sentences beside it name revenue, sales, EBITDA, PBDIT, "
+        "operating margin, PAT, or profit. PBDIT and operating margin count as the margin metric.\n"
+        "Each evidence field is a short quote from the passage that decided that flag.\n"
+        "conditional_on is the event name, or empty. "
+        "caveat is only a general condition on this promise, such as stable macros, demand, or commodity prices. "
+        "Otherwise leave caveat empty.\n\n"
+        f"Metric: {row.get('metric_key')}\n"
+        f"Promise: {row.get('promise')}\n"
+        f"Quote: {row.get('source_quote')}\n"
+        f"Passage: {passage[:1800]}"
+    )
+    # 3.6-flash and 3.8-flash share a 20-request free daily cap and were exhausted.
+    # 3-flash-preview is the Flash model that still answers; Flash-Lite covers a 503.
+    try:
+        payload, call_usage = generate_json(
+            prompt,
+            VERIFY_SCHEMA,
+            ("gemini-3-flash-preview", FLASH_LITE),
+            timeout=25,
+            attempts=2,
+        )
+    except RuntimeError as exc:
+        return {
+            "consolidated": False,
+            "reported_basis": False,
+            "independent_of_named_event": False,
+            "metric_named": False,
+            "consolidated_evidence": "",
+            "reported_basis_evidence": "",
+            "independent_of_named_event_evidence": "",
+            "metric_named_evidence": "",
+            "conditional_on": "",
+            "caveat": "",
+            "error": str(exc),
+        }
+    bucket["calls"] += 1
+    bucket["tokens"] += int(call_usage.get("total_tokens") or 0)
+    bucket["model"] = call_usage.get("model") or bucket.get("model") or ""
+    payload = dict(payload)
+    payload["model"] = bucket["model"]
+    if cache is not None:
+        cache.put(
+            "guidance_verify",
+            symbol,
+            document[-180:],
+            f"{VERIFY_VERSION}:{row_key}",
+            {"decision": payload, "usage": call_usage},
+        )
+    return payload
 
 
 def _check_rows(promises: list[dict], quarters: list[dict], as_of: date) -> list[dict]:

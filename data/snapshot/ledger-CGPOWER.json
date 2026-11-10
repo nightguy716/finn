@@ -139,6 +139,12 @@
       "quote_check": "ok",
       "unit": "bps",
       "kind": "change",
+      "passage": "Good afternoon, everybody, and welcome to the CG Earnings Call. Let me start with the summary of Results: We have delivered a strong performance for the quarter and half -year ended September '25, underscoring sustained high double -digit growth , and the early impact of strategic transformation initiatives and practicing disciplined execution excellence. Now this is another quarter and H1 performance with all -time high standalone revenue as well as profit before tax after accounting for exceptional items. Further, we have improved our PBT margins by almost 90 basis points sequentially and 230 basis points year -over-year. This demonstrates our continued efforts and focus on improving our margins over the last couple of quarters. Our Q2 sales grew at 17% year-over-year. Order intake grew by 32% year-over-year and profit after tax improved by 38% year-over-year, making it one of the strongest quarterly performance in recent times with the positive leverage.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -173,6 +179,12 @@
       "quote_check": "ok",
       "unit": "currency_inr",
       "kind": "level",
+      "passage": "The approval covers a 5 -year period for financial year '24-'25 to '28-'29. Total project cost of INR 7,584 crores, the central government assistance of INR 3,501 crores, and the additional state Gujarat government support, which is equal to 40% of the central government assistance is about I NR 1,400 crores. The fiscal support agreement was signed on January 17, 2025, and the trust and retention account agreement was signed on September 15, 2025. The last one that I have is that the Board of Directors today approved another greenfield expansion for Switchgear business for an investment of INR 748 crores, net of taxes. And this expansion is proposed considering the expected increase in the demand of medium voltage and EHV circuit breakers, instrument transformers, GIS in the domestic market as w ell as cater to the export market. With this, I will conclude my opening remarks. Unaudited financial results with detailed notes are available as part of the stock exchange filings, and is also available on our company website.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "segment",
       "scope_name": "Switchgear business",
       "metric_key": "capex",
@@ -207,6 +219,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
+      "passage": "And my second question is that with our power transformation capacity coming online to 85 GVA in the coming years, what would be an expected mix of sales from global and local markets to maintain a healthy set of capacity utilization? Amar Kaul: Ajay, can you take that? Ajay Jain: Yes, I can take that. So, for the increased added capacity, what we are planning in our new plant, we are planning to have around 35% to 40% of the revenues coming from exports. So, this is important for the business sustainability point of view also. And from the current capacities also, as of now, the exports are around 10%, so it will grow to around 20% in these, because we cannot vacate the Domestic segments as of now. Jay Negandhi: My first question on the execution delays from power transformation installations.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "geography",
       "scope_name": "new plant",
       "metric_key": "revenue_growth",
@@ -241,6 +259,12 @@
       "quote_check": "ok",
       "unit": "bps",
       "kind": "change",
+      "passage": "But if we look apple-to-apple here, it was -10%. Moving to the Power Systems: The performance continues to be pretty strong with continued margin expansion focus with the backdrop of robust demand and disciplined execution. Sales was INR 1,254 crores with a sharp rise of 48% year-over-year, supported by steady execution rhythm. PBIT was at INR 260 crores versus INR 149 crores last year, which is 310 basis points margin expansion, primarily driven by better price realization, resilient demand trend as well as the improved operating leverage. Order intake for the quarter was INR 2,643 crores, which is 81% growth year -over-year and unexecuted backlog towards the close of quarter was INR 10,474 crores, which is 104% higher year-over-year. With this, we conclude the deep dive into the stand alone performance, and I will now move to the consolidated numbers. Aggregate sales for the quarter was INR 2,923 crores at a growth of 21% year-over-year.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -274,12 +298,13 @@
     "total": 6
   },
   "timing": {
-    "discover": 0.93,
-    "series": 0.77,
-    "guidance": 1.3,
+    "discover": 1.64,
+    "series": 1.03,
+    "guidance": 1.57,
     "check": 0.0,
-    "verdict": 0.06,
-    "total": 3.06
+    "verify": 0.0,
+    "verdict": 0.24,
+    "total": 4.48
   },
   "usage": {
     "guidance": {
@@ -291,6 +316,12 @@
     "verdict": {
       "calls": 0,
       "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
       "tokens": 0,
       "model": ""
     },

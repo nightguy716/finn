@@ -127,6 +127,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "level",
+      "passage": "That's all from my side. Amit Syngle: What we have seen is that quarter two has traditionally been a lower margin because of the mix of what we sell in quarter two overall. Given the fact that, we are taking a very strong drive in terms of premiumization, of how we want to go ahead from an overall mix. We are still garnering around the guidance of 18-20% of our PBDIT margins holds. We are making a lot of efforts with respect to both, how do we galvanize demand? And how do we look at premiumization? Third, how do we look at our cost structures far more strongly, especially with respect to backward integration and some of the cost efficiencies we are building through our formulations and sourcing?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says PBDIT; we compute EBITDA excluding other income",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -167,7 +173,20 @@
           "page": 20,
           "quote": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds."
         }
-      ]
+      ],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds.",
+          "reported_basis": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds.",
+          "independent_of_named_event": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds.",
+          "metric_named": "18-20% of our PBDIT margins"
+        }
+      }
     },
     {
       "promise": "EBITDA margin 18\u201320% for FY2026",
@@ -185,6 +204,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "level",
+      "passage": "Amit Syngle: From a point of view, overall margins, you know, at the standalone level, in Q2 we are at 18.5% at standalone level and at consolidated level, we are closer to 18%. Today, we are making some very meaningful investments in our marketing efforts, we are also looking at investing in technology a lot, we are looking at bringing in more innovation which we are adding in the market and are able to reach out to the consumer far more effectively as we go ahead. We also see higher competitive intensity in the market as we go ahead. Given all this, it is okay to maintain the whole guidance of 18 to 20% PBDIT margin band. I would not qualify whether it should be at an 18% level or a higher level. But it's good to maintain 18-20% margin as we go ahead. The second area which you raised in terms of consumer financing, I don't think it\u2019s a new concept in the country.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says PBDIT; we compute EBITDA excluding other income",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -225,7 +250,20 @@
           "page": 27,
           "quote": "maintain the whole guidance of 18 to 20% PBDIT margin band."
         }
-      ]
+      ],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3-flash-preview",
+        "evidence": {
+          "consolidated": "overall margins, you know, at the standalone level... and at consolidated level... maintain the whole guidance of 18 to 20% PBDIT margin band",
+          "reported_basis": "maintain the whole guidance of 18 to 20% PBDIT margin band",
+          "independent_of_named_event": "maintain the whole guidance of 18 to 20% PBDIT margin band",
+          "metric_named": "PBDIT margin band"
+        }
+      }
     },
     {
       "promise": "Revenue growth to rise for FY2026",
@@ -243,6 +281,12 @@
       "quote_check": "ok",
       "unit": "other",
       "kind": "level",
+      "passage": "G iven these factors which are there, you know unless there is a geopolitical event which really looks at spoiling this trajectory, we think FY26 should definitely be much better. But obviously there is a caution till the time we really see demand really picking up. We are still being overall cautious in what we would look at. But the idea is to aim for single digit value growths for the year FY26. Latika Chopra: And if I could squeeze one on CapEx, because you mentioned Rs 3000 odd crore, if I heard correctly on futuristic emulsion plant that you're putting up. I think between FY26 and FY 27, any colour on stand alone out and consolidated CapEx for FY26 and FY27 for Asian Paints? Amit Syngle : Already about a year and a half back we had announced our overall consolidated CapEx which was about Rs9000 crores in what we were spending. f you look at it today, we have been able to spend a considerable portion out of that till",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "revenue_growth",
@@ -277,6 +321,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
+      "passage": "As we look at even quarter three, quarter four, overall, we have given our direction that we should stay in the volume region of about 8-10%. And that is something which we should look at because we do not know at this stage how the second half of the year would augur from overall price volatility and so on and so forth. As we go ahead, possibly some of those indications will also look at whether price changes would happen in the second half, which could trigger demand even further. At the current stage, we are looking at the band of 8-10% for the full FY27. Avi Mehta: Perfect, sir. That's very useful. The second bit is just related to what you highlighted about the input cost environment.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -311,6 +361,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "level",
+      "passage": "It is literally the weighted average, which counts, what we would have bought. Therefore, the direct correlation with crude at this point of time is very difficult to say that if I were to benchmark to a certain level of crude pricing, then my margins would land at that. It is a very difficult thing. What we can take in, is the point that 18-20% guidance is a good guidance to take. Percy Panthaki: And, if the input costs, whether it is TiO2, monomers, polymers, whatever it is, supposing they maintain in future at today's prices, would you need any pricing, either increase or decrease to stay within that 18%-20% band? Amit Syngle: Again, as I said, the volatility, as we speak also there are some prices which are going down, some prices which are going up, as we have seen that some prices had started coming down in June as well. The volatility is so much that you can't take anything at a constant saying, that in quarter one, this was the constant parameter which we have taken, which if it remains in quarter two, will give us this margin.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -369,6 +425,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
+      "passage": "14 | What has lifted this entire performance up is obviously industrial momentum. I have been speaking about this for the last two years and what we see is very clearly the trend of industrial continues, in terms of how we have performed. Overall, we see that the value growth for the quarter is about 16.4% because the decorative plus industrial gets lifted by the industrial growth and therefore deco plus industrial stands at about 16.4% and a volume at about 6.8%. Similarly, if we look at H1, the growths are similar , value growth at 16.5% and ~8% volume growth. So H1 got lifted because of industrial performance.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "segment",
       "scope_name": "decorative plus industrial",
       "metric_key": "volume_growth",
@@ -442,6 +504,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
+      "passage": "Amit Syngle: I would say that it is pertinent to look at the overall coatings growth which is about 4.4% and even from a point of view of volume level, it goes to 8. 3%. I think, given the current demand conditions, it is still quite a good growth and we believe that, while the results are going to come for the other companies, it should be possibly higher than the industry average and that is something which we have been pursuing in all the areas, where we are seeing growth , we are putting a lot of effort in those areas, as we want to grow, namely the B2B and the industrial. I feel that going forward possibly, a good ticker would be to keep on looking at the volume growth in terms of what is there and I think the value growth w ould follow from that point of view . And therefore, anything in the volume, in the current context, which is between that 8% - 10% is a good growth, in terms of what I would say under the current circumstances. Percy Panthaki: Understood sir. And the volume value gap for last several years has been negative for us. Any chance, that this will become zero or something in absence of any price changes or it will remain at this 3% - 4% gap between volume and value?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -476,6 +544,12 @@
       "quote_check": "ok",
       "unit": "currency_inr",
       "kind": "level",
+      "passage": "22 | Page So, we would watch it very carefully over the next month as well and then take calls of what we need to do in the pricing decision. Secondly, from a CapEx point of view, we have committed closer to 700 crores of CapEx this year. We've spent about 100 crores this year already on that. When I look at from a larger commitment in the backward integration initiatives, our white cement plant is near commissioning. So, we should start soon seeing the benefits of the white cement outputs to start coming in the next quarters or so.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "capex",
@@ -510,6 +584,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
+      "passage": "Now, I completely understand the volatility part of it, but conceptually speaking, and practically based on historical experiences, in fact, times like these, which are very difficult, tend to favor larger formal players, right, isn't it? Secondly, for a full year basis, I understand the price part of it, but if I heard you correctly, you were still talking about 10% volume growth, right? Amit Syngle: Yeah. I've spoken of that 8-10% as an overall volume band for the entire year. What you said is right, that today in quarter one, we would have definitely got some advantage of some of the smaller players, because the supply chains were pretty volatile and therefore, given the fact that, our supply chain was far more robust, yes, some advantage of that will seep in both for quarter one and quarter two going ahead. Manoj Menon: Thank you and all the best. Moderator: We will now request Mr.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -568,6 +648,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
+      "passage": "Is that how I could see it from a volume growth and a value growth perspective of how we would be looking at the demand environment and any thoughts on the same . That's all from my side. Amit Syngle: See, given the longer Diwali, we should get good traction from the October-November period of quarter three. We also have a wedding season which is coming, while rural will come into some question with the monsoon deficit of what is really, we are talking of, but we feel that it would be reasonable to expect to see a volume growth of about 8% to 9% going forward. Avi Mehta: Perfect sir. Thank you very much sir and wish you and everyone else a happy Diwali. Thank you.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -687,12 +773,13 @@
     "total": 7
   },
   "timing": {
-    "discover": 0.62,
-    "series": 0.61,
-    "guidance": 1.12,
-    "check": 0.01,
-    "verdict": 0.08,
-    "total": 2.44
+    "discover": 0.89,
+    "series": 0.94,
+    "guidance": 1.87,
+    "check": 0.0,
+    "verify": 0.58,
+    "verdict": 0.12,
+    "total": 4.4
   },
   "usage": {
     "guidance": {
@@ -704,6 +791,12 @@
     "verdict": {
       "calls": 0,
       "cache_hits": 1,
+      "tokens": 0,
+      "model": "gemini-3.5-flash-lite"
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 4,
       "tokens": 0,
       "model": "gemini-3.5-flash-lite"
     },

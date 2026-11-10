@@ -36,6 +36,7 @@ KEEP = {
     "ir_html",
     "series_quarter",
     "results_card",
+    "guidance_verify",
 }
 
 

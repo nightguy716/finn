@@ -125,6 +125,12 @@
       "quote_check": "The quote does not state the unit.",
       "unit": "other",
       "kind": "level",
+      "passage": "We've always said that we'll not be able to give precise numbers, but we will see basis what we disclose on a quarterly basis or whatever is the criteria of disclosures on store openings. You'll see the numbers coming, but I can't give you a number. Avi: Even for next year, Neville, any range for store addition, sorry, I'm pushing a bit, but in case? Neville Noronha: I mean, it won't be less than 50. I mean, if you're talking so much about it. Avi: Lastly, Neville, on the Quick Commerce bit. Now, you've been clear that Quick Commerce has been a great story, but and there has been a potential that you had said, at worst, it can be 1% - 1.5% sales impact on same store sales.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -159,6 +165,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
+      "passage": "The next question is from the line of Ashish Kanodia from Cit i Group. Please go ahead. Ashish Kanodia: Yes, thanks for the opportunity, sir. First on the store expansion, while I hear you out on the 15% internal target which you're working on and maybe in the next one year or two years because that's the kind of land bank you have. But three years, four years out if you have to actually, you know, grow at 18% or, it could be any higher number, just wanted to understand what's, what would be the bottleneck? Is it because capital is not, I think people is not, is it just that because real estate has a finite supply, like you cannot create land, so just the 15% is the right number even if you have to take a five-seven years' view? Anshul Asawa: No, our view at this point of time, Ashish, is that, you know, this is the right number at this point in time, at least in the foreseeable future.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "other",
       "scope_name": "store expansion",
       "metric_key": "volume_growth",
@@ -232,6 +244,12 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
+      "passage": "Avenue Supermarts Limited July 28, 2026 Page 9 of 37 When it comes to the second question around assortment and your question on GMA and whether the GMA can move to that historical level. I think we've been maintaining for the last few years that we expect this particular part of the business to be somewhere in that 22% to 23% kind of a range. And it is, as I said earlier also, it is doing quite well compared to our total business. And so therefore, we are happy with the progress that is being made in both the general merchandise and the apparel business that we have in our stores. So I don't expect it to get to the historical levels, and there is no intent also to drive it to that level because as I said, 22% to 23% contribution would be a good contribution in this space.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
       "scope": "segment",
       "scope_name": "general merchandise and apparel",
       "metric_key": "revenue_growth",
@@ -287,12 +305,13 @@
     "total": 2
   },
   "timing": {
-    "discover": 0.57,
-    "series": 0.85,
-    "guidance": 0.4,
+    "discover": 0.81,
+    "series": 0.98,
+    "guidance": 0.42,
     "check": 0.0,
-    "verdict": 0.07,
-    "total": 1.89
+    "verify": 0.0,
+    "verdict": 0.06,
+    "total": 2.27
   },
   "usage": {
     "guidance": {
@@ -304,6 +323,12 @@
     "verdict": {
       "calls": 0,
       "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
       "tokens": 0,
       "model": ""
     },
