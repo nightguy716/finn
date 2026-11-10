@@ -1,16 +1,19 @@
-"""NSE corporate announcements. Public homepage cookie, then the JSON feed.
+"""NSE corporate announcements and integrated financial results.
 
 The Mumbai probe got HTTP 200 from the API when the homepage returned 403,
 so a failed homepage does not abort the announcements call.
 """
 
 import time
-from datetime import date
+from datetime import date, datetime
 
 import requests
 
 HOME = "https://www.nseindia.com/"
 ANNOUNCEMENTS = "https://www.nseindia.com/api/corporate-announcements"
+# Current quarterly financials. The older corporates-financial-results feed
+# still answers, but its symbol query stops before this results season.
+INTEGRATED_RESULTS = "https://www.nseindia.com/api/integrated-filing-results"
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
@@ -69,6 +72,33 @@ class NSEClient:
             self.cache.put("nse_announcements", symbol, key_start, key_end, rows)
         return rows
 
+    def get_financial_results(self, symbol: str, start: date, end: date) -> list[dict]:
+        """Integrated Filing financials whose broadcast date falls in the window.
+
+        One row per period, preferring the consolidated original. Governance
+        filings on the same endpoint are dropped.
+        """
+        key_start = start.isoformat()
+        key_end = end.isoformat()
+        if self.cache is not None:
+            cached = self.cache.get("nse_integrated_results", symbol, key_start, key_end)
+            if cached is not None:
+                return cached
+        raw = self._request(
+            symbol,
+            INTEGRATED_RESULTS,
+            {"index": "equities", "symbol": symbol, "period": "Quarterly"},
+        )
+        rows = []
+        for row in _choose_financials(raw):
+            when = _broadcast_date(str(row.get("broadcast_Date") or ""))
+            if when is None or not (start <= when <= end):
+                continue
+            rows.append(_financial(symbol, row))
+        if self.cache is not None:
+            self.cache.put("nse_integrated_results", symbol, key_start, key_end, rows)
+        return rows
+
     def _fetch(self, symbol: str, start: date, end: date) -> list[dict]:
         params = {
             "index": "equities",
@@ -76,6 +106,10 @@ class NSEClient:
             "from_date": start.strftime("%d-%m-%Y"),
             "to_date": end.strftime("%d-%m-%Y"),
         }
+        raw = self._request(symbol, ANNOUNCEMENTS, params)
+        return [_normalise(symbol, row) for row in raw]
+
+    def _request(self, symbol: str, url: str, params: dict) -> list:
         last_status = None
         last_detail = ""
         for attempt in range(self.max_retries):
@@ -83,7 +117,7 @@ class NSEClient:
                 self._open_session()
             self._wait()
             try:
-                response = self._session.get(ANNOUNCEMENTS, params=params, timeout=25)
+                response = self._session.get(url, params=params, timeout=25)
             except requests.RequestException as exc:
                 last_status = None
                 last_detail = str(exc)
@@ -102,7 +136,7 @@ class NSEClient:
                 payload = response.json()
             except ValueError as exc:
                 raise NSEError(symbol, response.status_code, f"non-json {exc}") from exc
-            return [_normalise(symbol, row) for row in _rows(payload)]
+            return _rows(payload)
         raise NSEError(symbol, last_status, last_detail or "retries exhausted")
 
 
@@ -124,3 +158,76 @@ def _normalise(symbol: str, row: dict) -> dict:
         "pdf_url": str(row.get("attchmntFile") or ""),
         "timestamp": str(row.get("an_dt") or row.get("sort_date") or ""),
     }
+
+
+def _choose_financials(rows: list) -> list[dict]:
+    """One financials row per period. Consolidated beats standalone."""
+    groups: dict[str, list[dict]] = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        if "financial" not in str(row.get("type") or "").lower():
+            continue
+        groups.setdefault(str(row.get("qe_Date") or ""), []).append(row)
+    chosen = []
+    for group in groups.values():
+        consolidated = [row for row in group if str(row.get("consolidated") or "").lower() == "consolidated"]
+        pool = consolidated or group
+        pool.sort(key=lambda row: _broadcast_sort(str(row.get("broadcast_Date") or "")), reverse=True)
+        chosen.append(pool[0])
+    return chosen
+
+
+def _financial(symbol: str, row: dict) -> dict:
+    consolidated = str(row.get("consolidated") or "").strip()
+    audited = str(row.get("audited") or "").strip()
+    period = str(row.get("qe_Date") or "").strip()
+    parts = ["Financial Results", consolidated, audited]
+    if period:
+        parts.append(f"period ended {period}")
+    xbrl = _usable_url(row.get("xbrl"))
+    ixbrl = _usable_url(row.get("ixbrl"))
+    pdf = _usable_url(row.get("pdf_attach")) or xbrl or ixbrl
+    return {
+        "symbol": row.get("symbol") or symbol,
+        "subject": " ".join(part for part in parts if part),
+        "text": "",
+        "pdf_url": pdf,
+        "xbrl_url": xbrl,
+        "period_end": period,
+        "timestamp": str(row.get("broadcast_Date") or ""),
+        "filing_kind": "results",
+    }
+
+
+def _usable_url(value) -> str:
+    text = str(value or "").strip()
+    if not text.startswith("http"):
+        return ""
+    if text.rstrip("/").endswith("/null") or text.endswith("null"):
+        return ""
+    return text
+
+
+def _broadcast_date(value: str) -> date | None:
+    parsed = _broadcast_sort(value)
+    if parsed == datetime.min:
+        return None
+    return parsed.date()
+
+
+def _broadcast_sort(value: str) -> datetime:
+    text = str(value or "").strip()
+    if not text:
+        return datetime.min
+    # NSE mixes "02-Nov-2026 21:03:19" and "30-SEP-2026".
+    month = text.split("-")
+    if len(month) >= 3 and month[1].isalpha():
+        month[1] = month[1].title()
+        text = "-".join(month)
+    for fmt in ("%d-%b-%Y %H:%M:%S", "%d-%b-%Y"):
+        try:
+            return datetime.strptime(text, fmt)
+        except ValueError:
+            continue
+    return datetime.min

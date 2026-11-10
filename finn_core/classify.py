@@ -10,6 +10,16 @@ from dataclasses import dataclass
 import re
 
 LOW_CONFIDENCE = 0.6
+MATERIAL_MIN = 60
+MEDIUM_MIN = 42
+
+# Concall scheduling notices stay below the material cut. A transcript or
+# recording upload is medium. An investor presentation is medium. An auditor
+# change is medium-low, under the material cut.
+CONCALL_NOTICE = 30
+CONCALL_RECORD = 52
+PRESENTATION = 48
+AUDITOR = 42
 
 CATEGORIES = (
     "results",
@@ -37,7 +47,7 @@ PRIORITY = {
     "management_change": 82,
     "litigation": 78,
     "credit_rating": 74,
-    "concall": 70,
+    "concall": CONCALL_RECORD,
     "dividend": 66,
     "buyback": 66,
     "order_contract": 62,
@@ -50,10 +60,32 @@ PRIORITY = {
     "needs_llm": 16,
 }
 
+# Subjects NSE files under a vague label. Routine unless the attachment text
+# names a different event.
+ROUTINE_SUBJECTS = {
+    "updates",
+    "general updates",
+    "monitoring agency report",
+    "committee meeting updates",
+    "news verification",
+}
+
+TEXT_OVERRIDE = {
+    "m_and_a",
+    "fund_raise",
+    "management_change",
+    "litigation",
+    "credit_rating",
+    "dividend",
+    "buyback",
+    "order_contract",
+}
+
 # First match wins. Specific subjects come before generic ones.
+# Concall, auditor changes, presentations, and the vague labels are handled
+# in classify() so a scheduling notice is not scored like a transcript.
 RULES: tuple[tuple[str, float, tuple[str, ...]], ...] = (
     ("results", 0.95, (r"financial results", r"unaudited", r"audited financial", r"quarterly results")),
-    ("concall", 0.93, (r"con\.?\s*call", r"earnings call", r"\btranscript\b", r"analysts?/institutional investor meet", r"investor meet", r"conference call")),
     ("credit_rating", 0.95, (r"credit rating",)),
     ("m_and_a", 0.94, (r"\bacquisition\b", r"\bmerger\b", r"amalgamation", r"demerger", r"slump sale", r"scheme of arrangement", r"joint venture")),
     ("fund_raise", 0.93, (r"raising of funds", r"fund raising", r"preferential", r"\bqip\b", r"qualified institutional", r"rights issue", r"\bncds?\b", r"non-convertible debenture", r"private placement")),
@@ -68,8 +100,14 @@ RULES: tuple[tuple[str, float, tuple[str, ...]], ...] = (
     ("esop", 0.95, (r"\besop\b", r"\besos\b", r"\besps\b", r"employee stock")),
     ("shareholding", 0.92, (r"shareholding pattern",)),
     ("routine", 0.90, (r"newspaper", r"loss of share", r"duplicate share", r"trading window", r"book closure", r"record date")),
-    ("routine", 0.40, (r"general updates?", r"\bupdates?\b", r"\bintimation\b")),
 )
+
+_CALL = re.compile(
+    r"con\.?\s*call|earnings call|analysts?/institutional investor meet|investor meet|conference call",
+    re.I,
+)
+_RECORDING = re.compile(r"\btranscript\b|audio recording|recording of the", re.I)
+_RESULTS_TEXT = re.compile(r"financial results|unaudited financial|audited financial", re.I)
 
 
 @dataclass(frozen=True)
@@ -81,10 +119,15 @@ class Classification:
 
 
 def classify(subject: str, text: str = "") -> Classification:
-    allotment = _allotment(subject or "", text or "")
+    subject = subject or ""
+    text = text or ""
+    allotment = _allotment(subject, text)
     if allotment is not None:
         return allotment
-    hit = _match(subject or "")
+    special = _special(subject, text)
+    if special is not None:
+        return special
+    hit = _match(subject)
     if hit is None and text:
         hit = _match(text[:600])
         if hit is not None:
@@ -94,6 +137,28 @@ def classify(subject: str, text: str = "") -> Classification:
     if hit.confidence < LOW_CONFIDENCE:
         return Classification("needs_llm", hit.confidence, PRIORITY["needs_llm"], hint=hit.category)
     return hit
+
+
+def _special(subject: str, text: str) -> Classification | None:
+    folded = subject.strip().lower()
+    blob = f"{subject}\n{text[:800]}"
+    if re.search(r"outcome of board meeting", subject, re.I):
+        if _RESULTS_TEXT.search(blob):
+            return Classification("results", 0.93, PRIORITY["results"])
+        return Classification("board_meeting", 0.88, PRIORITY["board_meeting"])
+    if re.search(r"change in auditors", subject, re.I):
+        return Classification("management_change", 0.85, AUDITOR, hint="auditor")
+    if re.search(r"investor presentation", subject, re.I):
+        return Classification("concall", 0.9, PRESENTATION)
+    if _CALL.search(subject):
+        priority = CONCALL_RECORD if _RECORDING.search(blob) else CONCALL_NOTICE
+        return Classification("concall", 0.9, priority)
+    if folded in ROUTINE_SUBJECTS:
+        override = _match(text[:800])
+        if override is not None and override.category in TEXT_OVERRIDE:
+            return Classification(override.category, min(override.confidence, 0.85), override.priority, hint="text")
+        return Classification("routine", 0.92, 12)
+    return None
 
 
 def _allotment(subject: str, text: str) -> Classification | None:

@@ -4,7 +4,7 @@ from datetime import date, timedelta
 
 import yfinance as yf
 
-from finn_core import market_symbol
+from finn_core.config import market_symbol
 
 
 def fetch_eod(symbols: list[str], start: date, end: date) -> dict[str, list[dict]]:
@@ -27,12 +27,17 @@ def fetch_eod(symbols: list[str], start: date, end: date) -> dict[str, list[dict
 def detect_alerts(
     bars: list[dict],
     *,
-    volume_n: float = 2.0,
-    move_pct: float = 3.0,
+    volume_n: float = 2.5,
+    move_pct: float = 5.0,
     start: date | None = None,
     end: date | None = None,
 ) -> list[dict]:
-    """Fire when volume exceeds N times the prior 20 sessions, or the close moves more than X%."""
+    """One alert per session when volume exceeds N times the prior 20, or the close moves more than X%.
+
+    Move and volume are one row. Severity is |move %| times the volume ratio
+    (ratio 1 when the 20-day average is not available), so a large move on
+    heavy volume ranks first.
+    """
     alerts = []
     for index, bar in enumerate(bars):
         if start is not None and bar["date"] < start:
@@ -44,15 +49,15 @@ def detect_alerts(
         move = abs(bar["close"] / bars[index - 1]["close"] - 1.0) * 100.0
         prior = bars[max(0, index - 20) : index]
         ratio = None
-        volume_hit = False
         if len(prior) >= 20:
             average = sum(item["volume"] for item in prior[-20:]) / 20.0
-            if average > 0 and bar["volume"] > volume_n * average:
-                volume_hit = True
+            if average > 0:
                 ratio = bar["volume"] / average
+        volume_hit = ratio is not None and ratio > volume_n
         price_hit = move > move_pct
         if not volume_hit and not price_hit:
             continue
+        weight = ratio if ratio is not None else 1.0
         alerts.append(
             {
                 "date": bar["date"].isoformat(),
@@ -61,6 +66,7 @@ def detect_alerts(
                 "volume_ratio": round(ratio, 2) if ratio is not None else None,
                 "volume_hit": volume_hit,
                 "price_hit": price_hit,
+                "severity": round(move * weight, 2),
             }
         )
     return alerts
