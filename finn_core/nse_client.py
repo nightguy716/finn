@@ -139,6 +139,33 @@ class NSEClient:
             return _rows(payload)
         raise NSEError(symbol, last_status, last_detail or "retries exhausted")
 
+    def get_bytes(self, url: str, symbol: str = "") -> bytes:
+        """Download an NSE archive file with the same session and backoff as the JSON calls."""
+        last_status = None
+        last_detail = ""
+        for attempt in range(self.max_retries):
+            if self._session is None or attempt:
+                self._open_session()
+            self._wait()
+            try:
+                response = self._session.get(url, headers={"Accept": "*/*"}, timeout=40)
+            except requests.RequestException as exc:
+                last_status = None
+                last_detail = str(exc)
+                time.sleep(2 ** attempt)
+                self._session = None
+                continue
+            last_status = response.status_code
+            if response.status_code in (403, 429, 500, 502, 503):
+                last_detail = response.text[:120].replace("\n", " ")
+                time.sleep(2 ** attempt)
+                self._session = None
+                continue
+            if response.status_code != 200 or not response.content:
+                raise NSEError(symbol or url, response.status_code, response.text[:120].replace("\n", " "))
+            return response.content
+        raise NSEError(symbol or url, last_status, last_detail or "retries exhausted")
+
 
 def _rows(payload) -> list:
     if isinstance(payload, list):
@@ -195,6 +222,7 @@ def _financial(symbol: str, row: dict) -> dict:
         "pdf_url": pdf,
         "xbrl_url": xbrl,
         "period_end": period,
+        "scope": consolidated or "Unknown",
         "timestamp": str(row.get("broadcast_Date") or ""),
         "filing_kind": "results",
     }
