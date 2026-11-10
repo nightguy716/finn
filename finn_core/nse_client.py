@@ -14,6 +14,7 @@ ANNOUNCEMENTS = "https://www.nseindia.com/api/corporate-announcements"
 # Current quarterly financials. The older corporates-financial-results feed
 # still answers, but its symbol query stops before this results season.
 INTEGRATED_RESULTS = "https://www.nseindia.com/api/integrated-filing-results"
+ANNUAL_REPORTS = "https://www.nseindia.com/api/annual-reports"
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
@@ -97,6 +98,34 @@ class NSEClient:
             rows.append(_financial(symbol, row))
         if self.cache is not None:
             self.cache.put("nse_integrated_results", symbol, key_start, key_end, rows)
+        return rows
+
+    def get_annual_reports(self, symbol: str) -> list[dict]:
+        """Annual-report PDFs from /api/annual-reports. Newest submission first."""
+        year = str(date.today().year)
+        if self.cache is not None:
+            cached = self.cache.get("nse_annual_reports", symbol, year, "v1")
+            if cached is not None:
+                return cached
+        raw = self._request(symbol, ANNUAL_REPORTS, {"index": "equities", "symbol": symbol})
+        rows = []
+        for row in raw:
+            if not isinstance(row, dict):
+                continue
+            url = _usable_url(row.get("fileName"))
+            if not url:
+                continue
+            rows.append(
+                {
+                    "from_year": str(row.get("fromYr") or ""),
+                    "to_year": str(row.get("toYr") or ""),
+                    "url": url,
+                    "timestamp": str(row.get("broadcast_dttm") or row.get("disseminationDateTime") or ""),
+                }
+            )
+        rows.sort(key=lambda row: (row["to_year"], row["timestamp"]), reverse=True)
+        if self.cache is not None:
+            self.cache.put("nse_annual_reports", symbol, year, "v1", rows)
         return rows
 
     def _fetch(self, symbol: str, start: date, end: date) -> list[dict]:

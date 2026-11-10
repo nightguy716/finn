@@ -73,3 +73,27 @@ The first PDF save failed: the filename used the filing timestamp, which contain
 72-hour feed, `as_of` 2026-11-06, after the fix: management 3 calls, 5,075 tokens; summaries 5 calls, 14,905 tokens; total 19,980. The same 72-hour call again: 0 calls, 3 management cache hits, 5 summary cache hits, 0 tokens. The 24-hour feed reused the HDFC and Marico extractions and also cost 0 tokens.
 
 Alerts are unchanged: one per ticker per day, capped at 8, each linked to events for that ticker within one calendar day. The loader keeps one extra day so a 6 Nov volume alert can point at 5 Nov results even when those results are outside the 24-hour card window.
+
+## 2026-11-10 — Pull documents and the quarterly series
+
+No model calls. `python -m finn_core.pull` discovers transcripts, the latest annual report, and six quarters of results for any NSE symbol.
+
+NSE `corporate-announcements` takes `from_date` and `to_date` and has no page token. One call for Titan from 10 Nov 2022 to 10 Nov 2026 returned 639 rows with the oldest on 10 Nov 2022, so a multi-year window is not capped. The transcript search asks for about fourteen months (five quarters). It splits that window only when a long response has at least 200 rows and the oldest row is more than 60 days after the requested start.
+
+A concall row counts as the transcript when the exchange text says "copy of transcript" or "about Transcript", or the filename says transcript. A "will hold / schedule of" letter is a notice even if it promises a transcript later. An earnings transcript is preferred to a different conference in the same quarter. After download, a one- or two-page letter that says the transcript was uploaded on the company website is not treated as the transcript. The real file is then taken from the public Screener page, then from the company site linked there. Text is stored with page numbers in the `doc_text` cache, keyed by symbol and URL. A PDF with under 40 characters per page is marked scanned. None of the five test companies had one.
+
+`/api/annual-reports?index=equities&symbol=` returns the PDF on `nsearchives` with `fromYr` and `toYr`. All five companies resolved there for 2025–26 (`toYr` 2026). Screener's annual-report links point at BSE, so they stay the fallback.
+
+The quarterly series is each integrated filing's own current-quarter facts, in crore, via the existing XBRL parser. OneD is used only when it spans about a quarter. CG Power's March 2026 file has OneD from 2025-10-01 to 2026-03-31, and its September 2025 file has OneD from 2025-04-01 to 2025-09-30, so those quarters are flagged and left blank. June 2025 is not in the integrated-filing feed for CG Power.
+
+Checked 10 Nov 2026:
+
+| Ticker | Transcripts | Route | Gap | Annual report | Quarters with revenue | Characters |
+| --- | --- | --- | --- | --- | --- | --- |
+| TITAN | 4/5 | NSE | Sep 2026 audio only (recording filed 5 Nov, transcript not filed) | 2026, NSE | 6/6 | 207,078 |
+| MARICO | 5/5 | NSE | none | 2026, NSE | 6/6 | 282,440 |
+| CGPOWER | 4/5 | Screener PDFs on cgglobal.com | Sep 2026 audio only. NSE's five "transcript" files are one-page letters pointing at a script-rendered investor page with no PDF | 2026, NSE | 3/6 | 180,656 |
+| DMART | 1/5 | NSE | Sep 2026, Mar 2026, Dec 2025, Sep 2025 not filed. Screener's concall list for this company is the August analyst-meet transcript | 2026, NSE | 6/6 | 112,041 |
+| ASIANPAINT | 5/5 | NSE | none. The 3 Nov 2026 file is named Q2FY26; the letter is the 29 Oct 2026 conference, so the quarter is Sep 2026 | 2026, NSE | 6/6 | 256,302 |
+
+Titan Sep 2026 revenue 20,614, EBITDA 2,984, PBT 3,001, PAT 2,393 matches the results card. Marico Sep 2026 revenue 3,897, PBT 674, PAT 550 matches it too.
