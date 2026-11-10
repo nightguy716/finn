@@ -1,0 +1,13 @@
+{
+  "feeds": {
+    "2026-11-06|24|5|2.5|*": "feed-2026-11-06-24.json",
+    "2026-11-06|72|5|2.5|*": "feed-2026-11-06-72.json"
+  },
+  "ledgers": {
+    "MARICO": "ledger-MARICO.json",
+    "ASIANPAINT": "ledger-ASIANPAINT.json",
+    "TITAN": "ledger-TITAN.json",
+    "CGPOWER": "ledger-CGPOWER.json",
+    "DMART": "ledger-DMART.json"
+  }
+}

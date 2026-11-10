@@ -1,0 +1,162 @@
+{
+  "symbol": "CGPOWER",
+  "coverage": {
+    "transcripts_found": 6,
+    "transcripts_of": 7,
+    "quarters_with_results": 4,
+    "quarters_of": 10,
+    "audio_only": [
+      "2026-09-30"
+    ],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-09-30",
+        "why": "OneD is 2025-04-01 to 2025-09-30, a half year. 2025-06-30 is missing, so this quarter is left blank."
+      },
+      {
+        "period": "2025-06-30",
+        "why": "missing"
+      },
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 16,
+    "pages_dropped_by_prefilter": 1,
+    "dropped_pages": [
+      {
+        "period": "2026-06-30",
+        "page": 6
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 3801.54,
+    "ebitda_margin_pct": 14.19,
+    "pat": 412.04,
+    "ttm_revenue": 13699.46,
+    "ttm_pat": 1366.71,
+    "ttm_ebitda_margin_pct": 12.88,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 3801.54,
+        "ebitda": 539.58,
+        "ebitda_margin_pct": 14.19,
+        "pat": 412.04,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 3280.81,
+        "ebitda": 397.28,
+        "ebitda_margin_pct": 12.11,
+        "pat": 304.35,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 3441.76,
+        "ebitda": 466.49,
+        "ebitda_margin_pct": 13.55,
+        "pat": 365.49,
+        "basis": "derived",
+        "flags": [
+          "OneD is dated 2025-10-01 to 2026-03-31, but 3441.76 equals the year-to-date minus the 2025-12-31 year-to-date, so this is the quarter itself."
+        ]
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 3175.35,
+        "ebitda": 361.75,
+        "ebitda_margin_pct": 11.39,
+        "pat": 284.83,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": null,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "pat": null,
+        "basis": "",
+        "flags": [
+          "OneD is 2025-04-01 to 2025-09-30, a half year. 2025-06-30 is missing, so this quarter is left blank."
+        ]
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": null,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "pat": null,
+        "basis": "",
+        "flags": [
+          "missing"
+        ]
+      }
+    ]
+  },
+  "rows": [],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 6,
+    "total": 6
+  },
+  "timing": {
+    "discover": 1.2,
+    "series": 0.78,
+    "guidance": 6.31,
+    "check": 0.0,
+    "verdict": 0.11,
+    "total": 8.4
+  },
+  "usage": {
+    "guidance": {
+      "calls": 2,
+      "cache_hits": 3,
+      "tokens": 4231,
+      "dropped": 0
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 4231
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "symbol": "TITAN",
+  "coverage": {
+    "transcripts_found": 6,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [
+      "2026-09-30"
+    ],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 5,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 24,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 20614.0,
+    "ebitda_margin_pct": 14.48,
+    "pat": 2393.0,
+    "ttm_revenue": 94306.0,
+    "ttm_pat": 7033.0,
+    "ttm_ebitda_margin_pct": 11.05,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 20614.0,
+        "ebitda": 2984.0,
+        "ebitda_margin_pct": 14.48,
+        "pat": 2393.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 21356.0,
+        "ebitda": 2890.0,
+        "ebitda_margin_pct": 13.53,
+        "pat": 1777.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 26920.0,
+        "ebitda": 1988.0,
+        "ebitda_margin_pct": 7.38,
+        "pat": 1179.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 25416.0,
+        "ebitda": 2561.0,
+        "ebitda_margin_pct": 10.08,
+        "pat": 1684.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 18725.0,
+        "ebitda": 1875.0,
+        "ebitda_margin_pct": 10.01,
+        "pat": 1120.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 16523.0,
+        "ebitda": 1830.0,
+        "ebitda_margin_pct": 11.08,
+        "pat": 1091.0,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 13\u201316% for FY2026",
+      "source_quote": "I think we are hopeful that mid-teen kind of number we should be able to deliver full year basis for FY \u201826.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TITAN_11082025103451_SEtranscriptQ1.pdf",
+      "speaker": "Ashok Sonthalia",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201316%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "segment",
+      "scope_name": "watches",
+      "metric_key": "ebitda_margin",
+      "target_low": 13.0,
+      "target_high": 16.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-11",
+      "calls": [
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "page": 4,
+          "quote": "11 to 11.5 still remains our guidance on which we are trying to work on.",
+          "document": "TITAN_11082025103451_SEtranscriptQ1.pdf"
+        },
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "page": 10,
+          "quote": "I think we are hopeful that mid-teen kind of number we should be able to deliver full year basis for FY \u201826.",
+          "document": "TITAN_11082025103451_SEtranscriptQ1.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "value": "11\u201311.5%",
+          "change": "set",
+          "page": 4,
+          "quote": "11 to 11.5 still remains our guidance on which we are trying to work on."
+        },
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "value": "13\u201316%",
+          "change": "raised",
+          "page": 10,
+          "quote": "I think we are hopeful that mid-teen kind of number we should be able to deliver full year basis for FY \u201826."
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth 15\u201320% for FY2026",
+      "source_quote": "between 15% to 20% is a fairly good rate I would say.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TITAN_12052025105522_SEinvestorcalltranscriptQ4.pdf",
+      "speaker": "Ajoy Chawla",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15\u201320%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "segment",
+      "scope_name": "jewellery",
+      "metric_key": "revenue_growth",
+      "target_low": 15.0,
+      "target_high": 20.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-12",
+      "calls": [
+        {
+          "date": "2025-05-12",
+          "call_period": "2025-03-31",
+          "page": 12,
+          "quote": "between 15% to 20% is a fairly good rate I would say.",
+          "document": "TITAN_12052025105522_SEinvestorcalltranscriptQ4.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 15\u201320% for FY2027",
+      "source_quote": "between 15 % to 20%. So, in a sense, that holds good and we hope to do that",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TITAN_14052026233103_SEIntimationtranscriptq4.pdf",
+      "speaker": "Arun Narayan",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15\u201320%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "segment",
+      "scope_name": "Jewelry",
+      "metric_key": "revenue_growth",
+      "target_low": 15.0,
+      "target_high": 20.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-14",
+      "calls": [
+        {
+          "date": "2026-05-14",
+          "call_period": "2026-03-31",
+          "page": 8,
+          "quote": "between 15 % to 20%. So, in a sense, that holds good and we hope to do that",
+          "document": "TITAN_14052026233103_SEIntimationtranscriptq4.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 15\u201316% for FY2027",
+      "source_quote": "15% to 16% for the business, at least in th e 1-year, 2-year time frame.",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TITAN_08112025170040_SEearningcalltranscriptQ2.pdf",
+      "speaker": "Ashok Sonthalia",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15\u201316%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "segment",
+      "scope_name": "watches",
+      "metric_key": "ebitda_margin",
+      "target_low": 15.0,
+      "target_high": 16.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-08",
+      "calls": [
+        {
+          "date": "2025-11-08",
+          "call_period": "2025-09-30",
+          "page": 8,
+          "quote": "15% to 16% for the business, at least in th e 1-year, 2-year time frame.",
+          "document": "TITAN_08112025170040_SEearningcalltranscriptQ2.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 11\u201311.5% for FY2026",
+      "source_quote": "As far as coming to 11% to 11.5% margin guidance, I think that stays.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TITAN_12052025105522_SEinvestorcalltranscriptQ4.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "11\u201311.5%",
+      "status": "segment_level",
+      "note": "Jewellery guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "scope": "segment",
+      "scope_name": "Jewellery",
+      "metric_key": "ebitda_margin",
+      "target_low": 11.0,
+      "target_high": 11.5,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-12",
+      "calls": [
+        {
+          "date": "2025-05-12",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "As far as coming to 11% to 11.5% margin guidance, I think that stays.",
+          "document": "TITAN_12052025105522_SEinvestorcalltranscriptQ4.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 1,
+    "cut": 0,
+    "maintained": 0,
+    "items": [
+      {
+        "promise": "EBITDA margin 13\u201316% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-08-11",
+            "value": "11\u201311.5%",
+            "change": "set"
+          },
+          {
+            "date": "2025-08-11",
+            "value": "13\u201316%",
+            "change": "raised"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 6,
+    "total": 6
+  },
+  "timing": {
+    "discover": 2.25,
+    "series": 1.3,
+    "guidance": 1.44,
+    "check": 0.0,
+    "verdict": 0.11,
+    "total": 5.1
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 6,
+      "tokens": 0,
+      "dropped": 0
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

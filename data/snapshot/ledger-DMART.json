@@ -1,0 +1,286 @@
+{
+  "symbol": "DMART",
+  "coverage": {
+    "transcripts_found": 2,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [
+      "2026-09-30",
+      "2026-03-31",
+      "2025-12-31",
+      "2025-09-30",
+      "2025-03-31"
+    ],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": "Only 2 transcripts in the last seven quarters. Too thin to judge whether management keeps its word."
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 1,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 4,
+    "pages_dropped_by_prefilter": 1,
+    "dropped_pages": [
+      {
+        "period": "2026-06-30",
+        "page": 37
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 19644.01,
+    "ebitda_margin_pct": 7.09,
+    "pat": 743.57,
+    "ttm_revenue": 74223.28,
+    "ttm_pat": 3116.69,
+    "ttm_ebitda_margin_pct": 7.5,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 19644.01,
+        "ebitda": 1392.96,
+        "ebitda_margin_pct": 7.09,
+        "pat": 743.57,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 18794.53,
+        "ebitda": 1499.34,
+        "ebitda_margin_pct": 7.98,
+        "pat": 860.61,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 17683.86,
+        "ebitda": 1210.53,
+        "ebitda_margin_pct": 6.85,
+        "pat": 656.59,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 18100.88,
+        "ebitda": 1463.37,
+        "ebitda_margin_pct": 8.08,
+        "pat": 855.92,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 16676.3,
+        "ebitda": 1213.65,
+        "ebitda_margin_pct": 7.28,
+        "pat": 685.01,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 16359.7,
+        "ebitda": 1299.04,
+        "ebitda_margin_pct": 7.94,
+        "pat": 772.97,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 22\u201323% for an unnamed period",
+      "source_quote": "we expect this particular part of the business to be somewhere in that 22% to 23% kind of a range.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DMART_04082026124725_ASLTranscriptIntimation04082026.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "22\u201323%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "segment",
+      "scope_name": "GMA",
+      "metric_key": "revenue_growth",
+      "target_low": 22.0,
+      "target_high": 23.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-04",
+      "calls": [
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "page": 10,
+          "quote": "we expect this particular part of the business to be somewhere in that 22% to 23% kind of a range.",
+          "document": "DMART_04082026124725_ASLTranscriptIntimation04082026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth at least 50% for FY2026",
+      "source_quote": "it won't be less than 50",
+      "page": 20,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DMART_06082025182522_ASLTranscriptIntimation06082025.pdf",
+      "speaker": "Neville Noronha",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 50%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 50.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-06",
+      "calls": [
+        {
+          "date": "2025-08-06",
+          "call_period": "2025-06-30",
+          "page": 20,
+          "quote": "it won't be less than 50",
+          "document": "DMART_06082025182522_ASLTranscriptIntimation06082025.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 15% for FY2027",
+      "source_quote": "internal number or internal ambition that we will look at will be that 15% number.",
+      "page": 22,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DMART_04082026124725_ASLTranscriptIntimation04082026.pdf",
+      "speaker": "Anshul Asawa",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 15.0,
+      "target_high": 15.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-04",
+      "calls": [
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "page": 4,
+          "quote": "we should be opening around 15% of our store base as the number that we want to increase annually.",
+          "document": "DMART_04082026124725_ASLTranscriptIntimation04082026.pdf"
+        },
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "page": 22,
+          "quote": "internal number or internal ambition that we will look at will be that 15% number.",
+          "document": "DMART_04082026124725_ASLTranscriptIntimation04082026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "value": "15%",
+          "change": "set",
+          "page": 4,
+          "quote": "we should be opening around 15% of our store base as the number that we want to increase annually."
+        },
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "value": "15%",
+          "change": "maintained",
+          "page": 22,
+          "quote": "internal number or internal ambition that we will look at will be that 15% number."
+        }
+      ]
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 1,
+    "items": [
+      {
+        "promise": "Volume growth 15% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-08-04",
+            "value": "15%",
+            "change": "set"
+          },
+          {
+            "date": "2026-08-04",
+            "value": "15%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "Only 2 transcripts in the last seven quarters. Too thin to judge whether management keeps its word.",
+  "progress": {
+    "stage": "complete",
+    "done": 2,
+    "total": 2
+  },
+  "timing": {
+    "discover": 0.64,
+    "series": 1.07,
+    "guidance": 6.09,
+    "check": 0.0,
+    "verdict": 0.07,
+    "total": 7.87
+  },
+  "usage": {
+    "guidance": {
+      "calls": 2,
+      "cache_hits": 0,
+      "tokens": 5589,
+      "dropped": 0
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 5589
+  }
+}

@@ -30,7 +30,7 @@ RAW_KINDS = {"xbrl_xml"}
 
 class FileCache:
     def __init__(self, path: Path | None = None):
-        self.path = path or Path(".finn_cache") / "finn.sqlite"
+        self.path = path or _cache_dir() / "finn.sqlite"
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self._db = sqlite3.connect(self.path)
         self._db.execute(
@@ -142,6 +142,13 @@ class HybridCache:
     def close(self) -> None:
         self.local.close()
         self.remote.close()
+
+
+def _cache_dir() -> Path:
+    """Vercel can write only under /tmp, and that disk disappears with the instance."""
+    if os.environ.get("VERCEL"):
+        return Path("/tmp/finn_cache")
+    return Path(".finn_cache")
 
 
 def open_cache():

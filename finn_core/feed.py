@@ -8,7 +8,7 @@ import json
 import sys
 from datetime import date, datetime, timedelta
 
-from finn_core.cache import FileCache
+from finn_core.cache import open_cache
 from finn_core.classify import PRIORITY, Classification, classify
 from finn_core.config import PORTFOLIO, company_name, market_symbol
 from finn_core.events import SUMMARY_CATEGORIES, cluster
@@ -48,14 +48,14 @@ def build_feed(
     volume_n: float = 2.5,
     alert_cap: int = 8,
     client: NSEClient | None = None,
-    cache: FileCache | None = None,
+    cache=None,
 ) -> dict:
     """One JSON object for the window ending at `as_of`. A date means 23:59:59 that day."""
     as_of = _as_of(as_of)
     start = as_of - timedelta(hours=window_hours)
     symbols = [symbol.upper() for symbol in (symbols or list(PORTFOLIO))]
     own_cache = cache is None
-    cache = cache or FileCache()
+    cache = cache or open_cache()
     client = client or NSEClient(cache=cache)
     usage = {
         "management_change": {"calls": 0, "cache_hits": 0, "tokens": 0},

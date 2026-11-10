@@ -17,6 +17,9 @@ from finn_core.results_card import _load_xbrl
 from finn_core.xbrl_parse import ebitda, ebitda_block_reason, metrics_from, parse_period_end, parse_xbrl
 
 
+SERIES_VERSION = "v1"
+
+
 def quarterly_series(symbol: str, quarters: int = 6, as_of: date | None = None, client=None, cache=None) -> dict:
     as_of = as_of or date.today()
     symbol = symbol.upper()
@@ -24,6 +27,9 @@ def quarterly_series(symbol: str, quarters: int = 6, as_of: date | None = None, 
     client = client or NSEClient(cache=cache)
     cache = cache if cache is not None else client.cache
     expected = quarter_ends(as_of, quarters)
+    cached = _read_cached_series(cache, symbol, expected)
+    if cached is not None:
+        return {"symbol": symbol, "unit": "INR crore", "quarters": cached, "failures": []}
     failures = []
     by_period = {}
     try:
@@ -99,7 +105,31 @@ def quarterly_series(symbol: str, quarters: int = 6, as_of: date | None = None, 
             }
         )
     apply_half_year(output, halves, ytds)
+    if not any(item.get("step") == "integrated_results" for item in failures):
+        _store_series(cache, symbol, output)
     return {"symbol": symbol, "unit": "INR crore", "quarters": output, "failures": failures}
+
+
+def _read_cached_series(cache, symbol: str, expected: list[date]):
+    """Every quarter must already be stored. One miss means the filing is parsed again."""
+    if cache is None:
+        return None
+    quarters = []
+    for period in expected:
+        row = cache.get("series_quarter", symbol, period.isoformat(), SERIES_VERSION)
+        if not isinstance(row, dict) or row.get("period") != period.isoformat():
+            return None
+        quarters.append(row)
+    return quarters
+
+
+def _store_series(cache, symbol: str, quarters: list[dict]) -> None:
+    if cache is None:
+        return
+    for row in quarters:
+        period = row.get("period") or ""
+        if period:
+            cache.put("series_quarter", symbol, period, SERIES_VERSION, row)
 
 
 def half_pair(start: date, end: date) -> tuple[date, date] | None:

@@ -44,6 +44,9 @@ def build_results_card(symbol: str, client: NSEClient, cache, *, today: date | N
     period_end = parse_period_end(current_row.get("period_end") or "")
     if period_end is None:
         return _failed(symbol, f"unreadable period {current_row.get('period_end')}", usage)
+    stored = _cached_card(cache, symbol, period_end)
+    if stored is not None:
+        return stored
 
     parsed = None
     parse_error = ""
@@ -72,7 +75,7 @@ def build_results_card(symbol: str, client: NSEClient, cache, *, today: date | N
             by_period[end] = row
     previous_metrics, previous_url, previous_flag = _comparison(client, cache, symbol, by_period, previous_quarter_end(period_end))
     yoy_metrics, yoy_url, yoy_flag = _comparison(client, cache, symbol, by_period, year_ago_end(period_end))
-    return _assemble(
+    card = _assemble(
         symbol=symbol,
         period_end=period_end,
         period_label=current_row.get("period_end") or "",
@@ -89,6 +92,25 @@ def build_results_card(symbol: str, client: NSEClient, cache, *, today: date | N
         extra_flags=[flag for flag in (previous_flag, yoy_flag) if flag],
         usage=usage,
     )
+    return _store_card(cache, card)
+
+
+CARD_VERSION = "v1"
+
+
+def _cached_card(cache, symbol: str, period_end: date):
+    if cache is None:
+        return None
+    row = cache.get("results_card", symbol, period_end.isoformat(), CARD_VERSION)
+    if isinstance(row, dict) and row.get("metrics"):
+        return row
+    return None
+
+
+def _store_card(cache, card: dict) -> dict:
+    if cache is not None and card.get("metrics") and card.get("period"):
+        cache.put("results_card", card.get("symbol") or "", card["period"], CARD_VERSION, card)
+    return card
 
 
 def _comparison(client, cache, symbol: str, by_period: dict, end: date):
@@ -294,7 +316,7 @@ def _from_pdf(symbol, client, cache, row, period_end: date, usage: dict, reason:
         usage=usage,
     )
     card["missing_reason"] = "XBRL parse failed. Figures are from the results PDF via the extraction model."
-    return card
+    return _store_card(cache, card)
 
 
 def find_results_pdf(client: NSEClient, symbol: str, broadcast: date) -> str:

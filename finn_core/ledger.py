@@ -116,6 +116,7 @@ def promise_ledger(
     client=None,
     cache=None,
     max_guidance_calls: int = 3,
+    stop_after: str = "complete",
 ) -> dict:
     """One stage of the ledger. Uncached transcripts stop after max_guidance_calls."""
     as_of = as_of or date.today()
@@ -139,10 +140,32 @@ def promise_ledger(
         "discover",
         lambda: find_transcripts(symbol, quarters=LOOKBACK, as_of=as_of, client=client, cache=cache),
     )
+    if stop_after == "discover":
+        found = sum(1 for row in transcripts["quarters"] if row["status"] == "found")
+        return _stopped(
+            symbol,
+            transcripts,
+            None,
+            {"stage": "discover", "done": found, "total": len(transcripts["quarters"])},
+            timing,
+            usage,
+        )
     series = stage(
         "series",
         lambda: quarterly_series(symbol, quarters=SERIES_QUARTERS, as_of=as_of, client=client, cache=cache),
     )
+    if stop_after == "series":
+        covered = _coverage(transcripts, series["quarters"])
+        timing["total"] = round(sum(timing.values()), 2)
+        return _stopped(
+            symbol,
+            transcripts,
+            series,
+            {"stage": "series", "done": covered["quarters_with_results"], "total": covered["quarters_of"]},
+            timing,
+            usage,
+            covered=covered,
+        )
     promises, lookback, done, total = stage(
         "guidance",
         lambda: _guidance_rows(symbol, transcripts, cache, client, usage, max_guidance_calls),
@@ -170,6 +193,27 @@ def promise_ledger(
         "long_term_targets": long_term,
         "revisions": revisions,
         "verdict": verdict,
+        "progress": progress,
+        "timing": timing,
+        "usage": usage,
+    }
+
+
+def _stopped(symbol, transcripts, series, progress, timing, usage, covered=None) -> dict:
+    quarters = [] if series is None else series.get("quarters") or []
+    if covered is None:
+        covered = _coverage(transcripts, quarters)
+    usage["total_tokens"] = usage["guidance"]["tokens"] + usage["verdict"]["tokens"]
+    timing["total"] = round(sum(value for key, value in timing.items() if key != "total"), 2)
+    return {
+        "symbol": symbol,
+        "coverage": covered,
+        "lookback": {},
+        "snapshot": _snapshot(quarters) if quarters else {},
+        "rows": [],
+        "long_term_targets": [],
+        "revisions": {"raised": 0, "cut": 0, "maintained": 0, "items": []},
+        "verdict": "",
         "progress": progress,
         "timing": timing,
         "usage": usage,

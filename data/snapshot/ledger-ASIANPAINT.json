@@ -1,0 +1,660 @@
+{
+  "symbol": "ASIANPAINT",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 4,
+    "next_quarter_statements": 1,
+    "pages_mentioning_fy26_or_next_quarter": 20,
+    "pages_dropped_by_prefilter": 2,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 30
+      },
+      {
+        "period": "2025-03-31",
+        "page": 27
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 9976.51,
+    "ebitda_margin_pct": 15.61,
+    "pat": 1067.63,
+    "ttm_revenue": 38632.17,
+    "ttm_pat": 4838.87,
+    "ttm_ebitda_margin_pct": 18.47,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 9976.51,
+        "ebitda": 1557.07,
+        "ebitda_margin_pct": 15.61,
+        "pat": 1067.63,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 10541.94,
+        "ebitda": 2168.76,
+        "ebitda_margin_pct": 20.57,
+        "pat": 1539.25,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 9246.7,
+        "ebitda": 1786.61,
+        "ebitda_margin_pct": 19.32,
+        "pat": 1172.12,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 8867.02,
+        "ebitda": 1623.35,
+        "ebitda_margin_pct": 18.31,
+        "pat": 1059.87,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 8531.27,
+        "ebitda": 1503.38,
+        "ebitda_margin_pct": 17.62,
+        "pat": 993.59,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 8938.55,
+        "ebitda": 1624.97,
+        "ebitda_margin_pct": 18.18,
+        "pat": 1099.77,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 18\u201320% for FY2027",
+      "source_quote": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds.",
+      "page": 20,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "FY2027",
+      "actual": "18.16%",
+      "actual_value": 18.16,
+      "actual_detail": "H1 FY2027 EBITDA margin 18.16% versus 17.91% a year earlier (+25 bps)",
+      "promised": "18\u201320%",
+      "status": "tracking_on_track",
+      "note": "H1 FY2027 EBITDA margin 18.16% versus 17.91% a year earlier (+25 bps)",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 18.0,
+      "target_high": 20.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-03",
+      "calls": [
+        {
+          "date": "2026-06-03",
+          "call_period": "2026-03-31",
+          "page": 23,
+          "quote": "maintain your margin guidance, which has always been 18-20%",
+          "document": "ASIANPAINT_03062026154629_Reg30_Transcript_Q4FY26.pdf"
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "page": 20,
+          "quote": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds.",
+          "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-06-03",
+          "call_period": "2026-03-31",
+          "value": "18\u201320%",
+          "change": "set",
+          "page": 23,
+          "quote": "maintain your margin guidance, which has always been 18-20%"
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "value": "18\u201320%",
+          "change": "maintained",
+          "page": 20,
+          "quote": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds."
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 18\u201320% for FY2026",
+      "source_quote": "maintain the whole guidance of 18 to 20% PBDIT margin band.",
+      "page": 27,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_18112025120322_SEIntimationTranscriptQ2FY26Nov2025.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "FY2026",
+      "actual": "18.37%",
+      "actual_value": 18.37,
+      "actual_detail": "",
+      "promised": "18\u201320%",
+      "status": "delivered",
+      "note": "",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 18.0,
+      "target_high": 20.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-18",
+      "calls": [
+        {
+          "date": "2025-05-12",
+          "call_period": "2025-03-31",
+          "page": 22,
+          "quote": "Overall PBDIT margins are in the zone of guidance of 18 % to 20%",
+          "document": "ASIANPAINT_12052025154734_SEINTIMATIONTRANSCRIPT080525.pdf"
+        },
+        {
+          "date": "2025-11-18",
+          "call_period": "2025-09-30",
+          "page": 27,
+          "quote": "maintain the whole guidance of 18 to 20% PBDIT margin band.",
+          "document": "ASIANPAINT_18112025120322_SEIntimationTranscriptQ2FY26Nov2025.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-12",
+          "call_period": "2025-03-31",
+          "value": "18\u201320%",
+          "change": "set",
+          "page": 22,
+          "quote": "Overall PBDIT margins are in the zone of guidance of 18 % to 20%"
+        },
+        {
+          "date": "2025-11-18",
+          "call_period": "2025-09-30",
+          "value": "18\u201320%",
+          "change": "maintained",
+          "page": 27,
+          "quote": "maintain the whole guidance of 18 to 20% PBDIT margin band."
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "The idea is to aim for single digit value growths for the year FY26.",
+      "page": 31,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_12052025154734_SEINTIMATIONTRANSCRIPT080525.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-12",
+      "calls": [
+        {
+          "date": "2025-05-12",
+          "call_period": "2025-03-31",
+          "page": 31,
+          "quote": "The idea is to aim for single digit value growths for the year FY26.",
+          "document": "ASIANPAINT_12052025154734_SEINTIMATIONTRANSCRIPT080525.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 8\u201310% for FY2027",
+      "source_quote": "At the current stage, we are looking at the band of 8-10% for the full FY27.",
+      "page": 20,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u201310%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 8.0,
+      "target_high": 10.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-03",
+      "calls": [
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "page": 20,
+          "quote": "At the current stage, we are looking at the band of 8-10% for the full FY27.",
+          "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 18\u201320% for FY2027",
+      "source_quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take.",
+      "page": 23,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "18\u201320%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 18.0,
+      "target_high": 20.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-03",
+      "calls": [
+        {
+          "date": "2026-02-02",
+          "call_period": "2025-12-31",
+          "page": 35,
+          "quote": "we would keep the guidance between that 18 and 20% band as we go ahead",
+          "document": "ASIANPAINT_02022026131104_SE_intimation_Transcript_Q3FY26_Jan2026_signed.pdf"
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "page": 23,
+          "quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take.",
+          "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-02-02",
+          "call_period": "2025-12-31",
+          "value": "18\u201320%",
+          "change": "set",
+          "page": 35,
+          "quote": "we would keep the guidance between that 18 and 20% band as we go ahead"
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "value": "18\u201320%",
+          "change": "maintained",
+          "page": 23,
+          "quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take."
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth 6.8% for FY2027",
+      "source_quote": "and a volume at about 6.8%.",
+      "page": 15,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "6.8%",
+      "status": "segment_level",
+      "note": "decorative plus industrial guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "scope": "segment",
+      "scope_name": "decorative plus industrial",
+      "metric_key": "volume_growth",
+      "target_low": 6.8,
+      "target_high": 6.8,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-03",
+      "calls": [
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "page": 14,
+          "quote": "so I spoke of a 6.4% volume growth, the value growth has also been very strong",
+          "document": "ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf"
+        },
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "page": 14,
+          "quote": "If you look at from an H1 perspective, again, the volume growth is pretty strong at about 8%",
+          "document": "ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf"
+        },
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "page": 15,
+          "quote": "and a volume at about 6.8%.",
+          "document": "ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "value": "6.4%",
+          "change": "set",
+          "page": 14,
+          "quote": "so I spoke of a 6.4% volume growth, the value growth has also been very strong"
+        },
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "value": "8%",
+          "change": "raised",
+          "page": 14,
+          "quote": "If you look at from an H1 perspective, again, the volume growth is pretty strong at about 8%"
+        },
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "value": "6.8%",
+          "change": "cut",
+          "page": 15,
+          "quote": "and a volume at about 6.8%."
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth 8\u20139% for an unnamed period",
+      "source_quote": "we feel that it would be reasonable to expect to see a volume growth of about 8% to 9% going forward.",
+      "page": 29,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u20139%",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 8.0,
+      "target_high": 9.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-03",
+      "calls": [
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "page": 29,
+          "quote": "we feel that it would be reasonable to expect to see a volume growth of about 8% to 9% going forward.",
+          "document": "ASIANPAINT_03112026182217_Stock_exchange_intimation_Transcript_Q2FY26.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 8\u201310% for 2026-03-31",
+      "source_quote": "anything in the volume, in the current context, which is between that 8% - 10% is a good growth",
+      "page": 34,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_02022026131104_SE_intimation_Transcript_Q3FY26_Jan2026_signed.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u201310%",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 8.0,
+      "target_high": 10.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-02",
+      "calls": [
+        {
+          "date": "2026-02-02",
+          "call_period": "2025-12-31",
+          "page": 34,
+          "quote": "anything in the volume, in the current context, which is between that 8% - 10% is a good growth",
+          "document": "ASIANPAINT_02022026131104_SE_intimation_Transcript_Q3FY26_Jan2026_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 8\u201310% for FY2027",
+      "source_quote": "I've spoken of that 8-10% as an overall volume band for the entire year.",
+      "page": 22,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u201310%",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 8.0,
+      "target_high": 10.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-03",
+      "calls": [
+        {
+          "date": "2026-06-03",
+          "call_period": "2026-03-31",
+          "page": 21,
+          "quote": "high single-digit volume growth in the band of about 8 -10%, as we predict going forward",
+          "document": "ASIANPAINT_03062026154629_Reg30_Transcript_Q4FY26.pdf"
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "page": 22,
+          "quote": "I've spoken of that 8-10% as an overall volume band for the entire year.",
+          "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-06-03",
+          "call_period": "2026-03-31",
+          "value": "8\u201310%",
+          "change": "set",
+          "page": 21,
+          "quote": "high single-digit volume growth in the band of about 8 -10%, as we predict going forward"
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "value": "8\u201310%",
+          "change": "maintained",
+          "page": 22,
+          "quote": "I've spoken of that 8-10% as an overall volume band for the entire year."
+        }
+      ]
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 1,
+    "cut": 1,
+    "maintained": 4,
+    "items": [
+      {
+        "promise": "Volume growth 6.8% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-11-03",
+            "value": "6.4%",
+            "change": "set"
+          },
+          {
+            "date": "2026-11-03",
+            "value": "8%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-11-03",
+            "value": "6.8%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 18\u201320% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-06-03",
+            "value": "18\u201320%",
+            "change": "set"
+          },
+          {
+            "date": "2026-08-03",
+            "value": "18\u201320%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Volume growth 8\u201310% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-06-03",
+            "value": "8\u201310%",
+            "change": "set"
+          },
+          {
+            "date": "2026-08-03",
+            "value": "8\u201310%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 18\u201320% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-02-02",
+            "value": "18\u201320%",
+            "change": "set"
+          },
+          {
+            "date": "2026-08-03",
+            "value": "18\u201320%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 18\u201320% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-12",
+            "value": "18\u201320%",
+            "change": "set"
+          },
+          {
+            "date": "2025-11-18",
+            "value": "18\u201320%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "Against the promised EBITDA margin of 18\u201320% for FY2027, the actual H1 FY2027 EBITDA margin was 18.16% compared to 17.91% a year earlier. Furthermore, the actual EBITDA margin delivered for FY2026 was 18.37% against the promised 18\u201320%.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 1.03,
+    "series": 0.84,
+    "guidance": 1.5,
+    "check": 0.0,
+    "verdict": 0.1,
+    "total": 3.47
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 7,
+      "tokens": 0,
+      "dropped": 0
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": "gemini-3.5-flash-lite"
+    },
+    "total_tokens": 0
+  }
+}

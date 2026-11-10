@@ -1,10 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "regions": ["bom1"],
+  "rewrites": [
+    { "source": "/api/health", "destination": "/api/index?route=health" },
+    { "source": "/api/feed", "destination": "/api/index?route=feed" },
+    { "source": "/api/ledger", "destination": "/api/index?route=ledger" },
+    { "source": "/api/alerts/config", "destination": "/api/index?route=alerts/config" }
+  ],
   "functions": {
-    "api/probe.py": {
-      "maxDuration": 120,
-      "excludeFiles": "{spike/**,.venv/**,**/.venv/**}"
+    "api/index.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{.venv/**,**/.venv/**,spike/**,build-history/**,.finn_cache/**,web/**,**/*.pdf}"
     }
   }
 }

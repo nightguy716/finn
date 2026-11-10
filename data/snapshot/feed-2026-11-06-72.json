@@ -1,0 +1,689 @@
+{
+  "as_of": "2026-11-06T23:59:59",
+  "window_hours": 72,
+  "window_start": "2026-11-03T23:59:59",
+  "move_pct": 5.0,
+  "volume_n": 2.5,
+  "cards": [
+    {
+      "id": "titan-results-202611051911-financial-results-consolidated-un-audited-period",
+      "symbol": "TITAN",
+      "company": "Titan Company",
+      "category": "results",
+      "priority": 95,
+      "timestamp": "2026-11-05T19:11:12",
+      "headline": "Titan Company results for the quarter ended 30-SEP-2026",
+      "body": {
+        "period": "2026-09-30",
+        "scope": "Consolidated",
+        "revenue_basis": "revenue_from_operations",
+        "metrics": {
+          "revenue": {
+            "current": 20614.0,
+            "qoq": 21356.0,
+            "yoy": 18725.0,
+            "qoq_pct": -3.47,
+            "yoy_pct": 10.09
+          },
+          "ebitda": {
+            "current": 2984.0,
+            "qoq": 2890.0,
+            "yoy": 1875.0,
+            "qoq_pct": 3.25,
+            "yoy_pct": 59.15
+          },
+          "pbt": {
+            "current": 3001.0,
+            "qoq": 2427.0,
+            "yoy": 1521.0,
+            "qoq_pct": 23.65,
+            "yoy_pct": 97.3
+          },
+          "pat": {
+            "current": 2393.0,
+            "qoq": 1777.0,
+            "yoy": 1120.0,
+            "qoq_pct": 34.67,
+            "yoy_pct": 113.66
+          }
+        },
+        "ebitda_margin_pct": {
+          "current": 14.48,
+          "qoq": 13.53,
+          "yoy": 10.01
+        },
+        "ebitda_reason": "",
+        "flags": [],
+        "source": "xbrl"
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/xbrl/INTEGRATED_FILING_INDAS_1754035_05112026071123_WEB.xml",
+        "https://nsearchives.nseindia.com/corporate/TITAN_05112026171559_SEinvestorpreQ227.pdf",
+        "https://nsearchives.nseindia.com/corporate/TITAN_05112026165028_SEoutcomeQ227.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026",
+          "url": "https://nsearchives.nseindia.com/corporate/xbrl/INTEGRATED_FILING_INDAS_1754035_05112026071123_WEB.xml",
+          "timestamp": "2026-11-05T19:11:12"
+        },
+        {
+          "subject": "Investor Presentation",
+          "url": "https://nsearchives.nseindia.com/corporate/TITAN_05112026171559_SEinvestorpreQ227.pdf",
+          "timestamp": "2026-11-05T17:16:16"
+        },
+        {
+          "subject": "Outcome of Board Meeting",
+          "url": "https://nsearchives.nseindia.com/corporate/TITAN_05112026165028_SEoutcomeQ227.pdf",
+          "timestamp": "2026-11-05T16:50:49"
+        }
+      ]
+    },
+    {
+      "id": "bharatforg-results-202611051854-financial-results-consolidated-un-audited-period",
+      "symbol": "BHARATFORG",
+      "company": "Bharat Forge",
+      "category": "results",
+      "priority": 95,
+      "timestamp": "2026-11-05T18:54:55",
+      "headline": "Bharat Forge results for the quarter ended 30-SEP-2026",
+      "body": {
+        "period": "2026-09-30",
+        "scope": "Consolidated",
+        "revenue_basis": "revenue_from_operations",
+        "metrics": {
+          "revenue": {
+            "current": 4869.97,
+            "qoq": 4639.94,
+            "yoy": 4031.93,
+            "qoq_pct": 4.96,
+            "yoy_pct": 20.79
+          },
+          "ebitda": {
+            "current": 743.11,
+            "qoq": 351.46,
+            "yoy": 725.65,
+            "qoq_pct": 111.44,
+            "yoy_pct": 2.41
+          },
+          "pbt": {
+            "current": 423.95,
+            "qoq": 55.71,
+            "yoy": 458.19,
+            "qoq_pct": 660.99,
+            "yoy_pct": -7.47
+          },
+          "pat": {
+            "current": 275.87,
+            "qoq": -89.73,
+            "yoy": 299.2,
+            "qoq_pct": -407.44,
+            "yoy_pct": -7.8
+          }
+        },
+        "ebitda_margin_pct": {
+          "current": 15.26,
+          "qoq": 7.57,
+          "yoy": 18.0
+        },
+        "ebitda_reason": "",
+        "flags": [],
+        "source": "xbrl"
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/ANILSHINDE_05112026185435_SEIntimationOutcomeofBM_sd.pdf",
+        "https://nsearchives.nseindia.com/corporate/xbrl/INTEGRATED_FILING_INDAS_1753991_05112026065454_WEB.xml",
+        "https://nsearchives.nseindia.com/corporate/ANILSHINDE_05112026132350_SEIntimationInvestorPresentation_sd.pdf",
+        "https://nsearchives.nseindia.com/corporate/ANILSHINDE_05112026125610_SEIntimationOutcomeofBM_sd.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026",
+          "url": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_05112026185435_SEIntimationOutcomeofBM_sd.pdf",
+          "timestamp": "2026-11-05T18:54:55"
+        },
+        {
+          "subject": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026",
+          "url": "https://nsearchives.nseindia.com/corporate/xbrl/INTEGRATED_FILING_INDAS_1753991_05112026065454_WEB.xml",
+          "timestamp": "2026-11-05T18:54:55"
+        },
+        {
+          "subject": "Investor Presentation",
+          "url": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_05112026132350_SEIntimationInvestorPresentation_sd.pdf",
+          "timestamp": "2026-11-05T13:24:33"
+        },
+        {
+          "subject": "Outcome of Board Meeting",
+          "url": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_05112026125610_SEIntimationOutcomeofBM_sd.pdf",
+          "timestamp": "2026-11-05T12:57:40"
+        }
+      ]
+    },
+    {
+      "id": "marico-m_and_a-202611061720-acquisition",
+      "symbol": "MARICO",
+      "company": "Marico",
+      "category": "m_and_a",
+      "priority": 90,
+      "timestamp": "2026-11-06T17:20:51",
+      "headline": "Marico Limited disclosed acquiring a 51% stake in Bonorizon Consumer Ventures Private Limited for up to Rs. 35 Crores and an additional 20% stake in Cosmix Wellness Private Limited for Rs. 113.65 Crores.",
+      "body": {
+        "line": "Marico Limited disclosed acquiring a 51% stake in Bonorizon Consumer Ventures Private Limited for up to Rs. 35 Crores and an additional 20% stake in Cosmix Wellness Private Limited for Rs. 113.65 Crores."
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/marico_06112026171755_SEIntimation.pdf",
+        "https://nsearchives.nseindia.com/corporate/marico_06112026171442_SEIntimationn.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Acquisition",
+          "url": "https://nsearchives.nseindia.com/corporate/marico_06112026171755_SEIntimation.pdf",
+          "timestamp": "2026-11-06T17:20:51"
+        },
+        {
+          "subject": "Acquisition",
+          "url": "https://nsearchives.nseindia.com/corporate/marico_06112026171442_SEIntimationn.pdf",
+          "timestamp": "2026-11-06T17:16:32"
+        }
+      ]
+    },
+    {
+      "id": "bharatforg-m_and_a-202611051314-acquisition",
+      "symbol": "BHARATFORG",
+      "company": "Bharat Forge",
+      "category": "m_and_a",
+      "priority": 90,
+      "timestamp": "2026-11-05T13:14:31",
+      "headline": "Bharat Forge disclosed financial results and an investment of Rs 2,905.08 million in Kalyani Strategic Systems Limited.",
+      "body": {
+        "line": "Bharat Forge disclosed financial results and an investment of Rs 2,905.08 million in Kalyani Strategic Systems Limited."
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/ANILSHINDE_05112026131420_SEIntimationOutcomeofBM_sd.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Acquisition",
+          "url": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_05112026131420_SEIntimationOutcomeofBM_sd.pdf",
+          "timestamp": "2026-11-05T13:14:31"
+        }
+      ]
+    },
+    {
+      "id": "persistent-fund_raise-202611041509-allotment-of-securities",
+      "symbol": "PERSISTENT",
+      "company": "Persistent Systems",
+      "category": "fund_raise",
+      "priority": 86,
+      "timestamp": "2026-11-04T15:09:23",
+      "headline": "Persistent Systems Limited disclosed the approval of the allotment of 700,000 non-convertible debentures aggregating to INR 70 billion on a private placement basis.",
+      "body": {
+        "line": "Persistent Systems Limited disclosed the approval of the allotment of 700,000 non-convertible debentures aggregating to INR 70 billion on a private placement basis."
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_04112026150907_PersistentSEOutcomeAllotmentofNCDsNovember42026Signed.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Allotment of Securities",
+          "url": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_04112026150907_PersistentSEOutcomeAllotmentofNCDsNovember42026Signed.pdf",
+          "timestamp": "2026-11-04T15:09:23"
+        }
+      ]
+    },
+    {
+      "id": "hdfcbank-management_change-202611061521-change-in-management",
+      "symbol": "HDFCBANK",
+      "company": "HDFC Bank",
+      "category": "management_change",
+      "priority": 82,
+      "timestamp": "2026-11-06T15:21:56",
+      "headline": "Appointment: Mr. V.N. Srivatsan, Chief Compliance Officer",
+      "body": {
+        "role": "Chief Compliance Officer",
+        "person": "Mr. V.N. Srivatsan",
+        "profile": "Mr. V. N. Srivatsan has approximately 34 years of overall professional experience, including around 25 years in the BFSI sector and close to 10 years of direct experience in Compliance and Regulatory Inspection. Prior to joining the Bank, he served as Head \u2013 Compliance: Overseas Banking and Subsidiaries & Data Privacy Officer at ICICI Bank Limited. He holds a Post Graduate degree in Business Administration from PSG College of Technology and a Bachelor of Technology (B. Tech) from Sri Venkateshwara University. He has previously led Retail Banking Compliance and Regulatory Inspection for more than 8 years. His responsibilities have included oversight of regulatory compliance, handling regulatory inspections, designing and implementing compliance frameworks and policies, and working closely with senior management, the Audit Committee, the Board and regulators. Mr. V. N. Srivatsan\u2019s experience is strongly aligned with the requirements of the Chief Compliance Officer role.",
+        "text_note": "Attachment PDF.",
+        "change_type": "appointment",
+        "profile_note": "",
+        "effective_date": "November 6, 2026"
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/HDFCBANK3_06112026152141_SE_Intimation-Srivatsan.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Change in Management",
+          "url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_06112026152141_SE_Intimation-Srivatsan.pdf",
+          "timestamp": "2026-11-06T15:21:56"
+        }
+      ]
+    },
+    {
+      "id": "titan-management_change-202611051851-retirement",
+      "symbol": "TITAN",
+      "company": "Titan Company",
+      "category": "management_change",
+      "priority": 82,
+      "timestamp": "2026-11-05T18:51:55",
+      "headline": "Retirement: Mr. Noel N. Tata, Non-Executive, Non-Independent Director and Vice-Chairman",
+      "body": {
+        "role": "Non-Executive, Non-Independent Director and Vice-Chairman",
+        "person": "Mr. Noel N. Tata",
+        "profile": null,
+        "text_note": "Attachment PDF.",
+        "change_type": "retirement",
+        "profile_note": "The disclosure has no biographical profile.",
+        "effective_date": "12th November 2026"
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/TITAN_05112026185140_SENNTata.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Retirement",
+          "url": "https://nsearchives.nseindia.com/corporate/TITAN_05112026185140_SENNTata.pdf",
+          "timestamp": "2026-11-05T18:51:55"
+        }
+      ]
+    },
+    {
+      "id": "cgpower-litigation-202611051235-action-s-taken-or-orders-passed",
+      "symbol": "CGPOWER",
+      "company": "CG Power and Industrial Solutions",
+      "category": "litigation",
+      "priority": 78,
+      "timestamp": "2026-11-05T12:35:21",
+      "headline": "CG Power and Industrial Solutions Limited disclosed that it received a direction from the Maharashtra Pollution Control Board to close manufacturing operations at its unit in Chhatrapati Sambhajinagar.",
+      "body": {
+        "line": "CG Power and Industrial Solutions Limited disclosed that it received a direction from the Maharashtra Pollution Control Board to close manufacturing operations at its unit in Chhatrapati Sambhajinagar."
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/CGPOWER_05112026123502_Draft_SE_Disclosure-_Closure_of_Operations-051126.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Action(s) taken or orders passed",
+          "url": "https://nsearchives.nseindia.com/corporate/CGPOWER_05112026123502_Draft_SE_Disclosure-_Closure_of_Operations-051126.pdf",
+          "timestamp": "2026-11-05T12:35:21"
+        }
+      ]
+    },
+    {
+      "id": "reliance-credit_rating-202611042047-credit-rating",
+      "symbol": "RELIANCE",
+      "company": "Reliance Industries",
+      "category": "credit_rating",
+      "priority": 74,
+      "timestamp": "2026-11-04T20:47:14",
+      "headline": "S&P Global Ratings reaffirmed the credit rating of A minus with a Stable outlook for the Senior Unsecured US Dollar Denominated Fixed Rate Notes of the company.",
+      "body": {
+        "line": "S&P Global Ratings reaffirmed the credit rating of A minus with a Stable outlook for the Senior Unsecured US Dollar Denominated Fixed Rate Notes of the company."
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/PVIVINMA_04112026204646_SE_RIL_041126.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Credit Rating",
+          "url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_04112026204646_SE_RIL_041126.pdf",
+          "timestamp": "2026-11-04T20:47:14"
+        }
+      ]
+    },
+    {
+      "id": "titan-management_change-202611051836-change-in-auditors",
+      "symbol": "TITAN",
+      "company": "Titan Company",
+      "category": "management_change",
+      "priority": 42,
+      "timestamp": "2026-11-05T18:36:30",
+      "headline": "Appointment: M/s Price Waterhouse Chartered Accountants LLP, Statutory Auditor",
+      "body": {
+        "role": "Statutory Auditor",
+        "person": "M/s Price Waterhouse Chartered Accountants LLP",
+        "profile": "Price Waterhouse Chartered Accountants LLP, (the \u201cFirm\u201d) having a Firm Registration No. 012754N/N500016, is a firm of Chartered Accountants registered with the Institute of Chartered Accountants of India. The Firm was established in the year 1991 and was converted into a limited liability partnership in the year 2014. The registered office of the Firm is in New Delhi and has seventeen (17) branch offices in various cities in India. The Firm is primarily engaged in providing auditing and other assurance services to its clients and is a member firm of Price Waterhouse & Affiliates, a network of firms registered with the Institute of Chartered Accountants of India having Network Registration No. NRN/E/14. Price Waterhouse & Affiliates is a network of separate, distinct and independent Indian Chartered Accountant firms, each of which is registered with the Institute of Chartered Accountants of India. The Firm has more than 120 Assurance Partners as of April 1, 2026. It has a valid peer review certificate and audits various companies listed on stock exchanges in India.",
+        "text_note": "Attachment PDF.",
+        "change_type": "appointment",
+        "profile_note": "",
+        "effective_date": "conclusion of the 43rd Annual General Meeting"
+      },
+      "source_urls": [
+        "https://nsearchives.nseindia.com/corporate/TITAN_05112026183608_SEappoinmentofstatutoryauditor.pdf"
+      ],
+      "sources": [
+        {
+          "subject": "Change in Auditors",
+          "url": "https://nsearchives.nseindia.com/corporate/TITAN_05112026183608_SEappoinmentofstatutoryauditor.pdf",
+          "timestamp": "2026-11-05T18:36:30"
+        }
+      ]
+    }
+  ],
+  "routine": [
+    {
+      "symbol": "BAJFINANCE",
+      "company": "Bajaj Finance",
+      "count": 1
+    },
+    {
+      "symbol": "BHARATFORG",
+      "company": "Bharat Forge",
+      "count": 5
+    },
+    {
+      "symbol": "BHARATSEATS",
+      "company": "Bharat Seats",
+      "count": 1
+    },
+    {
+      "symbol": "DIXON",
+      "company": "Dixon Technologies",
+      "count": 2
+    },
+    {
+      "symbol": "HDFCBANK",
+      "company": "HDFC Bank",
+      "count": 1
+    },
+    {
+      "symbol": "INFY",
+      "company": "Infosys",
+      "count": 1
+    },
+    {
+      "symbol": "ITC",
+      "company": "ITC",
+      "count": 1
+    },
+    {
+      "symbol": "LT",
+      "company": "Larsen & Toubro",
+      "count": 2
+    },
+    {
+      "symbol": "MARICO",
+      "company": "Marico",
+      "count": 3
+    },
+    {
+      "symbol": "PERSISTENT",
+      "company": "Persistent Systems",
+      "count": 2
+    },
+    {
+      "symbol": "POLYCAB",
+      "company": "Polycab India",
+      "count": 1
+    },
+    {
+      "symbol": "RELIANCE",
+      "company": "Reliance Industries",
+      "count": 1
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "company": "Sun Pharmaceutical",
+      "count": 3
+    },
+    {
+      "symbol": "TCS",
+      "company": "Tata Consultancy Services",
+      "count": 1
+    },
+    {
+      "symbol": "TITAN",
+      "company": "Titan Company",
+      "count": 4
+    },
+    {
+      "symbol": "TRENT",
+      "company": "Trent",
+      "count": 1
+    }
+  ],
+  "alerts": [
+    {
+      "symbol": "MARICO",
+      "company": "Marico",
+      "date": "2026-11-03",
+      "close": 878.4,
+      "move_pct": 10.0,
+      "volume_ratio": 8.17,
+      "severity": 81.74,
+      "price_hit": true,
+      "volume_hit": true,
+      "events": [
+        {
+          "id": "marico-results-202611022103-financial-results-consolidated-un-audited-period",
+          "category": "results",
+          "headline": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026"
+        },
+        {
+          "id": "marico-management_change-202611021554-appointment",
+          "category": "management_change",
+          "headline": "Appointment"
+        },
+        {
+          "id": "marico-concall-202611022040-analysts-institutional-investor-meet-con-call-up",
+          "category": "concall",
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+        },
+        {
+          "id": "marico-board_meeting-202611021540-outcome-of-board-meeting",
+          "category": "board_meeting",
+          "headline": "Outcome of Board Meeting"
+        },
+        {
+          "id": "marico-routine-202611021543-general-updates",
+          "category": "routine",
+          "headline": "General Updates"
+        },
+        {
+          "id": "marico-routine-202611031632-copy-of-newspaper-publication",
+          "category": "routine",
+          "headline": "Copy of Newspaper Publication"
+        }
+      ]
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "company": "Bajaj Finance",
+      "date": "2026-11-05",
+      "close": 1070.0,
+      "move_pct": 7.65,
+      "volume_ratio": 3.45,
+      "severity": 26.38,
+      "price_hit": true,
+      "volume_hit": true,
+      "events": [
+        {
+          "id": "bajfinance-shareholder_meeting-202611041529-shareholders-meeting",
+          "category": "shareholder_meeting",
+          "headline": "Shareholders meeting"
+        }
+      ]
+    },
+    {
+      "symbol": "CGPOWER",
+      "company": "CG Power and Industrial Solutions",
+      "date": "2026-11-06",
+      "close": 773.0,
+      "move_pct": 4.43,
+      "volume_ratio": 5.12,
+      "severity": 22.66,
+      "price_hit": false,
+      "volume_hit": true,
+      "events": [
+        {
+          "id": "cgpower-litigation-202611051235-action-s-taken-or-orders-passed",
+          "category": "litigation",
+          "headline": "Action(s) taken or orders passed"
+        }
+      ]
+    },
+    {
+      "symbol": "TITAN",
+      "company": "Titan Company",
+      "date": "2026-11-06",
+      "close": 5000.0,
+      "move_pct": 3.42,
+      "volume_ratio": 5.55,
+      "severity": 19.0,
+      "price_hit": false,
+      "volume_hit": true,
+      "events": [
+        {
+          "id": "titan-results-202611051911-financial-results-consolidated-un-audited-period",
+          "category": "results",
+          "headline": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026"
+        },
+        {
+          "id": "titan-management_change-202611051851-retirement",
+          "category": "management_change",
+          "headline": "Retirement"
+        },
+        {
+          "id": "titan-management_change-202611051836-change-in-auditors",
+          "category": "management_change",
+          "headline": "Change in Auditors"
+        },
+        {
+          "id": "titan-concall-202611052033-analysts-institutional-investor-meet-con-call-up",
+          "category": "concall",
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+        },
+        {
+          "id": "titan-routine-202611051823-general-updates",
+          "category": "routine",
+          "headline": "General Updates"
+        },
+        {
+          "id": "titan-routine-202611061656-copy-of-newspaper-publication",
+          "category": "routine",
+          "headline": "Copy of Newspaper Publication"
+        }
+      ]
+    },
+    {
+      "symbol": "BHARATFORG",
+      "company": "Bharat Forge",
+      "date": "2026-11-05",
+      "close": 1753.0,
+      "move_pct": 3.3,
+      "volume_ratio": 4.75,
+      "severity": 15.67,
+      "price_hit": false,
+      "volume_hit": true,
+      "events": [
+        {
+          "id": "bharatforg-results-202611051854-financial-results-consolidated-un-audited-period",
+          "category": "results",
+          "headline": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026"
+        },
+        {
+          "id": "bharatforg-m_and_a-202611051314-acquisition",
+          "category": "m_and_a",
+          "headline": "Acquisition"
+        },
+        {
+          "id": "bharatforg-concall-202611061557-analysts-institutional-investor-meet-con-call-up",
+          "category": "concall",
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+        },
+        {
+          "id": "bharatforg-concall-202611051735-analysts-institutional-investor-meet-con-call-up",
+          "category": "concall",
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+        },
+        {
+          "id": "bharatforg-routine-202611051738-monitoring-agency-report",
+          "category": "routine",
+          "headline": "Monitoring Agency Report"
+        },
+        {
+          "id": "bharatforg-routine-202611051727-updates",
+          "category": "routine",
+          "headline": "Updates"
+        }
+      ]
+    },
+    {
+      "symbol": "MARUTI",
+      "company": "Maruti Suzuki",
+      "date": "2026-11-05",
+      "close": 12652.0,
+      "move_pct": 5.48,
+      "volume_ratio": 2.59,
+      "severity": 14.2,
+      "price_hit": true,
+      "volume_hit": true,
+      "events": []
+    },
+    {
+      "symbol": "MARICO",
+      "company": "Marico",
+      "date": "2026-11-04",
+      "close": 890.0,
+      "move_pct": 1.32,
+      "volume_ratio": 2.56,
+      "severity": 3.38,
+      "price_hit": false,
+      "volume_hit": true,
+      "events": [
+        {
+          "id": "marico-concall-202611051731-analysts-institutional-investor-meet-con-call-up",
+          "category": "concall",
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+        },
+        {
+          "id": "marico-routine-202611031632-copy-of-newspaper-publication",
+          "category": "routine",
+          "headline": "Copy of Newspaper Publication"
+        }
+      ]
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "company": "Sun Pharmaceutical",
+      "date": "2026-11-04",
+      "close": 1773.4,
+      "move_pct": 0.2,
+      "volume_ratio": 2.8,
+      "severity": 0.55,
+      "price_hit": false,
+      "volume_hit": true,
+      "events": [
+        {
+          "id": "sunpharma-concall-202611041915-analysts-institutional-investor-meet-con-call-up",
+          "category": "concall",
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+        },
+        {
+          "id": "sunpharma-concall-202611051554-analysts-institutional-investor-meet-con-call-up",
+          "category": "concall",
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+        },
+        {
+          "id": "sunpharma-routine-202611041004-news-verification",
+          "category": "routine",
+          "headline": "News Verification"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "management_change": {
+      "calls": 0,
+      "cache_hits": 3,
+      "tokens": 0
+    },
+    "summary": {
+      "calls": 0,
+      "cache_hits": 5,
+      "tokens": 0
+    },
+    "total_tokens": 0
+  },
+  "failures": []
+}
