@@ -57,3 +57,19 @@ PAT prefers profit attributable to owners. A card is flagged, not dropped, when 
 If the current quarter has no revenue or PAT in the XBRL, the outcome-of-board-meeting PDF is read with pypdf and extracted by `gemini-3.5-flash-lite` (strict JSON, `gemini-2.5-flash-lite` if that model is missing). Those cards are `source=pdf_llm`. XBRL and PDF text are cached by symbol and period, and so is the model JSON, so a repeat does not download or call again. The seven-company run (Titan, Bharat Forge, Marico, Reliance, Trent, ITC, HDFC Bank), quarter ended 30 Sep 2026, all resolved from XBRL. Model tokens: 0. No sanity flags.
 
 Checked against the results PDFs. Titan: sale of products plus other operating revenue is 20,337+277, 20,787+569, and 16,461+2,264, which equals the XBRL revenue 20,614 / 21,356 / 18,725. Statutory PBT 3,001 / 2,427 / 1,521 and PAT 2,393 / 1,777 / 1,120 match. Finance cost 536 and depreciation 263 match. Marico: revenue 3,897 / 3,957 match, year-ago is the restated 3,450 against XBRL 3,482; PBT 674 / 790 / 550 and owner PAT 550 / 630 / 420 match.
+
+## 2026-11-10 — Push feed
+
+`build_feed(as_of, window_hours, symbols, move_pct, volume_n)` is the object the UI will render. A date `as_of` means 23:59:59 that day, so a replay of 6 Nov includes filings broadcast on 6 Nov. The window is `(as_of − hours, as_of]`. A 24-hour window ending 6 Nov 23:59:59 therefore starts 5 Nov 23:59:59. Titan's results (5 Nov 19:11) and Titan's retirement are in the 72-hour feed and not in the 24-hour feed. HDFC's compliance-officer appointment and Marico's two acquisition filings are on 6 Nov, so they are in both.
+
+Clustering is in `finn_core/events.py`. Every results filing for one company on one calendar day is one results event, and the filings stay on it as sources. An investor presentation that day, and a newspaper publication whose text mentions results, join that event instead of becoming their own cards. Other filings group by symbol, category, normalised subject, and day. Marico's two "Acquisition" filings are one `m_and_a` event. Titan's retirement and change of auditors stay two events because the subjects differ.
+
+Management cards call `gemini-3.5-flash-lite` on the attachment PDF (strict JSON, cached as `mgmt_llm` version `v2`). Fields are person, role, change type (appointment, resignation, retirement, change in designation), effective date, and the profile written in the disclosure. If the filing has no education, experience, or previous employers, profile is null and `profile_note` says so. Titan's retirement letter has no bio. HDFC's annexure does, and the card uses that text. No web lookup.
+
+`m_and_a`, `fund_raise`, `litigation`, `credit_rating`, and `order_contract` get one sentence from the PDF, cached as `summary_llm` version `v2`. Results stay on the XBRL card and do not call the model. A cache hit adds nothing to the run's token total.
+
+The first PDF save failed: the filename used the filing timestamp, which contains colons, and Windows rejected the path. That pass spent 986 tokens on the short exchange blurb and is stored under version `v1`, which the feed no longer reads. The saved name is now a sanitized timestamp plus a short hash of the URL.
+
+72-hour feed, `as_of` 2026-11-06, after the fix: management 3 calls, 5,075 tokens; summaries 5 calls, 14,905 tokens; total 19,980. The same 72-hour call again: 0 calls, 3 management cache hits, 5 summary cache hits, 0 tokens. The 24-hour feed reused the HDFC and Marico extractions and also cost 0 tokens.
+
+Alerts are unchanged: one per ticker per day, capped at 8, each linked to events for that ticker within one calendar day. The loader keeps one extra day so a 6 Nov volume alert can point at 5 Nov results even when those results are outside the 24-hour card window.

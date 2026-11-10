@@ -4,16 +4,15 @@ QoQ and YoY are not contexts inside one integrated-filing XBRL. They are the
 current-quarter facts of the previous-quarter filing and the year-ago filing.
 """
 
+import hashlib
 import io
-import json
-import os
+import re
 from datetime import date, timedelta
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-import requests
-
 from finn_core.config import market_symbol
+from finn_core.llm import generate_json
 from finn_core.nse_client import NSEClient, NSEError, _broadcast_sort
 from finn_core.xbrl_parse import (
     change_pct,
@@ -26,8 +25,6 @@ from finn_core.xbrl_parse import (
     year_ago_end,
 )
 
-FLASH_LITE = "gemini-3.5-flash-lite"
-FLASH_LITE_FALLBACK = "gemini-2.5-flash-lite"
 HEADLINES = ("revenue", "ebitda", "pbt", "pat")
 REVENUE_RANGE = (1.0, 1_000_000.0)
 PAT_ABS_MAX = 300_000.0
@@ -359,8 +356,9 @@ def _load_pdf_text(client, cache, symbol: str, period: str, url: str) -> str:
     data = client.get_bytes(url, symbol)
     folder = Path(cache.path).parent / "docs" / symbol
     folder.mkdir(parents=True, exist_ok=True)
-    safe_period = period.replace(" ", "_")
-    (folder / f"{safe_period}.pdf").write_bytes(data)
+    stem = re.sub(r"[^A-Za-z0-9._-]+", "_", period).strip("._")[:60] or "doc"
+    digest = hashlib.sha1(url.encode()).hexdigest()[:8]
+    (folder / f"{stem}_{digest}.pdf").write_bytes(data)
     text = pdf_text(data)
     cache.put("pdf_text", symbol, period, url, text)
     return text
@@ -440,9 +438,6 @@ def _to_crore(value, unit: str) -> float | None:
 
 
 def _gemini(excerpt: str) -> tuple[dict, dict]:
-    key = _api_key()
-    if not key:
-        raise RuntimeError("GEMINI_API_KEY is missing")
     prompt = (
         "Extract quarterly consolidated profit and loss figures from this results filing text. "
         "Use only numbers printed in the text. Do not calculate and do not use outside knowledge. "
@@ -480,58 +475,7 @@ def _gemini(excerpt: str) -> tuple[dict, dict]:
         },
         "required": ["unit", "revenue_current", "pbt_current", "pat_current"],
     }
-    last_error = "no model call"
-    for model in (FLASH_LITE, FLASH_LITE_FALLBACK):
-        response = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-            headers={"x-goog-api-key": key, "Content-Type": "application/json"},
-            json={
-                "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-                "generationConfig": {
-                    "temperature": 0,
-                    "responseMimeType": "application/json",
-                    "responseSchema": schema,
-                },
-            },
-            timeout=90,
-        )
-        if response.status_code == 404:
-            last_error = "model not found"
-            continue
-        if response.status_code != 200:
-            last_error = f"HTTP {response.status_code}"
-            continue
-        body = response.json()
-        usage_meta = body.get("usageMetadata") or {}
-        usage = {
-            "model": model,
-            "input_tokens": int(usage_meta.get("promptTokenCount") or 0),
-            "output_tokens": int(usage_meta.get("candidatesTokenCount") or 0),
-            "total_tokens": int(usage_meta.get("totalTokenCount") or 0),
-        }
-        texts = []
-        for candidate in body.get("candidates") or []:
-            for part in (candidate.get("content") or {}).get("parts") or []:
-                if part.get("text"):
-                    texts.append(part["text"])
-        try:
-            return json.loads("".join(texts)), usage
-        except json.JSONDecodeError as exc:
-            raise RuntimeError(f"model returned non-json: {exc}") from exc
-    raise RuntimeError(last_error)
-
-
-def _api_key() -> str:
-    found = os.environ.get("GEMINI_API_KEY", "").strip().strip('"').strip("'")
-    if found:
-        return found
-    for candidate in (Path(".env"), Path(__file__).resolve().parents[1] / ".env"):
-        if not candidate.exists():
-            continue
-        for line in candidate.read_text(encoding="utf-8").splitlines():
-            if line.startswith("GEMINI_API_KEY="):
-                return line.split("=", 1)[1].strip().strip('"').strip("'")
-    return ""
+    return generate_json(prompt, schema)
 
 
 def _empty_usage() -> dict:
