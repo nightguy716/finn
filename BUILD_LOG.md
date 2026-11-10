@@ -119,3 +119,27 @@ Cache keys: `guidance_llm` by symbol and transcript URL, `verdict_llm` by a hash
 | DMART | 4.7s | 64.0s | 68.8s | 3,780 |
 
 Flash-Lite returned 404 for Marico's June 2026 transcript, two Titan transcripts, and two CG Power transcripts. Those were extracted on the next call. DMart's first verdict used the 45-second timeout and wrote nothing; the next call wrote it. A later run of all five was 0 tokens and under 0.3 seconds each. The DMart verdict stage is what crossed a 60-second serverless limit, on the failure path. Five uncached transcripts plus a slow verdict can also cross it. The per-document cache means the retry finishes the remainder. Discover and series were already cached in these timings; a ticker with no saved PDFs also pays the download.
+
+## 2026-11-10 — Tracking, not just pending
+
+An open fiscal year is no longer left as "pending" when the same span of last year is in the series. H1 FY27 versus H1 FY26 is computed in code: revenue, EBITDA and PAT growth, and the EBITDA margin change in basis points. Inside the promised range is `tracking_on_track`. Clearly above a floor, or above the top of a range, is `tracking_ahead`. Below the floor is `tracking_behind`. `pending` is only the case where that comparison cannot be made. FY26 growth versus FY25 is pending here: the integrated feed has no quarters before June 2025 for these five names. A target more than three years out (FY2030) goes in `long_term_targets`.
+
+Transcripts now cover seven quarters. Marico: 6 statements aimed at FY26, and no next-quarter statement. Asian Paints: 7 aimed at FY26, and 1 at the next quarter. The model still sees at most eight pages. A page counts as dropped when "FY26" or "next quarter" sits within 180 characters of a forward-looking word and the page was not sent. That is 15 of 29 such Marico pages, and 4 of 20 Asian Paints pages. One dropped Marico line is "we expect the business to see a gradual improvement in growth in the subsequent quarters", which has no number.
+
+A row is kept only when the sentence itself names revenue, EBITDA, margin, PAT, volume, or capex. There is no "Other". Marico's "24%, 25% on the minimum side" does not name the metric, so it is `low_confidence` and is not the figure compared with the 25.8% EBITDA growth. Constant-currency and segment lines are `segment_level`. A sentence about the quarter already reported ("we delivered", "have achieved") is dropped. `quote_check` is `ok` only when the number in the row is in the quote, or comes from a named band such as "double-digit".
+
+The same metric, period, and unit (percent or basis points) across calls is one row. The calls are listed. A changed number is a sequence of set / raised / cut / maintained. A later sentence that does not name the metric does not overwrite a named one.
+
+The verdict sees only delivered, missed, partly, and the three tracking statuses, and it has to cite the numbers. `gemini-3.6-flash` is capped at 20 seconds and then falls back to `gemini-3.5-flash-lite`. Guidance retries a 404, 429, 503, or timeout with backoff, then the other Flash-Lite. Each call extracts at most three uncached transcripts and returns `progress: {stage, done, total}`. Marico's cold run was 3/7, then 6/7, then complete.
+
+Cold, with PDFs already cached, on 10 Nov 2026. Tokens are the guidance calls. The cached run after that was 0 tokens.
+
+| Ticker | Cold seconds | Guidance tokens | Cached seconds |
+| --- | --- | --- | --- |
+| MARICO | 34.6 over 3 calls | 25,745 | 0.28 |
+| TITAN | 27.8 over 2 calls | 13,006 | 0.88 |
+| ASIANPAINT | 51.8 over 3 calls | 20,340 | 0.32 |
+| CGPOWER | 21.2 over 2 calls | 10,857 | 0.75 |
+| DMART | 16.8 in 1 call | 4,177 | 0.34 |
+
+No single call exceeded 27 seconds. The 20-second verdict cap is what keeps a hung Flash model inside a 60-second limit. The old failure path, a 45-second timeout followed by another model, was the thing that crossed it.

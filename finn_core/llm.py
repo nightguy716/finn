@@ -15,49 +15,57 @@ FLASH = "gemini-3.6-flash"
 FLASH_FALLBACKS = ("gemini-3.5-flash", "gemini-3.8-flash")
 
 
-def generate_json(prompt: str, schema: dict, models: tuple[str, ...] | None = None) -> tuple[dict, dict]:
+def generate_json(
+    prompt: str,
+    schema: dict,
+    models: tuple[str, ...] | None = None,
+    timeout: int = 40,
+    attempts: int = 2,
+) -> tuple[dict, dict]:
+    """Call Flash models in order. 404, 429, 503, and timeouts are retried with backoff."""
     key = api_key()
     if not key:
         raise RuntimeError("GEMINI_API_KEY is missing")
     last_error = "no model call"
     for model in models or (FLASH_LITE, FLASH_LITE_FALLBACK):
-        response = _post(key, model, prompt, schema)
-        if response is None:
-            last_error = "request failed"
-            continue
-        if response.status_code in (404, 429, 503):
-            time.sleep(8 if response.status_code == 429 else 2)
-            response = _post(key, model, prompt, schema)
-        if response is None:
-            last_error = f"{model} request failed"
-            continue
-        if response.status_code == 404:
-            last_error = f"{model} not found"
-            continue
-        if response.status_code != 200:
-            last_error = f"{model} HTTP {response.status_code}"
-            continue
-        body = response.json()
-        meta = body.get("usageMetadata") or {}
-        usage = {
-            "model": model,
-            "input_tokens": int(meta.get("promptTokenCount") or 0),
-            "output_tokens": int(meta.get("candidatesTokenCount") or 0),
-            "total_tokens": int(meta.get("totalTokenCount") or 0),
-        }
-        texts = []
-        for candidate in body.get("candidates") or []:
-            for part in (candidate.get("content") or {}).get("parts") or []:
-                if part.get("text"):
-                    texts.append(part["text"])
-        try:
-            return json.loads("".join(texts)), usage
-        except json.JSONDecodeError as exc:
-            raise RuntimeError(f"model returned non-json: {exc}") from exc
+        delay = 2
+        for attempt in range(max(1, attempts)):
+            response = _post(key, model, prompt, schema, timeout)
+            if response is not None and response.status_code == 200:
+                return _parse_body(response, model)
+            if response is None:
+                last_error = f"{model} request failed"
+            elif response.status_code == 404:
+                last_error = f"{model} not found"
+            else:
+                last_error = f"{model} HTTP {response.status_code}"
+            if attempt + 1 < attempts:
+                time.sleep(delay)
+                delay *= 2
     raise RuntimeError(last_error)
 
 
-def _post(key: str, model: str, prompt: str, schema: dict):
+def _parse_body(response, model: str) -> tuple[dict, dict]:
+    body = response.json()
+    meta = body.get("usageMetadata") or {}
+    usage = {
+        "model": model,
+        "input_tokens": int(meta.get("promptTokenCount") or 0),
+        "output_tokens": int(meta.get("candidatesTokenCount") or 0),
+        "total_tokens": int(meta.get("totalTokenCount") or 0),
+    }
+    texts = []
+    for candidate in body.get("candidates") or []:
+        for part in (candidate.get("content") or {}).get("parts") or []:
+            if part.get("text"):
+                texts.append(part["text"])
+    try:
+        return json.loads("".join(texts)), usage
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f"model returned non-json: {exc}") from exc
+
+
+def _post(key: str, model: str, prompt: str, schema: dict, timeout: int = 40):
     try:
         return requests.post(
             f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
@@ -70,7 +78,7 @@ def _post(key: str, model: str, prompt: str, schema: dict):
                     "responseSchema": schema,
                 },
             },
-            timeout=45,
+            timeout=timeout,
         )
     except requests.RequestException:
         return None
