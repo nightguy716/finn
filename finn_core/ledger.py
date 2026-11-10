@@ -14,7 +14,7 @@ import sys
 import time
 from datetime import date
 
-from finn_core.cache import FileCache
+from finn_core.cache import FileCache, open_cache
 from finn_core.documents import extract_pdf, find_transcripts, quarter_ends
 from finn_core.llm import FLASH, FLASH_LITE, generate_json
 from finn_core.nse_client import NSEClient
@@ -25,7 +25,7 @@ METRIC_KEYS = CHECKABLE | {"volume_growth", "capex"}
 LOOKBACK = 7
 SERIES_QUARTERS = 10
 CHART_QUARTERS = 6
-GUIDANCE_VERSION = "v2"
+GUIDANCE_VERSION = "v3"
 VERDICT_VERSION = "v2"
 _FORWARD = re.compile(
     r"guidan\w*|expect\w*|target\w*|outlook|\baim(?:ing|ed)?\b|going forward|"
@@ -74,6 +74,8 @@ GUIDANCE_SCHEMA = {
                     "speaker": {"type": "STRING"},
                     "evidence": {"type": "STRING"},
                     "page": {"type": "INTEGER"},
+                    "scope": {"type": "STRING"},
+                    "scope_name": {"type": "STRING"},
                 },
                 "required": [
                     "metric_key",
@@ -85,6 +87,8 @@ GUIDANCE_SCHEMA = {
                     "speaker",
                     "evidence",
                     "page",
+                    "scope",
+                    "scope_name",
                 ],
             },
         }
@@ -172,20 +176,20 @@ def promise_ledger(
     }
 
 
-def select_pages(pages: list[dict], limit: int = 8) -> list[dict]:
-    """Pages that contain forward-looking language, strongest first, then in page order."""
+def select_pages(pages: list[dict], limit: int = 12) -> list[dict]:
+    """Up to 12 pages, ranked by forward-looking words per word of text."""
     scored = []
     for page in pages:
         text = page.get("text") or ""
         hits = len(_FORWARD.findall(text))
         if hits:
-            scored.append((hits, page))
-    scored.sort(key=lambda item: item[0], reverse=True)
+            scored.append((hits / max(1, len(text.split())), hits, page))
+    scored.sort(key=lambda item: (item[0], item[1]), reverse=True)
     chosen = []
     chars = 0
-    for _, page in scored[:limit]:
+    for _, _, page in scored[:limit]:
         snippet = surrounding(page.get("text") or "")[:2500]
-        if chars + len(snippet) > 14000 and chosen:
+        if chars + len(snippet) > 32000 and chosen:
             break
         chosen.append({"page": page.get("page"), "text": snippet, "full": page.get("text") or ""})
         chars += len(snippet)
@@ -304,7 +308,7 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         key = _infer_metric(evidence) or ""
     if key not in METRIC_KEYS:
         return None
-    low, high = sanitize_bounds(evidence, promise.get("target_low"), promise.get("target_high"))
+    low, high = sanitize_bounds(evidence, promise.get("target_low"), promise.get("target_high"), key)
     direction = promise.get("direction") or ""
     if low is None and high is None and not _MOVEMENT.search(evidence):
         return None
@@ -325,6 +329,8 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         "status": "not_checkable",
         "note": "",
         "quote_check": quote_check(evidence, low, high),
+        "scope": promise.get("scope") or "consolidated",
+        "scope_name": promise.get("scope_name") or "",
         "metric_key": key,
         "target_low": low,
         "target_high": high,
@@ -336,6 +342,11 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
     if not _METRIC_WORDS[key].search(evidence):
         row["status"] = "low_confidence"
         row["note"] = "The quoted sentence does not name the metric."
+        return row
+    if row["scope"] in ("segment", "geography", "other"):
+        row["status"] = "segment_level"
+        named = row["scope_name"] or row["scope"]
+        row["note"] = f"{named} guidance is not compared with the consolidated series."
         return row
     if _PART.search(evidence):
         row["status"] = "segment_level"
@@ -397,14 +408,21 @@ def merge_rows(rows: list[dict]) -> tuple[list[dict], list[dict], dict]:
     groups: dict[tuple, list[dict]] = {}
     for row in rows:
         confidence = "low" if row["status"] == "low_confidence" else "named"
-        groups.setdefault((row["metric_key"], row["period_promised"], _unit(row), confidence), []).append(row)
+        groups.setdefault(
+            (row["metric_key"], row["period_promised"], _unit(row), confidence, row.get("scope") or "consolidated"),
+            [],
+        ).append(row)
     current = []
     long_term = []
     summary = {"raised": 0, "cut": 0, "maintained": 0, "items": []}
     for items in groups.values():
         items.sort(key=lambda item: (item.get("call_date") or "", item.get("page") or 0))
         named = [item for item in items if item["status"] != "low_confidence"]
-        latest = dict(named[-1] if named else items[-1])
+        numbered = [
+            item for item in named
+            if item.get("target_low") is not None or item.get("target_high") is not None
+        ]
+        latest = dict((numbered or named or items)[-1])
         sequence = []
         previous = None
         for item in items:
@@ -469,7 +487,7 @@ def _reported_result(evidence: str) -> bool:
     if re.search(r"guidan|expect|target|outlook|\baim\b|aspire|maintain|going forward|next year|full year|this year", evidence or "", re.I):
         return False
     return re.search(
-        r"\b(delivered|have gone|has gone|have achieved|was |were |stood at|we've got|we got|driven by)\b",
+        r"\b(delivered|have gone|has gone|have achieved|was |were |stood at|we've got|we got|driven by|been able|over the quarters?|grew by|growth has been)\b",
         evidence or "",
         re.I,
     ) is not None
@@ -584,14 +602,18 @@ def _promises_for_document(symbol, item, document, cache, pages) -> tuple[list[d
         "Each evidence sentence must itself name the metric in plain words: revenue, EBITDA, "
         "margin, PAT, volume, or capex. A neighbouring sentence does not count. "
         "Skip a sentence that only gives a percentage. Skip 'we remain positive'. "
-        "Skip constant-currency, portfolio, brand, international, and segment remarks. "
+        "Keep segment and geography guidance. Do not drop it. "
+        "scope is consolidated, segment, geography, or other. "
+        "scope_name is the division, product, or region in this passage, or empty when scope is consolidated. "
+        "If the lines around the sentence are about a division, brand, product, or country, scope is not consolidated. "
         "evidence is consecutive words from one page, 25 words or fewer. "
         "metric_key is revenue_growth, ebitda_margin, ebitda_growth, pat_growth, volume_growth, or capex. "
         "horizon is quarter, fiscal_year, or multi_year. "
         "target_period is YYYY-MM-DD or FY####. "
         "target_low and target_high are numbers printed in that sentence, or empty. "
         "A basis-point range stays in basis points. direction is up, down, or empty. "
-        "At most 6 promises. Use nothing beyond these pages.\n\n"
+        "Record a stated basis-point range for this year's margin even when the same answer also discusses growth. "
+        "At most 8 promises. Use nothing beyond these pages.\n\n"
         + body
     )
     try:
@@ -645,7 +667,7 @@ def _clean_promise(raw: dict, by_page: dict, url: str) -> dict | None:
     if direction not in ("up", "down"):
         direction = ""
     if low is None and high is None and not direction:
-        low, high = apply_word_bands(evidence, None, None)
+        low, high = apply_word_bands(evidence, None, None, key)
     if low is None and high is None and not direction:
         return None
     if re.search(r"remain positive|we are confident|optimistic", evidence, re.I) and low is None and high is None:
@@ -660,6 +682,7 @@ def _clean_promise(raw: dict, by_page: dict, url: str) -> dict | None:
     target_period = f"FY{end.year}" if kind == "fiscal_year" and end else (end.isoformat() if end else "")
     if horizon == "" and kind:
         horizon = kind
+    scope, scope_name = assign_scope(evidence, text, str(raw.get("scope") or ""), str(raw.get("scope_name") or ""))
     return {
         "metric_key": key,
         "target_low": low,
@@ -671,7 +694,62 @@ def _clean_promise(raw: dict, by_page: dict, url: str) -> dict | None:
         "evidence": evidence,
         "page": page,
         "source_document": url,
+        "scope": scope,
+        "scope_name": scope_name,
     }
+
+
+_DIVISIONS = (
+    ("Jewellery", re.compile(r"jewellery|jewelry", re.I)),
+    ("Watches", re.compile(r"\bwatches\b", re.I)),
+    ("Eyewear", re.compile(r"eyewear|eye care", re.I)),
+    ("Fragrances", re.compile(r"fragrance", re.I)),
+    ("Foods", re.compile(r"\bfoods\b", re.I)),
+)
+
+
+def assign_scope(evidence: str, page: str, model_scope: str, model_name: str) -> tuple[str, str]:
+    """Consolidated only when the passage is about the company. A named division wins."""
+    scope = (model_scope or "").strip().lower()
+    if scope not in ("consolidated", "segment", "geography", "other"):
+        scope = "consolidated"
+    name = " ".join((model_name or "").split())
+    if re.search(r"consolidat", evidence or "", re.I):
+        return "consolidated", ""
+    window = _passage(page or "", evidence or "")
+    nearest = _nearest_division(window)
+    if nearest:
+        return "segment", name or nearest
+    if re.search(r"\binternational\b|\boverseas\b|\bexports?\b", window, re.I):
+        return "geography", name or "international"
+    if scope == "consolidated":
+        return "consolidated", ""
+    return scope, name
+
+
+def _passage(page: str, evidence: str) -> str:
+    hay = page or ""
+    needle = " ".join((evidence or "").split())
+    if not needle:
+        return hay[:800]
+    folded = hay.lower()
+    at = folded.find(needle[:40].lower())
+    if at < 0:
+        return hay[:800]
+    return hay[max(0, at - 700): at + len(needle)]
+
+
+def _nearest_division(window: str) -> str:
+    found = ""
+    position = -1
+    for label, pattern in _DIVISIONS:
+        match = None
+        for match in pattern.finditer(window or ""):
+            pass
+        if match is not None and match.start() >= position:
+            found = label
+            position = match.start()
+    return found
 
 
 def _infer_metric(evidence: str) -> str | None:
@@ -1036,7 +1114,12 @@ def _written_percent(text: str, value: float | None) -> bool:
     return re.search(rf"(?<!\d){re.escape(f'{value:g}')}\s*(%|percent)", text) is not None
 
 
-def sanitize_bounds(evidence: str, low: float | None, high: float | None) -> tuple[float | None, float | None]:
+def sanitize_bounds(
+    evidence: str,
+    low: float | None,
+    high: float | None,
+    metric_key: str | None = None,
+) -> tuple[float | None, float | None]:
     """A crore target or a '3x' is not a percent. Basis points and named bands are kept."""
     text = (evidence or "").lower()
     if re.search(r"basis point|\bbps\b", text):
@@ -1058,25 +1141,46 @@ def sanitize_bounds(evidence: str, low: float | None, high: float | None) -> tup
             low, high = None, number
         else:
             low, high = number, number
-    return apply_word_bands(evidence, low, high)
+    return apply_word_bands(evidence, low, high, metric_key)
 
 
-def apply_word_bands(evidence: str, low: float | None, high: float | None) -> tuple[float | None, float | None]:
-    """Named bands only when the quote itself uses them and states no number."""
+_BANDS = (
+    (("mid-teen", "mid teen"), (13.0, 16.0)),
+    (("high-teen", "high teen"), (17.0, 19.0)),
+    (("low-teen", "low teen"), (10.0, 13.0)),
+    (("double-digit", "double digit"), (10.0, None)),
+    (("high single",), (7.0, 9.0)),
+)
+
+
+def apply_word_bands(
+    evidence: str,
+    low: float | None,
+    high: float | None,
+    metric_key: str | None = None,
+) -> tuple[float | None, float | None]:
+    """Named bands only when the quote itself uses them and states no number.
+
+    A sentence that names two bands keeps the one next to this metric.
+    """
     if low is not None or high is not None:
         return low, high
     text = re.sub(r"\s*-\s*", "-", (evidence or "").lower())
-    if "mid-teen" in text or "mid teen" in text:
-        return 13.0, 16.0
-    if "high-teen" in text or "high teen" in text:
-        return 17.0, 19.0
-    if "low-teen" in text or "low teen" in text:
-        return 10.0, 13.0
-    if "double-digit" in text or "double digit" in text:
-        return 10.0, None
-    if "high single" in text:
-        return 7.0, 9.0
-    return low, high
+    found = []
+    for phrases, bounds in _BANDS:
+        for phrase in phrases:
+            at = text.find(phrase)
+            if at >= 0:
+                found.append((at, bounds))
+                break
+    if not found:
+        return low, high
+    if len(found) == 1 or not metric_key or metric_key not in _METRIC_WORDS:
+        return found[0][1]
+    spots = [match.start() for match in _METRIC_WORDS[metric_key].finditer(text)]
+    if not spots:
+        return found[0][1]
+    return min(found, key=lambda item: min(abs(item[0] - spot) for spot in spots))[1]
 
 
 def _next_quarter(day: date) -> date:
@@ -1121,7 +1225,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Promise Ledger for one or more NSE tickers")
     parser.add_argument("symbols", nargs="+")
     args = parser.parse_args()
-    cache = FileCache()
+    cache = open_cache()
     client = NSEClient(cache=cache)
     packets = []
     for symbol in args.symbols:

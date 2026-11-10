@@ -3,7 +3,17 @@
 import unittest
 from datetime import date
 
-from finn_core.ledger import compare_target, compare_tracking, judge_promise, merge_rows, on_page, quote_check, select_pages
+from finn_core.ledger import (
+    apply_word_bands,
+    assign_scope,
+    compare_target,
+    compare_tracking,
+    judge_promise,
+    merge_rows,
+    on_page,
+    quote_check,
+    select_pages,
+)
 from finn_core.series import apply_half_year, subtract_quarter
 
 
@@ -182,6 +192,63 @@ class PromiseTests(unittest.TestCase):
         ]
         chosen = select_pages(pages)
         self.assertEqual([page["page"] for page in chosen], [2])
+
+    def test_jewellery_guidance_is_not_scored(self):
+        quote = "As far as coming to 11% to 11.5% margin guidance, I think that stays."
+        page = (
+            "operating leverage coming in the jewellery business is quite normal. "
+            + quote
+        )
+        scope, name = assign_scope(quote, page, "consolidated", "")
+        self.assertEqual((scope, name), ("segment", "Jewellery"))
+        row = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 11,
+                "target_high": 11.5,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2026",
+                "evidence": quote,
+                "page": 6,
+                "source_document": "u",
+                "speaker": "",
+                "scope": scope,
+                "scope_name": name,
+            },
+            [quarter("2026-03-31", 100, 9, 5, 9)],
+            date(2026, 11, 10),
+        )
+        self.assertEqual(row["status"], "segment_level")
+        self.assertIsNone(row["actual"])
+        self.assertIn("Jewellery", row["note"])
+
+    def test_each_band_stays_with_its_metric(self):
+        evidence = (
+            "At a consolidated level, we aim to deliver double-digit revenue growth "
+            "and high-teen EBITDA growth"
+        )
+        self.assertEqual(apply_word_bands(evidence, None, None, "revenue_growth"), (10.0, None))
+        self.assertEqual(apply_word_bands(evidence, None, None, "ebitda_growth"), (17.0, 19.0))
+
+    def test_a_reported_margin_is_not_scored(self):
+        row = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 43,
+                "target_high": None,
+                "direction": "",
+                "horizon": "quarter",
+                "target_period": "2025-06-30",
+                "evidence": "we've been able to stay at margin range of about 43% over the quarters",
+                "page": 17,
+                "source_document": "u",
+                "speaker": "",
+            },
+            [quarter("2025-06-30", 100, 18, 10)],
+            date(2026, 11, 10),
+        )
+        self.assertIsNone(row)
 
     def test_same_promise_is_one_row_and_a_changed_number_is_a_revision(self):
         first = judge_promise(
