@@ -1,0 +1,540 @@
+{
+  "symbol": "WIPRO",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 10,
+    "pages_mentioning_fy26_or_next_quarter": 33,
+    "pages_dropped_by_prefilter": 1,
+    "dropped_pages": [
+      {
+        "period": "2025-09-30",
+        "page": 14
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 24752.7,
+    "ebitda_margin_pct": 19.65,
+    "pat": 3200.6,
+    "ttm_revenue": 97023.4,
+    "ttm_pat": 13173.4,
+    "ttm_ebitda_margin_pct": 19.28,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 24752.7,
+        "ebitda": 4862.7,
+        "ebitda_margin_pct": 19.65,
+        "pat": 3200.6,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 24478.6,
+        "ebitda": 4633.2,
+        "ebitda_margin_pct": 18.93,
+        "pat": 3352.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 24236.3,
+        "ebitda": 4909.3,
+        "ebitda_margin_pct": 20.26,
+        "pat": 3501.8,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 23555.8,
+        "ebitda": 4296.4,
+        "ebitda_margin_pct": 18.24,
+        "pat": 3119.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 22697.3,
+        "ebitda": 4372.4,
+        "ebitda_margin_pct": 19.26,
+        "pat": 3246.2,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 22134.6,
+        "ebitda": 4233.1,
+        "ebitda_margin_pct": 19.12,
+        "pat": 3330.4,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth -3.5\u2013-1.5 for 2025-06-30",
+      "source_quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Cslogin_17042025164940_SEIntimationTranscript17042025.pdf",
+      "speaker": "",
+      "period_promised": "2025-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "-3.5\u2013-1.5",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "scope": "segment",
+      "scope_name": "IT Services Business",
+      "metric_key": "revenue_growth",
+      "target_low": -3.5,
+      "target_high": -1.5,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-17",
+      "calls": [
+        {
+          "date": "2025-04-17",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "we are guiding for a sequential growth of minus 3.5% to minus 1.5% in constant currency terms.",
+          "document": "Cslogin_17042025164940_SEIntimationTranscript17042025.pdf"
+        },
+        {
+          "date": "2025-04-17",
+          "call_period": "2025-03-31",
+          "page": 7,
+          "quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms.",
+          "document": "Cslogin_17042025164940_SEIntimationTranscript17042025.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-04-17",
+          "call_period": "2025-03-31",
+          "value": "-3.5\u2013-1.5",
+          "change": "set",
+          "page": 6,
+          "quote": "we are guiding for a sequential growth of minus 3.5% to minus 1.5% in constant currency terms."
+        },
+        {
+          "date": "2025-04-17",
+          "call_period": "2025-03-31",
+          "value": "-3.5\u2013-1.5",
+          "change": "maintained",
+          "page": 7,
+          "quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms."
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth -1\u20131% for 2025-09-30",
+      "source_quote": "This translates to a sequential growth of minus 1% to plus 1% in constant currency terms.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Cslogin_18072025182144_SEIntimationAnalystcalltranscript.pdf",
+      "speaker": "",
+      "period_promised": "2025-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "-1\u20131%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "Not in the quote: -1",
+      "unit": "percent",
+      "kind": "change",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": -1.0,
+      "target_high": 1.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-18",
+      "calls": [
+        {
+          "date": "2025-07-18",
+          "call_period": "2025-06-30",
+          "page": 7,
+          "quote": "This translates to a sequential growth of minus 1% to plus 1% in constant currency terms.",
+          "document": "Cslogin_18072025182144_SEIntimationAnalystcalltranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least -2 for 2026-06-30",
+      "source_quote": "This translates a sequential guidance of minus 2 to zero in constant currency terms.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Wipro_Secretarial_17042026182114_SEIntimation17042026.pdf",
+      "speaker": "",
+      "period_promised": "2026-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least -2",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": -2.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-17",
+      "calls": [
+        {
+          "date": "2026-04-17",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "In Q1, we are guiding for a sequential growth of minus 2% to 0% in constant currency terms.",
+          "document": "Wipro_Secretarial_17042026182114_SEIntimation17042026.pdf"
+        },
+        {
+          "date": "2026-04-17",
+          "call_period": "2026-03-31",
+          "page": 6,
+          "quote": "This translates a sequential guidance of minus 2 to zero in constant currency terms.",
+          "document": "Wipro_Secretarial_17042026182114_SEIntimation17042026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-04-17",
+          "call_period": "2026-03-31",
+          "value": "at least -2",
+          "change": "set",
+          "page": 5,
+          "quote": "In Q1, we are guiding for a sequential growth of minus 2% to 0% in constant currency terms."
+        },
+        {
+          "date": "2026-04-17",
+          "call_period": "2026-03-31",
+          "value": "at least -2",
+          "change": "maintained",
+          "page": 6,
+          "quote": "This translates a sequential guidance of minus 2 to zero in constant currency terms."
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth -1.5\u20130.5% for 2026-09-30",
+      "source_quote": "In quarter 2, we are guiding for a sequential growth of -1.5% to +0.5% in constant currency terms.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Cslogin_17072026162727_SEIntimation17072026.pdf",
+      "speaker": "",
+      "period_promised": "2026-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "-1.5\u20130.5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": -1.5,
+      "target_high": 0.5,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-17",
+      "calls": [
+        {
+          "date": "2026-07-17",
+          "call_period": "2026-06-30",
+          "page": 5,
+          "quote": "In quarter 2, we are guiding for a sequential growth of -1.5% to +0.5% in constant currency terms.",
+          "document": "Cslogin_17072026162727_SEIntimation17072026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth -1.5\u20130.5% for 2026-09-30",
+      "source_quote": "This translates to a sequential guidance of -1.5% to +0.5% in constant currency terms.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Cslogin_17072026162727_SEIntimation17072026.pdf",
+      "speaker": "Aparna Iyer",
+      "period_promised": "2026-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "-1.5\u20130.5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "scope": "segment",
+      "scope_name": "IT services",
+      "metric_key": "revenue_growth",
+      "target_low": -1.5,
+      "target_high": 0.5,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-17",
+      "calls": [
+        {
+          "date": "2026-07-17",
+          "call_period": "2026-06-30",
+          "page": 6,
+          "quote": "This translates to a sequential guidance of -1.5% to +0.5% in constant currency terms.",
+          "document": "Cslogin_17072026162727_SEIntimation17072026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth -1.5\u20130.5% for FY2027",
+      "source_quote": "This translates to a sequential guidance of negative 1.5 to a positive 0.5% in constant-currency terms.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Wipro_Secretarial_16102026163132_SEIntimation16102026.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "-1.5\u20130.5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "Not in the quote: -1.5",
+      "unit": "percent",
+      "kind": "change",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": -1.5,
+      "target_high": 0.5,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-16",
+      "calls": [
+        {
+          "date": "2026-10-16",
+          "call_period": "2026-09-30",
+          "page": 6,
+          "quote": "This translates to a sequential guidance of negative 1.5 to a positive 0.5% in constant-currency terms.",
+          "document": "Wipro_Secretarial_16102026163132_SEIntimation16102026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue US$2.505\u20132.557 billion for 2025-06-30",
+      "source_quote": "we expect the revenues from our IT Services Business segment to be in the range of $2.505 billion to $2.557 billion.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Cslogin_17042025164940_SEIntimationTranscript17042025.pdf",
+      "speaker": "",
+      "period_promised": "2025-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "US$2.505\u20132.557 billion",
+      "status": "not_scored",
+      "note": "Guided in US dollars for the IT services segment; our series is consolidated INR.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "scope": "segment",
+      "scope_name": "IT Services Business",
+      "metric_key": "revenue_growth",
+      "target_low": 2.505,
+      "target_high": 2.557,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-17",
+      "calls": [
+        {
+          "date": "2025-04-17",
+          "call_period": "2025-03-31",
+          "page": 7,
+          "quote": "we expect the revenues from our IT Services Business segment to be in the range of $2.505 billion to $2.557 billion.",
+          "document": "Cslogin_17042025164940_SEIntimationTranscript17042025.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth -0.5\u20131.5% for 2025-12-31",
+      "source_quote": "In Quarter 3, we are projecting sequential IT services revenue growth of minus 0.5% to plus 1.5% in constant currency.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Wipro_Secretarial_17102025155144_SEIntimationTranscript.pdf",
+      "speaker": "",
+      "period_promised": "2025-12-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "-0.5\u20131.5%",
+      "status": "not_scored",
+      "note": "Constant-currency guidance is not the consolidated rupee series.",
+      "quote_check": "Not in the quote: -0.5",
+      "unit": "percent",
+      "kind": "change",
+      "scope": "segment",
+      "scope_name": "IT services",
+      "metric_key": "revenue_growth",
+      "target_low": -0.5,
+      "target_high": 1.5,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-17",
+      "calls": [
+        {
+          "date": "2025-10-17",
+          "call_period": "2025-09-30",
+          "page": 5,
+          "quote": "In Quarter 3, we are projecting sequential IT services revenue growth of minus 0.5% to plus 1.5% in constant currency.",
+          "document": "Wipro_Secretarial_17102025155144_SEIntimationTranscript.pdf"
+        },
+        {
+          "date": "2025-10-17",
+          "call_period": "2025-09-30",
+          "page": 7,
+          "quote": "This translates to a sequential guidance of minus 0.5% to a plus 1.5% in constant currency term.",
+          "document": "Wipro_Secretarial_17102025155144_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-10-17",
+          "call_period": "2025-09-30",
+          "value": "-0.5\u20131.5%",
+          "change": "set",
+          "page": 5,
+          "quote": "In Quarter 3, we are projecting sequential IT services revenue growth of minus 0.5% to plus 1.5% in constant currency."
+        },
+        {
+          "date": "2025-10-17",
+          "call_period": "2025-09-30",
+          "value": "-0.5\u20131.5%",
+          "change": "maintained",
+          "page": 7,
+          "quote": "This translates to a sequential guidance of minus 0.5% to a plus 1.5% in constant currency term."
+        }
+      ]
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 3,
+    "items": [
+      {
+        "promise": "Revenue growth at least -2 for 2026-06-30",
+        "period": "2026-06-30",
+        "sequence": [
+          {
+            "date": "2026-04-17",
+            "value": "at least -2",
+            "change": "set"
+          },
+          {
+            "date": "2026-04-17",
+            "value": "at least -2",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth -0.5\u20131.5% for 2025-12-31",
+        "period": "2025-12-31",
+        "sequence": [
+          {
+            "date": "2025-10-17",
+            "value": "-0.5\u20131.5%",
+            "change": "set"
+          },
+          {
+            "date": "2025-10-17",
+            "value": "-0.5\u20131.5%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth -3.5\u2013-1.5 for 2025-06-30",
+        "period": "2025-06-30",
+        "sequence": [
+          {
+            "date": "2025-04-17",
+            "value": "-3.5\u2013-1.5",
+            "change": "set"
+          },
+          {
+            "date": "2025-04-17",
+            "value": "-3.5\u2013-1.5",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.6,
+    "series": 0.73,
+    "guidance": 1.19,
+    "check": 0.01,
+    "verdict": 0.08,
+    "total": 2.61
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 7,
+      "tokens": 0,
+      "dropped": 1
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

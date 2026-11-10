@@ -20,7 +20,7 @@ from finn_core.nse_client import NSEClient
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "snapshot"
-LEDGERS = ("MARICO", "ASIANPAINT", "TITAN", "CGPOWER", "DMART")
+LEDGERS = ("MARICO", "ASIANPAINT", "TITAN", "CGPOWER", "DMART", "PIDILITIND", "WIPRO")
 KEEP = {
     "guidance_llm",
     "verdict_llm",

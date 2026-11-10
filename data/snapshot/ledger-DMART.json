@@ -31,7 +31,7 @@
   },
   "lookback": {
     "quarters": 7,
-    "fy26_statements": 1,
+    "fy26_statements": 2,
     "next_quarter_statements": 0,
     "pages_mentioning_fy26_or_next_quarter": 4,
     "pages_dropped_by_prefilter": 1,
@@ -110,39 +110,7 @@
   },
   "rows": [
     {
-      "promise": "Revenue growth 22\u201323% for an unnamed period",
-      "source_quote": "we expect this particular part of the business to be somewhere in that 22% to 23% kind of a range.",
-      "page": 10,
-      "source_document": "https://nsearchives.nseindia.com/corporate/DMART_04082026124725_ASLTranscriptIntimation04082026.pdf",
-      "speaker": "",
-      "period_promised": "",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "22\u201323%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
-      "scope": "segment",
-      "scope_name": "GMA",
-      "metric_key": "revenue_growth",
-      "target_low": 22.0,
-      "target_high": 23.0,
-      "call_period": "2026-06-30",
-      "call_date": "2026-08-04",
-      "calls": [
-        {
-          "date": "2026-08-04",
-          "call_period": "2026-06-30",
-          "page": 10,
-          "quote": "we expect this particular part of the business to be somewhere in that 22% to 23% kind of a range.",
-          "document": "DMART_04082026124725_ASLTranscriptIntimation04082026.pdf"
-        }
-      ],
-      "revisions": []
-    },
-    {
-      "promise": "Volume growth at least 50% for FY2026",
+      "promise": "Volume growth at least 50 for FY2026",
       "source_quote": "it won't be less than 50",
       "page": 20,
       "source_document": "https://nsearchives.nseindia.com/corporate/DMART_06082025182522_ASLTranscriptIntimation06082025.pdf",
@@ -151,10 +119,12 @@
       "actual": null,
       "actual_value": null,
       "actual_detail": "",
-      "promised": "at least 50%",
+      "promised": "at least 50",
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -175,8 +145,8 @@
     },
     {
       "promise": "Volume growth 15% for FY2027",
-      "source_quote": "internal number or internal ambition that we will look at will be that 15% number.",
-      "page": 22,
+      "source_quote": "First on the store expansion, while I hear you out on the 15% internal target which you're working on",
+      "page": 28,
       "source_document": "https://nsearchives.nseindia.com/corporate/DMART_04082026124725_ASLTranscriptIntimation04082026.pdf",
       "speaker": "Anshul Asawa",
       "period_promised": "FY2027",
@@ -187,8 +157,10 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
-      "scope": "consolidated",
-      "scope_name": "",
+      "unit": "percent",
+      "kind": "change",
+      "scope": "other",
+      "scope_name": "store expansion",
       "metric_key": "volume_growth",
       "target_low": 15.0,
       "target_high": 15.0,
@@ -199,14 +171,21 @@
           "date": "2026-08-04",
           "call_period": "2026-06-30",
           "page": 4,
-          "quote": "we should be opening around 15% of our store base as the number that we want to increase annually.",
+          "quote": "So I do want to state that internally, our benchmarks will remain that we should be opening around 15% of our store base as the",
           "document": "DMART_04082026124725_ASLTranscriptIntimation04082026.pdf"
         },
         {
           "date": "2026-08-04",
           "call_period": "2026-06-30",
           "page": 22,
-          "quote": "internal number or internal ambition that we will look at will be that 15% number.",
+          "quote": "Yes, so I think as I've said, the internal number or internal ambition that we will look at will be that 15% number.",
+          "document": "DMART_04082026124725_ASLTranscriptIntimation04082026.pdf"
+        },
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "page": 28,
+          "quote": "First on the store expansion, while I hear you out on the 15% internal target which you're working on",
           "document": "DMART_04082026124725_ASLTranscriptIntimation04082026.pdf"
         }
       ],
@@ -217,7 +196,7 @@
           "value": "15%",
           "change": "set",
           "page": 4,
-          "quote": "we should be opening around 15% of our store base as the number that we want to increase annually."
+          "quote": "So I do want to state that internally, our benchmarks will remain that we should be opening around 15% of our store base as the"
         },
         {
           "date": "2026-08-04",
@@ -225,16 +204,58 @@
           "value": "15%",
           "change": "maintained",
           "page": 22,
-          "quote": "internal number or internal ambition that we will look at will be that 15% number."
+          "quote": "Yes, so I think as I've said, the internal number or internal ambition that we will look at will be that 15% number."
+        },
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "value": "15%",
+          "change": "maintained",
+          "page": 28,
+          "quote": "First on the store expansion, while I hear you out on the 15% internal target which you're working on"
         }
       ]
+    },
+    {
+      "promise": "Revenue growth 22\u201323% for FY2027",
+      "source_quote": "we expect this particular part of the business to be somewhere in that 22% to 23% kind of a range.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DMART_04082026124725_ASLTranscriptIntimation04082026.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "22\u201323%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "scope": "segment",
+      "scope_name": "general merchandise and apparel",
+      "metric_key": "revenue_growth",
+      "target_low": 22.0,
+      "target_high": 23.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-04",
+      "calls": [
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "page": 10,
+          "quote": "we expect this particular part of the business to be somewhere in that 22% to 23% kind of a range.",
+          "document": "DMART_04082026124725_ASLTranscriptIntimation04082026.pdf"
+        }
+      ],
+      "revisions": []
     }
   ],
   "long_term_targets": [],
   "revisions": {
     "raised": 0,
     "cut": 0,
-    "maintained": 1,
+    "maintained": 2,
     "items": [
       {
         "promise": "Volume growth 15% for FY2027",
@@ -244,6 +265,11 @@
             "date": "2026-08-04",
             "value": "15%",
             "change": "set"
+          },
+          {
+            "date": "2026-08-04",
+            "value": "15%",
+            "change": "maintained"
           },
           {
             "date": "2026-08-04",
@@ -261,12 +287,12 @@
     "total": 2
   },
   "timing": {
-    "discover": 0.5,
-    "series": 0.94,
-    "guidance": 0.37,
+    "discover": 0.57,
+    "series": 0.85,
+    "guidance": 0.4,
     "check": 0.0,
-    "verdict": 0.05,
-    "total": 1.86
+    "verdict": 0.07,
+    "total": 1.89
   },
   "usage": {
     "guidance": {

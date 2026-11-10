@@ -137,6 +137,8 @@
       "status": "tracking_on_track",
       "note": "H1 FY2027 EBITDA margin 19.46% versus 18.02% a year earlier (+144 bps)",
       "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -193,6 +195,8 @@
       "status": "tracking_ahead",
       "note": "H1 FY2027 revenue 7,854.00 versus H1 FY2026 revenue 6,741.00",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "revenue_growth",
@@ -214,13 +218,6 @@
           "page": 6,
           "quote": "The strong start to this year has set us well to achieve our full year aspirations of delivering double-digit revenue growth to cross INR15,000 crores",
           "document": "marico_11082026194246_Seintt.pdf"
-        },
-        {
-          "date": "2026-11-06",
-          "call_period": "2026-09-30",
-          "page": 6,
-          "quote": "We expect to deliver teens revenue growth this year and comfortably cross the INR15,000 crores revenue mark.",
-          "document": "marico_06112026165447_SEtranscript.pdf"
         }
       ],
       "revisions": [
@@ -239,14 +236,6 @@
           "change": "cut",
           "page": 6,
           "quote": "The strong start to this year has set us well to achieve our full year aspirations of delivering double-digit revenue growth to cross INR15,000 crores"
-        },
-        {
-          "date": "2026-11-06",
-          "call_period": "2026-09-30",
-          "value": "a direction only",
-          "change": "maintained",
-          "page": 6,
-          "quote": "We expect to deliver teens revenue growth this year and comfortably cross the INR15,000 crores revenue mark."
         }
       ]
     },
@@ -264,6 +253,8 @@
       "status": "tracking_ahead",
       "note": "H1 FY2027 EBITDA 1,528.00 versus H1 FY2026 EBITDA 1,215.00",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_growth",
@@ -296,6 +287,8 @@
       "status": "pending",
       "note": "The year before FY2026 is outside the series, so growth is not checked.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_growth",
@@ -352,6 +345,8 @@
       "status": "pending",
       "note": "The year before FY2026 is outside the series, so growth is not checked.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "revenue_growth",
@@ -371,6 +366,40 @@
       "revisions": []
     },
     {
+      "promise": "Revenue growth to rise for FY2027",
+      "source_quote": "We expect to deliver teens revenue growth this year and comfortably cross the INR15,000 crores revenue mark.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/marico_06112026165447_SEtranscript.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": "16.51%",
+      "actual_value": 16.51,
+      "actual_detail": "H1 FY2027 revenue 7,854.00 versus H1 FY2026 revenue 6,741.00",
+      "promised": "a direction only",
+      "status": "pending",
+      "note": "H1 FY2027 revenue 7,854.00 versus H1 FY2026 revenue 6,741.00",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-06",
+      "calls": [
+        {
+          "date": "2026-11-06",
+          "call_period": "2026-09-30",
+          "page": 6,
+          "quote": "We expect to deliver teens revenue growth this year and comfortably cross the INR15,000 crores revenue mark.",
+          "document": "marico_06112026165447_SEtranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
       "promise": "EBITDA growth 13\u201316% for FY2028",
       "source_quote": "from next year perspective, what we are saying is that operating profit growth will be in mid-teens",
       "page": 17,
@@ -384,6 +413,8 @@
       "status": "pending",
       "note": "No quarter of FY2028 has been reported.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_growth",
@@ -440,6 +471,8 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "segment",
       "scope_name": "Premium Personal Care",
       "metric_key": "revenue_growth",
@@ -496,6 +529,8 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_growth",
@@ -528,6 +563,8 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "geography",
       "scope_name": "international",
       "metric_key": "revenue_growth",
@@ -560,6 +597,8 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "pat_growth",
@@ -592,6 +631,8 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "segment",
       "scope_name": "Foods",
       "metric_key": "revenue_growth",
@@ -624,6 +665,8 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "segment",
       "scope_name": "Foods",
       "metric_key": "revenue_growth",
@@ -656,6 +699,8 @@
       "status": "segment_level",
       "note": "international guidance is not compared with the consolidated series.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "geography",
       "scope_name": "international",
       "metric_key": "revenue_growth",
@@ -688,6 +733,8 @@
       "status": "segment_level",
       "note": "international guidance is not compared with the consolidated series.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "geography",
       "scope_name": "international",
       "metric_key": "ebitda_growth",
@@ -720,6 +767,8 @@
       "status": "segment_level",
       "note": "India Business guidance is not compared with the consolidated series.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "geography",
       "scope_name": "India Business",
       "metric_key": "volume_growth",
@@ -734,13 +783,6 @@
           "page": 5,
           "quote": "We expect to sustain high single-digit volume growth in the India business in FY '27.",
           "document": "marico_12052026171423_Seint.pdf"
-        },
-        {
-          "date": "2026-08-11",
-          "call_period": "2026-06-30",
-          "page": 6,
-          "quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
-          "document": "marico_11082026194246_Seintt.pdf"
         },
         {
           "date": "2026-11-06",
@@ -758,14 +800,6 @@
           "change": "set",
           "page": 5,
           "quote": "We expect to sustain high single-digit volume growth in the India business in FY '27."
-        },
-        {
-          "date": "2026-08-11",
-          "call_period": "2026-06-30",
-          "value": "7\u20139%",
-          "change": "maintained",
-          "page": 6,
-          "quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth."
         },
         {
           "date": "2026-11-06",
@@ -791,6 +825,8 @@
       "status": "segment_level",
       "note": "Digital-First portfolio guidance is not compared with the consolidated series.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
       "scope": "segment",
       "scope_name": "Digital-First portfolio",
       "metric_key": "ebitda_margin",
@@ -862,6 +898,8 @@
       "status": "not_checkable",
       "note": "Volume and capex cannot be verified from the quarterly series.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -881,6 +919,40 @@
       "revisions": []
     },
     {
+      "promise": "Volume growth 7\u20139% for FY2027",
+      "source_quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082026194246_Seintt.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20139%",
+      "status": "not_scored",
+      "note": "Constant-currency guidance is not the consolidated rupee series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "scope": "geography",
+      "scope_name": "India",
+      "metric_key": "volume_growth",
+      "target_low": 7.0,
+      "target_high": 9.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-11",
+      "calls": [
+        {
+          "date": "2026-08-11",
+          "call_period": "2026-06-30",
+          "page": 6,
+          "quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
+          "document": "marico_11082026194246_Seintt.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
       "promise": "EBITDA margin 350\u2013400 bps for FY2027",
       "source_quote": "Now broadly, what we've said is in gross margin terms, we expect about 350 to 400 bps expansion for FY '27.",
       "page": 14,
@@ -894,6 +966,8 @@
       "status": "not_scored",
       "note": "The quote is a gross margin, not the EBITDA margin.",
       "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -928,6 +1002,8 @@
       "status": "long_term",
       "note": "More than three years out.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "revenue_growth",
@@ -960,6 +1036,8 @@
       "status": "long_term",
       "note": "More than three years out.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_growth",
@@ -982,29 +1060,8 @@
   "revisions": {
     "raised": 1,
     "cut": 3,
-    "maintained": 6,
+    "maintained": 4,
     "items": [
-      {
-        "promise": "Revenue growth at least 10% for FY2027",
-        "period": "FY2027",
-        "sequence": [
-          {
-            "date": "2026-05-12",
-            "value": "17\u201319%",
-            "change": "set"
-          },
-          {
-            "date": "2026-08-11",
-            "value": "at least 10%",
-            "change": "cut"
-          },
-          {
-            "date": "2026-11-06",
-            "value": "a direction only",
-            "change": "maintained"
-          }
-        ]
-      },
       {
         "promise": "Volume growth at least 10% for FY2027",
         "period": "FY2027",
@@ -1013,11 +1070,6 @@
             "date": "2026-05-12",
             "value": "7\u20139%",
             "change": "set"
-          },
-          {
-            "date": "2026-08-11",
-            "value": "7\u20139%",
-            "change": "maintained"
           },
           {
             "date": "2026-11-06",
@@ -1039,6 +1091,22 @@
             "date": "2026-11-06",
             "value": "13\u201316%",
             "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth at least 10% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-05-12",
+            "value": "17\u201319%",
+            "change": "set"
+          },
+          {
+            "date": "2026-08-11",
+            "value": "at least 10%",
+            "change": "cut"
           }
         ]
       },
@@ -1120,12 +1188,12 @@
     "total": 7
   },
   "timing": {
-    "discover": 2.36,
+    "discover": 0.56,
     "series": 0.74,
-    "guidance": 1.42,
+    "guidance": 1.18,
     "check": 0.01,
-    "verdict": 0.07,
-    "total": 4.6
+    "verdict": 0.06,
+    "total": 2.55
   },
   "usage": {
     "guidance": {

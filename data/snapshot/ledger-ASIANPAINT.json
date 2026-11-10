@@ -125,6 +125,8 @@
       "status": "tracking_on_track",
       "note": "H1 FY2027 EBITDA margin 18.16% versus 17.91% a year earlier (+25 bps)",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -181,6 +183,8 @@
       "status": "delivered",
       "note": "",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -237,6 +241,8 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "revenue_growth",
@@ -269,6 +275,8 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -301,6 +309,8 @@
       "status": "low_confidence",
       "note": "The quoted sentence does not name the metric.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "ebitda_margin",
@@ -357,6 +367,8 @@
       "status": "segment_level",
       "note": "decorative plus industrial guidance is not compared with the consolidated series.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "segment",
       "scope_name": "decorative plus industrial",
       "metric_key": "volume_growth",
@@ -428,6 +440,8 @@
       "status": "not_checkable",
       "note": "Volume and capex cannot be verified from the quarterly series.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -447,6 +461,40 @@
       "revisions": []
     },
     {
+      "promise": "Capex at least \u20b9700 crore for FY2026",
+      "source_quote": "we have committed closer to 700 crores of CapEx this year.",
+      "page": 23,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_02082025122344_SEintimationtranscript.pdf",
+      "speaker": "Amit Syngle",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least \u20b9700 crore",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 700.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-02",
+      "calls": [
+        {
+          "date": "2025-08-02",
+          "call_period": "2025-06-30",
+          "page": 23,
+          "quote": "we have committed closer to 700 crores of CapEx this year.",
+          "document": "ASIANPAINT_02082025122344_SEintimationtranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
       "promise": "Volume growth 8\u201310% for FY2027",
       "source_quote": "I've spoken of that 8-10% as an overall volume band for the entire year.",
       "page": 22,
@@ -460,6 +508,8 @@
       "status": "not_checkable",
       "note": "Volume and capex cannot be verified from the quarterly series.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -516,6 +566,8 @@
       "status": "not_scored",
       "note": "The period is not stated.",
       "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
       "scope": "consolidated",
       "scope_name": "",
       "metric_key": "volume_growth",
@@ -628,19 +680,19 @@
       }
     ]
   },
-  "verdict": "An actual EBITDA margin of 18.37% was delivered against the promised 18\u201320% for FY2026. For FY2027, the actual H1 EBITDA margin reached 18.16% against the promised 18\u201320%, up 25 bps from 17.91% a year earlier.",
+  "verdict": "For FY2026, the actual EBITDA margin was 18.37% against the promised 18\u201320%, which was delivered. For FY2027, the H1 EBITDA margin was 18.16% compared to the promised 18\u201320%.",
   "progress": {
     "stage": "complete",
     "done": 7,
     "total": 7
   },
   "timing": {
-    "discover": 0.7,
-    "series": 0.64,
-    "guidance": 1.35,
-    "check": 0.0,
-    "verdict": 0.06,
-    "total": 2.75
+    "discover": 0.62,
+    "series": 0.61,
+    "guidance": 1.12,
+    "check": 0.01,
+    "verdict": 0.08,
+    "total": 2.44
   },
   "usage": {
     "guidance": {
@@ -653,7 +705,7 @@
       "calls": 0,
       "cache_hits": 1,
       "tokens": 0,
-      "model": "gemini-3.6-flash"
+      "model": "gemini-3.5-flash-lite"
     },
     "total_tokens": 0
   }

@@ -96,7 +96,7 @@ class PromiseTests(unittest.TestCase):
                 "direction": "",
                 "horizon": "fiscal_year",
                 "target_period": "FY2026",
-                "evidence": "margin",
+                "evidence": "EBITDA margin guidance of 18% to 20%",
                 "page": 1,
                 "source_document": "https://example/t.pdf",
                 "speaker": "",
@@ -276,6 +276,192 @@ class PromiseTests(unittest.TestCase):
         self.assertEqual(gross["status"], "not_scored")
         self.assertIsNone(gross["actual"])
         self.assertIn("gross", gross["note"])
+        self.assertEqual(gross["unit"], "bps")
+        self.assertEqual(gross["kind"], "change")
+        self.assertEqual(change["unit"], "bps")
+        self.assertEqual(change["kind"], "change")
+        self.assertNotEqual(quote_check(gross["source_quote"], 200, None, "percent"), "ok")
+
+    def test_a_dollar_revenue_range_is_not_scored_as_a_percent(self):
+        quote = "we expect our revenues to be in the range of $2.571 billion to $2.625 billion"
+        quarters = [
+            quarter("2026-09-30", 25000, 5000, 3000),
+            quarter("2026-06-30", 24231.30, 4800, 2900),
+            quarter("2025-09-30", 23000, 4500, 2700),
+            quarter("2025-06-30", 21831.90, 4300, 2500),
+        ]
+        row = judge_promise(
+            {
+                "metric_key": "revenue_growth",
+                "target_low": 2.571,
+                "target_high": 2.625,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": quote,
+                "page": 6,
+                "source_document": "https://nsearchives.nseindia.com/corporate/Wipro_Secretarial_16102026163132_SEIntimation16102026.pdf",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            quarters,
+            date(2026, 11, 10),
+        )
+        self.assertEqual(row["status"], "not_scored")
+        self.assertEqual(row["unit"], "currency_usd")
+        self.assertEqual(row["kind"], "level")
+        self.assertIsNone(row["actual"])
+        self.assertNotIn("%", row["promise"])
+        self.assertIn("US$2.571", row["promise"])
+        self.assertEqual(
+            row["note"],
+            "Guided in US dollars for the IT services segment; our series is consolidated INR.",
+        )
+        self.assertNotEqual(quote_check(quote, 2.571, 2.625, "percent"), "ok")
+        self.assertEqual(quote_check(quote, 2.571, 2.625, "currency_usd"), "ok")
+        constant = judge_promise(
+            {
+                "metric_key": "revenue_growth",
+                "target_low": 2,
+                "target_high": 4,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": "We expect consolidated revenue growth of 2% to 4% in constant currency terms",
+                "page": 7,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            quarters,
+            date(2026, 11, 10),
+        )
+        self.assertEqual(constant["status"], "not_scored")
+        self.assertIsNone(constant["actual"])
+        self.assertIn("Constant-currency", constant["note"])
+
+    def test_marico_and_asian_paints_scored_rows_stay_the_same(self):
+        marico = [
+            quarter("2026-09-30", 3854, 728, 400),
+            quarter("2026-06-30", 4000, 800, 420),
+            quarter("2025-09-30", 3341, 615, 300),
+            quarter("2025-06-30", 3400, 600, 310),
+        ]
+        revenue = judge_promise(
+            {
+                "metric_key": "revenue_growth",
+                "target_low": 10,
+                "target_high": None,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": "The strong start to this year has set us well to achieve our full year aspirations of delivering double-digit revenue growth to cross INR15,000 crores",
+                "page": 6,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            marico,
+            date(2026, 11, 10),
+        )
+        ebitda = judge_promise(
+            {
+                "metric_key": "ebitda_growth",
+                "target_low": 17,
+                "target_high": 19,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": "At a consolidated level, we aim to deliver double-digit revenue growth to cross INR15,000 crores in revenues and high-teen EBITDA growth, subject to stable macros.",
+                "page": 5,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            marico,
+            date(2026, 11, 10),
+        )
+        margin = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 140,
+                "target_high": 150,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": "then the reverse math would suggest that EBITDA margin would expand in the range of about 140 to 150 basis points as compared to last",
+                "page": 10,
+                "source_document": "u",
+                "speaker": "Pawan Agrawal",
+                "scope": "consolidated",
+            },
+            marico,
+            date(2026, 11, 10),
+        )
+        self.assertEqual(revenue["status"], "tracking_ahead")
+        self.assertEqual(revenue["actual"], "16.51%")
+        self.assertEqual(revenue["promise"], "Revenue growth at least 10% for FY2027")
+        self.assertEqual(revenue["unit"], "percent")
+        self.assertEqual(ebitda["status"], "tracking_ahead")
+        self.assertEqual(ebitda["actual"], "25.76%")
+        self.assertEqual(ebitda["promise"], "EBITDA growth 17–19% for FY2027")
+        self.assertEqual(margin["status"], "tracking_on_track")
+        self.assertEqual(margin["actual"], "+144 bps")
+        self.assertEqual(margin["unit"], "bps")
+        asian_open = [
+            quarter("2026-09-30", 10000, 1816, 900),
+            quarter("2026-06-30", 10000, 1816, 900),
+            quarter("2025-09-30", 10000, 1791, 800),
+            quarter("2025-06-30", 10000, 1791, 800),
+        ]
+        open_year = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 18,
+                "target_high": 20,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds.",
+                "page": 20,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            asian_open,
+            date(2026, 11, 10),
+        )
+        closed = [
+            quarter("2026-03-31", 100, 18.37, 10),
+            quarter("2025-12-31", 100, 18.37, 10),
+            quarter("2025-09-30", 100, 18.37, 10),
+            quarter("2025-06-30", 100, 18.37, 10),
+        ]
+        delivered = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 18,
+                "target_high": 20,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2026",
+                "evidence": "maintain the whole guidance of 18 to 20% PBDIT margin band.",
+                "page": 27,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            closed,
+            date(2026, 11, 10),
+        )
+        self.assertEqual(open_year["status"], "tracking_on_track")
+        self.assertEqual(open_year["actual"], "18.16%")
+        self.assertEqual(open_year["promise"], "EBITDA margin 18–20% for FY2027")
+        self.assertEqual(open_year["unit"], "percent")
+        self.assertEqual(open_year["kind"], "level")
+        self.assertEqual(delivered["status"], "delivered")
+        self.assertEqual(delivered["actual"], "18.37%")
+        self.assertEqual(delivered["unit"], "percent")
 
     def test_a_reported_margin_is_not_scored(self):
         row = judge_promise(

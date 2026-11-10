@@ -210,4 +210,25 @@ The snapshot is the latest quarter, trailing twelve months, and six revenue bars
 
 `web/vercel.json` rewrites unknown paths to `index.html` so a refresh still opens the app. The API project stays the one with root `/`. The frontend is a second Vercel project whose root directory is `web`, framework Vite, and build-time env `VITE_API_BASE=https://finn-r4y3.vercel.app`.
 
-Checked locally at 390px: Marico from cache (verdict, coverage, chart, the high-teen row, the cut, the unverifiable reasons), an invalid `!!` that does not call the API, and a typed DMART that keeps a recent chip and shows the thin-history note. The live frontend URL is not tested until that second project is deployed.
+Checked locally at 390px: Marico from cache (verdict, coverage, chart, the high-teen row, the cut, the unverifiable reasons), an invalid `!!` that does not call the API, and a typed DMART that keeps a recent chip and shows the thin-history note. The live frontend is `https://web-eosin-ten-23.vercel.app`.
+
+## 2026-11-10 — A dollar range is not a percent
+
+The live Wipro ledger scored “we expect our revenues to be in the range of $2.571 billion to $2.625 billion” as revenue growth of 2.571–2.625% and marked it tracking ahead of consolidated growth of 9.81%. Numbers under 100 were kept, and nothing asked what unit they were in.
+
+Every promise now has `unit` (percent, bps, currency_usd, currency_inr, count, ratio, other) and `kind` (level or change). Both are read from the quote. The model is asked for them, and the quote wins if they disagree. A row is scored only when the unit matches the comparison (growth needs a percent, a margin needs a percent or basis points) and `quote_check` finds that unit on those numbers, not only the digits. Dollars are `not_scored`: “Guided in US dollars for the IT services segment; our series is consolidated INR.” Constant-currency wording is `not_scored` for the same reason: the series is consolidated rupees. Segment guidance stays `segment_level`. Guidance version stays `v3`, so stored transcripts are not extracted again just to add the field.
+
+The first transcript was labelled “Reading results” because that label belonged to the step that had just finished. While a request is in flight the label is now the step being read, so the first guidance call says “Reading transcript 1 of 7”.
+
+Re-judged from cache at 0 guidance tokens: Marico still 3 scored rows (140–150 bps on track at +144 bps, revenue 16.51% ahead of at least 10%, EBITDA growth 25.76% ahead of 17–19%). Asian Paints still 2 (FY2026 18.37% delivered, FY2027 18.16% on track). Titan, Pidilite, CG Power and DMart still have no scored row. Wipro’s re-read has no scored row. The dollar sentence that came back is page 7 of the 17 Apr 2025 transcript, “$2.505 billion to $2.557 billion”, `currency_usd`, `not_scored`, with that reason. The snapshots, including Wipro, were written again at 0 tokens.
+
+Fresh reads, not in the demo set:
+
+| Ticker | Scored | What was scored |
+| --- | ---: | --- |
+| INFY | 3 | FY2026 operating margin 20–22% partly, actual 22.94%. FY2027 the same band, ahead, H1 23.70%. Revenue growth 1.5–3% ahead, H1 12.32%. |
+| HINDUNILVR | 2 | Margin 22.5–23.5% behind, H1 22.39%. Ice-cream demerger 50–60 bps behind, actual −52 bps. |
+| SBIN | 0 | Nothing consolidated could be checked. |
+| BRITANNIA | 0 | Nothing consolidated could be checked. |
+
+Two of those scored rows need a look, and they were left scored. Infosys “1.5% to 3%” does not say constant currency in the stored sentence, and 12.32% rupee growth is a long way from that band. Hindustan Unilever’s “Ice Cream demerger is expected to result in an improvement of 50–60 bps” is a separation, and the H1 margin moved the other way. Asian’s two rows still quote PBDIT and are scored as EBITDA margin, as before.

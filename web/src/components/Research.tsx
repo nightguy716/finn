@@ -87,7 +87,8 @@ export function Research() {
 
   const extras = recent.filter((item) => !PRESETS.includes(item))
   const busy = phase === 'running'
-  const fraction = barFraction(progress, busy)
+  const transcripts = ledger?.coverage?.transcripts_found ?? null
+  const fraction = barFraction(progress, busy, transcripts)
 
   return (
     <div className="px-4 pt-4 pb-6">
@@ -143,7 +144,7 @@ export function Research() {
 
       {symbol && phase !== 'ready' ? (
         <div className="mt-4" aria-live="polite">
-          <p className="text-[14px]">{progressLine(progress, busy)}</p>
+          <p className="text-[14px]">{progressLine(progress, busy, ledger?.coverage?.transcripts_found ?? null)}</p>
           <div className="mt-2 h-[3px] bg-line" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(fraction * 100)}>
             <div className="h-full bg-accent" style={{ width: `${Math.round(fraction * 100)}%` }} />
           </div>
@@ -164,26 +165,36 @@ export function Research() {
   )
 }
 
-function progressLine(progress: LedgerProgress | null, busy: boolean): string {
+function progressLine(progress: LedgerProgress | null, busy: boolean, transcripts: number | null): string {
   if (!progress) return 'Finding filings'
   const { stage, done, total } = progress
-  if (stage === 'discover') return total ? `Found ${done} of ${total} transcripts` : 'Finding transcripts'
-  if (stage === 'series') return total ? `Reading results, ${done} of ${total} quarters` : 'Reading the results'
+  if (stage === 'discover') {
+    if (busy) return 'Reading results'
+    return total ? `Found ${done} of ${total} transcripts` : 'Finding transcripts'
+  }
+  if (stage === 'series') {
+    if (busy) return transcripts ? `Reading transcript 1 of ${transcripts}` : 'Reading transcript 1'
+    return total ? `Reading results, ${done} of ${total} quarters` : 'Reading results'
+  }
   if (stage === 'guidance') {
-    const reading = Math.min(total || 1, Math.max(1, done + (busy ? 1 : 0)))
-    return `Reading transcript ${reading} of ${total || '…'}`
+    const count = total || transcripts || 0
+    const reading = busy ? Math.min(count || 1, done + 1) : Math.max(done, 1)
+    return `Reading transcript ${reading} of ${count || '…'}`
   }
   if (stage === 'complete') return 'Done'
   return 'Reading the filings'
 }
 
-function barFraction(progress: LedgerProgress | null, busy: boolean): number {
+function barFraction(progress: LedgerProgress | null, busy: boolean, transcripts: number | null): number {
   if (!progress) return busy ? 0.08 : 0
   if (progress.stage === 'complete') return 1
-  if (progress.stage === 'discover') return 0.16
-  if (progress.stage === 'series') return 0.3
+  if (progress.stage === 'discover') return busy ? 0.3 : 0.16
+  if (progress.stage === 'series') {
+    const count = transcripts || 1
+    return busy ? 0.3 + (1 / count) * 0.68 : 0.3
+  }
   if (progress.stage === 'guidance') {
-    const total = progress.total || 1
+    const total = progress.total || transcripts || 1
     const done = Math.min(total, progress.done + (busy ? 1 : 0))
     return 0.3 + (done / total) * 0.68
   }

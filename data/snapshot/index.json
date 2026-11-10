@@ -9,6 +9,7 @@
     "TITAN": "ledger-TITAN.json",
     "CGPOWER": "ledger-CGPOWER.json",
     "DMART": "ledger-DMART.json",
-    "PIDILITIND": "ledger-PIDILITIND.json"
+    "PIDILITIND": "ledger-PIDILITIND.json",
+    "WIPRO": "ledger-WIPRO.json"
   }
 }

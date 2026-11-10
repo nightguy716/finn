@@ -36,10 +36,11 @@ _FORWARD = re.compile(
 _LOOKBACK_HINT = re.compile(r"fy\s*'?26|next quarter|coming quarter|subsequent quarter", re.I)
 _WORD = re.compile(r"[a-z0-9]+(?:\.[0-9]+)?%?")
 _PART = re.compile(
-    r"constant currency|portfolio|\bbrand\b|international|segment|division|category|"
+    r"portfolio|\bbrand\b|international|segment|division|category|"
     r"digital[- ]first|subsidiary|\bpiece\b|\bsku\b|\b(?!our\b)\w+\s+business",
     re.I,
 )
+UNITS = {"percent", "bps", "currency_usd", "currency_inr", "count", "ratio", "other"}
 _MOVEMENT = re.compile(r"increas|decreas|grow|decline|expand|reduc|higher|lower|improv", re.I)
 _METRIC_WORDS = {
     "revenue_growth": re.compile(r"revenue|top[- ]line", re.I),
@@ -76,6 +77,8 @@ GUIDANCE_SCHEMA = {
                     "page": {"type": "INTEGER"},
                     "scope": {"type": "STRING"},
                     "scope_name": {"type": "STRING"},
+                    "unit": {"type": "STRING"},
+                    "kind": {"type": "STRING"},
                 },
                 "required": [
                     "metric_key",
@@ -89,6 +92,8 @@ GUIDANCE_SCHEMA = {
                     "page",
                     "scope",
                     "scope_name",
+                    "unit",
+                    "kind",
                 ],
             },
         }
@@ -328,8 +333,15 @@ def compare_tracking(actual: float, low: float | None, high: float | None) -> st
     return "pending"
 
 
-def quote_check(evidence: str, low: float | None, high: float | None) -> str:
-    """Whether each stated number is actually in the stored quote."""
+def quote_check(evidence: str, low: float | None, high: float | None, unit: str | None = None) -> str:
+    """Whether these numbers, and their unit, are actually in the stored quote."""
+    if low is None and high is None:
+        return "ok"
+    stated = read_unit(evidence, low, high)
+    if unit and stated != unit:
+        return f"The quote states {stated}, not {unit}."
+    if stated == "other":
+        return "The quote does not state the unit."
     text = re.sub(r"\s*-\s*", "-", (evidence or "").lower())
     missing = []
     for value in (low, high):
@@ -339,6 +351,45 @@ def quote_check(evidence: str, low: float | None, high: float | None) -> str:
     if not missing:
         return "ok"
     return "Not in the quote: " + ", ".join(missing)
+
+
+def read_unit(evidence: str, low: float | None, high: float | None) -> str:
+    """Unit of these numbers, read from the quote. A model label does not decide it."""
+    text = re.sub(r"\s*-\s*", "-", (evidence or "").lower())
+    spans = []
+    for value in (low, high):
+        spans.extend(_number_spans(text, value))
+    if not spans:
+        return "percent" if _from_named_band(text, low) or _from_named_band(text, high) else "other"
+    start = max(0, min(span[0] for span in spans) - 20)
+    end = min(len(text), max(span[1] for span in spans) + 32)
+    window = text[start:end]
+    if re.search(r"\$|\busd\b|u\.s\. dollar|us dollar|\bdollars?\b", window):
+        return "currency_usd"
+    if re.search(r"basis points?|\bbps\b", window):
+        return "bps"
+    if re.search(r"%|percent", window):
+        return "percent"
+    if re.search(r"\binr\b|₹|\bcrores?\b|\blakhs?\b|\brupees?\b|\brs\.?\b", window):
+        return "currency_inr"
+    if re.search(r"\d+(?:\.\d+)?\s*x\b", window):
+        return "ratio"
+    if _from_named_band(text, low) or _from_named_band(text, high):
+        return "percent"
+    return "other"
+
+
+def read_kind(unit: str, metric_key: str, evidence: str) -> str:
+    """A growth rate or a basis-point move is a change. An amount or a margin percent is a level."""
+    if unit == "bps":
+        return "change"
+    if unit in ("currency_usd", "currency_inr", "count", "ratio"):
+        return "level"
+    if unit == "percent" and metric_key in ("revenue_growth", "ebitda_growth", "pat_growth", "volume_growth"):
+        return "change"
+    if unit == "percent" and re.search(r"(expand|improv|increase|decrease|reduc).{0,40}(percent|%)", evidence or "", re.I):
+        return "change"
+    return "level"
 
 
 def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None) -> dict | None:
@@ -352,15 +403,28 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         key = _infer_metric(evidence) or ""
     if key not in METRIC_KEYS:
         return None
-    low, high = sanitize_bounds(evidence, promise.get("target_low"), promise.get("target_high"), key)
+    raw_low, raw_high = _num(promise.get("target_low")), _num(promise.get("target_high"))
+    seen = read_unit(evidence, raw_low, raw_high)
+    if seen in ("currency_usd", "currency_inr") and (_number_spans(evidence.lower(), raw_low) or _number_spans(evidence.lower(), raw_high)):
+        low, high = raw_low, raw_high
+    else:
+        low, high = sanitize_bounds(evidence, raw_low, raw_high, key)
+    unit = read_unit(evidence, low, high)
+    kind = read_kind(unit, key, evidence)
     direction = promise.get("direction") or ""
     if low is None and high is None and not _MOVEMENT.search(evidence):
         return None
     if _reported_result(evidence) and not _other_margin(evidence):
         return None
-    bps = bool(re.search(r"basis point|\bbps\b", evidence, re.I))
+    bps = unit == "bps"
     row = {
-        "promise": _promise_line({"metric_key": key, "target_period": promise.get("target_period"), "direction": direction}, low, high, bps),
+        "promise": _promise_line(
+            {"metric_key": key, "target_period": promise.get("target_period"), "direction": direction},
+            low,
+            high,
+            unit,
+            evidence,
+        ),
         "source_quote": evidence,
         "page": promise.get("page"),
         "source_document": promise.get("source_document"),
@@ -369,10 +433,12 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         "actual": None,
         "actual_value": None,
         "actual_detail": "",
-        "promised": _target_phrase(low, high, bps),
+        "promised": _target_phrase(low, high, unit, evidence),
         "status": "not_checkable",
         "note": "",
-        "quote_check": quote_check(evidence, low, high),
+        "quote_check": quote_check(evidence, low, high, unit),
+        "unit": unit,
+        "kind": kind,
         "scope": promise.get("scope") or "consolidated",
         "scope_name": promise.get("scope_name") or "",
         "metric_key": key,
@@ -386,6 +452,12 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
     if not _METRIC_WORDS[key].search(evidence):
         row["status"] = "low_confidence"
         row["note"] = "The quoted sentence does not name the metric."
+        return row
+    if unit == "currency_usd":
+        _not_scored(row, "Guided in US dollars for the IT services segment; our series is consolidated INR.")
+        return row
+    if re.search(r"constant[- ]currency", evidence, re.I):
+        _not_scored(row, "Constant-currency guidance is not the consolidated rupee series.")
         return row
     blocked = _unit_block(row, key, bps)
     if blocked:
@@ -401,6 +473,9 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         return row
     if key not in CHECKABLE:
         row["note"] = "Volume and capex cannot be verified from the quarterly series."
+        return row
+    refused = _refuse_unit(row, key)
+    if refused:
         return row
     if key == "ebitda_margin" and re.search(r"\bebit margin\b", evidence, re.I) and "ebitda" not in evidence.lower():
         row["status"] = "segment_level"
@@ -484,6 +559,29 @@ def _unit_block(row: dict, key: str, bps: bool) -> bool:
         return True
     if (row.get("scope") or "") not in ("consolidated", "segment", "geography", "other"):
         _not_scored(row, "The scope is not stated.")
+        return True
+    return False
+
+
+def _refuse_unit(row: dict, key: str) -> bool:
+    """Score only a percent or basis-point promise whose quote states that unit."""
+    if row.get("target_low") is None and row.get("target_high") is None:
+        return False
+    unit = row.get("unit") or "other"
+    if row.get("quote_check") != "ok":
+        _not_scored(row, row.get("quote_check") or "The quote does not state the unit.")
+        return True
+    if unit == "currency_inr":
+        _not_scored(row, "The promise is in rupees, and the series comparison is a percent.")
+        return True
+    if key in ("revenue_growth", "ebitda_growth", "pat_growth") and unit != "percent":
+        _not_scored(row, "Growth is only scored from a percent stated in the quote.")
+        return True
+    if key == "ebitda_margin" and unit not in ("percent", "bps"):
+        _not_scored(row, "A margin is only scored from a percent or from basis points in the quote.")
+        return True
+    if key == "ebitda_margin" and unit == "percent" and row.get("kind") == "change":
+        _not_scored(row, "The quote states a margin change, not a margin level.")
         return True
     return False
 
@@ -590,8 +688,7 @@ def merge_rows(rows: list[dict]) -> tuple[list[dict], list[dict], dict]:
 
 
 def _unit(row: dict) -> str:
-    promised = row.get("promised") or ""
-    return "bps" if "bps" in promised else "pct"
+    return row.get("unit") or ("bps" if "bps" in (row.get("promised") or "") else "percent")
 
 
 def _near_hint(text: str) -> bool:
@@ -732,6 +829,10 @@ def _promises_for_document(symbol, item, document, cache, pages) -> tuple[list[d
         "horizon is quarter, fiscal_year, or multi_year. "
         "target_period is YYYY-MM-DD or FY####. "
         "target_low and target_high are numbers printed in that sentence, or empty. "
+        "unit is the unit of those numbers: percent, bps, currency_usd, currency_inr, count, ratio, or other. "
+        "A dollar figure is currency_usd, not a percent. A rupee or crore figure is currency_inr. "
+        "kind is level or change. A growth rate or a basis-point move is a change. "
+        "A margin percent, or a revenue amount, is a level. "
         "A basis-point range stays in basis points. direction is up, down, or empty. "
         "Record a stated basis-point range for this year's margin even when the same answer also discusses growth. "
         "At most 8 promises. Use nothing beyond these pages.\n\n"
@@ -804,6 +905,7 @@ def _clean_promise(raw: dict, by_page: dict, url: str) -> dict | None:
     if horizon == "" and kind:
         horizon = kind
     scope, scope_name = assign_scope(evidence, text, str(raw.get("scope") or ""), str(raw.get("scope_name") or ""))
+    unit = read_unit(evidence, low, high)
     return {
         "metric_key": key,
         "target_low": low,
@@ -817,6 +919,8 @@ def _clean_promise(raw: dict, by_page: dict, url: str) -> dict | None:
         "source_document": url,
         "scope": scope,
         "scope_name": scope_name,
+        "unit": unit if unit in UNITS else "other",
+        "kind": read_kind(unit, key, evidence),
     }
 
 
@@ -1185,9 +1289,11 @@ def _parse_period(value: str) -> tuple[str, date | None]:
         return "", None
 
 
-def _promise_line(promise: dict, low, high, bps: bool = False) -> str:
+def _promise_line(promise: dict, low, high, unit: str = "percent", evidence: str = "") -> str:
     label = LABELS.get(promise["metric_key"], promise["metric_key"])
-    target = _target_phrase(low, high, bps)
+    if unit in ("currency_usd", "currency_inr") and promise["metric_key"] == "revenue_growth":
+        label = "Revenue"
+    target = _target_phrase(low, high, unit, evidence)
     if target == "a direction only":
         if promise.get("direction") == "down":
             target = "to fall"
@@ -1197,23 +1303,55 @@ def _promise_line(promise: dict, low, high, bps: bool = False) -> str:
     return f"{label} {target} for {period}"
 
 
-def _target_phrase(low, high, bps: bool = False) -> str:
-    unit = " bps" if bps else "%"
+def _target_phrase(low, high, unit: str = "percent", evidence: str = "") -> str:
+    scale = _scale_word(evidence, unit)
+    if unit == "bps":
+        prefix, suffix = "", " bps"
+    elif unit == "currency_usd":
+        prefix, suffix = "US$", scale
+    elif unit == "currency_inr":
+        prefix, suffix = "₹", scale
+    elif unit == "percent":
+        prefix, suffix = "", "%"
+    else:
+        prefix, suffix = "", ""
     if low is not None and high is not None and abs(low - high) < 1e-6:
-        return f"{low:g}{unit}"
+        return f"{prefix}{low:g}{suffix}"
     if low is not None and high is not None:
-        return f"{low:g}–{high:g}{unit}"
+        return f"{prefix}{low:g}–{high:g}{suffix}"
     if low is not None:
-        return f"at least {low:g}{unit}"
+        return f"at least {prefix}{low:g}{suffix}"
     if high is not None:
-        return f"at most {high:g}{unit}"
+        return f"at most {prefix}{high:g}{suffix}"
     return "a direction only"
+
+
+def _scale_word(evidence: str, unit: str) -> str:
+    text = (evidence or "").lower()
+    if unit == "currency_usd":
+        if "billion" in text:
+            return " billion"
+        if "million" in text:
+            return " million"
+    if unit == "currency_inr":
+        if "crore" in text:
+            return " crore"
+        if "lakh" in text:
+            return " lakh"
+    return ""
 
 
 def _format_actual(value: float, bps: bool) -> str:
     if bps:
         return f"{value:+.0f} bps"
     return f"{value:g}%"
+
+
+def _number_spans(text: str, value: float | None) -> list[tuple[int, int]]:
+    if value is None:
+        return []
+    shown = f"{value:g}"
+    return [(match.start(), match.end()) for match in re.finditer(rf"(?<!\d){re.escape(shown)}(?!\d)", text or "")]
 
 
 def _number_in_text(text: str, value: float) -> bool:
