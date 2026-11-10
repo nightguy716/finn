@@ -48,8 +48,7 @@ export function clock(iso: string): string {
 
 export function crore(value: number | null | undefined): string {
   if (value == null || Number.isNaN(value)) return '—'
-  const abs = Math.abs(value)
-  const digits = abs >= 1000 && Math.abs(value - Math.round(value)) < 0.05 ? 0 : 2
+  const digits = Math.abs(value - Math.round(value)) < 0.05 ? 0 : 2
   return new Intl.NumberFormat('en-IN', {
     minimumFractionDigits: digits,
     maximumFractionDigits: digits,
@@ -85,6 +84,30 @@ export function shiftBack(asOf: string, hours: number): string {
   const date = new Date(Date.UTC(year, month - 1, day))
   date.setUTCHours(date.getUTCHours() - hours)
   return date.toISOString().slice(0, 10)
+}
+
+const BANDS: { phrase: string; low: number; high: number | null; read: string }[] = [
+  { phrase: 'double-digit', low: 10, high: null, read: 'at least 10%' },
+  { phrase: 'double digit', low: 10, high: null, read: 'at least 10%' },
+  { phrase: 'high-teen', low: 17, high: 19, read: '17–19%' },
+  { phrase: 'high teen', low: 17, high: 19, read: '17–19%' },
+  { phrase: 'mid-teen', low: 13, high: 16, read: '13–16%' },
+  { phrase: 'mid teen', low: 13, high: 16, read: '13–16%' },
+  { phrase: 'low-teen', low: 10, high: 13, read: '10–13%' },
+  { phrase: 'low teen', low: 10, high: 13, read: '10–13%' },
+  { phrase: 'high single', low: 7, high: 9, read: '7–9%' },
+]
+
+/** When the quote uses a word and the row stores the band we mapped it to. */
+export function bandNote(quote: string, low: number | null | undefined, high: number | null | undefined): string | null {
+  const text = (quote || '').toLowerCase()
+  for (const band of BANDS) {
+    if (!text.includes(band.phrase)) continue
+    const lowMatches = low != null && Math.abs(low - band.low) < 0.05
+    const highMatches = band.high == null ? high == null : high != null && Math.abs(high - band.high) < 0.05
+    if (lowMatches && highMatches) return `'${band.phrase}' read as ${band.read}`
+  }
+  return null
 }
 
 export function plural(count: number, word: string): string {

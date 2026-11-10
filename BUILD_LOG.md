@@ -197,3 +197,17 @@ Results cards show revenue, EBITDA, PBT and PAT in ₹ crore, with QoQ and YoY c
 Alert thresholds open in a sheet. The defaults, 5% and 2.5×, come from `/api/alerts/config`. Moving a slider refetches `/api/feed` with those parameters. A mover chip opens the filings around that day. Loading is a skeleton, a failed load keeps a retry, and an empty window says nothing was filed.
 
 PWA: `manifest.webmanifest`, 192 and 512 icons, theme colour `#f3f1eb`, and a small service worker so a phone can install it. Checked locally at 390×844: the 72-hour feed, the Marico move sheet, the HDFC profile, the routine list, the 24-hour window, the settings defaults, and the centred column at 1280px wide.
+
+## 2026-11-10 — Research tab, and a second Vercel project
+
+Research is the other tab in `web/`. It calls the existing `/api/ledger?symbol=` until `progress.stage` is `complete`. A failed step keeps the last progress and a retry calls the same URL again, so the server cursor resumes. The API contract and `finn_core` are unchanged. CORS on the API is already `Access-Control-Allow-Origin: *`, so a new frontend domain is allowed without an API change.
+
+The search accepts any NSE symbol (letters, digits, `&`, hyphen). Chips are MARICO, ASIANPAINT, TITAN, and PIDILITIND, with a line that any NSE ticker works. Recent symbols stay in `localStorage`. A symbol with other characters is refused before a request.
+
+The ledger opens with the verdict, then a coverage chip (`7 of 7 transcripts, 6 quarters of results`). A thin-history note, when the API sends one, is its own line. DMart’s is “Only 2 transcripts in the last seven quarters.” Scored rows are grouped delivered, tracking ahead, on track, behind, partly, missed. Opening one shows the quote, page, document, speaker, promised against actual, and the arithmetic. A word the quote used and the band we stored is labelled, for example `'high-teen' read as 17–19%`. Revisions of scored promises are a short timeline: date, value, set, raised, cut, or maintained. Marico’s margin band goes from 150–200 bps on 30 Jan 2026 to 140–150 bps on 11 Aug 2026, marked cut. Rows that cannot be checked (`not_scored`, `segment_level`, `low_confidence`, `not_checkable`) sit in one collapsed section with the plain reason. If nothing was scored, that section starts open. Pending rows are “Not yet due”. Long-term targets are their own collapsed group.
+
+The snapshot is the latest quarter, trailing twelve months, and six revenue bars with an EBITDA-margin line. EBITDA is labelled derived and excluding other income. PAT margin is PAT divided by revenue, labelled as that.
+
+`web/vercel.json` rewrites unknown paths to `index.html` so a refresh still opens the app. The API project stays the one with root `/`. The frontend is a second Vercel project whose root directory is `web`, framework Vite, and build-time env `VITE_API_BASE=https://finn-r4y3.vercel.app`.
+
+Checked locally at 390px: Marico from cache (verdict, coverage, chart, the high-teen row, the cut, the unverifiable reasons), an invalid `!!` that does not call the API, and a typed DMART that keeps a recent chip and shows the thin-history note. The live frontend URL is not tested until that second project is deployed.
