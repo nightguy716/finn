@@ -97,3 +97,25 @@ Checked 10 Nov 2026:
 | ASIANPAINT | 5/5 | NSE | none. The 3 Nov 2026 file is named Q2FY26; the letter is the 29 Oct 2026 conference, so the quarter is Sep 2026 | 2026, NSE | 6/6 | 256,302 |
 
 Titan Sep 2026 revenue 20,614, EBITDA 2,984, PBT 3,001, PAT 2,393 matches the results card. Marico Sep 2026 revenue 3,897, PBT 674, PAT 550 matches it too.
+
+## 2026-11-10 — Promise Ledger
+
+`promise_ledger(symbol)` in `finn_core/ledger.py`. Still no UI. Guidance comes only from the transcript pages. The annual report is discovered and not mined.
+
+Each transcript is reduced to at most eight pages that contain forward-looking words, then sent to `gemini-3.5-flash-lite` (fallback `gemini-2.5-flash-lite`) with a JSON schema. A promise is kept only when the evidence is consecutive words on the page that was sent. Vague lines with no number and no stated movement are dropped. A crore target or a "3x" is not turned into a percent. "Double-digit", "high-teens", "mid-teens", and "high single-digit" become bands only when the quote uses those words and states no number. A portfolio, brand, international business, or a named division is marked not checkable, so it is not later scored against the consolidated series.
+
+The model does not do the arithmetic. It names a metric and a period. Revenue growth, EBITDA margin, EBITDA growth, and PAT growth are computed from the quarterly series. A fiscal year that has not ended, including FY2027 as of 10 Nov 2026, is pending. Volume, capex, and an unnamed "other" are not checkable. The one-line verdict is `gemini-3.6-flash` (fallback `gemini-3.5-flash`) and it sees only the structured rows. `gemini-3.8-flash` is on the free list but a short call to it timed out at 90 seconds, so it is not the first choice. `gemini-2.5-flash` returned 404.
+
+Half-year filings: CG Power's March 2026 OneD is dated 1 Oct 2025 to 31 Mar 2026 and the revenue is 3,441.76 crore. That equals the March year-to-date (12,417.95) minus the December year-to-date (8,976.19), so the figure is the quarter itself and is not produced by subtracting the December quarter. September 2025 stays blank because June 2025 is not in the feed. Subtracting a half year is used only when the other quarter exists and the half is actually the sum.
+
+Cache keys: `guidance_llm` by symbol and transcript URL, `verdict_llm` by a hash of the slim ledger. A failed model call is not cached, so the next call retries that document only. With filings and PDF text already cached, a cold model pass on 10 Nov 2026:
+
+| Ticker | Guidance | Verdict | Total | Tokens |
+| --- | --- | --- | --- | --- |
+| MARICO | 24.9s | 14.1s | 39.0s | 16,952 |
+| TITAN | 13.8s | 7.4s | 21.5s | 8,434 |
+| ASIANPAINT | 18.8s | 23.8s | 42.6s | 20,415 |
+| CGPOWER | 13.5s | 11.7s | 25.3s | 8,948 |
+| DMART | 4.7s | 64.0s | 68.8s | 3,780 |
+
+Flash-Lite returned 404 for Marico's June 2026 transcript, two Titan transcripts, and two CG Power transcripts. Those were extracted on the next call. DMart's first verdict used the 45-second timeout and wrote nothing; the next call wrote it. A later run of all five was 0 tokens and under 0.3 seconds each. The DMart verdict stage is what crossed a 60-second serverless limit, on the failure path. Five uncached transcripts plus a slow verdict can also cross it. The per-document cache means the retry finishes the remainder. Discover and series were already cached in these timings; a ticker with no saved PDFs also pays the download.

@@ -1,39 +1,41 @@
-"""One Flash-Lite JSON call. The key is read from the environment or .env and never printed."""
+"""JSON calls to free-tier Gemini models. The key is read from the environment or .env and never printed."""
 
 import json
 import os
+import time
 from pathlib import Path
 
 import requests
 
 FLASH_LITE = "gemini-3.5-flash-lite"
 FLASH_LITE_FALLBACK = "gemini-2.5-flash-lite"
+# Stronger Flash for the one-line verdict. gemini-3.8-flash is listed but timed out
+# on a short call (90s). gemini-2.5-flash returned 404. gemini-3.6-flash answered.
+FLASH = "gemini-3.6-flash"
+FLASH_FALLBACKS = ("gemini-3.5-flash", "gemini-3.8-flash")
 
 
-def generate_json(prompt: str, schema: dict) -> tuple[dict, dict]:
+def generate_json(prompt: str, schema: dict, models: tuple[str, ...] | None = None) -> tuple[dict, dict]:
     key = api_key()
     if not key:
         raise RuntimeError("GEMINI_API_KEY is missing")
     last_error = "no model call"
-    for model in (FLASH_LITE, FLASH_LITE_FALLBACK):
-        response = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-            headers={"x-goog-api-key": key, "Content-Type": "application/json"},
-            json={
-                "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-                "generationConfig": {
-                    "temperature": 0,
-                    "responseMimeType": "application/json",
-                    "responseSchema": schema,
-                },
-            },
-            timeout=90,
-        )
+    for model in models or (FLASH_LITE, FLASH_LITE_FALLBACK):
+        response = _post(key, model, prompt, schema)
+        if response is None:
+            last_error = "request failed"
+            continue
+        if response.status_code in (404, 429, 503):
+            time.sleep(8 if response.status_code == 429 else 2)
+            response = _post(key, model, prompt, schema)
+        if response is None:
+            last_error = f"{model} request failed"
+            continue
         if response.status_code == 404:
-            last_error = "model not found"
+            last_error = f"{model} not found"
             continue
         if response.status_code != 200:
-            last_error = f"HTTP {response.status_code}"
+            last_error = f"{model} HTTP {response.status_code}"
             continue
         body = response.json()
         meta = body.get("usageMetadata") or {}
@@ -53,6 +55,25 @@ def generate_json(prompt: str, schema: dict) -> tuple[dict, dict]:
         except json.JSONDecodeError as exc:
             raise RuntimeError(f"model returned non-json: {exc}") from exc
     raise RuntimeError(last_error)
+
+
+def _post(key: str, model: str, prompt: str, schema: dict):
+    try:
+        return requests.post(
+            f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+            headers={"x-goog-api-key": key, "Content-Type": "application/json"},
+            json={
+                "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                "generationConfig": {
+                    "temperature": 0,
+                    "responseMimeType": "application/json",
+                    "responseSchema": schema,
+                },
+            },
+            timeout=45,
+        )
+    except requests.RequestException:
+        return None
 
 
 def api_key() -> str:
