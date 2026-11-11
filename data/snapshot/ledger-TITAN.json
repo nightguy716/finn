@@ -395,13 +395,13 @@
     "total": 6
   },
   "timing": {
-    "discover": 3.54,
-    "series": 0.81,
-    "guidance": 0.97,
-    "check": 0.0,
+    "discover": 2.32,
+    "series": 0.7,
+    "guidance": 1.23,
+    "check": 0.01,
     "verify": 0.0,
-    "verdict": 0.1,
-    "total": 5.42
+    "verdict": 0.05,
+    "total": 4.31
   },
   "usage": {
     "guidance": {

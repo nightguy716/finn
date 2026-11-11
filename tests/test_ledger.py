@@ -668,10 +668,124 @@ class PromiseTests(unittest.TestCase):
             [reported],
             date(2026, 11, 10),
         )
-        self.assertEqual(operating["metric_key"], "ebit_margin")
-        self.assertEqual(operating["status"], "delivered")
-        self.assertEqual(operating["actual"], "21%")
-        self.assertIn("operating margin", operating["definition_note"])
+        self.assertEqual(operating["status"], "not_scored")
+        self.assertIn("definition ambiguous", operating["note"])
+        self.assertIn("inside", operating["note"])
+        self.assertIn("above", operating["note"])
+        self.assertEqual(len(operating["readings"]), 2)
+        agreed = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 20,
+                "target_high": 22,
+                "direction": "",
+                "horizon": "quarter",
+                "target_period": "2026-03-31",
+                "evidence": "Our operating margin guidance is 20% to 22%.",
+                "passage": "Our operating margin guidance is 20% to 22%.",
+                "page": 4,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+                "call_period": "2026-03-31",
+            },
+            [quarter("2026-03-31", 100, 21, 10, 21) | {"ebit": 21, "ebit_margin_pct": 21.0}],
+            date(2026, 11, 10),
+        )
+        self.assertEqual(agreed["status"], "delivered")
+        self.assertIn("EBIT", agreed["actual"])
+        self.assertIn("EBITDA", agreed["actual"])
+        edge = quarter("2026-03-31", 100, 16.44, 10, 16.44)
+        edge["ebit_margin_pct"] = 16.44
+        close = judge_promise(
+            {
+                "metric_key": "ebit_margin",
+                "target_low": 17,
+                "target_high": 18,
+                "direction": "",
+                "horizon": "quarter",
+                "target_period": "2026-03-31",
+                "evidence": "We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%.",
+                "passage": "We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%.",
+                "page": 4,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            [edge],
+            date(2026, 11, 10),
+        )
+        self.assertEqual(close["status"], "borderline")
+        self.assertIn("derived", close["definition_note"])
+        self.assertIn("56 bps", close["actual_detail"])
+        earlier = {
+            "metric_key": "ebit_margin",
+            "period_promised": "FY2027",
+            "unit": "bps",
+            "kind": "change",
+            "scope": "consolidated",
+            "status": "tracking_behind",
+            "source_quote": "we would strive for improving the operating margin by about 150-200 basis points.",
+            "promised": "150–200 bps",
+            "promise": "EBIT margin 150–200 bps for FY2027",
+            "target_low": 150,
+            "target_high": 200,
+            "call_date": "2026-01-30",
+            "call_period": "2025-12-31",
+            "page": 1,
+            "source_document": "u",
+            "definition": "ambiguous",
+            "actual": "+127 bps",
+            "note": "",
+        }
+        later = {
+            "metric_key": "ebitda_margin",
+            "period_promised": "FY2027",
+            "unit": "bps",
+            "kind": "change",
+            "scope": "consolidated",
+            "status": "tracking_on_track",
+            "source_quote": "EBITDA margin would expand in the range of about 140 to 150 basis points",
+            "promised": "140–150 bps",
+            "promise": "EBITDA margin 140–150 bps for FY2027",
+            "target_low": 140,
+            "target_high": 150,
+            "call_date": "2026-08-11",
+            "call_period": "2026-06-30",
+            "page": 2,
+            "source_document": "u",
+            "definition": "",
+            "actual": "+144 bps",
+            "note": "",
+        }
+        chained, _, _ = merge_rows([earlier, later])
+        self.assertEqual(len(chained), 1)
+        self.assertEqual(chained[0]["status"], "tracking_on_track")
+        self.assertEqual(chained[0]["actual"], "+144 bps")
+        self.assertTrue(chained[0]["revisions"][0]["superseded"])
+        self.assertFalse(chained[0]["revisions"][-1]["superseded"])
+        mixed = "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%."
+        growth_half = judge_promise(
+            {
+                "metric_key": "ebit_margin",
+                "target_low": 2.5,
+                "target_high": 4,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": mixed,
+                "passage": mixed,
+                "page": 3,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+                "call_period": "2026-09-30",
+            },
+            [edge],
+            date(2026, 11, 10),
+        )
+        self.assertEqual(growth_half["status"], "not_scored")
+        self.assertTrue(growth_half["split_measure"])
         kept = judge_promise(
             {
                 "metric_key": "ebitda_margin",

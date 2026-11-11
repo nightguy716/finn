@@ -334,13 +334,13 @@
     "total": 6
   },
   "timing": {
-    "discover": 1.14,
-    "series": 1.31,
-    "guidance": 1.56,
-    "check": 0.0,
+    "discover": 2.08,
+    "series": 0.66,
+    "guidance": 4.73,
+    "check": 0.01,
     "verify": 0.0,
-    "verdict": 0.07,
-    "total": 4.08
+    "verdict": 0.08,
+    "total": 7.56
   },
   "usage": {
     "guidance": {

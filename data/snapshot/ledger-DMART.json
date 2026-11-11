@@ -244,7 +244,8 @@
           "value": "15%",
           "change": "set",
           "page": 4,
-          "quote": "So I do want to state that internally, our benchmarks will remain that we should be opening around 15% of our store base as the"
+          "quote": "So I do want to state that internally, our benchmarks will remain that we should be opening around 15% of our store base as the",
+          "superseded": true
         },
         {
           "date": "2026-08-04",
@@ -252,7 +253,8 @@
           "value": "15%",
           "change": "maintained",
           "page": 22,
-          "quote": "Yes, so I think as I've said, the internal number or internal ambition that we will look at will be that 15% number."
+          "quote": "Yes, so I think as I've said, the internal number or internal ambition that we will look at will be that 15% number.",
+          "superseded": true
         },
         {
           "date": "2026-08-04",
@@ -260,7 +262,8 @@
           "value": "15%",
           "change": "maintained",
           "page": 28,
-          "quote": "First on the store expansion, while I hear you out on the 15% internal target which you're working on"
+          "quote": "First on the store expansion, while I hear you out on the 15% internal target which you're working on",
+          "superseded": false
         }
       ]
     },
@@ -341,13 +344,13 @@
     "total": 2
   },
   "timing": {
-    "discover": 1.4,
-    "series": 1.2,
-    "guidance": 0.33,
-    "check": 0.0,
+    "discover": 0.83,
+    "series": 0.69,
+    "guidance": 0.5,
+    "check": 0.01,
     "verify": 0.0,
-    "verdict": 0.06,
-    "total": 2.99
+    "verdict": 0.09,
+    "total": 2.12
   },
   "usage": {
     "guidance": {

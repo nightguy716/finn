@@ -235,7 +235,8 @@
           "value": "at least -2",
           "change": "set",
           "page": 5,
-          "quote": "In Q1, we are guiding for a sequential growth of minus 2% to 0% in constant currency terms."
+          "quote": "In Q1, we are guiding for a sequential growth of minus 2% to 0% in constant currency terms.",
+          "superseded": true
         },
         {
           "date": "2026-04-17",
@@ -243,7 +244,8 @@
           "value": "at least -2",
           "change": "maintained",
           "page": 6,
-          "quote": "This translates a sequential guidance of minus 2 to zero in constant currency terms."
+          "quote": "This translates a sequential guidance of minus 2 to zero in constant currency terms.",
+          "superseded": false
         }
       ]
     },
@@ -379,7 +381,8 @@
           "value": "-3.5\u2013-1.5",
           "change": "set",
           "page": 6,
-          "quote": "we are guiding for a sequential growth of minus 3.5% to minus 1.5% in constant currency terms."
+          "quote": "we are guiding for a sequential growth of minus 3.5% to minus 1.5% in constant currency terms.",
+          "superseded": true
         },
         {
           "date": "2025-04-17",
@@ -387,7 +390,8 @@
           "value": "-3.5\u2013-1.5",
           "change": "maintained",
           "page": 7,
-          "quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms."
+          "quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms.",
+          "superseded": false
         }
       ]
     },
@@ -483,7 +487,8 @@
           "value": "-0.5\u20131.5%",
           "change": "set",
           "page": 5,
-          "quote": "In Quarter 3, we are projecting sequential IT services revenue growth of minus 0.5% to plus 1.5% in constant currency."
+          "quote": "In Quarter 3, we are projecting sequential IT services revenue growth of minus 0.5% to plus 1.5% in constant currency.",
+          "superseded": true
         },
         {
           "date": "2025-10-17",
@@ -491,7 +496,8 @@
           "value": "-0.5\u20131.5%",
           "change": "maintained",
           "page": 7,
-          "quote": "This translates to a sequential guidance of minus 0.5% to a plus 1.5% in constant currency term."
+          "quote": "This translates to a sequential guidance of minus 0.5% to a plus 1.5% in constant currency term.",
+          "superseded": false
         }
       ]
     },
@@ -599,13 +605,13 @@
     "total": 7
   },
   "timing": {
-    "discover": 1.51,
-    "series": 1.05,
-    "guidance": 2.29,
-    "check": 0.01,
+    "discover": 0.85,
+    "series": 0.71,
+    "guidance": 1.41,
+    "check": 0.0,
     "verify": 0.0,
-    "verdict": 0.06,
-    "total": 4.92
+    "verdict": 0.08,
+    "total": 3.05
   },
   "usage": {
     "guidance": {

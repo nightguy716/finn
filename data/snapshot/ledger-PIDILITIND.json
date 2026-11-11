@@ -762,13 +762,13 @@
     "total": 7
   },
   "timing": {
-    "discover": 0.57,
-    "series": 1.84,
-    "guidance": 1.84,
-    "check": 0.01,
+    "discover": 0.68,
+    "series": 0.73,
+    "guidance": 1.47,
+    "check": 0.02,
     "verify": 0.0,
-    "verdict": 0.07,
-    "total": 4.33
+    "verdict": 0.06,
+    "total": 2.96
   },
   "usage": {
     "guidance": {

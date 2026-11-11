@@ -28,7 +28,7 @@ from finn_core.llm import (
 from finn_core.nse_client import NSEClient
 from finn_core.series import quarterly_series
 
-CHECKABLE = {"revenue_growth", "ebitda_margin", "ebit_margin", "ebitda_growth", "pat_growth"}
+CHECKABLE = {"revenue_growth", "ebitda_margin", "ebit_margin", "ebitda_growth", "ebit_growth", "pat_growth"}
 MARGIN_KEYS = {"ebitda_margin", "ebit_margin"}
 METRIC_KEYS = CHECKABLE | {"volume_growth", "capex"}
 LOOKBACK = 7
@@ -72,10 +72,14 @@ _SCORED = {
     "delivered",
     "partly",
     "missed",
+    "borderline",
     "tracking_ahead",
     "tracking_on_track",
     "tracking_behind",
 }
+# 16.44% is 56 bps under a 17% edge, so the window is 60 bps rather than 50.
+_BORDERLINE_PP = 0.60
+_BORDERLINE_BPS = 60.0
 GUIDANCE_SCHEMA = {
     "type": "OBJECT",
     "properties": {
@@ -132,6 +136,7 @@ LABELS = {
     "ebitda_margin": "EBITDA margin",
     "ebit_margin": "EBIT margin",
     "ebitda_growth": "EBITDA growth",
+    "ebit_growth": "EBIT growth",
     "pat_growth": "PAT growth",
     "volume_growth": "Volume growth",
     "capex": "Capex",
@@ -200,8 +205,8 @@ def promise_ledger(
         lambda: _guidance_rows(symbol, transcripts, cache, client, usage, max_guidance_calls),
     )
     checked = stage("check", lambda: _check_rows(promises, series["quarters"], as_of))
-    checked = stage("verify", lambda: verify_scored(symbol, checked, cache, usage))
     rows, long_term, revisions = merge_rows(checked)
+    rows = stage("verify", lambda: verify_scored(symbol, rows, cache, usage))
     covered = _coverage(transcripts, series["quarters"])
     shot = _snapshot(series["quarters"])
     complete = done >= total
@@ -410,11 +415,183 @@ def read_kind(unit: str, metric_key: str, evidence: str) -> str:
         return "change"
     if unit in ("currency_usd", "currency_inr", "count", "ratio"):
         return "level"
-    if unit == "percent" and metric_key in ("revenue_growth", "ebitda_growth", "pat_growth", "volume_growth"):
+    if unit == "percent" and metric_key in ("revenue_growth", "ebitda_growth", "ebit_growth", "pat_growth", "volume_growth"):
         return "change"
     if unit == "percent" and re.search(r"(expand|improv|increase|decrease|reduc).{0,40}(percent|%)", evidence or "", re.I):
         return "change"
     return "level"
+
+
+def _margin_definition(quote: str, passage: str) -> str:
+    """ebitda, ebit, or ambiguous. Empty when the quote is not operating margin or operating profit."""
+    if not re.search(r"operating margin|operating profit", quote or "", re.I):
+        return ""
+    if re.search(r"\bebitda\b|\bpbdit\b", quote or "", re.I):
+        return "ebitda"
+    if re.search(r"\bebit margin\b", quote or "", re.I):
+        return "ebit"
+    sentence = _quote_sentence(passage or "", quote or "")
+    if re.search(r"\bebitda\b|\bpbdit\b", sentence, re.I) and not re.search(r"\bebit margin\b", sentence, re.I):
+        return "ebitda"
+    if re.search(r"\bebit margin\b", sentence, re.I):
+        return "ebit"
+    return "ambiguous"
+
+
+def _quote_sentence(passage: str, quote: str) -> str:
+    text = " ".join((passage or "").split())
+    needle = " ".join((quote or "").split()).lower()
+    if not text or not needle:
+        return quote or ""
+    for part in re.split(r"(?<=[.!?])\s+", text):
+        if needle[:48] in " ".join(part.split()).lower():
+            return part
+    return quote or ""
+
+
+def _judge_both(promise: dict, quarters: list[dict], as_of: date | None) -> dict | None:
+    """Score an undefined operating margin only when EBIT and EBITDA give the same status."""
+    quote = promise.get("evidence") or ""
+    if re.search(r"operating margin", quote, re.I) or "margin" in (promise.get("metric_key") or ""):
+        pairs = (("EBIT", "ebit_margin"), ("EBITDA", "ebitda_margin"))
+    else:
+        pairs = (("EBIT", "ebit_growth"), ("EBITDA", "ebitda_growth"))
+    readings = []
+    for name, key in pairs:
+        child = dict(promise)
+        child["metric_key"] = key
+        child["_single"] = True
+        judged = judge_promise(child, quarters, as_of)
+        readings.append((name, judged))
+    present = [(name, row) for name, row in readings if row is not None]
+    if len(present) < 2:
+        return present[0][1] if present else None
+    (left_name, left), (right_name, right) = present
+    score_states = _SCORED
+    same = left["status"] == right["status"] and left["status"] in score_states
+    base = dict(right if "ebitda" in (right.get("metric_key") or "") else left)
+    base["readings"] = [
+        {
+            "metric": name,
+            "status": row.get("status"),
+            "actual": row.get("actual"),
+            "actual_value": row.get("actual_value"),
+            "detail": row.get("actual_detail") or "",
+        }
+        for name, row in present
+    ]
+    base["definition"] = "ambiguous"
+    base["promise"] = re.sub(r"^(EBIT|EBITDA) margin", "Operating margin", base.get("promise") or "")
+    base["promise"] = re.sub(r"^(EBIT|EBITDA) growth", "Operating profit growth", base["promise"])
+    if same:
+        base["status"] = left["status"]
+        base["actual"] = f"{left_name} {left.get('actual')}; {right_name} {right.get('actual')}"
+        base["actual_detail"] = " ".join(
+            part for part in (left.get("actual_detail") or "", right.get("actual_detail") or "") if part
+        )
+        base["definition_note"] = (
+            "The quote says operating margin or operating profit and does not define it. "
+            "EBIT and EBITDA give the same reading. The figures are derived."
+        )
+        return base
+    if left["status"] in score_states or right["status"] in score_states:
+        bps = (left.get("unit") or right.get("unit")) == "bps"
+        low, high = left.get("target_low"), left.get("target_high")
+        sentence = (
+            _reading_phrase(left_name, left, low, high, bps, True)
+            + "; "
+            + _reading_phrase(right_name, right, low, high, bps, False)
+        )
+        _not_scored(base, "definition ambiguous")
+        base["note"] = f"definition ambiguous. {sentence}"
+        base["readings"] = [
+            {
+                "metric": name,
+                "status": row.get("status"),
+                "actual": row.get("actual"),
+                "actual_value": row.get("actual_value"),
+                "detail": row.get("actual_detail") or "",
+            }
+            for name, row in present
+        ]
+        return base
+    return right
+
+
+def _reading_phrase(name: str, row: dict, low, high, bps: bool, with_band: bool) -> str:
+    actual = row.get("actual_value")
+    shown = row.get("actual") or row.get("status")
+    if actual is None:
+        return f"{name} {shown}"
+    if low is not None and high is not None and low <= actual <= high:
+        if with_band:
+            band = _target_phrase(low, high, "bps" if bps else "percent", "")
+            return f"{name} {shown} inside the {band} band"
+        return f"{name} {shown} inside the band"
+    if high is not None and actual > high:
+        return f"{name} {shown} above it"
+    if low is not None and actual < low:
+        return f"{name} {shown} below it"
+    return f"{name} {shown}"
+
+
+def _outside_gap(actual: float, low, high) -> float | None:
+    if low is not None and high is not None and abs(low - high) < 1e-6:
+        return abs(actual - low)
+    if low is not None and actual < low:
+        return low - actual
+    if high is not None and actual > high:
+        return actual - high
+    return None
+
+
+def _near_band(status: str, actual: float, low, high, bps: bool) -> str:
+    """A derived figure within 60 bps of a band edge is borderline, not partly or missed."""
+    if status not in ("partly", "missed"):
+        return status
+    gap = _outside_gap(actual, low, high)
+    if gap is None:
+        return status
+    limit = _BORDERLINE_BPS if bps else _BORDERLINE_PP
+    if gap <= limit:
+        return "borderline"
+    return status
+
+
+def _mark_borderline(row: dict, actual: float, low, high, bps: bool, detail: str) -> None:
+    gap = _outside_gap(actual, low, high) or 0.0
+    bps_gap = round(gap if bps else gap * 100)
+    side = "under" if low is not None and actual < low else "over"
+    band = _target_phrase(low, high, "bps" if bps else "percent", "")
+    row["actual_detail"] = f"{detail} {_format_actual(actual, bps)} against {band}, {bps_gap} bps {side} the band.".strip()
+    note = row.get("definition_note") or ""
+    if "derived" not in note.lower():
+        row["definition_note"] = (note + " The figure is derived.").strip()
+
+
+def _group_key(row: dict) -> tuple:
+    quote = row.get("source_quote") or ""
+    if row.get("split_measure"):
+        return (
+            "split",
+            row.get("source_quote") or "",
+            row.get("target_low"),
+            row.get("target_high"),
+            row.get("period_promised") or "",
+        )
+    marginish = bool(
+        (row.get("metric_key") in MARGIN_KEYS or row.get("definition") == "ambiguous")
+        and not re.search(r"gross margin", quote, re.I)
+        and re.search(r"\bebitda\b|\bpbdit\b|\bebit margin\b|operating margin|operating profit", quote, re.I)
+    )
+    family = "margin" if marginish else row.get("metric_key")
+    return (
+        family,
+        row.get("period_promised") or "",
+        _unit(row),
+        row.get("kind") or "",
+        row.get("scope") or "consolidated",
+    )
 
 
 def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None) -> dict | None:
@@ -424,10 +601,23 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
     latest = _latest(quarters)
     evidence = promise.get("evidence") or ""
     passage = promise.get("passage") or evidence
+    single = bool(promise.get("_single"))
+    if not single and _margin_definition(evidence, passage) == "ambiguous":
+        return _judge_both(promise, quarters, as_of)
     key = promise.get("metric_key") or ""
-    if key not in METRIC_KEYS:
-        key = _infer_metric(evidence) or ""
-    key, unclear_margin = _align_metric(key, evidence, passage)
+    if single:
+        unclear_margin = False
+    else:
+        if key not in METRIC_KEYS:
+            key = _infer_metric(evidence) or ""
+        defined = _margin_definition(evidence, passage)
+        if defined == "ebit":
+            key, unclear_margin = "ebit_margin", False
+        elif defined == "ebitda":
+            key = "ebitda_margin" if re.search(r"margin", evidence, re.I) else "ebitda_growth"
+            unclear_margin = False
+        else:
+            key, unclear_margin = _align_metric(key, evidence, passage)
     if key not in METRIC_KEYS:
         return None
     raw_low, raw_high = _num(promise.get("target_low")), _num(promise.get("target_high"))
@@ -506,7 +696,7 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         return row
     if re.search(r"gross margin", evidence, re.I) and _unit_block(row, key, bps):
         return row
-    if not _METRIC_WORDS[key].search(evidence):
+    if not single and (key not in _METRIC_WORDS or not _METRIC_WORDS[key].search(evidence)):
         row["status"] = "low_confidence"
         row["note"] = "The quoted sentence does not name the metric."
         return row
@@ -530,6 +720,10 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
         return row
     if key not in CHECKABLE:
         row["note"] = "Volume and capex cannot be verified from the quarterly series."
+        return row
+    if _detached_numbers(evidence, key, low, high):
+        row["split_measure"] = True
+        _not_scored(row, "The numbers sit with a different measure in the same sentence.")
         return row
     refused = _refuse_unit(row, key)
     if refused:
@@ -587,10 +781,13 @@ def judge_promise(promise: dict, quarters: list[dict], as_of: date | None = None
     if status == "not_checkable":
         row["note"] = "The quote has no number and no clear direction."
         return row
+    status = _near_band(status, measured, low, high, bps)
     row["status"] = status
     row["actual_value"] = measured
     row["actual"] = _format_actual(measured, bps)
     row["actual_detail"] = note
+    if status == "borderline":
+        _mark_borderline(row, measured, low, high, bps, note)
     return row
 
 
@@ -639,7 +836,7 @@ def _refuse_unit(row: dict, key: str) -> bool:
     if unit == "currency_inr":
         _not_scored(row, "The promise is in rupees, and the series comparison is a percent.")
         return True
-    if key in ("revenue_growth", "ebitda_growth", "pat_growth") and unit != "percent":
+    if key in ("revenue_growth", "ebitda_growth", "ebit_growth", "pat_growth") and unit != "percent":
         _not_scored(row, "Growth is only scored from a percent stated in the quote.")
         return True
     if key in MARGIN_KEYS and unit not in ("percent", "bps"):
@@ -655,7 +852,7 @@ def _expected_unit(key: str, bps: bool, low, high, direction: str) -> str:
     """What kind of number the promise is asking to be scored against."""
     if bps:
         return "bps_change"
-    if key in ("revenue_growth", "ebitda_growth", "pat_growth"):
+    if key in ("revenue_growth", "ebitda_growth", "ebit_growth", "pat_growth"):
         return "pct_change"
     if key in MARGIN_KEYS and low is None and high is None and direction:
         return "pp_change"
@@ -688,25 +885,18 @@ def _not_scored(row: dict, reason: str) -> None:
 
 
 def merge_rows(rows: list[dict]) -> tuple[list[dict], list[dict], dict]:
-    """One row per metric and period. Repeats list the calls. A changed number is a revision."""
+    """One row per metric family and period. An earlier number is a superseded revision, not a second score."""
     groups: dict[tuple, list[dict]] = {}
     for row in rows:
-        confidence = "low" if row["status"] in ("low_confidence", "not_scored") else "named"
-        groups.setdefault(
-            (row["metric_key"], row["period_promised"], _unit(row), confidence, row.get("scope") or "consolidated"),
-            [],
-        ).append(row)
+        groups.setdefault(_group_key(row), []).append(row)
     current = []
     long_term = []
     summary = {"raised": 0, "cut": 0, "maintained": 0, "items": []}
     for items in groups.values():
         items.sort(key=lambda item: (item.get("call_date") or "", item.get("page") or 0))
-        named = [item for item in items if item["status"] != "low_confidence"]
-        numbered = [
-            item for item in named
-            if item.get("target_low") is not None or item.get("target_high") is not None
-        ]
-        latest = dict((numbered or named or items)[-1])
+        ranked = [item for item in items if item["status"] != "low_confidence"]
+        chosen = (ranked or items)[-1]
+        latest = dict(chosen)
         sequence = []
         previous = None
         for item in items:
@@ -720,6 +910,7 @@ def merge_rows(rows: list[dict]) -> tuple[list[dict], list[dict], dict]:
                     "change": change,
                     "page": item.get("page"),
                     "quote": item.get("source_quote") or "",
+                    "superseded": item is not chosen,
                 }
             )
             if change in summary:
@@ -797,6 +988,7 @@ def _status_rank(status: str) -> int:
         "missed": 0,
         "tracking_behind": 1,
         "partly": 2,
+        "borderline": 2,
         "tracking_on_track": 3,
         "delivered": 4,
         "tracking_ahead": 5,
@@ -1632,7 +1824,7 @@ def _ytd_measure(key, year, latest: date, by_period, bps: bool):
     if base in (None, 0):
         return None, f"The year-ago {label} is not in the series, so growth is not tracked.", None
     growth = round((current / base - 1.0) * 100.0, 2)
-    name = {"ebitda": "EBITDA", "pat": "PAT", "revenue": "revenue"}[field]
+    name = {"ebitda": "EBITDA", "ebit": "EBIT", "pat": "PAT", "revenue": "revenue"}[field]
     detail = f"{label} FY{year} {name} {current:,.2f} versus {label} FY{year - 1} {name} {base:,.2f}"
     return growth, detail, "pct_change"
 
@@ -1712,8 +1904,8 @@ def _margin_on(day: date, by_period, field: str = "ebitda"):
 def _field(key: str) -> str:
     if key == "pat_growth":
         return "pat"
-    if key == "ebitda_growth":
-        return "ebitda"
+    if key in ("ebitda_growth", "ebit_growth"):
+        return "ebit" if key == "ebit_growth" else "ebitda"
     return "revenue"
 
 
@@ -1820,6 +2012,33 @@ def _number_spans(text: str, value: float | None) -> list[tuple[int, int]]:
         return []
     shown = f"{value:g}"
     return [(match.start(), match.end()) for match in re.finditer(rf"(?<!\d){re.escape(shown)}(?!\d)", text or "")]
+
+
+def _detached_numbers(quote: str, key: str, low, high) -> bool:
+    """A growth range and a margin range in one sentence stay with the words they sit beside."""
+    pos = _first_number_at(quote or "", low)
+    if pos is None:
+        return False
+    margin = [match.start() for match in re.finditer(r"\bebit margin\b|\bebitda\b|\bpbdit\b|operating margin|margin guidance", quote or "", re.I)]
+    growth = [match.start() for match in re.finditer(r"growth guidance|revenue guidance|\brevenue growth\b|\bebitda growth\b", quote or "", re.I)]
+
+    def before(spots: list[int]) -> int | None:
+        earlier = [at for at in spots if at <= pos]
+        return max(earlier) if earlier else None
+
+    margin_at, growth_at = before(margin), before(growth)
+    if key in MARGIN_KEYS:
+        return growth_at is not None and (margin_at is None or growth_at > margin_at)
+    if key in ("revenue_growth", "ebitda_growth", "ebit_growth", "pat_growth"):
+        return margin_at is not None and (growth_at is None or margin_at > growth_at)
+    return False
+
+
+def _first_number_at(text: str, value) -> int | None:
+    if value is None:
+        return None
+    match = re.search(rf"(?<!\d){re.escape(f'{value:g}')}(?!\d)", text or "")
+    return None if match is None else match.start()
 
 
 def _number_in_text(text: str, value: float) -> bool:

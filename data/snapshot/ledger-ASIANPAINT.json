@@ -252,7 +252,8 @@
           "value": "18\u201320%",
           "change": "set",
           "page": 22,
-          "quote": "Overall PBDIT margins are in the zone of guidance of 18 % to 20%"
+          "quote": "Overall PBDIT margins are in the zone of guidance of 18 % to 20%",
+          "superseded": true
         },
         {
           "date": "2025-11-18",
@@ -260,7 +261,8 @@
           "value": "18\u201320%",
           "change": "maintained",
           "page": 27,
-          "quote": "maintain the whole guidance of 18 to 20% PBDIT margin band."
+          "quote": "maintain the whole guidance of 18 to 20% PBDIT margin band.",
+          "superseded": false
         }
       ],
       "verifier": {
@@ -313,46 +315,6 @@
           "page": 31,
           "quote": "The idea is to aim for single digit value growths for the year FY26.",
           "document": "ASIANPAINT_12052025154734_SEINTIMATIONTRANSCRIPT080525.pdf"
-        }
-      ],
-      "revisions": []
-    },
-    {
-      "promise": "Volume growth 8\u201310% for FY2027",
-      "source_quote": "At the current stage, we are looking at the band of 8-10% for the full FY27.",
-      "page": 20,
-      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf",
-      "speaker": "Amit Syngle",
-      "period_promised": "FY2027",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "8\u201310%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "change",
-      "passage": "As we look at even quarter three, quarter four, overall, we have given our direction that we should stay in the volume region of about 8-10%. And that is something which we should look at because we do not know at this stage how the second half of the year would augur from overall price volatility and so on and so forth. As we go ahead, possibly some of those indications will also look at whether price changes would happen in the second half, which could trigger demand even further. At the current stage, we are looking at the band of 8-10% for the full FY27. Avi Mehta: Perfect, sir. That's very useful. The second bit is just related to what you highlighted about the input cost environment.",
-      "basis": "not_stated",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "consolidated",
-      "scope_name": "",
-      "metric_key": "volume_growth",
-      "target_low": 8.0,
-      "target_high": 10.0,
-      "call_period": "2026-06-30",
-      "call_date": "2026-08-03",
-      "calls": [
-        {
-          "date": "2026-08-03",
-          "call_period": "2026-06-30",
-          "page": 20,
-          "quote": "At the current stage, we are looking at the band of 8-10% for the full FY27.",
-          "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
         }
       ],
       "revisions": []
@@ -416,7 +378,8 @@
           "value": "6.4%",
           "change": "set",
           "page": 14,
-          "quote": "so I spoke of a 6.4% volume growth, the value growth has also been very strong"
+          "quote": "so I spoke of a 6.4% volume growth, the value growth has also been very strong",
+          "superseded": true
         },
         {
           "date": "2026-11-03",
@@ -424,7 +387,8 @@
           "value": "8%",
           "change": "raised",
           "page": 14,
-          "quote": "If you look at from an H1 perspective, again, the volume growth is pretty strong at about 8%"
+          "quote": "If you look at from an H1 perspective, again, the volume growth is pretty strong at about 8%",
+          "superseded": true
         },
         {
           "date": "2026-11-03",
@@ -432,7 +396,8 @@
           "value": "6.8%",
           "change": "cut",
           "page": 15,
-          "quote": "and a volume at about 6.8%."
+          "quote": "and a volume at about 6.8%.",
+          "superseded": false
         }
       ]
     },
@@ -556,6 +521,13 @@
         {
           "date": "2026-08-03",
           "call_period": "2026-06-30",
+          "page": 20,
+          "quote": "At the current stage, we are looking at the band of 8-10% for the full FY27.",
+          "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
           "page": 22,
           "quote": "I've spoken of that 8-10% as an overall volume band for the entire year.",
           "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
@@ -568,7 +540,17 @@
           "value": "8\u201310%",
           "change": "set",
           "page": 21,
-          "quote": "high single-digit volume growth in the band of about 8 -10%, as we predict going forward"
+          "quote": "high single-digit volume growth in the band of about 8 -10%, as we predict going forward",
+          "superseded": true
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "value": "8\u201310%",
+          "change": "maintained",
+          "page": 20,
+          "quote": "At the current stage, we are looking at the band of 8-10% for the full FY27.",
+          "superseded": true
         },
         {
           "date": "2026-08-03",
@@ -576,7 +558,8 @@
           "value": "8\u201310%",
           "change": "maintained",
           "page": 22,
-          "quote": "I've spoken of that 8-10% as an overall volume band for the entire year."
+          "quote": "I've spoken of that 8-10% as an overall volume band for the entire year.",
+          "superseded": false
         }
       ]
     },
@@ -679,7 +662,8 @@
           "value": "18\u201320%",
           "change": "set",
           "page": 35,
-          "quote": "we would keep the guidance between that 18 and 20% band as we go ahead"
+          "quote": "we would keep the guidance between that 18 and 20% band as we go ahead",
+          "superseded": true
         },
         {
           "date": "2026-06-03",
@@ -687,7 +671,8 @@
           "value": "18\u201320%",
           "change": "maintained",
           "page": 23,
-          "quote": "maintain your margin guidance, which has always been 18-20%"
+          "quote": "maintain your margin guidance, which has always been 18-20%",
+          "superseded": false
         },
         {
           "date": "2026-08-03",
@@ -695,7 +680,8 @@
           "value": "18\u201320%",
           "change": "maintained",
           "page": 23,
-          "quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take."
+          "quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take.",
+          "superseded": true
         }
       ]
     }
@@ -704,7 +690,7 @@
   "revisions": {
     "raised": 1,
     "cut": 1,
-    "maintained": 4,
+    "maintained": 5,
     "items": [
       {
         "promise": "Volume growth 6.8% for FY2027",
@@ -735,6 +721,11 @@
             "date": "2026-06-03",
             "value": "8\u201310%",
             "change": "set"
+          },
+          {
+            "date": "2026-08-03",
+            "value": "8\u201310%",
+            "change": "maintained"
           },
           {
             "date": "2026-08-03",
@@ -789,13 +780,13 @@
     "total": 7
   },
   "timing": {
-    "discover": 0.76,
-    "series": 0.89,
-    "guidance": 1.37,
-    "check": 0.01,
-    "verify": 0.21,
-    "verdict": 0.05,
-    "total": 3.29
+    "discover": 0.84,
+    "series": 0.74,
+    "guidance": 2.15,
+    "check": 0.02,
+    "verify": 0.17,
+    "verdict": 0.09,
+    "total": 4.01
   },
   "usage": {
     "guidance": {
@@ -816,9 +807,9 @@
     },
     "verify": {
       "calls": 0,
-      "cache_hits": 3,
+      "cache_hits": 2,
       "tokens": 0,
-      "model": "gemini-3.5-flash-lite"
+      "model": "gemini-3-flash-preview"
     },
     "total_tokens": 0
   }
