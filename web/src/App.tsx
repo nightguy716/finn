@@ -39,11 +39,13 @@ export default function App() {
     const dark =
       theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
     document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#171611' : '#f3f1eb')
     localStorage.setItem(THEME_KEY, theme)
     if (theme !== 'system') return
     const media = window.matchMedia('(prefers-color-scheme: dark)')
     const onChange = () => {
       document.documentElement.dataset.theme = media.matches ? 'dark' : 'light'
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', media.matches ? '#171611' : '#f3f1eb')
     }
     media.addEventListener('change', onChange)
     return () => media.removeEventListener('change', onChange)

@@ -17,6 +17,19 @@ html {
   color-scheme: light;
 }
 
+/* Same tokens, darkened. html[data-theme] wins over the :root values from @theme. */
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --color-paper: #171611;
+  --color-card: #221f1b;
+  --color-ink: #e7e2d6;
+  --color-mute: #b3ad9f;
+  --color-line: #3c3830;
+  --color-accent: #8fceb3;
+  --color-fall: #e3a396;
+  --color-desk: #0e0d0b;
+}
+
 body {
   margin: 0;
   background: var(--color-desk);
@@ -46,5 +59,5 @@ input[type='range'] {
 }
 
 input[type='date'] {
-  color-scheme: light;
+  color-scheme: inherit;
 }

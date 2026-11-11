@@ -11,6 +11,17 @@
     <meta name="apple-mobile-web-app-title" content="FINN" />
     <meta name="description" content="What changed in the portfolio, and why it matters." />
     <title>FINN</title>
+    <script>
+      (function () {
+        var stored = localStorage.getItem('finn.theme') || 'system'
+        var dark =
+          stored === 'dark' ||
+          (stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+        var meta = document.querySelector('meta[name="theme-color"]')
+        if (meta) meta.setAttribute('content', dark ? '#171611' : '#f3f1eb')
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
