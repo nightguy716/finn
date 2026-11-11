@@ -429,7 +429,7 @@ Results cards in the stored 6 Nov replay: the 72-hour feed has 2, Titan and Bhar
 
 Scored against unscored, on the 59 pre-warmed ledgers: 9 have at least one scored row, 50 have none. The scored rows are MARICO 3, ASIANPAINT 2, HCLTECH 2, BEL 3, CIPLA 3, DRREDDY 1, MAXHEALTH 2, TATACONSUM 1, TCS 1. Eighteen scored rows in all. WIPRO is unscored.
 
-Unit tests: 56, `python -m unittest discover -s tests`.
+Unit tests: 60, `python -m unittest discover -s tests`. The balance-sheet and cash-quality reads add no model tokens.
 
 False verdicts found while scoring, each fixed without changing the rules on this pass:
 
@@ -439,3 +439,35 @@ False verdicts found while scoring, each fixed without changing the rules on thi
 - Infosys' operating margin of 20–22% was scored against a derived EBITDA margin. The definition does not match, so those rows are `not_scored`.
 - HCLTech's FY2026 EBIT of 16.44% against 17–18% was called partly. It is 56 bps under the band, inside the 60 bps window, so the status is `borderline`.
 - Wipro's "$2.571 billion to $2.625 billion" was scored as revenue growth of 2.571–2.625%. A dollar figure is `not_scored` because the series is consolidated rupees.
+
+## Balance sheet, cash quality, and a second PDF reader
+
+Scoring rules were not changed.
+
+Nestlé's annual report failed because the saved file was a truncated download, about 1.6 MB of a 19.7 MB PDF, and the trailer was not at the end. pypdf reported an invalid `/Pages` object. PyMuPDF 1.26.4 also saw no pages in that short file. `get_bytes` now uses a 90-second timeout and retries when the body is shorter than `Content-Length`, or when a PDF's `%%EOF` is not in the last 2 KB. A saved annual report with the same defect is downloaded again. The complete Nestlé file then opened with pypdf: status ready, year 2026, 3,648 tokens, 43.4 seconds cold, 0.2 seconds cached. Page 163 states the single Food segment and the product groups Milk Products and Nutrition, Prepared Dishes and Cooking Aids, Powdered and Liquid Beverages, and Confectionery. The extracted opening "unlocks the power of food" is not on that page; the field stayed because the segment sentence on the same page has a six-word run. PyMuPDF is the fallback when pypdf cannot list pages, for annual reports and for transcripts, and page numbers stay 1-indexed. The pin is `pymupdf==1.26.4`. Version 2.x pulls a layout stack that is too large. The installed 1.26.4 tree is about 51 MB, and the production API build completed, so it fits the function limit.
+
+`GET /api/financials?symbol=` reads the integrated-filing XBRL. No model call. Consolidated when `NatureOfReportStandaloneConsolidated` says so. June and December filings have no balance sheet here, so the statement used is the half-year whose `FourD` runs 1 Apr 2026 to 30 Sep 2026, compared with the 31 Mar 2026 instant. A 9-month `FourD` is not used, and a quarter is not mixed with a half-year. Figures are rupees divided by 1 crore.
+
+Debt is `BorrowingsCurrent` plus `BorrowingsNoncurrent` when both tags exist, otherwise the single `Borrowings` tag. A missing half of a split is not treated as zero. Equity is the `Equity` tag. Cash is `CashAndCashEquivalents` only, not other bank balances. Working capital is inventories plus current and non-current trade receivables minus current and non-current trade payables. Net debt is debt minus that cash. Cash conversion is `CashFlowsFromUsedInOperatingActivities` divided by profit for the same `FourD`. Profit is `ProfitOrLossAttributableToOwnersOfParent` when that tag is present and not zero, otherwise `ProfitLossForPeriod`; a bank uses `ProfitLossAfterTaxesMinorityInterestAndShareOfProfitLossOfAssociates`. Free cash flow subtracts `PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities` and `PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities`. Both purchase tags are required. Banks, NBFCs and insurers are marked not meaningful for debt-to-equity, net debt and working capital. A missing tag is named and the line says not available. Three facts are flagged, with no advice: profit positive and operating cash flow negative; debt-to-equity up by 0.50 or more; receivables growth at least 15 points above revenue growth on the same half-year span, and receivables growing. The prior balance sheet is the filing whose period end equals the `PY_I` instant. The half-year file itself does not repeat balance-sheet facts on `PY_I`.
+
+Research shows Balance sheet and Cash quality under At a glance. Each has a one-line takeaway, More for the lines, the definitions and the period, and the balance sheet links the XBRL filing. Checked at 390px in both themes. The ledger was already on the page.
+
+All seven are consolidated half-years to 30 Sep 2026, against 31 Mar 2026. Crore.
+
+| Ticker | Debt-to-equity | Net debt | Working capital | Cash conversion | Free cash flow |
+|---|---:|---:|---:|---:|---:|
+| MARICO | 0.21, was 0.08 | 710, was −49 | 1,816, was 1,281 | 0.59 | 448 |
+| TITAN | 1.33, was 0.72 | 23,579, was 10,505 | 48,765, was 24,725 | −2.68 | −11,585 |
+| WIPRO | 0.23, was 0.19 | 9,000.5, was 6,231.9 | 5,550, was 6,947.9 | 1.31 | 7,828.8 |
+| PIDILITIND | 0.00, was 0.01 | −142.55, was −126.58 | not available | 0.74 | 833.36 |
+| HINDUNILVR | 0.00, was 0.00 | −1,784, was −2,583 | −7,228, was −5,157 | 1.47 | 7,356 |
+| SBIN | not meaningful | not meaningful | not meaningful | −0.72 | not available |
+| NESTLEIND | 0.00, was 0.00 | −1,680.01, was −1,296.13 | not available | 1.15 | 1,789.75 |
+
+Marico, 30 Sep 2026, rupees: current borrowings 10,460,000,000, non-current 0, equity 50,600,000,000, cash 3,360,000,000. Debt-to-equity 1,046 / 5,060 = 0.21. Net debt 710. At 31 Mar 2026: current borrowings 3,550,000,000, equity 44,940,000,000, cash 4,040,000,000, so 0.08 and net debt −49. Titan, 30 Sep 2026: current borrowings 241,910,000,000 plus non-current 740,000,000 is 24,265 crore, equity 18,263, cash 686, so 1.33 and net debt 23,579. At 31 Mar 2026: 11,378 crore of borrowings, equity 15,703, cash 873, so 0.72 and net debt 10,505. Half-year operating cash flow −11,177, owners' profit 4,170, plant and equipment purchases 408, intangibles 0, so conversion −2.68 and free cash flow −11,585.
+
+Titan flags: debt-to-equity rose from 0.72 to 1.33, and profit is positive while operating cash flow is negative. SBI flags the same cash fact. Receivables against revenue, same half-year versus the year-ago half-year: Marico +2.3% against revenue +16.5%, Titan +27.8% against +19.1% (under the 15-point gap), Wipro +8.2% against +9.8%, Hindustan Unilever −16.7% against +8.6%, Nestlé +22.7% against +22.6%. No receivables flag.
+
+Tags that are absent, so the line is not available: Pidilite has no `TradeReceivablesNoncurrent`, so working capital and the receivables comparison are not available. Nestlé has no `TradePayablesNoncurrent`, so working capital is not available; the March filing did have it, and that prior working capital is −67.96. SBI is a bank. It has `Borrowings`, `Deposits`, `Advances`, `Capital` and `CashAndBalancesWithReserveBankOfIndia`. It does not have `Equity`, `CashAndCashEquivalents`, `Inventories`, `TradeReceivables` or `TradePayables`, and `Capital` is share capital, not total equity. Free cash flow is not available because `PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities` is absent. The intangible purchase tag is present and zero. Marico, Titan, Wipro and Hindustan Unilever had every tag used above. Hindustan Unilever's debt-to-equity prints 0.00 because 14 crore of current borrowings sits on 49,111 crore of equity.
+
+The API is `dpl_4JxQor7QCzQTAK2m1fuR9bRpPTKd`, Ready, Python, project finn-r4y3, aliased to https://finn-r4y3.vercel.app. The web app is `dpl_4tBwSG287xywSYSzayyfcGLGSSHo`, Ready, project web, aliased to https://web-eosin-ten-23.vercel.app.

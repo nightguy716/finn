@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react'
 import { bandNote, dayLabel } from '../format'
-import type { Ledger, LedgerRevision, LedgerRow } from '../types'
+import type { Financials, Ledger, LedgerRevision, LedgerRow } from '../types'
+import { Books } from './Books'
 import { Glance } from './Glance'
 import { CompanySnapshot } from './Snapshot'
 
@@ -16,7 +17,7 @@ const SCORED: { status: string; label: string; tone?: string }[] = [
 
 const UNVERIFIED = new Set(['not_scored', 'segment_level', 'low_confidence', 'not_checkable'])
 
-export function LedgerView({ ledger }: { ledger: Ledger }) {
+export function LedgerView({ ledger, books = null, booksWaiting = false }: { ledger: Ledger; books?: Financials | null; booksWaiting?: boolean }) {
   const rows = ledger.rows ?? []
   const scored = SCORED.map((group) => ({
     ...group,
@@ -45,6 +46,7 @@ export function LedgerView({ ledger }: { ledger: Ledger }) {
       ) : null}
 
       {ledger.snapshot ? <Glance series={ledger.snapshot.series} /> : null}
+      <Books books={books} waiting={booksWaiting} />
       {ledger.snapshot ? <CompanySnapshot snapshot={ledger.snapshot} /> : null}
 
       {scored.length ? (

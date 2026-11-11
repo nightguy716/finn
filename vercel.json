@@ -6,6 +6,7 @@
     { "source": "/api/feed", "destination": "/api/index?route=feed" },
     { "source": "/api/ledger", "destination": "/api/index?route=ledger" },
     { "source": "/api/snapshot", "destination": "/api/index?route=snapshot" },
+    { "source": "/api/financials", "destination": "/api/index?route=financials" },
     { "source": "/api/alerts/config", "destination": "/api/index?route=alerts/config" },
     { "source": "/api/cron/daily", "destination": "/api/index?route=cron/daily" }
   ],

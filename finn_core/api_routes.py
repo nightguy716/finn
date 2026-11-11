@@ -12,6 +12,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from finn_core.business import business_snapshot
+from finn_core.financials import company_financials
 from finn_core.cache import open_cache
 from finn_core.config import PORTFOLIO
 from finn_core.feed import assemble_feed, build_feed, collect_filings, order_alerts
@@ -199,6 +200,16 @@ def _refresh_window(cache, client, today: str, as_of: datetime, hours: int, symb
         "tokens": usage.get("total_tokens", 0),
         "seconds": round(time.perf_counter() - started, 1),
     }
+
+
+def financials_view(params: dict) -> dict:
+    symbol = _one(params, "symbol", "").upper().strip()
+    if not symbol:
+        raise ValueError("symbol is required")
+    cache, failed = _open()
+    if cache is None or failed:
+        raise RuntimeError("cache is unavailable")
+    return company_financials(symbol, cache=cache, client=NSEClient(cache=cache))
 
 
 def snapshot_view(params: dict) -> dict:

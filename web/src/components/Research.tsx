@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { ApiError, fetchLedger, fetchSnapshot } from '../api'
+import { ApiError, fetchFinancials, fetchLedger, fetchSnapshot } from '../api'
 import { isListedSymbol, searchCompanies, type Suggestion } from '../search'
-import type { BusinessNote, Ledger, LedgerProgress, LedgerUsage } from '../types'
+import type { BusinessNote, Financials, Ledger, LedgerProgress, LedgerUsage } from '../types'
 import { BusinessNoteView } from './BusinessNote'
 import { LedgerView } from './Ledger'
 
@@ -24,6 +24,8 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
   const [limited, setLimited] = useState(false)
   const [notice, setNotice] = useState('')
   const [biz, setBiz] = useState<BusinessNote | null>(null)
+  const [books, setBooks] = useState<Financials | null>(null)
+  const [booksWaiting, setBooksWaiting] = useState(false)
 
   useEffect(() => {
     if (!symbol) {
@@ -56,6 +58,29 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
       stop = true
       ctrl.abort()
     }
+  }, [symbol])
+
+  useEffect(() => {
+    if (!symbol) {
+      setBooks(null)
+      setBooksWaiting(false)
+      return
+    }
+    const ctrl = new AbortController()
+    setBooks(null)
+    setBooksWaiting(true)
+    fetchFinancials(symbol, ctrl.signal)
+      .then((body) => {
+        if (!ctrl.signal.aborted) setBooks(body)
+      })
+      .catch((reason) => {
+        if (ctrl.signal.aborted || (reason instanceof DOMException && reason.name === 'AbortError')) return
+        if (!ctrl.signal.aborted) setBooks({ symbol, status: 'unavailable', message: 'The balance sheet could not be loaded.' })
+      })
+      .finally(() => {
+        if (!ctrl.signal.aborted) setBooksWaiting(false)
+      })
+    return () => ctrl.abort()
   }, [symbol])
 
   useEffect(() => {
@@ -258,7 +283,7 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
         </div>
       ) : null}
 
-      {phase === 'ready' && ledger ? <LedgerView key={symbol} ledger={ledger} /> : null}
+      {phase === 'ready' && ledger ? <LedgerView key={symbol} ledger={ledger} books={books} booksWaiting={booksWaiting} /> : null}
     </div>
   )
 }

@@ -209,6 +209,51 @@ export type CitedItem = {
   page: number
 }
 
+export type MoneyLine = {
+  key: string
+  label: string
+  tag: string
+  value: number | null
+  prior?: number | null
+}
+
+export type MoneyRatio = {
+  value: number | null
+  prior?: number | null
+  meaningful?: boolean
+  definition: string
+  reason?: string
+}
+
+export type Financials = {
+  symbol: string
+  status: 'ready' | 'not_found' | 'unavailable' | string
+  message?: string
+  scope?: string
+  kind?: string
+  source_url?: string
+  balance_sheet?: {
+    as_of: string
+    compared_with: string
+    lines: MoneyLine[]
+    ratios: Record<string, MoneyRatio>
+    missing: string[]
+    flags: string[]
+    takeaway: string
+  }
+  cash?: {
+    label: string
+    start: string
+    end: string
+    lines: MoneyLine[]
+    ratios: Record<string, MoneyRatio>
+    missing: string[]
+    flags: string[]
+    receivables?: { status?: string; reason?: string; revenue_growth_pct?: number; receivables_growth_pct?: number }
+    takeaway: string
+  }
+}
+
 export type BusinessNote = {
   symbol: string
   status: 'ready' | 'partial' | 'not_found' | 'unreadable' | string

@@ -1,4 +1,4 @@
-import type { AlertConfig, BusinessNote, Feed, LedgerResponse } from './types'
+import type { AlertConfig, BusinessNote, Feed, Financials, LedgerResponse } from './types'
 
 const BASE = (import.meta.env?.VITE_API_BASE || 'https://finn-r4y3.vercel.app').replace(/\/$/, '')
 
@@ -61,6 +61,10 @@ export function fetchFeed(query: FeedQuery, signal?: AbortSignal): Promise<Feed>
     signal,
     'briefing',
   )
+}
+
+export function fetchFinancials(symbol: string, signal?: AbortSignal): Promise<Financials> {
+  return getJson<Financials>('/api/financials', { symbol }, signal, 'financials')
 }
 
 export function fetchSnapshot(symbol: string, signal?: AbortSignal): Promise<BusinessNote> {

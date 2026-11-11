@@ -8,7 +8,6 @@ site linked from that page is the last resort. No news and no broker notes.
 """
 
 import hashlib
-import io
 import re
 import time
 from datetime import date, datetime, timedelta
@@ -564,23 +563,13 @@ def _download(client, url: str, symbol: str) -> bytes:
 
 
 def _pages(data: bytes) -> tuple[list[dict], str]:
-    import warnings
+    from finn_core.pdf_text import page_texts
 
-    from pypdf import PdfReader
-
-    warnings.filterwarnings("ignore", message="fontTools is required")
     try:
-        reader = PdfReader(io.BytesIO(data))
+        texts, _reader = page_texts(data)
     except Exception as exc:
         return [], f"PDF could not be read: {exc}"
-    pages = []
-    for index, page in enumerate(reader.pages, start=1):
-        try:
-            text = page.extract_text() or ""
-        except Exception:
-            text = ""
-        pages.append({"page": index, "text": text})
-    return pages, ""
+    return [{"page": index, "text": text} for index, text in enumerate(texts, start=1)], ""
 
 
 def _fy_code(blob: str) -> date | None:

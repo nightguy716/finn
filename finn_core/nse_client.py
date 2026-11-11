@@ -177,7 +177,7 @@ class NSEClient:
                 self._open_session()
             self._wait()
             try:
-                response = self._session.get(url, headers={"Accept": "*/*"}, timeout=40)
+                response = self._session.get(url, headers={"Accept": "*/*"}, timeout=90)
             except requests.RequestException as exc:
                 last_status = None
                 last_detail = str(exc)
@@ -192,7 +192,19 @@ class NSEClient:
                 continue
             if response.status_code != 200 or not response.content:
                 raise NSEError(symbol or url, response.status_code, response.text[:120].replace("\n", " "))
-            return response.content
+            body = response.content
+            expected = int(response.headers.get("Content-Length") or 0)
+            if expected and len(body) + 100 < expected:
+                last_detail = "short body"
+                time.sleep(2 ** attempt)
+                self._session = None
+                continue
+            if body.startswith(b"%PDF") and body.rfind(b"%%EOF") < len(body) - 2048:
+                last_detail = "truncated pdf"
+                time.sleep(2 ** attempt)
+                self._session = None
+                continue
+            return body
         raise NSEError(symbol or url, last_status, last_detail or "retries exhausted")
 
 

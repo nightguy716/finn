@@ -10,8 +10,6 @@ import re
 import time
 from pathlib import Path
 
-from pypdf import PdfReader
-
 from finn_core.documents import find_annual_report
 from finn_core.ledger import on_page
 from finn_core.llm import FLASH_LITE, FLASH_LITE_FALLBACK, GROQ_EXTRACTION, generate_json
@@ -73,7 +71,7 @@ def business_snapshot(symbol: str, cache=None, client=None) -> dict:
         return _envelope(symbol, "not_found", year, "", None, {}, started, "computed", "No annual report was found on NSE.")
     if cache is not None:
         saved = cache.get("biz_snapshot", symbol, year or "unknown", VERSION)
-        if isinstance(saved, dict) and saved.get("status") in {"ready", "unreadable"}:
+        if isinstance(saved, dict) and saved.get("status") in {"ready", "unreadable"} and not _reread(saved):
             pages = (cache.get("biz_pages", symbol, year or "unknown", VERSION) or {}).get("pages") or []
             saved = {
                 **saved,
@@ -85,6 +83,8 @@ def business_snapshot(symbol: str, cache=None, client=None) -> dict:
     state = {}
     if cache is not None:
         state = cache.get("biz_pages", symbol, year or "unknown", VERSION) or {}
+        if state.get("error") == "The annual report could not be read." and state.get("reader") != "final":
+            state = {}
     if not state.get("done"):
         state = _scan(state, report, client, symbol, year, cache, time.perf_counter() + SCAN_SECONDS)
         if cache is not None:
@@ -104,6 +104,8 @@ def business_snapshot(symbol: str, cache=None, client=None) -> dict:
             )
         if state.get("error"):
             body = _envelope(symbol, "unreadable", year, report["url"], None, {}, started, "computed", state["error"])
+            if state.get("reader"):
+                body["reader"] = state["reader"]
             if cache is not None:
                 cache.put("biz_snapshot", symbol, year or "unknown", VERSION, {**body, "source": "computed"})
             return body
@@ -123,6 +125,7 @@ def business_snapshot(symbol: str, cache=None, client=None) -> dict:
     pages = state.get("pages") or []
     if not pages:
         body = _envelope(symbol, "unreadable", year, report["url"], None, {}, started, "computed", "Those pages have no business overview or management discussion.")
+        body["reader"] = state.get("reader") or "checked"
         if cache is not None:
             cache.put("biz_snapshot", symbol, year or "unknown", VERSION, {**body, "source": "computed"})
         return body
@@ -182,21 +185,25 @@ def _scan(state: dict, report: dict, client, symbol: str, year: str, cache, dead
         state["done"] = True
         state["error"] = "The annual report download is not a PDF."
         return state
-    import warnings
-
-    warnings.filterwarnings("ignore", message="fontTools is required")
-    try:
-        reader = PdfReader(_stream(data), strict=False)
-        total = len(reader.pages)
-    except Exception:
+    opened = _open_pdf(data)
+    if opened is None:
+        try:
+            data = _pdf_bytes(cache, client, symbol, year, report["url"], refresh=True)
+        except (NSEError, OSError, RuntimeError):
+            data = b""
+        opened = _open_pdf(data) if data.startswith(b"%PDF") else None
+    if opened is None:
         state["done"] = True
         state["error"] = "The annual report could not be read."
+        state["reader"] = "final" if data.rfind(b"%%EOF") >= len(data) - 2048 else "none"
         return state
+    reader_name, text_at, total = opened
+    state["reader"] = reader_name
     state["total"] = total
     while state["cursor"] < total and time.perf_counter() < deadline and len(state["pages"]) < PAGE_CAP:
         index = state["cursor"]
         try:
-            text = reader.pages[index].extract_text() or ""
+            text = text_at(index) or ""
         except Exception:
             text = ""
         _consider(state, text)
@@ -338,11 +345,56 @@ def _clean(value, limit: int) -> str:
     return " ".join(str(value or "").split())[:limit]
 
 
-def _pdf_bytes(cache, client, symbol: str, year: str, url: str) -> bytes:
+def _reread(saved: dict) -> bool:
+    """An unread PDF is tried once more. A later failure is stamped so it does not loop."""
+    messages = {
+        "The annual report could not be read.",
+        "Those pages have no business overview or management discussion.",
+    }
+    return saved.get("message") in messages and saved.get("reader") != "final"
+
+
+def _open_pdf(data: bytes):
+    """(reader name, text_at(index), page count). PyMuPDF is used when pypdf cannot list the pages."""
+    if not data.startswith(b"%PDF"):
+        return None
+    try:
+        from pypdf import PdfReader
+
+        reader = PdfReader(_stream(data), strict=False)
+        total = len(reader.pages)
+        if total > 0:
+            def text_at(index: int, held=reader) -> str:
+                return held.pages[index].extract_text() or ""
+
+            return "pypdf", text_at, total
+    except Exception:
+        pass
+    try:
+        from finn_core.pdf_text import _mupdf
+
+        texts = _mupdf(data)
+    except Exception:
+        texts = []
+    if not texts:
+        return None
+
+    def text_at(index: int, held=texts) -> str:
+        return held[index] if 0 <= index < len(held) else ""
+
+    return "pymupdf", text_at, len(texts)
+
+
+def _pdf_bytes(cache, client, symbol: str, year: str, url: str, refresh: bool = False) -> bytes:
     path = _pdf_path(cache, symbol, year)
-    if path.exists() and path.stat().st_size > 1000:
+    if refresh and path.exists():
+        try:
+            path.unlink()
+        except OSError:
+            pass
+    if not refresh and path.exists() and path.stat().st_size > 1000:
         data = path.read_bytes()
-        if data.startswith(b"%PDF"):
+        if data.startswith(b"%PDF") and data.rfind(b"%%EOF") >= len(data) - 2048:
             return data
     from finn_core.documents import _download
 
