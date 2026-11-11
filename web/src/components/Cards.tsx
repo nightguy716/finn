@@ -98,14 +98,15 @@ function Metric({ name, note, line }: { name: string; note?: string; line: Metri
   )
 }
 
-export function ResultsCard({ card }: { card: Card }) {
+export function ResultsCard({ card, hero = false }: { card: Card; hero?: boolean }) {
   const metrics = card.body.metrics
   const reason = card.body.ebitda_reason?.trim()
   const period = card.body.period ? `Quarter ended ${dayLabel(card.body.period)}` : card.headline
   return (
-    <article id={card.id} className="border border-line bg-card px-3.5 py-3">
+    <article id={card.id} className={`border bg-card px-3.5 py-3 ${hero ? 'border-accent' : 'border-line'}`}>
       <CardMeta card={card} />
-      <h3 className="mt-1 text-[16px] leading-tight font-medium">{card.company}</h3>
+      {hero ? <p className="mt-2 text-[11px] tracking-[0.14em] text-accent uppercase">Lead result</p> : null}
+      <h3 className={`leading-tight font-medium ${hero ? 'mt-1 text-[20px]' : 'mt-1 text-[16px]'}`}>{card.company}</h3>
       <p className="mt-1 text-[12px] text-mute">
         Results · {period}
         {card.body.scope ? ` · ${card.body.scope}` : ''}
@@ -186,8 +187,8 @@ function sentenceCase(value: string): string {
   return text.charAt(0).toUpperCase() + text.slice(1)
 }
 
-export function FilingCard({ card }: { card: Card }) {
-  if (card.category === 'results') return <ResultsCard card={card} />
+export function FilingCard({ card, hero = false }: { card: Card; hero?: boolean }) {
+  if (card.category === 'results') return <ResultsCard card={card} hero={hero} />
   if (card.category === 'management_change') return <ManagementCard card={card} />
   return <MaterialCard card={card} />
 }

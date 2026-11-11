@@ -10,7 +10,7 @@ type SheetFrameProps = {
   children: ReactNode
 }
 
-function SheetFrame({ open, title, onClose, children }: SheetFrameProps) {
+export function SheetFrame({ open, title, onClose, children }: SheetFrameProps) {
   const reduce = useReducedMotion()
   const titleId = useId()
   const transition = reduce ? { duration: 0 } : { duration: 0.22, ease: 'easeOut' as const }

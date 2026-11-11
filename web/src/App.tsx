@@ -1,11 +1,20 @@
 import { useCallback, useEffect, useState } from 'react'
 import { fetchAlertConfig, fetchFeed } from './api'
 import { Briefing } from './components/Briefing'
+import { IntroSheet, MenuSheet, type MenuPage, type ThemeChoice } from './components/Menu'
 import { Research } from './components/Research'
 import { AlertSheet, SettingsSheet } from './components/Sheets'
 import type { Alert, AlertConfig, Feed, LoadStatus } from './types'
 
+const INTRO_KEY = 'finn.intro'
+const THEME_KEY = 'finn.theme'
 type Tab = 'briefing' | 'research'
+
+function loadTheme(): ThemeChoice {
+  const stored = localStorage.getItem(THEME_KEY)
+  if (stored === 'light' || stored === 'dark' || stored === 'system') return stored
+  return 'system'
+}
 
 export default function App() {
   const [tab, setTab] = useState<Tab>('briefing')
@@ -18,8 +27,27 @@ export default function App() {
   const [status, setStatus] = useState<LoadStatus>('loading')
   const [error, setError] = useState<string | null>(null)
   const [attempt, setAttempt] = useState(0)
+  const [symbols, setSymbols] = useState<string[]>([])
   const [alert, setAlert] = useState<Alert | null>(null)
   const [settingsOpen, setSettingsOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuPage, setMenuPage] = useState<MenuPage>('root')
+  const [introOpen, setIntroOpen] = useState(() => localStorage.getItem(INTRO_KEY) !== 'seen')
+  const [theme, setTheme] = useState<ThemeChoice>(loadTheme)
+
+  useEffect(() => {
+    const dark =
+      theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+    localStorage.setItem(THEME_KEY, theme)
+    if (theme !== 'system') return
+    const media = window.matchMedia('(prefers-color-scheme: dark)')
+    const onChange = () => {
+      document.documentElement.dataset.theme = media.matches ? 'dark' : 'light'
+    }
+    media.addEventListener('change', onChange)
+    return () => media.removeEventListener('change', onChange)
+  }, [theme])
 
   useEffect(() => {
     const ctrl = new AbortController()
@@ -37,7 +65,7 @@ export default function App() {
     const ctrl = new AbortController()
     setError(null)
     setStatus(feed ? 'refreshing' : 'loading')
-    fetchFeed({ asOf, hours, movePct: move, volumeN: volume }, ctrl.signal)
+    fetchFeed({ asOf, hours, movePct: move, volumeN: volume, symbols }, ctrl.signal)
       .then((data) => {
         if (!Array.isArray(data.cards) || !Array.isArray(data.alerts) || !Array.isArray(data.routine)) {
           throw new Error('The briefing came back in an unexpected shape.')
@@ -53,7 +81,7 @@ export default function App() {
     return () => ctrl.abort()
     // feed is read only to choose the first-load skeleton. Including it would refetch forever.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [asOf, hours, move, volume, attempt])
+  }, [asOf, hours, move, volume, symbols, attempt])
 
   const onCommit = useCallback((nextMove: number, nextVolume: number) => {
     setMove(nextMove)
@@ -87,11 +115,20 @@ export default function App() {
               onRetry={() => setAttempt((value) => value + 1)}
               onAsOf={setAsOf}
               onHours={setHours}
-              onOpenSettings={() => setSettingsOpen(true)}
+              onOpenMenu={() => {
+                setMenuPage('root')
+                setMenuOpen(true)
+              }}
+              symbols={symbols}
               onOpenAlert={setAlert}
             />
           ) : (
-            <Research />
+            <Research
+              onOpenMenu={() => {
+                setMenuPage('root')
+                setMenuOpen(true)
+              }}
+            />
           )}
         </main>
         <nav className="flex shrink-0 border-t border-line bg-paper pb-[env(safe-area-inset-bottom)]" aria-label="Primary">
@@ -103,6 +140,34 @@ export default function App() {
           </TabButton>
         </nav>
         <AlertSheet alert={alert} cards={feed?.cards ?? []} onClose={closeAlert} onJump={jump} />
+        <IntroSheet
+          open={introOpen}
+          onClose={() => {
+            localStorage.setItem(INTRO_KEY, 'seen')
+            setIntroOpen(false)
+          }}
+        />
+        <MenuSheet
+          open={menuOpen}
+          page={menuPage}
+          symbols={symbols}
+          theme={theme}
+          onPage={setMenuPage}
+          onClose={() => setMenuOpen(false)}
+          onWorks={() => {
+            setMenuOpen(false)
+            setIntroOpen(true)
+          }}
+          onToggle={(symbol) =>
+            setSymbols((current) => (current.includes(symbol) ? current.filter((item) => item !== symbol) : [...current, symbol]))
+          }
+          onClear={() => setSymbols([])}
+          onThresholds={() => {
+            setMenuOpen(false)
+            setSettingsOpen(true)
+          }}
+          onTheme={setTheme}
+        />
         <SettingsSheet
           open={settingsOpen}
           move={move}

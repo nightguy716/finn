@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import type { Alert, AlertConfig, Feed, LoadStatus } from '../types'
-import { WINDOWS, plural, replayLine, shiftBack, shortDay } from '../format'
+import { WINDOWS, plural, replayLine, shiftBack, shortDay, windowSummary } from '../format'
 import { FilingCard } from './Cards'
 
 export function Briefing({
@@ -16,7 +16,8 @@ export function Briefing({
   onRetry,
   onAsOf,
   onHours,
-  onOpenSettings,
+  onOpenMenu,
+  symbols,
   onOpenAlert,
 }: {
   asOf: string
@@ -30,7 +31,8 @@ export function Briefing({
   onRetry: () => void
   onAsOf: (value: string) => void
   onHours: (hours: number) => void
-  onOpenSettings: () => void
+  onOpenMenu: () => void
+  symbols: string[]
   onOpenAlert: (alert: Alert) => void
 }) {
   const reduce = useReducedMotion()
@@ -43,11 +45,18 @@ export function Briefing({
   return (
     <div className="pb-4">
       <header className="px-4 pt-4">
-        <div className="flex items-baseline justify-between gap-3">
-          <p className="text-[13px] font-medium tracking-[0.22em]">FINN</p>
-          <button type="button" className="font-mono text-[12px] text-accent tabular-nums" onClick={onOpenSettings}>
-            Alerts {trimNum(move)}% · {trimNum(volume)}×
+        <div className="flex items-start gap-2">
+          <button type="button" className="mt-0.5 flex h-7 w-7 items-center justify-center border border-line" aria-label="Menu" onClick={onOpenMenu}>
+            <span className="flex flex-col gap-[3px]" aria-hidden="true">
+              <span className="block h-px w-3.5 bg-ink" />
+              <span className="block h-px w-3.5 bg-ink" />
+              <span className="block h-px w-3.5 bg-ink" />
+            </span>
           </button>
+          <div className="min-w-0">
+            <p className="text-[13px] font-medium tracking-[0.22em]">FINN</p>
+            <p className="mt-0.5 text-[13px] leading-snug text-mute">What changed in your portfolio, and why it matters.</p>
+          </div>
         </div>
         <div className="mt-3 flex items-center gap-1.5">
           {WINDOWS.map((item) => {
@@ -78,6 +87,12 @@ export function Briefing({
           </label>
         </div>
         <p className="mt-2 text-[12px] leading-snug text-mute">{replayLine(asOf, start)}</p>
+        {symbols.length ? (
+          <p className="mt-1 text-[12px] text-mute">
+            Showing {symbols.length === 1 ? symbols[0] : `${symbols.length} companies`}. Change it from the menu.
+          </p>
+        ) : null}
+        {showFeed && feed ? <p className="mt-1 text-[13px] leading-snug">{windowSummary(feed.cards, feed.alerts.length)}</p> : null}
         {defaults ? null : <p className="mt-1 text-[12px] text-mute">Reading alert defaults.</p>}
         {status === 'refreshing' ? <p className="mt-1 text-[12px] text-accent">Updating.</p> : null}
       </header>
@@ -135,6 +150,18 @@ export function Briefing({
             {feed.cards.length === 0 && feed.alerts.length === 0 && routineCount === 0 ? (
               <p className="mt-3 text-[14px]">Nothing was filed in this window.</p>
             ) : null}
+            {hours < 72 && feed.cards.length <= 3 ? (
+              <div className="mt-2 border border-line bg-card px-3 py-2">
+                <p className="text-[13px] leading-snug">
+                  {feed.cards.length === 0
+                    ? 'Nothing material was filed in this short window.'
+                    : `Only ${plural(feed.cards.length, 'filing')} in this short window.`}
+                </p>
+                <button type="button" className="mt-1 text-[13px] text-accent" onClick={() => onHours(72)}>
+                  Show 72 hours
+                </button>
+              </div>
+            ) : null}
             <motion.div
               className="mt-2 flex flex-col gap-2"
               initial="hidden"
@@ -152,7 +179,7 @@ export function Briefing({
                     show: { opacity: 1, y: 0, transition: { duration: reduce ? 0 : 0.2 } },
                   }}
                 >
-                  <FilingCard card={card} />
+                  <FilingCard card={card} hero={card.id === heroId(feed.cards)} />
                 </motion.div>
               ))}
             </motion.div>
@@ -207,6 +234,10 @@ function Skeleton() {
       </div>
     </div>
   )
+}
+
+function heroId(cards: { id: string; category: string }[]): string | undefined {
+  return (cards.find((card) => card.category === 'results') ?? cards[0])?.id
 }
 
 function trimNum(value: number): string {

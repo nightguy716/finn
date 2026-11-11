@@ -9,7 +9,7 @@ const SYMBOL = /^[A-Z0-9&-]{1,20}$/
 
 type Phase = 'idle' | 'running' | 'ready' | 'error'
 
-export function Research() {
+export function Research({ onOpenMenu }: { onOpenMenu: () => void }) {
   const [draft, setDraft] = useState('')
   const [symbol, setSymbol] = useState('')
   const [attempt, setAttempt] = useState(0)
@@ -92,7 +92,16 @@ export function Research() {
 
   return (
     <div className="px-4 pt-4 pb-6">
-      <p className="text-[13px] font-medium tracking-[0.22em]">FINN</p>
+      <div className="flex items-center gap-2">
+        <button type="button" className="flex h-7 w-7 items-center justify-center border border-line" aria-label="Menu" onClick={onOpenMenu}>
+          <span className="flex flex-col gap-[3px]" aria-hidden="true">
+            <span className="block h-px w-3.5 bg-ink" />
+            <span className="block h-px w-3.5 bg-ink" />
+            <span className="block h-px w-3.5 bg-ink" />
+          </span>
+        </button>
+        <p className="text-[13px] font-medium tracking-[0.22em]">FINN</p>
+      </div>
       <form
         className="mt-3 flex gap-2"
         onSubmit={(event) => {

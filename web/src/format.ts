@@ -113,3 +113,19 @@ export function bandNote(quote: string, low: number | null | undefined, high: nu
 export function plural(count: number, word: string): string {
   return `${count} ${word}${count === 1 ? '' : 's'}`
 }
+
+/** Counts already on the feed. No model call. */
+export function windowSummary(cards: { category: string }[], movers: number): string {
+  const results = cards.filter((card) => card.category === 'results').length
+  const deals = cards.filter((card) => card.category === 'm_and_a' || card.category === 'fund_raise').length
+  const management = cards.filter((card) => card.category === 'management_change').length
+  const other = cards.length - results - deals - management
+  const parts = [
+    results ? plural(results, 'result') : '',
+    deals ? plural(deals, 'deal') : '',
+    management ? plural(management, 'management change') : '',
+    other ? plural(other, 'other filing') : '',
+    plural(movers, 'mover'),
+  ].filter(Boolean)
+  return `This window: ${parts.join(', ')}.`
+}

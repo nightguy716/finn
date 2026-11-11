@@ -1,0 +1,21 @@
+/** The 18 names in finn_core.config.PORTFOLIO. The feed filters with the symbols parameter. */
+export const PORTFOLIO: { symbol: string; company: string }[] = [
+  { symbol: 'RELIANCE', company: 'Reliance Industries' },
+  { symbol: 'TCS', company: 'Tata Consultancy Services' },
+  { symbol: 'HDFCBANK', company: 'HDFC Bank' },
+  { symbol: 'INFY', company: 'Infosys' },
+  { symbol: 'ITC', company: 'ITC' },
+  { symbol: 'SUNPHARMA', company: 'Sun Pharmaceutical' },
+  { symbol: 'MARUTI', company: 'Maruti Suzuki' },
+  { symbol: 'LT', company: 'Larsen & Toubro' },
+  { symbol: 'BAJFINANCE', company: 'Bajaj Finance' },
+  { symbol: 'TITAN', company: 'Titan Company' },
+  { symbol: 'CGPOWER', company: 'CG Power and Industrial Solutions' },
+  { symbol: 'BHARATFORG', company: 'Bharat Forge' },
+  { symbol: 'MARICO', company: 'Marico' },
+  { symbol: 'PERSISTENT', company: 'Persistent Systems' },
+  { symbol: 'TRENT', company: 'Trent' },
+  { symbol: 'POLYCAB', company: 'Polycab India' },
+  { symbol: 'DIXON', company: 'Dixon Technologies' },
+  { symbol: 'BHARATSEATS', company: 'Bharat Seats' },
+]
