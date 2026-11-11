@@ -1,0 +1,1157 @@
+{
+  "symbol": "DRREDDY",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 7,
+    "next_quarter_statements": 1,
+    "pages_mentioning_fy26_or_next_quarter": 94,
+    "pages_dropped_by_prefilter": 33,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 16
+      },
+      {
+        "period": "2026-03-31",
+        "page": 6
+      },
+      {
+        "period": "2026-03-31",
+        "page": 9
+      },
+      {
+        "period": "2026-03-31",
+        "page": 10
+      },
+      {
+        "period": "2026-03-31",
+        "page": 11
+      },
+      {
+        "period": "2026-03-31",
+        "page": 16
+      },
+      {
+        "period": "2026-03-31",
+        "page": 18
+      },
+      {
+        "period": "2025-12-31",
+        "page": 1
+      },
+      {
+        "period": "2025-12-31",
+        "page": 6
+      },
+      {
+        "period": "2025-12-31",
+        "page": 9
+      },
+      {
+        "period": "2025-12-31",
+        "page": 11
+      },
+      {
+        "period": "2025-12-31",
+        "page": 12
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 8697.8,
+    "ebitda_margin_pct": 19.9,
+    "pat": 924.8,
+    "ttm_revenue": 33097.4,
+    "ttm_pat": 2799.9,
+    "ttm_ebitda_margin_pct": 14.69,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 8697.8,
+        "ebitda": 1730.6,
+        "ebitda_margin_pct": 19.9,
+        "ebit": 1203.9,
+        "ebit_margin_pct": 13.84,
+        "pbt": 1235.3,
+        "finance_costs": 124.8,
+        "depreciation": 526.7,
+        "other_income": 156.2,
+        "pat": 924.8,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 8099.8,
+        "ebitda": 859.9,
+        "ebitda_margin_pct": 10.62,
+        "ebit": 323.3,
+        "ebit_margin_pct": 3.99,
+        "pbt": 552.5,
+        "finance_costs": 125.5,
+        "depreciation": 536.6,
+        "other_income": 354.7,
+        "pat": 444.3,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 7546.4,
+        "ebitda": 382.5,
+        "ebitda_margin_pct": 5.07,
+        "ebit": -174.6,
+        "ebit_margin_pct": -2.31,
+        "pbt": 195.1,
+        "finance_costs": 105.7,
+        "depreciation": 557.1,
+        "other_income": 475.4,
+        "pat": 220.9,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 8753.4,
+        "ebitda": 1887.5,
+        "ebitda_margin_pct": 21.56,
+        "ebit": 1366.5,
+        "ebit_margin_pct": 15.61,
+        "pbt": 1540.9,
+        "finance_costs": 94.4,
+        "depreciation": 521.0,
+        "other_income": 268.8,
+        "pat": 1209.9,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 8828.3,
+        "ebitda": 2009.9,
+        "ebitda_margin_pct": 22.77,
+        "ebit": 1505.3,
+        "ebit_margin_pct": 17.05,
+        "pbt": 1738.5,
+        "finance_costs": 90.7,
+        "depreciation": 504.6,
+        "other_income": 323.9,
+        "pat": 1347.1,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 8572.1,
+        "ebitda": 2173.6,
+        "ebitda_margin_pct": 25.36,
+        "ebit": 1697.5,
+        "ebit_margin_pct": 19.8,
+        "pbt": 1904.8,
+        "finance_costs": 83.0,
+        "depreciation": 476.1,
+        "other_income": 290.3,
+        "pat": 1418.1,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 25% for FY2027",
+      "source_quote": "We're actually aiming for the famous 25% EBITDA.",
+      "page": 11,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-10/EarningsCallTranscriptQ2FY27.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2027",
+      "actual": "15.42%",
+      "actual_value": 15.42,
+      "actual_detail": "H1 FY2027 EBITDA margin 15.42% versus 24.04% a year earlier (-862 bps)",
+      "promised": "25%",
+      "status": "tracking_behind",
+      "note": "H1 FY2027 EBITDA margin 15.42% versus 24.04% a year earlier (-862 bps)",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "So, in the coming quarters also, at least in this year, you may not see a significant change to this number. It is going to be at this level, around here and there, small changes. Erez Israeli: I just want to take the opportunity to reiterate what we discuss all the time actually with all of you, that the 20 plus EBITDA level is sustainable. We're actually aiming for the famous 25% EBITDA. And this will continue, and we are planning to consistently continue to deliver this number. Foram Parekh: Sure, thank you. And last question is on the India business.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 25.0,
+      "target_high": 25.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-01",
+      "calls": [
+        {
+          "date": "2026-10-01",
+          "call_period": "2026-09-30",
+          "page": 11,
+          "quote": "We're actually aiming for the famous 25% EBITDA.",
+          "document": "EarningsCallTranscriptQ2FY27.pdf"
+        }
+      ],
+      "revisions": [],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "We're actually aiming for the famous 25% EBITDA.",
+          "reported_basis": "We're actually aiming for the famous 25% EBITDA.",
+          "independent_of_named_event": "We're actually aiming for the famous 25% EBITDA.",
+          "metric_named": "25% EBITDA"
+        }
+      }
+    },
+    {
+      "promise": "EBITDA margin at least 25% for FY2025",
+      "source_quote": "we will continue to have, based on what we have guided, sales double-digit growth and then EBITDA & RoCE 25% and above at this point",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DRREDDY_15052025205121_SE_Intimation_Transcript_of_earning_call_recordings.pdf",
+      "speaker": "M. V. Narasimham",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 25%",
+      "status": "pending",
+      "note": "FY2025 is missing 2024-06-30, 2024-09-30, 2024-12-31, so the year is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Q4 and full year FY25 Earnings Conference Call Transcript May 9, 2025 10 M. V. Narasimham: So, the gRevlimid\u2019s patent cliff will happen in January 2026. B ased on our current modelling, we will continue to have, based on what we have guided, sales double-digit growth and then EBITDA & RoCE 25% and above at this point of time. Neha Manpuria: But in terms of R&D and SG&A costs, would it still be at similar levels? M. V.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 25.0,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-15",
+      "calls": [
+        {
+          "date": "2025-05-15",
+          "call_period": "2025-03-31",
+          "page": 11,
+          "quote": "we will continue to have, based on what we have guided, sales double-digit growth and then EBITDA & RoCE 25% and above at this point",
+          "document": "DRREDDY_15052025205121_SE_Intimation_Transcript_of_earning_call_recordings.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least 10% for FY2026",
+      "source_quote": "Yes, we believe that FY26 double-digit growth is possible as well as maintaining the margins.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DRREDDY_15052025205121_SE_Intimation_Transcript_of_earning_call_recordings.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "So the combination of all of that, I believe that will help us to grow, cover also from the potential decline because of lenalidomide and to keep our margins. Neha Manpuria: Understood. And when you say double-digit growth, I assume is ex-gRevlimid? Erez Israeli: Yes, we believe that FY26 double-digit growth is possible as well as maintaining the margins. Neha Manpuria: Okay. Thank you so much. Moderator: Thank you.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-15",
+      "calls": [
+        {
+          "date": "2025-05-15",
+          "call_period": "2025-03-31",
+          "page": 11,
+          "quote": "Yes, we believe that FY26 double-digit growth is possible as well as maintaining the margins.",
+          "document": "DRREDDY_15052025205121_SE_Intimation_Transcript_of_earning_call_recordings.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least 10 for FY2026",
+      "source_quote": "Did I hear that correct? Erez Israeli: Yes, that's what I said. Okay. And once the gRevlimid cliff happens",
+      "page": 15,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DRREDDY_15052025205121_SE_Intimation_Transcript_of_earning_call_recordings.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Bino Pathiparampil: Okay. And just to reconfirm what I heard earlier. I believe, you said that for financial year '26, you can do a double-digit growth and maintain the EBITDA margin at the same level of FY25. Did I hear that correct? Erez Israeli: Yes, that's what I said. Bino Pathiparampil: Okay. Okay.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-15",
+      "calls": [
+        {
+          "date": "2025-05-15",
+          "call_period": "2025-03-31",
+          "page": 15,
+          "quote": "Did I hear that correct? Erez Israeli: Yes, that's what I said. Okay. And once the gRevlimid cliff happens",
+          "document": "DRREDDY_15052025205121_SE_Intimation_Transcript_of_earning_call_recordings.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 7\u20138 for FY2027",
+      "source_quote": "Narasimham: So, this quarter\u2019s R&D is low, absolutely , you're right. And then, in the coming quarters, we believe our R&D is going to be",
+      "page": 9,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-10/EarningsCallTranscriptQ2FY27.pdf",
+      "speaker": "Narasimham",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20138",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Narasimham: So, this quarter\u2019s R&D is low, absolutely , you're right. And then, in the coming quarters, we believe our R&D is going to be",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 7.0,
+      "target_high": 8.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-01",
+      "calls": [
+        {
+          "date": "2026-10-01",
+          "call_period": "2026-09-30",
+          "page": 9,
+          "quote": "Narasimham: So, this quarter\u2019s R&D is low, absolutely , you're right. And then, in the coming quarters, we believe our R&D is going to be",
+          "document": "EarningsCallTranscriptQ2FY27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex to fall for FY2027",
+      "source_quote": "Earlier, we have guided around \u20b91,800 crores. My view, it could be a little lower, but definitely, I expect around \u20b91,600 to 1,700 crores.",
+      "page": 14,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-10/EarningsCallTranscriptQ2FY27.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Because the first half I have seen is much lower than your typical run rate. M. V. Narasimham: Earlier, we have guided around \u20b91,800 crores. My view, it could be a little lower, but definitely, I expect around \u20b91,600 to 1,700 crores. Dr. Bino Pathiparampil: Thank you, I'll join back, thank you.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-01",
+      "calls": [
+        {
+          "date": "2026-10-01",
+          "call_period": "2026-09-30",
+          "page": 14,
+          "quote": "Earlier, we have guided around \u20b91,800 crores. My view, it could be a little lower, but definitely, I expect around \u20b91,600 to 1,700 crores.",
+          "document": "EarningsCallTranscriptQ2FY27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 24\u201325% for FY2027",
+      "source_quote": "So, our tax rate is around 24% to 25% on the full year basis and R&D, what we have stated earlier, it is in the",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DRREDDY_28072026230947_SE_Intimation_Transcript_of_earning_call_recordings_3_signed.pdf",
+      "speaker": "M. V. Narasimham",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "24\u201325%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "So, we understand this quarter had some benefit on the taxes, but on a normalized basis, how should we look for the full year? M. V. Narasimham: So, our tax rate is around 24% to 25% on the full year basis and R&D, what we have stated earlier, it is in the range of 7% to 8%. Damayanti Kerai: Okay, and any major R&D programs, after abatacept, where you plan to spend majority? Erez Israeli: So we have a long pipeline for the future, both on the peptides, as well as additional biosimilars. This year that it will be closer to the 7%, like MVN said, but most of the R&D spen d is right now going to products post-2034, between 2034 to 2040 type of products.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 24.0,
+      "target_high": 25.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-28",
+      "calls": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "We expect the spends to be in the range of 7-8% in the fiscal ahead.",
+          "document": "DRL_Q4FY26EarningsCall%20Transcript_12May2026.pdf"
+        },
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "We expect the ETR to be 24 to 25% for fiscal FY27.",
+          "document": "DRL_Q4FY26EarningsCall%20Transcript_12May2026.pdf"
+        },
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 15,
+          "quote": "Yeah, so we are planning to maintain the base without semaglutide at around 20%.",
+          "document": "DRL_Q4FY26EarningsCall%20Transcript_12May2026.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 8,
+          "quote": "Still I maintain what we discussed a few weeks ago, that we are in the neighbourhood of the 20% and likely to stay.",
+          "document": "DRREDDY_28072026230947_SE_Intimation_Transcript_of_earning_call_recordings_3_signed.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 12,
+          "quote": "So, our tax rate is around 24% to 25% on the full year basis and R&D, what we have stated earlier, it is in the",
+          "document": "DRREDDY_28072026230947_SE_Intimation_Transcript_of_earning_call_recordings_3_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "value": "7\u20138%",
+          "change": "set",
+          "page": 4,
+          "quote": "We expect the spends to be in the range of 7-8% in the fiscal ahead.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "value": "24\u201325%",
+          "change": "raised",
+          "page": 4,
+          "quote": "We expect the ETR to be 24 to 25% for fiscal FY27.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "value": "20%",
+          "change": "cut",
+          "page": 15,
+          "quote": "Yeah, so we are planning to maintain the base without semaglutide at around 20%.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "value": "20%",
+          "change": "maintained",
+          "page": 8,
+          "quote": "Still I maintain what we discussed a few weeks ago, that we are in the neighbourhood of the 20% and likely to stay.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "value": "24\u201325%",
+          "change": "raised",
+          "page": 12,
+          "quote": "So, our tax rate is around 24% to 25% on the full year basis and R&D, what we have stated earlier, it is in the",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin at least 50% for FY2027",
+      "source_quote": "Given our focus on cost efficiencies and productivity improvement, we expect the margins to improve and be above 50% in FY27.",
+      "page": 3,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-05/DRL_Q4FY26EarningsCall%20Transcript_12May2026.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 50%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "The gross margin on the adjusted revenue base, after excluding the one-offs, for the quarter was at 48%, lower by 760 basis points year-over-year and 615 basis points sequentially, and at 53.5% for the year, lower by 498 basis points year-over-year. The decline in margins was largely on account of lower lenalidomide sales and price erosion in our unbranded Generics businesses. The gross margin for Global Generics was 51.7% for the quarter and 57.4% for the year, as a % of its adjusted revenues, while that for PSAI stood at 19.9% for the quarter and 17.2% for PSAI for the fiscal on its reported revenues. Given our focus on cost efficiencies and productivity improvement, we expect the margins to improve and be above 50% in FY27. Excluding the one-off provisions mentioned earlier, SG&A spends were at \u20b92,662 crores for the quarter, an increase of 11% year-over-year and 1% sequentially, and 33% of the adjusted revenue base and \u20b910,435 crores for the year, an increase of 11% year-over-year and 31% of adjusted revenues. The increase was primarily on account of ongoing, targeted investments to support long-term growth of our branded franchises, namely the acquired Nicotine Replacement Therapy (NRT) consumer healthcare business and branded generics. We expect the spends to be around the same levels as FY26 for the year ahead.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 50.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-01",
+      "calls": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 3,
+          "quote": "Given our focus on cost efficiencies and productivity improvement, we expect the margins to improve and be above 50% in FY27.",
+          "document": "DRL_Q4FY26EarningsCall%20Transcript_12May2026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 6\u20137 for FY2027",
+      "source_quote": "Specifically, for the next, let's say, until the end of calendar \u201826, I believe that the number is somewhere between 6 to 7 million units.",
+      "page": 8,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-05/DRL_Q4FY26EarningsCall%20Transcript_12May2026.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "6\u20137",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Specifically, for the next, let's say, until the end of calendar \u201826, I believe that the number is somewhere between 6 to 7 million units.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 6.0,
+      "target_high": 7.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-01",
+      "calls": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 8,
+          "quote": "Specifically, for the next, let's say, until the end of calendar \u201826, I believe that the number is somewhere between 6 to 7 million units.",
+          "document": "DRL_Q4FY26EarningsCall%20Transcript_12May2026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least 10% for FY2027",
+      "source_quote": "Moving forward, this year, again, without lenalidomide, we will see double-digit growth.",
+      "page": 15,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-05/DRL_Q4FY26EarningsCall%20Transcript_12May2026.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "And, what it tells is that market share and new products, give or take, covered it. I see it as a kind of very low single- digit growth, not flat. But I'm in agreement with you that market is not g rowing as the other markets that we have, that are all g rowing in double digit. Moving forward, this year, again, without lenalidomide, we will see double-digit growth. And going forward, the main growth in the United States will come from biosimilars, consumer health, as well as certain 505(b)(2)s. So, over time, the business will diversify itself, but right now, it's mostly generic products. Vivek Agrawal: Understood, Erez .",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-01",
+      "calls": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 15,
+          "quote": "Moving forward, this year, again, without lenalidomide, we will see double-digit growth.",
+          "document": "DRL_Q4FY26EarningsCall%20Transcript_12May2026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 7\u20139% for an unnamed period",
+      "source_quote": "Let's say the NRT, I'm expecting again, either high single -digit growth or even double, depends on certain scenarios.",
+      "page": 10,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-10/EarningsCallTranscriptQ2FY27.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20139%",
+      "status": "segment_level",
+      "note": "NRT guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "The NRT is growing, and obviously that will positively impact also the relevant part of Europe. Absolutely, you are correct about the performance of this quarter. The next quarter should be better. Let's say the NRT, I'm expecting again, either high single -digit growth or even double, depends on certain scenarios. As for Europe, I'm expecting growth, but it will not be significant growth this year. Foram Parekh: Sure, and, on ex of NRT, how should we look at growth ramping up? Erez Israeli: Ex-NRT Europe, you mean?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "NRT",
+      "metric_key": "revenue_growth",
+      "target_low": 7.0,
+      "target_high": 9.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-01",
+      "calls": [
+        {
+          "date": "2026-10-01",
+          "call_period": "2026-09-30",
+          "page": 10,
+          "quote": "Let's say the NRT, I'm expecting again, either high single -digit growth or even double, depends on certain scenarios.",
+          "document": "EarningsCallTranscriptQ2FY27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 50\u201355% for 2026-03-31",
+      "source_quote": "So, we can expect, without Lenalidomide scenario, from Q4 onwards, our gross margin of both Global Generics and PSAI in the range of 50 -55%.",
+      "page": 20,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DRREDDY_27012026224754_SE_intimation_transcript_of_earnings_call_signed.pdf",
+      "speaker": "M. V. Narasimham",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "50\u201355%",
+      "status": "segment_level",
+      "note": "Global Generics and PSAI guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "So, from next quarter onwards, with zero Revlimid sales, can the gross margin trajectory scale down further? M. V. Narasimham: So, we can expect, without Lenalidomide scenario, from Q4 onwards, our gross margin of both Global Generics and PSAI in the range of 50 -55%. Some quarters, depending on the products, and business mix, it varies, but the range is 50-55% overall. Foram Parekh: Sure, thanks for taking my question. Aishwarya Sitharam: Thanks, Forum.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Global Generics and PSAI",
+      "metric_key": "ebitda_margin",
+      "target_low": 50.0,
+      "target_high": 55.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-27",
+      "calls": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 20,
+          "quote": "So, we can expect, without Lenalidomide scenario, from Q4 onwards, our gross margin of both Global Generics and PSAI in the range of 50 -55%.",
+          "document": "DRREDDY_27012026224754_SE_intimation_transcript_of_earnings_call_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 20\u201325% for FY2026",
+      "source_quote": "So, we expect, going forward, the PSAI gross margin to be in the range of 20-25%.",
+      "page": 16,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DRREDDY_30102025230150_SE_Intimation_Transcript_of_earning_call_1.pdf",
+      "speaker": "V. Narasimham",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20\u201325%",
+      "status": "segment_level",
+      "note": "PSAI guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "But, if you can just help understand in terms of the current gross margin , and how to think about it over the next one to two years. M. V. Narasimham: So, we expect, going forward, the PSAI gross margin to be in the range of 20-25%. Tushar Manudhane: Compared to 15% currently, right?",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "PSAI",
+      "metric_key": "ebitda_margin",
+      "target_low": 20.0,
+      "target_high": 25.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-30",
+      "calls": [
+        {
+          "date": "2025-10-30",
+          "call_period": "2025-09-30",
+          "page": 16,
+          "quote": "So, we expect, going forward, the PSAI gross margin to be in the range of 20-25%.",
+          "document": "DRREDDY_30102025230150_SE_Intimation_Transcript_of_earning_call_1.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 16% for FY2026",
+      "source_quote": "So, you are going to see similar growth overall for India also next year. This year, we grew 16%.",
+      "page": 16,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DRREDDY_15052025205121_SE_Intimation_Transcript_of_earning_call_recordings.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "16%",
+      "status": "segment_level",
+      "note": "India guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "So , how should we see this portfolio ramp-up happening next year? Any areas where you think the growth was a little lower this year? And then next year, how should we model this business for? Erez Israeli: So, you are going to see similar growth overall for India also next year. This year, we grew 16%. That kind of range of growth you are going to see also in FY 26. Indeed, I want to emphasize that, although we highlighted the inorganic versus organic, but I want to highlight that most of our growth in India will be inorganic.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "India",
+      "metric_key": "revenue_growth",
+      "target_low": 16.0,
+      "target_high": 16.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-15",
+      "calls": [
+        {
+          "date": "2025-05-15",
+          "call_period": "2025-03-31",
+          "page": 16,
+          "quote": "So, you are going to see similar growth overall for India also next year. This year, we grew 16%.",
+          "document": "DRREDDY_15052025205121_SE_Intimation_Transcript_of_earning_call_recordings.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 7\u20139% for FY2027",
+      "source_quote": "In general, the business is doing well. It will grow in the same way that you saw until now, somewhere between a high single digit",
+      "page": 9,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-10/EarningsCallTranscriptQ2FY27.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20139%",
+      "status": "segment_level",
+      "note": "business guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "It means, normally, in this respect, less sales, and but more profit. So, what I can say about it, it's the comparison year -over-year will be until we will finish the year. I think we have two more quarters like that. In general, the business is doing well. It will grow in the same way that you saw until now, somewhere between a high single digit to maybe even double digit. And the profitability is way above the expectations that we put in the business model. So we are very, very pleased with this one.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "other",
+      "scope_name": "business",
+      "metric_key": "revenue_growth",
+      "target_low": 7.0,
+      "target_high": 9.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-01",
+      "calls": [
+        {
+          "date": "2026-10-01",
+          "call_period": "2026-09-30",
+          "page": 9,
+          "quote": "In general, the business is doing well. It will grow in the same way that you saw until now, somewhere between a high single digit",
+          "document": "EarningsCallTranscriptQ2FY27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2027",
+      "source_quote": "As for Europe, I'm expecting growth, but it will not be significant growth this year.",
+      "page": 10,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-10/EarningsCallTranscriptQ2FY27.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "Europe guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Absolutely, you are correct about the performance of this quarter. The next quarter should be better. Let's say the NRT, I'm expecting again, either high single -digit growth or even double, depends on certain scenarios. As for Europe, I'm expecting growth, but it will not be significant growth this year. Foram Parekh: Sure, and, on ex of NRT, how should we look at growth ramping up? Erez Israeli: Ex-NRT Europe, you mean? Foram Parekh: Yes.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Europe",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-01",
+      "calls": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 20,
+          "quote": "That will grow single digit.",
+          "document": "DRREDDY_27012026224754_SE_intimation_transcript_of_earnings_call_signed.pdf"
+        },
+        {
+          "date": "2026-10-01",
+          "call_period": "2026-09-30",
+          "page": 10,
+          "quote": "As for Europe, I'm expecting growth, but it will not be significant growth this year.",
+          "document": "EarningsCallTranscriptQ2FY27.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "value": "a direction only",
+          "change": "set",
+          "page": 20,
+          "quote": "That will grow single digit.",
+          "superseded": true
+        },
+        {
+          "date": "2026-10-01",
+          "call_period": "2026-09-30",
+          "value": "a direction only",
+          "change": "maintained",
+          "page": 10,
+          "quote": "As for Europe, I'm expecting growth, but it will not be significant growth this year.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth at least 10% for FY2027",
+      "source_quote": "So overall, I'm still maintaining a double-digit growth for the US market.",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DRREDDY_28072026230947_SE_Intimation_Transcript_of_earning_call_recordings_3_signed.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "segment_level",
+      "note": "United States guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Given we had the bosutinib FTF launch, I would have assumed some channel filling, as well as the Canada supplies. Erez Israeli: So, nothing happened, it's actually in the right direction. It's some timing of procurement of the product and the launch of the product was very successful. So overall, I'm still maintaining a double-digit growth for the US market. As you saw already in this quarter, we grew double-digit and it will continue throughout the year. So it's double-digit growth in the United States. It's just timing of product and nothing special.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "United States",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-28",
+      "calls": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 20,
+          "quote": "What we are saying is that all markets should grow double digits , beside the United States.",
+          "document": "DRREDDY_27012026224754_SE_intimation_transcript_of_earnings_call_signed.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 8,
+          "quote": "So overall, I'm still maintaining a double-digit growth for the US market.",
+          "document": "DRREDDY_28072026230947_SE_Intimation_Transcript_of_earning_call_recordings_3_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "value": "at least 10%",
+          "change": "set",
+          "page": 20,
+          "quote": "What we are saying is that all markets should grow double digits , beside the United States.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "value": "at least 10%",
+          "change": "maintained",
+          "page": 8,
+          "quote": "So overall, I'm still maintaining a double-digit growth for the US market.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin at least 20 for FY2027",
+      "source_quote": "I just want to take the opportunity to reiterate what we discuss all the time actually with all of you, that the 20 plus EBITDA",
+      "page": 11,
+      "source_document": "https://www.drreddys.com/cms/sites/default/files/2026-10/EarningsCallTranscriptQ2FY27.pdf",
+      "speaker": "Erez Israeli",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 20",
+      "status": "not_scored",
+      "note": "The quote does not state the unit.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "The cost productivity what we are doing is now becoming visible. So, in the coming quarters also, at least in this year, you may not see a significant change to this number. It is going to be at this level, around here and there, small changes. Erez Israeli: I just want to take the opportunity to reiterate what we discuss all the time actually with all of you, that the 20 plus EBITDA level is sustainable. We're actually aiming for the famous 25% EBITDA. And this will continue, and we are planning to consistently continue to deliver this number. Foram Parekh: Sure, thank you.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 20.0,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-01",
+      "calls": [
+        {
+          "date": "2026-10-01",
+          "call_period": "2026-09-30",
+          "page": 11,
+          "quote": "I just want to take the opportunity to reiterate what we discuss all the time actually with all of you, that the 20 plus EBITDA",
+          "document": "EarningsCallTranscriptQ2FY27.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 2,
+    "cut": 1,
+    "maintained": 3,
+    "items": [
+      {
+        "promise": "Revenue growth to rise for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-01-27",
+            "value": "a direction only",
+            "change": "set"
+          },
+          {
+            "date": "2026-10-01",
+            "value": "a direction only",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 24\u201325% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-05-01",
+            "value": "7\u20138%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-01",
+            "value": "24\u201325%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-05-01",
+            "value": "20%",
+            "change": "cut"
+          },
+          {
+            "date": "2026-07-28",
+            "value": "20%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-07-28",
+            "value": "24\u201325%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth at least 10% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-01-27",
+            "value": "at least 10%",
+            "change": "set"
+          },
+          {
+            "date": "2026-07-28",
+            "value": "at least 10%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "The actual EBITDA margin for FY2027 was 15.42%, compared to the promised 25%. H1 FY2027 EBITDA margin reached 15.42% versus 24.04% a year earlier (-862 bps).",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.9,
+    "series": 0.85,
+    "guidance": 4.53,
+    "check": 0.01,
+    "verify": 0.09,
+    "verdict": 4.1,
+    "total": 10.48
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 5845,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 1,
+      "cache_hits": 0,
+      "tokens": 217,
+      "model": "gemini-3.5-flash-lite"
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": "gemini-3.5-flash-lite"
+    },
+    "total_tokens": 6062
+  }
+}

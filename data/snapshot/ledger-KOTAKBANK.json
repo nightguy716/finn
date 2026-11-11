@@ -1,0 +1,238 @@
+{
+  "symbol": "KOTAKBANK",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 1,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 10,
+    "pages_dropped_by_prefilter": 2,
+    "dropped_pages": [
+      {
+        "period": "2026-03-31",
+        "page": 3
+      },
+      {
+        "period": "2026-03-31",
+        "page": 23
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 29426.88,
+    "ebitda_margin_pct": null,
+    "pat": 5634.07,
+    "ttm_revenue": 115453.87,
+    "ttm_pat": 21426.68,
+    "ttm_ebitda_margin_pct": null,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 29426.88,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 7530.3,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 9571.01,
+        "pat": 5634.07,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 30068.6,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 7508.86,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 11714.03,
+        "pat": 5487.06,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 28107.6,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 7443.21,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 10280.24,
+        "pat": 5401.55,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 27850.79,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 6533.34,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 10343.99,
+        "pat": 4904.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 24901.39,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 5962.77,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 7702.65,
+        "pat": 4445.94,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 26703.92,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 6053.4,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 9455.61,
+        "pat": 4429.13,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "responsibly growing our advances in the range of 1.5x to 2x nominal GDP growth",
+      "page": 4,
+      "source_document": "https://www.kotak.bank.in/content/dam/Kotak/investor-relation/Financial-Result/QuarterlyReport/FY-2026/q4/transcript/Q4FY26-Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "And today, we will share with you the progress that we have made against each of these segments. To support this, over the last year, we launched our mother group brand campaign, Hausla Hai Toh Ho Jayega and other proposition -specific campaigns to reinforce the uniqueness and differentiation. On an overall basis in the Bank, we delivered year-on-year growth of 16.2% in average net advances and 14.9% in average deposits. This growth is in line with our stated philosophy of responsibly growing our advances in the range of 1.5x to 2x nominal GDP growth. Our discipline was reflected in the Q4 results with healthy NIMs at 4.67%, significantly improved credit cost at 39 basis points and controlled expense growth with cost to assets showing an improvement of 36 basis points on a year -to-year basis. On a Y-o-Y basis, Q4 PAT is up 13% in the Bank and 6% on a consolidated basis. Book value per share grew by 15% on a year-on-year basis.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-01",
+      "calls": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "responsibly growing our advances in the range of 1.5x to 2x nominal GDP growth",
+          "document": "Q4FY26-Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.8,
+    "series": 0.77,
+    "guidance": 1.27,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 2.96
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 6,
+      "tokens": 0,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

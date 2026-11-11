@@ -1,0 +1,554 @@
+{
+  "symbol": "HINDUNILVR",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 5,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 16,
+    "pages_dropped_by_prefilter": 1,
+    "dropped_pages": [
+      {
+        "period": "2025-06-30",
+        "page": 44
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 18226.0,
+    "ebitda_margin_pct": 22.45,
+    "pat": 2790.0,
+    "ttm_revenue": 68359.0,
+    "ttm_pat": 15062.0,
+    "ttm_ebitda_margin_pct": 22.33,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 18226.0,
+        "ebitda": 4091.0,
+        "ebitda_margin_pct": 22.45,
+        "ebit": 3728.0,
+        "ebit_margin_pct": 20.45,
+        "pbt": 3814.0,
+        "finance_costs": 74.0,
+        "depreciation": 363.0,
+        "other_income": 160.0,
+        "pat": 2790.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 17341.0,
+        "ebitda": 3872.0,
+        "ebitda_margin_pct": 22.33,
+        "ebit": 3519.0,
+        "ebit_margin_pct": 20.29,
+        "pbt": 3632.0,
+        "finance_costs": 75.0,
+        "depreciation": 353.0,
+        "other_income": 188.0,
+        "pat": 2673.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 16351.0,
+        "ebitda": 4088.0,
+        "ebitda_margin_pct": 25.0,
+        "ebit": 3740.0,
+        "ebit_margin_pct": 22.87,
+        "pbt": 3928.0,
+        "finance_costs": 76.0,
+        "depreciation": 348.0,
+        "other_income": 264.0,
+        "pat": 2992.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 16441.0,
+        "ebitda": 3212.0,
+        "ebitda_margin_pct": 19.54,
+        "ebit": 2875.0,
+        "ebit_margin_pct": 17.49,
+        "pbt": 2926.0,
+        "finance_costs": 88.0,
+        "depreciation": 337.0,
+        "other_income": 139.0,
+        "pat": 6607.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 16241.0,
+        "ebitda": 3913.0,
+        "ebitda_margin_pct": 24.09,
+        "ebit": 3555.0,
+        "ebit_margin_pct": 21.89,
+        "pbt": 3573.0,
+        "finance_costs": 129.0,
+        "depreciation": 358.0,
+        "other_income": 147.0,
+        "pat": 2685.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 16514.0,
+        "ebitda": 3591.0,
+        "ebitda_margin_pct": 21.75,
+        "ebit": 3230.0,
+        "ebit_margin_pct": 19.56,
+        "pbt": 3304.0,
+        "finance_costs": 127.0,
+        "depreciation": 361.0,
+        "other_income": 201.0,
+        "pat": 2756.0,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 22.5\u201323.5 for FY2027",
+      "source_quote": "Well, that's the implied number.",
+      "page": 23,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_19022026191246_SEIntimationTranscript19022026signed.pdf",
+      "speaker": "Niranjan Gupta",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "22.5\u201323.5",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "We also outlined that the range, therefore, you will see a benefit of the ice cream demerger to the extent of 50 basis points. So basically, we remain with this guidance that we have provided. Mihir P Shah: Sorry, so it should be 22.5% to 23.5%, is that how much should be understood? Niranjan Gupta: Well, that's the implied number. Mihir P Shah: Understood. Secondly, just wanted to understand the new launch that you highlighted in the dets business on 99 on easy wash pack. What is the grammage here?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 22.5,
+      "target_high": 23.5,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-19",
+      "calls": [
+        {
+          "date": "2026-02-19",
+          "call_period": "2025-12-31",
+          "page": 23,
+          "quote": "Well, that's the implied number.",
+          "document": "HINDUNILVR_19022026191246_SEIntimationTranscript19022026signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "If commodity prices stay within the current range, we anticipate low single-digit price growth.",
+      "page": 16,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_07082025150040_SEIntimationRTranscriptsigned.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "We remain confident in Minimalist 's potential to contribute significantly to our premium beauty portfolio. Moving to our near-term outlook, our growth guidance remains unchanged. We expect the first half of this financial year to be better than second half of last financial year. If commodity prices stay within the current range, we anticipate low single-digit price growth.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-07",
+      "calls": [
+        {
+          "date": "2025-08-07",
+          "call_period": "2025-06-30",
+          "page": 16,
+          "quote": "If commodity prices stay within the current range, we anticipate low single-digit price growth.",
+          "document": "HINDUNILVR_07082025150040_SEIntimationRTranscriptsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 22\u201324% for FY2029",
+      "source_quote": "We expect medium -term EBITDA Margin to be within the current guided range of 22% to 24%.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04112026193825_SEIntimationTranscriptofEarningsCallSigned.pdf",
+      "speaker": "",
+      "period_promised": "FY2029",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "22\u201324%",
+      "status": "segment_level",
+      "note": "Foods guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "The underlying demand environment remains resilient, supported by healthy macro indicators. Backed by our \u2018Winning In New India\u2019 strategy to drive portfolio and channel transformation, we remain confident of growing ahead of the market. Commodity inflation is expected to remain elevated. We expect medium -term EBITDA Margin to be within the current guided range of 22% to 24%. Finally, our focus remains clear and unchanged, delivering competitive volume- led revenue and profit growth. With this, we conclude the remarks and I will now hand back to Yogesh to commence the Q&A session. Yogesh Mulgaonkar: Thank you, Priya and Niranjan.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Foods",
+      "metric_key": "ebitda_margin",
+      "target_low": 22.0,
+      "target_high": 24.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-04",
+      "calls": [
+        {
+          "date": "2026-11-04",
+          "call_period": "2026-09-30",
+          "page": 9,
+          "quote": "We expect medium -term EBITDA Margin to be within the current guided range of 22% to 24%.",
+          "document": "HINDUNILVR_04112026193825_SEIntimationTranscriptofEarningsCallSigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin at least 22.8% for 2025-06-30",
+      "source_quote": "resulting in an EBITDA margin of 22.8%. While this is a 130 basis points year-on-year decline, it remains in line with our guidance.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_07082025150040_SEIntimationRTranscriptsigned.pdf",
+      "speaker": "",
+      "period_promised": "2025-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 22.8%",
+      "status": "not_scored",
+      "note": "The quote is a basis-point change, not a margin level.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "June Quarter 2025 Earnings call of Hindustan Unilever Limited Page 4 of 45 Private Limited is included in both the topline and bottom-line, it is excluded from USG and UVG calculations for comparability. With this, let me move on to our quarterly results: With a turnover of Rs. 16,323 crores, we delivered an Underlying Sales Growth of 5% driven by an U nderlying Volume Growth of 4%. We stepped up investments across lines of the P&L, resulting in an EBITDA margin of 22.8%. While this is a 130 basis points year-on-year decline, it remains in line with our guidance. We believe these investments are timely and strategic, aligned with the execution of our broader portfolio transformation agenda. As a result of these investments, our Profit After Tax before exceptional items declined by 5%. However, reported Profit After Tax increased by 6% primarily due to re- estimation of certain tax provisions pertaining to prior years.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 22.8,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-07",
+      "calls": [
+        {
+          "date": "2025-08-07",
+          "call_period": "2025-06-30",
+          "page": 5,
+          "quote": "resulting in an EBITDA margin of 22.8%. While this is a 130 basis points year-on-year decline, it remains in line with our guidance.",
+          "document": "HINDUNILVR_07082025150040_SEIntimationRTranscriptsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 22\u201323 for FY2026",
+      "source_quote": "So, as we mentioned that our outlook for margin and guidance is a range of 22 to 23.",
+      "page": 24,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_29102025172538_TranscriptIntimation_signed.pdf",
+      "speaker": "Ritesh Tiwari",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "22\u201323",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So, as we mentioned that our outlook for margin and guidance is a range of 22 to 23.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 22.0,
+      "target_high": 23.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-29",
+      "calls": [
+        {
+          "date": "2025-10-29",
+          "call_period": "2025-09-30",
+          "page": 24,
+          "quote": "So, as we mentioned that our outlook for margin and guidance is a range of 22 to 23.",
+          "document": "HINDUNILVR_29102025172538_TranscriptIntimation_signed.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [
+    {
+      "promise": "EBITDA margin 22.5\u201323.5% for a longer horizon",
+      "source_quote": "we expect the mid-term margin guidance to remain around our current guided range of 22.5% to 23.5%.",
+      "page": 14,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_07052026200941_TranscriptofEarningsCallsigned.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "22.5\u201323.5%",
+      "status": "long_term",
+      "note": "The passage says mid-term or near-term, not a fiscal year or a quarter. The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "There are short- term volatilities which could be created by the geopolitical situation, but as of now, India stands out as the key emerging country with even IMF forecasting 6.5% growth. This, combined with the strength of our brands and our robust financial position, we expect FY \u201927 to be better than FY \u201926. The choices we have made around portfolio, organization simplification, channel expansion, and execution will continue to deliver results for us. As far as margins are concerned, our approach remains consistent and disciplined, and we expect the mid-term margin guidance to remain around our current guided range of 22.5% to 23.5%. Our focus is clear and unchanged. Competitive volume- led growth is our number one priority. With this, we conclude our prepared remarks, and I will now hand back to Yogesh to commence the Q&A session.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 22.5,
+      "target_high": 23.5,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-07",
+      "calls": [
+        {
+          "date": "2025-10-29",
+          "call_period": "2025-09-30",
+          "page": 12,
+          "quote": "Our current near to mid-term guidance is 22-23%, hence everything else being equal, Ice Cream demerger adds 50-60 bps to this guidance.",
+          "document": "HINDUNILVR_29102025172538_TranscriptIntimation_signed.pdf"
+        },
+        {
+          "date": "2026-05-07",
+          "call_period": "2026-03-31",
+          "page": 14,
+          "quote": "we expect the mid-term margin guidance to remain around our current guided range of 22.5% to 23.5%.",
+          "document": "HINDUNILVR_07052026200941_TranscriptofEarningsCallsigned.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-10-29",
+          "call_period": "2025-09-30",
+          "value": "22\u201323%",
+          "change": "set",
+          "page": 12,
+          "quote": "Our current near to mid-term guidance is 22-23%, hence everything else being equal, Ice Cream demerger adds 50-60 bps to this guidance.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-07",
+          "call_period": "2026-03-31",
+          "value": "22.5\u201323.5%",
+          "change": "raised",
+          "page": 14,
+          "quote": "we expect the mid-term margin guidance to remain around our current guided range of 22.5% to 23.5%.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth to rise for a longer horizon",
+      "source_quote": "If commodity prices remain where they are, we expect a low-single digit price growth.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_29102025172538_TranscriptIntimation_signed.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "long_term",
+      "note": "The passage says mid-term or near-term, not a fiscal year or a quarter.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Moving to our near-term outlook. The GST-related impact continues through October. We anticipate normal trading conditions starting early November, once prices stabilise, paving the way for a gradual and sustained market recovery While the increase in disposable income is a positive structural driver, we expect its benefits to manifest gradually in th e demand trajectory, rather than through an immediate acceleration. If commodity prices remain where they are, we expect a low-single digit price growth. Overall, we expect growth of second half of this financial year to be better than the first half. We remain vigilant about the evolving impact of weather patterns\u2014 particularly as the winter season approaches and the effects of a prolonged monsoon begin to play out. We remain firmly committed to investing behind our business, confident that this continued focus will unlock sustained growth.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-29",
+      "calls": [
+        {
+          "date": "2025-10-29",
+          "call_period": "2025-09-30",
+          "page": 12,
+          "quote": "If commodity prices remain where they are, we expect a low-single digit price growth.",
+          "document": "HINDUNILVR_29102025172538_TranscriptIntimation_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 50\u201360 bps for a longer horizon",
+      "source_quote": "Ice Cream demerger is expected to result in an improvement of 50-60 bps to the reported margin",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_29102025172538_TranscriptIntimation_signed.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "50\u201360 bps",
+      "status": "long_term",
+      "note": "The passage says mid-term or near-term, not a fiscal year or a quarter.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Overall, we expect growth of second half of this financial year to be better than the first half. We remain vigilant about the evolving impact of weather patterns\u2014 particularly as the winter season approaches and the effects of a prolonged monsoon begin to play out. We remain firmly committed to investing behind our business, confident that this continued focus will unlock sustained growth. Coming to EBITDA margin, Ice Cream demerger is expected to result in an improvement of 50-60 bps to the reported margin as Ice Cream business operates at a margin lower than HUL av erage. Our current near to mid-term guidance is 22-23%, hence everything else being equal, Ice Cream demerger adds 50-60 bps to this guidance.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 50.0,
+      "target_high": 60.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-29",
+      "calls": [
+        {
+          "date": "2025-10-29",
+          "call_period": "2025-09-30",
+          "page": 12,
+          "quote": "Ice Cream demerger is expected to result in an improvement of 50-60 bps to the reported margin",
+          "document": "HINDUNILVR_29102025172538_TranscriptIntimation_signed.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "revisions": {
+    "raised": 1,
+    "cut": 0,
+    "maintained": 0,
+    "items": [
+      {
+        "promise": "EBITDA margin 22.5\u201323.5% for a longer horizon",
+        "period": "",
+        "sequence": [
+          {
+            "date": "2025-10-29",
+            "value": "22\u201323%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-07",
+            "value": "22.5\u201323.5%",
+            "change": "raised"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.67,
+    "series": 0.7,
+    "guidance": 1.27,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.07,
+    "total": 2.72
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 7,
+      "tokens": 0,
+      "dropped": 1,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

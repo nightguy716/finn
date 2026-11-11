@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import type { Alert, AlertConfig, Feed, LoadStatus } from '../types'
-import { WINDOWS, dayLabel, plural, replayLine, shiftBack, windowSummary } from '../format'
+import { WINDOWS, dayLabel, orderAlerts, plural, replayLine, shiftBack, windowSummary } from '../format'
 import { FilingCard } from './Cards'
 
 export function Briefing({
@@ -41,7 +41,8 @@ export function Briefing({
   const showFeed = feed && status !== 'loading'
   const start = status === 'ready' && feed ? feed.window_start : shiftBack(asOf, hours)
   const routineCount = feed?.routine.reduce((sum, row) => sum + row.count, 0) ?? 0
-  const maxSeverity = Math.max(...(feed?.alerts ?? []).map((alert) => alert.severity), 1)
+  const movers = feed ? orderAlerts(feed.alerts) : []
+  const maxSeverity = Math.max(...movers.map((alert) => alert.severity), 1)
 
   return (
     <div className="pb-4">
@@ -109,7 +110,7 @@ export function Briefing({
             Showing {symbols.length === 1 ? symbols[0] : `${symbols.length} companies`}. Change it from the menu.
           </p>
         ) : null}
-        {showFeed && feed ? <p className="mt-1 text-[13px] leading-snug">{windowSummary(feed.cards, feed.alerts.length)}</p> : null}
+        {showFeed && feed ? <p className="mt-1 text-[13px] leading-snug">{windowSummary(feed.cards, movers.length)}</p> : null}
         {defaults ? null : <p className="mt-1 text-[12px] text-mute">Reading alert defaults.</p>}
         {status === 'refreshing' ? <p className="mt-1 text-[12px] text-accent">Updating.</p> : null}
       </header>
@@ -128,13 +129,16 @@ export function Briefing({
         <div className="mt-4">
           <section>
             <h2 className="px-4 text-[11px] tracking-[0.14em] text-mute uppercase">Movers</h2>
-            {feed.alerts.length === 0 ? (
+            <p className="px-4 text-[12px] text-mute">
+              Above {trimNum(feed.move_pct ?? move)}% or {trimNum(feed.volume_n ?? volume)}× volume.
+            </p>
+            {movers.length === 0 ? (
               <p className="mt-2 px-4 text-[13px] leading-snug text-mute">
                 No move past {trimNum(move)}% or volume past {trimNum(volume)}× in this window.
               </p>
             ) : (
               <div className="mt-2 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                {feed.alerts.map((alert) => (
+                {movers.map((alert) => (
                   <button
                     key={`${alert.symbol}-${alert.date}`}
                     type="button"

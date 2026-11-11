@@ -5,6 +5,7 @@ from datetime import date
 from unittest.mock import patch
 
 from finn_core.api_routes import alert_config, feed_key, feed_view, ledger_view
+from finn_core.feed import order_alerts
 from finn_core.documents import quarter_ends
 from finn_core.series import SERIES_VERSION, quarterly_series
 
@@ -69,6 +70,37 @@ class RouteTest(unittest.TestCase):
             body = ledger_view({"symbol": ["MARICO"]})
         self.assertEqual(body["source"], "file")
         self.assertEqual(body["progress"]["stage"], "complete")
+
+    def test_a_cache_miss_serves_the_snapshot_and_does_not_recompute(self):
+        cache = Mem()
+        filed = {
+            "cards": [{"symbol": "TITAN"}],
+            "alerts": [
+                {"symbol": "TITAN", "date": "2026-11-06", "severity": 1},
+                {"symbol": "MARICO", "date": "2026-11-03", "severity": 9},
+            ],
+        }
+        with patch("finn_core.api_routes._open", return_value=(cache, False)), patch(
+            "finn_core.api_routes._file_for", return_value=filed
+        ), patch("finn_core.api_routes.build_feed", side_effect=AssertionError("recomputed")):
+            body = feed_view({"as_of": ["2026-11-06"], "hours": ["72"]})
+        self.assertEqual(body["source"], "file")
+        self.assertEqual([row["symbol"] for row in body["alerts"]], ["MARICO", "TITAN"])
+        stored = cache.get("feed_snapshot", "FEED", "2026-11-06|72|5|2.5|*", "v1")
+        self.assertEqual(stored["cards"][0]["symbol"], "TITAN")
+
+    def test_equal_severity_orders_by_symbol_then_date(self):
+        ordered = order_alerts(
+            [
+                {"symbol": "TITAN", "date": "2026-11-06", "severity": 5},
+                {"symbol": "TITAN", "date": "2026-11-04", "severity": 5},
+                {"symbol": "MARICO", "date": "2026-11-05", "severity": 5},
+            ]
+        )
+        self.assertEqual(
+            [(row["symbol"], row["date"]) for row in ordered],
+            [("MARICO", "2026-11-05"), ("TITAN", "2026-11-04"), ("TITAN", "2026-11-06")],
+        )
 
 
 if __name__ == "__main__":

@@ -117,7 +117,7 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
 
   const extras = recent.filter((item) => !PRESETS.includes(item))
   const editing = draft.trim().toUpperCase() !== symbol
-  const found = editing ? searchCompanies(draft) : { matches: [], closest: [], clear: null }
+  const found = editing ? searchCompanies(draft) : { matches: [], clear: null }
   const showMiss = editing && draft.trim().length >= 2 && found.matches.length === 0
   const busy = phase === 'running'
   const transcripts = ledger?.coverage?.transcripts_found ?? null
@@ -167,12 +167,6 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
       {showMiss ? <p className="mt-2 text-[13px]">No listed company found</p> : null}
       {notice && !showMiss ? <p className="mt-2 text-[13px]">{notice}</p> : null}
       {found.matches.length ? <SuggestionList items={found.matches} onPick={openSymbol} /> : null}
-      {showMiss && found.closest.length ? (
-        <div className="mt-2">
-          <p className="text-[11px] tracking-[0.08em] text-mute uppercase">Closest</p>
-          <SuggestionList items={found.closest} onPick={openSymbol} />
-        </div>
-      ) : null}
       <div className="mt-2 flex flex-wrap gap-1.5">
         {PRESETS.map((item) => (
           <button

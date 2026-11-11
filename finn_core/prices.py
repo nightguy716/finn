@@ -7,6 +7,47 @@ import yfinance as yf
 from finn_core.config import market_symbol
 
 
+EOD_ENOUGH = 21
+
+
+def cached_eod(symbols: list[str], start: date, end: date, cache=None) -> tuple[dict[str, list[dict]], str | None]:
+    """Bars for these symbols. A stored series of 21 or more sessions is kept.
+
+    A later download replaces stored bars only when it is at least as long.
+    A failed or short download does not wipe a longer series.
+    """
+    kept: dict[str, list[dict]] = {}
+    short: dict[str, list[dict]] = {}
+    missing: list[str] = []
+    for symbol in symbols:
+        rows = _read_bars(cache, symbol, start, end)
+        if len(rows) >= EOD_ENOUGH:
+            kept[symbol] = rows
+        else:
+            short[symbol] = rows
+            missing.append(symbol)
+    fresh: dict[str, list[dict]] = {}
+    error = None
+    if missing:
+        try:
+            fresh = fetch_eod(missing, start, end)
+        except Exception as exc:
+            error = f"{type(exc).__name__}: {exc}"
+    out: dict[str, list[dict]] = {}
+    for symbol in symbols:
+        if symbol in kept:
+            out[symbol] = kept[symbol]
+            continue
+        got = fresh.get(symbol) or []
+        old = short.get(symbol) or []
+        if got and len(got) >= len(old):
+            _write_bars(cache, symbol, start, end, got)
+            out[symbol] = got
+        else:
+            out[symbol] = old
+    return out, error
+
+
 def fetch_eod(symbols: list[str], start: date, end: date) -> dict[str, list[dict]]:
     """Daily bars from `start` through `end`, inclusive of `end`."""
     if not symbols:
@@ -72,6 +113,42 @@ def detect_alerts(
             }
         )
     return alerts
+
+
+def _bar_key(end: date) -> str:
+    return f"{end.isoformat()}|v1"
+
+
+def _read_bars(cache, symbol: str, start: date, end: date) -> list[dict]:
+    if cache is None:
+        return []
+    try:
+        raw = cache.get("eod_bars", symbol, start.isoformat(), _bar_key(end))
+    except Exception:
+        return []
+    rows = []
+    for item in raw or []:
+        if not isinstance(item, dict) or item.get("date") is None:
+            continue
+        day = item["date"]
+        if isinstance(day, str):
+            day = date.fromisoformat(day[:10])
+        rows.append({"date": day, "close": float(item["close"]), "volume": float(item.get("volume") or 0)})
+    rows.sort(key=lambda item: item["date"])
+    return rows
+
+
+def _write_bars(cache, symbol: str, start: date, end: date, rows: list[dict]) -> None:
+    if cache is None or not rows:
+        return
+    payload = [
+        {"date": bar["date"].isoformat(), "close": bar["close"], "volume": bar["volume"]}
+        for bar in rows
+    ]
+    try:
+        cache.put("eod_bars", symbol, start.isoformat(), _bar_key(end), payload)
+    except Exception:
+        return
 
 
 def _bars(frame, symbol: str) -> list[dict]:

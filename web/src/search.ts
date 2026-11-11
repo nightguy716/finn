@@ -13,7 +13,6 @@ export type Suggestion = {
 
 export type CompanySearch = {
   matches: Suggestion[]
-  closest: Suggestion[]
   clear: Suggestion | null
 }
 
@@ -63,7 +62,7 @@ export function companyBySymbol(symbol: string): Suggestion | null {
 /** Suggestions for what the user has typed. No network. */
 export function searchCompanies(raw: string): CompanySearch {
   const query = raw.trim()
-  if (!query) return { matches: [], closest: [], clear: null }
+  if (!query) return { matches: [], clear: null }
   const queryTokens = words(query)
   const querySymbol = symbolQuery(query)
   const alias = aliasFor(queryTokens)
@@ -75,8 +74,8 @@ export function searchCompanies(raw: string): CompanySearch {
   }
   scored.sort((a, b) => b.score - a.score || a.tokens - b.tokens || a.symbol.localeCompare(b.symbol))
   const matches = scored.slice(0, 6).map(({ symbol, name, score }) => ({ symbol, name, score }))
-  if (matches.length) return { matches, closest: [], clear: clearMatch(matches, alias) }
-  return { matches: [], closest: nearest(query, 3), clear: null }
+  if (matches.length) return { matches, clear: clearMatch(matches, alias) }
+  return { matches: [], clear: null }
 }
 
 function clearMatch(matches: Suggestion[], alias: string | null): Suggestion | null {
@@ -126,21 +125,6 @@ function nameScore(queryTokens: string[], row: Row): number {
   if (!matched) return 0
   if (matched === queryTokens.length) return 860 + total / queryTokens.length
   return 180 + total / queryTokens.length
-}
-
-function nearest(query: string, limit: number): Suggestion[] {
-  const needle = words(query).join('').slice(0, 16)
-  if (needle.length < 2) return []
-  return companies
-    .map((row) => {
-      const symbol = row.symbol.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 16)
-      let gap = distance(needle, symbol)
-      for (const token of row.tokens) gap = Math.min(gap, distance(needle, token.slice(0, 16)))
-      return { row, gap }
-    })
-    .sort((a, b) => a.gap - b.gap || a.row.symbol.localeCompare(b.row.symbol))
-    .slice(0, limit)
-    .map((item) => ({ symbol: item.row.symbol, name: item.row.name, score: item.gap }))
 }
 
 function words(text: string): string[] {

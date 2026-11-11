@@ -1,0 +1,566 @@
+{
+  "symbol": "BAJAJ-AUTO",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 4,
+    "next_quarter_statements": 3,
+    "pages_mentioning_fy26_or_next_quarter": 37,
+    "pages_dropped_by_prefilter": 4,
+    "dropped_pages": [
+      {
+        "period": "2026-06-30",
+        "page": 14
+      },
+      {
+        "period": "2026-03-31",
+        "page": 4
+      },
+      {
+        "period": "2026-03-31",
+        "page": 9
+      },
+      {
+        "period": "2025-03-31",
+        "page": 15
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 25125.56,
+    "ebitda_margin_pct": 19.49,
+    "pat": 3436.1,
+    "ttm_revenue": 80851.3,
+    "ttm_pat": 13073.47,
+    "ttm_ebitda_margin_pct": 20.03,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 25125.56,
+        "ebitda": 4895.93,
+        "ebitda_margin_pct": 19.49,
+        "ebit": 4486.89,
+        "ebit_margin_pct": 17.86,
+        "pbt": 4569.32,
+        "finance_costs": 468.69,
+        "depreciation": 409.04,
+        "other_income": 551.12,
+        "pat": 3436.1,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 21688.83,
+        "ebitda": 4531.15,
+        "ebitda_margin_pct": 20.89,
+        "ebit": 4126.32,
+        "ebit_margin_pct": 19.03,
+        "pbt": 4426.84,
+        "finance_costs": 387.34,
+        "depreciation": 404.83,
+        "other_income": 687.86,
+        "pat": 3225.63,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 17832.46,
+        "ebitda": 3112.74,
+        "ebitda_margin_pct": 17.46,
+        "ebit": 2823.81,
+        "ebit_margin_pct": 15.84,
+        "pbt": 3140.85,
+        "finance_costs": 344.36,
+        "depreciation": 288.93,
+        "other_income": 661.4,
+        "pat": 3661.92,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 16204.45,
+        "ebitda": 3653.02,
+        "ebitda_margin_pct": 22.54,
+        "ebit": 3533.76,
+        "ebit_margin_pct": 21.81,
+        "pbt": 3656.17,
+        "finance_costs": 313.63,
+        "depreciation": 119.26,
+        "other_income": 436.04,
+        "pat": 2749.82,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 15734.74,
+        "ebitda": 3463.16,
+        "ebitda_margin_pct": 22.01,
+        "ebit": 3344.17,
+        "ebit_margin_pct": 21.25,
+        "pbt": 3633.13,
+        "finance_costs": 286.84,
+        "depreciation": 118.99,
+        "other_income": 575.8,
+        "pat": 2122.03,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 13133.35,
+        "ebitda": 2792.94,
+        "ebitda_margin_pct": 21.27,
+        "ebit": 2675.43,
+        "ebit_margin_pct": 20.37,
+        "pbt": 2960.65,
+        "finance_costs": 223.76,
+        "depreciation": 117.51,
+        "other_income": 508.98,
+        "pat": 2210.44,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 50\u201360 bps for 2026-03-31",
+      "source_quote": "So, that's why I did call out a ballpark of between 50 to 60 basis points impact as we originally estimated it.",
+      "page": 14,
+      "source_document": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_06022026165907_SE_-_Transcript_Q3_FY26.pdf",
+      "speaker": "Dinesh Thapar",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "50\u201360 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Like the bulk of the inflation from what the team shows to me right now continues to be on the Noble Metals portfolio, where the inflation is essentially double digit, and yes copper has inflated quite significantly between quarter 3 and quarter 4. I think the rest of the metals that I called out were essentially low single digit, but all of these are inflating quite significantly. One way we're trying to mitigate this because obviously, every time we have the upswing in the cost or the inflation cycle, is to try and see how much you can lock in for the quarter and then try and move out because a lot of this is negotiated commodities. So, that's why I did call out a ballpark of between 50 to 60 basis points impact as we originally estimated it. And we'll try and see if we can operate within that. We've priced out for half of it, but I think we'll have to just be a little bit more nimble with pricing depending on how this commodity situation evolves over the next few weeks. So, we are watching it, as you would imagine, just given the volatility.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 50.0,
+      "target_high": 60.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-06",
+      "calls": [
+        {
+          "date": "2026-02-06",
+          "call_period": "2025-12-31",
+          "page": 14,
+          "quote": "So, that's why I did call out a ballpark of between 50 to 60 basis points impact as we originally estimated it.",
+          "document": "lkwalimbe_bajajauto_co_in_06022026165907_SE_-_Transcript_Q3_FY26.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 50\u201360 for 2026-03-31",
+      "source_quote": "To your second question Joseph, the comments that I've made on commodity, which is where I mentioned that we anticipate to be between 50-60 basis",
+      "page": 18,
+      "source_document": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_06022026165907_SE_-_Transcript_Q3_FY26.pdf",
+      "speaker": "Dinesh Thapar",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "50\u201360",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Thank you. Dinesh Thapar: Okay. So your first question was I guess on dollar realization , so our dollar realization for the quarter was at 88.3 compared to 87.1 in the previous quarter and 84.3 at the same time last year. To your second question Joseph, the comments that I've made on commodity, which is where I mentioned that we anticipate to be between 50-60 basis points is for the current quarter 4. Joseph George: Sure. So, the clarification, Dinesh, I was looking for was , our old understanding was that commodities hit OEMs typically with a 1 quarter lag. So , when you talk about this 50 -60 bps, does it factor in the commodity prices that we are seeing on the screen today?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 50.0,
+      "target_high": 60.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-06",
+      "calls": [
+        {
+          "date": "2026-02-06",
+          "call_period": "2025-12-31",
+          "page": 18,
+          "quote": "To your second question Joseph, the comments that I've made on commodity, which is where I mentioned that we anticipate to be between 50-60 basis",
+          "document": "lkwalimbe_bajajauto_co_in_06022026165907_SE_-_Transcript_Q3_FY26.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth 45% for an unnamed period",
+      "source_quote": "On EBITDA, the quarter came in at INR3,596 crores, again, an all-time high, with a strong 45% year-on-year growth.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_27072026164331_Transcript_of_Earning_Conference_Call_Q1_FY27.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "45%",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "And mix remains structurally favourable. The continued strength of commercial vehicles, premium motorcycles, exports and the steadily increasing contribution of electric vehicles all enhanced the buildup of our revenues. In addition, spares revenue was at a steady range of between INR1,700 crores to INR1,800 crores, providing a recurring support to overall revenues and profitability. On EBITDA, the quarter came in at INR3,596 crores, again, an all-time high, with a strong 45% year-on-year growth. EBITDA margins inched up to 20.9%, an improvement of 10 basis points sequentially despite the hyperinflationary commodity environment that I'd spoken about. If the revenue story was all about all 4 levers of growth coming together, volume, pricing, currency and mix, the profitability story was even more compelling. While revenues grew 37%, EBITDA grew by 45% and the ability of the business to convert strong top line growth into higher earnings despite operating in an extremely volatile and challenging environment.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "ebitda_growth",
+      "target_low": 45.0,
+      "target_high": 45.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-27",
+      "calls": [
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 9,
+          "quote": "On EBITDA, the quarter came in at INR3,596 crores, again, an all-time high, with a strong 45% year-on-year growth.",
+          "document": "lkwalimbe_bajajauto_co_in_27072026164331_Transcript_of_Earning_Conference_Call_Q1_FY27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin at least 10 bps for an unnamed period",
+      "source_quote": "EBITDA margins inched up to 20.9%, an improvement of 10 basis points sequentially",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_27072026164331_Transcript_of_Earning_Conference_Call_Q1_FY27.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10 bps",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "The continued strength of commercial vehicles, premium motorcycles, exports and the steadily increasing contribution of electric vehicles all enhanced the buildup of our revenues. In addition, spares revenue was at a steady range of between INR1,700 crores to INR1,800 crores, providing a recurring support to overall revenues and profitability. On EBITDA, the quarter came in at INR3,596 crores, again, an all-time high, with a strong 45% year-on-year growth. EBITDA margins inched up to 20.9%, an improvement of 10 basis points sequentially despite the hyperinflationary commodity environment that I'd spoken about. If the revenue story was all about all 4 levers of growth coming together, volume, pricing, currency and mix, the profitability story was even more compelling. While revenues grew 37%, EBITDA grew by 45% and the ability of the business to convert strong top line growth into higher earnings despite operating in an extremely volatile and challenging environment. I believe it's the hallmark of this quarter's performance.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "ebitda_margin",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-27",
+      "calls": [
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 9,
+          "quote": "EBITDA margins inched up to 20.9%, an improvement of 10 basis points sequentially",
+          "document": "lkwalimbe_bajajauto_co_in_27072026164331_Transcript_of_Earning_Conference_Call_Q1_FY27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 6\u20138% for an unnamed period",
+      "source_quote": "we think that the industry should improve its growth rate by 6 to 8 percentage points in the medium term",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_14112025142434_SE_-_Transcript_Q2_FY26.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "6\u20138%",
+      "status": "segment_level",
+      "note": "industry guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Hence, our N-series and NS-series of Pulsar motorcycles handsomely beat segment growth rates. Such a positive trading environment is very helpful for the mission of acquiring market share. An engaging thematic \u201cDuniya Dekhti Hai, Tu Dikha\u201d campaign for Pulsar brand, introduction of new variants in the sports range, early on -the-ground tactical support, and excellent retail finance operations matching the surge in festive retails combined to deliver this record performance. Though November a nd particularly December will be smaller months, we think that the industry should improve its growth rate by 6 to 8 percentage points in the medium term and offer us very good opportunities to attract customers to our Pulsar portfolio, which is being further strengthened by the introduction of the new variants in the next 2-3 months. We will aim to outpace the industry growth in the 125cc plus segment and continue the path of acquiring market share which commenced in the period of September-October.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "industry",
+      "metric_key": "volume_growth",
+      "target_low": 6.0,
+      "target_high": 8.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-14",
+      "calls": [
+        {
+          "date": "2025-11-14",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "we think that the industry should improve its growth rate by 6 to 8 percentage points in the medium term",
+          "document": "lkwalimbe_bajajauto_co_in_14112025142434_SE_-_Transcript_Q2_FY26.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least 10% for 2026-12-31",
+      "source_quote": "In the September to December period, we expect growth to continue to be in double digits",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_02112026165236_Transcript_of_Earning_Conference_Call_Q2_FY27.pdf",
+      "speaker": "",
+      "period_promised": "2026-12-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "segment_level",
+      "note": "domestic 2-wheelers guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "So therefore, we like to break the year in the halves of April to August and September to December. T he 2 -wheeler industry, including electric scooters, demonstrated healthy Y oY growth of 18% in April to August. The 150cc segment and the EV scooter segment grew much higher than the industry average and drove most of this growth. In the September to December period, we expect growth to continue to be in double digits, but it may not be as much as the April - August period due to the base effect. In general, the festive period is 1.25x the pre-festive period, meaning September to December is 1.25x the April to August period. Last year, this bucked the trend and the ratio was almost 1.4 due to the GST impact. Some positive impact of the GST still co ntinues.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "domestic 2-wheelers",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-02",
+      "calls": [
+        {
+          "date": "2026-11-02",
+          "call_period": "2026-09-30",
+          "page": 4,
+          "quote": "In the September to December period, we expect growth to continue to be in double digits",
+          "document": "lkwalimbe_bajajauto_co_in_02112026165236_Transcript_of_Earning_Conference_Call_Q2_FY27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 12\u201315% for FY2026",
+      "source_quote": "We expect this growth momentum in the industry to continue and the motorcycle industry to continue to grow at, say, 12% to 15%.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_06022026165907_SE_-_Transcript_Q3_FY26.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "12\u201315%",
+      "status": "segment_level",
+      "note": "motorcycle industry guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "And our understanding is that even January is sustaining at a similar level. We are just 1 or 2 days away from getting the final numbers. To some extent, of course, this has been bolstered by the festive in the South. We expect this growth momentum in the industry to continue and the motorcycle industry to continue to grow at, say, 12% to 15%. Equally important is the quality of growth with the 125cc plus segment growing at a faster rate and within that, the 150cc plus segment growing even faster. This phenomenon is creating a very positive and supportive environment for our portfolio, which rests on the proposition of persuading the customer to upgrade to bigger and more differentiated bikes. Since quarter 4 of financial year '25, we have been quite challenged for market share even in the Pulsar heartland of 150cc plus segment.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "motorcycle industry",
+      "metric_key": "volume_growth",
+      "target_low": 12.0,
+      "target_high": 15.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-06",
+      "calls": [
+        {
+          "date": "2026-02-06",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "We expect this growth momentum in the industry to continue and the motorcycle industry to continue to grow at, say, 12% to 15%.",
+          "document": "lkwalimbe_bajajauto_co_in_06022026165907_SE_-_Transcript_Q3_FY26.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 15\u201320% for FY2026",
+      "source_quote": "we expect overall exports to continue to grow at 15% to 20% every quarter year on year.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_05062025164753_SE_-_Transcript_Q4_FY25.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15\u201320%",
+      "status": "segment_level",
+      "note": "exports guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "The global tariff issue had not any significant direct impact on us as direct exports to these areas, which could be vulnerable to higher tariffs, are mainly the KTM and Triumph brands and they constitute less than 1% of our total revenue. The impending start -up and revival of KTM Austria will also unlock exports of KTM motorcycles from India to the overseas markets of KTM next quarter onwards. These used to constitute about 5% to 6% of our total exports and as you know, had dropped to almost nil. Given this performance, and revival in the market, our competitive position in key markets and the return of KTM exports, we expect overall exports to continue to grow at 15% to 20% every quarter year on year. Moving to domestic motorcycles. In quarter 4, the motorcycle industry registration indicates a minor decline of 2% or so. However, for FY '25, the industry delivered an overall growth of 6%, buffeted by a strong pe rformance in Q1 and during the festive .",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "exports",
+      "metric_key": "volume_growth",
+      "target_low": 15.0,
+      "target_high": 20.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-06-05",
+      "calls": [
+        {
+          "date": "2025-06-05",
+          "call_period": "2025-03-31",
+          "page": 4,
+          "quote": "we expect overall exports to continue to grow at 15% to 20% every quarter year on year.",
+          "document": "lkwalimbe_bajajauto_co_in_05062025164753_SE_-_Transcript_Q4_FY25.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "PAT growth at least 42 for an unnamed period",
+      "source_quote": "All of this flowed through to the bottom line as well with profit after tax coming in a tad under INR3,000 crores, again, a new",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_27072026164331_Transcript_of_Earning_Conference_Call_Q1_FY27.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 42",
+      "status": "not_scored",
+      "note": "The period is not stated.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "To sum it up, the sequential margin expansion was primarily supported by higher realizations and a richer mix that you will see reflected on the GM, gross margin line, which reduced the extent of the severe commodity inflation, which was then made up by operating leverage arising from higher volumes and disciplined cost management across the organization that you will see reflected on the other expenses line. Together these factors more than offset the challenges on input cost inflation even after the pricing actions were taken through the quarter. On a year-on-year basis, margins improved by 110 basis points, primarily driven by favourable currency movements and improved operating leverage, which more than offset the adverse cost versus price dynamics. All of this flowed through to the bottom line as well with profit after tax coming in a tad under INR3,000 crores, again, a new high for the company and up 42% year - on-year.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "pat_growth",
+      "target_low": 42.0,
+      "target_high": null,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-27",
+      "calls": [
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 9,
+          "quote": "All of this flowed through to the bottom line as well with profit after tax coming in a tad under INR3,000 crores, again, a new",
+          "document": "lkwalimbe_bajajauto_co_in_27072026164331_Transcript_of_Earning_Conference_Call_Q1_FY27.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 1.14,
+    "series": 1.0,
+    "guidance": 1.46,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.07,
+    "total": 3.68
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 7,
+      "tokens": 0,
+      "dropped": 1,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

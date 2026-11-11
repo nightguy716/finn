@@ -1,0 +1,510 @@
+{
+  "symbol": "NTPC",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 7,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 50,
+    "pages_dropped_by_prefilter": 10,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 8
+      },
+      {
+        "period": "2026-09-30",
+        "page": 9
+      },
+      {
+        "period": "2026-06-30",
+        "page": 4
+      },
+      {
+        "period": "2026-03-31",
+        "page": 3
+      },
+      {
+        "period": "2026-03-31",
+        "page": 9
+      },
+      {
+        "period": "2025-12-31",
+        "page": 8
+      },
+      {
+        "period": "2025-12-31",
+        "page": 10
+      },
+      {
+        "period": "2025-09-30",
+        "page": 7
+      },
+      {
+        "period": "2025-09-30",
+        "page": 14
+      },
+      {
+        "period": "2025-09-30",
+        "page": 15
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 54269.95,
+    "ebitda_margin_pct": 28.79,
+    "pat": 7029.56,
+    "ttm_revenue": 200544.36,
+    "ttm_pat": 29725.75,
+    "ttm_ebitda_margin_pct": 30.79,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 54269.95,
+        "ebitda": 15626.86,
+        "ebitda_margin_pct": 28.79,
+        "ebit": 10297.08,
+        "ebit_margin_pct": 18.97,
+        "pbt": 6656.39,
+        "finance_costs": 4086.43,
+        "depreciation": 5329.78,
+        "other_income": 445.74,
+        "pat": 7029.56,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 50740.96,
+        "ebitda": 16230.59,
+        "ebitda_margin_pct": 31.99,
+        "ebit": 10996.89,
+        "ebit_margin_pct": 21.67,
+        "pbt": 8011.4,
+        "finance_costs": 3386.04,
+        "depreciation": 5233.7,
+        "other_income": 400.55,
+        "pat": 6721.05,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 49687.77,
+        "ebitda": 15320.48,
+        "ebitda_margin_pct": 30.83,
+        "ebit": 10186.69,
+        "ebit_margin_pct": 20.5,
+        "pbt": 7172.68,
+        "finance_costs": 3736.82,
+        "depreciation": 5133.79,
+        "other_income": 722.81,
+        "pat": 10486.47,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 45845.68,
+        "ebitda": 14569.58,
+        "ebitda_margin_pct": 31.78,
+        "ebit": 9476.54,
+        "ebit_margin_pct": 20.67,
+        "pbt": 6771.54,
+        "finance_costs": 3164.09,
+        "depreciation": 5093.04,
+        "other_income": 459.09,
+        "pat": 5488.67,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 44785.82,
+        "ebitda": 12815.75,
+        "ebitda_margin_pct": 28.62,
+        "ebit": 8000.25,
+        "ebit_margin_pct": 17.86,
+        "pbt": 5044.07,
+        "finance_costs": 3432.46,
+        "depreciation": 4815.5,
+        "other_income": 476.28,
+        "pat": 5066.78,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 47065.36,
+        "ebitda": 12579.94,
+        "ebitda_margin_pct": 26.73,
+        "ebit": 7992.94,
+        "ebit_margin_pct": 16.98,
+        "pbt": 5281.17,
+        "finance_costs": 3467.52,
+        "depreciation": 4587.0,
+        "other_income": 755.75,
+        "pat": 6010.6,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 23% for FY2026",
+      "source_quote": "Consolidated revenue from operations increased by 23% to INR1,946 crores in 9 months FY '26",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NTPC_04022026191854_Earning_Call_Transcript_04022026.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "23%",
+      "status": "pending",
+      "note": "The year before FY2026 is outside the series, so growth is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "NTPC Limited January 30, 2026 Page 6 of 15 Financial performance remains strong. Consolidated revenue from operations increased by 23% to INR1,946 crores in 9 months FY '26, while operating EBITDA grew by 25% to INR1,701 crores. EBITDA margin improved to 87%, underscoring the robust profitability of the renewable portfolio. Capital investment continues to be a key focus. Consolidated capex during 9 months FY '26 stood at INR11,653 crores compared to INR7,261 crores in the corresponding period last year.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 23.0,
+      "target_high": 23.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-04",
+      "calls": [
+        {
+          "date": "2026-02-04",
+          "call_period": "2025-12-31",
+          "page": 7,
+          "quote": "Consolidated revenue from operations increased by 23% to INR1,946 crores in 9 months FY '26",
+          "document": "NTPC_04022026191854_Earning_Call_Transcript_04022026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 28% for FY2025",
+      "source_quote": "In FY25, the company achieved a production milestone of 46 million tons, reflecting a strong 28% year -on-year growth",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ishkumar_25082025134604_DisclosureTranscript25082025s.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "28%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "To strengthen fuel security, we have diversified procurement channels through bridge linkages, our own captive mines and e -auction route, while resorting to coal imports sparingly whenever essential only. In FY25, these measures enabled us to maintain adequate coal availability across all stations, ensuring uninterrupted power generation. Turning to the coal mining front, NTPC's group manages a robust asset base of nine coal mines with a combined peak capacity of 91.6 million metric tons per annum. In FY25, the company achieved a production milestone of 46 million tons, reflecting a strong 28% year -on-year growth and underscoring its operational excellence in mining. Looking ahead, NTPC targets meeting at least 25% of its coal requirement through captive mining by FY30, further enhancing fuel security and supply reliability. Some of the key sustainable initiatives - Climate change and sustainability have emerged as defining global challenges, compelling energy companies to balance the growing demand for power with urgent need to protect our planet. NTPC has developed a comprehensive sustainable strategy titled the Brighter Plan featuring well -defined key performance indicators and measurable targets.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 28.0,
+      "target_high": 28.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-25",
+      "calls": [
+        {
+          "date": "2025-08-25",
+          "call_period": "2025-06-30",
+          "page": 12,
+          "quote": "In FY25, the company achieved a production milestone of 46 million tons, reflecting a strong 28% year -on-year growth",
+          "document": "ishkumar_25082025134604_DisclosureTranscript25082025s.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "PAT growth 12% for FY2025",
+      "source_quote": "In FY25, the group achieved a notable 12% increase in profit, reflecting the strength of our diversified portfolio",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ishkumar_25082025134604_DisclosureTranscript25082025s.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "12%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "In FY25, the company achieved its highest ever standalone profit of INR 19,649 crore, showcasing our strong financial management and operational efficiency. The momentum has continued in FY26, company posting strong financial results for Q1 FY26, profit after tax for Q1 FY26 stood at INR 4,775 crore. Our consolidated financial performance has also shown consistent growth, underpinning our strategic investment in value, accretive joint ventures and subsidiaries. In FY25, the group achieved a notable 12% increase in profit, reflecting the strength of our diversified portfolio and the effectiveness of our growth strategy. The group's EBITDA also recorded significant increase, underscoring our capability to deliver strong operational earnings while maintaining disciplined financial management. NTPC's balance sheet has continued to expand, reflecting the company's strong financial position and long -term stability. Steady growth in gross fixed assets has translated into stronger and more efficient returns, reinforcing our operational strengths.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "pat_growth",
+      "target_low": 12.0,
+      "target_high": 12.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-25",
+      "calls": [
+        {
+          "date": "2025-08-25",
+          "call_period": "2025-06-30",
+          "page": 13,
+          "quote": "In FY25, the group achieved a notable 12% increase in profit, reflecting the strength of our diversified portfolio",
+          "document": "ishkumar_25082025134604_DisclosureTranscript25082025s.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth at least 8 for FY2027",
+      "source_quote": "the earlier expectation was 9.5 gigawatts, which we are scaling it down, based on the dispensation on the renewable side. So it would be now",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/9425178051_06112026150753_6__Disclosure_for_Transcript_of_Earnings_Conference_Call_Q2_FY27_Signed.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 8",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Sumit Kishore: Sir, for FY27, you had given details for NGEL mainly. For NTPC Group as a whole, what is the total expectation? If I missed it, can you please repeat it for NTPC Group? Management: Yes, the NTPC Group, the earlier expectation was 9.5 gigawatts, which we are scaling it down, based on the dispensation on the renewable side. So it would be now close to 8 gigawatts. Moderator: You please go ahead. Sumit Kishore: Yes, sir.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 8.0,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-06",
+      "calls": [
+        {
+          "date": "2026-11-06",
+          "call_period": "2026-09-30",
+          "page": 13,
+          "quote": "the earlier expectation was 9.5 gigawatts, which we are scaling it down, based on the dispensation on the renewable side. So it would be now",
+          "document": "9425178051_06112026150753_6__Disclosure_for_Transcript_of_Earnings_Conference_Call_Q2_FY27_Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex a direction only for FY2027",
+      "source_quote": "which in the next financial year will further increase to around \u20b945,000 crore to \u20b946,000 crore.",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ishkumar_06112025162500_FinalTranscript06112025.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Apoorva Bahadur: Last year it was \u20b97,000 crore. Sir, can you let us know, like, how much capital expenditure for the projects we are about to commission this year and maybe next year has not been incurred and how much we will have to incur in the second half? Management: In the financial year 2025-26, we are going to incur a capex of around \u20b930,000 crore, which will be financed through debt and equity. That is going to be the level of capex that is going to come in this financial year. which in the next financial year will further increase to around \u20b945,000 crore to \u20b946,000 crore. Apoorva Bahadur: At NTPC Green level? Management: Yes. This is at the NTPC Green level.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-06",
+      "calls": [
+        {
+          "date": "2025-11-06",
+          "call_period": "2025-09-30",
+          "page": 13,
+          "quote": "which in the next financial year will further increase to around \u20b945,000 crore to \u20b946,000 crore.",
+          "document": "ishkumar_06112025162500_FinalTranscript06112025.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex \u20b97 crore for FY2032",
+      "source_quote": "we aim to invest about INR7 lakh crore by FY32.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ishkumar_25082025134604_DisclosureTranscript25082025s.pdf",
+      "speaker": "",
+      "period_promised": "FY2032",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "\u20b97 crore",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "We had our business plan almost around six years back. We had kept around 13 0 gigawatt by FY32. We have already revised that and the upward revision is, it is 149 gigawatt by FY32 instead of 130. And in that also there is going to be, there will be additional capex, which will be going in the PSP, green chemicals, BESS etc., so put together, we aim to invest about INR7 lakh crore by FY32. We will be able to give the break-up. The presentation will show that. If not, then we can always look at that.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 7.0,
+      "target_high": 7.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-25",
+      "calls": [
+        {
+          "date": "2025-08-25",
+          "call_period": "2025-06-30",
+          "page": 5,
+          "quote": "we aim to invest about INR7 lakh crore by FY32.",
+          "document": "ishkumar_25082025134604_DisclosureTranscript25082025s.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 7\u20138 for FY2027",
+      "source_quote": "we are targeting to add another 7 gigawatts to 8 gigawatts for the renewable capacity in FY27.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/9425178051_02082026151004_6__Disclosure_for_Transcript_of_Investor_Presentation_Final.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20138",
+      "status": "segment_level",
+      "note": "renewable guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Renewable energy, of course, would be the key driver of NTPC's future growth, led by NTPC Green Energy Limited. Our renewable portfolio is targeted to reach 60 gigawatts by FY32 and expand further to 136 gigawatts by FY37. Presently, the operational capacity of RE portfolio stands at 12 gigawatts. During FY26, we have added around 4.2 gigawatt, and further , subject to transmission infrastructure, we are targeting to add another 7 gigawatts to 8 gigawatts for the renewable capacity in FY27. As regards battery energy storage systems, NTPC group has a portfolio of 38.9 gigawatt-hours, which comprise of 6.62 gigawatt -hours under execution, including a 5 gigawatt -hours at the thermal power stations under the regulated returns framework. A further 1.8 gigawatt -hours of BESS projects are under planning to strengthen our near -term storage portfolio. Beyond this, NTPC is developing a substantial non-solar hour BESS pipeline of 30.4 gigawatt -hours, of which 18.6 gigawatt-hours have already been tendered.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "renewable",
+      "metric_key": "volume_growth",
+      "target_low": 7.0,
+      "target_high": 8.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-02",
+      "calls": [
+        {
+          "date": "2026-08-02",
+          "call_period": "2026-06-30",
+          "page": 10,
+          "quote": "we are targeting to add another 7 gigawatts to 8 gigawatts for the renewable capacity in FY27.",
+          "document": "9425178051_02082026151004_6__Disclosure_for_Transcript_of_Investor_Presentation_Final.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 1.0,
+    "series": 1.0,
+    "guidance": 1.43,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.14,
+    "total": 3.58
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 6,
+      "tokens": 0,
+      "dropped": 2,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

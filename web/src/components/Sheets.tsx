@@ -187,6 +187,19 @@ export function SettingsSheet({
         />
       </label>
       <p className="mt-3 text-[12px] text-mute">The strip updates from the live feed a moment after a slider moves.</p>
+      {defaults ? (
+        <button
+          type="button"
+          className="mt-3 text-[13px] text-accent"
+          onClick={() => {
+            setDraftMove(defaults.move_pct)
+            setDraftVolume(defaults.volume_n)
+            onCommit(defaults.move_pct, defaults.volume_n)
+          }}
+        >
+          Use {formatNum(defaults.move_pct)}% and {formatNum(defaults.volume_n)}×
+        </button>
+      ) : null}
     </SheetFrame>
   )
 }

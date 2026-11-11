@@ -128,6 +128,13 @@ export function plural(count: number, word: string): string {
   return `${count} ${word}${count === 1 ? '' : 's'}`
 }
 
+/** Same order the API uses: severity, then symbol, then date. */
+export function orderAlerts<T extends { severity: number; symbol: string; date: string }>(alerts: T[]): T[] {
+  return [...alerts].sort(
+    (a, b) => b.severity - a.severity || a.symbol.localeCompare(b.symbol) || a.date.localeCompare(b.date),
+  )
+}
+
 /** Counts already on the feed. No model call. */
 export function windowSummary(cards: { category: string }[], movers: number): string {
   const results = cards.filter((card) => card.category === 'results').length

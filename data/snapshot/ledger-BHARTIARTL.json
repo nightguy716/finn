@@ -1,0 +1,240 @@
+{
+  "symbol": "BHARTIARTL",
+  "coverage": {
+    "transcripts_found": 6,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [
+      "2026-09-30"
+    ],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 31,
+    "pages_dropped_by_prefilter": 2,
+    "dropped_pages": [
+      {
+        "period": "2025-06-30",
+        "page": 15
+      },
+      {
+        "period": "2025-03-31",
+        "page": 12
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 60877.5,
+    "ebitda_margin_pct": 57.11,
+    "pat": 8887.5,
+    "ttm_revenue": 228781.4,
+    "ttm_pat": 31010.5,
+    "ttm_ebitda_margin_pct": 55.32,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 60877.5,
+        "ebitda": 34765.7,
+        "ebitda_margin_pct": 57.11,
+        "ebit": 20148.6,
+        "ebit_margin_pct": 33.1,
+        "pbt": 15318.2,
+        "finance_costs": 5707.3,
+        "depreciation": 14617.1,
+        "other_income": 876.9,
+        "pat": 8887.5,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 58539.1,
+        "ebitda": 32949.4,
+        "ebitda_margin_pct": 56.29,
+        "ebit": 18714.4,
+        "ebit_margin_pct": 31.97,
+        "pbt": 13664.6,
+        "finance_costs": 5956.4,
+        "depreciation": 14235.0,
+        "other_income": 906.6,
+        "pat": 8167.4,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 55383.2,
+        "ebitda": 28330.9,
+        "ebitda_margin_pct": 51.15,
+        "ebit": 14687.4,
+        "ebit_margin_pct": 26.52,
+        "pbt": 9960.3,
+        "finance_costs": 5605.6,
+        "depreciation": 13643.5,
+        "other_income": 878.5,
+        "pat": 7325.1,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 53981.6,
+        "ebitda": 30526.0,
+        "ebitda_margin_pct": 56.55,
+        "ebit": 17105.9,
+        "ebit_margin_pct": 31.69,
+        "pbt": 12185.0,
+        "finance_costs": 5623.2,
+        "depreciation": 13420.1,
+        "other_income": 702.3,
+        "pat": 6630.5,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 52145.4,
+        "ebitda": 29561.4,
+        "ebitda_margin_pct": 56.69,
+        "ebit": 16379.3,
+        "ebit_margin_pct": 31.41,
+        "pbt": 12241.3,
+        "finance_costs": 4865.7,
+        "depreciation": 13182.1,
+        "other_income": 727.7,
+        "pat": 6791.7,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 49462.6,
+        "ebitda": 27838.7,
+        "ebitda_margin_pct": 56.28,
+        "ebit": 15373.6,
+        "ebit_margin_pct": 31.08,
+        "pbt": 10421.6,
+        "finance_costs": 5460.8,
+        "depreciation": 12465.1,
+        "other_income": 508.8,
+        "pat": 5947.9,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 51.5% for 2025-09-30",
+      "source_quote": "India revenues, excluding Indus, came in at Rs.34,900 Crores and the EBITDAaL margin excluding the passive infra side came in at 51.5%.",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_11112025164840_EarningCallTranscriptAirtel.pdf",
+      "speaker": "Management",
+      "period_promised": "2025-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "51.5%",
+      "status": "segment_level",
+      "note": "India guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Let me turn to our financial performance. We delivered another quarter of consistent performance. Consolidated revenues came in at about 52,000 Crores with an annualized run rate of over Rs.200,000 Crores. India revenues, excluding Indus, came in at Rs.34,900 Crores and the EBITDAaL margin excluding the passive infra side came in at 51.5%. The operating free cash flow, which is the EBITDAaL less capex, was strong, at about Rs.10,750 Crores. Capex for the quarter was about Rs.7200 Crores. Our balance sheet strength is predicated on disciplined capex and continued operational excellence.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "India",
+      "metric_key": "ebitda_margin",
+      "target_low": 51.5,
+      "target_high": 51.5,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-11",
+      "calls": [
+        {
+          "date": "2025-11-11",
+          "call_period": "2025-09-30",
+          "page": 3,
+          "quote": "India revenues, excluding Indus, came in at Rs.34,900 Crores and the EBITDAaL margin excluding the passive infra side came in at 51.5%.",
+          "document": "BHARTIARTL_11112025164840_EarningCallTranscriptAirtel.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 6,
+    "total": 6
+  },
+  "timing": {
+    "discover": 0.84,
+    "series": 0.72,
+    "guidance": 11.86,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 13.54
+  },
+  "usage": {
+    "guidance": {
+      "calls": 3,
+      "cache_hits": 3,
+      "tokens": 13314,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 13314
+  }
+}

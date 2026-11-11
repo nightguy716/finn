@@ -1,0 +1,228 @@
+{
+  "symbol": "MARUTI",
+  "coverage": {
+    "transcripts_found": 5,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [
+      "2026-09-30",
+      "2026-06-30"
+    ],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 6,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 53355.5,
+    "ebitda_margin_pct": 8.93,
+    "pat": 2466.1,
+    "ttm_revenue": 208191.9,
+    "ttm_pat": 13451.1,
+    "ttm_ebitda_margin_pct": 10.0,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 53355.5,
+        "ebitda": 4764.1,
+        "ebitda_margin_pct": 8.93,
+        "ebit": 2804.2,
+        "ebit_margin_pct": 5.26,
+        "pbt": 3150.1,
+        "finance_costs": 67.7,
+        "depreciation": 1959.9,
+        "other_income": 413.6,
+        "pat": 2466.1,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 52469.8,
+        "ebitda": 4313.3,
+        "ebitda_margin_pct": 8.22,
+        "ebit": 2533.0,
+        "ebit_margin_pct": 4.83,
+        "pbt": 4343.5,
+        "finance_costs": 63.5,
+        "depreciation": 1780.3,
+        "other_income": 1874.0,
+        "pat": 3446.9,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 52462.5,
+        "ebitda": 6158.3,
+        "ebitda_margin_pct": 11.74,
+        "ebit": 4410.2,
+        "ebit_margin_pct": 8.41,
+        "pbt": 4821.1,
+        "finance_costs": 73.0,
+        "depreciation": 1748.1,
+        "other_income": 483.9,
+        "pat": 3659.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 49904.1,
+        "ebitda": 5573.1,
+        "ebitda_margin_pct": 11.17,
+        "ebit": 3838.5,
+        "ebit_margin_pct": 7.69,
+        "pbt": 4831.9,
+        "finance_costs": 61.7,
+        "depreciation": 1734.6,
+        "other_income": 1055.1,
+        "pat": 3879.1,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 42344.2,
+        "ebitda": 5086.0,
+        "ebitda_margin_pct": 12.01,
+        "ebit": 3383.0,
+        "ebit_margin_pct": 7.99,
+        "pbt": 4272.0,
+        "finance_costs": 57.2,
+        "depreciation": 1703.0,
+        "other_income": 946.2,
+        "pat": 3349.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 38605.2,
+        "ebitda": 4622.6,
+        "ebitda_margin_pct": 11.97,
+        "ebit": 3066.6,
+        "ebit_margin_pct": 7.94,
+        "pbt": 4908.0,
+        "finance_costs": 46.8,
+        "depreciation": 1556.0,
+        "other_income": 1888.2,
+        "pat": 3792.4,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Volume growth 10% for FY2027",
+      "source_quote": "The broad expectation , which our Chairman also conveyed, is growth of over 10% this year as compared to the last year.",
+      "page": 8,
+      "source_document": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf",
+      "speaker": "Rahul Bharti",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Rahul Bharti: Our Chairman just mentioned that this time we would be thinking of utilizing our new plants. Obviously, the two new plants that come up with a steady-state total capacity of 500,000 units, will need a ramp-up. Effectively, one can expect that we'll have an additional volume of about 250,000 cars available th is year over the previous year. The broad expectation , which our Chairman also conveyed, is growth of over 10% this year as compared to the last year. And, of course, the situation is dynamic. This is the initial expectation. Chandramouli Muthiah: Second question is around capacity.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 10.0,
+      "target_high": 10.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-01",
+      "calls": [
+        {
+          "date": "2026-04-01",
+          "call_period": "2026-03-31",
+          "page": 8,
+          "quote": "The broad expectation , which our Chairman also conveyed, is growth of over 10% this year as compared to the last year.",
+          "document": "Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 5,
+    "total": 5
+  },
+  "timing": {
+    "discover": 1.28,
+    "series": 1.02,
+    "guidance": 5.67,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 8.09
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 3,
+      "tokens": 0,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

@@ -14,7 +14,7 @@ from finn_core.config import PORTFOLIO, company_name, market_symbol
 from finn_core.events import SUMMARY_CATEGORIES, cluster
 from finn_core.llm import generate_json
 from finn_core.nse_client import NSEClient, NSEError
-from finn_core.prices import detect_alerts, fetch_eod
+from finn_core.prices import cached_eod, detect_alerts
 from finn_core.results_card import _load_pdf_text, build_results_card
 
 CARD_CATEGORIES = ("results", "management_change") + SUMMARY_CATEGORIES
@@ -89,7 +89,18 @@ def build_feed(
             continue
         routine[event["symbol"]] = routine.get(event["symbol"], 0) + len(event["filings"])
 
-    alerts = _alerts(symbols, events, {card["id"]: card for card in cards}, start.date(), as_of.date(), move_pct, volume_n, alert_cap, failures)
+    alerts = _alerts(
+        symbols,
+        events,
+        {card["id"]: card for card in cards},
+        start.date(),
+        as_of.date(),
+        move_pct,
+        volume_n,
+        alert_cap,
+        failures,
+        cache,
+    )
     usage["total_tokens"] = usage["management_change"]["tokens"] + usage["summary"]["tokens"]
     payload = {
         "as_of": as_of.isoformat(timespec="seconds"),
@@ -267,11 +278,22 @@ def _event_text(event: dict, client, cache, failures: list[str], limit: int) -> 
     return "\n\n".join(piece[:share] for piece in pieces)[:limit], note, used_pdf
 
 
-def _alerts(symbols, events, cards_by_id: dict, start: date, end: date, move_pct: float, volume_n: float, alert_cap: int, failures: list[str]) -> list[dict]:
-    try:
-        bars = fetch_eod(symbols, start - timedelta(days=45), end)
-    except Exception as exc:
-        failures.append(f"prices {type(exc).__name__}: {exc}")
+def order_alerts(alerts: list[dict]) -> list[dict]:
+    """Severity, then symbol, then date. The same bars always come out in this order."""
+    return sorted(
+        alerts,
+        key=lambda alert: (
+            -float(alert.get("severity") or 0),
+            str(alert.get("symbol") or ""),
+            str(alert.get("date") or ""),
+        ),
+    )
+
+
+def _alerts(symbols, events, cards_by_id: dict, start: date, end: date, move_pct: float, volume_n: float, alert_cap: int, failures: list[str], cache=None) -> list[dict]:
+    bars, error = cached_eod(symbols, start - timedelta(days=45), end, cache)
+    if error and not any(bars.values()):
+        failures.append(f"prices {error}")
         return []
     found = []
     for symbol in symbols:
@@ -308,8 +330,7 @@ def _alerts(symbols, events, cards_by_id: dict, start: date, end: date, move_pct
                     "events": nearby[:6],
                 }
             )
-    found.sort(key=lambda alert: alert["severity"], reverse=True)
-    return found[: max(alert_cap, 0)]
+    return order_alerts(found)[: max(alert_cap, 0)]
 
 
 def _sources(event: dict) -> list[dict]:

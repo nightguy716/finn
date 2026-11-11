@@ -1,0 +1,963 @@
+{
+  "symbol": "BAJFINANCE",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 14,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 25,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 24546.37,
+    "ebitda_margin_pct": null,
+    "pat": 6266.2,
+    "ttm_revenue": 90531.5,
+    "ttm_pat": 21694.37,
+    "ttm_ebitda_margin_pct": null,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 24546.37,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 8533.47,
+        "finance_costs": 8601.73,
+        "depreciation": 321.07,
+        "other_income": 29.45,
+        "pat": 6266.2,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 23165.45,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 8143.89,
+        "finance_costs": 7942.09,
+        "depreciation": 287.55,
+        "other_income": 0.97,
+        "pat": 5985.75,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 21605.79,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 7399.63,
+        "finance_costs": 7398.28,
+        "depreciation": 255.52,
+        "other_income": 0.71,
+        "pat": 5464.57,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 21213.89,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 5428.89,
+        "finance_costs": 7338.71,
+        "depreciation": 243.91,
+        "other_income": 0.69,
+        "pat": 3977.85,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 20178.9,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 6604.83,
+        "finance_costs": 7011.28,
+        "depreciation": 258.06,
+        "other_income": 1.86,
+        "pat": 4875.36,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 19523.88,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 6366.84,
+        "finance_costs": 6917.68,
+        "depreciation": 251.49,
+        "other_income": 3.86,
+        "pat": 4699.61,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 22\u201323% for FY2026",
+      "source_quote": "overall, we've taken a view that the top line growth or AUM growth will gravitate between 22% and 23%, but more likely to be 22%",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_07022026151022_BFL_Investor_Call_outcome_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "22\u201323%",
+      "status": "pending",
+      "note": "The year before FY2026 is outside the series, so growth is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "We're likely to be between 7.55% to 7.60% in terms of cost of funds as we exit the year. The deposit book, as we had outlined, as part of the strategy in the current year to optimize that deposits growth will be slower. Deposits contributed 17% of consolidated borrowing as of December '25. In terms of outlook, in terms of operating efficiencies, just on that from an outlook standpoint, given that we are in -- the year is virtually coming to an end, overall, we've taken a view that the top line growth or AUM growth will gravitate between 22% and 23%, but more likely to be 22% on a full year basis. Given the actions that we have taken in the MSME business, that's something that you'll see, which has grown in this -- in quarter 3 only by 11%. We think it will still take us two to three more quarters before we are back to 20s growth in that business. So based on the conscious decision that the company has taken to slow it down, we will have some level of impact.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 22.0,
+      "target_high": 23.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-07",
+      "calls": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "The company estimates its fee and charges to grow by 13 to 15% in FY26.",
+          "document": "BAJFINANCE_02052025181819_Transcriptintimation29042025.pdf"
+        },
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "The AUM growth estimates of AUM remain at 24 to 25% aided by new lines of businesses launched in last two to three years.",
+          "document": "BAJFINANCE_02052025181819_Transcriptintimation29042025.pdf"
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 9,
+          "quote": "So I think on the fee income side, we have guided for 13% to 15% for the current year.",
+          "document": "BAJFINANCE_28072025123032_Transcriptintimation24072025.pdf"
+        },
+        {
+          "date": "2025-11-13",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "And we now think the growth will be in the region of 22 -23% as compared to our earlier assessment",
+          "document": "BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf"
+        },
+        {
+          "date": "2025-11-13",
+          "call_period": "2025-09-30",
+          "page": 17,
+          "quote": "All put together, we will see 13% to 15% growth in the current year.",
+          "document": "BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf"
+        },
+        {
+          "date": "2026-02-07",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "overall, we've taken a view that the top line growth or AUM growth will gravitate between 22% and 23%, but more likely to be 22%",
+          "document": "BAJFINANCE_07022026151022_BFL_Investor_Call_outcome_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "13\u201315%",
+          "change": "set",
+          "page": 6,
+          "quote": "The company estimates its fee and charges to grow by 13 to 15% in FY26.",
+          "superseded": true
+        },
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "24\u201325%",
+          "change": "raised",
+          "page": 6,
+          "quote": "The AUM growth estimates of AUM remain at 24 to 25% aided by new lines of businesses launched in last two to three years.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "value": "13\u201315%",
+          "change": "cut",
+          "page": 9,
+          "quote": "So I think on the fee income side, we have guided for 13% to 15% for the current year.",
+          "superseded": true
+        },
+        {
+          "date": "2025-11-13",
+          "call_period": "2025-09-30",
+          "value": "22\u201323%",
+          "change": "raised",
+          "page": 4,
+          "quote": "And we now think the growth will be in the region of 22 -23% as compared to our earlier assessment",
+          "superseded": true
+        },
+        {
+          "date": "2025-11-13",
+          "call_period": "2025-09-30",
+          "value": "13\u201315%",
+          "change": "cut",
+          "page": 17,
+          "quote": "All put together, we will see 13% to 15% growth in the current year.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-07",
+          "call_period": "2025-12-31",
+          "value": "22\u201323%",
+          "change": "raised",
+          "page": 4,
+          "quote": "overall, we've taken a view that the top line growth or AUM growth will gravitate between 22% and 23%, but more likely to be 22%",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth 16\u201317 for FY2026",
+      "source_quote": "We now expect to add 16 to 17 million new customers in FY '26.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "16\u201317",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Page 3 of 18 Customer franchise, a key driver of our growth momentum for future years, expanded to cross 110 million to end at 110.64 million. We added 4.13 million new customers in Q2 alone. We now expect to add 16 to 17 million new customers in FY '26. In general, from a growth standpoint, if I look at the outlook, the company has decided to take a prudent and balanced stance on AUM growth for FY '26. And we now think the growth will be in the region of 22 -23% as compared to our earlier assessment of 24 -25% due to a set of risk actions that we have taken in MSME business, and the revised assessment provided by BHF L on its AUM growth for FY '26. So we now would circle up our guidance to 22- 23% growth for full year versus 24-25% that we had pencilled in January'25, when we talked about.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 16.0,
+      "target_high": 17.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-13",
+      "calls": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "The customer franchise we remain confident to add 14 to 16 million customers in FY26.",
+          "document": "BAJFINANCE_02052025181819_Transcriptintimation29042025.pdf"
+        },
+        {
+          "date": "2025-11-13",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "We now expect to add 16 to 17 million new customers in FY '26.",
+          "document": "BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "14\u201316",
+          "change": "set",
+          "page": 6,
+          "quote": "The customer franchise we remain confident to add 14 to 16 million customers in FY26.",
+          "superseded": true
+        },
+        {
+          "date": "2025-11-13",
+          "call_period": "2025-09-30",
+          "value": "16\u201317",
+          "change": "raised",
+          "page": 4,
+          "quote": "We now expect to add 16 to 17 million new customers in FY '26.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 185\u2013195 bps for FY2026",
+      "source_quote": "We continue to hold 185 - 195 basis points of guardrail for the current year on a full year basis.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_28072025123032_Transcriptintimation24072025.pdf",
+      "speaker": "Sandeep Jain",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "185\u2013195 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "As a result, there will be a reset to 13%, 15% number in the FY '26 outcome. That continues to hold true. As far as credit cost is concerned, I think 2.02% as a number for the current quarter was 5 basis points higher on a sequential basis, largely flat on a Y -o-Y basis. We continue to hold 185 - 195 basis points of guardrail for the current year on a full year basis. You will see a sideways movement probably in Q2, if all goes well. And probably a decline from quarter 3 and quarter 4 onwards, quarter 3 onwards. Having said so, I think one of the important driver will be the auto finance vertical, which will start to become smaller and smaller quarter -by-quarter.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 185.0,
+      "target_high": 195.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "Cost of fund is estimated to go down by 10 to 15 bps in FY26.",
+          "document": "BAJFINANCE_02052025181819_Transcriptintimation29042025.pdf"
+        },
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "OPEX to NTI is estimated to improve by 40 to 50 bps from our current level",
+          "document": "BAJFINANCE_02052025181819_Transcriptintimation29042025.pdf"
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 9,
+          "quote": "I think we are reasonably confident that probably 10 basis points of NIM expansion could happen by end of the year.",
+          "document": "BAJFINANCE_28072025123032_Transcriptintimation24072025.pdf"
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 9,
+          "quote": "We continue to hold 185 - 195 basis points of guardrail for the current year on a full year basis.",
+          "document": "BAJFINANCE_28072025123032_Transcriptintimation24072025.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "10\u201315 bps",
+          "change": "set",
+          "page": 6,
+          "quote": "Cost of fund is estimated to go down by 10 to 15 bps in FY26.",
+          "superseded": true
+        },
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "40\u201350 bps",
+          "change": "raised",
+          "page": 6,
+          "quote": "OPEX to NTI is estimated to improve by 40 to 50 bps from our current level",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "value": "5\u201310 bps",
+          "change": "cut",
+          "page": 9,
+          "quote": "I think we are reasonably confident that probably 10 basis points of NIM expansion could happen by end of the year.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "value": "185\u2013195 bps",
+          "change": "raised",
+          "page": 9,
+          "quote": "We continue to hold 185 - 195 basis points of guardrail for the current year on a full year basis.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth 25\u201340 bps for FY2027",
+      "source_quote": "We remain pretty comfortable place to deliver a 25 to 40 basis point improvement in FY27 on opex-to-NTI.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_23102026145254_BFL_Investor_Call_outcome_Transcript_for_filing.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "25\u201340 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "And hopefully, we will see some momentum here as we move forward. Opex to total income improved to 33%. And despite continued investments that we are making in gold loan branches, MFI branches and technology transformation. We remain pretty comfortable place to deliver a 25 to 40 basis point improvement in FY27 on opex-to-NTI. Now on credit quality, loan loss to average AUF improved to 1.56% from 1.88% last year. As a measure of prudence, we recognized, as I said, a macroeconomic overlay of 337 crores. Excluding this provision, the loan losses and provisions actually declined year-on-year by 12% and loan loss to average AUF in the process would look to be like 1.32%.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 25.0,
+      "target_high": 40.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-23",
+      "calls": [
+        {
+          "date": "2026-10-23",
+          "call_period": "2026-09-30",
+          "page": 4,
+          "quote": "We remain pretty comfortable place to deliver a 25 to 40 basis point improvement in FY27 on opex-to-NTI.",
+          "document": "BAJFINANCE_23102026145254_BFL_Investor_Call_outcome_Transcript_for_filing.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 26\u201327% for FY2027",
+      "source_quote": "I would say probably between 26%, 27% growth we should deliver now on a full year basis.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_23102026145254_BFL_Investor_Call_outcome_Transcript_for_filing.pdf",
+      "speaker": "Rajeev Jain",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "26\u201327%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "What is the outlook on margins, yes? Rajeev Jain: So, I would say FY27, two quarters gone. We're seeing the early onset of festival first 9, 10 days. I would say probably between 26%, 27% growth we should deliver now on a full year basis. I think that's just medium term, we maintain a guidance of 20% to 25% on a year lower here and a year higher there. So that's the second point. On NIM, clearly, at this point in time, we are baking in two more increases in the current year that would take us to 6% kind of rates.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 26.0,
+      "target_high": 27.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-23",
+      "calls": [
+        {
+          "date": "2026-10-23",
+          "call_period": "2026-09-30",
+          "page": 12,
+          "quote": "I would say probably between 26%, 27% growth we should deliver now on a full year basis.",
+          "document": "BAJFINANCE_23102026145254_BFL_Investor_Call_outcome_Transcript_for_filing.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 10\u201315 bps for FY2027",
+      "source_quote": "moderation 10 - 15 basis points is what we foresee at this juncture",
+      "page": 14,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04082026181739_BFL_Investor_Call_outcome_Transcript.pdf",
+      "speaker": "Rajeev Jain",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10\u201315 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Kunal Shah: Got it. And margins? Rajeev Jain: Margins give us one more quarter, plus/minus as Sandeep is not here, I'm missing him. Whatever Sandeep has guided for or what we've said, I think that moderation 10 - 15 basis points is what we foresee at this juncture, give us a quarter. I'm not hesitant. I want to make the point that you may say why are you hesitant? What are you thinking?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 10.0,
+      "target_high": 15.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-04",
+      "calls": [
+        {
+          "date": "2026-02-07",
+          "call_period": "2025-12-31",
+          "page": 8,
+          "quote": "We foresee that the number next year as we enter could be anywhere between 165 to 175 basis points, that's the number",
+          "document": "BAJFINANCE_07022026151022_BFL_Investor_Call_outcome_Transcript.pdf"
+        },
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "On opex to NTI, we expect to see continued improvement of 25 to 40 basis points from current levels.",
+          "document": "BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf"
+        },
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "page": 4,
+          "quote": "Overall, we are confident of delivering 25 to 40 basis points improvement for FY '27 in opex to NTI",
+          "document": "BAJFINANCE_04082026181739_BFL_Investor_Call_outcome_Transcript.pdf"
+        },
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "page": 14,
+          "quote": "moderation 10 - 15 basis points is what we foresee at this juncture",
+          "document": "BAJFINANCE_04082026181739_BFL_Investor_Call_outcome_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-02-07",
+          "call_period": "2025-12-31",
+          "value": "165\u2013175 bps",
+          "change": "set",
+          "page": 8,
+          "quote": "We foresee that the number next year as we enter could be anywhere between 165 to 175 basis points, that's the number",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "value": "25\u201340 bps",
+          "change": "cut",
+          "page": 7,
+          "quote": "On opex to NTI, we expect to see continued improvement of 25 to 40 basis points from current levels.",
+          "superseded": true
+        },
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "value": "25\u201340 bps",
+          "change": "maintained",
+          "page": 4,
+          "quote": "Overall, we are confident of delivering 25 to 40 basis points improvement for FY '27 in opex to NTI",
+          "superseded": true
+        },
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "value": "10\u201315 bps",
+          "change": "cut",
+          "page": 14,
+          "quote": "moderation 10 - 15 basis points is what we foresee at this juncture",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth 15\u201317 for FY2027",
+      "source_quote": "In terms of customer franchise, we continue to be confident of adding 15 - 17 million new customers in FY27.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15\u201317",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Subject to that, the first point is on transformation making the business AI ready. I have already talked about it. We will see significant acceleration and deployment of AI use cases across revenue, cost, customer engagement, underwriting, controllership, security as a firm. In terms of customer franchise, we continue to be confident of adding 15 - 17 million new customers in FY27. In terms of AUM, we're confident of a 20% to 24% AUM growth, aided by new businesses that we've launched in the last few years as they begin to scale. Even last year, they contributed 3% of the total growth. Rather 3.5% of total growth even in the previous fiscal.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 15.0,
+      "target_high": 17.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-04",
+      "calls": [
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "In terms of customer franchise, we continue to be confident of adding 15 - 17 million new customers in FY27.",
+          "document": "BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 20\u201324% for FY2027",
+      "source_quote": "In terms of AUM, we're confident of a 20% to 24% AUM growth",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20\u201324%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "I have already talked about it. We will see significant acceleration and deployment of AI use cases across revenue, cost, customer engagement, underwriting, controllership, security as a firm. In terms of customer franchise, we continue to be confident of adding 15 - 17 million new customers in FY27. In terms of AUM, we're confident of a 20% to 24% AUM growth, aided by new businesses that we've launched in the last few years as they begin to scale. Even last year, they contributed 3% of the total growth. Rather 3.5% of total growth even in the previous fiscal. And as we gain greater confidence, our market share in those businesses and their contribution to the business should grow.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 20.0,
+      "target_high": 24.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-04",
+      "calls": [
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "In terms of AUM, we're confident of a 20% to 24% AUM growth",
+          "document": "BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth 145\u2013160 bps for FY2027",
+      "source_quote": "And against that, you're guiding for 145 to 160 bps next year, full year.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf",
+      "speaker": "Sandeep Jain",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "145\u2013160 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Abhishek Murarka: Yes, so there, your number is gross loan provisions of INR 2,126 crores and then INR 260 crores of recovery. So the net loan provision is INR 1,866 crores. That INR 1,866 crores works out to 165 bps in 4Q. And against that, you're guiding for 145 to 160 bps next year, full year. Is that the right understanding? Yes, that is perfect, right? Rajeev Jain: Yes.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": 145.0,
+      "target_high": 160.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-04",
+      "calls": [
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "page": 9,
+          "quote": "And against that, you're guiding for 145 to 160 bps next year, full year.",
+          "document": "BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 10\u201312% for FY2026",
+      "source_quote": "We now expect MSME business to grow in the current full fiscal by 10-12% only.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10\u201312%",
+      "status": "segment_level",
+      "note": "MSME guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "On credit cost, let me just give you a double-click on it to give you some texture. So MSME business remains under watch and company has taken significant risk actions. We have virtually cut MSME business by 25% in our unsecured MSME volumes. We now expect MSME business to grow in the current full fiscal by 10-12% only. The captive 2- and 3- wheeler business continues to -- which contributes to 1.5% of AUM, but accounts for 9% of the overall loan loss also continues to run down. That should also lead to significant improvement in loan loss to average AUM metric in second half of the year and also in FY'27.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "MSME",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": 12.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-13",
+      "calls": [
+        {
+          "date": "2025-11-13",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "We now expect MSME business to grow in the current full fiscal by 10-12% only.",
+          "document": "BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [
+    {
+      "promise": "Revenue growth 20\u201325% for a longer horizon",
+      "source_quote": "I think just medium term, we maintain a guidance of 20% to 25% on a year lower here and a year higher there.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_23102026145254_BFL_Investor_Call_outcome_Transcript_for_filing.pdf",
+      "speaker": "Rajeev Jain",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20\u201325%",
+      "status": "long_term",
+      "note": "The passage says mid-term or near-term, not a fiscal year or a quarter.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "I think just medium term, we maintain a guidance of 20% to 25% on a year lower here and a year higher there.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 20.0,
+      "target_high": 25.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-23",
+      "calls": [
+        {
+          "date": "2026-10-23",
+          "call_period": "2026-09-30",
+          "page": 12,
+          "quote": "I think just medium term, we maintain a guidance of 20% to 25% on a year lower here and a year higher there.",
+          "document": "BAJFINANCE_23102026145254_BFL_Investor_Call_outcome_Transcript_for_filing.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "revisions": {
+    "raised": 6,
+    "cut": 5,
+    "maintained": 1,
+    "items": [
+      {
+        "promise": "EBITDA margin 10\u201315 bps for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-02-07",
+            "value": "165\u2013175 bps",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-04",
+            "value": "25\u201340 bps",
+            "change": "cut"
+          },
+          {
+            "date": "2026-08-04",
+            "value": "25\u201340 bps",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-08-04",
+            "value": "10\u201315 bps",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 22\u201323% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-02",
+            "value": "13\u201315%",
+            "change": "set"
+          },
+          {
+            "date": "2025-05-02",
+            "value": "24\u201325%",
+            "change": "raised"
+          },
+          {
+            "date": "2025-07-28",
+            "value": "13\u201315%",
+            "change": "cut"
+          },
+          {
+            "date": "2025-11-13",
+            "value": "22\u201323%",
+            "change": "raised"
+          },
+          {
+            "date": "2025-11-13",
+            "value": "13\u201315%",
+            "change": "cut"
+          },
+          {
+            "date": "2026-02-07",
+            "value": "22\u201323%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "Volume growth 16\u201317 for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-02",
+            "value": "14\u201316",
+            "change": "set"
+          },
+          {
+            "date": "2025-11-13",
+            "value": "16\u201317",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 185\u2013195 bps for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-02",
+            "value": "10\u201315 bps",
+            "change": "set"
+          },
+          {
+            "date": "2025-05-02",
+            "value": "40\u201350 bps",
+            "change": "raised"
+          },
+          {
+            "date": "2025-07-28",
+            "value": "5\u201310 bps",
+            "change": "cut"
+          },
+          {
+            "date": "2025-07-28",
+            "value": "185\u2013195 bps",
+            "change": "raised"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.89,
+    "series": 0.83,
+    "guidance": 6.4,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.16,
+    "total": 8.29
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 6630,
+      "dropped": 2,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 6630
+  }
+}

@@ -1,0 +1,944 @@
+{
+  "symbol": "M&M",
+  "coverage": {
+    "transcripts_found": 6,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [
+      "2026-09-30"
+    ],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 10,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 20,
+    "pages_dropped_by_prefilter": 1,
+    "dropped_pages": [
+      {
+        "period": "2026-06-30",
+        "page": 18
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 57553.13,
+    "ebitda_margin_pct": 17.76,
+    "pat": 4587.88,
+    "ttm_revenue": 222822.36,
+    "ttm_pat": 19384.63,
+    "ttm_ebitda_margin_pct": 18.09,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 57553.13,
+        "ebitda": 10221.46,
+        "ebitda_margin_pct": 17.76,
+        "ebit": 8389.58,
+        "ebit_margin_pct": 14.58,
+        "pbt": 6894.67,
+        "finance_costs": 2681.93,
+        "depreciation": 1831.88,
+        "other_income": 1187.02,
+        "pat": 4587.88,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 58187.57,
+        "ebitda": 10564.95,
+        "ebitda_margin_pct": 18.16,
+        "ebit": 8804.48,
+        "ebit_margin_pct": 15.13,
+        "pbt": 7260.6,
+        "finance_costs": 2559.91,
+        "depreciation": 1760.47,
+        "other_income": 1016.03,
+        "pat": 5454.54,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 54981.91,
+        "ebitda": 9716.44,
+        "ebitda_margin_pct": 17.67,
+        "ebit": 7773.76,
+        "ebit_margin_pct": 14.14,
+        "pbt": 6361.27,
+        "finance_costs": 2407.33,
+        "depreciation": 1942.68,
+        "other_income": 994.84,
+        "pat": 4667.57,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 52099.75,
+        "ebitda": 9813.6,
+        "ebitda_margin_pct": 18.84,
+        "ebit": 7650.71,
+        "ebit_margin_pct": 14.68,
+        "pbt": 6103.93,
+        "finance_costs": 2405.3,
+        "depreciation": 2162.89,
+        "other_income": 858.52,
+        "pat": 4674.64,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 46105.67,
+        "ebitda": 8929.09,
+        "ebitda_margin_pct": 19.37,
+        "ebit": 7260.2,
+        "ebit_margin_pct": 15.75,
+        "pbt": 5588.68,
+        "finance_costs": 2347.03,
+        "depreciation": 1668.89,
+        "other_income": 675.51,
+        "pat": 3673.32,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 45529.19,
+        "ebitda": 8227.8,
+        "ebitda_margin_pct": 18.07,
+        "ebit": 6680.24,
+        "ebit_margin_pct": 14.67,
+        "pbt": 5165.97,
+        "finance_costs": 2431.19,
+        "depreciation": 1547.56,
+        "other_income": 916.92,
+        "pat": 4083.32,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 22% for FY2026",
+      "source_quote": "Consolidated numbers, revenue up 22% year over year, year-to-date up 22% as well",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf",
+      "speaker": "Dr. Anish Shah",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "22%",
+      "status": "pending",
+      "note": "The year before FY2026 is outside the series, so growth is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "But despite that, we have got a good outcome for growth gems right now and on balance consolidated profit is up 28%, accounting for three one-offs. First is gain from land sale last year, second is gain from PLI this year, what was recorded in this quarter but for prior quarters and therefore we have counted the prior quarters part obviously as a one-off and are not taking that gain into account and third is the tax payment on SML Isuzu transaction, of about 217 crores. So those are the three that we have taken out and therefore we want to show the operating profit numbers, which is up 28%, ROE annualized is up 19%, with my standard caveat which is please do not expect 19% going forward, it will always be in the range of 18 and could be slightly higher or below that. Consolidated numbers, revenue up 22% year over year, year-to-date up 22% as well, so it is not just a quarter, it is performance for the year, profit operating up 28% for the quarter, 29% year- to-date and therefore I want to go back to the reason for the word delighted is, this time we have got all our businesses really contributing in a very meaningful way. It is not just the numbers, it is the quality of the numbers behind all our businesses contributing that delivers that outcome. Drivers of consolidated PAT, auto and farm up 28%, tractor volume strong at 32%, auto volume given the transition a little lower at 13%. You will see a steady margin expansion,",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 22.0,
+      "target_high": 22.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-07",
+      "calls": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 3,
+          "quote": "Consolidated numbers, revenue up 22% year over year, year-to-date up 22% as well",
+          "document": "NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth 28% for 2025-09-30",
+      "source_quote": "profit operating up 28% for the quarter, 29% year-to-date",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf",
+      "speaker": "Dr. Anish Shah",
+      "period_promised": "2025-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "28%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "But despite that, we have got a good outcome for growth gems right now and on balance consolidated profit is up 28%, accounting for three one-offs. First is gain from land sale last year, second is gain from PLI this year, what was recorded in this quarter but for prior quarters and therefore we have counted the prior quarters part obviously as a one-off and are not taking that gain into account and third is the tax payment on SML Isuzu transaction, of about 217 crores. So those are the three that we have taken out and therefore we want to show the operating profit numbers, which is up 28%, ROE annualized is up 19%, with my standard caveat which is please do not expect 19% going forward, it will always be in the range of 18 and could be slightly higher or below that. Consolidated numbers, revenue up 22% year over year, year-to-date up 22% as well, so it is not just a quarter, it is performance for the year, profit operating up 28% for the quarter, 29% year- to-date and therefore I want to go back to the reason for the word delighted is, this time we have got all our businesses really contributing in a very meaningful way. It is not just the numbers, it is the quality of the numbers behind all our businesses contributing that delivers that outcome. Drivers of consolidated PAT, auto and farm up 28%, tractor volume strong at 32%, auto volume given the transition a little lower at 13%. You will see a steady margin expansion,",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": 28.0,
+      "target_high": 28.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-07",
+      "calls": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 3,
+          "quote": "profit operating up 28% for the quarter, 29% year-to-date",
+          "document": "NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 11% for 2025-09-30",
+      "source_quote": "E-commerce segment growth, revenue is up 11%",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf",
+      "speaker": "",
+      "period_promised": "2025-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "11%",
+      "status": "segment_level",
+      "note": "E-commerce guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Mahindra & Mahindra Limited November 4, 2025 Page 4 of 16 where we want it as yet but still more work to be done on that. E-commerce segment growth, revenue is up 11%, EBITDA is up 70 basis points at 5% and putting the business on a very solid turnaround track that we will start seeing more results for. Hospitality, occupancy hurt by some of the weather related issues in this quarter and that has been offset by average unit realization being much higher at 85%. We are starting to focus a lot more on quality and on the average unit realization, as compared to just number of members. So number of members, you will see 1% growth but this is a key area for us.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "E-commerce",
+      "metric_key": "revenue_growth",
+      "target_low": 11.0,
+      "target_high": 11.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-07",
+      "calls": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "farm revenue starting to deliver the potential that we have been talking about for some time, up 30%",
+          "document": "NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf"
+        },
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 5,
+          "quote": "E-commerce segment growth, revenue is up 11%",
+          "document": "NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "value": "30%",
+          "change": "set",
+          "page": 4,
+          "quote": "farm revenue starting to deliver the potential that we have been talking about for some time, up 30%",
+          "superseded": true
+        },
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "value": "11%",
+          "change": "cut",
+          "page": 5,
+          "quote": "E-commerce segment growth, revenue is up 11%",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "PAT growth 45% for 2025-09-30",
+      "source_quote": "that has overall resulted in a very strong number of operational performance, 45% profit after tax growth for this quarter.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf",
+      "speaker": "",
+      "period_promised": "2025-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "45%",
+      "status": "segment_level",
+      "note": "Mahindra Finance guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Controls, a lot of work has been done and the business has a much stronger set of controls now. We are looking to pivot to growth because we have got technology and data also largely in place with the Udan stack that we have talked about in the past going live and very strong adoption across our teams for Udan, which is effectively creating a whole new system architecture, much better customer experience and much easier process that will result in, not just customer delight but also lower costs as we go forward and that digital transformation is done. We also see a NIM improvement this time of 47 basis points, AUM growth of 13%. This is despite not really focusing on growth for the last couple of years but we will as I said earlier, pivot to growth now and that has overall resulted in a very strong number of operational performance, 45% profit after tax growth for this quarter. Tech Mahindra on track, gains in BFSI, manufacturing and retail in a tough industry. Accelerated our AI effort, have launched Orion. Margin progression is on track as has been outlined by us as well and therefore, we feel good about where this business is and again reflected in some ways in the operational PAT number for 35% growth.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Mahindra Finance",
+      "metric_key": "pat_growth",
+      "target_low": 45.0,
+      "target_high": 45.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-07",
+      "calls": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "therefore you see, the remarkable number of profit after tax growth of 54% for the farm business.",
+          "document": "NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf"
+        },
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "that has overall resulted in a very strong number of operational performance, 45% profit after tax growth for this quarter.",
+          "document": "NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "value": "54%",
+          "change": "set",
+          "page": 4,
+          "quote": "therefore you see, the remarkable number of profit after tax growth of 54% for the farm business.",
+          "superseded": true
+        },
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "value": "45%",
+          "change": "cut",
+          "page": 4,
+          "quote": "that has overall resulted in a very strong number of operational performance, 45% profit after tax growth for this quarter.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth at least 10% for FY2026",
+      "source_quote": "So low double digits, if you say 11 or 12, we're going to end this year at 24.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "segment_level",
+      "note": "Tractor guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "So, there's a lot of industry engagement with multiple government stakeholders. You know, in the tractor industry, often you'll ask about projections and often I've said we have no ability to project it. As recently as two months back, we said it will be low double digits and this year is going to end at twice that, literally. So low double digits, if you say 11 or 12, we're going to end this year at 24. So really, you know, even the ability to forecast next three months is not there. I wouldn't worry about, you know, what's going to happen in October and November, it's too early to worry about that. We will go into next year feeling optimistic and positive, but keeping in mind that we are on a very high base because this year is going to end at 24% growth, which no one expected, right.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Tractor",
+      "metric_key": "volume_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-17",
+      "calls": [
+        {
+          "date": "2025-05-09",
+          "call_period": "2025-03-31",
+          "page": 23,
+          "quote": "tractors growth outlook for FY26, I think you did mention on a very high single digit if I'm not wrong for FY26",
+          "document": "Sumeet_09052025120912_SEIntimationregardingTranscriptofAnalystMeet5thMay2025.pdf"
+        },
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "page": 3,
+          "quote": "Volume up 23% for both businesses.",
+          "document": "NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf"
+        },
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "page": 10,
+          "quote": "So low double digits, if you say 11 or 12, we're going to end this year at 24.",
+          "document": "NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-09",
+          "call_period": "2025-03-31",
+          "value": "7\u20139%",
+          "change": "set",
+          "page": 23,
+          "quote": "tractors growth outlook for FY26, I think you did mention on a very high single digit if I'm not wrong for FY26",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "value": "23%",
+          "change": "raised",
+          "page": 3,
+          "quote": "Volume up 23% for both businesses.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "value": "at least 10%",
+          "change": "cut",
+          "page": 10,
+          "quote": "So low double digits, if you say 11 or 12, we're going to end this year at 24.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 240 bps for FY2026",
+      "source_quote": "Margin is up 90 basis points for Auto, 240 basis points for Farm.",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "240 bps",
+      "status": "segment_level",
+      "note": "Farm guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "As we take that out, that increases the operating profit. Volume and margin growth, very strong for both Auto and Farm. Volume up 23% for both businesses. Margin is up 90 basis points for Auto, 240 basis points for Farm. Farm did have some impairments internationally and that dragged down the overall number, but domestic operating performance was up 64%. I want to highlight three , w hat we call , breakthrough performances. And while you will see some numbers on this page and the next page, the breakthrough performances are not because of the numbers.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Farm",
+      "metric_key": "ebitda_margin",
+      "target_low": 240.0,
+      "target_high": 240.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-17",
+      "calls": [
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "page": 3,
+          "quote": "Margin is up 90 basis points for Auto, 240 basis points for Farm.",
+          "document": "NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf"
+        },
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "page": 3,
+          "quote": "Margin is up 90 basis points for Auto, 240 basis points for Farm.",
+          "document": "NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "value": "90 bps",
+          "change": "set",
+          "page": 3,
+          "quote": "Margin is up 90 basis points for Auto, 240 basis points for Farm.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "value": "240 bps",
+          "change": "raised",
+          "page": 3,
+          "quote": "Margin is up 90 basis points for Auto, 240 basis points for Farm.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth 36% for FY2026",
+      "source_quote": "Farm volume up, from an export standpoint, 36%.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "36%",
+      "status": "segment_level",
+      "note": "Farm exports guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Margin up 90 basis points . New product launches you heard about have done very well. Besides revenue market share for SUVs, our LCV share has gone up 10 basis points also, at 51.9% now. Farm volume up, from an export standpoint, 36%. Market share down slightly, but in January we made that up for year -to-date as well. And Farm Machinery revenue is up 45%. So we are starting to see much faster growth from a Farm Machinery standpoint.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Farm exports",
+      "metric_key": "volume_growth",
+      "target_low": 36.0,
+      "target_high": 36.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-17",
+      "calls": [
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "SUV volume up 26%, continue to be number one there.",
+          "document": "NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf"
+        },
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "Farm volume up, from an export standpoint, 36%.",
+          "document": "NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "value": "26%",
+          "change": "set",
+          "page": 4,
+          "quote": "SUV volume up 26%, continue to be number one there.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "value": "36%",
+          "change": "raised",
+          "page": 4,
+          "quote": "Farm volume up, from an export standpoint, 36%.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 90 bps for FY2026",
+      "source_quote": "Margin up 90 basis points.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "90 bps",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Margin up 90 basis points.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "ebitda_margin",
+      "target_low": 90.0,
+      "target_high": 90.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-17",
+      "calls": [
+        {
+          "date": "2026-02-17",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "Margin up 90 basis points.",
+          "document": "NishaMandhana_17022026144818_SEIntimationregardingTranscriptofAnalystMeet11022026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 40% for FY2026",
+      "source_quote": "This is a growth vector for us and we are seeing a 40% growth in exports and hopefully we continue to see that",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "40%",
+      "status": "segment_level",
+      "note": "exports guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Auto, little more details on the auto business, revenue up 25%. As you have heard from us before, there will be a mismatch between revenue and profit growth for a few reasons and Rajesh will cover that in more detail as well. SUV penetration from an electric standpoint is 8.7%, up 90 basis points, sequentially quarter on quarter and export momentum is strong. This is a growth vector for us and we are seeing a 40% growth in exports and hopefully we continue to see that, be a meaningful growth vector as we go forward. Market share, this is a remarkable number, up 390 basis points from a revenue standpoint year over year for the same quarter, literally 4 percentage points of market share gain. LCV market share, despite it being 50% plus has increased as well by 100 basis points to 53.2% and that has resulted in the profit numbers that we have talked about. Farm, just outstanding execution on the ground, premium segment growth albeit from a small base, operational execution driving both profits and cash.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "exports",
+      "metric_key": "revenue_growth",
+      "target_low": 40.0,
+      "target_high": 40.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-07",
+      "calls": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "This is a growth vector for us and we are seeing a 40% growth in exports and hopefully we continue to see that",
+          "document": "NishaMandhana_07112025200225_SEIntimationregardingTranscriptofAnalystMeet04112025.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "product portfolio and its strength will help us grow faster than market in F26 as well",
+      "page": 18,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sumeet_09052025120912_SEIntimationregardingTranscriptofAnalystMeet5thMay2025.pdf",
+      "speaker": "Mr. Rajesh Jejurikar",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Amarjyoti Barua I was just going to add exports also are starting to Yeah, because of the new products, not necessarily because South Africa, Australia, very strong momentum in those markets now. Kapil Singh Sure. Dr. Anish Shah It is the strength of the product portfolio that's driving it and you know similar to your question, last year also when we said mid to high teens there was a question, are you sure because the market seems to be at a much lower level and as this year, we feel that the product portfolio and its strength will help us grow faster than market in F26 as well. Kapil Singh Sure, best wishes for that. That's it from my side. Divya Gulati Yeah.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-09",
+      "calls": [
+        {
+          "date": "2025-05-09",
+          "call_period": "2025-03-31",
+          "page": 18,
+          "quote": "product portfolio and its strength will help us grow faster than market in F26 as well",
+          "document": "Sumeet_09052025120912_SEIntimationregardingTranscriptofAnalystMeet5thMay2025.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBIT margin 15% for FY2027",
+      "source_quote": "as we close this phase that we talked about, which is by end of FY27 we get to 15% EBIT margin",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/AmitDodani_04082026194302_IntimationofTranscriptofearningcallQ1F27.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15%",
+      "status": "segment_level",
+      "note": "Tech Mahindra guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Tech Mahindra, performance driven by large deal wins by margin expansion and free cash flow. As a result, is up 94%. Continued focus on large deals, geographically we are diversifying and looking at reducing the margin gap. We will come out with the next phase for Tech Mahindra as we close this phase that we talked about, which is by end of FY27 we get to 15% EBIT margin and then we talk about the next phase as we go from there. But the one thing I would say for these businesses, as well as, for the next few I am going to talk about, an underlying theme is very strong execution across. That is one underlying theme that we have got and that is what is being able to deliver good results. Let us talk about some of the Growth Gems.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "geography",
+      "scope_name": "Tech Mahindra",
+      "metric_key": "ebit_margin",
+      "target_low": 15.0,
+      "target_high": 15.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-04",
+      "calls": [
+        {
+          "date": "2026-08-04",
+          "call_period": "2026-06-30",
+          "page": 4,
+          "quote": "as we close this phase that we talked about, which is by end of FY27 we get to 15% EBIT margin",
+          "document": "AmitDodani_04082026194302_IntimationofTranscriptofearningcallQ1F27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 5% for FY2027",
+      "source_quote": "F27 Outlook, we are expecting tractor to be mid -single digit, around 5%.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/AmitDodani_08052026203845_IntimationofTranscriptofQ4F26earningcallsmeet05052026.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "5%",
+      "status": "segment_level",
+      "note": "tractor guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Few of them are going to come out of the NU_IQ platform, which you are already aware of and you've seen. There'll be ICE and EV versions of that. So, that's what makes it to 10 plus 6. F27 Outlook, we are expecting tractor to be mid -single digit, around 5%. I'm sure you have a",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "tractor",
+      "metric_key": "volume_growth",
+      "target_low": 5.0,
+      "target_high": 5.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-08",
+      "calls": [
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "page": 11,
+          "quote": "F27 Outlook, we are expecting tractor to be mid -single digit, around 5%.",
+          "document": "AmitDodani_08052026203845_IntimationofTranscriptofQ4F26earningcallsmeet05052026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBIT margin 15% for FY2027",
+      "source_quote": "Tech Mahindra has its EBIT margin recovery on track at 11.1% this quarter with an F27 target of 15 %.",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Vandana_04082025194322_SE_Intimation_regarding_Transcript_of_Analyst_Meet_4th_Aug_2025SDsigned.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15%",
+      "status": "segment_level",
+      "note": "Tech Mahindra guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "A 50 basis point market share gain to 45.2%. Very significant especially in the 40s. Every basis point is valuable and our team's shown remarkable growth in a tough market overall. - And it's not just about growth, margins are very strong as well. - With Auto continuing at a 10% margin, excluding Electric SUVs, as Rajesh will explain in detail. - And Farm PBIT margin is 19.8%. As we move to Tech Mahindra and Mahindra Finance, what we see there is again very strong progress. - Tech Mahindra has its EBIT margin recovery on track at 11.1% this quarter with an F27 target of 15 %. - Mahindra Finance continues to focus on asset quality at 3.8% is well within the thresholds that the business has set. - Assets Under Management are up 15%. And while disbursement was a little slower, even the environment that we've been in, this is exactly the path that we want to be on and the business has shown very strong performance. And",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "segment",
+      "scope_name": "Tech Mahindra",
+      "metric_key": "ebit_margin",
+      "target_low": 15.0,
+      "target_high": 15.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-04",
+      "calls": [
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "page": 3,
+          "quote": "Tech Mahindra has its EBIT margin recovery on track at 11.1% this quarter with an F27 target of 15 %.",
+          "document": "Vandana_04082025194322_SE_Intimation_regarding_Transcript_of_Analyst_Meet_4th_Aug_2025SDsigned.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 3,
+    "cut": 3,
+    "maintained": 0,
+    "items": [
+      {
+        "promise": "Volume growth at least 10% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-09",
+            "value": "7\u20139%",
+            "change": "set"
+          },
+          {
+            "date": "2026-02-17",
+            "value": "23%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-02-17",
+            "value": "at least 10%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 240 bps for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2026-02-17",
+            "value": "90 bps",
+            "change": "set"
+          },
+          {
+            "date": "2026-02-17",
+            "value": "240 bps",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "Volume growth 36% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2026-02-17",
+            "value": "26%",
+            "change": "set"
+          },
+          {
+            "date": "2026-02-17",
+            "value": "36%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 11% for 2025-09-30",
+        "period": "2025-09-30",
+        "sequence": [
+          {
+            "date": "2025-11-07",
+            "value": "30%",
+            "change": "set"
+          },
+          {
+            "date": "2025-11-07",
+            "value": "11%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "PAT growth 45% for 2025-09-30",
+        "period": "2025-09-30",
+        "sequence": [
+          {
+            "date": "2025-11-07",
+            "value": "54%",
+            "change": "set"
+          },
+          {
+            "date": "2025-11-07",
+            "value": "45%",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 6,
+    "total": 6
+  },
+  "timing": {
+    "discover": 1.71,
+    "series": 0.71,
+    "guidance": 14.06,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.23,
+    "total": 16.72
+  },
+  "usage": {
+    "guidance": {
+      "calls": 3,
+      "cache_hits": 3,
+      "tokens": 12332,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 12332
+  }
+}

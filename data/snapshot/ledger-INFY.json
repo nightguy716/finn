@@ -1,0 +1,816 @@
+{
+  "rows": [
+    {
+      "kind": "change",
+      "note": "The same filing states this revenue guidance in constant currency.",
+      "page": 33,
+      "unit": "percent",
+      "basis": "constant_currency",
+      "calls": [
+        {
+          "date": "2026-07-01",
+          "page": 33,
+          "quote": "we are revising our revenue guidance to 1.5% to 3%.",
+          "document": "AnnPdfOpen.aspx?Pname=95f8af86-dc92-49dc-a7cf-ecce287f8cce.pdf",
+          "call_period": "2026-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "The lower end of the guidance assumes further deterioration in macro.",
+      "status": "not_scored",
+      "passage": "External Document \u00a9 2026 Infosys Limited 9 Considering lower-than-expected Q1 revenues and revi sed view of the rest of the year, we are revising our revenue guidance to 1.5% to 3%. This includes - approximately 1.7% contribution from recently closed acquisitions of Optimum Healthcare and Stratus - slightly over 1% impact from large a European Manufacturing client due to reduced client spend along with our conscious decision to not pursue certain deals that were not aligned to our return expectations - approximately 0.75% to 1% impac t from shift towards offshore. Overall business environment continues to remain volatile. The lower end of the guidance assumes further deterioration in macro.",
+      "promise": "Revenue growth 1.5\u20133% for FY2027",
+      "speaker": "",
+      "promised": "1.5\u20133%",
+      "verifier": {
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "External Document \u00a9 2026 Infosys Limited 9 Considering lower-than-expected Q1 revenues and revi sed view of the rest of the year, we are revising our revenue guidance to 1.5% to 3%.",
+          "metric_named": "Revenue growth 1.5\u20133% for FY2027",
+          "reported_basis": "we are revising our revenue guidance to 1.5% to 3%.",
+          "independent_of_named_event": "we are revising our revenue guidance to 1.5% to 3%."
+        },
+        "consolidated": true,
+        "metric_named": true,
+        "reported_basis": true,
+        "independent_of_named_event": true
+      },
+      "call_date": "2026-07-01",
+      "revisions": [],
+      "basis_note": "The same filing states this revenue guidance in constant currency.",
+      "metric_key": "revenue_growth",
+      "scope_name": "",
+      "target_low": 1.5,
+      "call_period": "2026-06-30",
+      "quote_check": "ok",
+      "target_high": 3.0,
+      "actual_value": null,
+      "source_quote": "we are revising our revenue guidance to 1.5% to 3%.",
+      "actual_detail": "H1 FY2027 revenue 97,455.00 versus H1 FY2026 revenue 86,769.00",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2027",
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95f8af86-dc92-49dc-a7cf-ecce287f8cce.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "FY2025 is missing 2024-06-30, 2024-09-30, 2024-12-31, 2025-03-31, so the year is not checked.",
+      "page": 29,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2025-04-01",
+          "page": 29,
+          "quote": "Our operating margin guidance for the year is 20% to 22%.",
+          "document": "AnnPdfOpen.aspx?Pname=8c8bbc00-087d-4d75-9171-d37a3f83a170.pdf",
+          "call_period": "2025-03-31"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "pending",
+      "passage": "External Document \u00a9 2025 Infosys Limited 8 Exiting FY'25, global uncertainties relating to tariffs and impact of that on client sentiment and spend are taking center stage. Basis our assessment of the current ma croeconomic environment and the visibility that we have today, we expect FY'26 grow th to be 0% to 3% in constant currency terms. This excludes the acquisition that we announced t oday and this assumes a reduction in third-party revenues versus FY'25 based on existing deals and t he new deals in pipeline that we have today. Our operating margin guidance for the year is 20% to 22%. We will continue to keep a close watch on econ omic environment and its impact on client budgets and reassess our guidance as we progress during the year. With that, we can open the floor for questions. Moderator Thank you very much.",
+      "promise": "EBITDA margin 20\u201322% for FY2025",
+      "speaker": "Jayesh Sanghrajka",
+      "promised": "20\u201322%",
+      "call_date": "2025-04-01",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebitda_margin",
+      "scope_name": "",
+      "target_low": 20.0,
+      "call_period": "2025-03-31",
+      "quote_check": "ok",
+      "target_high": 22.0,
+      "actual_value": null,
+      "source_quote": "Our operating margin guidance for the year is 20% to 22%.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2025",
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8c8bbc00-087d-4d75-9171-d37a3f83a170.pdf"
+    },
+    {
+      "kind": "change",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 13,
+      "unit": "percent",
+      "basis": "constant_currency",
+      "calls": [
+        {
+          "date": "2025-07-01",
+          "page": 13,
+          "quote": "We are now talking about 1% to 3% growth",
+          "document": "AnnPdfOpen.aspx?Pname=10c91fa1-f133-476d-ada3-0143acdd9846.pdf",
+          "call_period": "2025-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "The proof of that was you saw last year, we delivered 50 basis point expansion despite multiple headwinds. We still see the Project Maximus delivering on multiple counts. That will be offset by the headwinds like lower growth. We are now talking about 1% to 3% growth, so the fixed cost wi ll play out, the fixed cost of the growth areas will play out. The compensation-related things will play out becaus e now we will have a full year impact of the compensation, etc. Some of the large deals will st art ramping up, and there will be transition effort, etc., where we incur costs, but we do not get re venue in the first few months or weeks when the transition happens. So, all of that will be the puts and takes, we still aspire to increase margins from where we are.",
+      "promise": "Revenue growth 1\u20133% for FY2026",
+      "speaker": "Jayesh Sanghrajka",
+      "promised": "1\u20133%",
+      "call_date": "2025-07-01",
+      "revisions": [],
+      "basis_note": "The same filing states this revenue guidance in constant currency.",
+      "metric_key": "revenue_growth",
+      "scope_name": "",
+      "target_low": 1.0,
+      "call_period": "2025-06-30",
+      "quote_check": "ok",
+      "target_high": 3.0,
+      "actual_value": null,
+      "source_quote": "We are now talking about 1% to 3% growth",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2026",
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=10c91fa1-f133-476d-ada3-0143acdd9846.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 22,
+      "unit": "percent",
+      "basis": "constant_currency",
+      "calls": [
+        {
+          "date": "2025-07-01",
+          "page": 22,
+          "quote": "we have revised our FY26 revenue guidance to 1% to 3% in constant currency terms.",
+          "document": "AnnPdfOpen.aspx?Pname=10c91fa1-f133-476d-ada3-0143acdd9846.pdf",
+          "call_period": "2025-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "Growth for us is led by ramp-up of previously won large deals. Clients in Hi-Tech remain cautious due to macro headwi nds and geopolitical tensions, leading to cost pressures and budget cuts. Discretionary programs are paused bec ause of significant investments in Gen AI GPU and AI. Driven by our Q1 performance and our current assessm ent of the rest of the year, we have revised our FY26 revenue guidance to 1% to 3% in constant currency terms. This continues to assume a reduction in third-party revenues versus FY25 based on existing deals and new deals in the pipeline. Our operating margin guidance for the year is 20% to 22%. We will continue to keep a close watch in econom ic environment and its impact on client budgets and reassess our guidance as we progress during the year.",
+      "promise": "EBIT margin 1\u20133% for FY2026",
+      "speaker": "",
+      "promised": "1\u20133%",
+      "call_date": "2025-07-01",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 1.0,
+      "call_period": "2025-06-30",
+      "quote_check": "ok",
+      "target_high": 3.0,
+      "actual_value": null,
+      "source_quote": "we have revised our FY26 revenue guidance to 1% to 3% in constant currency terms.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "FY2026",
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=10c91fa1-f133-476d-ada3-0143acdd9846.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 6,
+      "unit": "percent",
+      "basis": "constant_currency",
+      "calls": [
+        {
+          "date": "2026-04-01",
+          "page": 4,
+          "quote": "Our revenue growth guidance for the financial year 2027 is 1.5% to 3.5% growth year -on-year in constant currency terms.",
+          "document": "AnnPdfOpen.aspx?Pname=2ab7badf-388c-4dab-bfcc-3e128677734c.pdf",
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-04-01",
+          "page": 31,
+          "quote": "We expect FY27 growth to be 1.5% to 3.5% in constant currency terms.",
+          "document": "AnnPdfOpen.aspx?Pname=2ab7badf-388c-4dab-bfcc-3e128677734c.pdf",
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-07-01",
+          "page": 6,
+          "quote": "we are changing our revenue growth guidance to 1.5% to 3% Y-on-Y growth in constant currency terms.",
+          "document": "AnnPdfOpen.aspx?Pname=95f8af86-dc92-49dc-a7cf-ecce287f8cce.pdf",
+          "call_period": "2026-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "External Document \u00a9 2025 Infosys Limited 5 Overall, we continue to see the macro environment remaining uncertain. With our Q1 results and a view for the rest of the financial year, we are changing our revenue growth guidance to 1.5% to 3% Y-on-Y growth in constant currency terms. Our operating margin guidance remains the same at 20% to 22% operating margin. Thank you. And with that, let's open it up for questions.",
+      "promise": "EBIT margin 1.5\u20133% for FY2027",
+      "speaker": "Salil Parekh",
+      "promised": "1.5\u20133%",
+      "call_date": "2026-07-01",
+      "revisions": [
+        {
+          "date": "2026-04-01",
+          "page": 4,
+          "quote": "Our revenue growth guidance for the financial year 2027 is 1.5% to 3.5% growth year -on-year in constant currency terms.",
+          "value": "1.5\u20133.5%",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-04-01",
+          "page": 31,
+          "quote": "We expect FY27 growth to be 1.5% to 3.5% in constant currency terms.",
+          "value": "1.5\u20133.5%",
+          "change": "maintained",
+          "superseded": true,
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-07-01",
+          "page": 6,
+          "quote": "we are changing our revenue growth guidance to 1.5% to 3% Y-on-Y growth in constant currency terms.",
+          "value": "1.5\u20133%",
+          "change": "maintained",
+          "superseded": false,
+          "call_period": "2026-06-30"
+        }
+      ],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 1.5,
+      "call_period": "2026-06-30",
+      "quote_check": "ok",
+      "target_high": 3.0,
+      "actual_value": null,
+      "source_quote": "we are changing our revenue growth guidance to 1.5% to 3% Y-on-Y growth in constant currency terms.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "FY2027",
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95f8af86-dc92-49dc-a7cf-ecce287f8cce.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "definition ambiguous. EBIT 20.2% inside the 20\u201322% band; EBITDA 22.94% above it",
+      "page": 4,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2025-07-01",
+          "page": 22,
+          "quote": "Our operating margin guidance for the year is 20% to 22%.",
+          "document": "AnnPdfOpen.aspx?Pname=10c91fa1-f133-476d-ada3-0143acdd9846.pdf",
+          "call_period": "2025-06-30"
+        },
+        {
+          "date": "2025-10-01",
+          "page": 3,
+          "quote": "And our operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
+          "document": "AnnPdfOpen.aspx?Pname=cf4a6179-8e43-4959-b055-91f1f7f4f076.pdf",
+          "call_period": "2025-09-30"
+        },
+        {
+          "date": "2026-01-01",
+          "page": 4,
+          "quote": "Our operating margin guidance for the financial year remains the same at 20% to 22%.",
+          "document": "AnnPdfOpen.aspx?Pname=373b3501-e2a7-4ba4-bdd1-83f6bc21c25c.pdf",
+          "call_period": "2025-12-31"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "not_scored",
+      "passage": "We will share a comprehensive view of our approach at an investor day later this quarter. With a strong performance in this quarter, we have revised our revenue growth guidance for the financial year. The new revenue growth guidance for th is financial year is 3% to 3.5% growth in constant currency. Our operating margin guidance for the financial year remains the same at 20% to 22%. With that, let us open it up for questions. Rishi Basu Thank you, Salil. We will now open the floor for ques tions.",
+      "promise": "Operating margin 20\u201322% for FY2026",
+      "speaker": "Management",
+      "promised": "20\u201322%",
+      "readings": [
+        {
+          "actual": "20.2%",
+          "detail": "FY2026 EBIT margin 20.20%.",
+          "metric": "EBIT",
+          "status": "delivered",
+          "actual_value": 20.2
+        },
+        {
+          "actual": "22.94%",
+          "detail": "FY2026 EBITDA margin 22.94%.",
+          "metric": "EBITDA",
+          "status": "partly",
+          "actual_value": 22.94
+        }
+      ],
+      "call_date": "2026-01-01",
+      "revisions": [
+        {
+          "date": "2025-07-01",
+          "page": 22,
+          "quote": "Our operating margin guidance for the year is 20% to 22%.",
+          "value": "20\u201322%",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2025-06-30"
+        },
+        {
+          "date": "2025-10-01",
+          "page": 3,
+          "quote": "And our operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
+          "value": "20\u201322%",
+          "change": "maintained",
+          "superseded": true,
+          "call_period": "2025-09-30"
+        },
+        {
+          "date": "2026-01-01",
+          "page": 4,
+          "quote": "Our operating margin guidance for the financial year remains the same at 20% to 22%.",
+          "value": "20\u201322%",
+          "change": "maintained",
+          "superseded": false,
+          "call_period": "2025-12-31"
+        }
+      ],
+      "basis_note": "",
+      "definition": "ambiguous",
+      "metric_key": "ebitda_margin",
+      "scope_name": "",
+      "target_low": 20.0,
+      "call_period": "2025-12-31",
+      "quote_check": "ok",
+      "target_high": 22.0,
+      "actual_value": null,
+      "source_quote": "Our operating margin guidance for the financial year remains the same at 20% to 22%.",
+      "actual_detail": "FY2026 EBITDA margin 22.94%.",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2026",
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=373b3501-e2a7-4ba4-bdd1-83f6bc21c25c.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "definition ambiguous. EBIT 21.03% inside the 20\u201322% band; EBITDA 23.7% above it",
+      "page": 30,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2026-04-01",
+          "page": 4,
+          "quote": "Our operating margin guidance for financial year '27 is 20% to 22%.",
+          "document": "AnnPdfOpen.aspx?Pname=2ab7badf-388c-4dab-bfcc-3e128677734c.pdf",
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-04-01",
+          "page": 31,
+          "quote": "Our operating margins guidance for the year is 20% to 22%.",
+          "document": "AnnPdfOpen.aspx?Pname=2ab7badf-388c-4dab-bfcc-3e128677734c.pdf",
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-07-01",
+          "page": 6,
+          "quote": "Our operating margin guidance remains the same at 20% to 22% operating margin.",
+          "document": "AnnPdfOpen.aspx?Pname=95f8af86-dc92-49dc-a7cf-ecce287f8cce.pdf",
+          "call_period": "2026-06-30"
+        },
+        {
+          "date": "2026-10-01",
+          "page": 30,
+          "quote": "Our operating margin guidance is 20% to 22%",
+          "document": "AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+          "call_period": "2026-09-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "not_scored",
+      "passage": "External Document \u00a9 2026 Infosys Limited 7 deterioration in macro while the upper end assu mes improvement. FS and EURS are expected to grow higher than the company average. Our as sumptions regarding acquisitions, the large deal European manufacturing client and the shift towards offshore delivery remains broadly unchanged. Our operating margin guidance is 20% to 22%. H2 margins will be impacted by compensation hikes, softer revenue seasonality, continued sharing of AI driven productivity benefits and ramp-up of large deals. These headwinds will be partly offset by initiatives under Project Maximus. In summary, while growth in the first half was lower than expectations, deal signing during the period and a strong large deal pipeline with few mega deals provide a solid foundation for future growth.",
+      "promise": "Operating margin 20\u201322% for FY2027",
+      "speaker": "",
+      "promised": "20\u201322%",
+      "readings": [
+        {
+          "actual": "21.03%",
+          "detail": "H1 FY2027 EBIT margin 21.03% versus 20.92% a year earlier (+11 bps)",
+          "metric": "EBIT",
+          "status": "tracking_on_track",
+          "actual_value": 21.03
+        },
+        {
+          "actual": "23.7%",
+          "detail": "H1 FY2027 EBITDA margin 23.70% versus 23.60% a year earlier (+10 bps)",
+          "metric": "EBITDA",
+          "status": "tracking_ahead",
+          "actual_value": 23.7
+        }
+      ],
+      "call_date": "2026-10-01",
+      "revisions": [
+        {
+          "date": "2026-04-01",
+          "page": 4,
+          "quote": "Our operating margin guidance for financial year '27 is 20% to 22%.",
+          "value": "20\u201322%",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-04-01",
+          "page": 31,
+          "quote": "Our operating margins guidance for the year is 20% to 22%.",
+          "value": "20\u201322%",
+          "change": "maintained",
+          "superseded": true,
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-07-01",
+          "page": 6,
+          "quote": "Our operating margin guidance remains the same at 20% to 22% operating margin.",
+          "value": "20\u201322%",
+          "change": "maintained",
+          "superseded": true,
+          "call_period": "2026-06-30"
+        },
+        {
+          "date": "2026-10-01",
+          "page": 30,
+          "quote": "Our operating margin guidance is 20% to 22%",
+          "value": "20\u201322%",
+          "change": "maintained",
+          "superseded": false,
+          "call_period": "2026-09-30"
+        }
+      ],
+      "basis_note": "",
+      "definition": "ambiguous",
+      "metric_key": "ebitda_margin",
+      "scope_name": "",
+      "target_low": 20.0,
+      "call_period": "2026-09-30",
+      "quote_check": "ok",
+      "target_high": 22.0,
+      "actual_value": null,
+      "source_quote": "Our operating margin guidance is 20% to 22%",
+      "actual_detail": "H1 FY2027 EBITDA margin 23.70% versus 23.60% a year earlier (+10 bps)",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2027",
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "page": 33,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2026-07-01",
+          "page": 33,
+          "quote": "Margin guidance is maintained at 20% to 22%.",
+          "document": "AnnPdfOpen.aspx?Pname=95f8af86-dc92-49dc-a7cf-ecce287f8cce.pdf",
+          "call_period": "2026-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "not_scored",
+      "passage": "We are taking decisive actions to capitalize on the opportunities ahead, especially on 6 identified AI value pools. Spending is shifting towards areas with clear business cases such as, AI-led Modernization, Cost Transformation, Cybersecurity, Cloud Optimization and Vendor Consolidation. As we look at the rest of the year, we remain co nfident in our strategy, discipline in our investments and focus on delivering stronger performance. Margin guidance is maintained at 20% to 22%. This assumes headwind from wage hikes productivity pa ss-throughs, AI investments and 50 basis point impact from acquisitions of Optimum Healthcare and Stratus. These headwinds will be partly offset by initiatives under Project Maximus and currency benefits. With that, we can open up for the questions.",
+      "promise": "EBITDA margin 20\u201322% for FY2027",
+      "speaker": "",
+      "promised": "20\u201322%",
+      "call_date": "2026-07-01",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebitda_margin",
+      "scope_name": "",
+      "target_low": 20.0,
+      "call_period": "2026-06-30",
+      "quote_check": "ok",
+      "target_high": 22.0,
+      "actual_value": null,
+      "source_quote": "Margin guidance is maintained at 20% to 22%.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2027",
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95f8af86-dc92-49dc-a7cf-ecce287f8cce.pdf"
+    }
+  ],
+  "usage": {
+    "verify": {
+      "calls": 0,
+      "model": "gemini-3.5-flash-lite",
+      "tokens": 0,
+      "cache_hits": 1
+    },
+    "verdict": {
+      "calls": 0,
+      "model": "",
+      "tokens": 0,
+      "cache_hits": 1
+    },
+    "guidance": {
+      "calls": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ],
+      "tokens": 0,
+      "dropped": 6,
+      "cache_hits": 7
+    },
+    "total_tokens": 0
+  },
+  "symbol": "INFY",
+  "timing": {
+    "check": 0.01,
+    "total": 2.16,
+    "series": 0.62,
+    "verify": 0.05,
+    "verdict": 0.06,
+    "discover": 0.29,
+    "guidance": 1.13
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "coverage": {
+    "note": "",
+    "audio_only": [],
+    "quarters_of": 10,
+    "series_gaps": [
+      {
+        "why": "missing",
+        "period": "2025-03-31"
+      },
+      {
+        "why": "missing",
+        "period": "2024-12-31"
+      },
+      {
+        "why": "missing",
+        "period": "2024-09-30"
+      },
+      {
+        "why": "missing",
+        "period": "2024-06-30"
+      }
+    ],
+    "transcripts_of": 7,
+    "missing_quarters": [],
+    "transcripts_found": 7,
+    "quarters_with_results": 6
+  },
+  "lookback": {
+    "quarters": 7,
+    "dropped_pages": [
+      {
+        "page": 11,
+        "period": "2026-09-30"
+      },
+      {
+        "page": 28,
+        "period": "2026-06-30"
+      },
+      {
+        "page": 48,
+        "period": "2026-06-30"
+      },
+      {
+        "page": 2,
+        "period": "2026-03-31"
+      },
+      {
+        "page": 25,
+        "period": "2026-03-31"
+      },
+      {
+        "page": 26,
+        "period": "2026-03-31"
+      },
+      {
+        "page": 35,
+        "period": "2026-03-31"
+      },
+      {
+        "page": 19,
+        "period": "2025-12-31"
+      },
+      {
+        "page": 21,
+        "period": "2025-12-31"
+      },
+      {
+        "page": 27,
+        "period": "2025-12-31"
+      },
+      {
+        "page": 31,
+        "period": "2025-12-31"
+      },
+      {
+        "page": 35,
+        "period": "2025-12-31"
+      }
+    ],
+    "fy26_statements": 6,
+    "next_quarter_statements": 0,
+    "pages_dropped_by_prefilter": 28,
+    "pages_mentioning_fy26_or_next_quarter": 59
+  },
+  "progress": {
+    "done": 7,
+    "stage": "complete",
+    "total": 7
+  },
+  "snapshot": {
+    "pat": 7823.0,
+    "series": [
+      {
+        "pat": 7823.0,
+        "pbt": 11063.0,
+        "ebit": 10330.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 11689.0,
+        "period": "2026-09-30",
+        "revenue": 49244.0,
+        "depreciation": 1359.0,
+        "other_income": 848.0,
+        "finance_costs": 115.0,
+        "ebit_margin_pct": 20.98,
+        "ebitda_margin_pct": 23.74
+      },
+      {
+        "pat": 7769.0,
+        "pbt": 11028.0,
+        "ebit": 10163.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 11409.0,
+        "period": "2026-06-30",
+        "revenue": 48211.0,
+        "depreciation": 1246.0,
+        "other_income": 984.0,
+        "finance_costs": 119.0,
+        "ebit_margin_pct": 21.08,
+        "ebitda_margin_pct": 23.66
+      },
+      {
+        "pat": 8501.0,
+        "pbt": 10797.0,
+        "ebit": 9743.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 11167.0,
+        "period": "2026-03-31",
+        "revenue": 46402.0,
+        "depreciation": 1424.0,
+        "other_income": 1159.0,
+        "finance_costs": 105.0,
+        "ebit_margin_pct": 21.0,
+        "ebitda_margin_pct": 24.07
+      },
+      {
+        "pat": 6654.0,
+        "pbt": 9229.0,
+        "ebit": 8190.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 9345.0,
+        "period": "2025-12-31",
+        "revenue": 45479.0,
+        "depreciation": 1155.0,
+        "other_income": 1139.0,
+        "finance_costs": 100.0,
+        "ebit_margin_pct": 18.01,
+        "ebitda_margin_pct": 20.55
+      },
+      {
+        "pat": 7364.0,
+        "pbt": 10229.0,
+        "ebit": 9353.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 10535.0,
+        "period": "2025-09-30",
+        "revenue": 44490.0,
+        "depreciation": 1182.0,
+        "other_income": 982.0,
+        "finance_costs": 106.0,
+        "ebit_margin_pct": 21.02,
+        "ebitda_margin_pct": 23.68
+      },
+      {
+        "pat": 6921.0,
+        "pbt": 9740.0,
+        "ebit": 8803.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 9943.0,
+        "period": "2025-06-30",
+        "revenue": 42279.0,
+        "depreciation": 1140.0,
+        "other_income": 1042.0,
+        "finance_costs": 105.0,
+        "ebit_margin_pct": 20.82,
+        "ebitda_margin_pct": 23.52
+      }
+    ],
+    "revenue": 49244.0,
+    "ttm_pat": 30747.0,
+    "ttm_note": "",
+    "ttm_revenue": 189336.0,
+    "latest_quarter": "2026-09-30",
+    "ebitda_margin_pct": 23.74,
+    "ttm_ebitda_margin_pct": 23.03
+  },
+  "revisions": {
+    "cut": 0,
+    "items": [
+      {
+        "period": "FY2027",
+        "promise": "Operating margin 20\u201322% for FY2027",
+        "sequence": [
+          {
+            "date": "2026-04-01",
+            "value": "20\u201322%",
+            "change": "set"
+          },
+          {
+            "date": "2026-04-01",
+            "value": "20\u201322%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-07-01",
+            "value": "20\u201322%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-10-01",
+            "value": "20\u201322%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "period": "FY2027",
+        "promise": "EBIT margin 1.5\u20133% for FY2027",
+        "sequence": [
+          {
+            "date": "2026-04-01",
+            "value": "1.5\u20133.5%",
+            "change": "set"
+          },
+          {
+            "date": "2026-04-01",
+            "value": "1.5\u20133.5%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-07-01",
+            "value": "1.5\u20133%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "period": "FY2026",
+        "promise": "Operating margin 20\u201322% for FY2026",
+        "sequence": [
+          {
+            "date": "2025-07-01",
+            "value": "20\u201322%",
+            "change": "set"
+          },
+          {
+            "date": "2025-10-01",
+            "value": "20\u201322%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-01-01",
+            "value": "20\u201322%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ],
+    "raised": 0,
+    "maintained": 7
+  },
+  "long_term_targets": []
+}

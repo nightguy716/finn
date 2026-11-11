@@ -1,0 +1,201 @@
+{
+  "symbol": "ICICIBANK",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 9,
+    "pages_dropped_by_prefilter": 4,
+    "dropped_pages": [
+      {
+        "period": "2026-03-31",
+        "page": 12
+      },
+      {
+        "period": "2025-12-31",
+        "page": 20
+      },
+      {
+        "period": "2025-09-30",
+        "page": 6
+      },
+      {
+        "period": "2025-06-30",
+        "page": 8
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 88161.18,
+    "ebitda_margin_pct": null,
+    "pat": 17311.87,
+    "ttm_revenue": 329246.14,
+    "ttm_pat": 62544.81,
+    "ttm_ebitda_margin_pct": null,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 88161.18,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 23114.76,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 32169.27,
+        "pat": 17311.87,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 79689.22,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 21307.13,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 27448.37,
+        "pat": 16209.74,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 84613.66,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 20744.21,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 35019.91,
+        "pat": 15611.87,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 76782.08,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 17754.06,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 28418.24,
+        "pat": 13411.33,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 76146.59,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 19064.58,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 27965.68,
+        "pat": 14256.4,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 74576.03,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 19494.48,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 25496.07,
+        "pat": 14393.8,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.89,
+    "series": 0.81,
+    "guidance": 3.96,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.22,
+    "total": 5.88
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 3917,
+      "dropped": 2,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 3917
+  }
+}

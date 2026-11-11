@@ -1,0 +1,470 @@
+{
+  "symbol": "HDFCLIFE",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 5,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-06-30",
+        "why": "missing"
+      },
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 1,
+    "next_quarter_statements": 1,
+    "pages_mentioning_fy26_or_next_quarter": 41,
+    "pages_dropped_by_prefilter": 6,
+    "dropped_pages": [
+      {
+        "period": "2026-06-30",
+        "page": 10
+      },
+      {
+        "period": "2026-06-30",
+        "page": 14
+      },
+      {
+        "period": "2026-03-31",
+        "page": 17
+      },
+      {
+        "period": "2025-12-31",
+        "page": 7
+      },
+      {
+        "period": "2025-03-31",
+        "page": 9
+      },
+      {
+        "period": "2025-03-31",
+        "page": 13
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 24225.35,
+    "ebitda_margin_pct": null,
+    "pat": null,
+    "ttm_revenue": null,
+    "ttm_pat": null,
+    "ttm_ebitda_margin_pct": null,
+    "ttm_note": "TTM is blank because 2026-09-30, 2026-06-30, 2026-03-31, 2025-12-31 has no quarter figures.",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 24225.35,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 33541.7,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 19905.76,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 29157.59,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 20422.08,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": null,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "",
+        "flags": [
+          "missing"
+        ]
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin at least 100 bps for 2026-03-31",
+      "source_quote": "Our aspiration is to try and bring down that impact to maybe odd 100 basis points in Quarter 4.",
+      "page": 16,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PRASAD_22012026163345_SEEarningcalltranscriptQ3signed.pdf",
+      "speaker": "Niraj Shah",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 100 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "And we said that we will attempt to bring it down progressively over two to three quarters. So, the first quarter, we managed to execute on the lines of what we had wanted to do to bring that 300 basis points down to near 200 bps. That is something that we managed to do in the 3rd quarter. Again, our aspiration is to try and bring down that impact to maybe odd 100 basis points in Quarter 4. We will try and execute towards that as well. And basically, by the time we get into FY27, we basically want to put ourselves in a position to grow our margins from FY25 onwards. So, I think that is something that we will attempt to do.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 100.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-22",
+      "calls": [
+        {
+          "date": "2026-01-22",
+          "call_period": "2025-12-31",
+          "page": 16,
+          "quote": "Our aspiration is to try and bring down that impact to maybe odd 100 basis points in Quarter 4.",
+          "document": "PRASAD_22012026163345_SEEarningcalltranscriptQ3signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 16.5\u201317% for FY2025",
+      "source_quote": "So we mentioned that AP E growth and VNB growth to be about double in four and a half years, which implies about 16.5%-17% kind",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PRASAD_25042025182943_EarningscallTranscriptMarchsigned.pdf",
+      "speaker": "Vibha Padalkar",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "16.5\u201317%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Dhaval: Hi. Thanks for the opportunity. Just one clarification to a comment in the opening remarks around medium term growth. So we mentioned that AP E growth and VNB growth to be about double in four and a half years, which implies about 16.5%-17% kind of growth. I was just thinking through are there enough buffers in the business to navigate assuming there are some you know regulatory changes or I mean how do you think about this growth estimate, any color around that and similarly on margin at the end of the fourth year , I understand that near term there will be some investments , but at the end of the fourth year just directionally how do you think about margins any comment around that would be useful? Vibha Padalkar: So Dhaval, if you look at slide 4 of our investor presentation, if you look at individual APE on the top left -hand side, you see that over cohort of 4 years, in period FY21 to FY25, we have closed to double, 1.9x. Similarly, FY17 to 21, we have closed to double.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 16.5,
+      "target_high": 17.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-25",
+      "calls": [
+        {
+          "date": "2025-04-25",
+          "call_period": "2025-03-31",
+          "page": 12,
+          "quote": "So we mentioned that AP E growth and VNB growth to be about double in four and a half years, which implies about 16.5%-17% kind",
+          "document": "PRASAD_25042025182943_EarningscallTranscriptMarchsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex at least \u20b9750 crore for FY2026",
+      "source_quote": "We plan to raise up to \u2020750 crore in subordinated debt in one or more tranches in H2.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PRASAD_24102025212200_Earningcalltranscriptsigned.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least \u20b9750 crore",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "We plan to raise up to \u2020750 crore in subordinated debt in one or more tranches in H2.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 750.0,
+      "target_high": null,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-24",
+      "calls": [
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "page": 5,
+          "quote": "We plan to raise up to \u2020750 crore in subordinated debt in one or more tranches in H2.",
+          "document": "PRASAD_24102025212200_Earningcalltranscriptsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth to rise for FY2027",
+      "source_quote": "We expect to sustain this momentum and grow in line with the industry in FY27.",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HDFCLIFE2_23102026153545_SE_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "This took our H1 individual APE growth to 9%. Overall APE grew faster, at 13% in Q2 and 11% in H1. The number of individual policies grew 9% in H1, ahead of the industry. We expect to sustain this momentum and grow in line with the industry in FY27. Growth was broad-based across channels. Individual APE sourced by HD FC Bank grew 12% in Q2, slightly ahead of company growth. We have sustained our counter share, building on the momentum we saw late in Q1 and supported by deeper engagement with the bank across branches, products and processes, and we expect our share to steadily improve going forward.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-23",
+      "calls": [
+        {
+          "date": "2026-10-23",
+          "call_period": "2026-09-30",
+          "page": 3,
+          "quote": "We expect to sustain this momentum and grow in line with the industry in FY27.",
+          "document": "HDFCLIFE2_23102026153545_SE_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth to rise for FY2027",
+      "source_quote": "We expect to see restoration of a more normalized VNB growth next year i.e. FY27, led primarily by top line expansion.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PRASAD_24102025212200_Earningcalltranscriptsigned.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "This, along with the effect of surrender regulation changes from previous year also weighed on margins vs the previous year. The margin impact was partially offset by higher share of protection and improvement in inherent product margins. We are actively implementing a series of measures to neutralize the GST-related impact on a run-rate basis over the next 2-3 quarters. We expect to see restoration of a more normalized VNB growth next year i.e. FY27, led primarily by top line expansion. In our view, the GST reform is a momentous, forward-looking change with the potential to structurally expand long-term demand and deepen life insurance penetration in India. Profit after tax in H1, rose 9% YoY to \u20b9994 crore.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-24",
+      "calls": [
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "page": 5,
+          "quote": "We expect to see restoration of a more normalized VNB growth next year i.e. FY27, led primarily by top line expansion.",
+          "document": "PRASAD_24102025212200_Earningcalltranscriptsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 25.5% for FY2027",
+      "source_quote": "New business margins for FY26, excluding impact of GST and SSV would have been 25.5% i.e., flat versus FY25 margin of 25.6%",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PRASAD_23042026224833_EarningsCallTranscript.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "25.5%",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "And if I were to back out GST and SSV, the surrender value impact, then my starting point would have been 24.3%. Against, 24.3%, I was at a similar kind of a number, 24.2%. Note: The correct way to interpret the impact of GST and SSV versus previous year margins is to exclude GST and SSV impact from FY26 margins. New business margins for FY26, excluding impact of GST and SSV would have been 25.5% i.e., flat versus FY25 margin of 25.6% Now to your more philosophical question, because of three very large ticket things that have happened, which is starting from the 5 lakh and above being taxed, followed by surrender charges, followed by GST, business model changes have happened unfortunately with alarming regularity and fairly material. I have high level of confidence in the medium term. However, here and now in one year or so, a little bit more difficult to say just as any business plan. However, the gro wth over the four - year period of 1.8x to 2x, I think that is still something that we will be gunning for.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 25.5,
+      "target_high": 25.5,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-23",
+      "calls": [
+        {
+          "date": "2026-04-23",
+          "call_period": "2026-03-31",
+          "page": 10,
+          "quote": "New business margins for FY26, excluding impact of GST and SSV would have been 25.5% i.e., flat versus FY25 margin of 25.6%",
+          "document": "PRASAD_23042026224833_EarningsCallTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.68,
+    "series": 0.88,
+    "guidance": 3.75,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.18,
+    "total": 5.49
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 4961,
+      "dropped": 4,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 4961
+  }
+}

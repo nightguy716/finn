@@ -1,0 +1,197 @@
+{
+  "symbol": "COALINDIA",
+  "coverage": {
+    "transcripts_found": 1,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [
+      "2026-09-30",
+      "2026-06-30",
+      "2026-03-31",
+      "2025-12-31",
+      "2025-09-30",
+      "2025-06-30"
+    ],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": "Only 1 transcript in the last seven quarters. Too thin to judge whether management keeps its word."
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 3,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 44178.74,
+    "ebitda_margin_pct": 19.24,
+    "pat": 6516.09,
+    "ttm_revenue": 171847.76,
+    "ttm_pat": 33364.83,
+    "ttm_ebitda_margin_pct": 24.77,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 44178.74,
+        "ebitda": 8498.58,
+        "ebitda_margin_pct": 19.24,
+        "ebit": 6119.29,
+        "ebit_margin_pct": 13.85,
+        "pbt": 8434.29,
+        "finance_costs": 338.99,
+        "depreciation": 2379.29,
+        "other_income": 2653.99,
+        "pat": 6516.09,
+        "basis": "derived",
+        "flags": [
+          "Derived: 2026-09-30 = half-year 2026-04-01 to 2026-09-30 minus 2026-06-30."
+        ]
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 46254.8,
+        "ebitda": 12068.51,
+        "ebitda_margin_pct": 26.09,
+        "ebit": 9765.85,
+        "ebit_margin_pct": 21.11,
+        "pbt": 11479.04,
+        "finance_costs": 327.28,
+        "depreciation": 2302.66,
+        "other_income": 2040.47,
+        "pat": 8852.11,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 46490.03,
+        "ebitda": 12673.16,
+        "ebitda_margin_pct": 27.26,
+        "ebit": 9726.51,
+        "ebit_margin_pct": 20.92,
+        "pbt": 14510.68,
+        "finance_costs": 343.55,
+        "depreciation": 2946.65,
+        "other_income": 5127.72,
+        "pat": 10839.18,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 34924.19,
+        "ebitda": 9331.26,
+        "ebitda_margin_pct": 26.72,
+        "ebit": 7112.92,
+        "ebit_margin_pct": 20.37,
+        "pbt": 9183.83,
+        "finance_costs": 320.73,
+        "depreciation": 2218.34,
+        "other_income": 2391.64,
+        "pat": 7157.45,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 30186.7,
+        "ebitda": 6716.15,
+        "ebitda_margin_pct": 22.25,
+        "ebit": 4051.71,
+        "ebit_margin_pct": 13.42,
+        "pbt": 5905.3,
+        "finance_costs": 286.87,
+        "depreciation": 2664.44,
+        "other_income": 2140.46,
+        "pat": 4354.28,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 35842.19,
+        "ebitda": 12521.42,
+        "ebitda_margin_pct": 34.93,
+        "ebit": 10214.18,
+        "ebit_margin_pct": 28.5,
+        "pbt": 11564.93,
+        "finance_costs": 265.11,
+        "depreciation": 2307.24,
+        "other_income": 1615.86,
+        "pat": 8743.38,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "Only 1 transcript in the last seven quarters. Too thin to judge whether management keeps its word.",
+  "progress": {
+    "stage": "complete",
+    "done": 1,
+    "total": 1
+  },
+  "timing": {
+    "discover": 12.94,
+    "series": 8.72,
+    "guidance": 2.89,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.14,
+    "total": 24.69
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 0,
+      "tokens": 4178,
+      "dropped": 1,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 4178
+  }
+}

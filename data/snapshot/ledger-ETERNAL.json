@@ -1,0 +1,435 @@
+{
+  "symbol": "ETERNAL",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 2,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 24,
+    "pages_dropped_by_prefilter": 2,
+    "dropped_pages": [
+      {
+        "period": "2026-03-31",
+        "page": 14
+      },
+      {
+        "period": "2025-09-30",
+        "page": 4
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 24138.0,
+    "ebitda_margin_pct": 3.12,
+    "pat": 125.0,
+    "ttm_revenue": 77956.0,
+    "ttm_pat": 493.0,
+    "ttm_ebitda_margin_pct": 2.82,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 24138.0,
+        "ebitda": 752.0,
+        "ebitda_margin_pct": 3.12,
+        "ebit": 127.0,
+        "ebit_margin_pct": 0.53,
+        "pbt": 323.0,
+        "finance_costs": 155.0,
+        "depreciation": 625.0,
+        "other_income": 351.0,
+        "pat": 125.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 20211.0,
+        "ebitda": 594.0,
+        "ebitda_margin_pct": 2.94,
+        "ebit": 48.0,
+        "ebit_margin_pct": 0.24,
+        "pbt": 272.0,
+        "finance_costs": 151.0,
+        "depreciation": 546.0,
+        "other_income": 375.0,
+        "pat": 92.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 17292.0,
+        "ebitda": 486.0,
+        "ebitda_margin_pct": 2.81,
+        "ebit": 18.0,
+        "ebit_margin_pct": 0.1,
+        "pbt": 228.0,
+        "finance_costs": 132.0,
+        "depreciation": 468.0,
+        "other_income": 342.0,
+        "pat": 174.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 16315.0,
+        "ebitda": 368.0,
+        "ebitda_margin_pct": 2.26,
+        "ebit": -71.0,
+        "ebit_margin_pct": -0.44,
+        "pbt": 170.0,
+        "finance_costs": 107.0,
+        "depreciation": 439.0,
+        "other_income": 348.0,
+        "pat": 102.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 13590.0,
+        "ebitda": 239.0,
+        "ebitda_margin_pct": 1.76,
+        "ebit": -137.0,
+        "ebit_margin_pct": -1.01,
+        "pbt": 129.0,
+        "finance_costs": 86.0,
+        "depreciation": 376.0,
+        "other_income": 352.0,
+        "pat": 65.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 7167.0,
+        "ebitda": 115.0,
+        "ebitda_margin_pct": 1.6,
+        "ebit": -199.0,
+        "ebit_margin_pct": -2.78,
+        "pbt": 88.0,
+        "finance_costs": 67.0,
+        "depreciation": 314.0,
+        "other_income": 354.0,
+        "pat": 25.0,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth at least 100% for FY2027",
+      "source_quote": "In the previous quarter, you mentioned that you want to grow at 100% YoY or expect to grow 100% YoY at least for the next",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf",
+      "speaker": "Akshant Goyal",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 100%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "One, if you can clarify quarter on quarter, your store throughput was down about 6% or 7%. What explains that? And maybe a related question. In the previous quarter, you mentioned that you want to grow at 100% YoY or expect to grow 100% YoY at least for the next one to two years. Now you're saying that the 100% YoY growth is contingent upon competition not staying irrational. I just wanted to tie up that guidance that you're saying that if competition is not irrational, it's only then you'll open 3,500 to 4,000 stores and only then you'll achieve 100% YoY growth. Is that understanding correct?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 100.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-27",
+      "calls": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "In the previous quarter, you mentioned that you want to grow at 100% YoY or expect to grow 100% YoY at least for the next",
+          "document": "ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin -2\u2013-2.5% for an unnamed period",
+      "source_quote": "And on profitability, we are at -2 to -2.5% of Adjusted EBITDA as a percentage of NOV.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ZOMATO_08052025123356_SignedTranscript2025.pdf",
+      "speaker": "Akshant Goyal",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "-2\u2013-2.5%",
+      "status": "segment_level",
+      "note": "District app guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "At what point in time do you think you will have to taper off the investments and this business moves towards steady-state profitability? Akshant Goyal: So, the decline on top line is seasonal. If you look at year-on-year growth, the GOV of going-out is still growing by more than 100%. And on profitability, we are at -2 to -2.5% of Adjusted EBITDA as a percentage of NOV. And at least in the near term, we expect this business to remain in that range while we invest in transition of customers from different platforms, Paytm, Zomato, etc. to the new District app. And we're also investing a little bit in supply creation in some parts of the going-out business. So, that investment phase will continue for the next year or so.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "District app",
+      "metric_key": "ebitda_margin",
+      "target_low": -2.0,
+      "target_high": -2.5,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-08",
+      "calls": [
+        {
+          "date": "2025-05-08",
+          "call_period": "2025-03-31",
+          "page": 12,
+          "quote": "And on profitability, we are at -2 to -2.5% of Adjusted EBITDA as a percentage of NOV.",
+          "document": "ZOMATO_08052025123356_SignedTranscript2025.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at most 20% for FY2026",
+      "source_quote": "As of now, as we have mentioned, we expect year-on-year growth to continue slowly trending up towards 20% YoY, is what our current sense on",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf",
+      "speaker": "Akshant Goyal",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at most 20%",
+      "status": "segment_level",
+      "note": "food delivery guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Page 10 of 17 Sorry, Gaurav, I misunderstood, your question was about food (delivery), right? Gaurav Malhotra: Yeah, it was on food (delivery). Akshant Goyal: As of now, as we have mentioned, we expect year-on-year growth to continue slowly trending up towards 20% YoY, is what our current sense on the market is. Gaurav Malhotra: Got it, okay. Thank you. Moderator: Thank you.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "food delivery",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": 20.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-27",
+      "calls": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 11,
+          "quote": "As of now, as we have mentioned, we expect year-on-year growth to continue slowly trending up towards 20% YoY, is what our current sense on",
+          "document": "ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "we're expecting a 15% sort of year-on-year growth",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ZOMATO_23102025141236_TranscriptSeptember2025signed.pdf",
+      "speaker": "Akshant Goyal",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "food delivery guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Akshant Goyal: Guidance cannot be always close to the current growth levels. Then it's not really a guidance. So, the reality is the current growth rate number, which is around 15%, but whether you give guidance of 10% or 20%, you will have no basis for that. It's a judgment call and in the last letter we did say that for this financial year, we're unlikely to be at 20%, and we're expecting a 15% sort of year-on-year growth. But longer-term, our view on 20% remains as of now. And if that changes, we'll communicate, but that's where we are right now. Manish Adukia: No, sure.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "food delivery",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-23",
+      "calls": [
+        {
+          "date": "2025-10-23",
+          "call_period": "2025-09-30",
+          "page": 9,
+          "quote": "we're expecting a 15% sort of year-on-year growth",
+          "document": "ZOMATO_23102025141236_TranscriptSeptember2025signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 30% for FY2030",
+      "source_quote": "You've maintained your $3 billion NOV guidance for going-out in FY30, which would imply north of 30% CAGR over the next four years.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf",
+      "speaker": "",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "30%",
+      "status": "segment_level",
+      "note": "going-out guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Overall, there's definitely an impact of competition and it impacts our margins, it impacts our top-line growth, it impacts our store expansion plans and various other things. Manish Adukia: Got it. Last question before I jump back in the queue. You've maintained your $3 billion NOV guidance for going-out in FY30, which would imply north of 30% CAGR over the next four years. Last quarter, of course, was about 20% growth. One, why is the growth as low as it is right now? And two, what explains that meaningful expansion that is being built into your guidance?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "going-out",
+      "metric_key": "revenue_growth",
+      "target_low": 30.0,
+      "target_high": 30.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-27",
+      "calls": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 5,
+          "quote": "You've maintained your $3 billion NOV guidance for going-out in FY30, which would imply north of 30% CAGR over the next four years.",
+          "document": "ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [
+    {
+      "promise": "Revenue growth 20% for a longer horizon",
+      "source_quote": "And 20%, therefore, is more a long-term 4-5 year CAGR guidance.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ZOMATO_08052025123356_SignedTranscript2025.pdf",
+      "speaker": "Akshant Goyal",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20%",
+      "status": "long_term",
+      "note": "The passage says mid-term or near-term, not a fiscal year or a quarter.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "But the eventual answer in driving more growth than what we will see without any effort is in actually breaking through one or more of these vectors. So, we will continue to attempt to try different things to make progress on these three fronts. And if we are able to do that, we can see that acceleration in growth down the line. And 20%, therefore, is more a long-term 4-5 year CAGR guidance. I'm just clarifying that even in the past, we have stated that it's not an immediate every year growth guidance. Having said that, each of the last two / three years, the growth has been north of 20%. So, despite the slowdown, even in FY25, NOV / GOV, whatever you look at it, has grown 20%+.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 20.0,
+      "target_high": 20.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-08",
+      "calls": [
+        {
+          "date": "2025-05-08",
+          "call_period": "2025-03-31",
+          "page": 5,
+          "quote": "And 20%, therefore, is more a long-term 4-5 year CAGR guidance.",
+          "document": "ZOMATO_08052025123356_SignedTranscript2025.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.98,
+    "series": 0.86,
+    "guidance": 6.45,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.2,
+    "total": 8.49
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 3691,
+      "dropped": 1,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 3691
+  }
+}

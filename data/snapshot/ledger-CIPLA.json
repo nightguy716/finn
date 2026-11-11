@@ -1,0 +1,743 @@
+{
+  "symbol": "CIPLA",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 5,
+    "next_quarter_statements": 1,
+    "pages_mentioning_fy26_or_next_quarter": 46,
+    "pages_dropped_by_prefilter": 7,
+    "dropped_pages": [
+      {
+        "period": "2026-03-31",
+        "page": 3
+      },
+      {
+        "period": "2026-03-31",
+        "page": 4
+      },
+      {
+        "period": "2026-03-31",
+        "page": 11
+      },
+      {
+        "period": "2025-09-30",
+        "page": 8
+      },
+      {
+        "period": "2025-09-30",
+        "page": 11
+      },
+      {
+        "period": "2025-06-30",
+        "page": 13
+      },
+      {
+        "period": "2025-03-31",
+        "page": 7
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 7403.93,
+    "ebitda_margin_pct": 18.74,
+    "pat": 877.54,
+    "ttm_revenue": 28138.89,
+    "ttm_pat": 2897.03,
+    "ttm_ebitda_margin_pct": 16.04,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 7403.93,
+        "ebitda": 1387.78,
+        "ebitda_margin_pct": 18.74,
+        "ebit": 1042.92,
+        "ebit_margin_pct": 14.09,
+        "pbt": 1177.34,
+        "finance_costs": 16.74,
+        "depreciation": 344.86,
+        "other_income": 151.16,
+        "pat": 877.54,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 7119.28,
+        "ebitda": 1192.3,
+        "ebitda_margin_pct": 16.75,
+        "ebit": 888.06,
+        "ebit_margin_pct": 12.47,
+        "pbt": 1081.93,
+        "finance_costs": 17.03,
+        "depreciation": 304.24,
+        "other_income": 210.9,
+        "pat": 789.05,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 6541.2,
+        "ebitda": 954.95,
+        "ebitda_margin_pct": 14.6,
+        "ebit": 572.03,
+        "ebit_margin_pct": 8.75,
+        "pbt": 707.06,
+        "finance_costs": 13.13,
+        "depreciation": 382.92,
+        "other_income": 148.16,
+        "pat": 554.64,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 7074.48,
+        "ebitda": 979.15,
+        "ebitda_margin_pct": 13.84,
+        "ebit": 700.8,
+        "ebit_margin_pct": 9.91,
+        "pbt": 893.11,
+        "finance_costs": 14.03,
+        "depreciation": 278.35,
+        "other_income": 206.34,
+        "pat": 675.8,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 7589.44,
+        "ebitda": 1894.75,
+        "ebitda_margin_pct": 24.97,
+        "ebit": 1597.76,
+        "ebit_margin_pct": 21.05,
+        "pbt": 1853.53,
+        "finance_costs": 13.18,
+        "depreciation": 296.99,
+        "other_income": 268.95,
+        "pat": 1351.17,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 6957.47,
+        "ebitda": 1778.14,
+        "ebitda_margin_pct": 25.56,
+        "ebit": 1525.42,
+        "ebit_margin_pct": 21.92,
+        "pbt": 1769.93,
+        "finance_costs": 14.05,
+        "depreciation": 252.72,
+        "other_income": 258.56,
+        "pat": 1297.62,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 22.75\u201324% for FY2026",
+      "source_quote": "we are revising our full year EBITDA margin guidance to about 22.75% to 24%.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/CIPLA_03112025163711_EarningscallTranscriptOct25_signed.pdf",
+      "speaker": "Umang Vohra",
+      "period_promised": "FY2026",
+      "actual": "19.91%",
+      "actual_value": 19.91,
+      "actual_detail": "FY2026 EBITDA margin 19.91%.",
+      "promised": "22.75\u201324%",
+      "status": "missed",
+      "note": "",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "In South Africa, the next two quarters are critical for execution towards margin expansion. And in EMEU, the top priority is to drive top line growth by deepening penetration in core market while maintaining a strong margin trajectory. Like I said, that we have accelerated and increased our product introductions in our R&D pipeline and driven by additional programs. And following a review of our other operations, we are revising our full year EBITDA margin guidance to about 22.75% to 24%. The earlier guidance was 23.5% to 24.5%. And this guidance excludes the -- Yurpeak business plan that I talked about because it is a little early to comment on that.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 22.75,
+      "target_high": 24.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-03",
+      "calls": [
+        {
+          "date": "2025-05-16",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "Our outlook for projected EBITDA margin is in the range of about 23.5% to 24.5%.",
+          "document": "CIPLA_16052025164608_EarningscalltranscriptMay25_signed.pdf"
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 6,
+          "quote": "For the full year, we continue to maintain our EBITDA margin guidance of 23.5% to 24.5%",
+          "document": "CIPLA_28072025183148_EarningscalltranscriptJul25intimationsigned.pdf"
+        },
+        {
+          "date": "2025-11-03",
+          "call_period": "2025-09-30",
+          "page": 6,
+          "quote": "we are revising our full year EBITDA margin guidance to about 22.75% to 24%.",
+          "document": "CIPLA_03112025163711_EarningscallTranscriptOct25_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-16",
+          "call_period": "2025-03-31",
+          "value": "23.5\u201324.5%",
+          "change": "set",
+          "page": 6,
+          "quote": "Our outlook for projected EBITDA margin is in the range of about 23.5% to 24.5%.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "value": "23.5\u201324.5%",
+          "change": "maintained",
+          "page": 6,
+          "quote": "For the full year, we continue to maintain our EBITDA margin guidance of 23.5% to 24.5%",
+          "superseded": true
+        },
+        {
+          "date": "2025-11-03",
+          "call_period": "2025-09-30",
+          "value": "22.75\u201324%",
+          "change": "cut",
+          "page": 6,
+          "quote": "we are revising our full year EBITDA margin guidance to about 22.75% to 24%.",
+          "superseded": false
+        }
+      ],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3-flash-preview",
+        "evidence": {
+          "consolidated": "we are revising our full year EBITDA margin guidance to about 22.75% to 24%.",
+          "reported_basis": "we are revising our full year EBITDA margin guidance to about 22.75% to 24%.",
+          "independent_of_named_event": "this guidance excludes the -- Yurpeak business plan",
+          "metric_named": "EBITDA margin guidance"
+        }
+      }
+    },
+    {
+      "promise": "EBITDA margin 18.5\u201320% for FY2027",
+      "source_quote": "And for the EBITDA guidance for the full year will be 18.5% to 20%.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/CIPLA_30102026172814_SE_Intimation_Earnings_Call_Transcript_20261027_signed.pdf",
+      "speaker": "Achin Gupta",
+      "period_promised": "FY2027",
+      "actual": "17.77%",
+      "actual_value": 17.77,
+      "actual_detail": "H1 FY2027 EBITDA margin 17.77% versus 25.25% a year earlier (-748 bps)",
+      "promised": "18.5\u201320%",
+      "status": "tracking_behind",
+      "note": "H1 FY2027 EBITDA margin 17.77% versus 25.25% a year earlier (-748 bps)",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Damayanti Kerai: First, as you retain your guidance for U.S. run rate -- exit run rate, do you retain the guidance for EBITDA margin also, which you indicated earlier, 18.5% to 20% range? Achin Gupta: Yes. So for the -- we are maintaining both the guidance that the exit run rate for the U.S. would be $1 billion. And for the EBITDA guidance for the full year will be 18.5% to 20%. We are not changing the guidance. Damayanti Kerai: My first question is on the awaited launches for the U.S. So as you indicated, 3 significant launches still remaining for second half.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 18.5,
+      "target_high": 20.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-30",
+      "calls": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "We expect the EBITDA margins to be in the range of 18.5% to 20%",
+          "document": "CIPLA_15052026182859_EarningscalltranscriptMay26signedrc.pdf"
+        },
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 8,
+          "quote": "Damayanti Kerai: Sure. And similarly, if you can comment on your earlier guidance for the EBITDA margins of 18.5% to 20% for FY27. Any change",
+          "document": "CIPLA_27072026171448_SEIntimationEarningscalltranscriptQ1FY27.pdf"
+        },
+        {
+          "date": "2026-10-30",
+          "call_period": "2026-09-30",
+          "page": 9,
+          "quote": "And for the EBITDA guidance for the full year will be 18.5% to 20%.",
+          "document": "CIPLA_30102026172814_SE_Intimation_Earnings_Call_Transcript_20261027_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "value": "18.5\u201320%",
+          "change": "set",
+          "page": 7,
+          "quote": "We expect the EBITDA margins to be in the range of 18.5% to 20%",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "value": "18.5\u201320%",
+          "change": "maintained",
+          "page": 8,
+          "quote": "Damayanti Kerai: Sure. And similarly, if you can comment on your earlier guidance for the EBITDA margins of 18.5% to 20% for FY27. Any change",
+          "superseded": true
+        },
+        {
+          "date": "2026-10-30",
+          "call_period": "2026-09-30",
+          "value": "18.5\u201320%",
+          "change": "maintained",
+          "page": 9,
+          "quote": "And for the EBITDA guidance for the full year will be 18.5% to 20%.",
+          "superseded": false
+        }
+      ],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "And for the EBITDA guidance for the full year will be 18.5% to 20%.",
+          "reported_basis": "And for the EBITDA guidance for the full year will be 18.5% to 20%.",
+          "independent_of_named_event": "And for the EBITDA guidance for the full year will be 18.5% to 20%.",
+          "metric_named": "EBITDA guidance for the full year will be 18.5% to 20%."
+        }
+      }
+    },
+    {
+      "promise": "Revenue growth 1\u20132% for FY2027",
+      "source_quote": "if you could assume about 1% to 2% of revenue in that kind of a range for the overall cost impact due to war.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/CIPLA_27072026171448_SEIntimationEarningscalltranscriptQ1FY27.pdf",
+      "speaker": "Ashish Adukia",
+      "period_promised": "FY2027",
+      "actual": "-0.16%",
+      "actual_value": -0.16,
+      "actual_detail": "H1 FY2027 revenue 14,523.21 versus H1 FY2026 revenue 14,546.91",
+      "promised": "1\u20132%",
+      "status": "tracking_behind",
+      "note": "H1 FY2027 revenue 14,523.21 versus H1 FY2026 revenue 14,546.91",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Ashish Adukia: Sure. So, I think when you meant inflation, you mean to say this whole war impact that we're talking about. So, I think overall, if you look at it as per current estimate, and it's very difficult to give a very firm guidance out there, because the things are evolving. But if you could assume about 1% to 2% of revenue in that kind of a range for the overall cost impact due to war. In case of the other question that you had, the inventory charge, etc. So, we have that for various reasons, either it is close to expiry or if we have ordered, but the demand has not taken off, or if there is any quality issues, so then we charge off that inventory, which is very typical in pharma. So, there has been a little higher than a normalized that we budget for, and that is why I called it out that there is a one-time, kind of, an inventory charge that is there.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 1.0,
+      "target_high": 2.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-27",
+      "calls": [
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 9,
+          "quote": "if you could assume about 1% to 2% of revenue in that kind of a range for the overall cost impact due to war.",
+          "document": "CIPLA_27072026171448_SEIntimationEarningscalltranscriptQ1FY27.pdf"
+        }
+      ],
+      "revisions": [],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "overall, if you look at it as per current estimate",
+          "reported_basis": "about 1% to 2% of revenue",
+          "independent_of_named_event": "",
+          "metric_named": "1% to 2% of revenue"
+        }
+      }
+    },
+    {
+      "promise": "Capex 5% for FY2026",
+      "source_quote": "5% of revenue you could take",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/CIPLA_16052025164608_EarningscalltranscriptMay25_signed.pdf",
+      "speaker": "Ashish Adukia",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Surya Narayan Patra: Okay. Sir, did you share any number for the capex for the next year? No? Ashish Adukia: So about 4% roughly of your -- 5% of your revenue, yes, somewhere around that would be the figure for the capex, 5% of revenue you could take. Moderator: The next question is from the line of Neha Manpuria from Bank of America. Neha Manpuria: Umang, on the India market, now that the trade generic restructuring that we were doing is behind, if I look at this year, obviously, that was impacted by seasonality. How should I think about growth?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 5.0,
+      "target_high": 5.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-16",
+      "calls": [
+        {
+          "date": "2025-05-16",
+          "call_period": "2025-03-31",
+          "page": 9,
+          "quote": "5% of revenue you could take",
+          "document": "CIPLA_16052025164608_EarningscalltranscriptMay25_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 27\u201327.5% for FY2027",
+      "source_quote": "It will be in the range of 27% to 27.5%, Neha.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/CIPLA_30102026172814_SE_Intimation_Earnings_Call_Transcript_20261027_signed.pdf",
+      "speaker": "Dinesh Jain",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "27\u201327.5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Okay. Understood. And my last question, tax rate for the full year would be closer to the 25% level or this 27% that we have reported in the first half? Dinesh Jain: It will be in the range of 27% to 27.5%, Neha. Moderator: The next question is from the line of Bino Pathiparampil from Elara Capital Private Limited. Bino Pathiparampil: A couple of questions. One, just a follow -up on Keytruda.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 27.0,
+      "target_high": 27.5,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-30",
+      "calls": [
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 18,
+          "quote": "And we've already mentioned 18.5% to 20% as the guidance for this year.",
+          "document": "CIPLA_27072026171448_SEIntimationEarningscalltranscriptQ1FY27.pdf"
+        },
+        {
+          "date": "2026-10-30",
+          "call_period": "2026-09-30",
+          "page": 11,
+          "quote": "It will be in the range of 27% to 27.5%, Neha.",
+          "document": "CIPLA_30102026172814_SE_Intimation_Earnings_Call_Transcript_20261027_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "value": "18.5\u201320%",
+          "change": "set",
+          "page": 18,
+          "quote": "And we've already mentioned 18.5% to 20% as the guidance for this year.",
+          "superseded": true
+        },
+        {
+          "date": "2026-10-30",
+          "call_period": "2026-09-30",
+          "value": "27\u201327.5%",
+          "change": "raised",
+          "page": 11,
+          "quote": "It will be in the range of 27% to 27.5%, Neha.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue at least US$220 million for 2025-06-30",
+      "source_quote": "our current guidance range is different for the overall U.S. market. But as of now, we are looking at something like $220 million for the",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/CIPLA_16052025164608_EarningscalltranscriptMay25_signed.pdf",
+      "speaker": "Umang Vohra",
+      "period_promised": "2025-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least US$220 million",
+      "status": "segment_level",
+      "note": "U.S. guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "passage": "Umang Vohra: Well, if lenalidomide stayed at where it was now, yes, we would have got there and crossed it. But you also have to see the next 2 or 3 quarters is when we will see a compression in lena. And that will be offset by these new products that are coming up. So our current guidance range is different for the overall U.S. market. We don't comment specifically by product. But as of now, we are looking at something like $220 million for the U.S. going forward in the next quarter or so. Bino Pathiparampil: Sorry, you said $220 million around?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "U.S.",
+      "metric_key": "revenue_growth",
+      "target_low": 220.0,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-16",
+      "calls": [
+        {
+          "date": "2025-05-16",
+          "call_period": "2025-03-31",
+          "page": 12,
+          "quote": "our current guidance range is different for the overall U.S. market. But as of now, we are looking at something like $220 million for the",
+          "document": "CIPLA_16052025164608_EarningscalltranscriptMay25_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue US$1 billion for FY2027",
+      "source_quote": "We continue to maintain the guidance to exit this fiscal year with $1 billion annualized revenue run rate.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/CIPLA_30102026172814_SE_Intimation_Earnings_Call_Transcript_20261027_signed.pdf",
+      "speaker": "Achin Gupta",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "US$1 billion",
+      "status": "segment_level",
+      "note": "North America guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "passage": "Looking ahead, our key priorities will include One India, the aim is to focus on the execution to sustain the growth momentum and outperform the market in the branded prescription, trade generics and consumer wellness. We'll further strengthen our presence in chronic therapies while maintaining the robust trajectory we have built in respiratory. In North America, we will remain focused on driving growth through new product introduction, including the key launches. We continue to maintain the guidance to exit this fiscal year with $1 billion annualized revenue run rate. In South Africa, our focus will be on continuing to grow faster than the market in the private sector. In emerging m arket in Europe, the top priority is to drive top line growth while maintaining a strong margin trajectory. I would like to thank you for your attention, and we request the moderator to open the session for question.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "North America",
+      "metric_key": "revenue_growth",
+      "target_low": 1.0,
+      "target_high": 1.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-30",
+      "calls": [
+        {
+          "date": "2026-10-30",
+          "call_period": "2026-09-30",
+          "page": 6,
+          "quote": "We continue to maintain the guidance to exit this fiscal year with $1 billion annualized revenue run rate.",
+          "document": "CIPLA_30102026172814_SE_Intimation_Earnings_Call_Transcript_20261027_signed.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [
+    {
+      "promise": "EBITDA margin 21% for a longer horizon",
+      "source_quote": "Now, these are deliberate strategic choices and will lead to FY\u201926 EBITDA margin guidance to land at around 21%.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/CIPLA_27012026194052_Cipla-Earnings-Jan23-2026_Signed.pdf",
+      "speaker": "Ashish Adukia",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "21%",
+      "status": "long_term",
+      "note": "The passage says mid-term or near-term, not a fiscal year or a quarter.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "And this was primarily a reflection of lower -than- anticipated Lanreotide performance and the completion of generic Revlimid billing cycle, with most of the shipment concluding in September quarter and small portion in December quarter. In parallel, we stepped up planned investments aligned with our growth priorities, including spends towards the commercialization of our new launches and readiness activities at our U.S. manufacturing facilities ahead of near-term and imminent regulatory approvals. In line with the last quarter's guidance, we continued to prioritize targeted R&D investments in select opportunities within our U.S. -focused oligonucleotide portfolio, where we see potential to secure an attractive and competitive market entry position. Now, these are deliberate strategic choices and will lead to FY\u201926 EBITDA margin guidance to land at around 21%. Going back to our key priorities for the market, for One India, the aim is to focus on execution to sustain the growth momentum and outperform the market in both branded generic and trade generic. We will further strengthen our presence in chronic therapies, including diabetes,",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 21.0,
+      "target_high": 21.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-27",
+      "calls": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 6,
+          "quote": "Now, these are deliberate strategic choices and will lead to FY\u201926 EBITDA margin guidance to land at around 21%.",
+          "document": "CIPLA_27012026194052_Cipla-Earnings-Jan23-2026_Signed.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "revisions": {
+    "raised": 1,
+    "cut": 1,
+    "maintained": 3,
+    "items": [
+      {
+        "promise": "EBITDA margin 18.5\u201320% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-05-15",
+            "value": "18.5\u201320%",
+            "change": "set"
+          },
+          {
+            "date": "2026-07-27",
+            "value": "18.5\u201320%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-10-30",
+            "value": "18.5\u201320%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 27\u201327.5% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-07-27",
+            "value": "18.5\u201320%",
+            "change": "set"
+          },
+          {
+            "date": "2026-10-30",
+            "value": "27\u201327.5%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 22.75\u201324% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-16",
+            "value": "23.5\u201324.5%",
+            "change": "set"
+          },
+          {
+            "date": "2025-07-28",
+            "value": "23.5\u201324.5%",
+            "change": "maintained"
+          },
+          {
+            "date": "2025-11-03",
+            "value": "22.75\u201324%",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "For FY2026, the actual EBITDA margin was 19.91% compared to the promised 22.75\u201324%. For FY2027, the actual revenue growth was -0.16% against the promised 1\u20132%.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.91,
+    "series": 1.01,
+    "guidance": 5.35,
+    "check": 0.01,
+    "verify": 0.24,
+    "verdict": 4.79,
+    "total": 12.31
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 5677,
+      "dropped": 3,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 1,
+      "cache_hits": 0,
+      "tokens": 445,
+      "model": "gemini-3.5-flash-lite"
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 3,
+      "tokens": 0,
+      "model": "gemini-3.5-flash-lite"
+    },
+    "total_tokens": 6122
+  }
+}

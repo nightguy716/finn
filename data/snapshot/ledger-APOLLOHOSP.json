@@ -1,0 +1,188 @@
+{
+  "symbol": "APOLLOHOSP",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 3,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 7614.9,
+    "ebitda_margin_pct": 15.64,
+    "pat": 629.9,
+    "ttm_revenue": 27741.3,
+    "ttm_pat": 2242.2,
+    "ttm_ebitda_margin_pct": 15.28,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 7614.9,
+        "ebitda": 1190.8,
+        "ebitda_margin_pct": 15.64,
+        "ebit": 960.6,
+        "ebit_margin_pct": 12.61,
+        "pbt": 891.4,
+        "finance_costs": 114.0,
+        "depreciation": 230.2,
+        "other_income": 44.8,
+        "pat": 629.9,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 7043.5,
+        "ebitda": 1092.1,
+        "ebitda_margin_pct": 15.51,
+        "ebit": 857.0,
+        "ebit_margin_pct": 12.17,
+        "pbt": 785.4,
+        "finance_costs": 120.4,
+        "depreciation": 235.1,
+        "other_income": 48.8,
+        "pat": 580.7,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 6605.5,
+        "ebitda": 1011.0,
+        "ebitda_margin_pct": 15.31,
+        "ebit": 786.6,
+        "ebit_margin_pct": 11.91,
+        "pbt": 711.4,
+        "finance_costs": 119.1,
+        "depreciation": 224.4,
+        "other_income": 43.9,
+        "pat": 529.3,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 6477.4,
+        "ebitda": 946.1,
+        "ebitda_margin_pct": 14.61,
+        "ebit": 726.9,
+        "ebit_margin_pct": 11.22,
+        "pbt": 667.1,
+        "finance_costs": 112.6,
+        "depreciation": 219.2,
+        "other_income": 52.8,
+        "pat": 502.3,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 6303.5,
+        "ebitda": 941.1,
+        "ebitda_margin_pct": 14.93,
+        "ebit": 723.3,
+        "ebit_margin_pct": 11.47,
+        "pbt": 668.4,
+        "finance_costs": 109.6,
+        "depreciation": 217.8,
+        "other_income": 54.7,
+        "pat": 477.2,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 5842.1,
+        "ebitda": 851.9,
+        "ebitda_margin_pct": 14.58,
+        "ebit": 637.2,
+        "ebit_margin_pct": 10.91,
+        "pbt": 569.1,
+        "finance_costs": 108.3,
+        "depreciation": 214.7,
+        "other_income": 40.2,
+        "pat": 432.8,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.66,
+    "series": 0.79,
+    "guidance": 2.56,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 4.13
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 802,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 802
+  }
+}

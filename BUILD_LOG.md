@@ -318,3 +318,62 @@ The eight checks: "wipro" and "Wipro Ltd" are Wipro Limited (WIPRO). "pidilite" 
 The results-card link that used to say "XBRL filing" now says "XBRL data (raw, machine-readable)" and sits after the outcome PDF and the investor presentation. When that file is the only source, the card adds that it is not a page to read. On the 6 Nov replay both results cards still have the PDF and the presentation ahead of it.
 
 Scoring is unchanged. The web app was redeployed: `dpl_32gEzEj7LvoFiZrZXWi88a6GLkxX` is Ready and aliased to https://web-eosin-ten-23.vercel.app.
+
+## 2026-11-11 — Stable movers, quieter search, ledger prewarm
+
+The 6 Nov, 72-hour feed with and without `move_pct=5` and `volume_n=2.5` is one cache key, `2026-11-06|72|5|2.5|*`. Both return the same eight movers, in this order: MARICO 3 Nov +10.0% (8.17×), BAJFINANCE 5 Nov +7.65% (3.45×), CGPOWER 6 Nov −4.43% (5.12×), TITAN 6 Nov +3.42% (5.55×), BHARATFORG 5 Nov −3.30% (4.75×), MARUTI 5 Nov +5.48% (2.59×), MARICO 4 Nov +1.32% (2.56×), SUNPHARMA 4 Nov +0.20% (2.80×). A fresh load of the web app requests that same URL. The initial state is 72 hours, 5%, and 2.5×.
+
+The three movers on the phone are a second stored feed, written 11 Nov 2026 at 05:53 UTC, with the same day and the same 5% move and a volume multiple of 8. At 8× only three sessions remain, and they are the three price moves: MARICO 3 Nov, BAJFINANCE 5 Nov, MARUTI 5 Nov. The five volume-only chips drop, which is why the names differ. The summary counted `alerts.length` and the strip rendered that same list, so one response stays consistent. Two screenshots differed because they were two thresholds. The strip now says which threshold produced it (“Above 5% or 2.5× volume.”), and the settings sheet can return to those defaults. Alerts are ordered by severity, then symbol, then date, including when a stored feed is served. A cache miss for a pinned replay key serves `data/snapshot` instead of downloading prices again. A stored price series of 21 or more sessions is kept if a later download is shorter.
+
+A query with no reasonable listed match shows only “No listed company found”. The nearest-name list is gone. “wipro” still offers Wipro Limited (WIPRO).
+
+`scripts/prewarm.py` reads NSE’s Nifty 50 file (`ind_nifty50list.csv` on nsearchives, 50 names on 11 Nov 2026), adds the 18 portfolio names and DMART, ASIANPAINT, ETERNAL, PIDILITIND, and dedupes to 59. The official file has no size column, so the run starts with the large names and the names this project already tests, then the rest of the file, then the portfolio names that are outside the fifty. One ticker at a time, three seconds apart. A complete snapshot is skipped. A failed ticker does not replace one. `QuotaError` stops the run. Finished ledgers are also written under `data/snapshot` (42 files, 0.9 MB). Supabase holds 1,965 cache rows and 35.0 MB of payload JSON. The free database limit is 500 MB.
+
+The run stopped on INDIGO when every provider returned the daily limit, after one guidance stage (11,944 tokens). That ledger was not saved as complete. Seventeen names were not started: JSWSTEEL, JIOFIN, MAXHEALTH, NESTLEIND, ONGC, POWERGRID, SBILIFE, SHRIRAMFIN, TATACONSUM, TMPV, TATASTEEL, TECHM, BHARATFORG, PERSISTENT, POLYCAB, DIXON, BHARATSEATS. A later run skips the finished ones. Each `promise_ledger` call resets its token counter, so the printed token column is the last stage. The stage lines sum to 595,421 tokens. New scored rows: TCS 1, BEL 3, CIPLA 3, DRREDDY 1. The stored ones were left as they were: MARICO 3, HCLTECH 2, ASIANPAINT 2. Scoring rules were not changed.
+
+| Symbol | Status | Scored | Seconds | Models |
+|---|---|---:|---:|---|
+| RELIANCE | complete | 0 | 67.0 | gemini-3.5-flash-lite |
+| TCS | complete | 1 | 86.9 | gemini-3.5-flash-lite, gemini-3-flash-preview, gemini-3.6-flash |
+| HDFCBANK | skipped | 0 | 0 | gemini-3.5-flash-lite |
+| BHARTIARTL | complete | 0 | 58.4 | gemini-3.5-flash-lite |
+| ICICIBANK | complete | 0 | 58.4 | gemini-3.5-flash-lite |
+| INFY | skipped | 0 | 0 | gemini-3.5-flash-lite |
+| SBIN | complete | 0 | 3.5 | gemini-3.5-flash-lite |
+| HINDUNILVR | complete | 0 | 2.7 | gemini-3.5-flash-lite |
+| ITC | complete | 0 | 21.3 | |
+| LT | complete | 0 | 47.9 | gemini-3.5-flash-lite |
+| BAJFINANCE | complete | 0 | 69.6 | gemini-3.5-flash-lite |
+| HCLTECH | skipped | 2 | 0 | gemini-3.5-flash-lite |
+| MARUTI | complete | 0 | 51.4 | gemini-3.5-flash-lite |
+| SUNPHARMA | complete | 0 | 49.9 | gemini-3.5-flash-lite |
+| AXISBANK | complete | 0 | 49.7 | gemini-3.5-flash-lite |
+| TITAN | skipped | 0 | 0 | gemini-3.5-flash-lite |
+| ASIANPAINT | skipped | 2 | 0 | gemini-3.5-flash-lite, gemini-3-flash-preview |
+| DMART | skipped | 0 | 0 | gemini-3.5-flash-lite |
+| MARICO | skipped | 3 | 0 | gemini-3.5-flash-lite, gemini-3-flash-preview |
+| PIDILITIND | skipped | 0 | 0 | gemini-3.5-flash-lite |
+| CGPOWER | skipped | 0 | 0 | gemini-3.5-flash-lite |
+| ETERNAL | complete | 0 | 63.8 | gemini-3.5-flash-lite |
+| M&M | complete | 0 | 82.1 | gemini-3.5-flash-lite |
+| BAJAJ-AUTO | complete | 0 | 3.7 | gemini-3.5-flash-lite |
+| KOTAKBANK | complete | 0 | 34.2 | gemini-3.5-flash-lite |
+| NTPC | complete | 0 | 63.5 | gemini-3.5-flash-lite |
+| ULTRACEMCO | complete | 0 | 3.9 | gemini-3.5-flash-lite |
+| TRENT | complete | 0 | 18.3 | |
+| BEL | complete | 3 | 91.3 | gemini-3.5-flash-lite, gemini-3-flash-preview |
+| ADANIENT | complete | 0 | 46.3 | gemini-3.5-flash-lite |
+| ADANIPORTS | complete | 0 | 47.6 | gemini-3.5-flash-lite |
+| APOLLOHOSP | complete | 0 | 43.8 | gemini-3.5-flash-lite |
+| BSE | complete | 0 | 50.6 | gemini-3.5-flash-lite |
+| BAJAJFINSV | complete | 0 | 56.7 | gemini-3.5-flash-lite |
+| CIPLA | complete | 3 | 77.4 | gemini-3.5-flash-lite |
+| COALINDIA | complete | 0 | 24.7 | gemini-3.5-flash-lite |
+| DRREDDY | complete | 1 | 73.6 | gemini-3.5-flash-lite |
+| EICHERMOT | complete | 0 | 85.9 | gemini-3.5-flash-lite |
+| GRASIM | complete | 0 | 90.3 | gemini-3.5-flash-lite |
+| HDFCLIFE | complete | 0 | 46.7 | gemini-3.5-flash-lite |
+| HINDALCO | complete | 0 | 79.1 | gemini-3.5-flash-lite |
+| INDIGO | quota | | | |
+
+The API is `dpl_5fUGLvfZFq3wPzJohWxK6U1xnFBD`, Ready, aliased to https://finn-r4y3.vercel.app. The web app is `dpl_6TCRaEawsuRtAzYVAwKh2Pnvwia1`, Ready, aliased to https://web-eosin-ten-23.vercel.app. The default feed still returns those eight movers.

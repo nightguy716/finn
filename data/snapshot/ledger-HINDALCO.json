@@ -1,0 +1,582 @@
+{
+  "symbol": "HINDALCO",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 11,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 50,
+    "pages_dropped_by_prefilter": 9,
+    "dropped_pages": [
+      {
+        "period": "2026-06-30",
+        "page": 20
+      },
+      {
+        "period": "2026-03-31",
+        "page": 3
+      },
+      {
+        "period": "2025-12-31",
+        "page": 3
+      },
+      {
+        "period": "2025-12-31",
+        "page": 7
+      },
+      {
+        "period": "2025-12-31",
+        "page": 23
+      },
+      {
+        "period": "2025-09-30",
+        "page": 3
+      },
+      {
+        "period": "2025-06-30",
+        "page": 3
+      },
+      {
+        "period": "2025-06-30",
+        "page": 16
+      },
+      {
+        "period": "2025-03-31",
+        "page": 6
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 91708.0,
+    "ebitda_margin_pct": 14.28,
+    "pat": 7532.0,
+    "ttm_revenue": 321187.0,
+    "ttm_pat": 19191.0,
+    "ttm_ebitda_margin_pct": 11.2,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 91708.0,
+        "ebitda": 13098.0,
+        "ebitda_margin_pct": 14.28,
+        "ebit": 10574.0,
+        "ebit_margin_pct": 11.53,
+        "pbt": 10584.0,
+        "finance_costs": 933.0,
+        "depreciation": 2524.0,
+        "other_income": 943.0,
+        "pat": 7532.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 84825.0,
+        "ebitda": 11633.0,
+        "ebitda_margin_pct": 13.71,
+        "ebit": 9296.0,
+        "ebit_margin_pct": 10.96,
+        "pbt": 9387.0,
+        "finance_costs": 966.0,
+        "depreciation": 2337.0,
+        "other_income": 1057.0,
+        "pat": 7013.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 78133.0,
+        "ebitda": 5847.0,
+        "ebitda_margin_pct": 7.48,
+        "ebit": 3472.0,
+        "ebit_margin_pct": 4.44,
+        "pbt": 3455.0,
+        "finance_costs": 1042.0,
+        "depreciation": 2375.0,
+        "other_income": 1025.0,
+        "pat": 2597.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 66521.0,
+        "ebitda": 5384.0,
+        "ebitda_margin_pct": 8.09,
+        "ebit": 3164.0,
+        "ebit_margin_pct": 4.76,
+        "pbt": 2832.0,
+        "finance_costs": 881.0,
+        "depreciation": 2220.0,
+        "other_income": 549.0,
+        "pat": 2049.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 66058.0,
+        "ebitda": 8784.0,
+        "ebitda_margin_pct": 13.3,
+        "ebit": 6629.0,
+        "ebit_margin_pct": 10.04,
+        "pbt": 6539.0,
+        "finance_costs": 803.0,
+        "depreciation": 2155.0,
+        "other_income": 713.0,
+        "pat": 4741.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 64232.0,
+        "ebitda": 7906.0,
+        "ebitda_margin_pct": 12.31,
+        "ebit": 5826.0,
+        "ebit_margin_pct": 9.07,
+        "pbt": 5674.0,
+        "finance_costs": 754.0,
+        "depreciation": 2080.0,
+        "other_income": 602.0,
+        "pat": 4004.0,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA growth to rise for FY2028",
+      "source_quote": "Looking ahead, we remain committed to our 3-year goal of permanently reducing our cost structure by $300 million FY '28 exit.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDALCOIND_13112025184501_Q2FY26_Transcript_final_signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2028",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Novelis made strong progress towards fully mitigating the tariff impact in the second half of FY '26. Back in April 2025, we had set an FY '26 exit savings run rate target of $75 million, which we raised last quarter to $100 million. With another quarter of solid execution behind us, the run rate is now $125 million as we accelerate all cost efficiency initiatives. Looking ahead, we remain committed to our 3-year goal of permanently reducing our cost structure by $300 million FY '28 exit. Additionally, scrap prices continue to move in a positive direction, supporting margin improvement. At Hindalco India business level, our business segment EBITDA was up 15% year-on-year at INR5,419 crores this quarter. The net profit after tax was up 7% year-on-year at INR3,059 crores.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-13",
+      "calls": [
+        {
+          "date": "2025-11-13",
+          "call_period": "2025-09-30",
+          "page": 6,
+          "quote": "Looking ahead, we remain committed to our 3-year goal of permanently reducing our cost structure by $300 million FY '28 exit.",
+          "document": "HINDALCOIND_13112025184501_Q2FY26_Transcript_final_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin at least US$300 for an unnamed period",
+      "source_quote": "But certainly, we are aiming for the $300-plus EBITDA per ton in India in the mid-term.",
+      "page": 23,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDALCOIND_26052025114201_Q4FY25_Transcript260525_Signed.pdf",
+      "speaker": "Satish Pai",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least US$300",
+      "status": "segment_level",
+      "note": "India guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "passage": "Pallav Agarwal: So over the long run, could we actually bridge the gap between the India FRP and Novelis, which probably is closer to $500 per ton, or that some differential will always remain? Satish Pai: Well, we will try to. Let's see how it progresses going forward. But certainly, we are aiming for the $300-plus EBITDA per ton in India in the mid-term. Pallav Agarwal: Right. Yes, thank you so much. Moderator: Thank you.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "India",
+      "metric_key": "ebitda_margin",
+      "target_low": 300.0,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-26",
+      "calls": [
+        {
+          "date": "2025-05-26",
+          "call_period": "2025-03-31",
+          "page": 23,
+          "quote": "But certainly, we are aiming for the $300-plus EBITDA per ton in India in the mid-term.",
+          "document": "HINDALCOIND_26052025114201_Q4FY25_Transcript260525_Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2025",
+      "source_quote": "The Indian FRP demand in Financial Year \u201825 is expected to grow by around 17% on a year -on-year basis",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDALCOIND_26052025114201_Q4FY25_Transcript260525_Signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "Indian guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "However, supply chain constraints continue to limit OEM production ramp-up. Additionally, geopolitical tensions and trade policy uncertainties remain key watch factors. Overall, while certain regions face policy-related headwinds, the medium to long-term outlook for global FRP demand across the end-use sectors remains positive, driven by strong sustainability tailwinds and secular growth drivers. The Indian FRP demand in Financial Year \u201825 is expected to grow by around 17% on a year -on-year basis, led by a strong demand from packaging and consumer durables.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Indian",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-26",
+      "calls": [
+        {
+          "date": "2025-05-26",
+          "call_period": "2025-03-31",
+          "page": 9,
+          "quote": "The Indian FRP demand in Financial Year \u201825 is expected to grow by around 17% on a year -on-year basis",
+          "document": "HINDALCOIND_26052025114201_Q4FY25_Transcript260525_Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth at least US$300 for FY2026",
+      "source_quote": "I think that it will be between $250 and $300.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDALCOIND_18082025185750_Q1FY26_Transcript_180825_signed.pdf",
+      "speaker": "Satish Pai",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least US$300",
+      "status": "segment_level",
+      "note": "downstream aluminum guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "passage": "Amit Murarka: Okay. So in that case, can we expect like a $300 -plus number kind of coming through maybe sometime by end of this year or next year? Satish Pai: I think that's our target. I think that it will be between $250 and $300. Amit Murarka: Sure. And on FRP now, what is the scheduled commissioning status? And what is the volume that we can expect this year and next year?",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "downstream aluminum",
+      "metric_key": "ebitda_growth",
+      "target_low": 300.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-18",
+      "calls": [
+        {
+          "date": "2025-08-18",
+          "call_period": "2025-06-30",
+          "page": 9,
+          "quote": "I think that it will be between $250 and $300.",
+          "document": "HINDALCOIND_18082025185750_Q1FY26_Transcript_180825_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth at least 70 for FY2026",
+      "source_quote": "So this year, we are targeting roughly 70 Kt.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDALCOIND_18082025185750_Q1FY26_Transcript_180825_signed.pdf",
+      "speaker": "Satish Pai",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 70",
+      "status": "segment_level",
+      "note": "FRP guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Amit Murarka: Sure. And on FRP now, what is the scheduled commissioning status? And what is the volume that we can expect this year and next year? Satish Pai: So this year, we are targeting roughly 70 Kt. So we have started selling commercial from June, July months already, and the ramp-up is going well. We planned for about 70 Kt, but I'm hoping we can do a bit more if the ramp-up goes smoothly. Amit Murarka: Got it.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "FRP",
+      "metric_key": "volume_growth",
+      "target_low": 70.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-18",
+      "calls": [
+        {
+          "date": "2025-08-18",
+          "call_period": "2025-06-30",
+          "page": 9,
+          "quote": "So this year, we are targeting roughly 70 Kt.",
+          "document": "HINDALCOIND_18082025185750_Q1FY26_Transcript_180825_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth at least \u20b9600 crore for FY2026",
+      "source_quote": "And yes, the INR 600 crore guidance still holds.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDALCOIND_18082025185750_Q1FY26_Transcript_180825_signed.pdf",
+      "speaker": "Satish Pai",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least \u20b9600 crore",
+      "status": "segment_level",
+      "note": "copper guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "Satish Pai: So copper is largely an offset hedging model. So there is not much gain or loss on copper hedging. Aluminum is the forward where we have that. And yes, the INR 600 crore guidance still holds. Moderator: The next question is from the line of Mr. Rajesh Majumdar from B&K Securities. Rajesh Majumdar: I had a question on the acquisition of AluChem.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "copper",
+      "metric_key": "ebitda_growth",
+      "target_low": 600.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-18",
+      "calls": [
+        {
+          "date": "2025-08-18",
+          "call_period": "2025-06-30",
+          "page": 12,
+          "quote": "And yes, the INR 600 crore guidance still holds.",
+          "document": "HINDALCOIND_18082025185750_Q1FY26_Transcript_180825_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin US$250\u2013300 for FY2026",
+      "source_quote": "I have been sort of internally guiding $250 to $300.",
+      "page": 18,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDALCOIND_26052025114201_Q4FY25_Transcript260525_Signed.pdf",
+      "speaker": "Satish Pai",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "US$250\u2013300",
+      "status": "segment_level",
+      "note": "downstream guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "passage": "That's very clear. Sir, on the downstream EBITDA, I mean , so you said you expect a steady increase. Any medium -term guidance should be kind of take something like a $300 on a quarter basis going forward or gradually maybe in few quarters? Satish Pai: I have been sort of internally guiding $250 to $300. It depends a little bit on how the FRP ramps up, how Silvassa gets commissioned. But I think it's between $250 to $300 this year. I think after this year, going forward, we will be comfortable giving a m uch more tighter range.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "downstream",
+      "metric_key": "ebitda_margin",
+      "target_low": 250.0,
+      "target_high": 300.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-26",
+      "calls": [
+        {
+          "date": "2025-05-26",
+          "call_period": "2025-03-31",
+          "page": 18,
+          "quote": "I have been sort of internally guiding $250 to $300.",
+          "document": "HINDALCOIND_26052025114201_Q4FY25_Transcript260525_Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex 2.3\u20132.4 for FY2027",
+      "source_quote": "the Novelis capex will be between, I think, Dev has already announced on the call about 2.3 billion to 2.4 billion",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDALCOIND_26052026123255_Q4FY26_Transcript_signed.pdf",
+      "speaker": "Satish Pai",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "2.3\u20132.4",
+      "status": "segment_level",
+      "note": "Novelis guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Pinakin: My second question is FY26 capex was INR31,619 crores, primarily given the surge in capex at Novelis. Now can you give us a sense of the consol capex across India and Novelis over the next 3 years, how it will play out between the two businesses? Satish Pai: Next three years, maybe not -- let me give you next year's. In FY 27, the India capex will be about INR12,000 crores, and the Novelis capex will be between, I think, Dev has already announced on the call about 2.3 billion to 2.4 billion, largely Bay Minette. I think it will be fair to say that when you go into FY 28, Novelis capex will sharply drop once Bay Minette is commissioned and they go into more of a maintenance capex frame. The India capex will go much higher than INR12,000 crores because we'll be then getting into the full copper smelter, the Aditya Phase 2 ramp -ups. But I think FY 28 numbers, I'll give you more closer to Q3 or Q4.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Novelis",
+      "metric_key": "capex",
+      "target_low": 2.3,
+      "target_high": 2.4,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-26",
+      "calls": [
+        {
+          "date": "2026-05-26",
+          "call_period": "2026-03-31",
+          "page": 11,
+          "quote": "the Novelis capex will be between, I think, Dev has already announced on the call about 2.3 billion to 2.4 billion",
+          "document": "HINDALCOIND_26052026123255_Q4FY26_Transcript_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth US$22 million for an unnamed period",
+      "source_quote": "The adjusted EBITDA stands at $436 million, which is $495 per ton, up 22% year-on-year",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/HINDALCOIND_18022026124409_Q3FY26_Transcript_signed.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "US$22 million",
+      "status": "not_scored",
+      "note": "Guided in US dollars for the IT services segment; our series is consolidated INR.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "passage": "On Hindalco's copper business performance, our overall metal shipments were up at 122 Kt, up 1% year-on-year, of which CCR volumes were at 82 Kt, down 14% year-on-year, due to weaker domestic market on account of higher LME and higher channel inventories. Our quarterly copper EBITDA stood at INR 595 crores, down 23% year-on-year on account of lower TC/RCs and copper concentrate mix, offset by better realization in byproducts and operational efficiency. Novelis' recorded shipments of 881 Kt, after ad justing for 72 Kt lower shipments due to Oswego fires, reflecting a decline of 3% year-on-year over 904 Kt shipments in the same period last year. The adjusted EBITDA stands at $436 million, which is $495 per ton, up 22% year-on-year, excluding the impact of $54 million from Oswego fires and $34 million from tariffs this quarter. Back in April 2025, we had set an FY 26 exit savings run rate target of $75 million, which we raised last quarter to $125 million. With another quarter of solid execution behind us, that run rate is now $150 million as we accelerate all cost efficiency initiatives. Looking ahead, we remain committed to our 3-year goal of permanently reducing our cost structure by $300 million by FY '28 exit.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": 22.0,
+      "target_high": 22.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-18",
+      "calls": [
+        {
+          "date": "2026-02-18",
+          "call_period": "2025-12-31",
+          "page": 8,
+          "quote": "The adjusted EBITDA stands at $436 million, which is $495 per ton, up 22% year-on-year",
+          "document": "HINDALCOIND_18022026124409_Q3FY26_Transcript_signed.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 1.71,
+    "series": 0.7,
+    "guidance": 11.41,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.11,
+    "total": 13.94
+  },
+  "usage": {
+    "guidance": {
+      "calls": 2,
+      "cache_hits": 5,
+      "tokens": 10496,
+      "dropped": 2,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 10496
+  }
+}

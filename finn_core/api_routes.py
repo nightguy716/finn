@@ -9,7 +9,7 @@ from pathlib import Path
 
 from finn_core.cache import open_cache
 from finn_core.config import PORTFOLIO
-from finn_core.feed import build_feed
+from finn_core.feed import build_feed, order_alerts
 from finn_core.ledger import promise_ledger
 from finn_core.nse_client import NSEClient
 
@@ -43,20 +43,30 @@ def feed_view(params: dict) -> dict:
             failed = True
             hit = None
         if isinstance(hit, dict) and hit.get("cards") is not None:
-            return {**hit, "source": "cache"}
+            return _serve(hit, "cache")
     filed = _file_for("feeds", key)
-    if failed and filed is not None:
-        return {**filed, "source": "file"}
-    if cache is None:
-        if filed is not None:
-            return {**filed, "source": "file"}
+    if isinstance(filed, dict) and filed.get("cards") is not None:
+        if cache is not None and not failed:
+            try:
+                cache.put("feed_snapshot", "FEED", key, FEED_VERSION, filed)
+            except Exception:
+                pass
+        return _serve(filed, "file")
+    if cache is None or failed:
         raise RuntimeError("cache is unavailable")
     payload = build_feed(as_of, hours, symbols, move_pct, volume_n, cache=cache, client=NSEClient(cache=cache))
     try:
         cache.put("feed_snapshot", "FEED", key, FEED_VERSION, payload)
     except Exception:
         pass
-    return {**payload, "source": "computed"}
+    return _serve(payload, "computed")
+
+
+def _serve(payload: dict, source: str) -> dict:
+    alerts = payload.get("alerts")
+    if isinstance(alerts, list):
+        payload = {**payload, "alerts": order_alerts(alerts)}
+    return {**payload, "source": source}
 
 
 def ledger_view(params: dict) -> dict:

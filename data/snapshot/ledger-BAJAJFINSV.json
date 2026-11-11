@@ -1,0 +1,537 @@
+{
+  "symbol": "BAJAJFINSV",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 3,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 25,
+    "pages_dropped_by_prefilter": 6,
+    "dropped_pages": [
+      {
+        "period": "2026-03-31",
+        "page": 6
+      },
+      {
+        "period": "2026-03-31",
+        "page": 10
+      },
+      {
+        "period": "2026-03-31",
+        "page": 11
+      },
+      {
+        "period": "2026-03-31",
+        "page": 22
+      },
+      {
+        "period": "2025-09-30",
+        "page": 4
+      },
+      {
+        "period": "2025-03-31",
+        "page": 21
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 43415.65,
+    "ebitda_margin_pct": null,
+    "pat": 2757.66,
+    "ttm_revenue": 163654.4,
+    "ttm_pat": 10657.83,
+    "ttm_ebitda_margin_pct": null,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 43415.65,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 8603.85,
+        "finance_costs": 8482.91,
+        "depreciation": 422.71,
+        "other_income": 0.0,
+        "pat": 2757.66,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 42036.9,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 8927.08,
+        "finance_costs": 7833.85,
+        "depreciation": 379.68,
+        "other_income": 0.0,
+        "pat": 3132.35,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 38493.79,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 6917.16,
+        "finance_costs": 7290.9,
+        "depreciation": 317.01,
+        "other_income": 14.35,
+        "pat": 2538.67,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 39708.06,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 5924.58,
+        "finance_costs": 7232.45,
+        "depreciation": 329.83,
+        "other_income": 0.0,
+        "pat": 2229.15,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 37402.93,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 6821.93,
+        "finance_costs": 6901.33,
+        "depreciation": 327.19,
+        "other_income": 0.0,
+        "pat": 2244.1,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 35439.08,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 7203.02,
+        "finance_costs": 6807.1,
+        "depreciation": 317.33,
+        "other_income": 12.26,
+        "pat": 2789.05,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth at least 8 for an unnamed period",
+      "source_quote": "If we exclude the impact of volatility in the tender-driven crop and government health business and the impact of \u201c1/n\u201d regulations, the growth for BAGIC",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/walimbelk_07052025191100_BFS_Transcriptintimation_sd.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 8",
+      "status": "segment_level",
+      "note": "BAGIC guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "The change in the accounting, however, has no bearing on the underwriting profits and PAT for the year, but it impacts the gross written premium and combined ratio for the period. As highlighted earlier, the GWP for BAGIC decreased by 13% during the quarter to Rs.4,326 crores, down from Rs.4,962 crores for the same period last year. The de growth is largely impacted by two elements; one, being the timing variance from the booking of the bulky crop and government health business; and the second one is what I referred earlier , the change in the accounting on long -term products. If we exclude the impact of volatility in the tender -driven crop and government health business and the impact of \u201c1/n\u201d regulations, the growth for BAGIC is about 8% for the quarter as compared to the reported degrowth of 13%. Similarly on a full year basis, the growth excluding crop and government health and the impact of \u201c1/n\u201d regulation for BAGIC is 12%, which is about 3% higher than the industry growth of 9%. Further, it is heartening to see that the growth on core business lines of BAGIC, such as commercial lines including fire, marine, engineering and liability and on motor and retail health. The growth for BAGIC has been far better than industry for both the quarter and the full year.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "BAGIC",
+      "metric_key": "revenue_growth",
+      "target_low": 8.0,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-07",
+      "calls": [
+        {
+          "date": "2025-05-07",
+          "call_period": "2025-03-31",
+          "page": 5,
+          "quote": "If we exclude the impact of volatility in the tender-driven crop and government health business and the impact of \u201c1/n\u201d regulations, the growth for BAGIC",
+          "document": "walimbelk_07052025191100_BFS_Transcriptintimation_sd.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 17% for an unnamed period",
+      "source_quote": "The asset management Company ended the year with an AUM of upwards of Rs.20,000 crores which is up 17% from the immediately preceding quarter, which",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/walimbelk_07052025191100_BFS_Transcriptintimation_sd.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "17%",
+      "status": "segment_level",
+      "note": "Asset Management Company guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "There has been no capital infusion in the Company since March '22, showing capital efficiency of the Company. Now, an \u201cUpdate on the Bajaj Technology piece\u201d: The vertical closed a new GCC deal and two deals in the Middle East during the quarter. It has also published two solutions from the cloud practice in AWS marketplace which demonstrates the AWS expertise the Company has built over a period of time. Now, moving to the \u201cAsset Management Company\u201d: The asset management Company ended the year with an AUM of upwards of Rs.20,000 crores which is up 17% from the immediately preceding quarter, which is Q3 of FY'25. We believe the Bajaj Finserv AMC is the fastest to cross the Rs.20,000 crores mark in less than two full years of operations. The non-group share of AUM stood at a very healthy 84% of the total AUM. This was the update on the performance of all our companies.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Asset Management Company",
+      "metric_key": "revenue_growth",
+      "target_low": 17.0,
+      "target_high": 17.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-07",
+      "calls": [
+        {
+          "date": "2025-05-07",
+          "call_period": "2025-03-31",
+          "page": 10,
+          "quote": "The asset management Company ended the year with an AUM of upwards of Rs.20,000 crores which is up 17% from the immediately preceding quarter, which",
+          "document": "walimbelk_07052025191100_BFS_Transcriptintimation_sd.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 12% for FY2025",
+      "source_quote": "Similarly on a full year basis, the growth excluding crop and government health and the impact of \u201c1/n\u201d regulation for BAGIC is 12%",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/walimbelk_07052025191100_BFS_Transcriptintimation_sd.pdf",
+      "speaker": "",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "12%",
+      "status": "segment_level",
+      "note": "BAGIC guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "As highlighted earlier, the GWP for BAGIC decreased by 13% during the quarter to Rs.4,326 crores, down from Rs.4,962 crores for the same period last year. The de growth is largely impacted by two elements; one, being the timing variance from the booking of the bulky crop and government health business; and the second one is what I referred earlier , the change in the accounting on long -term products. If we exclude the impact of volatility in the tender -driven crop and government health business and the impact of \u201c1/n\u201d regulations, the growth for BAGIC is about 8% for the quarter as compared to the reported degrowth of 13%. Similarly on a full year basis, the growth excluding crop and government health and the impact of \u201c1/n\u201d regulation for BAGIC is 12%, which is about 3% higher than the industry growth of 9%. Further, it is heartening to see that the growth on core business lines of BAGIC, such as commercial lines including fire, marine, engineering and liability and on motor and retail health. The growth for BAGIC has been far better than industry for both the quarter and the full year. Group health, however, continues to be a tactical play with pricing continuously under pressure.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "BAGIC",
+      "metric_key": "revenue_growth",
+      "target_low": 12.0,
+      "target_high": 12.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-07",
+      "calls": [
+        {
+          "date": "2025-05-07",
+          "call_period": "2025-03-31",
+          "page": 5,
+          "quote": "Similarly on a full year basis, the growth excluding crop and government health and the impact of \u201c1/n\u201d regulation for BAGIC is 12%",
+          "document": "walimbelk_07052025191100_BFS_Transcriptintimation_sd.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 12\u201313% for FY2026",
+      "source_quote": "AUM growth for MSME lending will be close to about only 12% to 13% for the full year '26",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/walimbelk_17112025131710_BFSCALLTRANSCRIPTQ2FY26.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "12\u201313%",
+      "status": "segment_level",
+      "note": "MSME lending guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Profit after tax grew at a healthy 23% during the quarter, up to INR 4,948 crores from INR 4,014 crores. OPEX to net total income improved to 32.6% as against 33.2% in the previous year, with green shoots of AI initiatives now visible. The net losses and provi sions for the quarter were up 19%, and the credit costs remained elevated, largely due to the 2 & 3-wheeler segment and the MSME business. However, the company has cut about 25% of its unsecured MSME volumes , and thus the AUM growth for MSME lending will be close to about only 12% to 13% for the full year '26. In terms of our gross and net NPAs, they stood at 1.24% and 0.6%, respectively, for the quarter ended 30th September as against 1.06% and 0.46% for the same period last year. The capital adequacy remained strong at 21.22%. Moving to Bajaj Housing Finance: A stable quarter with AUM growth of 24% despite heightened competitive intensity and higher portfolio attrition.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "MSME lending",
+      "metric_key": "volume_growth",
+      "target_low": 12.0,
+      "target_high": 13.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-17",
+      "calls": [
+        {
+          "date": "2025-11-17",
+          "call_period": "2025-09-30",
+          "page": 7,
+          "quote": "AUM growth for MSME lending will be close to about only 12% to 13% for the full year '26",
+          "document": "walimbelk_17112025131710_BFSCALLTRANSCRIPTQ2FY26.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 14\u201316 for FY2026",
+      "source_quote": "The company expects to add about 14 million to 16 million new customers to its franchise in the full year FY '26.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/walimbelk_01082025162034_BFSINVESTORCALLTRANSCRIPTSD.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "14\u201316",
+      "status": "segment_level",
+      "note": "BFL guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "The new loans booked were at 13.49 million in quarter 1 as against 10.97 million in quarter 1 last year, recording a growth of 23%. The company expects to disburse over 50 million new loans in the full financial year FY '26. BFL added about 4.69 million customers to its franchise during the quarter. The company expects to add about 14 million to 16 million new customers to its franchise in the full year FY '26. The company's diversified business model has enabled it to record a strong AUM growth of 25% at INR 4,41,450 crores as on 30th June '25 as compared to INR 3,54,192 crores for the same period last year. Net interest income grew by 22% to INR 10,227 crores as against INR 8,365 crores for the same period last year. Opex to net total income improved to 32.7% as against 33.3% for the same period last year.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "BFL",
+      "metric_key": "volume_growth",
+      "target_low": 14.0,
+      "target_high": 16.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-01",
+      "calls": [
+        {
+          "date": "2025-08-01",
+          "call_period": "2025-06-30",
+          "page": 7,
+          "quote": "The company expects to disburse over 50 million new loans in the full financial year FY '26.",
+          "document": "walimbelk_01082025162034_BFSINVESTORCALLTRANSCRIPTSD.pdf"
+        },
+        {
+          "date": "2025-08-01",
+          "call_period": "2025-06-30",
+          "page": 7,
+          "quote": "The company expects to add about 14 million to 16 million new customers to its franchise in the full year FY '26.",
+          "document": "walimbelk_01082025162034_BFSINVESTORCALLTRANSCRIPTSD.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-08-01",
+          "call_period": "2025-06-30",
+          "value": "at least 50",
+          "change": "set",
+          "page": 7,
+          "quote": "The company expects to disburse over 50 million new loans in the full financial year FY '26.",
+          "superseded": true
+        },
+        {
+          "date": "2025-08-01",
+          "call_period": "2025-06-30",
+          "value": "14\u201316",
+          "change": "cut",
+          "page": 7,
+          "quote": "The company expects to add about 14 million to 16 million new customers to its franchise in the full year FY '26.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 25\u201340 bps for FY2027",
+      "source_quote": "improving the opex to NTI ratio by 25 bps to 40 bps in FY2027",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/walimbelk_10112026161626_Earning_Call_Transcript.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "25\u201340 bps",
+      "status": "segment_level",
+      "note": "Bajaj Life guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "The net total income grew by 23% to INR 15,974 crores. Profit after tax was at about INR 6,367 crores, registering a very healthy growth of 29%. Opex to net total income was flat at 33% for the quarter. However, with visibility of green shoots in operating efficiencies due to AI implementation, the Company is confident of improving the opex to NTI ratio by 25 bps to 40 bps in FY2027. Loan losses and provisions in the quarter were at INR 2,166 crores as against INR 2,080 crores for the same quarter last year. Q2 also includes a prudent management and macroeconomic provision of close to INR 340 crores. Loan losses to AUF ratio declined to 1.56% this quarter versus 1.88% for the same period last year.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Bajaj Life",
+      "metric_key": "ebitda_margin",
+      "target_low": 25.0,
+      "target_high": 40.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-10",
+      "calls": [
+        {
+          "date": "2026-11-10",
+          "call_period": "2026-09-30",
+          "page": 6,
+          "quote": "improving the opex to NTI ratio by 25 bps to 40 bps in FY2027",
+          "document": "walimbelk_10112026161626_Earning_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2027",
+      "source_quote": "The operating revenue for the company accordingly increased to INR 107 crore with a healthy growth of 32%.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05082026150009_BFSTranscriptSE.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "operating revenue guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Bajaj Finserv Limited July 31, 2026 Page 6 of 18 I'll now move to Bajaj Markets: The total disbursement for the quarter for Bajaj Markets was at about INR 2,269 crore, up from INR 2,046 crore for the immediately preceding quarter and compared to the last year same quarter of about INR 1,209 crore. The company ended the quarter with a total unique partner count of 103. The operating revenue for the company accordingly increased to INR 107 crore with a healthy growth of 32%. As you may recall, the growth was muted for the full year last year. However, we are back on the growth trajectory after the planned digital customer journey enhancements, which had impacted the growth for FY 2026. Further, some of the revenue structures are now trail revenue based, providing stability, predictability and non-linearity to the future revenues.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "operating revenue",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-05",
+      "calls": [
+        {
+          "date": "2026-08-05",
+          "call_period": "2026-06-30",
+          "page": 7,
+          "quote": "The operating revenue for the company accordingly increased to INR 107 crore with a healthy growth of 32%.",
+          "document": "BAJAJFINSV_05082026150009_BFSTranscriptSE.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 1,
+    "maintained": 0,
+    "items": [
+      {
+        "promise": "Volume growth 14\u201316 for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-08-01",
+            "value": "at least 50",
+            "change": "set"
+          },
+          {
+            "date": "2025-08-01",
+            "value": "14\u201316",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.86,
+    "series": 0.89,
+    "guidance": 5.88,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 7.75
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 4226,
+      "dropped": 1,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 4226
+  }
+}

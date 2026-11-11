@@ -1,0 +1,556 @@
+{
+  "symbol": "EICHERMOT",
+  "coverage": {
+    "transcripts_found": 6,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [
+      "2026-09-30"
+    ],
+    "series_gaps": [
+      {
+        "period": "2026-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 2,
+    "next_quarter_statements": 3,
+    "pages_mentioning_fy26_or_next_quarter": 19,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-06-30",
+    "revenue": 6632.42,
+    "ebitda_margin_pct": 23.98,
+    "pat": 1462.51,
+    "ttm_revenue": 24998.14,
+    "ttm_pat": 5772.52,
+    "ttm_ebitda_margin_pct": 24.47,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": null,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "",
+        "flags": [
+          "missing"
+        ]
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 6632.42,
+        "ebitda": 1590.62,
+        "ebitda_margin_pct": 23.98,
+        "ebit": 1313.07,
+        "ebit_margin_pct": 19.8,
+        "pbt": 1757.73,
+        "finance_costs": 21.65,
+        "depreciation": 277.55,
+        "other_income": 466.31,
+        "pat": 1462.51,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 6080.09,
+        "ebitda": 1513.67,
+        "ebitda_margin_pct": 24.9,
+        "ebit": 1282.02,
+        "ebit_margin_pct": 21.09,
+        "pbt": 1614.01,
+        "finance_costs": 20.2,
+        "depreciation": 231.65,
+        "other_income": 352.19,
+        "pat": 1519.95,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 6114.04,
+        "ebitda": 1501.27,
+        "ebitda_margin_pct": 24.55,
+        "ebit": 1290.17,
+        "ebit_margin_pct": 21.1,
+        "pbt": 1610.26,
+        "finance_costs": 17.27,
+        "depreciation": 211.1,
+        "other_income": 337.36,
+        "pat": 1420.61,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 6171.59,
+        "ebitda": 1511.9,
+        "ebitda_margin_pct": 24.5,
+        "ebit": 1312.34,
+        "ebit_margin_pct": 21.26,
+        "pbt": 1644.1,
+        "finance_costs": 19.16,
+        "depreciation": 199.56,
+        "other_income": 350.92,
+        "pat": 1369.45,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 5041.84,
+        "ebitda": 1202.78,
+        "ebitda_margin_pct": 23.86,
+        "ebit": 1004.72,
+        "ebit_margin_pct": 19.93,
+        "pbt": 1435.88,
+        "finance_costs": 14.9,
+        "depreciation": 198.06,
+        "other_income": 446.06,
+        "pat": 1205.22,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Volume growth 21% for an unnamed period",
+      "source_quote": "Coming to the volumes during this quarter, we sold 3,25,773 motorcycles with a growth of 21% as against 2,69,039 motorcycles in Q3 FY 2025.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/EICHERMOT_16022026144800_EMLTranscriptofConferenceCall16022026Signed.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "21%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "We also took another step in expanding our cultural footprint beyond the motorcycling community with the second edition of Journeying Across the Himalayas, which grew in scale, depth and impact. Across both domestic and international markets, we saw a very healthy momentum driven by our refreshed products, global showcases and continued engagement with our riders. This collective effort helped us cross the milestone of 1 million motorcycles year-to-date much before the close of this financial year, a moment that truly belongs to our teams, partners and our riding community across the globe. Coming to the volumes during this quarter, we sold 3,25,773 motorcycles with a growth of 21% as against 2,69,039 motorcycles in Q3 FY 2025. Out of this, in India, we sold about 3,00,426 motorcycles with a 24% growth from the last year. We continue to gain market share across the board, particularly in the middle-sized motorcycle segment, where Royal Enfield has been able to continue its dominance at 88.9% exit market share. Domestic sales remained healthy across all 3 months with a double-digit growth, supporting strong year-to-date growth, driven by sustained retail traction.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 21.0,
+      "target_high": 21.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-16",
+      "calls": [
+        {
+          "date": "2026-02-16",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "Coming to the volumes during this quarter, we sold 3,25,773 motorcycles with a growth of 21% as against 2,69,039 motorcycles in Q3 FY 2025.",
+          "document": "EICHERMOT_16022026144800_EMLTranscriptofConferenceCall16022026Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 3\u20133.5% for 2026-06-30",
+      "source_quote": "So, which is expected to be in the range of 3% to 3.5% and that's in the first quarter.",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/rahulrathore_royalenfield_com_26052026192136_EMLTranscriptofConferencecallMay222026Signed.pdf",
+      "speaker": "B.",
+      "period_promised": "2026-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3\u20133.5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Srinivas: Start from the latest one. I think the commodity pressure is exactly same as what Govind has mentioned. I think we are sailing the same boat. So, which is expected to be in the range of 3% to 3.5% and that's in the first quarter. So that continue to be in the similar lines for the year. As far as demand is concerned, I think there is no forecast expected at this moment. But however, right now, the traction in the market is quite good.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 3.0,
+      "target_high": 3.5,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-26",
+      "calls": [
+        {
+          "date": "2026-05-26",
+          "call_period": "2026-03-31",
+          "page": 13,
+          "quote": "So, which is expected to be in the range of 3% to 3.5% and that's in the first quarter.",
+          "document": "rahulrathore_royalenfield_com_26052026192136_EMLTranscriptofConferencecallMay222026Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 3\u20133.5% for FY2027",
+      "source_quote": "If I have to give you some number, it is almost about 3 to 3.5 percentage on the material cost level impact is expected.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/rahulrathore_royalenfield_com_26052026192136_EMLTranscriptofConferencecallMay222026Signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3\u20133.5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "The second is also availability itself is becoming a bit of a problem. So we are all trying to do it on a wall footing basis type of how do we run the continuity in production. As far as the commodity is concerned, yes, there is a huge headwind. If I have to give you some number, it is almost about 3 to 3.5 percentage on the material cost level impact is expected. And what we have done anticipating this and started working on first is before the price increase, we intensified our value engineering. We intensified our cost reduction exercises, some of the austerity measures because it's a war situation, we also have to be prepared for it. And we also did a pricing increase of about 1.75% in the month of April.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 3.0,
+      "target_high": 3.5,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-26",
+      "calls": [
+        {
+          "date": "2026-05-26",
+          "call_period": "2026-03-31",
+          "page": 10,
+          "quote": "If I have to give you some number, it is almost about 3 to 3.5 percentage on the material cost level impact is expected.",
+          "document": "rahulrathore_royalenfield_com_26052026192136_EMLTranscriptofConferencecallMay222026Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth at least 24 for an unnamed period",
+      "source_quote": "Out of this, in India, we sold about 3,00,426 motorcycles with a growth from the last year.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/EICHERMOT_16022026144800_EMLTranscriptofConferenceCall16022026Signed.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 24",
+      "status": "segment_level",
+      "note": "India guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Across both domestic and international markets, we saw a very healthy momentum driven by our refreshed products, global showcases and continued engagement with our riders. This collective effort helped us cross the milestone of 1 million motorcycles year-to-date much before the close of this financial year, a moment that truly belongs to our teams, partners and our riding community across the globe. Coming to the volumes during this quarter, we sold 3,25,773 motorcycles with a growth of 21% as against 2,69,039 motorcycles in Q3 FY 2025. Out of this, in India, we sold about 3,00,426 motorcycles with a 24% growth from the last year. We continue to gain market share across the board, particularly in the middle-sized motorcycle segment, where Royal Enfield has been able to continue its dominance at 88.9% exit market share. Domestic sales remained healthy across all 3 months with a double-digit growth, supporting strong year-to-date growth, driven by sustained retail traction. The festive season was a strong one for Royal Enfield with customer enthusiasm translating into a robust demand across markets.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "India",
+      "metric_key": "volume_growth",
+      "target_low": 24.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-16",
+      "calls": [
+        {
+          "date": "2026-02-16",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "Out of this, in India, we sold about 3,00,426 motorcycles with a growth from the last year.",
+          "document": "EICHERMOT_16022026144800_EMLTranscriptofConferenceCall16022026Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex at least \u20b9958 crore for an unnamed period",
+      "source_quote": "For this expansion, we will invest an estimate of almost INR 958 crores over a period of 2 years, reaching the target capacity by FY",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/EICHERMOT_16022026144800_EMLTranscriptofConferenceCall16022026Signed.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least \u20b9958 crore",
+      "status": "segment_level",
+      "note": "Royal Enfield guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "Eicher Motors Limited February 10, 2026 The project is aligned with our consistent growth focus and underscores our commitment to the evolving needs of our global community. For this expansion, we will invest an estimate of almost INR 958 crores over a period of 2 years, reaching the target capacity by FY 27-28. By scaling our existing Cheyyar plant, we are ensuring a faster capacity ramp-up and cost-efficient operations. Now I will hand over to Mr. Aggarwal to talk you through the updates of the VE Commercial Vehicles.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Royal Enfield",
+      "metric_key": "capex",
+      "target_low": 958.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-16",
+      "calls": [
+        {
+          "date": "2026-02-16",
+          "call_period": "2025-12-31",
+          "page": 6,
+          "quote": "For this expansion, we will invest an estimate of almost INR 958 crores over a period of 2 years, reaching the target capacity by FY",
+          "document": "EICHERMOT_16022026144800_EMLTranscriptofConferenceCall16022026Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 51% for 2026-06-30",
+      "source_quote": "with a growth of 51%",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/rahulrathore_royalenfield_com_26052026192136_EMLTranscriptofConferencecallMay222026Signed.pdf",
+      "speaker": "Govindarajan",
+      "period_promised": "2026-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "51%",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Infrastructure creation, logistics modernization, growing e-commerce and the push towards cleaner and more efficient mobility continue to create meaningful opportunities for us. B. Govindarajan: Thank you, Srinivas. It has indeed been an excellent FY26 for Eicher Motors Limited, and we are happy to have started FY27 on a very strong note with a good momentum in April 2026 with a growth of 51%. The resilience of our growth over the past 8 quarters makes us confident that our strategies are steering us in the right direction and over the medium term, we expect the trajectory to be upwards. In line with this projected growth, we are preparing to be future-ready with strategic manufacturing expansions and market relevant products planning, both at Royal Enfield and at Page 6 of 19",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "volume_growth",
+      "target_low": 51.0,
+      "target_high": 51.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-26",
+      "calls": [
+        {
+          "date": "2026-05-26",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "with a growth of 51%",
+          "document": "rahulrathore_royalenfield_com_26052026192136_EMLTranscriptofConferencecallMay222026Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex at least \u20b9958 crore for FY2028",
+      "source_quote": "And the INR958 crores capex, which we also got it cleared, that will kick in for the overall capacity of 2 million.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/rahulrathore_royalenfield_com_26052026192136_EMLTranscriptofConferencecallMay222026Signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2028",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least \u20b9958 crore",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "So you will see the growth continuing on the overall level. As far as the capacity is concerned, we mentioned our capacity is about 1.4 million with about 500 module, which we explained to you people in the last call also, that's going to kick in from June and July. It does mean the overall capacity will go up to almost about 1.6 million plus. And the INR958 crores capex, which we also got it cleared, that will kick in for the overall capacity of 2 million. This all will happen, as Siddhartha also mentioned and as I was explaining, at our Cheyyar facility where we have land. So that's a brownfield expansion. That's about 2 million capacity, which will be there by Q2 of FY28.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 958.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-26",
+      "calls": [
+        {
+          "date": "2026-05-26",
+          "call_period": "2026-03-31",
+          "page": 9,
+          "quote": "And the INR958 crores capex, which we also got it cleared, that will kick in for the overall capacity of 2 million.",
+          "document": "rahulrathore_royalenfield_com_26052026192136_EMLTranscriptofConferencecallMay222026Signed.pdf"
+        },
+        {
+          "date": "2026-05-26",
+          "call_period": "2026-03-31",
+          "page": 16,
+          "quote": "But the additional INR958 crores, which we are putting in as a capital or taking the capacity from 1.6 million to almost 2 million at",
+          "document": "rahulrathore_royalenfield_com_26052026192136_EMLTranscriptofConferencecallMay222026Signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-26",
+          "call_period": "2026-03-31",
+          "value": "at least \u20b9958 crore",
+          "change": "set",
+          "page": 9,
+          "quote": "And the INR958 crores capex, which we also got it cleared, that will kick in for the overall capacity of 2 million.",
+          "superseded": false
+        },
+        {
+          "date": "2026-05-26",
+          "call_period": "2026-03-31",
+          "value": "at least \u20b9958 crore",
+          "change": "maintained",
+          "page": 16,
+          "quote": "But the additional INR958 crores, which we are putting in as a capital or taking the capacity from 1.6 million to almost 2 million at",
+          "superseded": true
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth 23% for an unnamed period",
+      "source_quote": "Our revenue for Q3 is at about INR 6,114 crores, marking a growth of 23% over INR 4,973 crores from Q3 last year.",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/EICHERMOT_16022026144800_EMLTranscriptofConferenceCall16022026Signed.pdf",
+      "speaker": "Management",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "23%",
+      "status": "not_scored",
+      "note": "The period is not stated.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "The third quarter was shaped by launches, events and community-led initiatives, and we continue to witness high customer confidence and trust in our brands. Before we move into the detailed business updates for Royal Enfield and VECV, I'll begin with a broad summary of the overall financials. EML consolidated financials for the third quarter FY 25-26. Our revenue for Q3 is at about INR 6,114 crores, marking a growth of 23% over INR 4,973 crores from Q3 last year. EBITDA stands at about INR 1,557 crores, marking a growth of 30% over INR 1,201 crores in Q3 last year. PAT at INR 1,421 crores, up by 21% from INR 1,171 crores in Q3 last year. Please note that PAT includes the share of profits of VECV, which for Q3 stood at about INR 183 crores.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 23.0,
+      "target_high": 23.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-16",
+      "calls": [
+        {
+          "date": "2026-02-16",
+          "call_period": "2025-12-31",
+          "page": 3,
+          "quote": "Our revenue for Q3 is at about INR 6,114 crores, marking a growth of 23% over INR 4,973 crores from Q3 last year.",
+          "document": "EICHERMOT_16022026144800_EMLTranscriptofConferenceCall16022026Signed.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 1,
+    "items": [
+      {
+        "promise": "Capex at least \u20b9958 crore for FY2028",
+        "period": "FY2028",
+        "sequence": [
+          {
+            "date": "2026-05-26",
+            "value": "at least \u20b9958 crore",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-26",
+            "value": "at least \u20b9958 crore",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 6,
+    "total": 6
+  },
+  "timing": {
+    "discover": 13.84,
+    "series": 0.78,
+    "guidance": 7.97,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 22.71
+  },
+  "usage": {
+    "guidance": {
+      "calls": 3,
+      "cache_hits": 3,
+      "tokens": 14385,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 14385
+  }
+}

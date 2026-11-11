@@ -1,0 +1,561 @@
+{
+  "symbol": "ULTRACEMCO",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 9,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 40,
+    "pages_dropped_by_prefilter": 6,
+    "dropped_pages": [
+      {
+        "period": "2026-06-30",
+        "page": 10
+      },
+      {
+        "period": "2026-03-31",
+        "page": 15
+      },
+      {
+        "period": "2025-12-31",
+        "page": 3
+      },
+      {
+        "period": "2025-09-30",
+        "page": 8
+      },
+      {
+        "period": "2025-06-30",
+        "page": 13
+      },
+      {
+        "period": "2025-03-31",
+        "page": 8
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 23295.07,
+    "ebitda_margin_pct": 15.95,
+    "pat": 1493.77,
+    "ttm_revenue": 95572.42,
+    "ttm_pat": 8801.21,
+    "ttm_ebitda_margin_pct": 18.97,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 23295.07,
+        "ebitda": 3715.0,
+        "ebitda_margin_pct": 15.95,
+        "ebit": 2501.65,
+        "ebit_margin_pct": 10.74,
+        "pbt": 2060.79,
+        "finance_costs": 551.75,
+        "depreciation": 1213.35,
+        "other_income": 110.89,
+        "pat": 1493.77,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 24648.2,
+        "ebitda": 5002.2,
+        "ebitda_margin_pct": 20.29,
+        "ebit": 3801.69,
+        "ebit_margin_pct": 15.42,
+        "pbt": 3479.03,
+        "finance_costs": 452.93,
+        "depreciation": 1200.51,
+        "other_income": 130.27,
+        "pat": 2599.28,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 25799.47,
+        "ebitda": 5589.37,
+        "ebitda_margin_pct": 21.66,
+        "ebit": 4381.27,
+        "ebit_margin_pct": 16.98,
+        "pbt": 3981.91,
+        "finance_costs": 486.92,
+        "depreciation": 1208.1,
+        "other_income": 87.56,
+        "pat": 2982.76,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 21829.68,
+        "ebitda": 3826.01,
+        "ebitda_margin_pct": 17.53,
+        "ebit": 2644.11,
+        "ebit_margin_pct": 12.11,
+        "pbt": 2287.49,
+        "finance_costs": 492.2,
+        "depreciation": 1181.9,
+        "other_income": 135.58,
+        "pat": 1725.4,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 19606.93,
+        "ebitda": 3094.34,
+        "ebitda_margin_pct": 15.78,
+        "ebit": 1946.66,
+        "ebit_margin_pct": 9.93,
+        "pbt": 1661.51,
+        "finance_costs": 459.29,
+        "depreciation": 1147.68,
+        "other_income": 174.14,
+        "pat": 1231.58,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 21275.45,
+        "ebitda": 4371.96,
+        "ebitda_margin_pct": 20.55,
+        "ebit": 3265.18,
+        "ebit_margin_pct": 15.35,
+        "pbt": 3012.11,
+        "finance_costs": 433.3,
+        "depreciation": 1106.78,
+        "other_income": 180.23,
+        "pat": 2225.9,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 9\u201310% for FY2026",
+      "source_quote": "we would expect anywhere between 9% to 10% all-India demand.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ULTRACEMCO1_30012026114944_Covering_Letter_-_Transcript.pdf",
+      "speaker": "Atul Daga",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "9\u201310%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "UltraTech Cement Limited January 24, 2026 Page 8 of 15 Ritesh Shah: Good numbers, congratulations. Sir, 3 questions. One is, would you be able to spell out industry demand growth for Q3 and 9 months? Atul Daga: Don't hold me to it, but we would expect anywhere between 9% to 10% all-India demand. Ritesh Shah: Sir, would you speak for Q3? Atul Daga: I was talking about Q3 literally. Ritesh Shah: Yes, yes.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 9.0,
+      "target_high": 10.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-30",
+      "calls": [
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "page": 9,
+          "quote": "we would expect anywhere between 9% to 10% all-India demand.",
+          "document": "ULTRACEMCO1_30012026114944_Covering_Letter_-_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 15\u201320% for an unnamed period",
+      "source_quote": "We have grown more than 20% in the Northern markets, in the range of 15% to 20% in the Southern markets",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ULTRACEMCO1_27102026142336_SE_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15\u201320%",
+      "status": "segment_level",
+      "note": "Southern markets guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Industry estimates put cement demand to grow closer to 10% year -on-year. Our growth of 13.8% this quarter is comfortably ahead, which means that our presence in the market is continuously increasing. North markets grew in high double digits. We have grown more than 20% in the Northern markets, in the range of 15% to 20% in the Southern markets, East around 5%, West around closer to 10% as well as 10% in the Central markets. Our capacity utilization was 71%, better than 66% last year on a higher base. We could have grown more. We could have sold more cement if additional capacity was available.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Southern markets",
+      "metric_key": "volume_growth",
+      "target_low": 15.0,
+      "target_high": 20.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-27",
+      "calls": [
+        {
+          "date": "2026-10-27",
+          "call_period": "2026-09-30",
+          "page": 4,
+          "quote": "We have grown more than 20% in the Northern markets, in the range of 15% to 20% in the Southern markets",
+          "document": "ULTRACEMCO1_27102026142336_SE_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue at least \u20b9185 crore for 2025-06-30",
+      "source_quote": "Around INR185 crores, Ankit tells me that.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ULTRACEMCO_24072025173210_Covering_Letter_Earnings_call_Transcript.pdf",
+      "speaker": "Atul Daga",
+      "period_promised": "2025-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least \u20b9185 crore",
+      "status": "segment_level",
+      "note": "building products guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "Raashi Chopra: Got it. All right. And possible to share the building products number for 1Q last year revenue? Atul Daga: Around INR185 crores, Ankit tells me that. Raashi Chopra: And lastly, what was the capex during this quarter? Atul Daga: It has been around INR 2,000 crores. Generally, that's been the run rate every quarter.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "building products",
+      "metric_key": "revenue_growth",
+      "target_low": 185.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-24",
+      "calls": [
+        {
+          "date": "2025-07-24",
+          "call_period": "2025-06-30",
+          "page": 6,
+          "quote": "Around INR185 crores, Ankit tells me that.",
+          "document": "ULTRACEMCO_24072025173210_Covering_Letter_Earnings_call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 10% for FY2026",
+      "source_quote": "Just to clarify, sir, when we say, we will grow 10% volume growth in FY \u201826, this is on 135.8 million tons.",
+      "page": 15,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ULTRACEMCO_24072025173210_Covering_Letter_Earnings_call_Transcript.pdf",
+      "speaker": "Atul Daga",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10%",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Moderator: Next question is from Shravan Shah from Dolat Capital. Shravan Shah: Hi. Thank you, sir. Just to clarify, sir, when we say, we will grow 10% volume growth in FY \u201826, this is on 135.8 million tons. That's what we have done at consol level in FY \u201925? Atul Daga: Yes. Okay.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 10.0,
+      "target_high": 10.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-24",
+      "calls": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "Prateek, we expect to grow double digit this year on a higher base.",
+          "document": "ULTRACEMCO_02052025163206_BMTranscriptQ4FY25.pdf"
+        },
+        {
+          "date": "2025-07-24",
+          "call_period": "2025-06-30",
+          "page": 9,
+          "quote": "We would target a double -digit growth given the fact that we have got new capacities into our fold.",
+          "document": "ULTRACEMCO_24072025173210_Covering_Letter_Earnings_call_Transcript.pdf"
+        },
+        {
+          "date": "2025-07-24",
+          "call_period": "2025-06-30",
+          "page": 15,
+          "quote": "Just to clarify, sir, when we say, we will grow 10% volume growth in FY \u201826, this is on 135.8 million tons.",
+          "document": "ULTRACEMCO_24072025173210_Covering_Letter_Earnings_call_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "at least 10%",
+          "change": "set",
+          "page": 6,
+          "quote": "Prateek, we expect to grow double digit this year on a higher base.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-24",
+          "call_period": "2025-06-30",
+          "value": "at least 10%",
+          "change": "maintained",
+          "page": 9,
+          "quote": "We would target a double -digit growth given the fact that we have got new capacities into our fold.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-24",
+          "call_period": "2025-06-30",
+          "value": "10%",
+          "change": "maintained",
+          "page": 15,
+          "quote": "Just to clarify, sir, when we say, we will grow 10% volume growth in FY \u201826, this is on 135.8 million tons.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth at least 10% for FY2027",
+      "source_quote": "Yes, we are targeting double-digit volume growth this year.",
+      "page": 16,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ULTRACEMCO1_23072026184045_SE_Letter_-_Transcript.pdf",
+      "speaker": "Atul Daga",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "If I look at the grey cement volume growth, in the fourth quarter, it was 9.3% year-on-year, in the first quarter it's 13.1%. So clearly the market is picking up. If the industry environment remains as it is, can we expect double -digit demand growth, double - digit sales volume growth for grey cement in FY27 for the company? Atul Daga: Yes, we are targeting double-digit volume growth this year. Pinakin: Okay. And what will you attribute to this acceleration in market share gains quarter-on-quarter? Atul Daga: Pinakin, we spoke about it.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-23",
+      "calls": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 16,
+          "quote": "We would target double-digit growth.",
+          "document": "ULTRACEMCO1_01052026161104_SE_Letter_-_Transcript.pdf"
+        },
+        {
+          "date": "2026-07-23",
+          "call_period": "2026-06-30",
+          "page": 16,
+          "quote": "Yes, we are targeting double-digit volume growth this year.",
+          "document": "ULTRACEMCO1_23072026184045_SE_Letter_-_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "value": "at least 10%",
+          "change": "set",
+          "page": 16,
+          "quote": "We would target double-digit growth.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-23",
+          "call_period": "2026-06-30",
+          "value": "at least 10%",
+          "change": "maintained",
+          "page": 16,
+          "quote": "Yes, we are targeting double-digit volume growth this year.",
+          "superseded": false
+        }
+      ]
+    }
+  ],
+  "long_term_targets": [
+    {
+      "promise": "Volume growth 7\u20138% for a longer horizon",
+      "source_quote": "We expect a sustainable volume growth of 7% to 8% per annum.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ULTRACEMCO1_01052026161104_SE_Letter_-_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20138%",
+      "status": "long_term",
+      "note": "The passage says mid-term or near-term, not a fiscal year or a quarter.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "They are moving from integration drag to earnings contributor. As their cost improvement capex matures, they will be a meaningful and growing source of group -level EBITDA accretion. Let me now look at how we see fiscal '27 and beyond. We expect a sustainable volume growth of 7% to 8% per annum. The structural drivers are firmly in place, India's urbanization story, the government's infrastructure commitment , you would have read about Mumbai City itself spending about $60 billion in improvement of infrastructure, the PMAY housing targets, rising rural demand, none of these have been diluted by the West Asia crisis. These are very strong structural forces and UltraTech is better positioned than anybody else to capture that demand in the long-term. The near -term environment has its complexities, nobody knows what will happen tomorrow.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 7.0,
+      "target_high": 8.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-01",
+      "calls": [
+        {
+          "date": "2026-05-01",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "We expect a sustainable volume growth of 7% to 8% per annum.",
+          "document": "ULTRACEMCO1_01052026161104_SE_Letter_-_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 3,
+    "items": [
+      {
+        "promise": "Volume growth at least 10% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-05-01",
+            "value": "at least 10%",
+            "change": "set"
+          },
+          {
+            "date": "2026-07-23",
+            "value": "at least 10%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Volume growth 10% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-02",
+            "value": "at least 10%",
+            "change": "set"
+          },
+          {
+            "date": "2025-07-24",
+            "value": "at least 10%",
+            "change": "maintained"
+          },
+          {
+            "date": "2025-07-24",
+            "value": "10%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 1.25,
+    "series": 1.09,
+    "guidance": 1.44,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.07,
+    "total": 3.86
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 7,
+      "tokens": 0,
+      "dropped": 1,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

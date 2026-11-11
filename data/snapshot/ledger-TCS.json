@@ -1,0 +1,737 @@
+{
+  "symbol": "TCS",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 10,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 45,
+    "pages_dropped_by_prefilter": 9,
+    "dropped_pages": [
+      {
+        "period": "2026-03-31",
+        "page": 11
+      },
+      {
+        "period": "2026-03-31",
+        "page": 12
+      },
+      {
+        "period": "2026-03-31",
+        "page": 15
+      },
+      {
+        "period": "2026-03-31",
+        "page": 20
+      },
+      {
+        "period": "2026-03-31",
+        "page": 28
+      },
+      {
+        "period": "2026-03-31",
+        "page": 30
+      },
+      {
+        "period": "2025-09-30",
+        "page": 6
+      },
+      {
+        "period": "2025-09-30",
+        "page": 13
+      },
+      {
+        "period": "2025-06-30",
+        "page": 20
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 73188.0,
+    "ebitda_margin_pct": 25.71,
+    "pat": 13884.0,
+    "ttm_revenue": 283248.0,
+    "ttm_pat": 51608.0,
+    "ttm_ebitda_margin_pct": 25.02,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 73188.0,
+        "ebitda": 18815.0,
+        "ebitda_margin_pct": 25.71,
+        "ebit": 17553.0,
+        "ebit_margin_pct": 23.98,
+        "pbt": 18638.0,
+        "finance_costs": 252.0,
+        "depreciation": 1262.0,
+        "other_income": 1337.0,
+        "pat": 13884.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 72275.0,
+        "ebitda": 17888.0,
+        "ebitda_margin_pct": 24.75,
+        "ebit": 16649.0,
+        "ebit_margin_pct": 23.04,
+        "pbt": 17944.0,
+        "finance_costs": 273.0,
+        "depreciation": 1239.0,
+        "other_income": 1568.0,
+        "pat": 13349.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 70698.0,
+        "ebitda": 19276.0,
+        "ebitda_margin_pct": 27.27,
+        "ebit": 17870.0,
+        "ebit_margin_pct": 25.28,
+        "pbt": 18362.0,
+        "finance_costs": 265.0,
+        "depreciation": 1406.0,
+        "other_income": 757.0,
+        "pat": 13718.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 67087.0,
+        "ebitda": 14878.0,
+        "ebitda_margin_pct": 22.18,
+        "ebit": 13498.0,
+        "ebit_margin_pct": 20.12,
+        "pbt": 14078.0,
+        "finance_costs": 538.0,
+        "depreciation": 1380.0,
+        "other_income": 1118.0,
+        "pat": 10657.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 65799.0,
+        "ebitda": 16843.0,
+        "ebitda_margin_pct": 25.6,
+        "ebit": 15430.0,
+        "ebit_margin_pct": 23.45,
+        "pbt": 16068.0,
+        "finance_costs": 229.0,
+        "depreciation": 1413.0,
+        "other_income": 867.0,
+        "pat": 12075.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 63437.0,
+        "ebitda": 16875.0,
+        "ebitda_margin_pct": 26.6,
+        "ebit": 15514.0,
+        "ebit_margin_pct": 24.46,
+        "pbt": 16979.0,
+        "finance_costs": 195.0,
+        "depreciation": 1361.0,
+        "other_income": 1660.0,
+        "pat": 12760.0,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBIT margin 25% for FY2027",
+      "source_quote": "In that context, how do we think about the margin commitment we had made around exiting FY27, at 25% plus EBIT margin range?",
+      "page": 16,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf",
+      "speaker": "Samir Seksaria",
+      "period_promised": "FY2027",
+      "actual": "23.51%",
+      "actual_value": 23.51,
+      "actual_detail": "H1 FY2027 EBIT margin 23.51% versus 23.94% a year earlier (-43 bps)",
+      "promised": "25%",
+      "status": "tracking_behind",
+      "note": "H1 FY2027 EBIT margin 23.51% versus 23.94% a year earlier (-43 bps)",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "So, this quarter we saw a gross margin decline sequentially despite this quarter not having any wage hike impact. Samir, could you quantify how much of this we see structural, meaning we are making active investments for AI, and how much of this is temporary? And second part to this, given the ongoing investment, we also have Best Buy GCC coming in, and MHP consolidation playing out in H2. In that context, how do we think about the margin commitment we had made around exiting FY27, at 25% plus EBIT margin range? Samir Seksaria: Sure. First, on the gross margin part, as you can see the increase which is in subcontractors, third-party expenses, directly re\ufb02ects on the gross margin. The other investments which I talked about are more SG&A linked investments.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebit_margin",
+      "target_low": 25.0,
+      "target_high": 25.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-14",
+      "calls": [
+        {
+          "date": "2026-10-14",
+          "call_period": "2026-09-30",
+          "page": 16,
+          "quote": "In that context, how do we think about the margin commitment we had made around exiting FY27, at 25% plus EBIT margin range?",
+          "document": "TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf"
+        }
+      ],
+      "revisions": [],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3-flash-preview",
+        "evidence": {
+          "consolidated": "how do we think about the margin commitment we had made around exiting FY27, at 25% plus EBIT margin range?",
+          "reported_basis": "at 25% plus EBIT margin range?",
+          "independent_of_named_event": "how do we think about the margin commitment we had made around exiting FY27, at 25% plus EBIT margin range?",
+          "metric_named": "at 25% plus EBIT margin range?"
+        }
+      }
+    },
+    {
+      "promise": "Revenue growth 0.5% for FY2026",
+      "source_quote": "In dollar terms, the reported revenue was $30.017 billion, a decline of 0.5%.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "0.5%",
+      "status": "pending",
+      "note": "The year before FY2026 is outside the series, so growth is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Net cash from operations was $1.6 billion, which is 106.7% of our net income. Invested funds at the end of the period stood at $5.3 billion. Coming to the full year FY26, our revenue was \u20b9267,021 crore, which is a growth of 4.6% on a YoY basis. In dollar terms, the reported revenue was $30.017 billion, a decline of 0.5%. In Constant currency terms, revenue declined 2.4% Yo Y.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 0.5,
+      "target_high": 0.5,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-14",
+      "calls": [
+        {
+          "date": "2026-04-14",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "Coming to the full year FY26, our revenue was \u20b9267,021 crore, which is a growth of 4.6% on a YoY basis.",
+          "document": "TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf"
+        },
+        {
+          "date": "2026-04-14",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "In dollar terms, the reported revenue was $30.017 billion, a decline of 0.5%.",
+          "document": "TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-04-14",
+          "call_period": "2026-03-31",
+          "value": "4.6%",
+          "change": "set",
+          "page": 7,
+          "quote": "Coming to the full year FY26, our revenue was \u20b9267,021 crore, which is a growth of 4.6% on a YoY basis.",
+          "superseded": true
+        },
+        {
+          "date": "2026-04-14",
+          "call_period": "2026-03-31",
+          "value": "0.5%",
+          "change": "cut",
+          "page": 7,
+          "quote": "In dollar terms, the reported revenue was $30.017 billion, a decline of 0.5%.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBIT margin 1.2% for 2026-03-31",
+      "source_quote": "In constant currency, we had a sequential revenue growth of 1.2%.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf",
+      "speaker": "",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "1.2%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Page 5 of 34 In the fourth quarter of \ufb01nancial year 2026, our revenue was \u20b970,698 crore, which is a quarter-on-quarter growth of 5.4%. In dollar terms, revenue was $7.621 billion, a quarter-on-quarter growth of 1.5%. In constant currency, we had a sequential revenue growth of 1.2%. Our Q4 operating margin stood at 25.3%, a sequential increase of 10 basis points. During the quarter, we saw an improvement in realizations driven by continued focus on value-led delivery. Currency was also supportive during the quarter, providing a translation tailwind.",
+      "basis": "constant_currency",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebit_margin",
+      "target_low": 1.2,
+      "target_high": 1.2,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-14",
+      "calls": [
+        {
+          "date": "2026-04-14",
+          "call_period": "2026-03-31",
+          "page": 6,
+          "quote": "In constant currency, we had a sequential revenue growth of 1.2%.",
+          "document": "TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBIT margin at least -2.4 for FY2026",
+      "source_quote": "Coming to our full year performance, even though our FY 2026 revenue declined by 2.4% in constant currency, we delivered a strong $40.7B",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least -2.4",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Page 4 of 34 Coming to our full year performance, even though our FY 2026 revenue declined by 2.4% in constant currency, we delivered a strong $40.7B in TCV including 5 mega deals. We maintained a strong focus on execution to deliver an operating margin of 25%. This is the highest operating margin achieved in the last 4 years. As enterprises navigate increasing complexity across technology, operating models, and business transformation, the role of trusted System Integrators has become even more vital.",
+      "basis": "constant_currency",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebit_margin",
+      "target_low": -2.4,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-14",
+      "calls": [
+        {
+          "date": "2026-04-14",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "Coming to our full year performance, even though our FY 2026 revenue declined by 2.4% in constant currency, we delivered a strong $40.7B",
+          "document": "TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 10\u201315 bps for FY2026",
+      "source_quote": "We expect the ongoing impact to be minimal, around 10 to 15 basis points.",
+      "page": 24,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf",
+      "speaker": "Samir Seksaria",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10\u201315 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "We have made an assessment and made a provision of \u20b9 2,128 crores. The nature of it, we have called out in our \ufb01nancial statements, gratuity amounts to about \u20b9 1,800 crores and leave liability is balance \u20b9 300 crores. This is all past service costs, and hence called as one o\u01af. We expect the ongoing impact to be minimal, around 10 to 15 basis points. Vibhor Singhal: Going forward, next quarter onwards we will just take the impact of this of around 10 basis points to 15 basis points above the EBITDA in our normal operating margin, there will be no other exceptional items from Q4? Samir Seksaria: On the labor code we don't expect any incremental one- o\u01af\u2019s. Unless the rules give more clarity and there is something else which needs to be addressed, because the rules came into e\u01afect, and the guidance came towards the end of December.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 10.0,
+      "target_high": 15.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-16",
+      "calls": [
+        {
+          "date": "2026-01-16",
+          "call_period": "2025-12-31",
+          "page": 24,
+          "quote": "We expect the ongoing impact to be minimal, around 10 to 15 basis points.",
+          "document": "TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "it is our aspiration to continue to drive growth in company overall growth itself.",
+      "page": 17,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14072025190635_SEint14172025_signed.pdf",
+      "speaker": "K Krithivasan",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Sudheer Guntupalli: Okay, sir. And just some clarification on your comment in the Press Meet, are you still reiterating that FY '26 will be better than FY '25 at the overall company level or more so you're talking about the core markets? K Krithivasan: Sudheer, at this time we are confident the international market will do better in FY '26 than FY '25. However, it is our aspiration to continue to drive growth in company overall growth itself. But it is like a high bar to cross but we will work towards that. Sudheer Guntupalli: Understood, sir. And last question from my end.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-14",
+      "calls": [
+        {
+          "date": "2025-07-14",
+          "call_period": "2025-06-30",
+          "page": 17,
+          "quote": "it is our aspiration to continue to drive growth in company overall growth itself.",
+          "document": "TCS_CORPCS_14072025190635_SEint14172025_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 25% for FY2027",
+      "source_quote": "Sir, on an organic basis, is it fair to assume that the guidance is still intact for reaching 25% by 4Q, if I exclude the",
+      "page": 21,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf",
+      "speaker": "Samir Seksaria",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "25%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "But there's a greater interest in leveraging AI for a business outcome and technology modernization, and we believe that will continue. Sandeep Shah: Okay. And just next question for the CFO, Samir. Sir, on an organic basis, is it fair to assume that the guidance is still intact for reaching 25% by 4Q, if I exclude the 50 bps kind of adverse impact from MHP consolidation? Samir Seksaria: See, there would be pluses and minuses. No point in looking at only organic margin, right? There would be macro factors impacting seasonality.",
+      "basis": "not_stated",
+      "conditional_on": "acquisition",
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 25.0,
+      "target_high": 25.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-14",
+      "calls": [
+        {
+          "date": "2026-10-14",
+          "call_period": "2026-09-30",
+          "page": 21,
+          "quote": "Sir, on an organic basis, is it fair to assume that the guidance is still intact for reaching 25% by 4Q, if I exclude the",
+          "document": "TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "we see FY26 International revenue growth to be better than last fiscal year.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15102025151659_SE_Intimation_signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "International guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Our TCV had a sequential increase of 6.5% and a year -on-year growth of 16%. More importantly , th is quarter, we announced a significant mega deal win with Tryg Insurance, underscoring our continued success in securing large -scale complex engagements and reinforcing our position as a trusted strategic partner for our clients. Our deal pipeline continues to show strong momentum with a healthy mix of cost optimization and transformatio n deals as well as services and platform deals across new and existing businesses. Based on client conversations, Q2 revenue growth and TCV , and a strong demand pipeline, we see FY26 International revenue growth to be better than last fiscal year. IT services spend is steady with no significant change expected in the near term . Lingering uncertainties in the broader economic",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "International",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-15",
+      "calls": [
+        {
+          "date": "2025-10-15",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "we see FY26 International revenue growth to be better than last fiscal year.",
+          "document": "TCS_CORPCS_15102025151659_SE_Intimation_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 26% for an unnamed period",
+      "source_quote": "overall, our aspiration for revenue growth with profitability and operating margins getting closer to 26% still remains",
+      "page": 21,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_12042025174801_SEInt12042025TRsigned.pdf",
+      "speaker": "Samir Seksaria",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "26%",
+      "status": "not_scored",
+      "note": "The period is not stated.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "But as Krithi has mentioned that we are looking for the developed markets at least to grow higher than FY '25. If that situation prevails, should we expect margins in FY '26 to be also better than what FY '25 margins were? Samir Seksaria: Yes. So overall, our aspiration for revenue growth with profitability and operating margins getting closer to 26% still remains. And I think -- so to your direct question, yes, we should be able to improve margins. And that -- I mean, one broad -based revenue growth should bring in efficiencies and better operating leverage. And the levers which we have been banking o n still continue to provide some potential like the ones of pyramid , productivity and realization.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 26.0,
+      "target_high": 26.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-12",
+      "calls": [
+        {
+          "date": "2025-04-12",
+          "call_period": "2025-03-31",
+          "page": 21,
+          "quote": "overall, our aspiration for revenue growth with profitability and operating margins getting closer to 26% still remains",
+          "document": "TCS_CORPCS_12042025174801_SEInt12042025TRsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Operating margin 25% for FY2026",
+      "source_quote": "We maintained a strong focus on execution to deliver an operating margin of 25%.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "FY2026 EBITDA margin 25.42%.",
+      "promised": "25%",
+      "status": "not_scored",
+      "note": "definition ambiguous. EBIT 23.34% below it; EBITDA 25.42% above it",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Page 4 of 34 Coming to our full year performance, even though our FY 2026 revenue declined by 2.4% in constant currency, we delivered a strong $40.7B in TCV including 5 mega deals. We maintained a strong focus on execution to deliver an operating margin of 25%. This is the highest operating margin achieved in the last 4 years. As enterprises navigate increasing complexity across technology, operating models, and business transformation, the role of trusted System Integrators has become even more vital. Clients are looking for partners who can bring deep technology excellence, strong enterprise and industry context, and take end-to-end accountability with con\ufb01dence on outcomes and ROI.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 25.0,
+      "target_high": 25.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-14",
+      "calls": [
+        {
+          "date": "2026-01-16",
+          "call_period": "2025-12-31",
+          "page": 5,
+          "quote": "All of the above resulted in a stable operating margin of 25.2%.",
+          "document": "TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf"
+        },
+        {
+          "date": "2026-04-14",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "We maintained a strong focus on execution to deliver an operating margin of 25%.",
+          "document": "TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-01-16",
+          "call_period": "2025-12-31",
+          "value": "at least 25.2%",
+          "change": "set",
+          "page": 5,
+          "quote": "All of the above resulted in a stable operating margin of 25.2%.",
+          "superseded": true
+        },
+        {
+          "date": "2026-04-14",
+          "call_period": "2026-03-31",
+          "value": "25%",
+          "change": "maintained",
+          "page": 5,
+          "quote": "We maintained a strong focus on execution to deliver an operating margin of 25%.",
+          "superseded": false
+        }
+      ],
+      "readings": [
+        {
+          "metric": "EBIT",
+          "status": "missed",
+          "actual": "23.34%",
+          "actual_value": 23.34,
+          "detail": "FY2026 EBIT margin 23.34%."
+        },
+        {
+          "metric": "EBITDA",
+          "status": "delivered",
+          "actual": "25.42%",
+          "actual_value": 25.42,
+          "detail": "FY2026 EBITDA margin 25.42%."
+        }
+      ],
+      "definition": "ambiguous"
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 1,
+    "maintained": 1,
+    "items": [
+      {
+        "promise": "Operating margin 25% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2026-01-16",
+            "value": "at least 25.2%",
+            "change": "set"
+          },
+          {
+            "date": "2026-04-14",
+            "value": "25%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 0.5% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2026-04-14",
+            "value": "4.6%",
+            "change": "set"
+          },
+          {
+            "date": "2026-04-14",
+            "value": "0.5%",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "The actual EBIT margin of 23.51% is tracking behind the promised 25% for FY2027. This reflects a H1 FY2027 EBIT margin of 23.51% versus 23.94% a year earlier (-43 bps).",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.88,
+    "series": 1.04,
+    "guidance": 4.5,
+    "check": 0.01,
+    "verify": 0.05,
+    "verdict": 15.87,
+    "total": 22.35
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 3484,
+      "dropped": 1,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 1,
+      "cache_hits": 0,
+      "tokens": 1102,
+      "model": "gemini-3.6-flash"
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": "gemini-3-flash-preview"
+    },
+    "total_tokens": 4586
+  }
+}

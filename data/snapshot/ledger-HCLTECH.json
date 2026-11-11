@@ -1,0 +1,1065 @@
+{
+  "rows": [
+    {
+      "kind": "level",
+      "note": "",
+      "page": 13,
+      "unit": "percent",
+      "basis": "reported",
+      "calls": [
+        {
+          "date": "2025-04-25",
+          "page": 11,
+          "quote": "EBIT margin guidance is at 18 % to 19%.",
+          "document": "HCLTECH_25042025221345_TranscriptEarningsCall.pdf",
+          "call_period": "2025-03-31"
+        },
+        {
+          "date": "2025-10-17",
+          "page": 14,
+          "quote": "We remain on track to deliver our full-year EBIT margin guidance of 17%-18%.",
+          "document": "HCLTECH_17102025215315_TranscriptEarningsCall-signed.pdf",
+          "call_period": "2025-09-30"
+        },
+        {
+          "date": "2026-01-16",
+          "page": 13,
+          "quote": "We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%.",
+          "document": "HCLTECH_16012026204314_TranscriptEarningsCall.pdf",
+          "call_period": "2025-12-31"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": "16.44%",
+      "caveat": "",
+      "status": "borderline",
+      "passage": "That brings our last 12 months payout to INR 54 per share, effectively distributing 88.8% of our net income. Now an update on guidance. On the back of a standout quarter and sustained growth momentum, we are raising our full year services revenue growth guidance to 4.75% to 5.25% in constant currency terms and the company level guidance to 4% to 4.5% in constant currency terms. We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%. Please note that our guidance does not include contribution from the 3 recently announced acquisition s - Telco solutions business from HPE, Jaspersoft and Wobby. The margin guidance is inclusive of the restructuring costs but excludes the one -time impact of the new labour code. That's all from my side for now.",
+      "promise": "EBIT margin 17\u201318% for FY2026",
+      "speaker": "",
+      "promised": "17\u201318%",
+      "verifier": {
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%.",
+          "metric_named": "EBIT margin guidance of 17% to 18%",
+          "reported_basis": "We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%.",
+          "independent_of_named_event": "does not include contribution from the 3 recently announced acquisition s - Telco solutions business from HPE, Jaspersoft and Wobby"
+        },
+        "consolidated": true,
+        "metric_named": true,
+        "reported_basis": true,
+        "independent_of_named_event": true
+      },
+      "call_date": "2026-01-16",
+      "revisions": [
+        {
+          "date": "2025-04-25",
+          "page": 11,
+          "quote": "EBIT margin guidance is at 18 % to 19%.",
+          "value": "18\u201319%",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2025-03-31"
+        },
+        {
+          "date": "2025-10-17",
+          "page": 14,
+          "quote": "We remain on track to deliver our full-year EBIT margin guidance of 17%-18%.",
+          "value": "17\u201318%",
+          "change": "cut",
+          "superseded": true,
+          "call_period": "2025-09-30"
+        },
+        {
+          "date": "2026-01-16",
+          "page": 13,
+          "quote": "We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%.",
+          "value": "17\u201318%",
+          "change": "maintained",
+          "superseded": false,
+          "call_period": "2025-12-31"
+        }
+      ],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 17.0,
+      "call_period": "2025-12-31",
+      "quote_check": "ok",
+      "target_high": 18.0,
+      "actual_value": 16.44,
+      "source_quote": "We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%.",
+      "actual_detail": "FY2026 EBIT margin 16.44%. 16.44% against 17\u201318%, 56 bps under the band.",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue. The figure is derived.",
+      "period_promised": "FY2026",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_16012026204314_TranscriptEarningsCall.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "H1 FY2027 EBIT margin 17.52% versus 16.77% a year earlier (+75 bps)",
+      "page": 12,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2026-04-24",
+          "page": 12,
+          "quote": "EBIT margin guidance is 17.5% to 18.5%.",
+          "document": "HCLTECH_24042026174011_TranscriptEarningsCall.pdf",
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-10-15",
+          "page": 12,
+          "quote": "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%.",
+          "document": "HCLTECH_15102026223802_Transcript.pdf",
+          "call_period": "2026-09-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": "17.52%",
+      "caveat": "",
+      "status": "tracking_on_track",
+      "passage": "We have strong propositions to address these. As we look ahead, we are optimistic, dr iven by record first-half bookings, strong demand for our Advanced AI propositions, improved margin performance, and our full-stack AI offerings that is being built incrementally. We will continue to invest the gains out of our operational efficiency to expand our AI advantage by investing in capabilities, IP, and AI talent. Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%. Services revenue growth guidance is 3% to 4%. Our revenue guidance includes impact of our acquisitions, and Shiv will provide you more details. Our confidence in this guidance rests on our strength of booking, our healthy pipeline, and sustained momentum in AI-led services.",
+      "promise": "EBIT margin 17.5\u201318.5% for FY2027",
+      "speaker": "",
+      "promised": "17.5\u201318.5%",
+      "verifier": {
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%.",
+          "metric_named": "Our EBIT margin guidance remains at 17.5% to 18.5%.",
+          "reported_basis": "Our EBIT margin guidance remains at 17.5% to 18.5%.",
+          "independent_of_named_event": "Our EBIT margin guidance remains at 17.5% to 18.5%."
+        },
+        "consolidated": true,
+        "metric_named": true,
+        "reported_basis": true,
+        "independent_of_named_event": true
+      },
+      "call_date": "2026-10-15",
+      "revisions": [
+        {
+          "date": "2026-04-24",
+          "page": 12,
+          "quote": "EBIT margin guidance is 17.5% to 18.5%.",
+          "value": "17.5\u201318.5%",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-10-15",
+          "page": 12,
+          "quote": "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%.",
+          "value": "17.5\u201318.5%",
+          "change": "maintained",
+          "superseded": false,
+          "call_period": "2026-09-30"
+        }
+      ],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 17.5,
+      "call_period": "2026-09-30",
+      "quote_check": "ok",
+      "target_high": 18.5,
+      "actual_value": 17.52,
+      "source_quote": "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%.",
+      "actual_detail": "H1 FY2027 EBIT margin 17.52% versus 16.77% a year earlier (+75 bps)",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_15102026223802_Transcript.pdf"
+    },
+    {
+      "kind": "change",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 14,
+      "unit": "bps",
+      "basis": "reported",
+      "calls": [
+        {
+          "date": "2025-10-17",
+          "page": 14,
+          "quote": "Q3 is expected to have 70-80 basis point impact",
+          "document": "HCLTECH_17102025215315_TranscriptEarningsCall-signed.pdf",
+          "call_period": "2025-09-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "Given the softness in Software segment , due to decline in perpetual license revenue, we are keeping the company -level guidance unchanged at 3%-5% in constant currency terms. We remain on track to deliver our full-year EBIT margin guidance of 17%-18%. The wage revision cycle will kick in Q3, the revision is expected to be similar as last year. Q3 is expected to have 70-80 basis point impact and Q4 to have an incremental impact of 40-50 basis point. The impact is baked into our margin guidance. That's all from my side for now. I would like to hand over the session to our moderator for Q&A session.",
+      "promise": "EBIT margin 70\u201380 bps for 2025-12-31",
+      "speaker": "",
+      "promised": "70\u201380 bps",
+      "call_date": "2025-10-17",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 70.0,
+      "call_period": "2025-09-30",
+      "quote_check": "ok",
+      "target_high": 80.0,
+      "actual_value": null,
+      "source_quote": "Q3 is expected to have 70-80 basis point impact",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "2025-12-31",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_17102025215315_TranscriptEarningsCall-signed.pdf"
+    },
+    {
+      "kind": "change",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 14,
+      "unit": "bps",
+      "basis": "reported",
+      "calls": [
+        {
+          "date": "2025-10-17",
+          "page": 14,
+          "quote": "and Q4 to have an incremental impact of 40-50 basis point.",
+          "document": "HCLTECH_17102025215315_TranscriptEarningsCall-signed.pdf",
+          "call_period": "2025-09-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "Given the softness in Software segment , due to decline in perpetual license revenue, we are keeping the company -level guidance unchanged at 3%-5% in constant currency terms. We remain on track to deliver our full-year EBIT margin guidance of 17%-18%. The wage revision cycle will kick in Q3, the revision is expected to be similar as last year. Q3 is expected to have 70-80 basis point impact and Q4 to have an incremental impact of 40-50 basis point. The impact is baked into our margin guidance. That's all from my side for now. I would like to hand over the session to our moderator for Q&A session.",
+      "promise": "EBIT margin 40\u201350 bps for 2026-03-31",
+      "speaker": "",
+      "promised": "40\u201350 bps",
+      "call_date": "2025-10-17",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 40.0,
+      "call_period": "2025-09-30",
+      "quote_check": "ok",
+      "target_high": 50.0,
+      "actual_value": null,
+      "source_quote": "and Q4 to have an incremental impact of 40-50 basis point.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "2026-03-31",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_17102025215315_TranscriptEarningsCall-signed.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 13,
+      "unit": "percent",
+      "basis": "constant_currency",
+      "calls": [
+        {
+          "date": "2025-04-25",
+          "page": 11,
+          "quote": "The revenue growth guidance for the full year is 2% to 5% in constant currency.",
+          "document": "HCLTECH_25042025221345_TranscriptEarningsCall.pdf",
+          "call_period": "2025-03-31"
+        },
+        {
+          "date": "2025-10-17",
+          "page": 14,
+          "quote": "we are keeping the company -level guidance unchanged at 3%-5% in constant currency terms.",
+          "document": "HCLTECH_17102025215315_TranscriptEarningsCall-signed.pdf",
+          "call_period": "2025-09-30"
+        },
+        {
+          "date": "2026-01-16",
+          "page": 13,
+          "quote": "and the company level guidance to 4% to 4.5% in constant currency terms.",
+          "document": "HCLTECH_16012026204314_TranscriptEarningsCall.pdf",
+          "call_period": "2025-12-31"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "The Board has declared an interim dividend of INR 12 per share for the quarter and the record date is 16th of January and the payment date of the same shall be January 27, 2026. That brings our last 12 months payout to INR 54 per share, effectively distributing 88.8% of our net income. Now an update on guidance. On the back of a standout quarter and sustained growth momentum, we are raising our full year services revenue growth guidance to 4.75% to 5.25% in constant currency terms and the company level guidance to 4% to 4.5% in constant currency terms. We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%. Please note that our guidance does not include contribution from the 3 recently announced acquisition s - Telco solutions business from HPE, Jaspersoft and Wobby. The margin guidance is inclusive of the restructuring costs but excludes the one -time impact of the new labour code.",
+      "promise": "EBIT margin 4\u20134.5% for FY2026",
+      "speaker": "",
+      "promised": "4\u20134.5%",
+      "call_date": "2026-01-16",
+      "revisions": [
+        {
+          "date": "2025-04-25",
+          "page": 11,
+          "quote": "The revenue growth guidance for the full year is 2% to 5% in constant currency.",
+          "value": "2\u20135%",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2025-03-31"
+        },
+        {
+          "date": "2025-10-17",
+          "page": 14,
+          "quote": "we are keeping the company -level guidance unchanged at 3%-5% in constant currency terms.",
+          "value": "3\u20135%",
+          "change": "raised",
+          "superseded": true,
+          "call_period": "2025-09-30"
+        },
+        {
+          "date": "2026-01-16",
+          "page": 13,
+          "quote": "and the company level guidance to 4% to 4.5% in constant currency terms.",
+          "value": "4\u20134.5%",
+          "change": "maintained",
+          "superseded": false,
+          "call_period": "2025-12-31"
+        }
+      ],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 4.0,
+      "call_period": "2025-12-31",
+      "quote_check": "ok",
+      "target_high": 4.5,
+      "actual_value": null,
+      "source_quote": "and the company level guidance to 4% to 4.5% in constant currency terms.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "FY2026",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_16012026204314_TranscriptEarningsCall.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 15,
+      "unit": "percent",
+      "basis": "constant_currency",
+      "calls": [
+        {
+          "date": "2026-04-24",
+          "page": 12,
+          "quote": "The revenue growth guidance for the full year is 1% to 4% in constant currency and 1.5% to 4.5% for Services.",
+          "document": "HCLTECH_24042026174011_TranscriptEarningsCall.pdf",
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-10-15",
+          "page": 15,
+          "quote": "and at the Company level the revenue growth is expected to be between 2.5% to 4%.",
+          "document": "HCLTECH_15102026223802_Transcript.pdf",
+          "call_period": "2026-09-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "The record date is October 16, 2026, and the payment date shall be October 26, 2026. This brings our last 12 months payout to INR60 per share, effectively distributing 88.6% of our Net Income. Now on an update on our guidance, FY27 guidance. For FY27, constant currency revenue growth is expected to be between 3% to 4% for the Services business and at the Company level the revenue growth is expected to be between 2.5% to 4%. The full -year revenue growth guidance now includes inorganic contribution of 62 basis points for Services and 87 basis points for the Company. This implies that midpoint of our organic growth guidance both at services and company level is broadly unchanged. EBIT margin is expected to be between 17.5 and 18.5 for FY27.",
+      "promise": "EBIT margin 2.5\u20134% for FY2027",
+      "speaker": "",
+      "promised": "2.5\u20134%",
+      "call_date": "2026-10-15",
+      "revisions": [
+        {
+          "date": "2026-04-24",
+          "page": 12,
+          "quote": "The revenue growth guidance for the full year is 1% to 4% in constant currency and 1.5% to 4.5% for Services.",
+          "value": "1\u20134%",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-10-15",
+          "page": 15,
+          "quote": "and at the Company level the revenue growth is expected to be between 2.5% to 4%.",
+          "value": "2.5\u20134%",
+          "change": "raised",
+          "superseded": false,
+          "call_period": "2026-09-30"
+        }
+      ],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 2.5,
+      "call_period": "2026-09-30",
+      "quote_check": "ok",
+      "target_high": 4.0,
+      "actual_value": null,
+      "source_quote": "and at the Company level the revenue growth is expected to be between 2.5% to 4%.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_15102026223802_Transcript.pdf"
+    },
+    {
+      "kind": "change",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 14,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2026-07-15",
+          "page": 14,
+          "quote": "Looking ahead, we are retaining our guidance of 1% to 4% and margin guidance of 17.5% to 18.5% for FY27.",
+          "document": "HCLTECH_15072026223403_TranscriptEarningsCall.pdf",
+          "call_period": "2026-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "On one side, we are seeing strong sustained growth both in AI-native and AI- amplified services. On the other side, AI-disrupted services, the more traditional commoditized work, continues to be optimized further as AI-enabled automation takes hold. Overall, we believe strong executors would gain a lot, but by changing their business mix more as AI -native and AI -amplified services. Looking ahead, we are retaining our guidance of 1% to 4% and margin guidance of 17.5% to 18.5% for FY27. The guidance is organic growth guidance and does not include acquisitions including Jaspersoft. Now I would request Shiv to share more details on the numbers. Shiv Walia: Thank you, CVK.",
+      "promise": "Revenue growth 1\u20134% for FY2027",
+      "speaker": "",
+      "promised": "1\u20134%",
+      "call_date": "2026-07-15",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "revenue_growth",
+      "scope_name": "",
+      "target_low": 1.0,
+      "call_period": "2026-06-30",
+      "quote_check": "ok",
+      "target_high": 4.0,
+      "actual_value": null,
+      "source_quote": "Looking ahead, we are retaining our guidance of 1% to 4% and margin guidance of 17.5% to 18.5% for FY27.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_15072026223403_TranscriptEarningsCall.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "services guidance is not compared with the consolidated series.",
+      "page": 13,
+      "unit": "percent",
+      "basis": "constant_currency",
+      "calls": [
+        {
+          "date": "2025-10-17",
+          "page": 14,
+          "quote": "we are raising our full -year Services revenue growth guidance to 4% -5% in constant currency terms.",
+          "document": "HCLTECH_17102025215315_TranscriptEarningsCall-signed.pdf",
+          "call_period": "2025-09-30"
+        },
+        {
+          "date": "2026-01-16",
+          "page": 13,
+          "quote": "we are raising our full year services revenue growth guidance to 4.75% to 5.25% in constant currency terms",
+          "document": "HCLTECH_16012026204314_TranscriptEarningsCall.pdf",
+          "call_period": "2025-12-31"
+        }
+      ],
+      "scope": "segment",
+      "actual": null,
+      "caveat": "",
+      "status": "segment_level",
+      "passage": "The Board has declared an interim dividend of INR 12 per share for the quarter and the record date is 16th of January and the payment date of the same shall be January 27, 2026. That brings our last 12 months payout to INR 54 per share, effectively distributing 88.8% of our net income. Now an update on guidance. On the back of a standout quarter and sustained growth momentum, we are raising our full year services revenue growth guidance to 4.75% to 5.25% in constant currency terms and the company level guidance to 4% to 4.5% in constant currency terms. We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%. Please note that our guidance does not include contribution from the 3 recently announced acquisition s - Telco solutions business from HPE, Jaspersoft and Wobby. The margin guidance is inclusive of the restructuring costs but excludes the one -time impact of the new labour code.",
+      "promise": "EBIT margin 4.75\u20135.25% for FY2026",
+      "speaker": "",
+      "promised": "4.75\u20135.25%",
+      "call_date": "2026-01-16",
+      "revisions": [
+        {
+          "date": "2025-10-17",
+          "page": 14,
+          "quote": "we are raising our full -year Services revenue growth guidance to 4% -5% in constant currency terms.",
+          "value": "4\u20135%",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2025-09-30"
+        },
+        {
+          "date": "2026-01-16",
+          "page": 13,
+          "quote": "we are raising our full year services revenue growth guidance to 4.75% to 5.25% in constant currency terms",
+          "value": "4.75\u20135.25%",
+          "change": "raised",
+          "superseded": false,
+          "call_period": "2025-12-31"
+        }
+      ],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "services",
+      "target_low": 4.75,
+      "call_period": "2025-12-31",
+      "quote_check": "ok",
+      "target_high": 5.25,
+      "actual_value": null,
+      "source_quote": "we are raising our full year services revenue growth guidance to 4.75% to 5.25% in constant currency terms",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "FY2026",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_16012026204314_TranscriptEarningsCall.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "Services guidance is not compared with the consolidated series.",
+      "page": 15,
+      "unit": "percent",
+      "basis": "constant_currency",
+      "calls": [
+        {
+          "date": "2026-04-24",
+          "page": 12,
+          "quote": "The revenue growth guidance for the full year is 1% to 4% in constant currency and 1.5% to 4.5% for Services.",
+          "document": "HCLTECH_24042026174011_TranscriptEarningsCall.pdf",
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-10-15",
+          "page": 12,
+          "quote": "Services revenue growth guidance is 3% to 4%.",
+          "document": "HCLTECH_15102026223802_Transcript.pdf",
+          "call_period": "2026-09-30"
+        },
+        {
+          "date": "2026-10-15",
+          "page": 15,
+          "quote": "For FY27, constant currency revenue growth is expected to be between 3% to 4% for the Services business",
+          "document": "HCLTECH_15102026223802_Transcript.pdf",
+          "call_period": "2026-09-30"
+        }
+      ],
+      "scope": "segment",
+      "actual": null,
+      "caveat": "",
+      "status": "segment_level",
+      "passage": "The record date is October 16, 2026, and the payment date shall be October 26, 2026. This brings our last 12 months payout to INR60 per share, effectively distributing 88.6% of our Net Income. Now on an update on our guidance, FY27 guidance. For FY27, constant currency revenue growth is expected to be between 3% to 4% for the Services business and at the Company level the revenue growth is expected to be between 2.5% to 4%. The full -year revenue growth guidance now includes inorganic contribution of 62 basis points for Services and 87 basis points for the Company. This implies that midpoint of our organic growth guidance both at services and company level is broadly unchanged. EBIT margin is expected to be between 17.5 and 18.5 for FY27.",
+      "promise": "EBIT margin 3\u20134% for FY2027",
+      "speaker": "",
+      "promised": "3\u20134%",
+      "call_date": "2026-10-15",
+      "revisions": [
+        {
+          "date": "2026-04-24",
+          "page": 12,
+          "quote": "The revenue growth guidance for the full year is 1% to 4% in constant currency and 1.5% to 4.5% for Services.",
+          "value": "1.5\u20134.5%",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2026-03-31"
+        },
+        {
+          "date": "2026-10-15",
+          "page": 12,
+          "quote": "Services revenue growth guidance is 3% to 4%.",
+          "value": "3\u20134%",
+          "change": "raised",
+          "superseded": true,
+          "call_period": "2026-09-30"
+        },
+        {
+          "date": "2026-10-15",
+          "page": 15,
+          "quote": "For FY27, constant currency revenue growth is expected to be between 3% to 4% for the Services business",
+          "value": "3\u20134%",
+          "change": "maintained",
+          "superseded": false,
+          "call_period": "2026-09-30"
+        }
+      ],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "Services",
+      "target_low": 3.0,
+      "call_period": "2026-09-30",
+      "quote_check": "ok",
+      "target_high": 4.0,
+      "actual_value": null,
+      "source_quote": "For FY27, constant currency revenue growth is expected to be between 3% to 4% for the Services business",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_15102026223802_Transcript.pdf"
+    },
+    {
+      "kind": "change",
+      "note": "Constant-currency guidance is not the consolidated rupee series.",
+      "page": 10,
+      "unit": "percent",
+      "basis": "constant_currency",
+      "calls": [
+        {
+          "date": "2025-07-17",
+          "page": 10,
+          "quote": "Looking ahead, we are improving our revenue guidance now for FY26 to 3% to 5% in constant currency",
+          "document": "HCLTECH_17072025141610_TranscriptEarningsCall.pdf",
+          "call_period": "2025-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "not_scored",
+      "passage": "It achieved 17 top 3 rankings across overall buy side and sell side categories in Technology, IT services and Software sector, out of which 9 were number 1 rankings. Humbled by all your strong belief and support. Thank you. Looking ahead, we are improving our revenue guidance now for FY26 to 3% to 5% in constant currency , based on better Q1 performance and the outlook for the remaining quarters.",
+      "promise": "Revenue growth 3\u20135% for FY2026",
+      "speaker": "",
+      "promised": "3\u20135%",
+      "call_date": "2025-07-17",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "revenue_growth",
+      "scope_name": "",
+      "target_low": 3.0,
+      "call_period": "2025-06-30",
+      "quote_check": "ok",
+      "target_high": 5.0,
+      "actual_value": null,
+      "source_quote": "Looking ahead, we are improving our revenue guidance now for FY26 to 3% to 5% in constant currency",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2026",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_17072025141610_TranscriptEarningsCall.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The numbers sit with a different measure in the same sentence.",
+      "page": 12,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2026-10-15",
+          "page": 12,
+          "quote": "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%.",
+          "document": "HCLTECH_15102026223802_Transcript.pdf",
+          "call_period": "2026-09-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "not_scored",
+      "passage": "We have strong propositions to address these. As we look ahead, we are optimistic, dr iven by record first-half bookings, strong demand for our Advanced AI propositions, improved margin performance, and our full-stack AI offerings that is being built incrementally. We will continue to invest the gains out of our operational efficiency to expand our AI advantage by investing in capabilities, IP, and AI talent. Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%. Services revenue growth guidance is 3% to 4%. Our revenue guidance includes impact of our acquisitions, and Shiv will provide you more details. Our confidence in this guidance rests on our strength of booking, our healthy pipeline, and sustained momentum in AI-led services.",
+      "promise": "EBIT margin 2.5\u20134% for FY2027",
+      "speaker": "",
+      "promised": "2.5\u20134%",
+      "call_date": "2026-10-15",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 2.5,
+      "call_period": "2026-09-30",
+      "quote_check": "ok",
+      "target_high": 4.0,
+      "actual_value": null,
+      "source_quote": "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%.",
+      "actual_detail": "",
+      "split_measure": true,
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_15102026223802_Transcript.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The quote does not state the unit.",
+      "page": 15,
+      "unit": "other",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2026-10-15",
+          "page": 15,
+          "quote": "EBIT margin is expected to be between 17.5 and 18.5 for FY27.",
+          "document": "HCLTECH_15102026223802_Transcript.pdf",
+          "call_period": "2026-09-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "not_scored",
+      "passage": "For FY27, constant currency revenue growth is expected to be between 3% to 4% for the Services business and at the Company level the revenue growth is expected to be between 2.5% to 4%. The full -year revenue growth guidance now includes inorganic contribution of 62 basis points for Services and 87 basis points for the Company. This implies that midpoint of our organic growth guidance both at services and company level is broadly unchanged. EBIT margin is expected to be between 17.5 and 18.5 for FY27. That is all from my side for now, and I would now like to hand over to this ses sion to our moderator for a Q&A session. Thank you. Moderator: Thank you very much.",
+      "promise": "EBIT margin 17.5\u201318.5 for FY2027",
+      "speaker": "",
+      "promised": "17.5\u201318.5",
+      "call_date": "2026-10-15",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebit_margin",
+      "scope_name": "",
+      "target_low": 17.5,
+      "call_period": "2026-09-30",
+      "quote_check": "The quote does not state the unit.",
+      "target_high": 18.5,
+      "actual_value": null,
+      "source_quote": "EBIT margin is expected to be between 17.5 and 18.5 for FY27.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_15102026223802_Transcript.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "page": 14,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2026-07-15",
+          "page": 14,
+          "quote": "Looking ahead, we are retaining our guidance of 1% to 4% and margin guidance of 17.5% to 18.5% for FY27.",
+          "document": "HCLTECH_15072026223403_TranscriptEarningsCall.pdf",
+          "call_period": "2026-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "not_scored",
+      "passage": "On one side, we are seeing strong sustained growth both in AI-native and AI- amplified services. On the other side, AI-disrupted services, the more traditional commoditized work, continues to be optimized further as AI-enabled automation takes hold. Overall, we believe strong executors would gain a lot, but by changing their business mix more as AI -native and AI -amplified services. Looking ahead, we are retaining our guidance of 1% to 4% and margin guidance of 17.5% to 18.5% for FY27. The guidance is organic growth guidance and does not include acquisitions including Jaspersoft. Now I would request Shiv to share more details on the numbers. Shiv Walia: Thank you, CVK.",
+      "promise": "EBITDA margin 17.5\u201318.5% for FY2027",
+      "speaker": "",
+      "promised": "17.5\u201318.5%",
+      "call_date": "2026-07-15",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebitda_margin",
+      "scope_name": "",
+      "target_low": 17.5,
+      "call_period": "2026-06-30",
+      "quote_check": "ok",
+      "target_high": 18.5,
+      "actual_value": null,
+      "source_quote": "Looking ahead, we are retaining our guidance of 1% to 4% and margin guidance of 17.5% to 18.5% for FY27.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HCLTECH_15072026223403_TranscriptEarningsCall.pdf"
+    }
+  ],
+  "usage": {
+    "verify": {
+      "calls": 0,
+      "model": "gemini-3.5-flash-lite",
+      "tokens": 0,
+      "cache_hits": 2
+    },
+    "verdict": {
+      "calls": 0,
+      "model": "gemini-3.5-flash-lite",
+      "tokens": 0,
+      "cache_hits": 1
+    },
+    "guidance": {
+      "calls": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ],
+      "tokens": 0,
+      "dropped": 0,
+      "cache_hits": 7
+    },
+    "total_tokens": 0
+  },
+  "symbol": "HCLTECH",
+  "timing": {
+    "check": 0.01,
+    "total": 2.44,
+    "series": 0.6,
+    "verify": 0.1,
+    "verdict": 0.05,
+    "discover": 0.66,
+    "guidance": 1.02
+  },
+  "verdict": "For FY2026, the actual EBIT margin was 16.44% against the promised 17\u201318%, which is 56 bps under the band. For FY2027, the actual H1 EBIT margin was 17.52% versus the promised 17.5\u201318.5%.",
+  "coverage": {
+    "note": "",
+    "audio_only": [],
+    "quarters_of": 10,
+    "series_gaps": [
+      {
+        "why": "missing",
+        "period": "2025-03-31"
+      },
+      {
+        "why": "missing",
+        "period": "2024-12-31"
+      },
+      {
+        "why": "missing",
+        "period": "2024-09-30"
+      },
+      {
+        "why": "missing",
+        "period": "2024-06-30"
+      }
+    ],
+    "transcripts_of": 7,
+    "missing_quarters": [],
+    "transcripts_found": 7,
+    "quarters_with_results": 6
+  },
+  "lookback": {
+    "quarters": 7,
+    "dropped_pages": [
+      {
+        "page": 21,
+        "period": "2026-06-30"
+      },
+      {
+        "page": 27,
+        "period": "2026-06-30"
+      },
+      {
+        "page": 26,
+        "period": "2025-03-31"
+      }
+    ],
+    "fy26_statements": 9,
+    "next_quarter_statements": 1,
+    "pages_dropped_by_prefilter": 3,
+    "pages_mentioning_fy26_or_next_quarter": 30
+  },
+  "progress": {
+    "done": 7,
+    "stage": "complete",
+    "total": 7
+  },
+  "snapshot": {
+    "pat": 5132.0,
+    "series": [
+      {
+        "pat": 5132.0,
+        "pbt": 6505.0,
+        "ebit": 6465.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 7477.0,
+        "period": "2026-09-30",
+        "revenue": 35620.0,
+        "depreciation": 1012.0,
+        "other_income": 234.0,
+        "finance_costs": 194.0,
+        "ebit_margin_pct": 18.15,
+        "ebitda_margin_pct": 20.99
+      },
+      {
+        "pat": 4624.0,
+        "pbt": 6108.0,
+        "ebit": 5831.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 6870.0,
+        "period": "2026-06-30",
+        "revenue": 34579.0,
+        "depreciation": 1039.0,
+        "other_income": 361.0,
+        "finance_costs": 84.0,
+        "ebit_margin_pct": 16.86,
+        "ebitda_margin_pct": 19.87
+      },
+      {
+        "pat": 4488.0,
+        "pbt": 5702.0,
+        "ebit": 5620.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 6712.0,
+        "period": "2026-03-31",
+        "revenue": 33981.0,
+        "depreciation": 1092.0,
+        "other_income": 322.0,
+        "finance_costs": 240.0,
+        "ebit_margin_pct": 16.54,
+        "ebitda_margin_pct": 19.75
+      },
+      {
+        "pat": 4076.0,
+        "pbt": 5509.0,
+        "ebit": 5329.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 6456.0,
+        "period": "2025-12-31",
+        "revenue": 33872.0,
+        "depreciation": 1127.0,
+        "other_income": 385.0,
+        "finance_costs": 205.0,
+        "ebit_margin_pct": 15.73,
+        "ebitda_margin_pct": 19.06
+      },
+      {
+        "pat": 4235.0,
+        "pbt": 5702.0,
+        "ebit": 5502.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 6545.0,
+        "period": "2025-09-30",
+        "revenue": 31942.0,
+        "depreciation": 1043.0,
+        "other_income": 415.0,
+        "finance_costs": 215.0,
+        "ebit_margin_pct": 17.22,
+        "ebitda_margin_pct": 20.49
+      },
+      {
+        "pat": 3843.0,
+        "pbt": 5189.0,
+        "ebit": 4942.0,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": 6035.0,
+        "period": "2025-06-30",
+        "revenue": 30349.0,
+        "depreciation": 1093.0,
+        "other_income": 456.0,
+        "finance_costs": 209.0,
+        "ebit_margin_pct": 16.28,
+        "ebitda_margin_pct": 19.89
+      }
+    ],
+    "revenue": 35620.0,
+    "ttm_pat": 18320.0,
+    "ttm_note": "",
+    "ttm_revenue": 138052.0,
+    "latest_quarter": "2026-09-30",
+    "ebitda_margin_pct": 20.99,
+    "ttm_ebitda_margin_pct": 19.93
+  },
+  "revisions": {
+    "cut": 1,
+    "items": [
+      {
+        "period": "FY2027",
+        "promise": "EBIT margin 17.5\u201318.5% for FY2027",
+        "sequence": [
+          {
+            "date": "2026-04-24",
+            "value": "17.5\u201318.5%",
+            "change": "set"
+          },
+          {
+            "date": "2026-10-15",
+            "value": "17.5\u201318.5%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "period": "FY2027",
+        "promise": "EBIT margin 3\u20134% for FY2027",
+        "sequence": [
+          {
+            "date": "2026-04-24",
+            "value": "1.5\u20134.5%",
+            "change": "set"
+          },
+          {
+            "date": "2026-10-15",
+            "value": "3\u20134%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-10-15",
+            "value": "3\u20134%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "period": "FY2027",
+        "promise": "EBIT margin 2.5\u20134% for FY2027",
+        "sequence": [
+          {
+            "date": "2026-04-24",
+            "value": "1\u20134%",
+            "change": "set"
+          },
+          {
+            "date": "2026-10-15",
+            "value": "2.5\u20134%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "period": "FY2026",
+        "promise": "EBIT margin 4.75\u20135.25% for FY2026",
+        "sequence": [
+          {
+            "date": "2025-10-17",
+            "value": "4\u20135%",
+            "change": "set"
+          },
+          {
+            "date": "2026-01-16",
+            "value": "4.75\u20135.25%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "period": "FY2026",
+        "promise": "EBIT margin 4\u20134.5% for FY2026",
+        "sequence": [
+          {
+            "date": "2025-04-25",
+            "value": "2\u20135%",
+            "change": "set"
+          },
+          {
+            "date": "2025-10-17",
+            "value": "3\u20135%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-01-16",
+            "value": "4\u20134.5%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "period": "FY2026",
+        "promise": "EBIT margin 17\u201318% for FY2026",
+        "sequence": [
+          {
+            "date": "2025-04-25",
+            "value": "18\u201319%",
+            "change": "set"
+          },
+          {
+            "date": "2025-10-17",
+            "value": "17\u201318%",
+            "change": "cut"
+          },
+          {
+            "date": "2026-01-16",
+            "value": "17\u201318%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ],
+    "raised": 4,
+    "maintained": 4
+  },
+  "long_term_targets": []
+}

@@ -1,0 +1,560 @@
+{
+  "symbol": "GRASIM",
+  "coverage": {
+    "transcripts_found": 6,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [
+      "2026-09-30"
+    ],
+    "series_gaps": [
+      {
+        "period": "2026-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 13,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 44,
+    "pages_dropped_by_prefilter": 5,
+    "dropped_pages": [
+      {
+        "period": "2026-03-31",
+        "page": 5
+      },
+      {
+        "period": "2025-12-31",
+        "page": 1
+      },
+      {
+        "period": "2025-12-31",
+        "page": 3
+      },
+      {
+        "period": "2025-12-31",
+        "page": 9
+      },
+      {
+        "period": "2025-09-30",
+        "page": 1
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-06-30",
+    "revenue": 48716.2,
+    "ebitda_margin_pct": 15.93,
+    "pat": 2145.91,
+    "ttm_revenue": 184028.86,
+    "ttm_pat": 5693.72,
+    "ttm_ebitda_margin_pct": 14.17,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": null,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "",
+        "flags": [
+          "missing"
+        ]
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 48716.2,
+        "ebitda": 7759.08,
+        "ebitda_margin_pct": 15.93,
+        "ebit": 5770.73,
+        "ebit_margin_pct": 11.85,
+        "pbt": 5156.98,
+        "finance_costs": 918.9,
+        "depreciation": 1988.35,
+        "other_income": 305.15,
+        "pat": 2145.91,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 51101.11,
+        "ebitda": 7698.54,
+        "ebitda_margin_pct": 15.07,
+        "ebit": 5656.83,
+        "ebit_margin_pct": 11.07,
+        "pbt": 4962.26,
+        "finance_costs": 922.11,
+        "depreciation": 2041.71,
+        "other_income": 227.54,
+        "pat": 1957.74,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 44311.97,
+        "ebitda": 5749.43,
+        "ebitda_margin_pct": 12.97,
+        "ebit": 3774.39,
+        "ebit_margin_pct": 8.52,
+        "pbt": 3107.05,
+        "finance_costs": 932.56,
+        "depreciation": 1975.04,
+        "other_income": 265.22,
+        "pat": 1036.59,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 39899.58,
+        "ebitda": 4871.68,
+        "ebitda_margin_pct": 12.21,
+        "ebit": 2972.86,
+        "ebit_margin_pct": 7.45,
+        "pbt": 2449.1,
+        "finance_costs": 869.02,
+        "depreciation": 1898.82,
+        "other_income": 345.26,
+        "pat": 553.48,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 40118.08,
+        "ebitda": 6049.4,
+        "ebitda_margin_pct": 15.08,
+        "ebit": 4239.04,
+        "ebit_margin_pct": 10.57,
+        "pbt": 3764.91,
+        "finance_costs": 816.23,
+        "depreciation": 1810.36,
+        "other_income": 342.1,
+        "pat": 1418.68,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 5% for 2026-03-31",
+      "source_quote": "Specialty chemicals revenue grew 5% year -on-year, however, higher input prices mainly ECH, partially impacted profitability in that segment.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/GRASIM_25052026163337_SEintimationTranscript.pdf",
+      "speaker": "",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "5%",
+      "status": "segment_level",
+      "note": "Specialty chemicals guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "We are expanding from 1,505 KTPA to 1,530 KTPA. While evaluating additional capacities driven by growing demand from diverse end-user industries like alumina, organic and inorganic chemicals, textiles and FMCG industries etcetera. Caustic soda s ales volume stood highest ever at 321,000 ton in Q4 and 1,232 KT for full year FY 26. Specialty chemicals revenue grew 5% year -on-year, however, higher input prices mainly ECH, partially impacted profitability in that segment. Our revenue mix is evolving well, specialty chemicals now contributes 27% and chlorine derivatives 22%, reflecting our deliberate shift towards higher value downstream products.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Specialty chemicals",
+      "metric_key": "revenue_growth",
+      "target_low": 5.0,
+      "target_high": 5.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-25",
+      "calls": [
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "The institutional sales channel has built a sizable foundation and grew 43% quarter -on-quarter",
+          "document": "GRASIM_25052026163337_SEintimationTranscript.pdf"
+        },
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "page": 9,
+          "quote": "Specialty chemicals revenue grew 5% year -on-year, however, higher input prices mainly ECH, partially impacted profitability in that segment.",
+          "document": "GRASIM_25052026163337_SEintimationTranscript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "value": "43%",
+          "change": "set",
+          "page": 4,
+          "quote": "The institutional sales channel has built a sizable foundation and grew 43% quarter -on-quarter",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "value": "5%",
+          "change": "cut",
+          "page": 9,
+          "quote": "Specialty chemicals revenue grew 5% year -on-year, however, higher input prices mainly ECH, partially impacted profitability in that segment.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth 8% for FY2026",
+      "source_quote": "Full year revenue surged to INR 17,104 crores from INR15,897 crores, up 8% year -on-year.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/GRASIM_25052026163337_SEintimationTranscript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8%",
+      "status": "segment_level",
+      "note": "Cellulosic fiber guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "China's operating rates have climbed to 92% in Q4, up from 87% a year ago, sign alling robust global demand. At the same time, China's inventory level have dropped to just 11 days, a clear sign that supply is tight and demand is accelerating. Our cellulosic fiber segment delivered revenue of INR4,614 crores in Q4 FY26, a commanding 14% increase year -on-year. Full year revenue surged to INR 17,104 crores from INR15,897 crores, up 8% year -on-year. This growth was powered by dual engine of volume expansion and a deliberate pivot towards higher value specialty fiber. EBITDA stood at INR588 crores in Q4, up two times and ful l year EBITDA was up 15% to INR 1,751 crore s from INR1,524 crore s. This was not just about volume, it was about operating efficiencies, a favourable product mix and the tailwind of benign pulp prices.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Cellulosic fiber",
+      "metric_key": "revenue_growth",
+      "target_low": 8.0,
+      "target_high": 8.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-25",
+      "calls": [
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "That is a growth of 100% revenue in FY26 versus FY25.",
+          "document": "GRASIM_25052026163337_SEintimationTranscript.pdf"
+        },
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "and 212% year-on-year with over 10,000 sites build in quarter four FY26 alone.",
+          "document": "GRASIM_25052026163337_SEintimationTranscript.pdf"
+        },
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "page": 9,
+          "quote": "Full year revenue surged to INR 17,104 crores from INR15,897 crores, up 8% year -on-year.",
+          "document": "GRASIM_25052026163337_SEintimationTranscript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "value": "100%",
+          "change": "set",
+          "page": 4,
+          "quote": "That is a growth of 100% revenue in FY26 versus FY25.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "value": "212%",
+          "change": "raised",
+          "page": 4,
+          "quote": "and 212% year-on-year with over 10,000 sites build in quarter four FY26 alone.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-25",
+          "call_period": "2026-03-31",
+          "value": "8%",
+          "change": "cut",
+          "page": 9,
+          "quote": "Full year revenue surged to INR 17,104 crores from INR15,897 crores, up 8% year -on-year.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "market share gain with revenue growth of nearly 3x the Indian decorative paints industry growth rate",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/GRASIM_13022026172025_SEIntimationTranscriptFinalsigned.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "decorative paints guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Grasim Industries Limited February 11, 2026 market share gain with revenue growth of nearly 3x the Indian decorative paints industry growth rate, inclusive of Birla Opus. Further, the combined revenue of Birla Opus and Birla White Putty business in Quarter 3 FY26, the revenue market share gap with existing No. 2 paint player is now reduced to around 300 basis points based on the guided decorative segment revenues which includes their Putty business as well. In Quarter 3 FY26, Birla Opus\u2019 sales volume has risen by 70% on year -on-year basis. Early this January, Birla Opus has crossed the milestone of 500 million litres of paints sales cumulatively.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "decorative paints",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-13",
+      "calls": [
+        {
+          "date": "2026-02-13",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "market share gain with revenue growth of nearly 3x the Indian decorative paints industry growth rate",
+          "document": "GRASIM_13022026172025_SEIntimationTranscriptFinalsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 10% for FY2026",
+      "source_quote": "The volume growth in the cement industry is estimated at 4 %-5% and UltraTech continues to outweigh industry growth with volume growth of 10% YoY.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/GRASIM_14082025155011_SEIntimationTranscript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10%",
+      "status": "segment_level",
+      "note": "UltraTech guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "The company added new capacity of 37.4 million tons per annum on YoY basis with total capacity domestic and overseas now at 192.3 million tons per annum. The large annual capacity addition includes greenfield expansion and acquisition of key assets of Kes oram and India Cement Limited business domestically and RAK at UAE during last one year. Ultratech continues to stand at the helm of India's infrastructure growth story and contribute to the nation's long -term development goals. The volume growth in the cement industry is estimated at 4 %-5% and UltraTech continues to outweigh industry growth with volume growth of 10% YoY. The operating EBITDA per metric ton grew at a healthy level of \u20b91,248 per metric ton, a phenomenal rise of 37% on YoY basis led by scale benefits and cost optimization.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "UltraTech",
+      "metric_key": "volume_growth",
+      "target_low": 10.0,
+      "target_high": 10.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-14",
+      "calls": [
+        {
+          "date": "2025-08-14",
+          "call_period": "2025-06-30",
+          "page": 6,
+          "quote": "The volume growth in the cement industry is estimated at 4 %-5% and UltraTech continues to outweigh industry growth with volume growth of 10% YoY.",
+          "document": "GRASIM_14082025155011_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth 37% for FY2026",
+      "source_quote": "The operating EBITDA per metric ton grew at a healthy level of \u20b91,248 per metric ton, a phenomenal rise of 37% on YoY basis led",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/GRASIM_14082025155011_SEIntimationTranscript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "37%",
+      "status": "segment_level",
+      "note": "UltraTech guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "The large annual capacity addition includes greenfield expansion and acquisition of key assets of Kes oram and India Cement Limited business domestically and RAK at UAE during last one year. Ultratech continues to stand at the helm of India's infrastructure growth story and contribute to the nation's long -term development goals. The volume growth in the cement industry is estimated at 4 %-5% and UltraTech continues to outweigh industry growth with volume growth of 10% YoY. The operating EBITDA per metric ton grew at a healthy level of \u20b91,248 per metric ton, a phenomenal rise of 37% on YoY basis led by scale benefits and cost optimization.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "UltraTech",
+      "metric_key": "ebitda_growth",
+      "target_low": 37.0,
+      "target_high": 37.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-14",
+      "calls": [
+        {
+          "date": "2025-08-14",
+          "call_period": "2025-06-30",
+          "page": 6,
+          "quote": "The operating EBITDA per metric ton grew at a healthy level of \u20b91,248 per metric ton, a phenomenal rise of 37% on YoY basis led",
+          "document": "GRASIM_14082025155011_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 40% for FY2028",
+      "source_quote": "we need to grow at 40% CAGR year-on-year for us.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/GRASIM_13022026172025_SEIntimationTranscriptFinalsigned.pdf",
+      "speaker": "",
+      "period_promised": "FY2028",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "40%",
+      "status": "segment_level",
+      "note": "Birla Opus guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "we need to grow at 40% CAGR year-on-year for us.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Birla Opus",
+      "metric_key": "revenue_growth",
+      "target_low": 40.0,
+      "target_high": 40.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-13",
+      "calls": [
+        {
+          "date": "2026-02-13",
+          "call_period": "2025-12-31",
+          "page": 11,
+          "quote": "we need to grow at 40% CAGR year-on-year for us.",
+          "document": "GRASIM_13022026172025_SEIntimationTranscriptFinalsigned.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 1,
+    "cut": 2,
+    "maintained": 0,
+    "items": [
+      {
+        "promise": "Revenue growth 8% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2026-05-25",
+            "value": "100%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-25",
+            "value": "212%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-05-25",
+            "value": "8%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 5% for 2026-03-31",
+        "period": "2026-03-31",
+        "sequence": [
+          {
+            "date": "2026-05-25",
+            "value": "43%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-25",
+            "value": "5%",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 6,
+    "total": 6
+  },
+  "timing": {
+    "discover": 24.51,
+    "series": 0.81,
+    "guidance": 9.81,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.18,
+    "total": 35.31
+  },
+  "usage": {
+    "guidance": {
+      "calls": 3,
+      "cache_hits": 3,
+      "tokens": 15518,
+      "dropped": 3,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 15518
+  }
+}

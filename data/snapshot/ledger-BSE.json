@@ -1,0 +1,265 @@
+{
+  "symbol": "BSE",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 2,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 16,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 1432.66,
+    "ebitda_margin_pct": 67.92,
+    "pat": 809.15,
+    "ttm_revenue": 5806.29,
+    "ttm_pat": 3082.31,
+    "ttm_ebitda_margin_pct": 65.31,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 1432.66,
+        "ebitda": 973.06,
+        "ebitda_margin_pct": 67.92,
+        "ebit": 926.99,
+        "ebit_margin_pct": 64.7,
+        "pbt": 1044.87,
+        "finance_costs": 0.0,
+        "depreciation": 46.07,
+        "other_income": 117.88,
+        "pat": 809.15,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 1566.02,
+        "ebitda": 1046.02,
+        "ebitda_margin_pct": 66.79,
+        "ebit": 1003.42,
+        "ebit_margin_pct": 64.07,
+        "pbt": 1144.12,
+        "finance_costs": 0.0,
+        "depreciation": 42.6,
+        "other_income": 140.7,
+        "pat": 874.02,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 1563.51,
+        "ebitda": 1040.64,
+        "ebitda_margin_pct": 66.56,
+        "ebit": 985.85,
+        "ebit_margin_pct": 63.05,
+        "pbt": 1052.51,
+        "finance_costs": 0.0,
+        "depreciation": 54.79,
+        "other_income": 66.66,
+        "pat": 797.33,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 1244.1,
+        "ebitda": 732.14,
+        "ebitda_margin_pct": 58.85,
+        "ebit": 687.31,
+        "ebit_margin_pct": 55.25,
+        "pbt": 777.16,
+        "finance_costs": 0.0,
+        "depreciation": 44.83,
+        "other_income": 89.85,
+        "pat": 601.81,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 1068.39,
+        "ebitda": 680.26,
+        "ebitda_margin_pct": 63.67,
+        "ebit": 647.8,
+        "ebit_margin_pct": 60.63,
+        "pbt": 718.94,
+        "finance_costs": 0.0,
+        "depreciation": 32.46,
+        "other_income": 71.14,
+        "pat": 558.43,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 958.39,
+        "ebitda": 625.93,
+        "ebitda_margin_pct": 65.31,
+        "ebit": 599.05,
+        "ebit_margin_pct": 62.51,
+        "pbt": 685.11,
+        "finance_costs": 0.0,
+        "depreciation": 26.88,
+        "other_income": 86.06,
+        "pat": 539.41,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 59% for FY2026",
+      "source_quote": "translating into a year -on-year growth of 59%",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BSE1_13052026172037_NSEintimation.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "59%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "3 BSE - PUBLIC reached Rs. 5,148 crores, as compared to Rs. 3,236 crores in FY25 , translating into a year -on-year growth of 59%. This makes FY26 the best financial year in BSE\u2019s 150-year history till now, underscoring the durability and breadth of our strategy. I will now share some of the key financial numbers on a consolidated basis for the year ended March 31, 2026, as compared to the previous year. Operational revenues have grown by 63% to Rs. 4,834 crores from Rs. 2,957 crores .",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 59.0,
+      "target_high": 59.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-13",
+      "calls": [
+        {
+          "date": "2026-05-13",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "translating into a year -on-year growth of 59%",
+          "document": "BSE1_13052026172037_NSEintimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 118% for FY2026",
+      "source_quote": "translating into a robust year-on-year growth of approximately 118%",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BSE1_13052026172037_NSEintimation.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "118%",
+      "status": "segment_level",
+      "note": "index derivatives segment guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Moving to our trading segment, new records were set across our cash and derivatives market in FY26 on account of our product offerings, growing client and platform adoption. Our technology capabilities and expansion of co -location services are also deliver ing greater values to clients. While cash market volumes remained at long-term normalized levels throughout the year, FY26 marked a milestone with BSE recording its highest ever ADTV of Rs. 7,950 crores. The BSE index derivatives segment continued to demonstrate strong momentum in FY26, with average daily premium turnover reaching a record of Rs. 19,523 crores compared to Rs. 8,978 crores in FY25, translating into a robust year-on-year growth of approximately 118%. This sustained expansion reflects deeper market participation and improving liquidity. Following the transition to a Thursday expiry cycle, we have seen broadening of the liquidity profile, including build-up in non-expiry day volumes and open interest. Our flagship Sensex index options ranks among the most actively traded contracts globally, with the momentum continuing into FY27.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "index derivatives segment",
+      "metric_key": "revenue_growth",
+      "target_low": 118.0,
+      "target_high": 118.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-13",
+      "calls": [
+        {
+          "date": "2026-05-13",
+          "call_period": "2026-03-31",
+          "page": 6,
+          "quote": "translating into a robust year-on-year growth of approximately 118%",
+          "document": "BSE1_13052026172037_NSEintimation.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.89,
+    "series": 0.89,
+    "guidance": 5.82,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.19,
+    "total": 7.79
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 2171,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 2171
+  }
+}

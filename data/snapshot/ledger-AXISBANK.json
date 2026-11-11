@@ -1,0 +1,281 @@
+{
+  "symbol": "AXISBANK",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 4,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-09-30",
+        "why": "OneD is 2025-04-01 to 2025-09-30, a half year. 2025-06-30 is missing, so this quarter is left blank."
+      },
+      {
+        "period": "2025-06-30",
+        "why": "missing"
+      },
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 4,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 9,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 45674.37,
+    "ebitda_margin_pct": null,
+    "pat": 7649.69,
+    "ttm_revenue": 170928.29,
+    "ttm_pat": 29982.34,
+    "ttm_ebitda_margin_pct": null,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 45674.37,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 10351.65,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 7586.89,
+        "pat": 7649.69,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 43212.82,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 10161.28,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 7670.86,
+        "pat": 7656.51,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 41142.69,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 7247.19,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 6971.7,
+        "pat": 7631.72,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 40898.41,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 9370.64,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 7189.24,
+        "pat": 7044.42,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": null,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "",
+        "flags": [
+          "OneD is 2025-04-01 to 2025-09-30, a half year. 2025-06-30 is missing, so this quarter is left blank."
+        ]
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": null,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "",
+        "flags": [
+          "missing"
+        ]
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA growth 3% for FY2026",
+      "source_quote": "On a H1FY26 basis, the expenses increased by 3% YOY, and we continue to deliver positive operating jaws.",
+      "page": 4,
+      "source_document": "https://www.axisbank.com/docs/default-source/call-transcript/q2fy26-media-conference-call-transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Page 4 of 27 Retail Banking, we have started seeing gradual uptick both in the secured and unsecured segments with maintaining focus on sourcing better quality customers. \u2022 On asset quality, our corporate SME and retail secured book are holding up well, and the retail unsecured book is broadly seeing improvement and stabili sation \u2013specifically we have seen improvement in Cards and stabilisation in Personal Loans. All the key indicators \u2013 bounce rates, early delinquency, collection resolution rates \u2013 have shown an improvement, which provides us comfort. \u2022 On a H1FY26 basis, the expenses increased by 3% YOY, and we continue to deliver positive operating jaws. Let me move to Deposits now. The deposit journey for Axis Bank should be looked at from three aspects \u2013 quality, cost and growth. Please refer to Slide #17. \u2022 We have demonstrated controlled movement in cost of funds over the last two years.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": 3.0,
+      "target_high": 3.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-01",
+      "calls": [
+        {
+          "date": "2025-10-01",
+          "call_period": "2025-09-30",
+          "page": 4,
+          "quote": "On a H1FY26 basis, the expenses increased by 3% YOY, and we continue to deliver positive operating jaws.",
+          "document": "q2fy26-media-conference-call-transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "PAT growth 11% for FY2026",
+      "source_quote": "H1FY26 PAT grew 11% YOY to Rs. 271 crores.",
+      "page": 9,
+      "source_document": "https://www.axisbank.com/docs/default-source/call-transcript/q2fy26-media-conference-call-transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "11%",
+      "status": "segment_level",
+      "note": "Axis AMC guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Gross slippage ratio at 2.11% is down by 102 basis points QOQ. Our net slippage ratio at 1.05% is down 128 basis points QOQ. Our retail asset quality is stabilizing. \u2022 Retail business net slippages and net credit costs are lower than what we reported in Q2 FY25. \u2022 Net credit cost is 0.73%, down 65 basis points QOQ. Our domestic subsidiaries delivered steady performance: H1FY26 total profit at Rs. 936 crores with a return on investment in domestic subsidiaries of 49%. \u2022 Axis Finance: o H1 PAT grew 18% YOY to Rs. 385 crores. o Asset quality metrics remained stable with net NPA at 0.42%. \u2022 Axis AMC: o H1FY26 PAT grew 11% YOY to Rs. 271 crores. \u2022 Axis Securities: o Customer base grew 15% YOY and the H1FY26 PAT stood at Rs. 175 crores. \u2022 Axis Capital: o H1FY26 PAT stood at Rs. 93 crores.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Axis AMC",
+      "metric_key": "pat_growth",
+      "target_low": 11.0,
+      "target_high": 11.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-01",
+      "calls": [
+        {
+          "date": "2025-10-01",
+          "call_period": "2025-09-30",
+          "page": 9,
+          "quote": "H1FY26 PAT grew 11% YOY to Rs. 271 crores.",
+          "document": "q2fy26-media-conference-call-transcript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.95,
+    "series": 0.97,
+    "guidance": 5.13,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.14,
+    "total": 7.19
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 826,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 826
+  }
+}

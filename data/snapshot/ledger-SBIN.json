@@ -1,0 +1,1079 @@
+{
+  "symbol": "SBIN",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 5,
+    "next_quarter_statements": 2,
+    "pages_mentioning_fy26_or_next_quarter": 36,
+    "pages_dropped_by_prefilter": 8,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 27
+      },
+      {
+        "period": "2026-09-30",
+        "page": 28
+      },
+      {
+        "period": "2026-03-31",
+        "page": 6
+      },
+      {
+        "period": "2025-12-31",
+        "page": 1
+      },
+      {
+        "period": "2025-12-31",
+        "page": 6
+      },
+      {
+        "period": "2025-12-31",
+        "page": 15
+      },
+      {
+        "period": "2025-06-30",
+        "page": 5
+      },
+      {
+        "period": "2025-03-31",
+        "page": 15
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 187756.19,
+    "ebitda_margin_pct": null,
+    "pat": 25741.47,
+    "ttm_revenue": 734545.4,
+    "ttm_pat": 92357.85,
+    "ttm_ebitda_margin_pct": null,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 187756.19,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 33555.41,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 46682.85,
+        "pat": 25741.47,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 180061.86,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 32883.8,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 43821.37,
+        "pat": 24579.04,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 181079.02,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 26075.51,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 49998.9,
+        "pat": 20161.3,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 185648.33,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 30066.71,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 55058.61,
+        "pat": 21876.04,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 175897.79,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 28656.64,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 47857.29,
+        "pat": 21504.49,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 166991.82,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 29229.12,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": 41263.14,
+        "pat": 21626.64,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 3% for an unnamed period",
+      "source_quote": "that means FY 26 exit NIM and FY 27-28 NIM also. We are sticking to that 3% guidance.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_13022026154742_BSE_NSE_InvestorTranscript_13022026.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "State Bank of India February 07, 2025 Page 8 of 27 guidance is 3% through the cycles. I think we'll stick to that. There could be some upside here and there, but it is fair to assume that about 3% guidance holds good, both for the Q4, that means FY 26 exit NIM and FY 27-28 NIM also. We are sticking to that 3% guidance. On the CVE income, there has been good growth in terms of Life Insurance. The GST benefit we have seen .",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 3.0,
+      "target_high": 3.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-13",
+      "calls": [
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "page": 4,
+          "quote": "We reaffirm our structural targets of RoE above 15% and RoA of 1% through the cycle.",
+          "document": "SBIN_16082025162954_Transcript.pdf"
+        },
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "page": 4,
+          "quote": "We reaffirm our structural targets of RoE above 15% and RoA of 1% through the cycle.",
+          "document": "SBIN_16082025162954_Transcript.pdf"
+        },
+        {
+          "date": "2026-02-13",
+          "call_period": "2025-12-31",
+          "page": 8,
+          "quote": "What we have given earlier guidance also, we are still seeking 6 to 8% recovery, which is possible in this portfolio, not beyond that.",
+          "document": "SBIN_13022026154742_BSE_NSE_InvestorTranscript_13022026.pdf"
+        },
+        {
+          "date": "2026-02-13",
+          "call_period": "2025-12-31",
+          "page": 9,
+          "quote": "that means FY 26 exit NIM and FY 27-28 NIM also. We are sticking to that 3% guidance.",
+          "document": "SBIN_13022026154742_BSE_NSE_InvestorTranscript_13022026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "value": "at least 15%",
+          "change": "set",
+          "page": 4,
+          "quote": "We reaffirm our structural targets of RoE above 15% and RoA of 1% through the cycle.",
+          "superseded": true
+        },
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "value": "at least 1%",
+          "change": "cut",
+          "page": 4,
+          "quote": "We reaffirm our structural targets of RoE above 15% and RoA of 1% through the cycle.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-13",
+          "call_period": "2025-12-31",
+          "value": "6\u20138%",
+          "change": "raised",
+          "page": 8,
+          "quote": "What we have given earlier guidance also, we are still seeking 6 to 8% recovery, which is possible in this portfolio, not beyond that.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-13",
+          "call_period": "2025-12-31",
+          "value": "3%",
+          "change": "cut",
+          "page": 9,
+          "quote": "that means FY 26 exit NIM and FY 27-28 NIM also. We are sticking to that 3% guidance.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth 13\u201315% for 2026-03-31",
+      "source_quote": "And the credit growth advice, we had given 12% to 14% credit guidance earlier, we are revising that upwards to 13% to 15% for the",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_13022026154742_BSE_NSE_InvestorTranscript_13022026.pdf",
+      "speaker": "C S Setty",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201315%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "And also, the modest credit costs contribute to the uptick in the profitability. We also focused on moderating the operating expenses. While our staff costs are broadly rigid, we try to reduce the cost of overheads and that also has been one of the reasons why you see the good profitability. And the credit growth advice, we had given 12% to 14% credit guidance earlier, we are revising that upwards to 13% to 15% for the current quarter. We will give a full year guidance when we meet again in Q1. But for the current year, this current quarter we are revising our credit growth estimate to 13% to 15% based on the trend which we have seen in the current quarter so far. Segment-wise credit growth, I think the growth has been secular , if you see the slides.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 13.0,
+      "target_high": 15.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-13",
+      "calls": [
+        {
+          "date": "2026-02-13",
+          "call_period": "2025-12-31",
+          "page": 7,
+          "quote": "And the credit growth advice, we had given 12% to 14% credit guidance earlier, we are revising that upwards to 13% to 15% for the",
+          "document": "SBIN_13022026154742_BSE_NSE_InvestorTranscript_13022026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 3% for 2026-03-31",
+      "source_quote": "guidance is 3% through the cycles. I think we'll stick to that. There could be some upside here and there, but it is fair to",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_13022026154742_BSE_NSE_InvestorTranscript_13022026.pdf",
+      "speaker": "",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "State Bank of India February 07, 2025 Page 8 of 27 guidance is 3% through the cycles. I think we'll stick to that. There could be some upside here and there, but it is fair to assume that about 3% guidance holds good, both for the Q4, that means FY 26 exit NIM and FY 27-28 NIM also. We are sticking to that 3% guidance. On the CVE income, there has been good growth in terms of Life Insurance.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 3.0,
+      "target_high": 3.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-13",
+      "calls": [
+        {
+          "date": "2026-02-13",
+          "call_period": "2025-12-31",
+          "page": 9,
+          "quote": "guidance is 3% through the cycles. I think we'll stick to that. There could be some upside here and there, but it is fair to",
+          "document": "SBIN_13022026154742_BSE_NSE_InvestorTranscript_13022026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin at least 50 for FY2026",
+      "source_quote": "While we still are sticking to our guidance that the cost to income ratio, our effort is to keep below 50.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_16082025162954_Transcript.pdf",
+      "speaker": "Mr. C S Setty",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 50",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "There could be some increase in the operating expenses going forward, but in the Q4 there have been some front loading of the expenses. That also is one of the reasons why you see a lesser growth in the operating expenses. But our effort, what I mentioned in my speech also, the project SARAL what we keep talking about is aimed at increasing the productivity. While we still are sticking to our guidance that the cost to income ratio, our effort is to keep below 50. I am not giving any number whether it is 47, 45. The effort is through the cycle, we would like to maintain the cost to income ratio below 50. I think that is something what I wanted to convey.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 50.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-16",
+      "calls": [
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "page": 10,
+          "quote": "While we still are sticking to our guidance that the cost to income ratio, our effort is to keep below 50.",
+          "document": "SBIN_16082025162954_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 14\u201315% for FY2027",
+      "source_quote": "And we are also sticking to our guidance on credit growth 14 to 15% and a quality credit growth.",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_07112026180825_BSE_NSE_Transcript_07112026.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "14\u201315%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "So, I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of 15% , through the cycles you are assured of. And these numbers what you look at from a spectrum , that some costs have gone up, some income has come down, I think it is important to discuss those points, but at the upfront , want to say that these guidance\u2019s have not changed . We have done our homework, and we are confident that all three important guidance parameters what we have given, we are sticking to that. And we are also sticking to our guidance on credit growth 14 to 15% and a quality credit growth. We will not compromise on the asset quality to earn more. And I think , to run through the operating profit , it is while a good set of numbers are there in NIM and NII , to the extent what is impacted by the global market or the treasury losses, it is impacting the operating profit. But if you see the overall , the core parameters, I believe we have done extremely well.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 14.0,
+      "target_high": 15.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-07",
+      "calls": [
+        {
+          "date": "2026-08-13",
+          "call_period": "2026-06-30",
+          "page": 11,
+          "quote": "That is the reason I have given the credit growth guidance of 14% to 15%.",
+          "document": "SBIN_13082026185336_Transcript.pdf"
+        },
+        {
+          "date": "2026-11-07",
+          "call_period": "2026-09-30",
+          "page": 13,
+          "quote": "And we are also sticking to our guidance on credit growth 14 to 15% and a quality credit growth.",
+          "document": "SBIN_07112026180825_BSE_NSE_Transcript_07112026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-08-13",
+          "call_period": "2026-06-30",
+          "value": "14\u201315%",
+          "change": "set",
+          "page": 11,
+          "quote": "That is the reason I have given the credit growth guidance of 14% to 15%.",
+          "superseded": true
+        },
+        {
+          "date": "2026-11-07",
+          "call_period": "2026-09-30",
+          "value": "14\u201315%",
+          "change": "maintained",
+          "page": 13,
+          "quote": "And we are also sticking to our guidance on credit growth 14 to 15% and a quality credit growth.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA growth 13\u201315% for FY2027",
+      "source_quote": "As things stand now, we are sticking to our credit cost guidance of 50 basis points, our credit growth guidance of 13 -15%.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_15052026181428_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201315%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Most of the slippages have come from agriculture and some from SME. I will give further guidance as we speak in terms of slippages, but we are sticking to our credit cost guidance of 50 basis points even despite whatever happens on the West Asian conflict. We are confident that the asset quality is holding up unless of course there is something dramatically happens in the system and macros will further get disturbed. As things stand now, we are sticking to our credit cost guidance of 50 basis points, our credit growth guidance of 13 -15%. You mentioned about treasury income, and we believe that the yields will not create much pain going forward, even if assuming that the yield movement will be there. Our internal guidance which has gone wrong earlier, we felt that the bond yields probably would be moving up to 6.75. There has been a sharp movement, but now also our treasury holds a view that",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": 13.0,
+      "target_high": 15.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-15",
+      "calls": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "As things stand now, we are sticking to our credit cost guidance of 50 basis points, our credit growth guidance of 13 -15%.",
+          "document": "SBIN_15052026181428_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least 6.3 bps for FY2026",
+      "source_quote": "RBI has reduced its real GDP growth projection for FY26 by 20 bps to 6.3% in the April policy.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_09052025182806_BSE_NSE_InvestorTranscript_09052025.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 6.3 bps",
+      "status": "segment_level",
+      "note": "India guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "State Bank of India May 03, 2025 Page 3 of 24 The dampening global economic outlook could impact India's economic growth through weaker external demand even though the domestic growth engines, viz., consumption and investment, are relatively less susceptible to external headwinds. Prospects for the farm sector have been boosted by the forecast of an above normal southwest monsoon for 2025, which could augment farm incomes and keep food prices under check. Given the exacerbated uncertainties due to recent trade tariffs, RBI has reduced its real GDP growth projection for FY26 by 20 bps to 6.3% in the April policy. Separately, India's CPI headline inflation has now significantly moderated, and we believe average CPI headline forecast for FY26 could stay below 4% now. During FY25, ASCBs credit growth declined to 11%, which was 20% last year and deposits to 10.3%, which was 13.5% last year. Term deposits\u2019 growth continued to outpace growth in savings deposits.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "India",
+      "metric_key": "revenue_growth",
+      "target_low": 6.3,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-09",
+      "calls": [
+        {
+          "date": "2025-05-09",
+          "call_period": "2025-03-31",
+          "page": 4,
+          "quote": "RBI has reduced its real GDP growth projection for FY26 by 20 bps to 6.3% in the April policy.",
+          "document": "SBIN_09052025182806_BSE_NSE_InvestorTranscript_09052025.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 14\u201315% for FY2027",
+      "source_quote": "We have revised our corporate 14 -15% credit growth.",
+      "page": 27,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_13082026185336_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "14\u201315%",
+      "status": "segment_level",
+      "note": "corporate guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Mr. C.S. Setty \u2013 Chairman, State Bank of India Sneha Ganatra- Is FCNR deposit also covered under insurance? -Yes, FCNR deposits are also covered up to \u20b95 lakhs under DICGC insurance cover. Vishal Gupta- the bank has revised FY27 loan growth guidance to 13-15% from 12- 14% which segments- retail, SME, corporate or agriculture? -We have revised our corporate 14 -15% credit growth. Credit growth remained, as I mentioned, broad-based and we expect that it continues to be broad-based. Bunty Chawla- expected amount of FCNR deposit to be raised and its impact on cost of deposits? -I think we fairly answered this question. About Rs. 1 trillion would be our total deposit mobilization.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "corporate",
+      "metric_key": "volume_growth",
+      "target_low": 14.0,
+      "target_high": 15.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-13",
+      "calls": [
+        {
+          "date": "2026-08-13",
+          "call_period": "2026-06-30",
+          "page": 27,
+          "quote": "We have revised our corporate 14 -15% credit growth.",
+          "document": "SBIN_13082026185336_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth 11\u201312% for FY2027",
+      "source_quote": "we expect credit growth at 13% to 14% and deposits at 11% to 12% for FY27 for the system.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_15052026181428_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "11\u201312%",
+      "status": "segment_level",
+      "note": "system guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "State Bank of India May 08, 2026 Page 3 of 32 From a banking system perspective, credit growth for the scheduled commercial banks accelerated to 16% in FY26 while deposits grew at 13.6%. The momentum is continuing in the current financial year, and we expect credit growth at 13% to 14% and deposits at 11% to 12% for FY27 for the system. Asset quality continues to remain strong and capital buffer is comfortable. However, beyond these metrics, the operating landscape is being reshaped by deeper st ructural shifts. Technology risk is now becoming a systemic risk.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "system",
+      "metric_key": "ebitda_growth",
+      "target_low": 11.0,
+      "target_high": 12.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-15",
+      "calls": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "we expect credit growth at 13% to 14% and deposits at 11% to 12% for FY27 for the system.",
+          "document": "SBIN_15052026181428_Transcript.pdf"
+        },
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "we expect credit growth at 13% to 14% and deposits at 11% to 12% for FY27 for the system.",
+          "document": "SBIN_15052026181428_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "value": "13\u201314%",
+          "change": "set",
+          "page": 4,
+          "quote": "we expect credit growth at 13% to 14% and deposits at 11% to 12% for FY27 for the system.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "value": "11\u201312%",
+          "change": "cut",
+          "page": 4,
+          "quote": "we expect credit growth at 13% to 14% and deposits at 11% to 12% for FY27 for the system.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin at least 3% for FY2027",
+      "source_quote": "- NII guidance we do not give. But NIM, as I said, our guidance for domestic NIM is to remain above 3%.",
+      "page": 32,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_15052026181428_Transcript.pdf",
+      "speaker": "Mr. C.S. Setty",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 3%",
+      "status": "segment_level",
+      "note": "domestic guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "This is question from Venkateshwar Rao. And question from Tamarish Sinha from of Business. What is the guidance on Net Interest Margin and NII for FY 27? - NII guidance we do not give. But NIM, as I said, our guidance for domestic NIM is to remain above 3%. And Vikas Bertiya. Why was Q4 NIM so much lower? - I think we have had enough discussion on this. If any further clarifications are required, we can have separately.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "domestic",
+      "metric_key": "ebitda_margin",
+      "target_low": 3.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-15",
+      "calls": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 9,
+          "quote": "We are still giving a guidance on an annual basis. We are sticking to our NIM of more than 3% for the full year, for",
+          "document": "SBIN_15052026181428_Transcript.pdf"
+        },
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 32,
+          "quote": "- NII guidance we do not give. But NIM, as I said, our guidance for domestic NIM is to remain above 3%.",
+          "document": "SBIN_15052026181428_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "value": "at least 3%",
+          "change": "set",
+          "page": 9,
+          "quote": "We are still giving a guidance on an annual basis. We are sticking to our NIM of more than 3% for the full year, for",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "value": "at least 3%",
+          "change": "maintained",
+          "page": 32,
+          "quote": "- NII guidance we do not give. But NIM, as I said, our guidance for domestic NIM is to remain above 3%.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 3% for FY2026",
+      "source_quote": "As far as margin outlook, we are still standing by our 3% guidance on NIM.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_16082025162954_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3%",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "That also had some impact. I am not saying it is a major impact, but all of them have collectively resulted in lower growth in Q1 than what we anticipated. But I am seeing a good growth coming back there. As far as margin outlook, we are still standing by our 3% guidance on NIM. As I mentioned earlier, I think the NIM trajectory will be U-shaped. It probably will come down in Q2. While we are not hazarding a guess how much it will come down, but I think it will definitely improve from Q3 to Q4 for 2-3 reasons, one is the deposits get repriced, predominantly the fixed deposits get repriced.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 3.0,
+      "target_high": 3.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-16",
+      "calls": [
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "page": 9,
+          "quote": "As far as margin outlook, we are still standing by our 3% guidance on NIM.",
+          "document": "SBIN_16082025162954_Transcript.pdf"
+        },
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "page": 12,
+          "quote": "But I believe that is the reason our guidance is 1% and above. We are not giving what level of above that 1 %, but",
+          "document": "SBIN_16082025162954_Transcript.pdf"
+        },
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "page": 23,
+          "quote": "So, we are still sticking to our slippage ratio , to contain the slippages below 0.6%.",
+          "document": "SBIN_16082025162954_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "value": "3%",
+          "change": "set",
+          "page": 9,
+          "quote": "As far as margin outlook, we are still standing by our 3% guidance on NIM.",
+          "superseded": false
+        },
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "value": "at least 1%",
+          "change": "cut",
+          "page": 12,
+          "quote": "But I believe that is the reason our guidance is 1% and above. We are not giving what level of above that 1 %, but",
+          "superseded": true
+        },
+        {
+          "date": "2025-08-16",
+          "call_period": "2025-06-30",
+          "value": "at most 0.6%",
+          "change": "maintained",
+          "page": 23,
+          "quote": "So, we are still sticking to our slippage ratio , to contain the slippages below 0.6%.",
+          "superseded": true
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 3% for FY2027",
+      "source_quote": "So I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_07112026180825_BSE_NSE_Transcript_07112026.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3%",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "So I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 3.0,
+      "target_high": 3.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-07",
+      "calls": [
+        {
+          "date": "2026-08-13",
+          "call_period": "2026-06-30",
+          "page": 10,
+          "quote": "This is a full year outlook of 3%, which I mentioned right in the beginning of my speech.",
+          "document": "SBIN_13082026185336_Transcript.pdf"
+        },
+        {
+          "date": "2026-11-07",
+          "call_period": "2026-09-30",
+          "page": 13,
+          "quote": "So I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of",
+          "document": "SBIN_07112026180825_BSE_NSE_Transcript_07112026.pdf"
+        },
+        {
+          "date": "2026-11-07",
+          "call_period": "2026-09-30",
+          "page": 13,
+          "quote": "So I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of",
+          "document": "SBIN_07112026180825_BSE_NSE_Transcript_07112026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-08-13",
+          "call_period": "2026-06-30",
+          "value": "3%",
+          "change": "set",
+          "page": 10,
+          "quote": "This is a full year outlook of 3%, which I mentioned right in the beginning of my speech.",
+          "superseded": true
+        },
+        {
+          "date": "2026-11-07",
+          "call_period": "2026-09-30",
+          "value": "1%",
+          "change": "cut",
+          "page": 13,
+          "quote": "So I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of",
+          "superseded": true
+        },
+        {
+          "date": "2026-11-07",
+          "call_period": "2026-09-30",
+          "value": "3%",
+          "change": "raised",
+          "page": 13,
+          "quote": "So I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin at least 15 for FY2027",
+      "source_quote": "So I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBIN_07112026180825_BSE_NSE_Transcript_07112026.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 15",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 15.0,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-07",
+      "calls": [
+        {
+          "date": "2026-11-07",
+          "call_period": "2026-09-30",
+          "page": 13,
+          "quote": "So I stick to my guidance, an annual guidance of return on assets of 1%, net interest margin not less than 3% and ROE of",
+          "document": "SBIN_07112026180825_BSE_NSE_Transcript_07112026.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 2,
+    "cut": 5,
+    "maintained": 3,
+    "items": [
+      {
+        "promise": "EBITDA margin 3% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-08-13",
+            "value": "3%",
+            "change": "set"
+          },
+          {
+            "date": "2026-11-07",
+            "value": "1%",
+            "change": "cut"
+          },
+          {
+            "date": "2026-11-07",
+            "value": "3%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "Volume growth 14\u201315% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-08-13",
+            "value": "14\u201315%",
+            "change": "set"
+          },
+          {
+            "date": "2026-11-07",
+            "value": "14\u201315%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA growth 11\u201312% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-05-15",
+            "value": "13\u201314%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-15",
+            "value": "11\u201312%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin at least 3% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-05-15",
+            "value": "at least 3%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-15",
+            "value": "at least 3%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 3% for an unnamed period",
+        "period": "",
+        "sequence": [
+          {
+            "date": "2025-08-16",
+            "value": "at least 15%",
+            "change": "set"
+          },
+          {
+            "date": "2025-08-16",
+            "value": "at least 1%",
+            "change": "cut"
+          },
+          {
+            "date": "2026-02-13",
+            "value": "6\u20138%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-02-13",
+            "value": "3%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 3% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-08-16",
+            "value": "3%",
+            "change": "set"
+          },
+          {
+            "date": "2025-08-16",
+            "value": "at least 1%",
+            "change": "cut"
+          },
+          {
+            "date": "2025-08-16",
+            "value": "at most 0.6%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.88,
+    "series": 1.22,
+    "guidance": 1.22,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 3.45
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 7,
+      "tokens": 0,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

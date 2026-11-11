@@ -1,0 +1,827 @@
+{
+  "symbol": "BEL",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 11,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 19,
+    "pages_dropped_by_prefilter": 2,
+    "dropped_pages": [
+      {
+        "period": "2025-12-31",
+        "page": 16
+      },
+      {
+        "period": "2025-09-30",
+        "page": 8
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 7327.72,
+    "ebitda_margin_pct": 27.85,
+    "pat": 1540.19,
+    "ttm_revenue": 30252.98,
+    "ttm_pat": 6398.85,
+    "ttm_ebitda_margin_pct": 28.22,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 7327.72,
+        "ebitda": 2040.86,
+        "ebitda_margin_pct": 27.85,
+        "ebit": 1869.57,
+        "ebit_margin_pct": 25.51,
+        "pbt": 2054.11,
+        "finance_costs": 2.59,
+        "depreciation": 171.29,
+        "other_income": 187.13,
+        "pat": 1540.19,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 5546.98,
+        "ebitda": 1388.4,
+        "ebitda_margin_pct": 25.03,
+        "ebit": 1227.85,
+        "ebit_margin_pct": 22.14,
+        "pbt": 1396.25,
+        "finance_costs": 1.16,
+        "depreciation": 160.55,
+        "other_income": 169.56,
+        "pat": 1054.34,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 10224.43,
+        "ebitda": 2981.65,
+        "ebitda_margin_pct": 29.16,
+        "ebit": 2808.7,
+        "ebit_margin_pct": 27.47,
+        "pbt": 2917.34,
+        "finance_costs": 1.61,
+        "depreciation": 172.95,
+        "other_income": 110.25,
+        "pat": 2225.22,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 7153.85,
+        "ebitda": 2127.24,
+        "ebitda_margin_pct": 29.74,
+        "ebit": 1991.8,
+        "ebit_margin_pct": 27.84,
+        "pbt": 2128.31,
+        "finance_costs": 2.03,
+        "depreciation": 135.44,
+        "other_income": 138.54,
+        "pat": 1579.1,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 5792.09,
+        "ebitda": 1702.17,
+        "ebitda_margin_pct": 29.39,
+        "ebit": 1575.68,
+        "ebit_margin_pct": 27.2,
+        "pbt": 1727.95,
+        "finance_costs": 1.65,
+        "depreciation": 126.49,
+        "other_income": 153.92,
+        "pat": 1287.77,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 4439.74,
+        "ebitda": 1238.27,
+        "ebitda_margin_pct": 27.89,
+        "ebit": 1117.48,
+        "ebit_margin_pct": 25.17,
+        "pbt": 1279.36,
+        "finance_costs": 1.44,
+        "depreciation": 120.79,
+        "other_income": 163.32,
+        "pat": 969.91,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 28% for FY2027",
+      "source_quote": "EBITDA margins of around 28%",
+      "page": 32,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BEL_06112026145908_Lettersigned.pdf",
+      "speaker": "Manoj Jain",
+      "period_promised": "FY2027",
+      "actual": "26.64%",
+      "actual_value": 26.64,
+      "actual_detail": "H1 FY2027 EBITDA margin 26.64% versus 28.74% a year earlier (-210 bps)",
+      "promised": "28%",
+      "status": "tracking_behind",
+      "note": "H1 FY2027 EBITDA margin 26.64% versus 28.74% a year earlier (-210 bps)",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "We are going to meet our guidance given at the start of the year. We are working for that revenue growth of 15 - plus percent, although there may be some positive surprises as you have predicted. But right now, we are confident we will have 15 - plu s. EBITDA margins of around 28%, the order inflow of INR 25,000 crores minimum, excluding QRSAM and including QRSAM, INR 50,000 - plus crores . R&D investment of INR 2,200 - plus crores , capex of around INR 1,200 crores . And defense to nondefense business, typical ly 90:10. So we are going to meet this guidance which was given, we are confident to meet that guidance.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 28.0,
+      "target_high": 28.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-06",
+      "calls": [
+        {
+          "date": "2026-11-06",
+          "call_period": "2026-09-30",
+          "page": 32,
+          "quote": "EBITDA margins of around 28%",
+          "document": "BEL_06112026145908_Lettersigned.pdf"
+        }
+      ],
+      "revisions": [],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "We are going to meet our guidance given at the start of the year.",
+          "reported_basis": "EBITDA margins of around 28%",
+          "independent_of_named_event": "EBITDA margins of around 28%",
+          "metric_named": "EBITDA margins of around 28%"
+        }
+      }
+    },
+    {
+      "promise": "EBITDA margin at least 28% for FY2026",
+      "source_quote": "EBITDA margins will be more than 28%.",
+      "page": 20,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BEL_22052026120346_Letter_signed.pdf",
+      "speaker": "Manoj Jain",
+      "period_promised": "FY2026",
+      "actual": "29.15%",
+      "actual_value": 29.15,
+      "actual_detail": "FY2026 EBITDA margin 29.15%.",
+      "promised": "at least 28%",
+      "status": "delivered",
+      "note": "",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "So, as we told future outlook for year '26 - '27, after taking into consideration our present base, our present product mix, our present order book, etcet era, and seeing all other challenges or geopolitical situations in mind. So, we are retaining our revenue growth of more than 15%. So definitely, we are going to have more than 15% as a revenue growth for '26 - '27. EBITDA margins will be more than 28%. The order inflow we are expecting this year more than INR55,000 crores. That includes, of course, QRSAM, which we are expecting very soon. R&D investment, we are continuously 37 Rc 7 goJcrc / fG - fcf ' ^ l BHARATELECTRON / CS QUALITY , TECHNOLOGY , INNOVATION",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "taking into consideration our present base, our present product mix, our present order book, etcet era, and seeing all other challenges or geopolitical situations in mind",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 28.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-22",
+      "calls": [
+        {
+          "date": "2025-11-04",
+          "call_period": "2025-09-30",
+          "page": 18,
+          "quote": "revenue growth, we are going to have 15% plus EBITDA margin, definitely 27%.",
+          "document": "BEL_04112025174322_Covering_Letter__transcript_of_con_call_Signed.pdf"
+        },
+        {
+          "date": "2026-01-29",
+          "call_period": "2025-12-31",
+          "page": 5,
+          "quote": "Presently, we maintain the EBITDA margin of 27% for the current financial year.",
+          "document": "BEL_29012026165726_Transcript_signed.pdf"
+        },
+        {
+          "date": "2026-05-22",
+          "call_period": "2026-03-31",
+          "page": 20,
+          "quote": "EBITDA margins will be more than 28%.",
+          "document": "BEL_22052026120346_Letter_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-11-04",
+          "call_period": "2025-09-30",
+          "value": "27%",
+          "change": "set",
+          "page": 18,
+          "quote": "revenue growth, we are going to have 15% plus EBITDA margin, definitely 27%.",
+          "superseded": true
+        },
+        {
+          "date": "2026-01-29",
+          "call_period": "2025-12-31",
+          "value": "27%",
+          "change": "maintained",
+          "page": 5,
+          "quote": "Presently, we maintain the EBITDA margin of 27% for the current financial year.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-22",
+          "call_period": "2026-03-31",
+          "value": "at least 28%",
+          "change": "raised",
+          "page": 20,
+          "quote": "EBITDA margins will be more than 28%.",
+          "superseded": false
+        }
+      ],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "BHARATELECTRON",
+          "reported_basis": "EBITDA margins will be more than 28%.",
+          "independent_of_named_event": "after taking into consideration our present base",
+          "metric_named": "EBITDA margins"
+        }
+      }
+    },
+    {
+      "promise": "Revenue growth at least 15% for FY2027",
+      "source_quote": "We are working for that revenue growth of 15-plus percent",
+      "page": 32,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BEL_06112026145908_Lettersigned.pdf",
+      "speaker": "Manoj Jain",
+      "period_promised": "FY2027",
+      "actual": "25.83%",
+      "actual_value": 25.83,
+      "actual_detail": "H1 FY2027 revenue 12,874.70 versus H1 FY2026 revenue 10,231.83",
+      "promised": "at least 15%",
+      "status": "tracking_ahead",
+      "note": "H1 FY2027 revenue 12,874.70 versus H1 FY2026 revenue 10,231.83",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Manoj Jain: Yes. Our closing comments is the same as our starting comments of the year. We are going to meet our guidance given at the start of the year. We are working for that revenue growth of 15 - plus percent, although there may be some positive surprises as you have predicted. But right now, we are confident we will have 15 - plu s. EBITDA margins of around 28%, the order inflow of INR 25,000 crores minimum, excluding QRSAM and including QRSAM, INR 50,000 - plus crores . R&D investment of INR 2,200 - plus crores , capex of around INR 1,200 crores .",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 15.0,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-06",
+      "calls": [
+        {
+          "date": "2026-01-29",
+          "call_period": "2025-12-31",
+          "page": 7,
+          "quote": "Once we have committed to you that we are going to have a growth of more than 15% year-on-year.",
+          "document": "BEL_29012026165726_Transcript_signed.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 19,
+          "quote": "Just wanted to ask about your 15% revenue growth guidance for this year. So, given that you've done 20% in the first quarter itself, are",
+          "document": "BEL_28072026140315_Lettersigned.pdf"
+        },
+        {
+          "date": "2026-11-06",
+          "call_period": "2026-09-30",
+          "page": 32,
+          "quote": "We are working for that revenue growth of 15-plus percent",
+          "document": "BEL_06112026145908_Lettersigned.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-01-29",
+          "call_period": "2025-12-31",
+          "value": "at least 15%",
+          "change": "set",
+          "page": 7,
+          "quote": "Once we have committed to you that we are going to have a growth of more than 15% year-on-year.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "value": "15%",
+          "change": "maintained",
+          "page": 19,
+          "quote": "Just wanted to ask about your 15% revenue growth guidance for this year. So, given that you've done 20% in the first quarter itself, are",
+          "superseded": true
+        },
+        {
+          "date": "2026-11-06",
+          "call_period": "2026-09-30",
+          "value": "at least 15%",
+          "change": "maintained",
+          "page": 32,
+          "quote": "We are working for that revenue growth of 15-plus percent",
+          "superseded": false
+        }
+      ],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "We are going to meet our guidance given at the start of the year.",
+          "reported_basis": "revenue growth of 15 - plus percent",
+          "independent_of_named_event": "",
+          "metric_named": "revenue growth"
+        }
+      }
+    },
+    {
+      "promise": "Revenue growth 15% for FY2025",
+      "source_quote": "our guidance for financial year '25, '26 is revenue growth around 15%",
+      "page": 22,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BEL_29052025174044_NSEsigned.pdf",
+      "speaker": "Manoj Jain",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15%",
+      "status": "pending",
+      "note": "FY2025 is missing 2024-06-30, 2024-09-30, 2024-12-31, so the year is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "our guidance for financial year '25, '26 is revenue growth around 15%",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 15.0,
+      "target_high": 15.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-29",
+      "calls": [
+        {
+          "date": "2025-05-29",
+          "call_period": "2025-03-31",
+          "page": 22,
+          "quote": "our guidance for financial year '25, '26 is revenue growth around 15%",
+          "document": "BEL_29052025174044_NSEsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least 15% for FY2026",
+      "source_quote": "So, we are retaining our revenue growth of more than 15%.",
+      "page": 20,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BEL_22052026120346_Letter_signed.pdf",
+      "speaker": "Manoj Jain",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 15%",
+      "status": "pending",
+      "note": "The year before FY2026 is outside the series, so growth is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "I now hand the conference over to management for closing remarks. Manoj Jain: Yes. So, as we told future outlook for year '26 - '27, after taking into consideration our present base, our present product mix, our present order book, etcet era, and seeing all other challenges or geopolitical situations in mind. So, we are retaining our revenue growth of more than 15%. So definitely, we are going to have more than 15% as a revenue growth for '26 - '27. EBITDA margins will be more than 28%. The order inflow we are expecting this year more than INR55,000 crores.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 15.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-22",
+      "calls": [
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "page": 15,
+          "quote": "Overall, anyway, definitely, we will cross 15%.",
+          "document": "BEL_04082025170329_Covering_Letter__transcript_of_con_call_signed.pdf"
+        },
+        {
+          "date": "2025-11-04",
+          "call_period": "2025-09-30",
+          "page": 18,
+          "quote": "So I will again reiterate our commitment that revenue growth, we are going to have 15% plus EBITDA margin, definitely 27%.",
+          "document": "BEL_04112025174322_Covering_Letter__transcript_of_con_call_Signed.pdf"
+        },
+        {
+          "date": "2026-05-22",
+          "call_period": "2026-03-31",
+          "page": 20,
+          "quote": "So, we are retaining our revenue growth of more than 15%.",
+          "document": "BEL_22052026120346_Letter_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "value": "15%",
+          "change": "set",
+          "page": 15,
+          "quote": "Overall, anyway, definitely, we will cross 15%.",
+          "superseded": true
+        },
+        {
+          "date": "2025-11-04",
+          "call_period": "2025-09-30",
+          "value": "15%",
+          "change": "maintained",
+          "page": 18,
+          "quote": "So I will again reiterate our commitment that revenue growth, we are going to have 15% plus EBITDA margin, definitely 27%.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-22",
+          "call_period": "2026-03-31",
+          "value": "at least 15%",
+          "change": "maintained",
+          "page": 20,
+          "quote": "So, we are retaining our revenue growth of more than 15%.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 17.5% for FY2026",
+      "source_quote": "We are actually internally aiming for 17.5% plus.",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BEL_04082025170329_Covering_Letter__transcript_of_con_call_signed.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "17.5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Bharat Electronics Limited July 30 , 202 5 Page 7 of 20 slightly. So, thinking forward three years, four years out, can we sustain 15% plus revenue growth from this large base of revenue? Manoj Jain: Certainly, yes. 16% is not at all a challenge. We are actually internally aiming for 17.5% plus. As it was told also last time also, so many projects are in pipeline where we have done good investment at right time. So, two programs are anyway QRSAM and Kusha, which you know, which are definitely INR30,000 crores, INR40,000 plus crores. But in addition also, so many other missile programs , we are now DcPP partner for DRDO, like one of the missiles which was tested yesterday, Pralay, it is BDL and BEL are the two DcPP.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 17.5,
+      "target_high": 17.5,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-04",
+      "calls": [
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "page": 8,
+          "quote": "16% is not at all a challenge.",
+          "document": "BEL_04082025170329_Covering_Letter__transcript_of_con_call_signed.pdf"
+        },
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "page": 8,
+          "quote": "We are actually internally aiming for 17.5% plus.",
+          "document": "BEL_04082025170329_Covering_Letter__transcript_of_con_call_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "value": "16%",
+          "change": "set",
+          "page": 8,
+          "quote": "16% is not at all a challenge.",
+          "superseded": true
+        },
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "value": "17.5%",
+          "change": "raised",
+          "page": 8,
+          "quote": "We are actually internally aiming for 17.5% plus.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth 15\u201317.5% for FY2030",
+      "source_quote": "We are targeting around 17.5% -- 15% to 17.5% of growth in next 5 years",
+      "page": 22,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BEL_29052025174044_NSEsigned.pdf",
+      "speaker": "Manoj Jain",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15\u201317.5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Bharat Electronics Limited May 2 0 , 202 5 Page 21 of 21 Mano j Jain: The order book. New order inflow in next 3 to 5 years will be sufficient to make our company grow more than 15%, I can assure you. We are targeting around 17.5% -- 15% to 17.5% of growth in next 5 years, as I already indicated. We are confident our order book will be more than that. Khush Nahar: Yes, but I meant about the SDR pipeline that we are seeing in terms of rupee crore? Manoj Jain: Okay.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 15.0,
+      "target_high": 17.5,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-29",
+      "calls": [
+        {
+          "date": "2025-05-29",
+          "call_period": "2025-03-31",
+          "page": 22,
+          "quote": "We are targeting around 17.5% -- 15% to 17.5% of growth in next 5 years",
+          "document": "BEL_29052025174044_NSEsigned.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least 20% for FY2026",
+      "source_quote": "export, our internal target is more than 20%.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/BEL_04082025170329_Covering_Letter__transcript_of_con_call_signed.pdf",
+      "speaker": "Jyoti Gupta",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 20%",
+      "status": "segment_level",
+      "note": "export guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "And we are confident over the period of next five years, we try to reach around 10% of our turnover through exports. Right now, it is around 4% to 5%. So, we are constantly putting effort as the overall company is growing at roughly 15% to 16%. But export, our internal target is more than 20%. So, over a period of time, the export share to the overall turnover will steadily increase. And we wanted to reach in next five years around 10% of our turnover through exports. So, that is our vision about the exports.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "export",
+      "metric_key": "revenue_growth",
+      "target_low": 20.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-04",
+      "calls": [
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "page": 10,
+          "quote": "overall company is growing at roughly 15% to 16%",
+          "document": "BEL_04082025170329_Covering_Letter__transcript_of_con_call_signed.pdf"
+        },
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "page": 10,
+          "quote": "export, our internal target is more than 20%.",
+          "document": "BEL_04082025170329_Covering_Letter__transcript_of_con_call_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "value": "15\u201316%",
+          "change": "set",
+          "page": 10,
+          "quote": "overall company is growing at roughly 15% to 16%",
+          "superseded": true
+        },
+        {
+          "date": "2025-08-04",
+          "call_period": "2025-06-30",
+          "value": "at least 20%",
+          "change": "raised",
+          "page": 10,
+          "quote": "export, our internal target is more than 20%.",
+          "superseded": false
+        }
+      ]
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 3,
+    "cut": 0,
+    "maintained": 5,
+    "items": [
+      {
+        "promise": "Revenue growth at least 15% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-01-29",
+            "value": "at least 15%",
+            "change": "set"
+          },
+          {
+            "date": "2026-07-28",
+            "value": "15%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-11-06",
+            "value": "at least 15%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth at least 15% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-08-04",
+            "value": "15%",
+            "change": "set"
+          },
+          {
+            "date": "2025-11-04",
+            "value": "15%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-05-22",
+            "value": "at least 15%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin at least 28% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-11-04",
+            "value": "27%",
+            "change": "set"
+          },
+          {
+            "date": "2026-01-29",
+            "value": "27%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-05-22",
+            "value": "at least 28%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 17.5% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-08-04",
+            "value": "16%",
+            "change": "set"
+          },
+          {
+            "date": "2025-08-04",
+            "value": "17.5%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth at least 20% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-08-04",
+            "value": "15\u201316%",
+            "change": "set"
+          },
+          {
+            "date": "2025-08-04",
+            "value": "at least 20%",
+            "change": "raised"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "26.64% EBITDA margin is tracking behind the promised 28% for FY2027, while 25.83% revenue growth is tracking ahead of the promised at least 15% for the same period. 29.15% EBITDA margin delivered against the promised at least 28% for FY2026.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.87,
+    "series": 0.8,
+    "guidance": 5.33,
+    "check": 0.01,
+    "verify": 0.2,
+    "verdict": 7.89,
+    "total": 15.1
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 5606,
+      "dropped": 6,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 1,
+      "cache_hits": 0,
+      "tokens": 2240,
+      "model": "gemini-3-flash-preview"
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 3,
+      "tokens": 0,
+      "model": "gemini-3.5-flash-lite"
+    },
+    "total_tokens": 7846
+  }
+}

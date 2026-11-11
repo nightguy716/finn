@@ -1,0 +1,593 @@
+{
+  "symbol": "RELIANCE",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 10,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 23,
+    "pages_dropped_by_prefilter": 11,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 12
+      },
+      {
+        "period": "2026-09-30",
+        "page": 22
+      },
+      {
+        "period": "2026-06-30",
+        "page": 15
+      },
+      {
+        "period": "2025-12-31",
+        "page": 12
+      },
+      {
+        "period": "2025-12-31",
+        "page": 23
+      },
+      {
+        "period": "2025-12-31",
+        "page": 24
+      },
+      {
+        "period": "2025-06-30",
+        "page": 11
+      },
+      {
+        "period": "2025-06-30",
+        "page": 31
+      },
+      {
+        "period": "2025-03-31",
+        "page": 24
+      },
+      {
+        "period": "2025-03-31",
+        "page": 25
+      },
+      {
+        "period": "2025-03-31",
+        "page": 36
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 332861.0,
+    "ebitda_margin_pct": 17.01,
+    "pat": 25548.0,
+    "ttm_revenue": 1212828.0,
+    "ttm_pat": 82110.0,
+    "ttm_ebitda_margin_pct": 16.02,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 332861.0,
+        "ebitda": 56616.0,
+        "ebitda_margin_pct": 17.01,
+        "ebit": 41301.0,
+        "ebit_margin_pct": 12.41,
+        "pbt": 38613.0,
+        "finance_costs": 8481.0,
+        "depreciation": 15315.0,
+        "other_income": 5793.0,
+        "pat": 25548.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 311850.0,
+        "ebitda": 47517.0,
+        "ebitda_margin_pct": 15.24,
+        "ebit": 32417.0,
+        "ebit_margin_pct": 10.4,
+        "pbt": 30630.0,
+        "finance_costs": 8337.0,
+        "depreciation": 15100.0,
+        "other_income": 6550.0,
+        "pat": 20946.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 298621.0,
+        "ebitda": 44141.0,
+        "ebitda_margin_pct": 14.78,
+        "ebit": 29333.0,
+        "ebit_margin_pct": 9.82,
+        "pbt": 27195.0,
+        "finance_costs": 6585.0,
+        "depreciation": 14808.0,
+        "other_income": 4447.0,
+        "pat": 16971.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 269496.0,
+        "ebitda": 46018.0,
+        "ebitda_margin_pct": 17.08,
+        "ebit": 31396.0,
+        "ebit_margin_pct": 11.65,
+        "pbt": 29697.0,
+        "finance_costs": 6613.0,
+        "depreciation": 14622.0,
+        "other_income": 4914.0,
+        "pat": 18645.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 258898.0,
+        "ebitda": 45885.0,
+        "ebitda_margin_pct": 17.72,
+        "ebit": 31469.0,
+        "ebit_margin_pct": 12.15,
+        "pbt": 29124.0,
+        "finance_costs": 6827.0,
+        "depreciation": 14416.0,
+        "other_income": 4482.0,
+        "pat": 18165.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 248660.0,
+        "ebitda": 42905.0,
+        "ebitda_margin_pct": 17.25,
+        "ebit": 29063.0,
+        "ebit_margin_pct": 11.69,
+        "pbt": 37146.0,
+        "finance_costs": 7036.0,
+        "depreciation": 13842.0,
+        "other_income": 15119.0,
+        "pat": 26994.0,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth at least 10% for FY2026",
+      "source_quote": "Aggregate basis will continue to deliver double-digit revenues.",
+      "page": 34,
+      "source_document": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf",
+      "speaker": "Dinesh Taluja",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "pending",
+      "note": "The year before FY2026 is outside the series, so growth is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "You have to look at retail. If you look at Q2 plus Q3 you have a decent 13%, 14% revenue growth, which is there. This will always happen in any year , sometimes festival quarter is in Q2, sometimes in Q3 if you recollect we had a very strong 18% kind of growth year -on-year last year that will always continue to happen and you have to look at on an aggregate basis . Aggregate basis will continue to deliver double-digit revenues. Questioner (Harit Kapoor) The last thing was on square feet, there has been significant gross addition, but there has also been closure, so if you could give us a sense of when do we see net addition starting to pick up as you have completed almost all your consolidation work so just some sense on that would be very helpful? Company Speaker (Dinesh Taluja) Consolidation I would say more or less done it is normalized now. Last year was the year when our square feet has reduced, it had reduced because we were consolidating.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-18",
+      "calls": [
+        {
+          "date": "2026-01-18",
+          "call_period": "2025-12-31",
+          "page": 34,
+          "quote": "Aggregate basis will continue to deliver double-digit revenues.",
+          "document": "kavinavora_18012026235015_SE_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 24% for an unnamed period",
+      "source_quote": "Now, if we look at the volume growth, 24% for gasoline and diesel together.",
+      "page": 18,
+      "source_document": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "24%",
+      "status": "segment_level",
+      "note": "gasoline and diesel guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "So, these are certain things we have offered. And wherever there is space to optimize further, we have also introduced combi parcels of some niche grades and supplied it into the Mediterranean. I mentioned about the strong performance on the domestic market. Now, if we look at the volume growth, 24% for gasoline and diesel together. And if you look at the CBG and CNG, I would like to point out one on the extreme right, there also it is a 55% growth and now we are at 10,000 tonnes. The market share, we have gro wn to about 3.82 for gasoline and diesel at 5.9. ETF we are at about 6.1%.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "gasoline and diesel",
+      "metric_key": "volume_growth",
+      "target_low": 24.0,
+      "target_high": 24.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-18",
+      "calls": [
+        {
+          "date": "2026-01-18",
+          "call_period": "2025-12-31",
+          "page": 18,
+          "quote": "Now, if we look at the volume growth, 24% for gasoline and diesel together.",
+          "document": "kavinavora_18012026235015_SE_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth at least 55 for an unnamed period",
+      "source_quote": "And if you look at the CBG and CNG, I would like to point out one on the extreme right, there also it is a",
+      "page": 18,
+      "source_document": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 55",
+      "status": "segment_level",
+      "note": "CBG and CNG guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "And wherever there is space to optimize further, we have also introduced combi parcels of some niche grades and supplied it into the Mediterranean. I mentioned about the strong performance on the domestic market. Now, if we look at the volume growth, 24% for gasoline and diesel together. And if you look at the CBG and CNG, I would like to point out one on the extreme right, there also it is a 55% growth and now we are at 10,000 tonnes. The market share, we have gro wn to about 3.82 for gasoline and diesel at 5.9. ETF we are at about 6.1%. Market effectiveness is a measure of how much we are selling per outlet as compared to the competition.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "CBG and CNG",
+      "metric_key": "volume_growth",
+      "target_low": 55.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-18",
+      "calls": [
+        {
+          "date": "2026-01-18",
+          "call_period": "2025-12-31",
+          "page": 18,
+          "quote": "And if you look at the CBG and CNG, I would like to point out one on the extreme right, there also it is a",
+          "document": "kavinavora_18012026235015_SE_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin at least 190 bps for FY2026",
+      "source_quote": "We saw a 190-basis points improvement there",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf",
+      "speaker": "Sh Anshuman Thakur",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 190 bps",
+      "status": "segment_level",
+      "note": "Jio Platforms guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Number one in homes as well 27 million fixed broadband connects that was a net addition of almost 10 million during the year and 12.9 million JioAirFiber homes. So roughly 75% of the connections coming in through the AirFiber, where we are by far the largest globally with our AirFiber product across 5G and UBR. On the financial metrices, the revenue for the year at Rs.1,46,085 Crores, which was up 14.6% year -on-year, Rs.76,255 Crores of EBITDA that was almost 19% year -on-year, EBITDA margin of 52%. We saw a 190-basis points improvement there, increase there and one of the metrices we have been tracking is the amount of data consumed on the network. Total data traffic increased to 241 Exabytes for the year, around 66 Exabytes for this quarter, so that is 31% increase year-on-year. So, across all of the operating and financial metrices, we see strong growth and continue to see strong growth on these. I will just speak a bit about some of the priority areas, focus areas for us currently and as we move forward mobility continues.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Jio Platforms",
+      "metric_key": "ebitda_margin",
+      "target_low": 190.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-26",
+      "calls": [
+        {
+          "date": "2026-04-26",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "We saw a 190-basis points improvement there",
+          "document": "kavinavora_26042026232750_SE_26042026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 12.6% for FY2026",
+      "source_quote": "operating revenues of Rs.38,259 Crores that is a 12.6% growth year -on-year",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "12.6%",
+      "status": "segment_level",
+      "note": "Jio Platforms guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Of course, some of the JPL revenues are growing faster than this, but this continues to show very high, very steady growth and even without a tariff increase. So, this is growth coming from new customers and more utilization by the customers. The results for JPL both quarterly and the full year are given here. So operating revenues of Rs.38,259 Crores that is a 12.6% growth year -on-year, EBITDA grew to Rs.20,060 Crores, 17.9% year-on-year and PAT at 7 ,935, 13% growth year -on-year. On full year results , on the right column there Rs.1,46,885 Crores as a revenue, Rs.76,255 Crores EBITDA and we crossed Rs.30,000 Crores in PAT not necessarily a milestone, but it feels good to have crossed another 30,000 number. With that, I will hand over to Dinesh to take you through the results for the retail business. Sh Dinesh Taluja 00:18:33 - 00:28:05 (Retail) Good evening, everyone.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Jio Platforms",
+      "metric_key": "revenue_growth",
+      "target_low": 12.6,
+      "target_high": 12.6,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-26",
+      "calls": [
+        {
+          "date": "2026-04-26",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "operating revenues of Rs.38,259 Crores that is a 12.6% growth year -on-year",
+          "document": "kavinavora_26042026232750_SE_26042026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth 17.9% for FY2026",
+      "source_quote": "EBITDA grew to Rs.20,060 Crores, 17.9% year-on-year",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "17.9%",
+      "status": "segment_level",
+      "note": "Jio Platforms guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Of course, some of the JPL revenues are growing faster than this, but this continues to show very high, very steady growth and even without a tariff increase. So, this is growth coming from new customers and more utilization by the customers. The results for JPL both quarterly and the full year are given here. So operating revenues of Rs.38,259 Crores that is a 12.6% growth year -on-year, EBITDA grew to Rs.20,060 Crores, 17.9% year-on-year and PAT at 7 ,935, 13% growth year -on-year. On full year results , on the right column there Rs.1,46,885 Crores as a revenue, Rs.76,255 Crores EBITDA and we crossed Rs.30,000 Crores in PAT not necessarily a milestone, but it feels good to have crossed another 30,000 number. With that, I will hand over to Dinesh to take you through the results for the retail business. Sh Dinesh Taluja 00:18:33 - 00:28:05 (Retail) Good evening, everyone.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Jio Platforms",
+      "metric_key": "ebitda_growth",
+      "target_low": 17.9,
+      "target_high": 17.9,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-26",
+      "calls": [
+        {
+          "date": "2026-04-26",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "EBITDA grew to Rs.20,060 Crores, 17.9% year-on-year",
+          "document": "kavinavora_26042026232750_SE_26042026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 42% for FY2027",
+      "source_quote": "growing our JioMart and omni channel, we operate the largest omni channel network in the country, and that is reflecting in the numbers 42% growth",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/kavinavora_01112026230907_SE_01112026.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "42%",
+      "status": "segment_level",
+      "note": "online grocery guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "As the utilization improves and as some of the operational KPIs improve, and we are in the right trajectory, so our average order values have gone up meaningfully, our fully fulfilled orders have, the percentage has gone up, the average delivery time has gone down substantially over the last four quarte rs. So, it is all moving in the right direction, and with the investments scaling up, we are quite confident these will start giving us results next year where they will start being accretive to the bottom line as well. So, just to against the priorities that we laid out for FY 2027, what progress we have made. So, if you look at growing our JioMart and omni channel, we operate the largest omni channel network in the country, and that is reflecting in the numbers 42% growth in the online grocery business. B2C grocery, the market, the share contribution of online has grown 270 basis points; in Apparel and Footwear again, where anyways, we had a pretty meaningful presence, the growth, the share has grown up by 100 basis points. And we operate the largest network of store. See, if you look at our competition, the next guy is somewhere around two-and-a-half thousand after dark stores, we look at as an omni channel network, right?",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "online grocery",
+      "metric_key": "revenue_growth",
+      "target_low": 42.0,
+      "target_high": 42.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-01",
+      "calls": [
+        {
+          "date": "2026-11-01",
+          "call_period": "2026-09-30",
+          "page": 4,
+          "quote": "online scale, especially on grocery B2C, that number is up 42%, very impressive set of numbers.",
+          "document": "kavinavora_01112026230907_SE_01112026.pdf"
+        },
+        {
+          "date": "2026-11-01",
+          "call_period": "2026-09-30",
+          "page": 8,
+          "quote": "growing our JioMart and omni channel, we operate the largest omni channel network in the country, and that is reflecting in the numbers 42% growth",
+          "document": "kavinavora_01112026230907_SE_01112026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-11-01",
+          "call_period": "2026-09-30",
+          "value": "42%",
+          "change": "set",
+          "page": 4,
+          "quote": "online scale, especially on grocery B2C, that number is up 42%, very impressive set of numbers.",
+          "superseded": true
+        },
+        {
+          "date": "2026-11-01",
+          "call_period": "2026-09-30",
+          "value": "42%",
+          "change": "maintained",
+          "page": 8,
+          "quote": "growing our JioMart and omni channel, we operate the largest omni channel network in the country, and that is reflecting in the numbers 42% growth",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue at least \u20b91 crore for FY2030",
+      "source_quote": "target is to kind of take this to Rs.1 lakh Crores on FY2030",
+      "page": 30,
+      "source_document": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf",
+      "speaker": "Ketan Mody",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least \u20b91 crore",
+      "status": "segment_level",
+      "note": "FMCG guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "So, I think structurally, yes, we are in a good place right through and some of these volatilities, we will live through that and maybe it is beneficial too. Questioner (Vikash Jain, CLSA) Just one last thing on FMCG, any sense of profitability, I know the revenue numbers have been given, but anything on EBITDA, maybe at least a trajectory? One, and secondly, for the essentials part, I think earlier presentations, you have given revenue of i ndependence as a brand, where does that stand and what is Independence and what is the others part of that essentials? Company Speaker (Ketan Mody) So, like we have announced, the target continues to kind of grow leadership in all categories and we have anyway announced the target is to kind of take this to Rs.1 lakh Crores on FY2030. We continue to kind of build on capacities, working to gain leadership. EBI TDA, I would put it across since the concentration there, yes, we are breakeven on EBITDA terms, but EBITDA will improve as a scale and all the supply chain is kind of put it across but yes,",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "FMCG",
+      "metric_key": "revenue_growth",
+      "target_low": 1.0,
+      "target_high": null,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-19",
+      "calls": [
+        {
+          "date": "2026-07-19",
+          "call_period": "2026-06-30",
+          "page": 30,
+          "quote": "target is to kind of take this to Rs.1 lakh Crores on FY2030",
+          "document": "kavinavora_19072026180618_SE_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 1,
+    "items": [
+      {
+        "promise": "Revenue growth 42% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-11-01",
+            "value": "42%",
+            "change": "set"
+          },
+          {
+            "date": "2026-11-01",
+            "value": "42%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.85,
+    "series": 0.74,
+    "guidance": 3.65,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.15,
+    "total": 5.39
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 3726,
+      "dropped": 3,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 3726
+  }
+}

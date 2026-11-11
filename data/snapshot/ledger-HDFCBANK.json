@@ -1,0 +1,437 @@
+{
+  "rows": [
+    {
+      "kind": "level",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 6,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2026-01-23",
+          "page": 6,
+          "quote": "We said we will try and be in a range of somewhere between 90% to 96% in the year FY '26",
+          "document": "HDFCBANK_23012026155630_SEintimationTranscriptofearningscall17_Jan_2026.pdf",
+          "call_period": "2025-12-31"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "That was at that point in time. Whether there is a number that you need to meet, I don't think there is any compulsion. But in our own interest, we had given a kind of a glide path wherein we had said that we will come to a certain number in FY '25, which we achieved. We said we will try and be in a range of somewhere between 90% to 96% in the year FY '26, which is what we will be is what we are very confident about. And then maybe by FY '27, by the natural growth and even with the growth in the way we are expecting in terms of faster growth rate, I think we should land somewhere around the 85% to 90% for FY '27. We continue to believe that this is going to be there. It's not an easy thing, as we have said, of course, but we know what are the strategies we need to do.",
+      "promise": "EBITDA margin 90\u201396% for FY2026",
+      "speaker": "Sashidhar Jagdishan",
+      "promised": "90\u201396%",
+      "call_date": "2026-01-23",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebitda_margin",
+      "scope_name": "",
+      "target_low": 90.0,
+      "call_period": "2025-12-31",
+      "quote_check": "ok",
+      "target_high": 96.0,
+      "actual_value": null,
+      "source_quote": "We said we will try and be in a range of somewhere between 90% to 96% in the year FY '26",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2026",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HDFCBANK_23012026155630_SEintimationTranscriptofearningscall17_Jan_2026.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 3,
+      "unit": "other",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2025-07-25",
+          "page": 3,
+          "quote": "remain confident of growing our advances at the system growth rate at FY26 and higher than the system in FY27.",
+          "document": "HDFCBANK_25072025214442_SEintimationTranscriptofearningscall19jul2025Cover.pdf",
+          "call_period": "2025-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "Last year, we have grown our average deposits at a healthy pace of 16% year-on-year and continued to gain market share as we have done in the past. However, we slowed down our average advances or AUM assets under management growth to about 7% last year in alignment with our strategic objectives to bring down the CD / credit deposit ratio from 110% at the time of merger to about 95% as we speak today. This rate of growth on the assets under management has improved to 8% in the quarter just ended, which is the June quarter, FY26. Our growth engines are well geared to grow and as we move forward, we expect our loan growth to continue to improve from here and remain confident of growing our advances at the system growth rate at FY26 and higher than the system in FY27. The growth enablers, apart from balance sheet growth, remain customer centricity, technology and our people. Some of these aspects, I think, during the course of this quarter and probably the next half of the year, I think we shall be talking more about it as we unveil some of the initiatives that are underway in the bank. As mentioned in the previous earnings call, both the CFO and Bhavin did mention, and you can recall some of the transcripts of the last earnings call, policy rate changes impact the loans tied to external benchmarks, while deposit side takes longer to factor it in.",
+      "promise": "Volume growth to rise for FY2026",
+      "speaker": "Srinivasan Vaidyanathan",
+      "promised": "a direction only",
+      "call_date": "2025-07-25",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "volume_growth",
+      "scope_name": "",
+      "target_low": null,
+      "call_period": "2025-06-30",
+      "quote_check": "ok",
+      "target_high": null,
+      "actual_value": null,
+      "source_quote": "remain confident of growing our advances at the system growth rate at FY26 and higher than the system in FY27.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2026",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HDFCBANK_25072025214442_SEintimationTranscriptofearningscall19jul2025Cover.pdf"
+    },
+    {
+      "kind": "change",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 3,
+      "unit": "percent",
+      "basis": "reported",
+      "calls": [
+        {
+          "date": "2026-10-23",
+          "page": 3,
+          "quote": "Total AUM grew 15.3% year -on-year",
+          "document": "HDFCBANK_23102026224657_SEintimationTranscriptofearningscall17oct2026.pdf",
+          "call_period": "2026-09-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "Total AUM grew 15.3% year -on-year",
+      "promise": "Volume growth 15.3% for FY2027",
+      "speaker": "Moderator",
+      "promised": "15.3%",
+      "call_date": "2026-10-23",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "volume_growth",
+      "scope_name": "",
+      "target_low": 15.3,
+      "call_period": "2026-09-30",
+      "quote_check": "ok",
+      "target_high": 15.3,
+      "actual_value": null,
+      "source_quote": "Total AUM grew 15.3% year -on-year",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HDFCBANK_23102026224657_SEintimationTranscriptofearningscall17oct2026.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 6,
+      "unit": "percent",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2026-01-23",
+          "page": 6,
+          "quote": "land somewhere around the 85% to 90% for FY '27",
+          "document": "HDFCBANK_23012026155630_SEintimationTranscriptofearningscall17_Jan_2026.pdf",
+          "call_period": "2025-12-31"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "Whether there is a number that you need to meet, I don't think there is any compulsion. But in our own interest, we had given a kind of a glide path wherein we had said that we will come to a certain number in FY '25, which we achieved. We said we will try and be in a range of somewhere between 90% to 96% in the year FY '26, which is what we will be is what we are very confident about. And then maybe by FY '27, by the natural growth and even with the growth in the way we are expecting in terms of faster growth rate, I think we should land somewhere around the 85% to 90% for FY '27. We continue to believe that this is going to be there. It's not an easy thing, as we have said, of course, but we know what are the strategies we need to do. There were certain tactical measures we could have taken in the third quarter.",
+      "promise": "EBITDA margin 85\u201390% for FY2027",
+      "speaker": "Sashidhar Jagdishan",
+      "promised": "85\u201390%",
+      "call_date": "2026-01-23",
+      "revisions": [],
+      "basis_note": "",
+      "metric_key": "ebitda_margin",
+      "scope_name": "",
+      "target_low": 85.0,
+      "call_period": "2025-12-31",
+      "quote_check": "ok",
+      "target_high": 90.0,
+      "actual_value": null,
+      "source_quote": "land somewhere around the 85% to 90% for FY '27",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HDFCBANK_23012026155630_SEintimationTranscriptofearningscall17_Jan_2026.pdf"
+    },
+    {
+      "kind": "level",
+      "note": "The quoted sentence does not name the metric.",
+      "page": 3,
+      "unit": "other",
+      "basis": "not_stated",
+      "calls": [
+        {
+          "date": "2025-04-24",
+          "page": 11,
+          "quote": "LDR, I'll take a shot at it to see. See, what we had described, Kunal, last quarter or even about a year ago is that",
+          "document": "HDFCBANK_24042025175629_SETranscript19042025.pdf",
+          "call_period": "2025-03-31"
+        },
+        {
+          "date": "2025-07-25",
+          "page": 3,
+          "quote": "remain confident of growing our advances at the system growth rate at FY26 and higher than the system in FY27.",
+          "document": "HDFCBANK_25072025214442_SEintimationTranscriptofearningscall19jul2025Cover.pdf",
+          "call_period": "2025-06-30"
+        }
+      ],
+      "scope": "consolidated",
+      "actual": null,
+      "caveat": "",
+      "status": "low_confidence",
+      "passage": "Last year, we have grown our average deposits at a healthy pace of 16% year-on-year and continued to gain market share as we have done in the past. However, we slowed down our average advances or AUM assets under management growth to about 7% last year in alignment with our strategic objectives to bring down the CD / credit deposit ratio from 110% at the time of merger to about 95% as we speak today. This rate of growth on the assets under management has improved to 8% in the quarter just ended, which is the June quarter, FY26. Our growth engines are well geared to grow and as we move forward, we expect our loan growth to continue to improve from here and remain confident of growing our advances at the system growth rate at FY26 and higher than the system in FY27. The growth enablers, apart from balance sheet growth, remain customer centricity, technology and our people. Some of these aspects, I think, during the course of this quarter and probably the next half of the year, I think we shall be talking more about it as we unveil some of the initiatives that are underway in the bank. As mentioned in the previous earnings call, both the CFO and Bhavin did mention, and you can recall some of the transcripts of the last earnings call, policy rate changes impact the loans tied to external benchmarks, while deposit side takes longer to factor it in.",
+      "promise": "Volume growth to rise for FY2027",
+      "speaker": "Srinivasan Vaidyanathan",
+      "promised": "a direction only",
+      "call_date": "2025-07-25",
+      "revisions": [
+        {
+          "date": "2025-04-24",
+          "page": 11,
+          "quote": "LDR, I'll take a shot at it to see. See, what we had described, Kunal, last quarter or even about a year ago is that",
+          "value": "85\u201390",
+          "change": "set",
+          "superseded": true,
+          "call_period": "2025-03-31"
+        },
+        {
+          "date": "2025-07-25",
+          "page": 3,
+          "quote": "remain confident of growing our advances at the system growth rate at FY26 and higher than the system in FY27.",
+          "value": "a direction only",
+          "change": "maintained",
+          "superseded": false,
+          "call_period": "2025-06-30"
+        }
+      ],
+      "basis_note": "",
+      "metric_key": "volume_growth",
+      "scope_name": "",
+      "target_low": null,
+      "call_period": "2025-06-30",
+      "quote_check": "ok",
+      "target_high": null,
+      "actual_value": null,
+      "source_quote": "remain confident of growing our advances at the system growth rate at FY26 and higher than the system in FY27.",
+      "actual_detail": "",
+      "conditional_on": null,
+      "definition_note": "",
+      "period_promised": "FY2027",
+      "source_document": "https://nsearchives.nseindia.com/corporate/HDFCBANK_25072025214442_SEintimationTranscriptofearningscall19jul2025Cover.pdf"
+    }
+  ],
+  "usage": {
+    "verify": {
+      "calls": 0,
+      "model": "",
+      "tokens": 0,
+      "cache_hits": 0
+    },
+    "verdict": {
+      "calls": 0,
+      "model": "",
+      "tokens": 0,
+      "cache_hits": 0
+    },
+    "guidance": {
+      "calls": 1,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ],
+      "tokens": 3810,
+      "dropped": 0,
+      "cache_hits": 6
+    },
+    "total_tokens": 3810
+  },
+  "symbol": "HDFCBANK",
+  "timing": {
+    "check": 0.0,
+    "total": 4.29,
+    "series": 0.56,
+    "verify": 0.0,
+    "verdict": 0.09,
+    "discover": 0.57,
+    "guidance": 3.07
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "coverage": {
+    "note": "",
+    "audio_only": [],
+    "quarters_of": 10,
+    "series_gaps": [
+      {
+        "why": "missing",
+        "period": "2025-03-31"
+      },
+      {
+        "why": "missing",
+        "period": "2024-12-31"
+      },
+      {
+        "why": "missing",
+        "period": "2024-09-30"
+      },
+      {
+        "why": "missing",
+        "period": "2024-06-30"
+      }
+    ],
+    "transcripts_of": 7,
+    "missing_quarters": [],
+    "transcripts_found": 7,
+    "quarters_with_results": 6
+  },
+  "lookback": {
+    "quarters": 7,
+    "dropped_pages": [
+      {
+        "page": 17,
+        "period": "2025-06-30"
+      }
+    ],
+    "fy26_statements": 2,
+    "next_quarter_statements": 0,
+    "pages_dropped_by_prefilter": 1,
+    "pages_mentioning_fy26_or_next_quarter": 18
+  },
+  "progress": {
+    "done": 7,
+    "stage": "complete",
+    "total": 7
+  },
+  "snapshot": {
+    "pat": 20700.03,
+    "series": [
+      {
+        "pat": 20700.03,
+        "pbt": 27825.48,
+        "ebit": null,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": null,
+        "period": "2026-09-30",
+        "revenue": 129358.69,
+        "depreciation": null,
+        "other_income": 34227.06,
+        "finance_costs": null,
+        "ebit_margin_pct": null,
+        "ebitda_margin_pct": null
+      },
+      {
+        "pat": 20382.69,
+        "pbt": 27193.16,
+        "ebit": null,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": null,
+        "period": "2026-06-30",
+        "revenue": 133110.36,
+        "depreciation": null,
+        "other_income": 42535.03,
+        "finance_costs": null,
+        "ebit_margin_pct": null,
+        "ebitda_margin_pct": null
+      },
+      {
+        "pat": 20350.76,
+        "pbt": 26948.17,
+        "ebit": null,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": null,
+        "period": "2026-03-31",
+        "revenue": 116919.94,
+        "depreciation": null,
+        "other_income": 29737.44,
+        "finance_costs": null,
+        "ebit_margin_pct": null,
+        "ebitda_margin_pct": null
+      },
+      {
+        "pat": 20691.04,
+        "pbt": 26961.1,
+        "ebit": null,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": null,
+        "period": "2025-12-31",
+        "revenue": 126927.27,
+        "depreciation": null,
+        "other_income": 39860.33,
+        "finance_costs": null,
+        "ebit_margin_pct": null,
+        "ebitda_margin_pct": null
+      },
+      {
+        "pat": 19610.67,
+        "pbt": 25905.79,
+        "ebit": null,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": null,
+        "period": "2025-09-30",
+        "revenue": 118560.63,
+        "depreciation": null,
+        "other_income": 31566.79,
+        "finance_costs": null,
+        "ebit_margin_pct": null,
+        "ebitda_margin_pct": null
+      },
+      {
+        "pat": 17090.43,
+        "pbt": 20849.83,
+        "ebit": null,
+        "basis": "xbrl",
+        "flags": [],
+        "ebitda": null,
+        "period": "2025-06-30",
+        "revenue": 133054.97,
+        "depreciation": null,
+        "other_income": 45683.1,
+        "finance_costs": null,
+        "ebit_margin_pct": null,
+        "ebitda_margin_pct": null
+      }
+    ],
+    "revenue": 129358.69,
+    "ttm_pat": 82124.52,
+    "ttm_note": "",
+    "ttm_revenue": 506316.26,
+    "latest_quarter": "2026-09-30",
+    "ebitda_margin_pct": null,
+    "ttm_ebitda_margin_pct": null
+  },
+  "revisions": {
+    "cut": 0,
+    "items": [
+      {
+        "period": "FY2027",
+        "promise": "Volume growth to rise for FY2027",
+        "sequence": [
+          {
+            "date": "2025-04-24",
+            "value": "85\u201390",
+            "change": "set"
+          },
+          {
+            "date": "2025-07-25",
+            "value": "a direction only",
+            "change": "maintained"
+          }
+        ]
+      }
+    ],
+    "raised": 0,
+    "maintained": 1
+  },
+  "long_term_targets": []
+}
