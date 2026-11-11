@@ -521,3 +521,13 @@ pass
 ```
 
 No licence file was added.
+
+## Research link and the README
+
+Every filing card, and every mover sheet, has "Research this company". It switches to the Research tab with that company entered and starts the ledger. A cached company opens at once. Checked at 390px in both themes, on the Titan results card and on the Titan mover sheet. The action is 12px, in the accent colour, with no underline, so it sits under the source links.
+
+The README now matches the app. The demo opens on a 72-hour replay of 6 Nov 2026, and Live defaults to 24 hours. Pull is the Research tab, where you type any company. The ledger reads guidance from the last seven earnings calls. An unqualified operating margin is read as both EBIT and EBITDA, and scored only when both readings agree. The verifier checks consolidated scope, a reported basis, independence from a named event, and that the metric is named. A six-quarter trend and At a glance are in the product. Left out: bull versus bear, an ask-about-this chat, real phone notifications, BSE as a second source, and scoring of constant-currency or segment guidance. Watch for and the Live/Replay switch are described under Push. Try it and Screenshots are in. `docs/screenshots/` holds a placeholder; the images are still to be added. The "9 of 59 ledgers have a scored row" fact is under Limitations, as accuracy over coverage. The token line is "about 21k tokens per cold ledger".
+
+Scoring rules were not changed.
+
+The web app is `dpl_CiTB4fTEXvQeeGM9d7hCG8XjEcNt`, Ready, project web, aliased to https://web-eosin-ten-23.vercel.app. The API was not redeployed.

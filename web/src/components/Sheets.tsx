@@ -71,11 +71,13 @@ export function AlertSheet({
   cards,
   onClose,
   onJump,
+  onResearch,
 }: {
   alert: Alert | null
   cards: Card[]
   onClose: () => void
   onJump: (id: string) => void
+  onResearch: (symbol: string) => void
 }) {
   const known = new Set(cards.map((card) => card.id))
   return (
@@ -106,6 +108,9 @@ export function AlertSheet({
             ))}
           </ul>
           {alert.events.length === 0 ? <p className="text-[14px]">No filings were attached to this move.</p> : null}
+          <button type="button" className="research-company" onClick={() => onResearch(alert.symbol)}>
+            Research this company
+          </button>
         </div>
       ) : null}
     </SheetFrame>

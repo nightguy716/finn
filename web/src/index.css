@@ -47,6 +47,13 @@ input {
   color: inherit;
 }
 
+/* Unlayered, so it wins over the button reset. Same accent token in both themes. */
+button.research-company {
+  color: var(--color-accent);
+  font-size: 12px;
+  line-height: 1.3;
+}
+
 button {
   cursor: pointer;
 }

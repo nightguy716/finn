@@ -53,6 +53,7 @@ export default function App() {
   const [theme, setTheme] = useState<ThemeChoice>(loadTheme)
   const [usage, setUsage] = useState<LedgerUsage | null>(null)
   const [watch, setWatch] = useState<string[]>(loadWatch)
+  const [pendingSymbol, setPendingSymbol] = useState<string | null>(null)
 
   useEffect(() => {
     const dark =
@@ -119,6 +120,12 @@ export default function App() {
     }, 30)
   }
 
+  function researchCompany(symbol: string) {
+    setAlert(null)
+    setPendingSymbol(symbol)
+    setTab('research')
+  }
+
   return (
     <div className="flex h-dvh justify-center bg-desk text-ink">
       <div className="relative flex h-dvh w-full max-w-[390px] flex-col overflow-hidden bg-paper">
@@ -151,10 +158,13 @@ export default function App() {
               }}
               symbols={symbols}
               onOpenAlert={setAlert}
+              onResearch={researchCompany}
               watch={watch}
             />
           ) : (
             <Research
+              pendingSymbol={pendingSymbol}
+              onPendingDone={() => setPendingSymbol(null)}
               onOpenMenu={() => {
                 setMenuPage('root')
                 setMenuOpen(true)
@@ -171,7 +181,7 @@ export default function App() {
             Research
           </TabButton>
         </nav>
-        <AlertSheet alert={alert} cards={feed?.cards ?? []} onClose={closeAlert} onJump={jump} />
+        <AlertSheet alert={alert} cards={feed?.cards ?? []} onClose={closeAlert} onJump={jump} onResearch={researchCompany} />
         <IntroSheet
           open={introOpen}
           onClose={() => {

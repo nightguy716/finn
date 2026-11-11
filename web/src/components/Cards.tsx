@@ -2,6 +2,15 @@ import { useState } from 'react'
 import type { Card, MetricLine } from '../types'
 import { categoryLabel, clock, crore, dayLabel, delta, filingLinks, largeSwing, resultsTakeaway } from '../format'
 
+function ResearchCompany({ onResearch }: { onResearch?: () => void }) {
+  if (!onResearch) return null
+  return (
+    <button type="button" className="research-company mt-2" onClick={onResearch}>
+      Research this company
+    </button>
+  )
+}
+
 function Sources({ card }: { card: Card }) {
   const fromSources = (card.sources ?? []).filter((source) => source.url)
   const raw = fromSources.length
@@ -112,7 +121,17 @@ const RESULT_METRICS: { key: 'revenue' | 'ebitda' | 'pbt' | 'pat'; name: string;
   { key: 'pat', name: 'PAT' },
 ]
 
-export function ResultsCard({ card, hero = false, watching = false }: { card: Card; hero?: boolean; watching?: boolean }) {
+export function ResultsCard({
+  card,
+  hero = false,
+  watching = false,
+  onResearch,
+}: {
+  card: Card
+  hero?: boolean
+  watching?: boolean
+  onResearch?: () => void
+}) {
   const [openKey, setOpenKey] = useState<string | null>(null)
   const metrics = card.body.metrics
   const reason = card.body.ebitda_reason?.trim()
@@ -179,11 +198,20 @@ export function ResultsCard({ card, hero = false, watching = false }: { card: Ca
         <p className="mt-2 text-[13px] text-mute">Figures are not on this card.</p>
       )}
       <Sources card={card} />
+      <ResearchCompany onResearch={onResearch} />
     </article>
   )
 }
 
-export function ManagementCard({ card, watching = false }: { card: Card; watching?: boolean }) {
+export function ManagementCard({
+  card,
+  watching = false,
+  onResearch,
+}: {
+  card: Card
+  watching?: boolean
+  onResearch?: () => void
+}) {
   const [open, setOpen] = useState(false)
   const profile = card.body.profile?.trim()
   const missing = card.body.profile_note?.trim() || 'The disclosure has no biographical profile.'
@@ -213,11 +241,20 @@ export function ManagementCard({ card, watching = false }: { card: Card; watchin
         <p className="mt-2 text-[13px] text-mute">{missing}</p>
       )}
       <Sources card={card} />
+      <ResearchCompany onResearch={onResearch} />
     </article>
   )
 }
 
-export function MaterialCard({ card, watching = false }: { card: Card; watching?: boolean }) {
+export function MaterialCard({
+  card,
+  watching = false,
+  onResearch,
+}: {
+  card: Card
+  watching?: boolean
+  onResearch?: () => void
+}) {
   const line = card.body.line?.trim() || card.headline
   return (
     <article id={card.id} className="border border-line bg-card px-3.5 py-3">
@@ -225,6 +262,7 @@ export function MaterialCard({ card, watching = false }: { card: Card; watching?
       <p className="mt-2 text-[11px] tracking-[0.14em] text-accent uppercase">{categoryLabel(card.category)}</p>
       <p className="mt-1.5 text-[14px] leading-snug">{line}</p>
       <Sources card={card} />
+      <ResearchCompany onResearch={onResearch} />
     </article>
   )
 }
@@ -234,8 +272,18 @@ function sentenceCase(value: string): string {
   return text.charAt(0).toUpperCase() + text.slice(1)
 }
 
-export function FilingCard({ card, hero = false, watching = false }: { card: Card; hero?: boolean; watching?: boolean }) {
-  if (card.category === 'results') return <ResultsCard card={card} hero={hero} watching={watching} />
-  if (card.category === 'management_change') return <ManagementCard card={card} watching={watching} />
-  return <MaterialCard card={card} watching={watching} />
+export function FilingCard({
+  card,
+  hero = false,
+  watching = false,
+  onResearch,
+}: {
+  card: Card
+  hero?: boolean
+  watching?: boolean
+  onResearch?: () => void
+}) {
+  if (card.category === 'results') return <ResultsCard card={card} hero={hero} watching={watching} onResearch={onResearch} />
+  if (card.category === 'management_change') return <ManagementCard card={card} watching={watching} onResearch={onResearch} />
+  return <MaterialCard card={card} watching={watching} onResearch={onResearch} />
 }

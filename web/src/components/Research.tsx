@@ -12,7 +12,17 @@ const SYMBOL = /^[A-Z0-9&-]{1,20}$/
 
 type Phase = 'idle' | 'running' | 'ready' | 'error' | 'limited'
 
-export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUsage: (usage: LedgerUsage | null) => void }) {
+export function Research({
+  pendingSymbol,
+  onPendingDone,
+  onOpenMenu,
+  onUsage,
+}: {
+  pendingSymbol: string | null
+  onPendingDone: () => void
+  onOpenMenu: () => void
+  onUsage: (usage: LedgerUsage | null) => void
+}) {
   const [draft, setDraft] = useState('')
   const [symbol, setSymbol] = useState('')
   const [attempt, setAttempt] = useState(0)
@@ -82,6 +92,14 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
       })
     return () => ctrl.abort()
   }, [symbol])
+
+  useEffect(() => {
+    if (!pendingSymbol) return
+    openSymbol(pendingSymbol)
+    onPendingDone()
+    // pendingSymbol is the only trigger. openSymbol closes over the latest state.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pendingSymbol])
 
   useEffect(() => {
     if (!symbol) return

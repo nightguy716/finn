@@ -22,6 +22,7 @@ export function Briefing({
   onOpenMenu,
   symbols,
   onOpenAlert,
+  onResearch,
   watch,
 }: {
   mode: 'replay' | 'live'
@@ -41,6 +42,7 @@ export function Briefing({
   onOpenMenu: () => void
   symbols: string[]
   onOpenAlert: (alert: Alert) => void
+  onResearch: (symbol: string) => void
   watch: string[]
 }) {
   const reduce = useReducedMotion()
@@ -257,7 +259,12 @@ export function Briefing({
                     show: { opacity: 1, y: 0, transition: { duration: reduce ? 0 : 0.2 } },
                   }}
                 >
-                  <FilingCard card={card} hero={card.id === heroId(cards)} watching={watched.has(card.category)} />
+                  <FilingCard
+                    card={card}
+                    hero={card.id === heroId(cards)}
+                    watching={watched.has(card.category)}
+                    onResearch={() => onResearch(card.symbol)}
+                  />
                 </motion.div>
               ))}
             </motion.div>
