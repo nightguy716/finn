@@ -5,7 +5,11 @@
     { "source": "/api/health", "destination": "/api/index?route=health" },
     { "source": "/api/feed", "destination": "/api/index?route=feed" },
     { "source": "/api/ledger", "destination": "/api/index?route=ledger" },
-    { "source": "/api/alerts/config", "destination": "/api/index?route=alerts/config" }
+    { "source": "/api/alerts/config", "destination": "/api/index?route=alerts/config" },
+    { "source": "/api/cron/daily", "destination": "/api/index?route=cron/daily" }
+  ],
+  "crons": [
+    { "path": "/api/cron/daily", "schedule": "30 3 * * *" }
   ],
   "functions": {
     "api/index.py": {

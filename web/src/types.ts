@@ -79,6 +79,7 @@ export type Feed = {
   routine: RoutineCompany[]
   alerts: Alert[]
   source?: string
+  stored?: boolean
 }
 
 export type AlertConfig = {

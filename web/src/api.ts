@@ -20,6 +20,7 @@ export type FeedQuery = {
   movePct: number
   volumeN: number
   symbols?: string[]
+  stored?: boolean
 }
 
 async function getJson<T>(path: string, params: Record<string, string>, signal: AbortSignal | undefined, what: string): Promise<T> {
@@ -55,6 +56,7 @@ export function fetchFeed(query: FeedQuery, signal?: AbortSignal): Promise<Feed>
       move_pct: String(query.movePct),
       volume_n: String(query.volumeN),
       ...(query.symbols?.length ? { symbols: query.symbols.join(',') } : {}),
+      ...(query.stored ? { stored: '1' } : {}),
     },
     signal,
     'briefing',

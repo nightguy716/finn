@@ -1,10 +1,11 @@
 import { useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import type { Alert, AlertConfig, Feed, LoadStatus } from '../types'
-import { WINDOWS, dayLabel, orderAlerts, plural, replayLine, shiftBack, windowSummary } from '../format'
+import { WINDOWS, dayLabel, orderAlerts, plural, windowSummary } from '../format'
 import { FilingCard } from './Cards'
 
 export function Briefing({
+  mode,
   asOf,
   hours,
   move,
@@ -15,11 +16,14 @@ export function Briefing({
   error,
   onRetry,
   onAsOf,
+  onLive,
+  onReplay,
   onHours,
   onOpenMenu,
   symbols,
   onOpenAlert,
 }: {
+  mode: 'replay' | 'live'
   asOf: string
   hours: number
   move: number
@@ -30,6 +34,8 @@ export function Briefing({
   error: string | null
   onRetry: () => void
   onAsOf: (value: string) => void
+  onLive: () => void
+  onReplay: () => void
   onHours: (hours: number) => void
   onOpenMenu: () => void
   symbols: string[]
@@ -39,10 +45,10 @@ export function Briefing({
   const dateRef = useRef<HTMLInputElement>(null)
   const [routineOpen, setRoutineOpen] = useState(false)
   const showFeed = feed && status !== 'loading'
-  const start = status === 'ready' && feed ? feed.window_start : shiftBack(asOf, hours)
   const routineCount = feed?.routine.reduce((sum, row) => sum + row.count, 0) ?? 0
   const movers = feed ? orderAlerts(feed.alerts) : []
   const maxSeverity = Math.max(...movers.map((alert) => alert.severity), 1)
+  const notRefreshed = mode === 'live' && feed?.stored === false
 
   return (
     <div className="pb-4">
@@ -61,6 +67,27 @@ export function Briefing({
           </div>
         </div>
         <div className="mt-3 flex items-center gap-1.5">
+          <button
+            type="button"
+            aria-pressed={mode === 'live'}
+            className={`h-7 border px-2 text-[12px] ${mode === 'live' ? 'border-accent text-accent' : 'border-line text-ink'}`}
+            onClick={onLive}
+          >
+            Live
+          </button>
+          <button
+            type="button"
+            aria-pressed={mode === 'replay'}
+            className={`h-7 border px-2 text-[12px] ${mode === 'replay' ? 'border-accent text-accent' : 'border-line text-ink'}`}
+            onClick={onReplay}
+          >
+            Replay
+          </button>
+        </div>
+        <p className="mt-2 text-[12px] leading-snug text-mute">
+          Replay is 6 Nov 2026, so the demo stays put. Live is today, from the morning refresh.
+        </p>
+        <div className="mt-2 flex items-center gap-1.5">
           {WINDOWS.map((item) => {
             const selected = item.hours === hours
             return (
@@ -75,42 +102,45 @@ export function Briefing({
               </button>
             )
           })}
-          <div className="relative ml-auto">
-            <button
-              type="button"
-              aria-label={`As of ${dayLabel(asOf)}`}
-              className="h-7 border border-line px-1.5 font-mono text-[12px] tabular-nums"
-              onClick={() => {
-                const input = dateRef.current
-                if (!input) return
-                if (typeof input.showPicker === 'function') input.showPicker()
-                else input.click()
-              }}
-            >
-              {dayLabel(asOf)}
-            </button>
-            <label className="sr-only">
-              As of
-              <input
-                ref={dateRef}
-                type="date"
-                value={asOf}
-                aria-label="As of"
-                className="sr-only"
-                onChange={(event) => {
-                  if (event.target.value) onAsOf(event.target.value)
+          {mode === 'replay' ? (
+            <div className="relative ml-auto">
+              <button
+                type="button"
+                aria-label={`As of ${dayLabel(asOf)}`}
+                className="h-7 border border-line px-1.5 font-mono text-[12px] tabular-nums"
+                onClick={() => {
+                  const input = dateRef.current
+                  if (!input) return
+                  if (typeof input.showPicker === 'function') input.showPicker()
+                  else input.click()
                 }}
-              />
-            </label>
-          </div>
+              >
+                {dayLabel(asOf)}
+              </button>
+              <label className="sr-only">
+                As of
+                <input
+                  ref={dateRef}
+                  type="date"
+                  value={asOf}
+                  aria-label="As of"
+                  className="sr-only"
+                  onChange={(event) => {
+                    if (event.target.value) onAsOf(event.target.value)
+                  }}
+                />
+              </label>
+            </div>
+          ) : (
+            <p className="ml-auto font-mono text-[12px] tabular-nums text-mute">{dayLabel(asOf)}</p>
+          )}
         </div>
-        <p className="mt-2 text-[12px] leading-snug text-mute">{replayLine(asOf, start)}</p>
         {symbols.length ? (
           <p className="mt-1 text-[12px] text-mute">
             Showing {symbols.length === 1 ? symbols[0] : `${symbols.length} companies`}. Change it from the menu.
           </p>
         ) : null}
-        {showFeed && feed ? <p className="mt-1 text-[13px] leading-snug">{windowSummary(feed.cards, movers.length)}</p> : null}
+        {showFeed && feed && !notRefreshed ? <p className="mt-1 text-[13px] leading-snug">{windowSummary(feed.cards, movers.length)}</p> : null}
         {defaults ? null : <p className="mt-1 text-[12px] text-mute">Reading alert defaults.</p>}
         {status === 'refreshing' ? <p className="mt-1 text-[12px] text-accent">Updating.</p> : null}
       </header>
@@ -125,7 +155,16 @@ export function Briefing({
         </div>
       ) : null}
 
-      {showFeed && feed ? (
+      {showFeed && feed && notRefreshed ? (
+        <div className="mx-4 mt-4">
+          <p className="text-[14px] leading-snug">This window has not been refreshed yet.</p>
+          <button type="button" className="mt-2 text-[13px] text-accent" onClick={onReplay}>
+            Show the 6 Nov replay
+          </button>
+        </div>
+      ) : null}
+
+      {showFeed && feed && !notRefreshed ? (
         <div className="mt-4">
           <section>
             <h2 className="px-4 text-[11px] tracking-[0.14em] text-mute uppercase">Movers</h2>
@@ -172,7 +211,14 @@ export function Briefing({
               {feed.cards.length ? plural(feed.cards.length, 'filing') : 'Filings'}
             </h2>
             {feed.cards.length === 0 && feed.alerts.length === 0 && routineCount === 0 ? (
-              <p className="mt-3 text-[14px]">Nothing was filed in this window.</p>
+              <div className="mt-3">
+                <p className="text-[14px]">Nothing was filed in this window.</p>
+                {mode === 'live' ? (
+                  <button type="button" className="mt-2 text-[13px] text-accent" onClick={onReplay}>
+                    Show the 6 Nov replay
+                  </button>
+                ) : null}
+              </div>
             ) : null}
             {hours < 72 && feed.cards.length <= 3 ? (
               <div className="mt-2 border border-line bg-card px-3 py-2">

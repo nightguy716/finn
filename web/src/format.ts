@@ -1,4 +1,4 @@
-import type { LedgerUsage, MetricLine } from './types'
+import type { LedgerUsage, MetricLine, SnapshotPoint } from './types'
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
@@ -72,10 +72,6 @@ export function delta(current: number | null | undefined, base: number | null | 
   const sign = pct > 0 ? '+' : ''
   const tone = pct > 0 ? 'up' : pct < 0 ? 'down' : 'flat'
   return { text: `${sign}${pct.toFixed(1)}%`, tone }
-}
-
-export function replayLine(asOf: string, _start?: string): string {
-  return `Replay mode: showing ${dayLabel(asOf)} so the demo stays stable.`
 }
 
 /** Where a filing sits relative to the session, without saying the filing caused the move. */
@@ -252,4 +248,120 @@ export function largeSwing(metrics: Partial<Record<'revenue' | 'ebitda' | 'pbt' 
   if (!metrics) return false
   const lines = [metrics.revenue, metrics.pbt, metrics.pat, hasEbitda ? metrics.ebitda : undefined]
   return lines.some(swingOn)
+}
+
+/** Plain facts from the six-quarter series already on the ledger. No model call. */
+export function glanceFacts(series: SnapshotPoint[] | undefined): string[] {
+  const rows = series ?? []
+  if (!rows.length) return ['No quarterly series is stored for this company.']
+  const blanks = rows.filter((row) => row.revenue == null)
+  const facts: string[] = []
+  if (blanks.length || rows.length < 6) {
+    const named = joinNames(blanks.map((row) => `the quarter ended ${dayLabel(row.period)}`))
+    const sentence = named ? named.charAt(0).toUpperCase() + named.slice(1) : ''
+    facts.push(
+      blanks.length
+        ? `The six-quarter series is incomplete. ${sentence} ${blanks.length === 1 ? 'has' : 'have'} no figures.`
+        : 'The six-quarter series is incomplete.',
+    )
+  }
+  const latest = rows.find((row) => row.revenue != null)
+  const ago = latest ? rows.find((row) => row.period.slice(0, 10) === yearAgo(latest.period)) : undefined
+  const revenue = movePhrase('Revenue', latest?.revenue, ago?.revenue)
+  const direction = revenueDirection(rows)
+  if (revenue && direction && blanks.length === 0 && rows.length >= 6) {
+    facts.push(`${revenue}, and the six quarters are ${direction}.`)
+  } else if (revenue && direction) {
+    facts.push(`${revenue}, and the quarters with revenue are ${direction}.`)
+  } else if (revenue) {
+    facts.push(`${revenue}.`)
+  } else if (blanks.length) {
+    facts.push('Revenue, derived EBITDA margin, and PAT cannot be compared with a year ago.')
+    if (direction) facts.push(`The quarters with revenue are ${direction}.`)
+  }
+  if (revenue) {
+    const margin = marginPhrase(latest?.ebitda_margin_pct, ago?.ebitda_margin_pct)
+    facts.push(margin ?? 'Derived EBITDA margin has no year-ago figure in this series.')
+    const pat = movePhrase('PAT', latest?.pat, ago?.pat)
+    facts.push(pat ? `${pat}.` : 'PAT growth from a year ago is not available.')
+  }
+  facts.push(swingPhrase(rows))
+  return facts.slice(0, 5)
+}
+
+function yearAgo(period: string): string {
+  const [year, month, day] = period.slice(0, 10).split('-')
+  return `${Number(year) - 1}-${month}-${day}`
+}
+
+function movePhrase(label: string, current: number | null | undefined, base: number | null | undefined): string | null {
+  const pct = current != null && base != null && base > 0 ? ((current - base) / base) * 100 : null
+  const change = delta(current, base, pct)
+  if (!change) return null
+  if (change.text === 'flat') return `${label} is flat from a year ago`
+  if (change.text.startsWith('+')) return `${label} is up ${change.text.slice(1)} from a year ago`
+  if (change.text.startsWith('-')) return `${label} is down ${change.text.slice(1)} from a year ago`
+  return `${label} ${change.text} from a year ago`
+}
+
+function marginPhrase(current: number | null | undefined, ago: number | null | undefined): string | null {
+  if (current == null || ago == null) return null
+  const bps = Math.round((current - ago) * 100)
+  if (bps === 0) return 'Derived EBITDA margin is unchanged from a year ago.'
+  const higher = bps > 0
+  return `Derived EBITDA margin is ${Math.abs(bps)} bps ${higher ? 'higher' : 'lower'} than a year ago, so it is ${higher ? 'expanding' : 'compressing'}.`
+}
+
+function revenueDirection(rows: SnapshotPoint[]): string | null {
+  const points = [...rows].reverse().filter((row) => row.revenue != null)
+  if (points.length < 3) return null
+  let ups = 0
+  let downs = 0
+  for (let index = 1; index < points.length; index += 1) {
+    const previous = points[index - 1].revenue ?? 0
+    const current = points[index].revenue ?? 0
+    if (current > previous) ups += 1
+    else if (current < previous) downs += 1
+  }
+  const first = points[0].revenue ?? 0
+  const last = points[points.length - 1].revenue ?? 0
+  if (ups > downs && last > first) return 'rising'
+  if (downs > ups && last < first) return 'falling'
+  return 'uneven'
+}
+
+function swingPhrase(rows: SnapshotPoint[]): string {
+  const losses = rows.filter((row) => row.pat != null && row.pat < 0)
+  const oldest = [...rows].reverse()
+  let swing = ''
+  for (let index = 1; index < oldest.length; index += 1) {
+    const before = oldest[index - 1]
+    const after = oldest[index]
+    if (bigMove(before.revenue, after.revenue) || bigMove(before.pat, after.pat)) {
+      swing = `A large swing shows up between the quarter ended ${dayLabel(before.period)} and the quarter ended ${dayLabel(after.period)}.`
+      break
+    }
+  }
+  const loss =
+    losses.length === 0
+      ? ''
+      : losses.length === 1
+        ? `The quarter ended ${dayLabel(losses[0].period)} was a loss.`
+        : `${losses.length} quarters were losses.`
+  if (loss && swing) return `${loss} ${swing}`
+  if (loss) return loss
+  if (swing) return swing
+  return 'No loss quarter, and no move past 100%.'
+}
+
+function bigMove(base: number | null | undefined, current: number | null | undefined): boolean {
+  if (base == null || current == null) return false
+  if (base <= 0 || current <= 0) return (base <= 0 && current > 0) || (base > 0 && current <= 0)
+  return Math.abs((current - base) / base) > 1
+}
+
+function joinNames(names: string[]): string {
+  if (names.length <= 1) return names[0] ?? ''
+  if (names.length === 2) return `${names[0]} and ${names[1]}`
+  return `${names.slice(0, -1).join(', ')}, and ${names[names.length - 1]}`
 }

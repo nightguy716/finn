@@ -1,10 +1,11 @@
 """Parsed series is reused, and a paused cache falls back to the snapshot file."""
 
+import os
 import unittest
 from datetime import date
 from unittest.mock import patch
 
-from finn_core.api_routes import alert_config, feed_key, feed_view, ledger_view
+from finn_core.api_routes import alert_config, daily_cron, feed_key, feed_view, ledger_view
 from finn_core.feed import order_alerts
 from finn_core.documents import quarter_ends
 from finn_core.series import SERIES_VERSION, quarterly_series
@@ -101,6 +102,52 @@ class RouteTest(unittest.TestCase):
             [(row["symbol"], row["date"]) for row in ordered],
             [("MARICO", "2026-11-05"), ("TITAN", "2026-11-04"), ("TITAN", "2026-11-06")],
         )
+
+    def test_a_live_read_does_not_compute_when_nothing_is_stored(self):
+        cache = Mem()
+        with patch("finn_core.api_routes._open", return_value=(cache, False)), patch(
+            "finn_core.api_routes.build_feed", side_effect=AssertionError("recomputed")
+        ):
+            body = feed_view({"as_of": ["2026-11-11"], "hours": ["24"], "stored": ["1"]})
+        self.assertFalse(body["stored"])
+        self.assertEqual(body["cards"], [])
+        self.assertEqual(body["alerts"], [])
+
+    def test_cron_rejects_a_bad_token(self):
+        with patch.dict(os.environ, {"CRON_SECRET": "correct"}):
+            with self.assertRaises(PermissionError):
+                daily_cron({"Authorization": "Bearer wrong"})
+
+    def test_cron_writes_a_heartbeat_and_both_windows(self):
+        cache = Mem()
+        calls = []
+
+        def collected(client, symbols, as_of, window_hours):
+            calls.append(window_hours)
+            return [{"symbol": "TITAN"}], []
+
+        def assembled(filings, failures, as_of, window_hours, symbols, move_pct, volume_n, alert_cap, client, cache):
+            return {
+                "as_of": as_of.isoformat(),
+                "window_hours": window_hours,
+                "cards": [{"symbol": filings[0]["symbol"]}],
+                "alerts": [],
+                "routine": [],
+                "usage": {"total_tokens": 0},
+            }
+
+        with patch.dict(os.environ, {"CRON_SECRET": "correct"}), patch(
+            "finn_core.api_routes._open", return_value=(cache, False)
+        ), patch("finn_core.api_routes.collect_filings", side_effect=collected), patch(
+            "finn_core.api_routes.assemble_feed", side_effect=assembled
+        ):
+            body = daily_cron({"Authorization": "Bearer correct"})
+        self.assertEqual(calls, [72])
+        self.assertTrue(body["ok"])
+        self.assertEqual([row["status"] for row in body["windows"]], ["stored", "stored"])
+        self.assertIsNotNone(cache.get("heartbeat", "FINN", "daily", "v1"))
+        self.assertEqual(cache.get("feed_snapshot", "FEED", f"{body['as_of']}|24|5|2.5|*", "v1")["cards"][0]["symbol"], "TITAN")
+        self.assertIsNotNone(cache.get("feed_snapshot", "FEED", f"{body['as_of']}|72|5|2.5|*", "v1"))
 
 
 if __name__ == "__main__":

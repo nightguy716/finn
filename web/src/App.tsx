@@ -8,7 +8,13 @@ import type { Alert, AlertConfig, Feed, LedgerUsage, LoadStatus } from './types'
 
 const INTRO_KEY = 'finn.intro'
 const THEME_KEY = 'finn.theme'
+const REPLAY_DAY = '2026-11-06'
 type Tab = 'briefing' | 'research'
+type BriefMode = 'replay' | 'live'
+
+function todayIST(): string {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date())
+}
 
 function loadTheme(): ThemeChoice {
   const stored = localStorage.getItem(THEME_KEY)
@@ -18,7 +24,8 @@ function loadTheme(): ThemeChoice {
 
 export default function App() {
   const [tab, setTab] = useState<Tab>('briefing')
-  const [asOf, setAsOf] = useState('2026-11-06')
+  const [mode, setMode] = useState<BriefMode>('replay')
+  const [asOf, setAsOf] = useState(REPLAY_DAY)
   const [hours, setHours] = useState(72)
   const [move, setMove] = useState(5)
   const [volume, setVolume] = useState(2.5)
@@ -68,7 +75,7 @@ export default function App() {
     const ctrl = new AbortController()
     setError(null)
     setStatus(feed ? 'refreshing' : 'loading')
-    fetchFeed({ asOf, hours, movePct: move, volumeN: volume, symbols }, ctrl.signal)
+    fetchFeed({ asOf, hours, movePct: move, volumeN: volume, symbols, stored: mode === 'live' }, ctrl.signal)
       .then((data) => {
         if (!Array.isArray(data.cards) || !Array.isArray(data.alerts) || !Array.isArray(data.routine)) {
           throw new Error('The briefing came back in an unexpected shape.')
@@ -84,7 +91,7 @@ export default function App() {
     return () => ctrl.abort()
     // feed is read only to choose the first-load skeleton. Including it would refetch forever.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [asOf, hours, move, volume, symbols, attempt])
+  }, [asOf, hours, move, volume, symbols, attempt, mode])
 
   const onCommit = useCallback((nextMove: number, nextVolume: number) => {
     setMove(nextMove)
@@ -107,6 +114,7 @@ export default function App() {
         <main className="min-h-0 flex-1 overflow-y-auto">
           {tab === 'briefing' ? (
             <Briefing
+              mode={mode}
               asOf={asOf}
               hours={hours}
               move={move}
@@ -117,6 +125,14 @@ export default function App() {
               error={error}
               onRetry={() => setAttempt((value) => value + 1)}
               onAsOf={setAsOf}
+              onLive={() => {
+                setMode('live')
+                setAsOf(todayIST())
+              }}
+              onReplay={() => {
+                setMode('replay')
+                setAsOf(REPLAY_DAY)
+              }}
               onHours={setHours}
               onOpenMenu={() => {
                 setMenuPage('root')

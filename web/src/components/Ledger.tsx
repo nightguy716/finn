@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react'
 import { bandNote, dayLabel } from '../format'
 import type { Ledger, LedgerRevision, LedgerRow } from '../types'
+import { Glance } from './Glance'
 import { CompanySnapshot } from './Snapshot'
 
 const SCORED: { status: string; label: string; tone?: string }[] = [
@@ -43,6 +44,7 @@ export function LedgerView({ ledger }: { ledger: Ledger }) {
         <p className="mt-2 text-[14px] leading-snug">No consolidated guidance in these transcripts can be checked.</p>
       ) : null}
 
+      {ledger.snapshot ? <Glance series={ledger.snapshot.series} /> : null}
       {ledger.snapshot ? <CompanySnapshot snapshot={ledger.snapshot} /> : null}
 
       {scored.length ? (

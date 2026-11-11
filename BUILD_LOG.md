@@ -377,3 +377,15 @@ The run stopped on INDIGO when every provider returned the daily limit, after on
 | INDIGO | quota | | | |
 
 The API is `dpl_5fUGLvfZFq3wPzJohWxK6U1xnFBD`, Ready, aliased to https://finn-r4y3.vercel.app. The web app is `dpl_6TCRaEawsuRtAzYVAwKh2Pnvwia1`, Ready, aliased to https://web-eosin-ten-23.vercel.app. The default feed still returns those eight movers.
+
+## Morning refresh, live briefing, numbers at a glance
+
+Scoring rules were not changed.
+
+`/api/cron/daily` is on the API project. Vercel runs it at `30 3 * * *`, which is 09:00 IST. The caller must send `Authorization: Bearer` matching `CRON_SECRET`. A missing or wrong token is 401. The handler reads and writes one heartbeat row so the free Supabase project stays awake, then collects announcements once for the 18 portfolio names and stores today's 24h and 72h feeds at the default 5% and 2.5× thresholds. The phone's Live view reads those stored feeds and does not rebuild them. A first cold attempt hit the 60-second limit before either window was saved. The job now does one sweep, with a 0.4s gap between exchange calls, and stores the 72h feed before it assembles 24h from the same filings. The proof call returned 200 in 15.1 seconds: heartbeat `2026-11-11T14:46:37+05:30`, 72h stored with 2 cards, 0 alerts and 5 routine companies, 24h stored and empty. Token count was 0 because those summaries were already cached.
+
+The briefing opens on Replay (6 Nov 2026). Live is today. One line under the switch says what each does. On a phone, Live 72h showed the Bajaj Finance warrant allotment and the L&T metro order, and no mover past the threshold. Live 24h said nothing was filed and offered the replay. Live 7 days said that window has not been refreshed and offered the replay.
+
+At a glance sits above the guidance on Research. It is arithmetic on the six-quarter series already on the ledger, with no model call. EBITDA is labelled derived. MARICO: revenue up 11.9% and the six quarters rising, derived EBITDA margin 211 bps higher and expanding, PAT up 31.0%, no loss quarter and no move past 100%. CGPOWER: the series is incomplete for the quarters ended 30 Sep 2025 and 30 Jun 2025, so revenue, derived EBITDA margin, and PAT are not compared with a year ago. The quarters that have revenue are rising. No loss quarter.
+
+The API is `dpl_5yXmUobKX5fpfWiw5HLdxCXyhArH`, Ready, aliased to https://finn-r4y3.vercel.app. The web app is `dpl_8VQni181rzDaWeG14AKaA8mgT8pC`, Ready, aliased to https://web-eosin-ten-23.vercel.app.

@@ -52,18 +52,29 @@ def build_feed(
 ) -> dict:
     """One JSON object for the window ending at `as_of`. A date means 23:59:59 that day."""
     as_of = _as_of(as_of)
-    start = as_of - timedelta(hours=window_hours)
     symbols = [symbol.upper() for symbol in (symbols or list(PORTFOLIO))]
     own_cache = cache is None
     cache = cache or open_cache()
     client = client or NSEClient(cache=cache)
-    usage = {
-        "management_change": {"calls": 0, "cache_hits": 0, "tokens": 0},
-        "summary": {"calls": 0, "cache_hits": 0, "tokens": 0},
-        "total_tokens": 0,
-    }
-    failures: list[str] = []
+    try:
+        filings, failures = collect_filings(client, symbols, as_of, window_hours)
+        return assemble_feed(
+            filings, failures, as_of, window_hours, symbols, move_pct, volume_n, alert_cap, client, cache
+        )
+    finally:
+        if own_cache:
+            cache.close()
+
+
+def collect_filings(client, symbols: list[str], as_of: datetime, window_hours: float) -> tuple[list, list[str]]:
+    """Announcements and results for the window, plus the day before it.
+
+    The day before is what lets two filings of one event sit together when the
+    event itself falls inside the window.
+    """
+    start = as_of - timedelta(hours=window_hours)
     fetch_start = (start - timedelta(days=1)).date()
+    failures: list[str] = []
     filings = []
     for symbol in symbols:
         for row in _load(client, symbol, fetch_start, as_of.date(), failures):
@@ -71,8 +82,32 @@ def build_feed(
             if when is None or when.date() < fetch_start or when > as_of:
                 continue
             filings.append({**row, "symbol": symbol, "when": when, "label": _label(row)})
+    return filings, failures
 
-    events = cluster(filings)
+
+def assemble_feed(
+    filings: list,
+    failures: list[str],
+    as_of: datetime,
+    window_hours: float,
+    symbols: list[str],
+    move_pct: float,
+    volume_n: float,
+    alert_cap: int,
+    client,
+    cache,
+) -> dict:
+    """Cards, routine rows, and alerts for one window. Filings may be wider."""
+    start = as_of - timedelta(hours=window_hours)
+    fetch_start = (start - timedelta(days=1)).date()
+    scoped = [row for row in filings if not (row["when"].date() < fetch_start or row["when"] > as_of)]
+    usage = {
+        "management_change": {"calls": 0, "cache_hits": 0, "tokens": 0},
+        "summary": {"calls": 0, "cache_hits": 0, "tokens": 0},
+        "total_tokens": 0,
+    }
+    failures = list(failures)
+    events = cluster(scoped)
     in_window = [event for event in events if start < event["when"] <= as_of]
     cards = []
     card_ids = set()
@@ -117,8 +152,6 @@ def build_feed(
         "usage": usage,
         "failures": failures,
     }
-    if own_cache:
-        cache.close()
     return payload
 
 
