@@ -9,21 +9,25 @@ function Sources({ card }: { card: Card }) {
     : (card.source_urls ?? []).filter(Boolean).map((url) => ({ subject: '', url }))
   const links = filingLinks(raw)
   if (!links.length) return <p className="mt-2 text-[12px] text-mute">No source link on this filing.</p>
+  const onlyRaw = links.length === 1 && links[0].label.startsWith('XBRL')
   return (
-    <ul className="mt-2 flex flex-col gap-1">
-      {links.map((source) => (
-        <li key={source.url}>
-          <a
-            href={source.url}
-            target="_blank"
-            rel="noreferrer"
-            className="text-[12px] leading-snug text-accent underline decoration-accent/30 underline-offset-2"
-          >
-            {source.label}
-          </a>
-        </li>
-      ))}
-    </ul>
+    <div className="mt-2">
+      <ul className="flex flex-col gap-1">
+        {links.map((source) => (
+          <li key={source.url}>
+            <a
+              href={source.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-[12px] leading-snug text-accent underline decoration-accent/30 underline-offset-2"
+            >
+              {source.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      {onlyRaw ? <p className="mt-1 text-[12px] leading-snug text-mute">This file is machine-readable data, not a page to read.</p> : null}
+    </div>
   )
 }
 

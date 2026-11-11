@@ -156,17 +156,19 @@ export function modelLine(usage: LedgerUsage | null | undefined): string {
   return `This ledger: ${steps.join(', ')}.`
 }
 
+const XBRL_LABEL = 'XBRL data (raw, machine-readable)'
+
 const SOURCE_RANK: Record<string, number> = {
-  'XBRL filing': 0,
+  'Outcome of board meeting PDF': 0,
   'Investor presentation': 1,
-  'Outcome of board meeting PDF': 2,
-  'NSE filing': 3,
+  'NSE filing': 2,
+  [XBRL_LABEL]: 3,
 }
 
 /** A filing link labelled by what it is, not by the raw NSE subject. */
 export function sourceLabel(subject: string, url: string): string {
   const blob = `${subject} ${url}`.toLowerCase()
-  if (blob.includes('xbrl') || url.toLowerCase().endsWith('.xml')) return 'XBRL filing'
+  if (blob.includes('xbrl') || url.toLowerCase().endsWith('.xml')) return XBRL_LABEL
   if (blob.includes('investor presentation') || blob.includes('investorpre')) return 'Investor presentation'
   if (blob.includes('outcome of board') || blob.includes('outcomeofbm') || blob.includes('outcomeoftheboard')) return 'Outcome of board meeting PDF'
   return 'NSE filing'

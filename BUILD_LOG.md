@@ -306,3 +306,15 @@ The line at the top is computed from the numbers on the card. Titan reads “Rev
 Source links are labelled by type: XBRL filing, Investor presentation, Outcome of board meeting PDF, or NSE filing. Two links of the same specific type collapse to one. Two generic NSE filings stay if their subjects differ. The date control shows “6 Nov 2026”.
 
 No model call. `finn_core` is unchanged. The web app is what gets redeployed.
+
+## 2026-11-11 — Company search, and a readable XBRL label
+
+Research no longer calls NSE while someone is typing. `scripts/refresh_equities.py` downloads the official equity list, `EQUITY_L.csv` on nsearchives (the file linked from NSE's securities-available-for-trading page), and writes `web/src/data/equities.json`. The copy fetched on 11 Nov 2026 has 2,633 names: 2,397 EQ, 202 BE, 34 BZ. A short alias file maps the names people actually type: Zomato to ETERNAL, Bharat Seats to BHARATSE, Bajaj Auto to BAJAJ-AUTO, Mahindra to M&M. The listed symbol for Bharat Seats is BHARATSE.
+
+The box takes a company name or a symbol. Suggestions read "Company name (SYMBOL)". A tap starts that ledger. Enter does the same when one match is clear. "Ltd" and the other company-form words are ignored, and a small misspelling still matches. Text that is not a listed symbol never calls the ledger. `M&M` goes out as `symbol=M%26M`. `BAJAJ-AUTO` keeps the hyphen.
+
+The eight checks: "wipro" and "Wipro Ltd" are Wipro Limited (WIPRO). "pidilite" is Pidilite Industries Limited (PIDILITIND). "bajaj auto" is Bajaj Auto Limited (BAJAJ-AUTO). "zomato" is ETERNAL LIMITED (ETERNAL). "hind unilever" is Hindustan Unilever Limited (HINDUNILVR). "asian paint" is Asian Paints Limited (ASIANPAINT). "zzzzqqq" says "No listed company found" and offers Faze Three (FAZE3Q), A2Z Infra (A2ZINFRA) and Adani Ports (ADANIPORTS), with no ledger request.
+
+The results-card link that used to say "XBRL filing" now says "XBRL data (raw, machine-readable)" and sits after the outcome PDF and the investor presentation. When that file is the only source, the card adds that it is not a page to read. On the 6 Nov replay both results cards still have the PDF and the presentation ahead of it.
+
+Scoring is unchanged. The web app was redeployed: `dpl_32gEzEj7LvoFiZrZXWi88a6GLkxX` is Ready and aliased to https://web-eosin-ten-23.vercel.app.

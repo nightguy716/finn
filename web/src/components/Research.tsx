@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ApiError, fetchLedger } from '../api'
+import { isListedSymbol, searchCompanies, type Suggestion } from '../search'
 import type { Ledger, LedgerProgress, LedgerUsage } from '../types'
 import { LedgerView } from './Ledger'
 
@@ -83,8 +84,8 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
   function openSymbol(raw: string) {
     const next = raw.trim().toUpperCase()
     if (!next) return
-    if (!SYMBOL.test(next)) {
-      setNotice('Use the NSE symbol: letters, numbers, and a hyphen if the ticker has one.')
+    if (!SYMBOL.test(next) || !isListedSymbol(next)) {
+      setNotice('No listed company found')
       return
     }
     setNotice('')
@@ -99,6 +100,15 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
     else setSymbol(next)
   }
 
+  function submitQuery() {
+    const found = searchCompanies(draft)
+    if (found.clear) {
+      openSymbol(found.clear.symbol)
+      return
+    }
+    setNotice(found.matches.length ? 'Several matches. Pick one.' : 'No listed company found')
+  }
+
   function remember(next: string) {
     const stored = [next, ...recent.filter((item) => item !== next)].slice(0, 8)
     setRecent(stored)
@@ -106,6 +116,9 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
   }
 
   const extras = recent.filter((item) => !PRESETS.includes(item))
+  const editing = draft.trim().toUpperCase() !== symbol
+  const found = editing ? searchCompanies(draft) : { matches: [], closest: [], clear: null }
+  const showMiss = editing && draft.trim().length >= 2 && found.matches.length === 0
   const busy = phase === 'running'
   const transcripts = ledger?.coverage?.transcripts_found ?? null
   const fraction = barFraction(progress, busy, transcripts)
@@ -126,28 +139,40 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
         className="mt-3 flex gap-2"
         onSubmit={(event) => {
           event.preventDefault()
-          openSymbol(draft)
+          submitQuery()
         }}
       >
         <label className="min-w-0 flex-1">
-          <span className="sr-only">NSE symbol</span>
+          <span className="sr-only">Company or NSE symbol</span>
           <input
             value={draft}
-            onChange={(event) => setDraft(event.target.value.toUpperCase())}
-            placeholder="NSE symbol"
-            aria-label="NSE symbol"
-            autoCapitalize="characters"
+            onChange={(event) => {
+              setDraft(event.target.value)
+              setNotice('')
+            }}
+            placeholder="Company or symbol"
+            aria-label="Company or NSE symbol"
+            aria-autocomplete="list"
+            autoCapitalize="off"
             autoCorrect="off"
             spellCheck={false}
-            className="h-9 w-full border border-line bg-card px-2 font-mono text-[14px] uppercase"
+            className="h-9 w-full border border-line bg-card px-2 text-[14px]"
           />
         </label>
         <button type="submit" className="h-9 border border-accent px-3 text-[13px] text-accent">
           Open
         </button>
       </form>
-      <p className="mt-2 text-[12px] leading-snug text-mute">Any NSE ticker works, not only these four.</p>
-      {notice ? <p className="mt-2 text-[13px]">{notice}</p> : null}
+      <p className="mt-2 text-[12px] leading-snug text-mute">Any listed NSE company, by name or symbol.</p>
+      {showMiss ? <p className="mt-2 text-[13px]">No listed company found</p> : null}
+      {notice && !showMiss ? <p className="mt-2 text-[13px]">{notice}</p> : null}
+      {found.matches.length ? <SuggestionList items={found.matches} onPick={openSymbol} /> : null}
+      {showMiss && found.closest.length ? (
+        <div className="mt-2">
+          <p className="text-[11px] tracking-[0.08em] text-mute uppercase">Closest</p>
+          <SuggestionList items={found.closest} onPick={openSymbol} />
+        </div>
+      ) : null}
       <div className="mt-2 flex flex-wrap gap-1.5">
         {PRESETS.map((item) => (
           <button
@@ -243,11 +268,25 @@ function barFraction(progress: LedgerProgress | null, busy: boolean, transcripts
   return 0.08
 }
 
+function SuggestionList({ items, onPick }: { items: Suggestion[]; onPick: (symbol: string) => void }) {
+  return (
+    <ul className="mt-2 border border-line bg-card">
+      {items.map((item) => (
+        <li key={item.symbol} className="border-b border-line last:border-b-0">
+          <button type="button" className="w-full px-2 py-2 text-left text-[14px] leading-snug" onClick={() => onPick(item.symbol)}>
+            {item.name} <span className="font-mono text-[12px] text-mute">({item.symbol})</span>
+          </button>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 function loadRecent(): string[] {
   try {
     const raw = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]') as unknown
     if (!Array.isArray(raw)) return []
-    return raw.filter((item): item is string => typeof item === 'string' && SYMBOL.test(item)).slice(0, 8)
+    return raw.filter((item): item is string => typeof item === 'string' && SYMBOL.test(item) && isListedSymbol(item)).slice(0, 8)
   } catch {
     return []
   }
