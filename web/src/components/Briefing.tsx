@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import type { Alert, AlertConfig, Feed, LoadStatus } from '../types'
-import { WINDOWS, dayLabel, orderAlerts, plural, windowSummary } from '../format'
+import { WINDOWS, dayLabel, orderAlerts, plural, watchLine, windowSummary } from '../format'
 import { FilingCard } from './Cards'
 
 export function Briefing({
@@ -22,6 +22,7 @@ export function Briefing({
   onOpenMenu,
   symbols,
   onOpenAlert,
+  watch,
 }: {
   mode: 'replay' | 'live'
   asOf: string
@@ -40,12 +41,18 @@ export function Briefing({
   onOpenMenu: () => void
   symbols: string[]
   onOpenAlert: (alert: Alert) => void
+  watch: string[]
 }) {
   const reduce = useReducedMotion()
   const dateRef = useRef<HTMLInputElement>(null)
   const [routineOpen, setRoutineOpen] = useState(false)
   const showFeed = feed && status !== 'loading'
   const routineCount = feed?.routine.reduce((sum, row) => sum + row.count, 0) ?? 0
+  const watched = new Set(watch)
+  const cards = feed
+    ? [...feed.cards.filter((card) => watched.has(card.category)), ...feed.cards.filter((card) => !watched.has(card.category))]
+    : []
+  const watchedCount = cards.filter((card) => watched.has(card.category)).length
   const movers = feed ? orderAlerts(feed.alerts) : []
   const maxSeverity = Math.max(...movers.map((alert) => alert.severity), 1)
   const notRefreshed = mode === 'live' && feed?.stored === false
@@ -87,6 +94,7 @@ export function Briefing({
         <p className="mt-2 text-[12px] leading-snug text-mute">
           Replay is 6 Nov 2026, so the demo stays put. Live is today, from the morning refresh.
         </p>
+        <p className="mt-1 text-[12px] leading-snug text-mute">{watchLine(watch.length, showFeed ? watchedCount : -1)}</p>
         <div className="mt-2 flex items-center gap-1.5">
           {WINDOWS.map((item) => {
             const selected = item.hours === hours
@@ -208,9 +216,9 @@ export function Briefing({
 
           <section className="mt-5 px-4">
             <h2 className="text-[11px] tracking-[0.14em] text-mute uppercase">
-              {feed.cards.length ? plural(feed.cards.length, 'filing') : 'Filings'}
+              {cards.length ? plural(cards.length, 'filing') : 'Filings'}
             </h2>
-            {feed.cards.length === 0 && feed.alerts.length === 0 && routineCount === 0 ? (
+            {cards.length === 0 && feed.alerts.length === 0 && routineCount === 0 ? (
               <div className="mt-3">
                 <p className="text-[14px]">Nothing was filed in this window.</p>
                 {mode === 'live' ? (
@@ -220,12 +228,12 @@ export function Briefing({
                 ) : null}
               </div>
             ) : null}
-            {hours < 72 && feed.cards.length <= 3 ? (
+            {hours < 72 && cards.length <= 3 ? (
               <div className="mt-2 border border-line bg-card px-3 py-2">
                 <p className="text-[13px] leading-snug">
-                  {feed.cards.length === 0
+                  {cards.length === 0
                     ? 'Nothing material was filed in this short window.'
-                    : `Only ${plural(feed.cards.length, 'filing')} in this short window.`}
+                    : `Only ${plural(cards.length, 'filing')} in this short window.`}
                 </p>
                 <button type="button" className="mt-1 text-[13px] text-accent" onClick={() => onHours(72)}>
                   Show 72 hours
@@ -241,7 +249,7 @@ export function Briefing({
                 show: { transition: { staggerChildren: reduce ? 0 : 0.035 } },
               }}
             >
-              {feed.cards.map((card) => (
+              {cards.map((card) => (
                 <motion.div
                   key={card.id}
                   variants={{
@@ -249,7 +257,7 @@ export function Briefing({
                     show: { opacity: 1, y: 0, transition: { duration: reduce ? 0 : 0.2 } },
                   }}
                 >
-                  <FilingCard card={card} hero={card.id === heroId(feed.cards)} />
+                  <FilingCard card={card} hero={card.id === heroId(cards)} watching={watched.has(card.category)} />
                 </motion.div>
               ))}
             </motion.div>

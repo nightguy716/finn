@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import { modelLine } from '../format'
+import { WATCH, modelLine } from '../format'
 import { PORTFOLIO } from '../portfolio'
 import type { LedgerUsage } from '../types'
 import { SheetFrame } from './Sheets'
 
 export type ThemeChoice = 'system' | 'light' | 'dark'
-export type MenuPage = 'root' | 'portfolio' | 'method' | 'theme'
+export type MenuPage = 'root' | 'portfolio' | 'method' | 'theme' | 'watch'
 
 const STEPS = [
   {
@@ -80,6 +80,8 @@ export function MenuSheet({
   onThresholds,
   onTheme,
   usage,
+  watch,
+  onWatch,
 }: {
   open: boolean
   page: MenuPage
@@ -93,19 +95,46 @@ export function MenuSheet({
   onThresholds: () => void
   onTheme: (theme: ThemeChoice) => void
   usage: LedgerUsage | null
+  watch: string[]
+  onWatch: (id: string) => void
 }) {
   const title =
-    page === 'portfolio' ? 'Portfolio' : page === 'method' ? 'Data and method' : page === 'theme' ? 'Theme' : 'Menu'
+    page === 'portfolio' ? 'Portfolio' : page === 'method' ? 'Data and method' : page === 'theme' ? 'Theme' : page === 'watch' ? 'Watch for' : 'Menu'
   return (
     <SheetFrame open={open} title={title} onClose={onClose}>
       {page === 'root' ? (
         <ul className="flex flex-col">
           <MenuRow label="How FINN works" onClick={onWorks} />
           <MenuRow label="Portfolio" detail={symbols.length ? `${symbols.length} selected` : 'All 18'} onClick={() => onPage('portfolio')} />
+          <MenuRow label="Watch for" detail={watch.length ? `${watch.length} on` : 'Off'} onClick={() => onPage('watch')} />
           <MenuRow label="Mover thresholds" onClick={onThresholds} />
           <MenuRow label="Data and method" onClick={() => onPage('method')} />
           <MenuRow label="Theme" detail={themeLabel(theme)} onClick={() => onPage('theme')} />
         </ul>
+      ) : null}
+      {page === 'watch' ? (
+        <div>
+          <button type="button" className="text-[13px] text-accent" onClick={() => onPage('root')}>
+            Back
+          </button>
+          <p className="mt-2 text-[13px] leading-snug text-mute">Watched filings stay at the top of the briefing.</p>
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {WATCH.map((item) => {
+              const on = watch.includes(item.id)
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  aria-pressed={on}
+                  className={`h-7 border px-2 text-[12px] ${on ? 'border-accent text-accent' : 'border-line'}`}
+                  onClick={() => onWatch(item.id)}
+                >
+                  {item.label}
+                </button>
+              )
+            })}
+          </div>
+        </div>
       ) : null}
       {page === 'portfolio' ? (
         <div>

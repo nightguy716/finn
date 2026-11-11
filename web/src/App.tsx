@@ -8,9 +8,19 @@ import type { Alert, AlertConfig, Feed, LedgerUsage, LoadStatus } from './types'
 
 const INTRO_KEY = 'finn.intro'
 const THEME_KEY = 'finn.theme'
+const WATCH_KEY = 'finn.watch'
 const REPLAY_DAY = '2026-11-06'
 type Tab = 'briefing' | 'research'
 type BriefMode = 'replay' | 'live'
+
+function loadWatch(): string[] {
+  try {
+    const raw = JSON.parse(localStorage.getItem(WATCH_KEY) || '[]') as unknown
+    return Array.isArray(raw) ? raw.filter((item): item is string => typeof item === 'string') : []
+  } catch {
+    return []
+  }
+}
 
 function todayIST(): string {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date())
@@ -42,6 +52,7 @@ export default function App() {
   const [introOpen, setIntroOpen] = useState(() => localStorage.getItem(INTRO_KEY) !== 'seen')
   const [theme, setTheme] = useState<ThemeChoice>(loadTheme)
   const [usage, setUsage] = useState<LedgerUsage | null>(null)
+  const [watch, setWatch] = useState<string[]>(loadWatch)
 
   useEffect(() => {
     const dark =
@@ -140,6 +151,7 @@ export default function App() {
               }}
               symbols={symbols}
               onOpenAlert={setAlert}
+              watch={watch}
             />
           ) : (
             <Research
@@ -188,6 +200,14 @@ export default function App() {
           }}
           onTheme={setTheme}
           usage={usage}
+          watch={watch}
+          onWatch={(id) =>
+            setWatch((current) => {
+              const next = current.includes(id) ? current.filter((item) => item !== id) : [...current, id]
+              localStorage.setItem(WATCH_KEY, JSON.stringify(next))
+              return next
+            })
+          }
         />
         <SettingsSheet
           open={settingsOpen}

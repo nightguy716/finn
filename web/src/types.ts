@@ -197,3 +197,29 @@ export type LedgerResponse = {
   source?: string
   error?: string
 }
+
+export type CitedFact = {
+  text: string
+  page: number
+}
+
+export type CitedItem = {
+  name: string
+  share: string | null
+  page: number
+}
+
+export type BusinessNote = {
+  symbol: string
+  status: 'ready' | 'partial' | 'not_found' | 'unreadable' | string
+  year?: string
+  url?: string
+  message?: string
+  progress?: { stage?: string; done?: number; total?: number }
+  snapshot?: {
+    does: CitedFact | null
+    makes_money: CitedFact | null
+    segments: CitedItem[]
+    geographies: CitedItem[]
+  } | null
+}

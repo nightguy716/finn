@@ -31,6 +31,23 @@ export function categoryLabel(category: string): string {
   return CATEGORIES[category] ?? category.replaceAll('_', ' ')
 }
 
+export const WATCH = [
+  { id: 'results', label: 'Results' },
+  { id: 'm_and_a', label: 'Deals' },
+  { id: 'management_change', label: 'Management changes' },
+  { id: 'credit_rating', label: 'Credit rating' },
+  { id: 'litigation', label: 'Litigation' },
+  { id: 'fund_raise', label: 'Fund raising' },
+] as const
+
+export function watchLine(chosen: number, count: number): string {
+  if (!chosen) return 'Choose categories under Watch for. Watched filings stay at the top.'
+  if (count < 0) return 'Watched filings stay at the top.'
+  if (!count) return 'Watched filings stay at the top. None in this window.'
+  const noun = count === 1 ? 'filing' : 'filings'
+  return `Watched filings stay at the top. ${count} ${noun} in this window.`
+}
+
 export function dayLabel(iso: string): string {
   const [year, month, day] = iso.slice(0, 10).split('-').map(Number)
   if (!year || !month || !day) return iso

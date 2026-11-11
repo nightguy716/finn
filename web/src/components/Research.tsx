@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import { ApiError, fetchLedger } from '../api'
+import { ApiError, fetchLedger, fetchSnapshot } from '../api'
 import { isListedSymbol, searchCompanies, type Suggestion } from '../search'
-import type { Ledger, LedgerProgress, LedgerUsage } from '../types'
+import type { BusinessNote, Ledger, LedgerProgress, LedgerUsage } from '../types'
+import { BusinessNoteView } from './BusinessNote'
 import { LedgerView } from './Ledger'
 
 const PRESETS = ['MARICO', 'ASIANPAINT', 'TITAN', 'PIDILITIND']
@@ -22,6 +23,40 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
   const [error, setError] = useState<string | null>(null)
   const [limited, setLimited] = useState(false)
   const [notice, setNotice] = useState('')
+  const [biz, setBiz] = useState<BusinessNote | null>(null)
+
+  useEffect(() => {
+    if (!symbol) {
+      setBiz(null)
+      return
+    }
+    const ctrl = new AbortController()
+    let stop = false
+    setBiz(null)
+    async function run() {
+      let previous = ''
+      while (!stop) {
+        try {
+          const note = await fetchSnapshot(symbol, ctrl.signal)
+          if (stop) return
+          setBiz(note)
+          if (note.status !== 'partial') return
+          const mark = `${note.progress?.stage ?? ''}:${note.progress?.done ?? 0}`
+          if (mark === previous) return
+          previous = mark
+        } catch (reason) {
+          if (stop || (reason instanceof DOMException && reason.name === 'AbortError')) return
+          if (!stop) setBiz({ symbol, status: 'unreadable', message: 'No annual report is available for this company.' })
+          return
+        }
+      }
+    }
+    void run()
+    return () => {
+      stop = true
+      ctrl.abort()
+    }
+  }, [symbol])
 
   useEffect(() => {
     if (!symbol) return
@@ -202,6 +237,8 @@ export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUs
           </div>
         </div>
       ) : null}
+
+      {symbol ? <BusinessNoteView note={biz} /> : null}
 
       {symbol && phase !== 'ready' && phase !== 'limited' ? (
         <div className="mt-4" aria-live="polite">

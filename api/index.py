@@ -8,7 +8,7 @@ import json
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import parse_qs, urlparse
 
-from finn_core.api_routes import alert_config, daily_cron, feed_view, health, ledger_view
+from finn_core.api_routes import alert_config, daily_cron, feed_view, health, ledger_view, snapshot_view
 from finn_core.llm import LIMIT_MESSAGE, QuotaError
 
 
@@ -27,6 +27,8 @@ class handler(BaseHTTPRequestHandler):
                 payload, status = feed_view(params), 200
             elif route == "ledger":
                 payload, status = ledger_view(params), 200
+            elif route == "snapshot":
+                payload, status = snapshot_view(params), 200
             elif route in ("alerts/config", "alerts"):
                 payload, status = alert_config(), 200
             elif route == "cron/daily":

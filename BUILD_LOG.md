@@ -389,3 +389,53 @@ The briefing opens on Replay (6 Nov 2026). Live is today. One line under the swi
 At a glance sits above the guidance on Research. It is arithmetic on the six-quarter series already on the ledger, with no model call. EBITDA is labelled derived. MARICO: revenue up 11.9% and the six quarters rising, derived EBITDA margin 211 bps higher and expanding, PAT up 31.0%, no loss quarter and no move past 100%. CGPOWER: the series is incomplete for the quarters ended 30 Sep 2025 and 30 Jun 2025, so revenue, derived EBITDA margin, and PAT are not compared with a year ago. The quarters that have revenue are rising. No loss quarter.
 
 The API is `dpl_5yXmUobKX5fpfWiw5HLdxCXyhArH`, Ready, aliased to https://finn-r4y3.vercel.app. The web app is `dpl_8VQni181rzDaWeG14AKaA8mgT8pC`, Ready, aliased to https://web-eosin-ten-23.vercel.app.
+
+## Annual report snapshot, and a watchlist
+
+Scoring rules were not changed.
+
+`GET /api/snapshot?symbol=` reads the annual-report PDF already discovered from NSE. It does not send the whole report. It keeps pages whose text opens with "background and operations", a management-discussion heading that is not a contents page, or a segment note that states segment revenue, external customers, or inter-segment sales. The cap is 30 pages. One call scans for up to 32 seconds and returns `partial` if it has not finished, so the function stays inside the 60-second limit. The next call continues, then one `gemini-3.5-flash-lite` pass returns strict JSON. A field is kept only when its evidence is on that page and a six-word run of the sentence is on that page. A revenue share is kept only when the page states a percent. Anything else is null. The result is cached by symbol and report year. No report, a download that is not a PDF, or a PDF that cannot be parsed comes back as `not_found` or `unreadable`.
+
+Research shows the note above the ledger, collapsed to two lines, with More for the page numbers and the report link. A missing report is one quiet line. The ledger request is separate and does not wait for this one.
+
+Cold run on 11 Nov 2026, then the cached read. Tokens are the one Flash-Lite call.
+
+| Ticker | Status | Tokens | Cold | Cached | What was kept |
+|---|---|---:|---:|---:|---|
+| MARICO | ready, 2026 | 3,362 | 23.0s | 0.7s | Does, p. 209. How it makes money, p. 235. Segments India, International, Edible oils, Hair oils, Personal care, p. 235, shares null. Geographies from p. 209 and p. 236. |
+| TITAN | ready, 2026 | 3,303 | 19.2s | 0.7s | Does, p. 8. Segments Watches, Jewellery, Eyecare, Others, p. 333, shares null. Geographies India and Others, p. 334. |
+| WIPRO | ready, 2026 | 4,942 | 28.3s | 0.2s | IT Services, p. 40. United States and United Kingdom, p. 375. Both sentences dropped. |
+| PIDILITIND | ready, 2026 | 3,649 | 18.5s | 0.6s | Does and how it makes money, p. 73. Business to Business Products 18.0% and Adhesives & Sealants 53.4%, p. 73. |
+| SBIN | ready, 2026 | 2,426 | 38.2s | 0.3s | Segments on p. 282. Domestic and Foreign operations, p. 281. Both sentences dropped. |
+| NESTLEIND | unreadable, 2026 | 0 | 1.0s | 0.4s | The NSE PDF could not be parsed. |
+
+Marico page 209 says "Marico carries on business in branded consumer products. In India, Marico manufactures and markets products under the brands such as Parachute, Saffola..." The first extracted sentence is that sentence. Titan page 8 says "What started as a watch company has since evolved into one of India's leading lifestyle companies, shaping aspirations across jewellery, watches, eyewear, fashion accessories and Indian Dress Wear." The extracted sentence keeps that list. Pidilite page 73 states "18.0% Business to Business Products" and "Adhesives & Sealants 53.4%".
+
+Wipro page 35 is the NASSCOM industry overview: "Global IT service providers are equipped to support enterprises across industries with a wide range of AI-powered technology and business process services..." The model wrote that as what Wipro does. The six-word check dropped it. The how-it-makes-money sentence cited a financial-position table and was dropped the same way. Titan's how-it-makes-money sentence cited page 334, which states depreciation by segment and revenue of India 76,408 crore against Others 1,681, not that sentence, so the sentence was dropped and the two geographies stayed. SBI's sentences did not keep a six-word run. The segment table on page 282 does name Treasury, Corporate / Wholesale Banking, Retail Banking, Other Banking Operations, Digital Banking, and Other retail Banking. Marico's model had put rupee amounts in the share field. Those are not a percent, so the shares are null and the names remain. Nestlé's file failed inside the PDF reader with an invalid `/Pages` object. The route returns unreadable and does not raise.
+
+The menu has Watch for: Results, Deals, Management changes, Credit rating, Litigation, Fund raising. The choice is `finn.watch` on the device. Watched categories are tagged Watching and sort above the rest. The others keep their order. One line under the Live/Replay note counts the watched filings in the window. On a 390px screen, Litigation and Credit rating moved CG Power and Reliance above Titan's results, the line read "2 filings in this window", and a reload kept the choice.
+
+The API is `dpl_EAJdrEkPYDRMUDvgYKDXYgVrUwtf`, Ready, Python, aliased to https://finn-r4y3.vercel.app. The web app is `dpl_D6gu6deComz56NvZCnDopftM9xVr`, Ready, aliased to https://web-eosin-ten-23.vercel.app.
+
+## METRICS
+
+59 tickers were pre-warmed, and all 59 ledgers are complete. `data/snapshot` also holds WIPRO, which was already a demo ledger, so the folder has 60 ledger files, about 1.4 MB.
+
+Cold seconds, for ledgers that were actually built rather than skipped: 32 in the first run averaged 51.6 seconds (1,650.2 seconds in total), and the 18 that were still cold on the second run averaged 64.0 seconds (1,152.1 seconds). Across those 50 cold ledgers the average is 56.0 seconds.
+
+Tokens, for the 18 cold ledgers whose log summed every stage: 386,337 tokens, 21,463 per ledger. The first run's printed token column was only the last stage. Its stage lines summed to 595,421, so that run is not in this average.
+
+Results cards in the stored 6 Nov replay: the 72-hour feed has 2, Titan and Bharat Forge, both `source=xbrl`, and the feed's token count is 0. That is 2 of 2. The 24-hour feed has no results card.
+
+Scored against unscored, on the 59 pre-warmed ledgers: 9 have at least one scored row, 50 have none. The scored rows are MARICO 3, ASIANPAINT 2, HCLTECH 2, BEL 3, CIPLA 3, DRREDDY 1, MAXHEALTH 2, TATACONSUM 1, TCS 1. Eighteen scored rows in all. WIPRO is unscored.
+
+Unit tests: 56, `python -m unittest discover -s tests`.
+
+False verdicts found while scoring, each fixed without changing the rules on this pass:
+
+- Titan's 11–11.5% margin was scored as a company result. The quote is page 6 of the 12 May 2025 transcript and is about the jewellery business. Scope is now `segment_level`, and it is not compared with the consolidated series.
+- Asian Paints' "We've been able to stay at…" was a reported gross-margin result and became a false EBITDA miss. A reported result with no forward-looking word is not guidance, and a sentence with two bands keeps each band next to its own metric.
+- Pidilite's "at least 200 bps" was compared with a 23.96% margin and marked missed. The sentence is a standalone gross margin reporting a result, so it is `not_scored`.
+- Infosys' operating margin of 20–22% was scored against a derived EBITDA margin. The definition does not match, so those rows are `not_scored`.
+- HCLTech's FY2026 EBIT of 16.44% against 17–18% was called partly. It is 56 bps under the band, inside the 60 bps window, so the status is `borderline`.
+- Wipro's "$2.571 billion to $2.625 billion" was scored as revenue growth of 2.571–2.625%. A dollar figure is `not_scored` because the series is consolidated rupees.
