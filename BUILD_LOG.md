@@ -502,3 +502,22 @@ The six-word check now runs on each sentence. An ungrounded sentence is removed 
 Cash quality carries one line: "Half-year figure; cash flow can swing with inventory and working-capital timing." Checked at 390px on Wipro: net debt −25,152 crore, the three tags in the definition, and the caveat under the takeaway. SBI shows the not-meaningful line and not −0.72.
 
 The API is `dpl_DWVK9fc76NAehLvhy6b1ZN3xxDdx`, Ready, Python, project finn-r4y3, aliased to https://finn-r4y3.vercel.app. The web app is `dpl_GCLjGHJF4Srbdtq4R114YzG74s9F`, Ready, project web, aliased to https://web-eosin-ten-23.vercel.app.
+
+## Reviewer notes
+
+`README.md` is the short account for a reviewer: the two modes, the live links, the path from NSE filings through `finn_core` and Supabase to the Vercel API and the web app, the decisions, the efficiency numbers, the limits, and what was left out. `.env.example` lists the variable names and no values. `/spike` keeps the feasibility scripts, with a note that they are not on the request path.
+
+Secret scan of every commit and of the working tree, looking for an `AIza` key, a `gsk_` key, an `sb_secret_` key, `service_role`, a JWT, and an assigned `CRON_SECRET`. Nothing in git history matches. `.env` is not tracked and has never been committed. The local `.env` does hold a Groq key and a Supabase secret, and the Gemini value is set but is not an `AIza` key. `API URL.docx` is untracked and contains the same Groq and Supabase patterns, so it stays out of the repo.
+
+`data/snapshot` is 63 files, 1.3 MB. Unit tests: 62, OK. `python scripts/smoke_test.py` against production:
+
+```
+pass  health  200
+pass  replay feed  200 cards=10
+pass  cached ledger  200 MARICO complete
+pass  company-name lookup  page=200 assets=1
+pass  cron without secret  401
+pass
+```
+
+No licence file was added.
