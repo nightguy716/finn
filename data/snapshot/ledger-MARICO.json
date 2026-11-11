@@ -71,6 +71,12 @@
         "revenue": 3897.0,
         "ebitda": 709.0,
         "ebitda_margin_pct": 18.19,
+        "ebit": 645.0,
+        "ebit_margin_pct": 16.55,
+        "pbt": 674.0,
+        "finance_costs": 24.0,
+        "depreciation": 64.0,
+        "other_income": 53.0,
         "pat": 550.0,
         "basis": "xbrl",
         "flags": []
@@ -80,6 +86,12 @@
         "revenue": 3957.0,
         "ebitda": 819.0,
         "ebitda_margin_pct": 20.7,
+        "ebit": 763.0,
+        "ebit_margin_pct": 19.28,
+        "pbt": 790.0,
+        "finance_costs": 21.0,
+        "depreciation": 56.0,
+        "other_income": 48.0,
         "pat": 630.0,
         "basis": "xbrl",
         "flags": []
@@ -89,6 +101,12 @@
         "revenue": 3333.0,
         "ebitda": 521.0,
         "ebitda_margin_pct": 15.63,
+        "ebit": 461.0,
+        "ebit_margin_pct": 13.83,
+        "pbt": 504.0,
+        "finance_costs": 17.0,
+        "depreciation": 60.0,
+        "other_income": 60.0,
         "pat": 391.0,
         "basis": "xbrl",
         "flags": []
@@ -98,6 +116,12 @@
         "revenue": 3537.0,
         "ebitda": 592.0,
         "ebitda_margin_pct": 16.74,
+        "ebit": 542.0,
+        "ebit_margin_pct": 15.32,
+        "pbt": 567.0,
+        "finance_costs": 14.0,
+        "depreciation": 50.0,
+        "other_income": 39.0,
         "pat": 447.0,
         "basis": "xbrl",
         "flags": []
@@ -107,6 +131,12 @@
         "revenue": 3482.0,
         "ebitda": 560.0,
         "ebitda_margin_pct": 16.08,
+        "ebit": 513.0,
+        "ebit_margin_pct": 14.73,
+        "pbt": 550.0,
+        "finance_costs": 12.0,
+        "depreciation": 47.0,
+        "other_income": 49.0,
         "pat": 420.0,
         "basis": "xbrl",
         "flags": []
@@ -116,6 +146,12 @@
         "revenue": 3259.0,
         "ebitda": 655.0,
         "ebitda_margin_pct": 20.1,
+        "ebit": 610.0,
+        "ebit_margin_pct": 18.72,
+        "pbt": 656.0,
+        "finance_costs": 10.0,
+        "depreciation": 45.0,
+        "other_income": 56.0,
         "pat": 504.0,
         "basis": "xbrl",
         "flags": []
@@ -123,6 +159,59 @@
     ]
   },
   "rows": [
+    {
+      "promise": "EBIT margin 150\u2013200 bps for FY2027",
+      "source_quote": "we would strive for improving the operating margin by about 150-200 basis points.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/marico_30012026170957_SETranscript.pdf",
+      "speaker": "Pawan Agrawal",
+      "period_promised": "FY2027",
+      "actual": "+127 bps",
+      "actual_value": 127,
+      "actual_detail": "H1 FY2027 EBIT margin 17.93% versus 16.66% a year earlier (+127 bps)",
+      "promised": "150\u2013200 bps",
+      "status": "tracking_behind",
+      "note": "H1 FY2027 EBIT margin 17.93% versus 16.66% a year earlier (+127 bps)",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "And I will want Pawan to answer the expectation on the margins. Pawan Agrawal: Mihir, the first thing that you said is, of course, value-added hair oil has better margins, and that exactly is the reason as to why we could still deliver reasonably resilient profit growth this year, despite significant copra inflation, because the mix has helped. Now, as far as next year is concerned, again, giving a guidance with respect to what kind of a percentage margin we can deliver is difficult, but at least we are very confident of delivering at least mid-teen growth. We could try for more, and at least we would strive for improving the operating margin by about 150-200 basis points. Mihir Shah: That is very clear. Thanks for that. Second, on the copra-led price cuts, given that this time around price increases were relatively very sharp, , there is an expectation that the price cuts also probably will be very sharp.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says operating margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebit_margin",
+      "target_low": 150.0,
+      "target_high": 200.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-30",
+      "calls": [
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "page": 10,
+          "quote": "we would strive for improving the operating margin by about 150-200 basis points.",
+          "document": "marico_30012026170957_SETranscript.pdf"
+        }
+      ],
+      "revisions": [],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3.5-flash-lite",
+        "evidence": {
+          "consolidated": "at least we would strive for improving the operating margin by about 150-200 basis points.",
+          "reported_basis": "at least we would strive for improving the operating margin by about 150-200 basis points.",
+          "independent_of_named_event": "",
+          "metric_named": "operating margin"
+        }
+      }
+    },
     {
       "promise": "EBITDA margin 140\u2013150 bps for FY2027",
       "source_quote": "then the reverse math would suggest that EBITDA margin would expand in the range of about 140 to 150 basis points as compared to last",
@@ -154,13 +243,6 @@
       "call_date": "2026-08-11",
       "calls": [
         {
-          "date": "2026-01-30",
-          "call_period": "2025-12-31",
-          "page": 10,
-          "quote": "we would strive for improving the operating margin by about 150-200 basis points.",
-          "document": "marico_30012026170957_SETranscript.pdf"
-        },
-        {
           "date": "2026-08-11",
           "call_period": "2026-06-30",
           "page": 10,
@@ -168,24 +250,7 @@
           "document": "marico_11082026194246_Seintt.pdf"
         }
       ],
-      "revisions": [
-        {
-          "date": "2026-01-30",
-          "call_period": "2025-12-31",
-          "value": "150\u2013200 bps",
-          "change": "set",
-          "page": 10,
-          "quote": "we would strive for improving the operating margin by about 150-200 basis points."
-        },
-        {
-          "date": "2026-08-11",
-          "call_period": "2026-06-30",
-          "value": "140\u2013150 bps",
-          "change": "cut",
-          "page": 10,
-          "quote": "then the reverse math would suggest that EBITDA margin would expand in the range of about 140 to 150 basis points as compared to last"
-        }
-      ],
+      "revisions": [],
       "verifier": {
         "consolidated": true,
         "reported_basis": true,
@@ -308,6 +373,13 @@
       "call_date": "2026-05-12",
       "calls": [
         {
+          "date": "2025-11-21",
+          "call_period": "2025-09-30",
+          "page": 18,
+          "quote": "in the second half, we expect double-digit profit growth at EBITDA level.",
+          "document": "marico_21112025154142_SETranscript.pdf"
+        },
+        {
           "date": "2026-05-12",
           "call_period": "2026-03-31",
           "page": 5,
@@ -315,7 +387,24 @@
           "document": "marico_12052026171423_Seint.pdf"
         }
       ],
-      "revisions": [],
+      "revisions": [
+        {
+          "date": "2025-11-21",
+          "call_period": "2025-09-30",
+          "value": "at least 10%",
+          "change": "set",
+          "page": 18,
+          "quote": "in the second half, we expect double-digit profit growth at EBITDA level."
+        },
+        {
+          "date": "2026-05-12",
+          "call_period": "2026-03-31",
+          "value": "17\u201319%",
+          "change": "raised",
+          "page": 5,
+          "quote": "At a consolidated level, we aim to deliver double-digit revenue growth to cross INR15,000 crores in revenues and high-teen EBITDA growth, subject to stable macros."
+        }
+      ],
       "verifier": {
         "consolidated": true,
         "reported_basis": true,
@@ -332,10 +421,10 @@
     },
     {
       "promise": "EBITDA growth at least 10% for FY2026",
-      "source_quote": "in the second half, we expect double-digit profit growth at EBITDA level.",
-      "page": 18,
+      "source_quote": "As margin pressures ease gradually, we aim to deliver double digit EBITDA growth in the second half.",
+      "page": 5,
       "source_document": "https://nsearchives.nseindia.com/corporate/marico_21112025154142_SETranscript.pdf",
-      "speaker": "Pawan Agrawal",
+      "speaker": "",
       "period_promised": "FY2026",
       "actual": null,
       "actual_value": null,
@@ -346,7 +435,7 @@
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
-      "passage": "Pawan Agrawal: A very large part of the margin erosion is because of Parachute margin compression. To work out backward numbers, you don't want to get into all of that, we can only suggest that, as we have already mentioned earlier, in the second half, we can expect double digit profit growth . It is difficult to give a guidance, because a lot of moving parts in terms of how the commodity cost will move, what impact will the pricing have. So, in the second half, we expect double-digit profit growth at EBITDA level. And next year, of course, we would be targeting much higher, because we expect the prices to go down. And therefore, we have seen in the past as well that in deflationary years, we make up for the lost margin in the previous year.",
+      "passage": "We will aim to improve India volume growth and maintain robust double digit constant currency momentum in the overseas business in the second half of the year. Supported by pricing growth, we co ntinue to target around 25% consolidated revenue growth this year. Over the last few quarters, we have delivered reasonable EBITDA growth despite unprecedented input cost inflation and continued A&P investments. As margin pressures ease gradually, we aim to deliver double digit EBITDA growth in the second half. We remain confident in our trajectory and expect to make meaningful progress towards the ambition of reaching Rs. 20,000 crores in revenue by 2030. While headwinds and disruptions in the operating environment are inevitable, we have consistently focused on embedding resilience across our system's culture and operating model to deliver consistent and predictable outcomes. Beyond the strong equity of our brands, it is the institutionalized resilience in cost management and backend capabilities that has enabled us to sustain EBITDA growth through varying input cost cycles without compromising in brand building investments in each and every quarter since",
       "basis": "not_stated",
       "conditional_on": null,
       "basis_note": "",
@@ -366,70 +455,6 @@
           "page": 5,
           "quote": "As margin pressures ease gradually, we aim to deliver double digit EBITDA growth in the second half.",
           "document": "marico_21112025154142_SETranscript.pdf"
-        },
-        {
-          "date": "2025-11-21",
-          "call_period": "2025-09-30",
-          "page": 18,
-          "quote": "in the second half, we expect double-digit profit growth at EBITDA level.",
-          "document": "marico_21112025154142_SETranscript.pdf"
-        }
-      ],
-      "revisions": [
-        {
-          "date": "2025-11-21",
-          "call_period": "2025-09-30",
-          "value": "at least 10%",
-          "change": "set",
-          "page": 5,
-          "quote": "As margin pressures ease gradually, we aim to deliver double digit EBITDA growth in the second half."
-        },
-        {
-          "date": "2025-11-21",
-          "call_period": "2025-09-30",
-          "value": "at least 10%",
-          "change": "maintained",
-          "page": 18,
-          "quote": "in the second half, we expect double-digit profit growth at EBITDA level."
-        }
-      ]
-    },
-    {
-      "promise": "Revenue growth 25% for FY2026",
-      "source_quote": "Supported by pricing growth, we will target around 25% revenue growth this year.",
-      "page": 6,
-      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082025195301_SETranscript.pdf",
-      "speaker": "",
-      "period_promised": "FY2026",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "25%",
-      "status": "pending",
-      "note": "The year before FY2026 is outside the series, so growth is not checked.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "change",
-      "passage": "Our brands are earning recognition, with three of our digital brands featuring in the latest edition of the Insurgent Brands List published by one of the top VCs and one of the big three MBB management consulting firms. In addition to that, we have started the process of cost synergies amongst the digital brands as well as data synergies. Coming to our strategic objectives for this year , with high single-digit volume growth in India as our base case, we will strive to deliver double -digit volume growth in some quarters. Supported by pricing growth, we will target around 25% revenue growth this year. While the pricing-led denominator effect may suppress optical margins this year , we are not alarmed by the optical drop in operating margins and firmly believe this is a temporary hiatus and not a structural concern. We would think of this inflat ionary cycle like a one -time upheaval which could in some categories potentially uproot business models, although we are delivering sector leading growth and moderate profits in spite of this high inflation which is unprecedented , and",
-      "basis": "not_stated",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "consolidated",
-      "scope_name": "",
-      "metric_key": "revenue_growth",
-      "target_low": 25.0,
-      "target_high": 25.0,
-      "call_period": "2025-06-30",
-      "call_date": "2025-08-11",
-      "calls": [
-        {
-          "date": "2025-08-11",
-          "call_period": "2025-06-30",
-          "page": 6,
-          "quote": "Supported by pricing growth, we will target around 25% revenue growth this year.",
-          "document": "marico_11082025195301_SETranscript.pdf"
         }
       ],
       "revisions": []
@@ -539,6 +564,126 @@
       ]
     },
     {
+      "promise": "EBIT margin 25% for FY2026",
+      "source_quote": "Supported by pricing growth, we will target around 25% revenue growth this year.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082025195301_SETranscript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "25%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Our brands are earning recognition, with three of our digital brands featuring in the latest edition of the Insurgent Brands List published by one of the top VCs and one of the big three MBB management consulting firms. In addition to that, we have started the process of cost synergies amongst the digital brands as well as data synergies. Coming to our strategic objectives for this year , with high single-digit volume growth in India as our base case, we will strive to deliver double -digit volume growth in some quarters. Supported by pricing growth, we will target around 25% revenue growth this year. While the pricing-led denominator effect may suppress optical margins this year , we are not alarmed by the optical drop in operating margins and firmly believe this is a temporary hiatus and not a structural concern. We would think of this inflat ionary cycle like a one -time upheaval which could in some categories potentially uproot business models, although we are delivering sector leading growth and moderate profits in spite of this high inflation which is unprecedented , and",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebit_margin",
+      "target_low": 25.0,
+      "target_high": 25.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-11",
+      "calls": [
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "page": 6,
+          "quote": "Supported by pricing growth, we will target around 25% revenue growth this year.",
+          "document": "marico_11082025195301_SETranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth 7\u20139% for FY2026",
+      "source_quote": "In the current scenario it looks a little challenging, but we will still strive for high single-digit growth in this year.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082025195301_SETranscript.pdf",
+      "speaker": "Pawan Agrawal",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20139%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Is that a fair expectation? Pawan Agrawal: It is difficult to give quarter -on-quarter guidance, Avi . I n fact , Saugata touched upon in his opening commentary that while we had given a double -digit profit growth guidance earlier . In the current scenario it looks a little challenging, but we will still strive for high single -digit growth in this year. But typically what we have seen is that inflationary years get followed by a",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": 7.0,
+      "target_high": 9.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-11",
+      "calls": [
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "page": 12,
+          "quote": "In the current scenario it looks a little challenging, but we will still strive for high single-digit growth in this year.",
+          "document": "marico_11082025195301_SETranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "PAT growth at least 10% for FY2027",
+      "source_quote": "thus we are fairly confident of delivering double-digit profit CAGR over the next two years.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082025195301_SETranscript.pdf",
+      "speaker": "Saugata Gupta",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "CIN: L15140MH1988PLC049208. Email: investor@marico.com Marico Information classification: Official I believe exceptional. While delivering double-digit EBITDA growth this year may be somewhat of a challenge, we expect better visibility by the second half. That said, consistent with historical trends, moderate profit delivery during inflationary years has been invariably followed by considerable profit acceleration in deflationary periods and thus we are fairly confident of delivering double-digit profit CAGR over the next two years. We have seen cycles like this before and each time we have come out stronger. We believe that what continues to anchor us through these cycles is a resilient and experienced senior leadership team with collective experience of over 140 years in Marico and an average leadership tenure of eight to ten years that reflects deep institutional memory and understanding of various business cycles. Ashish, the CEO of India Core business, and I have been working together for the past 20 years, and Pawan has also been with us for 21 years.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "pat_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-11",
+      "calls": [
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "page": 7,
+          "quote": "thus we are fairly confident of delivering double-digit profit CAGR over the next two years.",
+          "document": "marico_11082025195301_SETranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
       "promise": "Revenue growth at least 10% for FY2026",
       "source_quote": "In Premium Personal Care, the portfolio comprising Serums, Male Grooming, and Skincare grew in double digits and is expected to exit the year at an",
       "page": 5,
@@ -549,8 +694,8 @@
       "actual_value": null,
       "actual_detail": "",
       "promised": "at least 10%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
+      "status": "segment_level",
+      "note": "Premium Personal Care guidance is not compared with the consolidated series.",
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
@@ -601,206 +746,6 @@
           "quote": "In Premium Personal Care, the portfolio comprising Serums, Male Grooming, and Skincare grew in double digits and is expected to exit the year at an"
         }
       ]
-    },
-    {
-      "promise": "EBITDA growth 7\u20139% for FY2026",
-      "source_quote": "In the current scenario it looks a little challenging, but we will still strive for high single-digit growth in this year.",
-      "page": 12,
-      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082025195301_SETranscript.pdf",
-      "speaker": "Pawan Agrawal",
-      "period_promised": "FY2026",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "7\u20139%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "change",
-      "passage": "Is that a fair expectation? Pawan Agrawal: It is difficult to give quarter -on-quarter guidance, Avi . I n fact , Saugata touched upon in his opening commentary that while we had given a double -digit profit growth guidance earlier . In the current scenario it looks a little challenging, but we will still strive for high single -digit growth in this year. But typically what we have seen is that inflationary years get followed by a",
-      "basis": "not_stated",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "consolidated",
-      "scope_name": "",
-      "metric_key": "ebitda_growth",
-      "target_low": 7.0,
-      "target_high": 9.0,
-      "call_period": "2025-06-30",
-      "call_date": "2025-08-11",
-      "calls": [
-        {
-          "date": "2025-08-11",
-          "call_period": "2025-06-30",
-          "page": 12,
-          "quote": "In the current scenario it looks a little challenging, but we will still strive for high single-digit growth in this year.",
-          "document": "marico_11082025195301_SETranscript.pdf"
-        }
-      ],
-      "revisions": []
-    },
-    {
-      "promise": "Revenue growth 13\u201316% for FY2027",
-      "source_quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
-      "page": 6,
-      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082026194246_Seintt.pdf",
-      "speaker": "",
-      "period_promised": "FY2027",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "13\u201316%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "change",
-      "passage": "In the near term, we remain focused on driving top quartile outcomes. The strong start to this year has set us well to achieve our full year aspirations of delivering double-digit revenue growth to cross INR15,000 crores easily. We are confident of achieving high -teens EBITDA growth and aspire to touch 20% EBITDA growth during this year. We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth. We will ce rtainly try and hit another double -digit quarter in India volume growth sometime in the next three quarters. On the cost front, we are witnessing divergent trends. Copra prices have corrected meaningfully.",
-      "basis": "constant_currency",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "geography",
-      "scope_name": "international",
-      "metric_key": "revenue_growth",
-      "target_low": 13.0,
-      "target_high": 16.0,
-      "call_period": "2026-06-30",
-      "call_date": "2026-08-11",
-      "calls": [
-        {
-          "date": "2026-08-11",
-          "call_period": "2026-06-30",
-          "page": 6,
-          "quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
-          "document": "marico_11082026194246_Seintt.pdf"
-        }
-      ],
-      "revisions": []
-    },
-    {
-      "promise": "PAT growth at least 10% for FY2027",
-      "source_quote": "thus we are fairly confident of delivering double-digit profit CAGR over the next two years.",
-      "page": 7,
-      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082025195301_SETranscript.pdf",
-      "speaker": "Saugata Gupta",
-      "period_promised": "FY2027",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "at least 10%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "change",
-      "passage": "CIN: L15140MH1988PLC049208. Email: investor@marico.com Marico Information classification: Official I believe exceptional. While delivering double-digit EBITDA growth this year may be somewhat of a challenge, we expect better visibility by the second half. That said, consistent with historical trends, moderate profit delivery during inflationary years has been invariably followed by considerable profit acceleration in deflationary periods and thus we are fairly confident of delivering double-digit profit CAGR over the next two years. We have seen cycles like this before and each time we have come out stronger. We believe that what continues to anchor us through these cycles is a resilient and experienced senior leadership team with collective experience of over 140 years in Marico and an average leadership tenure of eight to ten years that reflects deep institutional memory and understanding of various business cycles. Ashish, the CEO of India Core business, and I have been working together for the past 20 years, and Pawan has also been with us for 21 years.",
-      "basis": "not_stated",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "consolidated",
-      "scope_name": "",
-      "metric_key": "pat_growth",
-      "target_low": 10.0,
-      "target_high": null,
-      "call_period": "2025-06-30",
-      "call_date": "2025-08-11",
-      "calls": [
-        {
-          "date": "2025-08-11",
-          "call_period": "2025-06-30",
-          "page": 7,
-          "quote": "thus we are fairly confident of delivering double-digit profit CAGR over the next two years.",
-          "document": "marico_11082025195301_SETranscript.pdf"
-        }
-      ],
-      "revisions": []
-    },
-    {
-      "promise": "Revenue growth 25% for FY2028",
-      "source_quote": "We expect 25% + growth over the medium term to reach about 8x of the FY20 scale",
-      "page": 5,
-      "source_document": "https://nsearchives.nseindia.com/corporate/marico_09052025210600_SEIntimation.pdf",
-      "speaker": "",
-      "period_promised": "FY2028",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "25%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "change",
-      "passage": "While the core Foods portfolio of oats, honey and soya chunks have fared well , we are also seeing green shoots in the recent launches such as Muesli etc. In Q4, we launched Saffola Cuppa Oats, a 4 -minute ready-to- eat offering combining oats, millet s and crunchy multigrain bites. Furthermore, True Elements and the plant -based nutrition portfolio of Plix maintained accelerated growth momentum. The Foods portfolio has reached 5x of the FY20 scale, and we expect 25% + growth over the medium term to reach about 8x of the FY20 scale, while we continue to improve profitability in the category. Premium Personal Care sustained strong momentum during the quarter, led by Digital-first portfolio. The Digital-first portfolio exited FY25 at \u20b9750 crores ARR, much ahead of aspirations. We now expect this exit ARR to be 2.5x of FY24 ARR in FY27, up from the previous target of 2x.",
-      "basis": "not_stated",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "segment",
-      "scope_name": "Foods",
-      "metric_key": "revenue_growth",
-      "target_low": 25.0,
-      "target_high": 25.0,
-      "call_period": "2025-03-31",
-      "call_date": "2025-05-09",
-      "calls": [
-        {
-          "date": "2025-05-09",
-          "call_period": "2025-03-31",
-          "page": 5,
-          "quote": "We expect 25% + growth over the medium term to reach about 8x of the FY20 scale",
-          "document": "marico_09052025210600_SEIntimation.pdf"
-        }
-      ],
-      "revisions": []
-    },
-    {
-      "promise": "Revenue growth 20\u201325% for FY2029",
-      "source_quote": "overall foods growth will continue because of whatever organic plus inorganic into the 20%-25%+.",
-      "page": 13,
-      "source_document": "https://nsearchives.nseindia.com/corporate/marico_30012026170957_SETranscript.pdf",
-      "speaker": "Saugata Gupta",
-      "period_promised": "FY2029",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "20\u201325%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "change",
-      "passage": "And, obviously, this doesn't include any innovation. Any innovation which we do organically from our base portfolio also adds to that. So, our first step is over the next two quarters to get into double digits, which we are pretty confident about. And then, the overall foods growth will continue because of whatever organic plus inorganic into the 20% - 25%+.",
-      "basis": "not_stated",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "segment",
-      "scope_name": "Foods",
-      "metric_key": "revenue_growth",
-      "target_low": 20.0,
-      "target_high": 25.0,
-      "call_period": "2025-12-31",
-      "call_date": "2026-01-30",
-      "calls": [
-        {
-          "date": "2026-01-30",
-          "call_period": "2025-12-31",
-          "page": 13,
-          "quote": "overall foods growth will continue because of whatever organic plus inorganic into the 20%-25%+.",
-          "document": "marico_30012026170957_SETranscript.pdf"
-        }
-      ],
-      "revisions": []
     },
     {
       "promise": "Revenue growth at least 10% for FY2026",
@@ -920,6 +865,13 @@
           "document": "marico_12052026171423_Seint.pdf"
         },
         {
+          "date": "2026-08-11",
+          "call_period": "2026-06-30",
+          "page": 6,
+          "quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
+          "document": "marico_11082026194246_Seintt.pdf"
+        },
+        {
           "date": "2026-11-06",
           "call_period": "2026-09-30",
           "page": 6,
@@ -937,6 +889,14 @@
           "quote": "We expect to sustain high single-digit volume growth in the India business in FY '27."
         },
         {
+          "date": "2026-08-11",
+          "call_period": "2026-06-30",
+          "value": "7\u20139%",
+          "change": "maintained",
+          "page": 6,
+          "quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth."
+        },
+        {
           "date": "2026-11-06",
           "call_period": "2026-09-30",
           "value": "at least 10%",
@@ -945,6 +905,46 @@
           "quote": "India Business volume growth is also expected to touch double digits for the full year."
         }
       ]
+    },
+    {
+      "promise": "Revenue growth 13\u201316% for FY2027",
+      "source_quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082026194246_Seintt.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201316%",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "In the near term, we remain focused on driving top quartile outcomes. The strong start to this year has set us well to achieve our full year aspirations of delivering double-digit revenue growth to cross INR15,000 crores easily. We are confident of achieving high -teens EBITDA growth and aspire to touch 20% EBITDA growth during this year. We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth. We will ce rtainly try and hit another double -digit quarter in India volume growth sometime in the next three quarters. On the cost front, we are witnessing divergent trends. Copra prices have corrected meaningfully.",
+      "basis": "constant_currency",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "revenue_growth",
+      "target_low": 13.0,
+      "target_high": 16.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-11",
+      "calls": [
+        {
+          "date": "2026-08-11",
+          "call_period": "2026-06-30",
+          "page": 6,
+          "quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
+          "document": "marico_11082026194246_Seintt.pdf"
+        }
+      ],
+      "revisions": []
     },
     {
       "promise": "EBITDA margin at least 10% for FY2027",
@@ -1026,6 +1026,86 @@
       ]
     },
     {
+      "promise": "Revenue growth 25% for FY2028",
+      "source_quote": "We expect 25% + growth over the medium term to reach about 8x of the FY20 scale",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/marico_09052025210600_SEIntimation.pdf",
+      "speaker": "",
+      "period_promised": "FY2028",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "25%",
+      "status": "segment_level",
+      "note": "Foods guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "While the core Foods portfolio of oats, honey and soya chunks have fared well , we are also seeing green shoots in the recent launches such as Muesli etc. In Q4, we launched Saffola Cuppa Oats, a 4 -minute ready-to- eat offering combining oats, millet s and crunchy multigrain bites. Furthermore, True Elements and the plant -based nutrition portfolio of Plix maintained accelerated growth momentum. The Foods portfolio has reached 5x of the FY20 scale, and we expect 25% + growth over the medium term to reach about 8x of the FY20 scale, while we continue to improve profitability in the category. Premium Personal Care sustained strong momentum during the quarter, led by Digital-first portfolio. The Digital-first portfolio exited FY25 at \u20b9750 crores ARR, much ahead of aspirations. We now expect this exit ARR to be 2.5x of FY24 ARR in FY27, up from the previous target of 2x.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Foods",
+      "metric_key": "revenue_growth",
+      "target_low": 25.0,
+      "target_high": 25.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-09",
+      "calls": [
+        {
+          "date": "2025-05-09",
+          "call_period": "2025-03-31",
+          "page": 5,
+          "quote": "We expect 25% + growth over the medium term to reach about 8x of the FY20 scale",
+          "document": "marico_09052025210600_SEIntimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 20\u201325% for FY2029",
+      "source_quote": "overall foods growth will continue because of whatever organic plus inorganic into the 20%-25%+.",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/marico_30012026170957_SETranscript.pdf",
+      "speaker": "Saugata Gupta",
+      "period_promised": "FY2029",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20\u201325%",
+      "status": "segment_level",
+      "note": "Foods guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "And, obviously, this doesn't include any innovation. Any innovation which we do organically from our base portfolio also adds to that. So, our first step is over the next two quarters to get into double digits, which we are pretty confident about. And then, the overall foods growth will continue because of whatever organic plus inorganic into the 20% - 25%+.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Foods",
+      "metric_key": "revenue_growth",
+      "target_low": 20.0,
+      "target_high": 25.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-30",
+      "calls": [
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "page": 13,
+          "quote": "overall foods growth will continue because of whatever organic plus inorganic into the 20%-25%+.",
+          "document": "marico_30012026170957_SETranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
       "promise": "Volume growth at least 5% for FY2026",
       "source_quote": "We expect the volume growth next year , full year annualized, as more than 5%.",
       "page": 10,
@@ -1066,47 +1146,7 @@
       "revisions": []
     },
     {
-      "promise": "Volume growth 7\u20139% for FY2027",
-      "source_quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
-      "page": 6,
-      "source_document": "https://nsearchives.nseindia.com/corporate/marico_11082026194246_Seintt.pdf",
-      "speaker": "",
-      "period_promised": "FY2027",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "7\u20139%",
-      "status": "not_scored",
-      "note": "Constant-currency guidance is not the consolidated rupee series.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "change",
-      "passage": "In the near term, we remain focused on driving top quartile outcomes. The strong start to this year has set us well to achieve our full year aspirations of delivering double-digit revenue growth to cross INR15,000 crores easily. We are confident of achieving high -teens EBITDA growth and aspire to touch 20% EBITDA growth during this year. We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth. We will ce rtainly try and hit another double -digit quarter in India volume growth sometime in the next three quarters. On the cost front, we are witnessing divergent trends. Copra prices have corrected meaningfully.",
-      "basis": "constant_currency",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "geography",
-      "scope_name": "India",
-      "metric_key": "volume_growth",
-      "target_low": 7.0,
-      "target_high": 9.0,
-      "call_period": "2026-06-30",
-      "call_date": "2026-08-11",
-      "calls": [
-        {
-          "date": "2026-08-11",
-          "call_period": "2026-06-30",
-          "page": 6,
-          "quote": "We expect India to deliver high single-digit volume growth and international business to deliver mid -teens constant currency growth.",
-          "document": "marico_11082026194246_Seintt.pdf"
-        }
-      ],
-      "revisions": []
-    },
-    {
-      "promise": "EBITDA margin 350\u2013400 bps for FY2027",
+      "promise": "EBIT margin 350\u2013400 bps for FY2027",
       "source_quote": "Now broadly, what we've said is in gross margin terms, we expect about 350 to 400 bps expansion for FY '27.",
       "page": 14,
       "source_document": "https://nsearchives.nseindia.com/corporate/marico_12052026171423_Seint.pdf",
@@ -1126,10 +1166,10 @@
       "conditional_on": null,
       "basis_note": "",
       "caveat": "",
-      "definition_note": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
       "scope": "consolidated",
       "scope_name": "",
-      "metric_key": "ebitda_margin",
+      "metric_key": "ebit_margin",
       "target_low": 350.0,
       "target_high": 400.0,
       "call_period": "2026-03-31",
@@ -1229,8 +1269,8 @@
     }
   ],
   "revisions": {
-    "raised": 1,
-    "cut": 3,
+    "raised": 2,
+    "cut": 2,
     "maintained": 4,
     "items": [
       {
@@ -1241,6 +1281,11 @@
             "date": "2026-05-12",
             "value": "7\u20139%",
             "change": "set"
+          },
+          {
+            "date": "2026-08-11",
+            "value": "7\u20139%",
+            "change": "maintained"
           },
           {
             "date": "2026-11-06",
@@ -1282,18 +1327,18 @@
         ]
       },
       {
-        "promise": "EBITDA margin 140\u2013150 bps for FY2027",
+        "promise": "EBITDA growth 17\u201319% for FY2027",
         "period": "FY2027",
         "sequence": [
           {
-            "date": "2026-01-30",
-            "value": "150\u2013200 bps",
+            "date": "2025-11-21",
+            "value": "at least 10%",
             "change": "set"
           },
           {
-            "date": "2026-08-11",
-            "value": "140\u2013150 bps",
-            "change": "cut"
+            "date": "2026-05-12",
+            "value": "17\u201319%",
+            "change": "raised"
           }
         ]
       },
@@ -1333,46 +1378,34 @@
             "change": "maintained"
           }
         ]
-      },
-      {
-        "promise": "EBITDA growth at least 10% for FY2026",
-        "period": "FY2026",
-        "sequence": [
-          {
-            "date": "2025-11-21",
-            "value": "at least 10%",
-            "change": "set"
-          },
-          {
-            "date": "2025-11-21",
-            "value": "at least 10%",
-            "change": "maintained"
-          }
-        ]
       }
     ]
   },
-  "verdict": "For FY2027, the actual EBITDA margin was +144 bps against the promised 140\u2013150 bps, actual revenue growth reached 16.51% against the promised at least 10%, and actual EBITDA growth was 25.76% against the promised 17\u201319%.",
+  "verdict": "For FY2027, the actual EBIT margin was +127 bps against the promised 150\u2013200 bps, while the EBITDA margin achieved +144 bps against the promised 140\u2013150 bps. Revenue growth reached 16.51% against the promised at least 10%, and EBITDA growth was 25.76% against the promised 17\u201319%.",
   "progress": {
     "stage": "complete",
     "done": 7,
     "total": 7
   },
   "timing": {
-    "discover": 0.7,
-    "series": 0.74,
-    "guidance": 1.71,
+    "discover": 0.75,
+    "series": 0.73,
+    "guidance": 1.22,
     "check": 0.01,
-    "verify": 0.45,
-    "verdict": 0.07,
-    "total": 3.68
+    "verify": 0.41,
+    "verdict": 0.1,
+    "total": 3.22
   },
   "usage": {
     "guidance": {
       "calls": 0,
       "cache_hits": 7,
       "tokens": 0,
-      "dropped": 3
+      "dropped": 3,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
     },
     "verdict": {
       "calls": 0,
@@ -1382,9 +1415,9 @@
     },
     "verify": {
       "calls": 0,
-      "cache_hits": 5,
+      "cache_hits": 6,
       "tokens": 0,
-      "model": "gemini-3-flash-preview"
+      "model": "gemini-3.5-flash-lite"
     },
     "total_tokens": 0
   }

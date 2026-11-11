@@ -65,6 +65,12 @@
         "revenue": 3801.54,
         "ebitda": 539.58,
         "ebitda_margin_pct": 14.19,
+        "ebit": 481.85,
+        "ebit_margin_pct": 12.68,
+        "pbt": 559.22,
+        "finance_costs": 4.34,
+        "depreciation": 57.73,
+        "other_income": 81.71,
         "pat": 412.04,
         "basis": "xbrl",
         "flags": []
@@ -74,6 +80,12 @@
         "revenue": 3280.81,
         "ebitda": 397.28,
         "ebitda_margin_pct": 12.11,
+        "ebit": 342.81,
+        "ebit_margin_pct": 10.45,
+        "pbt": 422.88,
+        "finance_costs": 3.51,
+        "depreciation": 54.47,
+        "other_income": 83.58,
         "pat": 304.35,
         "basis": "xbrl",
         "flags": []
@@ -83,6 +95,12 @@
         "revenue": 3441.76,
         "ebitda": 466.49,
         "ebitda_margin_pct": 13.55,
+        "ebit": 417.12,
+        "ebit_margin_pct": 12.12,
+        "pbt": 490.41,
+        "finance_costs": 3.77,
+        "depreciation": 49.37,
+        "other_income": 77.06,
         "pat": 365.49,
         "basis": "derived",
         "flags": [
@@ -94,6 +112,12 @@
         "revenue": 3175.35,
         "ebitda": 361.75,
         "ebitda_margin_pct": 11.39,
+        "ebit": 311.08,
+        "ebit_margin_pct": 9.8,
+        "pbt": 383.97,
+        "finance_costs": 3.52,
+        "depreciation": 50.67,
+        "other_income": 76.41,
         "pat": 284.83,
         "basis": "xbrl",
         "flags": []
@@ -103,6 +127,12 @@
         "revenue": null,
         "ebitda": null,
         "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
         "pat": null,
         "basis": "",
         "flags": [
@@ -114,6 +144,12 @@
         "revenue": null,
         "ebitda": null,
         "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
         "pat": null,
         "basis": "",
         "flags": [
@@ -174,8 +210,8 @@
       "actual_value": null,
       "actual_detail": "",
       "promised": "at least \u20b9748 crore",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
+      "status": "segment_level",
+      "note": "Switchgear business guidance is not compared with the consolidated series.",
       "quote_check": "ok",
       "unit": "currency_inr",
       "kind": "level",
@@ -255,7 +291,7 @@
       "actual_detail": "",
       "promised": "at least 310 bps",
       "status": "not_scored",
-      "note": "The period is not stated.",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
       "quote_check": "ok",
       "unit": "bps",
       "kind": "change",
@@ -298,20 +334,24 @@
     "total": 6
   },
   "timing": {
-    "discover": 1.64,
-    "series": 1.03,
-    "guidance": 1.57,
+    "discover": 1.14,
+    "series": 1.31,
+    "guidance": 1.56,
     "check": 0.0,
     "verify": 0.0,
-    "verdict": 0.24,
-    "total": 4.48
+    "verdict": 0.07,
+    "total": 4.08
   },
   "usage": {
     "guidance": {
       "calls": 0,
       "cache_hits": 6,
       "tokens": 0,
-      "dropped": 0
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
     },
     "verdict": {
       "calls": 0,

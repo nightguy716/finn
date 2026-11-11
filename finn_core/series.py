@@ -14,10 +14,10 @@ from finn_core.config import market_symbol
 from finn_core.documents import quarter_ends
 from finn_core.nse_client import NSEClient, NSEError
 from finn_core.results_card import _load_xbrl
-from finn_core.xbrl_parse import ebitda, ebitda_block_reason, metrics_from, parse_period_end, parse_xbrl
+from finn_core.xbrl_parse import ebit, ebitda, ebitda_block_reason, metrics_from, parse_period_end, parse_xbrl
 
 
-SERIES_VERSION = "v1"
+SERIES_VERSION = "v2"
 
 
 def quarterly_series(symbol: str, quarters: int = 6, as_of: date | None = None, client=None, cache=None) -> dict:
@@ -76,8 +76,12 @@ def quarterly_series(symbol: str, quarters: int = 6, as_of: date | None = None, 
                         "end": span.end.isoformat(),
                         "revenue": half_metrics.get("revenue"),
                         "ebitda": half_value,
+                        "ebit": None if reason else ebit(half_metrics),
                         "pbt": half_metrics.get("pbt"),
                         "pat": half_metrics.get("pat"),
+                        "finance_costs": half_metrics.get("finance_costs"),
+                        "depreciation": half_metrics.get("depreciation"),
+                        "other_income": half_metrics.get("other_income"),
                     }
                 )
             output.append(blank)
@@ -88,15 +92,22 @@ def quarterly_series(symbol: str, quarters: int = 6, as_of: date | None = None, 
             flags.append("current-quarter revenue or PAT is missing")
         reason = ebitda_block_reason(market, row.get("xbrl_url") or "", metrics)
         value = None if reason else ebitda(metrics)
+        ebit_value = None if reason else ebit(metrics)
         revenue = metrics.get("revenue")
         margin = round(value / revenue * 100.0, 2) if value is not None and revenue else None
+        ebit_margin = round(ebit_value / revenue * 100.0, 2) if ebit_value is not None and revenue else None
         output.append(
             {
                 "period": period.isoformat(),
                 "revenue": revenue,
                 "ebitda": value,
                 "ebitda_margin_pct": margin,
+                "ebit": ebit_value,
+                "ebit_margin_pct": ebit_margin,
                 "pbt": metrics.get("pbt"),
+                "finance_costs": metrics.get("finance_costs"),
+                "depreciation": metrics.get("depreciation"),
+                "other_income": metrics.get("other_income"),
                 "pat": metrics.get("pat"),
                 "source_url": row.get("xbrl_url") or "",
                 "flags": flags,
@@ -147,7 +158,7 @@ def half_pair(start: date, end: date) -> tuple[date, date] | None:
 def subtract_quarter(half: dict, earlier: dict) -> dict | None:
     """Later quarter = half-year minus the earlier quarter. Revenue must stay positive."""
     derived = {}
-    for key in ("revenue", "ebitda", "pbt", "pat"):
+    for key in ("revenue", "ebitda", "ebit", "pbt", "pat", "finance_costs", "depreciation", "other_income"):
         left, right = half.get(key), earlier.get(key)
         derived[key] = None if left is None or right is None else round(left - right, 2)
     if derived["revenue"] is None or derived["revenue"] <= 0:
@@ -156,6 +167,10 @@ def subtract_quarter(half: dict, earlier: dict) -> dict | None:
         derived["ebitda_margin_pct"] = round(derived["ebitda"] / derived["revenue"] * 100.0, 2)
     else:
         derived["ebitda_margin_pct"] = None
+    if derived["ebit"] is not None:
+        derived["ebit_margin_pct"] = round(derived["ebit"] / derived["revenue"] * 100.0, 2)
+    else:
+        derived["ebit_margin_pct"] = None
     return derived
 
 
@@ -214,8 +229,12 @@ def _ytd(statement, market: str, url: str) -> dict | None:
     return {
         "revenue": metrics.get("revenue"),
         "ebitda": None if reason else ebitda(metrics),
+        "ebit": None if reason else ebit(metrics),
         "pbt": metrics.get("pbt"),
         "pat": metrics.get("pat"),
+        "finance_costs": metrics.get("finance_costs"),
+        "depreciation": metrics.get("depreciation"),
+        "other_income": metrics.get("other_income"),
     }
 
 
@@ -236,11 +255,18 @@ def _one_d_is_the_quarter(half: dict, this_ytd: dict | None, earlier_ytd: dict |
 def _adopt(row: dict, values: dict) -> None:
     row["revenue"] = values.get("revenue")
     row["ebitda"] = values.get("ebitda")
+    row["ebit"] = values.get("ebit")
     row["pbt"] = values.get("pbt")
     row["pat"] = values.get("pat")
-    revenue, ebitda_value = row["revenue"], row["ebitda"]
+    row["finance_costs"] = values.get("finance_costs")
+    row["depreciation"] = values.get("depreciation")
+    row["other_income"] = values.get("other_income")
+    revenue, ebitda_value, ebit_value = row["revenue"], row["ebitda"], row["ebit"]
     row["ebitda_margin_pct"] = (
         round(ebitda_value / revenue * 100.0, 2) if ebitda_value is not None and revenue else values.get("ebitda_margin_pct")
+    )
+    row["ebit_margin_pct"] = (
+        round(ebit_value / revenue * 100.0, 2) if ebit_value is not None and revenue else values.get("ebit_margin_pct")
     )
     row["basis"] = "derived"
     row["ebitda_reason"] = "" if row["ebitda"] is not None else row.get("ebitda_reason") or ""
@@ -252,7 +278,12 @@ def _blank(period: date, flags: list[str]) -> dict:
         "revenue": None,
         "ebitda": None,
         "ebitda_margin_pct": None,
+        "ebit": None,
+        "ebit_margin_pct": None,
         "pbt": None,
+        "finance_costs": None,
+        "depreciation": None,
+        "other_income": None,
         "pat": None,
         "source_url": "",
         "flags": flags,

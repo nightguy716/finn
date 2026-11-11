@@ -59,6 +59,12 @@
         "revenue": 9976.51,
         "ebitda": 1557.07,
         "ebitda_margin_pct": 15.61,
+        "ebit": 1243.4,
+        "ebit_margin_pct": 12.46,
+        "pbt": 1435.79,
+        "finance_costs": 55.4,
+        "depreciation": 313.67,
+        "other_income": 247.79,
         "pat": 1067.63,
         "basis": "xbrl",
         "flags": []
@@ -68,6 +74,12 @@
         "revenue": 10541.94,
         "ebitda": 2168.76,
         "ebitda_margin_pct": 20.57,
+        "ebit": 1864.57,
+        "ebit_margin_pct": 17.69,
+        "pbt": 2057.59,
+        "finance_costs": 47.83,
+        "depreciation": 304.19,
+        "other_income": 240.85,
         "pat": 1539.25,
         "basis": "xbrl",
         "flags": []
@@ -77,6 +89,12 @@
         "revenue": 9246.7,
         "ebitda": 1786.61,
         "ebitda_margin_pct": 19.32,
+        "ebit": 1476.63,
+        "ebit_margin_pct": 15.97,
+        "pbt": 1588.9,
+        "finance_costs": 59.1,
+        "depreciation": 309.98,
+        "other_income": 171.37,
         "pat": 1172.12,
         "basis": "xbrl",
         "flags": []
@@ -86,6 +104,12 @@
         "revenue": 8867.02,
         "ebitda": 1623.35,
         "ebitda_margin_pct": 18.31,
+        "ebit": 1310.28,
+        "ebit_margin_pct": 14.78,
+        "pbt": 1423.34,
+        "finance_costs": 47.94,
+        "depreciation": 313.07,
+        "other_income": 161.0,
         "pat": 1059.87,
         "basis": "xbrl",
         "flags": []
@@ -95,6 +119,12 @@
         "revenue": 8531.27,
         "ebitda": 1503.38,
         "ebitda_margin_pct": 17.62,
+        "ebit": 1198.45,
+        "ebit_margin_pct": 14.05,
+        "pbt": 1353.22,
+        "finance_costs": 43.87,
+        "depreciation": 304.93,
+        "other_income": 198.64,
         "pat": 993.59,
         "basis": "xbrl",
         "flags": []
@@ -104,6 +134,12 @@
         "revenue": 8938.55,
         "ebitda": 1624.97,
         "ebitda_margin_pct": 18.18,
+        "ebit": 1324.1,
+        "ebit_margin_pct": 14.81,
+        "pbt": 1472.39,
+        "finance_costs": 44.5,
+        "depreciation": 300.87,
+        "other_income": 192.79,
         "pat": 1099.77,
         "basis": "xbrl",
         "flags": []
@@ -142,13 +178,6 @@
       "call_date": "2026-08-03",
       "calls": [
         {
-          "date": "2026-06-03",
-          "call_period": "2026-03-31",
-          "page": 23,
-          "quote": "maintain your margin guidance, which has always been 18-20%",
-          "document": "ASIANPAINT_03062026154629_Reg30_Transcript_Q4FY26.pdf"
-        },
-        {
           "date": "2026-08-03",
           "call_period": "2026-06-30",
           "page": 20,
@@ -156,24 +185,7 @@
           "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
         }
       ],
-      "revisions": [
-        {
-          "date": "2026-06-03",
-          "call_period": "2026-03-31",
-          "value": "18\u201320%",
-          "change": "set",
-          "page": 23,
-          "quote": "maintain your margin guidance, which has always been 18-20%"
-        },
-        {
-          "date": "2026-08-03",
-          "call_period": "2026-06-30",
-          "value": "18\u201320%",
-          "change": "maintained",
-          "page": 20,
-          "quote": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds."
-        }
-      ],
+      "revisions": [],
       "verifier": {
         "consolidated": true,
         "reported_basis": true,
@@ -344,70 +356,6 @@
         }
       ],
       "revisions": []
-    },
-    {
-      "promise": "EBITDA margin 18\u201320% for FY2027",
-      "source_quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take.",
-      "page": 23,
-      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf",
-      "speaker": "Amit Syngle",
-      "period_promised": "FY2027",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "18\u201320%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "level",
-      "passage": "It is literally the weighted average, which counts, what we would have bought. Therefore, the direct correlation with crude at this point of time is very difficult to say that if I were to benchmark to a certain level of crude pricing, then my margins would land at that. It is a very difficult thing. What we can take in, is the point that 18-20% guidance is a good guidance to take. Percy Panthaki: And, if the input costs, whether it is TiO2, monomers, polymers, whatever it is, supposing they maintain in future at today's prices, would you need any pricing, either increase or decrease to stay within that 18%-20% band? Amit Syngle: Again, as I said, the volatility, as we speak also there are some prices which are going down, some prices which are going up, as we have seen that some prices had started coming down in June as well. The volatility is so much that you can't take anything at a constant saying, that in quarter one, this was the constant parameter which we have taken, which if it remains in quarter two, will give us this margin.",
-      "basis": "not_stated",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "consolidated",
-      "scope_name": "",
-      "metric_key": "ebitda_margin",
-      "target_low": 18.0,
-      "target_high": 20.0,
-      "call_period": "2026-06-30",
-      "call_date": "2026-08-03",
-      "calls": [
-        {
-          "date": "2026-02-02",
-          "call_period": "2025-12-31",
-          "page": 35,
-          "quote": "we would keep the guidance between that 18 and 20% band as we go ahead",
-          "document": "ASIANPAINT_02022026131104_SE_intimation_Transcript_Q3FY26_Jan2026_signed.pdf"
-        },
-        {
-          "date": "2026-08-03",
-          "call_period": "2026-06-30",
-          "page": 23,
-          "quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take.",
-          "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
-        }
-      ],
-      "revisions": [
-        {
-          "date": "2026-02-02",
-          "call_period": "2025-12-31",
-          "value": "18\u201320%",
-          "change": "set",
-          "page": 35,
-          "quote": "we would keep the guidance between that 18 and 20% band as we go ahead"
-        },
-        {
-          "date": "2026-08-03",
-          "call_period": "2026-06-30",
-          "value": "18\u201320%",
-          "change": "maintained",
-          "page": 23,
-          "quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take."
-        }
-      ]
     },
     {
       "promise": "Volume growth 6.8% for FY2027",
@@ -671,6 +619,85 @@
         }
       ],
       "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 18\u201320% for FY2027",
+      "source_quote": "maintain your margin guidance, which has always been 18-20%",
+      "page": 23,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_03062026154629_Reg30_Transcript_Q4FY26.pdf",
+      "speaker": "Amit Sachdeva",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "18\u201320%",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "22 | process of taking, coupled with the whole area of cost excellence and other areas of how we want to calibrate our spends going forward , so that we are able to play this game of driving top line as well as balancing the bottom-line margins. Amit Sachdeva: Just to understand clearly that in doing so, you would like to maintain your margin guidance, which has always been 18-20%, there is a high single-digit volume ambition as well for the year. I assume when you say high single-digit, you mean FY27. And also the pricing whatever will build up on top of it. Is this a way to interpret what you are saying?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 18.0,
+      "target_high": 20.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-06-03",
+      "calls": [
+        {
+          "date": "2026-02-02",
+          "call_period": "2025-12-31",
+          "page": 35,
+          "quote": "we would keep the guidance between that 18 and 20% band as we go ahead",
+          "document": "ASIANPAINT_02022026131104_SE_intimation_Transcript_Q3FY26_Jan2026_signed.pdf"
+        },
+        {
+          "date": "2026-06-03",
+          "call_period": "2026-03-31",
+          "page": 23,
+          "quote": "maintain your margin guidance, which has always been 18-20%",
+          "document": "ASIANPAINT_03062026154629_Reg30_Transcript_Q4FY26.pdf"
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "page": 23,
+          "quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take.",
+          "document": "ASIANPAINT_03082026144133_Regulation_30_Intimation_-_Transcript_for_Investor_Conference_Signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-02-02",
+          "call_period": "2025-12-31",
+          "value": "18\u201320%",
+          "change": "set",
+          "page": 35,
+          "quote": "we would keep the guidance between that 18 and 20% band as we go ahead"
+        },
+        {
+          "date": "2026-06-03",
+          "call_period": "2026-03-31",
+          "value": "18\u201320%",
+          "change": "maintained",
+          "page": 23,
+          "quote": "maintain your margin guidance, which has always been 18-20%"
+        },
+        {
+          "date": "2026-08-03",
+          "call_period": "2026-06-30",
+          "value": "18\u201320%",
+          "change": "maintained",
+          "page": 23,
+          "quote": "What we can take in, is the point that 18-20% guidance is a good guidance to take."
+        }
+      ]
     }
   ],
   "long_term_targets": [],
@@ -701,22 +728,6 @@
         ]
       },
       {
-        "promise": "EBITDA margin 18\u201320% for FY2027",
-        "period": "FY2027",
-        "sequence": [
-          {
-            "date": "2026-06-03",
-            "value": "18\u201320%",
-            "change": "set"
-          },
-          {
-            "date": "2026-08-03",
-            "value": "18\u201320%",
-            "change": "maintained"
-          }
-        ]
-      },
-      {
         "promise": "Volume growth 8\u201310% for FY2027",
         "period": "FY2027",
         "sequence": [
@@ -740,6 +751,11 @@
             "date": "2026-02-02",
             "value": "18\u201320%",
             "change": "set"
+          },
+          {
+            "date": "2026-06-03",
+            "value": "18\u201320%",
+            "change": "maintained"
           },
           {
             "date": "2026-08-03",
@@ -773,20 +789,24 @@
     "total": 7
   },
   "timing": {
-    "discover": 0.89,
-    "series": 0.94,
-    "guidance": 1.87,
-    "check": 0.0,
-    "verify": 0.58,
-    "verdict": 0.12,
-    "total": 4.4
+    "discover": 0.76,
+    "series": 0.89,
+    "guidance": 1.37,
+    "check": 0.01,
+    "verify": 0.21,
+    "verdict": 0.05,
+    "total": 3.29
   },
   "usage": {
     "guidance": {
       "calls": 0,
       "cache_hits": 7,
       "tokens": 0,
-      "dropped": 0
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
     },
     "verdict": {
       "calls": 0,
@@ -796,7 +816,7 @@
     },
     "verify": {
       "calls": 0,
-      "cache_hits": 4,
+      "cache_hits": 3,
       "tokens": 0,
       "model": "gemini-3.5-flash-lite"
     },

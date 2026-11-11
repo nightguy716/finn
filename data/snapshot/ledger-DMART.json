@@ -57,6 +57,12 @@
         "revenue": 19644.01,
         "ebitda": 1392.96,
         "ebitda_margin_pct": 7.09,
+        "ebit": 1075.21,
+        "ebit_margin_pct": 5.47,
+        "pbt": 1024.84,
+        "finance_costs": 63.9,
+        "depreciation": 317.75,
+        "other_income": 13.53,
         "pat": 743.57,
         "basis": "xbrl",
         "flags": []
@@ -66,6 +72,12 @@
         "revenue": 18794.53,
         "ebitda": 1499.34,
         "ebitda_margin_pct": 7.98,
+        "ebit": 1211.64,
+        "ebit_margin_pct": 6.45,
+        "pbt": 1183.14,
+        "finance_costs": 54.28,
+        "depreciation": 287.7,
+        "other_income": 25.78,
         "pat": 860.61,
         "basis": "xbrl",
         "flags": []
@@ -75,6 +87,12 @@
         "revenue": 17683.86,
         "ebitda": 1210.53,
         "ebitda_margin_pct": 6.85,
+        "ebit": 926.97,
+        "ebit_margin_pct": 5.24,
+        "pbt": 904.17,
+        "finance_costs": 40.97,
+        "depreciation": 283.56,
+        "other_income": 18.17,
         "pat": 656.59,
         "basis": "xbrl",
         "flags": []
@@ -84,6 +102,12 @@
         "revenue": 18100.88,
         "ebitda": 1463.37,
         "ebitda_margin_pct": 8.08,
+        "ebit": 1195.08,
+        "ebit_margin_pct": 6.6,
+        "pbt": 1175.19,
+        "finance_costs": 36.82,
+        "depreciation": 268.29,
+        "other_income": 16.93,
         "pat": 855.92,
         "basis": "xbrl",
         "flags": []
@@ -93,6 +117,12 @@
         "revenue": 16676.3,
         "ebitda": 1213.65,
         "ebitda_margin_pct": 7.28,
+        "ebit": 960.18,
+        "ebit_margin_pct": 5.76,
+        "pbt": 944.79,
+        "finance_costs": 34.96,
+        "depreciation": 253.47,
+        "other_income": 19.57,
         "pat": 685.01,
         "basis": "xbrl",
         "flags": []
@@ -102,6 +132,12 @@
         "revenue": 16359.7,
         "ebitda": 1299.04,
         "ebitda_margin_pct": 7.94,
+        "ebit": 1067.34,
+        "ebit_margin_pct": 6.52,
+        "pbt": 1057.47,
+        "finance_costs": 29.3,
+        "depreciation": 231.7,
+        "other_income": 19.43,
         "pat": 772.97,
         "basis": "xbrl",
         "flags": []
@@ -160,8 +196,8 @@
       "actual_value": null,
       "actual_detail": "",
       "promised": "15%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
+      "status": "segment_level",
+      "note": "store expansion guidance is not compared with the consolidated series.",
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
@@ -239,8 +275,8 @@
       "actual_value": null,
       "actual_detail": "",
       "promised": "22\u201323%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
+      "status": "segment_level",
+      "note": "general merchandise and apparel guidance is not compared with the consolidated series.",
       "quote_check": "ok",
       "unit": "percent",
       "kind": "change",
@@ -305,20 +341,24 @@
     "total": 2
   },
   "timing": {
-    "discover": 0.81,
-    "series": 0.98,
-    "guidance": 0.42,
+    "discover": 1.4,
+    "series": 1.2,
+    "guidance": 0.33,
     "check": 0.0,
     "verify": 0.0,
     "verdict": 0.06,
-    "total": 2.27
+    "total": 2.99
   },
   "usage": {
     "guidance": {
       "calls": 0,
       "cache_hits": 2,
       "tokens": 0,
-      "dropped": 0
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
     },
     "verdict": {
       "calls": 0,

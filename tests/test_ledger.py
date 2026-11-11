@@ -3,6 +3,7 @@
 import unittest
 from datetime import date
 
+from finn_core.xbrl_parse import ebit
 from finn_core.ledger import (
     _carry_stated_basis,
     apply_verification,
@@ -642,6 +643,117 @@ class PromiseTests(unittest.TestCase):
         self.assertEqual(same_filing[1]["basis"], "constant_currency")
         self.assertIn("same filing", same_filing[1]["basis_note"])
         self.assertEqual(same_filing[2]["basis"], "not_stated")
+
+    def test_operating_margin_uses_ebit_and_mid_term_is_not_scored(self):
+        self.assertEqual(ebit({"pbt": 100, "finance_costs": 10, "other_income": 5, "depreciation": 20}), 105.0)
+        reported = quarter("2026-03-31", 100, 30, 10, 30)
+        reported["ebit"] = 21
+        reported["ebit_margin_pct"] = 21.0
+        operating = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 20,
+                "target_high": 22,
+                "direction": "",
+                "horizon": "quarter",
+                "target_period": "2026-03-31",
+                "evidence": "Our operating margin guidance is 20% to 22%.",
+                "passage": "Our operating margin guidance is 20% to 22%.",
+                "page": 4,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+                "call_period": "2026-03-31",
+            },
+            [reported],
+            date(2026, 11, 10),
+        )
+        self.assertEqual(operating["metric_key"], "ebit_margin")
+        self.assertEqual(operating["status"], "delivered")
+        self.assertEqual(operating["actual"], "21%")
+        self.assertIn("operating margin", operating["definition_note"])
+        kept = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 18,
+                "target_high": 20,
+                "direction": "",
+                "horizon": "quarter",
+                "target_period": "2026-03-31",
+                "evidence": "maintain the whole guidance of 18 to 20% PBDIT margin band.",
+                "passage": "it is okay to maintain the whole guidance of 18 to 20% PBDIT margin band.",
+                "page": 4,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+            },
+            [quarter("2026-03-31", 100, 19, 10, 19)],
+            date(2026, 11, 10),
+        )
+        self.assertEqual(kept["metric_key"], "ebitda_margin")
+        self.assertEqual(kept["status"], "delivered")
+        vague = judge_promise(
+            {
+                "metric_key": "ebitda_margin",
+                "target_low": 22.5,
+                "target_high": 23.5,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": "we expect the mid-term margin guidance to remain around our current guided range of 22.5% to 23.5%.",
+                "passage": "we expect the mid-term margin guidance to remain around our current guided range of 22.5% to 23.5%.",
+                "page": 14,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+                "call_period": "2026-09-30",
+            },
+            [reported],
+            date(2026, 11, 10),
+        )
+        self.assertEqual(vague["status"], "long_term")
+        self.assertIsNone(vague["actual"])
+        nxt = judge_promise(
+            {
+                "metric_key": "ebitda_growth",
+                "target_low": 13,
+                "target_high": 16,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": "from next year perspective, operating profit growth will be in mid-teens",
+                "passage": "So, this year, percentage margin could expand. From next year perspective, operating profit growth will be in mid-teens.",
+                "page": 9,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+                "call_period": "2026-09-30",
+            },
+            [reported],
+            date(2026, 11, 10),
+        )
+        self.assertEqual(nxt["period_promised"], "FY2028")
+        after = judge_promise(
+            {
+                "metric_key": "ebitda_growth",
+                "target_low": 13,
+                "target_high": 16,
+                "direction": "",
+                "horizon": "fiscal_year",
+                "target_period": "FY2027",
+                "evidence": "after this year, the EBITDA growth should be at least mid-teens",
+                "passage": "after the mid-20s growth in FY27, after this year, the EBITDA growth should be at least mid-teens",
+                "page": 9,
+                "source_document": "u",
+                "speaker": "",
+                "scope": "consolidated",
+                "call_period": "2026-09-30",
+            },
+            [reported],
+            date(2026, 11, 10),
+        )
+        self.assertEqual(after["period_promised"], "FY2028")
+        self.assertNotIn(after["status"], {"delivered", "partly", "missed", "tracking_ahead", "tracking_on_track", "tracking_behind"})
 
 
 if __name__ == "__main__":

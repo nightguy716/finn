@@ -55,6 +55,12 @@
         "revenue": 24752.7,
         "ebitda": 4862.7,
         "ebitda_margin_pct": 19.65,
+        "ebit": 3986.0,
+        "ebit_margin_pct": 16.1,
+        "pbt": 4196.1,
+        "finance_costs": 545.4,
+        "depreciation": 876.7,
+        "other_income": 755.5,
         "pat": 3200.6,
         "basis": "xbrl",
         "flags": []
@@ -64,6 +70,12 @@
         "revenue": 24478.6,
         "ebitda": 4633.2,
         "ebitda_margin_pct": 18.93,
+        "ebit": 3828.8,
+        "ebit_margin_pct": 15.64,
+        "pbt": 4335.0,
+        "finance_costs": 472.8,
+        "depreciation": 804.4,
+        "other_income": 979.0,
         "pat": 3352.0,
         "basis": "xbrl",
         "flags": []
@@ -73,6 +85,12 @@
         "revenue": 24236.3,
         "ebitda": 4909.3,
         "ebitda_margin_pct": 20.26,
+        "ebit": 4180.8,
+        "ebit_margin_pct": 17.25,
+        "pbt": 4664.9,
+        "finance_costs": 370.1,
+        "depreciation": 728.5,
+        "other_income": 854.2,
         "pat": 3501.8,
         "basis": "xbrl",
         "flags": []
@@ -82,6 +100,12 @@
         "revenue": 23555.8,
         "ebitda": 4296.4,
         "ebitda_margin_pct": 18.24,
+        "ebit": 3491.4,
+        "ebit_margin_pct": 14.82,
+        "pbt": 4131.1,
+        "finance_costs": 365.6,
+        "depreciation": 805.0,
+        "other_income": 1005.3,
         "pat": 3119.0,
         "basis": "xbrl",
         "flags": []
@@ -91,6 +115,12 @@
         "revenue": 22697.3,
         "ebitda": 4372.4,
         "ebitda_margin_pct": 19.26,
+        "ebit": 3680.7,
+        "ebit_margin_pct": 16.22,
+        "pbt": 4267.2,
+        "finance_costs": 361.2,
+        "depreciation": 691.7,
+        "other_income": 947.7,
         "pat": 3246.2,
         "basis": "xbrl",
         "flags": []
@@ -100,6 +130,12 @@
         "revenue": 22134.6,
         "ebitda": 4233.1,
         "ebitda_margin_pct": 19.12,
+        "ebit": 3547.6,
+        "ebit_margin_pct": 16.03,
+        "pbt": 4253.3,
+        "finance_costs": 360.8,
+        "depreciation": 685.5,
+        "other_income": 1066.5,
         "pat": 3330.4,
         "basis": "xbrl",
         "flags": []
@@ -107,70 +143,6 @@
     ]
   },
   "rows": [
-    {
-      "promise": "Revenue growth -3.5\u2013-1.5 for 2025-06-30",
-      "source_quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms.",
-      "page": 7,
-      "source_document": "https://nsearchives.nseindia.com/corporate/Cslogin_17042025164940_SEIntimationTranscript17042025.pdf",
-      "speaker": "",
-      "period_promised": "2025-06-30",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "-3.5\u2013-1.5",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "The quote does not state the unit.",
-      "unit": "other",
-      "kind": "level",
-      "passage": "Our hedges continue to be in line with our policy. We had about $2.4 billion of ForEx derivative contracts as hedges at the end of Q4 \u201825. In terms of guidance, to reiterate what was stated by Srini, we expect the revenues from our IT Services Business segment to be in the range of $2.505 billion to $2.557 billion. This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms. With that, I turn this over back to the operator for questions. Moderator: Thank you very much. We will now begin the question -and-answer session.",
-      "basis": "constant_currency",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "segment",
-      "scope_name": "IT Services Business",
-      "metric_key": "revenue_growth",
-      "target_low": -3.5,
-      "target_high": -1.5,
-      "call_period": "2025-03-31",
-      "call_date": "2025-04-17",
-      "calls": [
-        {
-          "date": "2025-04-17",
-          "call_period": "2025-03-31",
-          "page": 6,
-          "quote": "we are guiding for a sequential growth of minus 3.5% to minus 1.5% in constant currency terms.",
-          "document": "Cslogin_17042025164940_SEIntimationTranscript17042025.pdf"
-        },
-        {
-          "date": "2025-04-17",
-          "call_period": "2025-03-31",
-          "page": 7,
-          "quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms.",
-          "document": "Cslogin_17042025164940_SEIntimationTranscript17042025.pdf"
-        }
-      ],
-      "revisions": [
-        {
-          "date": "2025-04-17",
-          "call_period": "2025-03-31",
-          "value": "-3.5\u2013-1.5",
-          "change": "set",
-          "page": 6,
-          "quote": "we are guiding for a sequential growth of minus 3.5% to minus 1.5% in constant currency terms."
-        },
-        {
-          "date": "2025-04-17",
-          "call_period": "2025-03-31",
-          "value": "-3.5\u2013-1.5",
-          "change": "maintained",
-          "page": 7,
-          "quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms."
-        }
-      ]
-    },
     {
       "promise": "Revenue growth -1\u20131% for 2025-09-30",
       "source_quote": "This translates to a sequential growth of minus 1% to plus 1% in constant currency terms.",
@@ -316,46 +288,6 @@
       "revisions": []
     },
     {
-      "promise": "Revenue growth -1.5\u20130.5% for 2026-09-30",
-      "source_quote": "This translates to a sequential guidance of -1.5% to +0.5% in constant currency terms.",
-      "page": 6,
-      "source_document": "https://nsearchives.nseindia.com/corporate/Cslogin_17072026162727_SEIntimation17072026.pdf",
-      "speaker": "Aparna Iyer",
-      "period_promised": "2026-09-30",
-      "actual": null,
-      "actual_value": null,
-      "actual_detail": "",
-      "promised": "-1.5\u20130.5%",
-      "status": "low_confidence",
-      "note": "The quoted sentence does not name the metric.",
-      "quote_check": "ok",
-      "unit": "percent",
-      "kind": "change",
-      "passage": "Accounting yield for the average investments held in India was stable at 7.2%. Our ETR was at 22.6% for quarter 1 versus 21.6% in the same time last year. In our terms of the guidance, to reiterate what was stated by Srini, our IT services business segment is expected to be in the range of $2.574 billion to $2.627 billion. This translates to a sequential guidance of -1.5% to +0.5% in constant currency terms. Lastly, in the recently concluded Board meeting, our Board of Directors have declared an interim dividend of INR2. Including this dividend, our payouts in the last 1 year, we would be returning in excess of $3 billion in terms of the cash back to shareholders. With this, we can open up for Q&A.",
-      "basis": "constant_currency",
-      "conditional_on": null,
-      "basis_note": "",
-      "caveat": "",
-      "definition_note": "",
-      "scope": "segment",
-      "scope_name": "IT services",
-      "metric_key": "revenue_growth",
-      "target_low": -1.5,
-      "target_high": 0.5,
-      "call_period": "2026-06-30",
-      "call_date": "2026-07-17",
-      "calls": [
-        {
-          "date": "2026-07-17",
-          "call_period": "2026-06-30",
-          "page": 6,
-          "quote": "This translates to a sequential guidance of -1.5% to +0.5% in constant currency terms.",
-          "document": "Cslogin_17072026162727_SEIntimation17072026.pdf"
-        }
-      ],
-      "revisions": []
-    },
-    {
       "promise": "Revenue growth -1.5\u20130.5% for FY2027",
       "source_quote": "This translates to a sequential guidance of negative 1.5 to a positive 0.5% in constant-currency terms.",
       "page": 6,
@@ -396,6 +328,70 @@
       "revisions": []
     },
     {
+      "promise": "Revenue growth -3.5\u2013-1.5 for 2025-06-30",
+      "source_quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Cslogin_17042025164940_SEIntimationTranscript17042025.pdf",
+      "speaker": "",
+      "period_promised": "2025-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "-3.5\u2013-1.5",
+      "status": "segment_level",
+      "note": "IT Services Business guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Our hedges continue to be in line with our policy. We had about $2.4 billion of ForEx derivative contracts as hedges at the end of Q4 \u201825. In terms of guidance, to reiterate what was stated by Srini, we expect the revenues from our IT Services Business segment to be in the range of $2.505 billion to $2.557 billion. This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms. With that, I turn this over back to the operator for questions. Moderator: Thank you very much. We will now begin the question -and-answer session.",
+      "basis": "constant_currency",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "IT Services Business",
+      "metric_key": "revenue_growth",
+      "target_low": -3.5,
+      "target_high": -1.5,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-17",
+      "calls": [
+        {
+          "date": "2025-04-17",
+          "call_period": "2025-03-31",
+          "page": 6,
+          "quote": "we are guiding for a sequential growth of minus 3.5% to minus 1.5% in constant currency terms.",
+          "document": "Cslogin_17042025164940_SEIntimationTranscript17042025.pdf"
+        },
+        {
+          "date": "2025-04-17",
+          "call_period": "2025-03-31",
+          "page": 7,
+          "quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms.",
+          "document": "Cslogin_17042025164940_SEIntimationTranscript17042025.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-04-17",
+          "call_period": "2025-03-31",
+          "value": "-3.5\u2013-1.5",
+          "change": "set",
+          "page": 6,
+          "quote": "we are guiding for a sequential growth of minus 3.5% to minus 1.5% in constant currency terms."
+        },
+        {
+          "date": "2025-04-17",
+          "call_period": "2025-03-31",
+          "value": "-3.5\u2013-1.5",
+          "change": "maintained",
+          "page": 7,
+          "quote": "This translates to a sequential guidance of negative 3.5% to negative 1.5% in constant currency terms."
+        }
+      ]
+    },
+    {
       "promise": "Revenue US$2.505\u20132.557 billion for 2025-06-30",
       "source_quote": "we expect the revenues from our IT Services Business segment to be in the range of $2.505 billion to $2.557 billion.",
       "page": 7,
@@ -406,8 +402,8 @@
       "actual_value": null,
       "actual_detail": "",
       "promised": "US$2.505\u20132.557 billion",
-      "status": "not_scored",
-      "note": "Guided in US dollars for the IT services segment; our series is consolidated INR.",
+      "status": "segment_level",
+      "note": "IT Services Business guidance is not compared with the consolidated series.",
       "quote_check": "ok",
       "unit": "currency_usd",
       "kind": "level",
@@ -437,21 +433,21 @@
     },
     {
       "promise": "Revenue growth -0.5\u20131.5% for 2025-12-31",
-      "source_quote": "In Quarter 3, we are projecting sequential IT services revenue growth of minus 0.5% to plus 1.5% in constant currency.",
-      "page": 5,
+      "source_quote": "This translates to a sequential guidance of minus 0.5% to a plus 1.5% in constant currency term.",
+      "page": 7,
       "source_document": "https://nsearchives.nseindia.com/corporate/Wipro_Secretarial_17102025155144_SEIntimationTranscript.pdf",
-      "speaker": "",
+      "speaker": "Aparna Iyer",
       "period_promised": "2025-12-31",
       "actual": null,
       "actual_value": null,
       "actual_detail": "",
       "promised": "-0.5\u20131.5%",
-      "status": "not_scored",
-      "note": "Constant-currency guidance is not the consolidated rupee series.",
+      "status": "segment_level",
+      "note": "IT services guidance is not compared with the consolidated series.",
       "quote_check": "Not in the quote: -0.5",
       "unit": "percent",
       "kind": "change",
-      "passage": "Each of them is already making a tangible difference for our clients and also earned strong recommendations from industry analysts. This momentum gives us real confidence for the future. With that, let me move on to our forecast for the next quarter. In Quarter 3, we are projecting sequential IT services revenue growth of minus 0.5% to plus 1.5% in constant currency. Our priority remains converting our strong backlog into revenue while maintaining operational discipline to ensure profitable growth. And with that, I will hand it over to Aparna who will take you through the financials in more detail. Over to you, Aparna.",
+      "passage": "Wipro Limited October 16, 2025 Public In terms of guidance to reiterate what Srini shared, we expect the revenues from our IT services business to be in the range of $2.59 billion to $2.64 billion. This translates to a sequential guidance of minus 0.5% to a plus 1.5% in constant currency term. The Harman Digital Transformation Solutions acquisition that we announced in Q2 is expected to close through the course of the quarter. Our guidance number does not factor any revenues from this acquisition. Thank you.",
       "basis": "constant_currency",
       "conditional_on": null,
       "basis_note": "",
@@ -498,6 +494,46 @@
           "quote": "This translates to a sequential guidance of minus 0.5% to a plus 1.5% in constant currency term."
         }
       ]
+    },
+    {
+      "promise": "Revenue growth -1.5\u20130.5% for 2026-09-30",
+      "source_quote": "This translates to a sequential guidance of -1.5% to +0.5% in constant currency terms.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Cslogin_17072026162727_SEIntimation17072026.pdf",
+      "speaker": "Aparna Iyer",
+      "period_promised": "2026-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "-1.5\u20130.5%",
+      "status": "segment_level",
+      "note": "IT services guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Accounting yield for the average investments held in India was stable at 7.2%. Our ETR was at 22.6% for quarter 1 versus 21.6% in the same time last year. In our terms of the guidance, to reiterate what was stated by Srini, our IT services business segment is expected to be in the range of $2.574 billion to $2.627 billion. This translates to a sequential guidance of -1.5% to +0.5% in constant currency terms. Lastly, in the recently concluded Board meeting, our Board of Directors have declared an interim dividend of INR2. Including this dividend, our payouts in the last 1 year, we would be returning in excess of $3 billion in terms of the cash back to shareholders. With this, we can open up for Q&A.",
+      "basis": "constant_currency",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "IT services",
+      "metric_key": "revenue_growth",
+      "target_low": -1.5,
+      "target_high": 0.5,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-17",
+      "calls": [
+        {
+          "date": "2026-07-17",
+          "call_period": "2026-06-30",
+          "page": 6,
+          "quote": "This translates to a sequential guidance of -1.5% to +0.5% in constant currency terms.",
+          "document": "Cslogin_17072026162727_SEIntimation17072026.pdf"
+        }
+      ],
+      "revisions": []
     }
   ],
   "long_term_targets": [],
@@ -563,20 +599,24 @@
     "total": 7
   },
   "timing": {
-    "discover": 0.86,
-    "series": 1.03,
-    "guidance": 1.69,
-    "check": 0.0,
+    "discover": 1.51,
+    "series": 1.05,
+    "guidance": 2.29,
+    "check": 0.01,
     "verify": 0.0,
-    "verdict": 0.14,
-    "total": 3.72
+    "verdict": 0.06,
+    "total": 4.92
   },
   "usage": {
     "guidance": {
       "calls": 0,
       "cache_hits": 7,
       "tokens": 0,
-      "dropped": 1
+      "dropped": 1,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
     },
     "verdict": {
       "calls": 0,

@@ -9,6 +9,7 @@ from http.server import BaseHTTPRequestHandler
 from urllib.parse import parse_qs, urlparse
 
 from finn_core.api_routes import alert_config, feed_view, health, ledger_view
+from finn_core.llm import LIMIT_MESSAGE, QuotaError
 
 
 class handler(BaseHTTPRequestHandler):
@@ -32,6 +33,8 @@ class handler(BaseHTTPRequestHandler):
                 payload, status = {"error": "not found"}, 404
         except ValueError as exc:
             payload, status = {"error": str(exc)[:160]}, 400
+        except QuotaError:
+            payload, status = {"error": "daily_limit", "message": LIMIT_MESSAGE}, 429
         except Exception:
             payload, status = {"error": "request failed"}, 500
         self._send(status, json.dumps(payload).encode())

@@ -175,6 +175,18 @@ def ebitda(metrics: dict[str, float | None]) -> float | None:
     )
 
 
+def ebit(metrics: dict[str, float | None]) -> float | None:
+    """PBT + finance costs - other income. Depreciation stays in, so this is after depreciation."""
+    if metrics.get("pbt") is None:
+        return None
+    return round(
+        metrics["pbt"]
+        + (metrics.get("finance_costs") or 0.0)
+        - (metrics.get("other_income") or 0.0),
+        2,
+    )
+
+
 def ebitda_block_reason(symbol: str, xbrl_url: str, metrics: dict) -> str:
     """Empty string when EBITDA is a meaningful line."""
     folded = symbol.upper()
