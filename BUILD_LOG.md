@@ -429,7 +429,7 @@ Results cards in the stored 6 Nov replay: the 72-hour feed has 2, Titan and Bhar
 
 Scored against unscored, on the 59 pre-warmed ledgers: 9 have at least one scored row, 50 have none. The scored rows are MARICO 3, ASIANPAINT 2, HCLTECH 2, BEL 3, CIPLA 3, DRREDDY 1, MAXHEALTH 2, TATACONSUM 1, TCS 1. Eighteen scored rows in all. WIPRO is unscored.
 
-Unit tests: 60, `python -m unittest discover -s tests`. The balance-sheet and cash-quality reads add no model tokens.
+Unit tests: 62, `python -m unittest discover -s tests`. The balance-sheet and cash-quality reads add no model tokens.
 
 False verdicts found while scoring, each fixed without changing the rules on this pass:
 
@@ -471,3 +471,34 @@ Titan flags: debt-to-equity rose from 0.72 to 1.33, and profit is positive while
 Tags that are absent, so the line is not available: Pidilite has no `TradeReceivablesNoncurrent`, so working capital and the receivables comparison are not available. Nestlé has no `TradePayablesNoncurrent`, so working capital is not available; the March filing did have it, and that prior working capital is −67.96. SBI is a bank. It has `Borrowings`, `Deposits`, `Advances`, `Capital` and `CashAndBalancesWithReserveBankOfIndia`. It does not have `Equity`, `CashAndCashEquivalents`, `Inventories`, `TradeReceivables` or `TradePayables`, and `Capital` is share capital, not total equity. Free cash flow is not available because `PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities` is absent. The intangible purchase tag is present and zero. Marico, Titan, Wipro and Hindustan Unilever had every tag used above. Hindustan Unilever's debt-to-equity prints 0.00 because 14 crore of current borrowings sits on 49,111 crore of equity.
 
 The API is `dpl_4JxQor7QCzQTAK2m1fuR9bRpPTKd`, Ready, Python, project finn-r4y3, aliased to https://finn-r4y3.vercel.app. The web app is `dpl_4tBwSG287xywSYSzayyfcGLGSSHo`, Ready, project web, aliased to https://web-eosin-ten-23.vercel.app.
+
+## Net debt uses liquid cash, and each sentence has to be on the page
+
+Scoring rules were not changed.
+
+Cash and cash equivalents stays its own line. Cash and liquid investments is `CashAndCashEquivalents` plus `BankBalanceOtherThanCashAndCashEquivalents` plus `CurrentInvestments`. A missing extra tag is not treated as zero, and the figure is labelled "partial cash, not a full picture". Net debt is borrowings minus that liquid figure. All six filings below had both extra tags, so none is partial. Crore, consolidated, half-year to 30 Sep 2026 against 31 Mar 2026.
+
+| Ticker | Net debt before | Net debt after |
+|---|---:|---:|
+| WIPRO | 9,000.5, was 6,231.9 | −25,152.2, was −37,536.1 |
+| MARICO | 710, was −49 | −1,950, was −2,086 |
+| PIDILITIND | −142.55, was −126.58 | −3,834.57, was −4,112.82 |
+| HINDUNILVR | −1,784, was −2,583 | −9,792, was −7,495 |
+| NESTLEIND | −1,680.01, was −1,296.13 | −1,771.14, was −1,316.43 |
+| TITAN | 23,579, was 10,505 | 21,622, was 7,212 |
+
+Wipro, 30 Sep 2026, rupees: current borrowings 185,021,000,000, cash 95,016,000,000, other bank balances 0, current investments 341,527,000,000. Liquid investments 43,654.3 crore. Net debt 18,502.1 − 43,654.3 = −25,152.2. Marico the same day: borrowings 10,460,000,000, cash 3,360,000,000, other bank balances 360,000,000, current investments 26,240,000,000. Liquid 2,996 crore. Net debt 1,046 − 2,996 = −1,950.
+
+Banks, NBFCs and insurers no longer get a cash conversion or a free-cash-flow number. Operating cash flow includes deposit and loan movements, so the negative-cash-flow flag is withheld for them too. SBI's takeaway is that cash conversion and free cash flow are not meaningful. The −0.72 is gone.
+
+The six-word check now runs on each sentence. An ungrounded sentence is removed even when another sentence in the same field is on the page. Re-read from the stored pages, no new model call.
+
+| Ticker | What remains |
+|---|---|
+| NESTLEIND | "Its business activity falls within a single operating segment, namely Food." The "unlocks the power of food" sentence is gone. How it makes money stays, page 163. |
+| MARICO | "Marico carries on business in branded consumer products." "The Group manufactures and markets various personal and consumer goods" is not on page 209, so it is gone. |
+| TITAN | "It designs and retails products across jewellery, watches, eyewear, fashion accessories, and Indian Dress Wear." The "leading lifestyle companies" sentence is not on the cited page. How it makes money had no sentence with its own six-word run, so that field is empty. |
+
+Cash quality carries one line: "Half-year figure; cash flow can swing with inventory and working-capital timing." Checked at 390px on Wipro: net debt −25,152 crore, the three tags in the definition, and the caveat under the takeaway. SBI shows the not-meaningful line and not −0.72.
+
+The API is `dpl_DWVK9fc76NAehLvhy6b1ZN3xxDdx`, Ready, Python, project finn-r4y3, aliased to https://finn-r4y3.vercel.app. The web app is `dpl_GCLjGHJF4Srbdtq4R114YzG74s9F`, Ready, project web, aliased to https://web-eosin-ten-23.vercel.app.

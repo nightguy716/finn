@@ -63,6 +63,7 @@ class StatementTest(unittest.TestCase):
         self.assertEqual(body["balance_sheet"]["ratios"]["debt_to_equity"]["value"], 0.21)
         self.assertEqual(body["balance_sheet"]["ratios"]["debt_to_equity"]["prior"], 0.08)
         self.assertEqual(body["balance_sheet"]["ratios"]["net_debt"]["value"], 710)
+        self.assertEqual(body["balance_sheet"]["ratios"]["net_debt"]["note"], "partial cash, not a full picture")
         self.assertEqual(body["balance_sheet"]["ratios"]["working_capital"]["value"], 1816)
         self.assertEqual(body["cash"]["ratios"]["free_cash_flow"]["value"], 448)
         self.assertEqual(body["cash"]["ratios"]["cash_conversion"]["value"], 0.59)
@@ -100,7 +101,41 @@ class StatementTest(unittest.TestCase):
         self.assertEqual(body["kind"], "bank")
         self.assertFalse(body["balance_sheet"]["ratios"]["debt_to_equity"]["meaningful"])
         self.assertFalse(body["balance_sheet"]["ratios"]["working_capital"]["meaningful"])
-        self.assertIn("not meaningful", body["balance_sheet"]["takeaway"])
+        self.assertFalse(body["cash"]["ratios"]["cash_conversion"]["meaningful"])
+        self.assertFalse(body["cash"]["ratios"]["free_cash_flow"]["meaningful"])
+        self.assertIsNone(body["cash"]["ratios"]["cash_conversion"]["value"])
+        self.assertIsNone(body["cash"]["ratios"]["free_cash_flow"]["value"])
+        self.assertNotIn("-0.72", body["cash"]["takeaway"])
+        self.assertIn("not meaningful", body["cash"]["takeaway"])
+        self.assertEqual(body["cash"]["flags"], [])
+
+    def test_net_debt_includes_bank_balances_and_current_investments(self):
+        parsed = _parse(
+            filing(
+                {
+                    ("BorrowingsCurrent", "OneI"): "100000000000",
+                    ("BorrowingsNoncurrent", "OneI"): "0",
+                    ("Equity", "OneI"): "200000000000",
+                    ("CashAndCashEquivalents", "OneI"): "10000000000",
+                    ("BankBalanceOtherThanCashAndCashEquivalents", "OneI"): "5000000000",
+                    ("CurrentInvestments", "OneI"): "20000000000",
+                    ("BorrowingsCurrent", "PY_I"): "80000000000",
+                    ("BorrowingsNoncurrent", "PY_I"): "0",
+                    ("Equity", "PY_I"): "180000000000",
+                    ("CashAndCashEquivalents", "PY_I"): "8000000000",
+                    ("BankBalanceOtherThanCashAndCashEquivalents", "PY_I"): "2000000000",
+                    ("CurrentInvestments", "PY_I"): "10000000000",
+                }
+            )
+        )
+        body = _statement(parsed, None, parsed["crore"].get("PY_I"))
+        self.assertEqual(body["balance_sheet"]["ratios"]["net_debt"]["value"], 6500)
+        self.assertEqual(body["balance_sheet"]["ratios"]["net_debt"]["prior"], 6000)
+        self.assertNotIn("note", body["balance_sheet"]["ratios"]["net_debt"])
+        liquid = next(line for line in body["balance_sheet"]["lines"] if line["key"] == "liquid")
+        self.assertEqual(liquid["value"], 3500)
+        self.assertIn("BankBalanceOtherThanCashAndCashEquivalents", liquid["tag"])
+        self.assertIn("CurrentInvestments", liquid["tag"])
 
 
 class PdfFallbackTest(unittest.TestCase):

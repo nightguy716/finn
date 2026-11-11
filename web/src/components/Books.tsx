@@ -39,6 +39,7 @@ export function Books({ books, waiting }: { books: Financials | null; waiting: b
         ]}
         missing={books.cash.missing}
         note={books.cash.receivables?.status === 'not_available' ? books.cash.receivables.reason : ''}
+        caveat={books.cash.label === 'Half-year' ? 'Half-year figure; cash flow can swing with inventory and working-capital timing.' : ''}
       />
     </div>
   )
@@ -54,6 +55,7 @@ function Panel({
   missing,
   source,
   note,
+  caveat,
 }: {
   title: string
   meta: string
@@ -64,6 +66,7 @@ function Panel({
   missing: string[]
   source?: string
   note?: string
+  caveat?: string
 }) {
   const [open, setOpen] = useState(false)
   return (
@@ -76,6 +79,7 @@ function Panel({
       </div>
       <p className="mt-1 font-mono text-[11px] text-mute">{meta}</p>
       <p className={`mt-1 text-[14px] leading-snug ${open ? '' : 'line-clamp-2'}`}>{takeaway}</p>
+      {caveat ? <p className="mt-1 text-[12px] leading-snug text-mute">{caveat}</p> : null}
       {open ? (
         <div className="mt-2 flex flex-col gap-2">
           {flags.map((flag) => (
@@ -89,6 +93,7 @@ function Panel({
                 <span>
                   {line.label}
                   <span className="mt-0.5 block font-mono text-[10px] text-mute">{line.tag}</span>
+                  {line.note ? <span className="mt-0.5 block text-[11px] text-mute">{line.note}</span> : null}
                 </span>
                 <span className="shrink-0 text-right font-mono text-[13px] tabular-nums">
                   {money(line.value)}
@@ -103,6 +108,7 @@ function Panel({
                 <span className="text-mute">{label}. </span>
                 {ratio.meaningful === false ? ratio.reason : shown(ratio, kind)}
                 <span className="mt-0.5 block text-[12px] text-mute">{ratio.definition}</span>
+                {ratio.note ? <span className="mt-0.5 block text-[12px] text-mute">{ratio.note}</span> : null}
               </p>
             ) : null,
           )}

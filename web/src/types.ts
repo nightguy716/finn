@@ -215,6 +215,7 @@ export type MoneyLine = {
   tag: string
   value: number | null
   prior?: number | null
+  note?: string
 }
 
 export type MoneyRatio = {
@@ -223,6 +224,7 @@ export type MoneyRatio = {
   meaningful?: boolean
   definition: string
   reason?: string
+  note?: string
 }
 
 export type Financials = {

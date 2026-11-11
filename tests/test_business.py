@@ -58,6 +58,23 @@ class SelectTest(unittest.TestCase):
         self.assertEqual(kept["segments"], [{"name": "Hair oils", "share": "40%", "page": 3}])
         self.assertEqual(kept["geographies"], [{"name": "India", "share": None, "page": 3}])
 
+    def test_an_ungrounded_sentence_is_dropped_on_its_own(self):
+        text = "The company's business activity falls within a single operating segment, namely Food."
+        pages = [{"page": 163, "text": text}]
+        raw = {
+            "does": {
+                "text": "Nestle India Limited unlocks the power of food and beverages to enhance quality of life. The company's business activity falls within a single operating segment, namely Food.",
+                "page": 163,
+                "evidence": "falls within a single operating segment, namely Food",
+            },
+            "makes_money": {"text": "", "page": 0, "evidence": ""},
+            "segments": [],
+            "geographies": [],
+        }
+        kept = accept(raw, pages)["does"]["text"]
+        self.assertNotIn("unlocks the power", kept)
+        self.assertIn("single operating segment", kept)
+
     def test_a_sentence_that_changes_the_subject_is_dropped(self):
         text = "Global IT service providers are equipped to support enterprises with technology and business process services across cybersecurity and cloud infrastructure."
         pages = [{"page": 35, "text": text}]

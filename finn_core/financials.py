@@ -2,8 +2,8 @@
 
 No model call. Quarterly filings do not carry the balance sheet, so the latest
 half-year or full-year filing that does is used. A quarter is never mixed into
-a half-year or full-year ratio. Banks, NBFCs and insurers are marked, and
-debt-to-equity and working capital are not computed for them.
+a half-year or full-year ratio. Banks, NBFCs and insurers are marked. Debt,
+working capital, cash conversion and free cash flow are not computed for them.
 """
 
 from datetime import date, timedelta
@@ -13,7 +13,13 @@ from finn_core.nse_client import NSEClient, NSEError
 from finn_core.results_card import _load_xbrl
 from finn_core.xbrl_parse import _date, _divisor, _local, _number, _scale, parse_period_end
 
-VERSION = "v2"
+VERSION = "v3"
+PARTIAL_CASH = "partial cash, not a full picture"
+LIQUID_TAGS = (
+    "CashAndCashEquivalents",
+    "BankBalanceOtherThanCashAndCashEquivalents",
+    "CurrentInvestments",
+)
 XBRLI = "http://www.xbrl.org/2003/instance"
 
 INSTANT = ("OneI", "PY_I")
@@ -24,6 +30,8 @@ FACE = (
     "Borrowings",
     "Equity",
     "CashAndCashEquivalents",
+    "BankBalanceOtherThanCashAndCashEquivalents",
+    "CurrentInvestments",
     "Inventories",
     "TradeReceivablesCurrent",
     "TradeReceivablesNoncurrent",
@@ -200,18 +208,17 @@ def _statement(parsed: dict, compared: dict | None, prior_face: dict | None = No
     debt_prior, _prior_gap = _sum_present(prior, ("BorrowingsCurrent", "BorrowingsNoncurrent"), "Borrowings")
     equity = now.get("Equity")
     equity_prior = prior.get("Equity")
-    cash = now.get("CashAndCashEquivalents")
-    cash_prior = prior.get("CashAndCashEquivalents")
+    liquid, liquid_gap, liquid_partial = _liquid(now)
+    liquid_prior, prior_gap, prior_partial = _liquid(prior)
     if "Equity" not in now:
         missing.append("Equity")
-    if "CashAndCashEquivalents" not in now:
-        missing.append("CashAndCashEquivalents")
+    missing.extend(liquid_gap)
     working, working_missing = _working_capital(now)
     working_prior, _prior_working_gap = _working_capital(prior)
     missing.extend(working_missing)
     ratios = {
         "debt_to_equity": _ratio(debt, equity, debt_prior, equity_prior, financial, "Total borrowings divided by total equity."),
-        "net_debt": _net_debt(debt, cash, debt_prior, cash_prior, financial),
+        "net_debt": _net_debt(debt, liquid, debt_prior, None if prior_partial else liquid_prior, financial, liquid_partial),
         "working_capital": _working_ratio(working, working_prior, financial),
     }
     flags = []
@@ -232,7 +239,7 @@ def _statement(parsed: dict, compared: dict | None, prior_face: dict | None = No
         "flags": flags,
         "takeaway": _balance_line(parsed["kind"], ratios, instant.get("instant"), previous.get("instant")),
     }
-    cash_lines, cash_missing, cash_flags, cash_ratios = _cash(flow, span)
+    cash_lines, cash_missing, cash_flags, cash_ratios = _cash(flow, span, financial)
     return {
         "kind": parsed["kind"],
         "balance_sheet": balance,
@@ -257,6 +264,7 @@ def _position_lines(now: dict, prior: dict) -> tuple[list[dict], list[str]]:
         ("borrowings", "Borrowings", "Borrowings"),
         ("equity", "Total equity", "Equity"),
         ("cash", "Cash and cash equivalents", "CashAndCashEquivalents"),
+        ("liquid", "Cash and liquid investments", None),
         ("inventories", "Inventories", "Inventories"),
         ("receivables", "Trade receivables", None),
         ("payables", "Trade payables", None),
@@ -272,6 +280,18 @@ def _position_lines(now: dict, prior: dict) -> tuple[list[dict], list[str]]:
             value, gap = _sum_present(now, ("TradePayablesCurrent", "TradePayablesNoncurrent"), "TradePayables")
             previous, _gap = _sum_present(prior, ("TradePayablesCurrent", "TradePayablesNoncurrent"), "TradePayables")
             used = "TradePayablesCurrent + TradePayablesNoncurrent"
+        elif key == "liquid":
+            value, gap, partial = _liquid(now)
+            previous, _prior_gap, _prior_partial = _liquid(prior)
+            used = " + ".join(LIQUID_TAGS)
+            missing.extend(gap)
+            if value is None and previous is None:
+                continue
+            line = {"key": key, "label": label, "tag": used, "value": value, "prior": previous}
+            if partial or _prior_partial:
+                line["note"] = PARTIAL_CASH
+            lines.append(line)
+            continue
         else:
             value = now.get(tag) if tag in now else None
             previous = prior.get(tag) if tag in prior else None
@@ -291,7 +311,7 @@ def _position_lines(now: dict, prior: dict) -> tuple[list[dict], list[str]]:
     return lines, missing
 
 
-def _cash(flow: dict, span: str) -> tuple[list[dict], list[str], list[str], dict]:
+def _cash(flow: dict, span: str, financial: bool) -> tuple[list[dict], list[str], list[str], dict]:
     ocf = flow.get("CashFlowsFromUsedInOperatingActivities")
     ppe = flow.get("PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities")
     intangible = flow.get("PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities")
@@ -314,9 +334,16 @@ def _cash(flow: dict, span: str) -> tuple[list[dict], list[str], list[str], dict
         {"key": "capex_intangible", "label": "Purchase of intangible assets", "tag": "PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities", "value": intangible},
         {"key": "pat", "label": "Profit for the same period", "tag": pat_tag, "value": pat},
     ]
+    reason = "Not meaningful for a bank, NBFC or insurer. Operating cash flow includes deposit and loan movements."
+    if financial:
+        ratios = {
+            "free_cash_flow": {"value": None, "meaningful": False, "reason": reason, "definition": "Operating cash flow minus the two purchase lines above."},
+            "cash_conversion": {"value": None, "meaningful": False, "reason": reason, "definition": "Operating cash flow divided by profit for this same period."},
+        }
+        return lines, missing, [], ratios
     ratios = {
-        "free_cash_flow": {"value": free, "definition": "Operating cash flow minus the two purchase lines above. A missing purchase line is not treated as zero."},
-        "cash_conversion": {"value": conversion, "definition": "Operating cash flow divided by profit for this same period."},
+        "free_cash_flow": {"value": free, "meaningful": True, "definition": "Operating cash flow minus the two purchase lines above. A missing purchase line is not treated as zero."},
+        "cash_conversion": {"value": conversion, "meaningful": True, "definition": "Operating cash flow divided by profit for this same period."},
     }
     flags = []
     if pat is not None and pat > 0 and ocf is not None and ocf < 0:
@@ -377,13 +404,20 @@ def _ratio(debt, equity, debt_prior, equity_prior, financial: bool, definition: 
     return {"value": value, "prior": prior, "meaningful": True, "definition": definition}
 
 
-def _net_debt(debt, cash, debt_prior, cash_prior, financial: bool) -> dict:
-    definition = "Total borrowings minus cash and cash equivalents. Cash is the CashAndCashEquivalents tag only, not other bank balances."
+def _net_debt(debt, cash, debt_prior, cash_prior, financial: bool, partial: bool) -> dict:
+    definition = (
+        "Total borrowings minus cash and liquid investments. "
+        "Cash and liquid investments is CashAndCashEquivalents, "
+        "BankBalanceOtherThanCashAndCashEquivalents and CurrentInvestments."
+    )
     if financial:
         return {"value": None, "prior": None, "meaningful": False, "definition": definition, "reason": "Not meaningful for a bank, NBFC or insurer."}
     value = None if debt is None or cash is None else round(debt - cash, 2)
     prior = None if debt_prior is None or cash_prior is None else round(debt_prior - cash_prior, 2)
-    return {"value": value, "prior": prior, "meaningful": True, "definition": definition}
+    row = {"value": value, "prior": prior, "meaningful": True, "definition": definition}
+    if partial and value is not None:
+        row["note"] = PARTIAL_CASH
+    return row
 
 
 def _working_ratio(working, prior, financial: bool) -> dict:
@@ -391,6 +425,20 @@ def _working_ratio(working, prior, financial: bool) -> dict:
     if financial:
         return {"value": None, "prior": None, "meaningful": False, "definition": definition, "reason": "Not meaningful for a bank, NBFC or insurer."}
     return {"value": working, "prior": prior, "meaningful": True, "definition": definition}
+
+
+def _liquid(facts: dict) -> tuple[float | None, list[str], bool]:
+    """Cash plus other bank balances plus current investments. A missing extra tag is not zero."""
+    if "CashAndCashEquivalents" not in facts:
+        return None, ["CashAndCashEquivalents"], False
+    total = facts["CashAndCashEquivalents"]
+    missing = []
+    for tag in LIQUID_TAGS[1:]:
+        if tag in facts:
+            total += facts[tag]
+        else:
+            missing.append(tag)
+    return round(total, 2), missing, bool(missing)
 
 
 def _working_capital(facts: dict) -> tuple[float | None, list[str]]:
@@ -448,15 +496,17 @@ def _balance_line(kind: str, ratios: dict, as_of, compared) -> str:
 
 
 def _cash_line(span: str, end, ratios: dict, flags: list[str]) -> str:
-    conversion = (ratios.get("cash_conversion") or {}).get("value")
-    free = (ratios.get("free_cash_flow") or {}).get("value")
-    if conversion is None and free is None:
+    conversion = ratios.get("cash_conversion") or {}
+    free = ratios.get("free_cash_flow") or {}
+    if conversion.get("meaningful") is False:
+        return f"{span} to {_show(end)}. Cash conversion and free cash flow are not meaningful for a bank, NBFC or insurer."
+    if conversion.get("value") is None and free.get("value") is None:
         return f"{span or 'This period'} cash flow is not available."
     parts = [f"{span} to {_show(end)}."]
-    if conversion is not None:
-        parts.append(f"Operating cash flow is {conversion:.0%} of profit.")
-    if free is not None:
-        parts.append(f"Free cash flow is {_crore(free)}.")
+    if conversion.get("value") is not None:
+        parts.append(f"Operating cash flow is {conversion['value']:.0%} of profit.")
+    if free.get("value") is not None:
+        parts.append(f"Free cash flow is {_crore(free['value'])}.")
     if flags:
         parts.append(flags[0])
     return " ".join(parts)

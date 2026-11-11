@@ -270,9 +270,10 @@ def _fact(raw, by_page: dict) -> dict | None:
         return None
     text = _clean(raw.get("text"), 420)
     page, body = _page(raw, by_page)
-    if not text or body is None or not on_page(_clean(raw.get("evidence"), 200), body) or not _stated(text, body):
+    grounded = _ground(text, body or "")
+    if not text or body is None or not on_page(_clean(raw.get("evidence"), 200), body) or grounded is None:
         return None
-    return {"text": text, "page": page}
+    return {"text": grounded, "page": page}
 
 
 def _items(raw, by_page: dict) -> list[dict]:
@@ -303,6 +304,18 @@ def _page(raw: dict, by_page: dict) -> tuple[int, str | None]:
     return page, by_page.get(page)
 
 
+def _ground(text: str, body: str) -> str | None:
+    """Keep each sentence that has its own six-word run on the page."""
+    kept = [part for part in _sentences(text) if _stated(part, body)]
+    if not kept:
+        return None
+    return " ".join(kept)
+
+
+def _sentences(text: str) -> list[str]:
+    return [part.strip() for part in re.split(r"(?<=[.!?])\s+", text.strip()) if part.strip()]
+
+
 def _stated(text: str, body: str) -> bool:
     """A claim stays only when a run of its own words is on the page."""
     claim = re.findall(r"[a-z0-9']+", text.lower())
@@ -319,8 +332,14 @@ def _stated_snapshot(snapshot, pages: list[dict]):
     cleaned = dict(snapshot)
     for key in ("does", "makes_money"):
         fact = snapshot.get(key)
-        if not isinstance(fact, dict) or not _stated(str(fact.get("text") or ""), by_page.get(fact.get("page"), "")):
+        if not isinstance(fact, dict):
             cleaned[key] = None
+            continue
+        grounded = _ground(str(fact.get("text") or ""), by_page.get(fact.get("page"), ""))
+        if grounded is None:
+            cleaned[key] = None
+        else:
+            cleaned[key] = {**fact, "text": grounded}
     return cleaned
 
 
