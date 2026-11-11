@@ -1,4 +1,4 @@
-import type { LedgerUsage } from './types'
+import type { LedgerUsage, MetricLine } from './types'
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
@@ -154,4 +154,93 @@ export function modelLine(usage: LedgerUsage | null | undefined): string {
   ].filter(Boolean)
   if (!steps.length) return ''
   return `This ledger: ${steps.join(', ')}.`
+}
+
+const SOURCE_RANK: Record<string, number> = {
+  'XBRL filing': 0,
+  'Investor presentation': 1,
+  'Outcome of board meeting PDF': 2,
+  'NSE filing': 3,
+}
+
+/** A filing link labelled by what it is, not by the raw NSE subject. */
+export function sourceLabel(subject: string, url: string): string {
+  const blob = `${subject} ${url}`.toLowerCase()
+  if (blob.includes('xbrl') || url.toLowerCase().endsWith('.xml')) return 'XBRL filing'
+  if (blob.includes('investor presentation') || blob.includes('investorpre')) return 'Investor presentation'
+  if (blob.includes('outcome of board') || blob.includes('outcomeofbm') || blob.includes('outcomeoftheboard')) return 'Outcome of board meeting PDF'
+  return 'NSE filing'
+}
+
+export function filingLinks(sources: { subject?: string; url: string }[]): { label: string; url: string }[] {
+  const specific = new Map<string, { label: string; url: string }>()
+  const generic: { label: string; url: string }[] = []
+  const seenSubjects = new Set<string>()
+  const seenUrls = new Set<string>()
+  for (const source of sources) {
+    const url = source.url?.trim()
+    if (!url || seenUrls.has(url)) continue
+    seenUrls.add(url)
+    const subject = (source.subject || '').trim()
+    const key = subject.toLowerCase()
+    const label = sourceLabel(subject, url)
+    if (label === 'NSE filing') {
+      if (key && seenSubjects.has(key)) continue
+      if (key) seenSubjects.add(key)
+      generic.push({ label, url })
+      continue
+    }
+    if (!specific.has(label)) specific.set(label, { label, url })
+  }
+  return [...specific.values(), ...generic].sort((a, b) => (SOURCE_RANK[a.label] ?? 9) - (SOURCE_RANK[b.label] ?? 9))
+}
+
+function yoyPhrase(name: string, line: MetricLine | undefined): string {
+  if (!line) return ''
+  const change = delta(line.current, line.yoy, line.yoy_pct)
+  if (!change) return ''
+  if (change.text.endsWith('%')) return `${name} ${change.text} YoY`
+  return `${name} ${change.text}`
+}
+
+function marginSentence(ebitda: MetricLine | undefined, revenue: MetricLine | undefined): string {
+  if (!ebitda || ebitda.current == null || !revenue || revenue.current == null || revenue.current <= 0) return ''
+  const now = (ebitda.current / revenue.current) * 100
+  let pts = ''
+  if (ebitda.yoy != null && revenue.yoy != null && revenue.yoy > 0) {
+    const then = (ebitda.yoy / revenue.yoy) * 100
+    const diff = now - then
+    const sign = diff > 0 ? '+' : ''
+    pts = `, ${sign}${diff.toFixed(1)} pts YoY`
+  }
+  return `EBITDA margin ${now.toFixed(1)}%${pts}`
+}
+
+/** One line from the quarter's own numbers. No model call. */
+export function resultsTakeaway(metrics: Partial<Record<'revenue' | 'ebitda' | 'pbt' | 'pat', MetricLine>> | undefined, hasEbitda: boolean): string {
+  if (!metrics) return ''
+  const head = [yoyPhrase('Revenue', metrics.revenue), yoyPhrase('PAT', metrics.pat)].filter(Boolean)
+  const margin = hasEbitda ? marginSentence(metrics.ebitda, metrics.revenue) : ''
+  if (head.length && margin) return `${head.join(', ')}. ${margin}.`
+  if (head.length) return `${head.join(', ')}.`
+  return margin ? `${margin}.` : ''
+}
+
+function swingOn(line: MetricLine | undefined): boolean {
+  if (!line || line.current == null) return false
+  const pairs: [number | null, number | null][] = [
+    [line.qoq, line.qoq_pct],
+    [line.yoy, line.yoy_pct],
+  ]
+  return pairs.some(([base, pct]) => {
+    if (base == null) return false
+    if (base <= 0) return true
+    return pct != null && Math.abs(pct) > 100
+  })
+}
+
+export function largeSwing(metrics: Partial<Record<'revenue' | 'ebitda' | 'pbt' | 'pat', MetricLine>> | undefined, hasEbitda: boolean): boolean {
+  if (!metrics) return false
+  const lines = [metrics.revenue, metrics.pbt, metrics.pat, hasEbitda ? metrics.ebitda : undefined]
+  return lines.some(swingOn)
 }

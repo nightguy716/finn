@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import type { Alert, AlertConfig, Feed, LoadStatus } from '../types'
 import { WINDOWS, dayLabel, plural, replayLine, shiftBack, windowSummary } from '../format'
@@ -36,6 +36,7 @@ export function Briefing({
   onOpenAlert: (alert: Alert) => void
 }) {
   const reduce = useReducedMotion()
+  const dateRef = useRef<HTMLInputElement>(null)
   const [routineOpen, setRoutineOpen] = useState(false)
   const showFeed = feed && status !== 'loading'
   const start = status === 'ready' && feed ? feed.window_start : shiftBack(asOf, hours)
@@ -73,18 +74,34 @@ export function Briefing({
               </button>
             )
           })}
-          <label className="ml-auto">
-            <span className="sr-only">As of</span>
-            <input
-              type="date"
-              value={asOf}
-              aria-label="As of"
-              className="h-7 w-[132px] border border-line bg-transparent px-1.5 font-mono text-[12px]"
-              onChange={(event) => {
-                if (event.target.value) onAsOf(event.target.value)
+          <div className="relative ml-auto">
+            <button
+              type="button"
+              aria-label={`As of ${dayLabel(asOf)}`}
+              className="h-7 border border-line px-1.5 font-mono text-[12px] tabular-nums"
+              onClick={() => {
+                const input = dateRef.current
+                if (!input) return
+                if (typeof input.showPicker === 'function') input.showPicker()
+                else input.click()
               }}
-            />
-          </label>
+            >
+              {dayLabel(asOf)}
+            </button>
+            <label className="sr-only">
+              As of
+              <input
+                ref={dateRef}
+                type="date"
+                value={asOf}
+                aria-label="As of"
+                className="sr-only"
+                onChange={(event) => {
+                  if (event.target.value) onAsOf(event.target.value)
+                }}
+              />
+            </label>
+          </div>
         </div>
         <p className="mt-2 text-[12px] leading-snug text-mute">{replayLine(asOf, start)}</p>
         {symbols.length ? (

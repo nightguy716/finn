@@ -8,9 +8,11 @@ type SheetFrameProps = {
   title: string
   onClose: () => void
   children: ReactNode
+  /** Sits above another sheet that is still closing. */
+  front?: boolean
 }
 
-export function SheetFrame({ open, title, onClose, children }: SheetFrameProps) {
+export function SheetFrame({ open, title, onClose, children, front = false }: SheetFrameProps) {
   const reduce = useReducedMotion()
   const titleId = useId()
   const transition = reduce ? { duration: 0 } : { duration: 0.22, ease: 'easeOut' as const }
@@ -27,7 +29,7 @@ export function SheetFrame({ open, title, onClose, children }: SheetFrameProps) 
   return (
     <AnimatePresence>
       {open ? (
-        <div className="absolute inset-0 z-20">
+        <div className={`absolute inset-0 ${front ? 'z-30' : 'z-20'}`}>
           <motion.button
             type="button"
             aria-label="Close"
@@ -42,13 +44,13 @@ export function SheetFrame({ open, title, onClose, children }: SheetFrameProps) 
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="absolute inset-x-0 bottom-0 flex max-h-[78%] flex-col border-t border-line bg-card"
+            className="absolute inset-x-0 bottom-0 max-h-[78%] overflow-y-auto border-t border-line bg-card"
             initial={{ y: reduce ? 0 : '100%' }}
             animate={{ y: 0 }}
             exit={{ y: reduce ? 0 : '100%' }}
             transition={transition}
           >
-            <div className="flex items-center justify-between border-b border-line px-4 py-3">
+            <div className="sticky top-0 flex items-center justify-between border-b border-line bg-card px-4 py-3">
               <h2 id={titleId} className="text-[15px] font-medium">
                 {title}
               </h2>
@@ -56,7 +58,7 @@ export function SheetFrame({ open, title, onClose, children }: SheetFrameProps) 
                 Close
               </button>
             </div>
-            <div className="min-h-0 overflow-y-auto px-4 py-3 pb-[max(12px,env(safe-area-inset-bottom))]">{children}</div>
+            <div className="px-4 py-3 pb-[max(12px,env(safe-area-inset-bottom))]">{children}</div>
           </motion.div>
         </div>
       ) : null}

@@ -294,3 +294,15 @@ Light stays the default: cream paper `#f3f1eb`, green `#1b5e45`. Dark is ink `#1
 At 390×844 and 360×740, in both themes, the tab bar’s bottom edge sits on the viewport and nothing in the briefing overflows it. The bar already carries `padding-bottom: env(safe-area-inset-bottom)`. In this browser that inset is 0, so the padding computes to 0 and the labels sit on the bottom edge rather than past it.
 
 The research tab now renders the statuses the ledger already returns. Delivered, tracking ahead, on track, tracking behind, partly, and missed stay grouped. Borderline is amber, shows the promised band and the actual, the definition note, and the line that the figure is derived and sits within about 60 bps of the band edge. A `definition ambiguous` row shows both readings (the note after that prefix) and one line on why it is not scored. A superseded number is only in the revisions timeline, labelled superseded. `definition_note` and the word-band reading sit on the row. Segment, low confidence, and long-term targets keep their own place, with the stored reason. A 429 `daily_limit` shows “Daily free-tier limit reached. Cached companies still work.” and buttons for MARICO, ASIANPAINT, TITAN, CGPOWER, DMART, PIDILITIND, and WIPRO. If that same company is already on screen, it stays. The model line (guidance, verification, verdict) is only in Data and method.
+
+## 2026-11-11 — Briefing polish: intro sheet, compact results
+
+Opening “How FINN works” showed only “1 of 3”. The sheet was a flex column with a max height and no definite height, so the body collapsed to one line, and the intro opened under the menu that was still closing. The sheet now scrolls as a whole, the header sticks, and the intro sits above that closing menu. First run and the menu reopen both show the title, the short description, and Next, Back, and Done, for all three steps, in light and dark, at 390×844.
+
+A results card lays Revenue, EBITDA, PBT, and PAT out as a 2×2 grid. Each cell has the value and the QoQ and YoY chips. Tapping a cell opens the three bars, captioned “yr ago – prev qtr – now”. The lead Titan card, takeaway and source links included, fits on one phone screen under the header at 390×844 in both themes.
+
+The line at the top is computed from the numbers on the card. Titan reads “Revenue +10.1% YoY, PAT +113.7% YoY. EBITDA margin 14.5%, +4.5 pts YoY.” A negative or zero base uses the existing wording, so Bharat Forge PAT quarter-on-quarter says “swung to profit”. A bank or NBFC with an EBITDA reason drops the EBITDA cell and the margin sentence. A QoQ or YoY change past ±100%, or a base at or below zero, adds “Large swing. Check for one-off items; derived EBITDA includes exceptional items.”
+
+Source links are labelled by type: XBRL filing, Investor presentation, Outcome of board meeting PDF, or NSE filing. Two links of the same specific type collapse to one. Two generic NSE filings stay if their subjects differ. The date control shows “6 Nov 2026”.
+
+No model call. `finn_core` is unchanged. The web app is what gets redeployed.

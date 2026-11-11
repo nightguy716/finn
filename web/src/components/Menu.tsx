@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { modelLine } from '../format'
 import { PORTFOLIO } from '../portfolio'
 import type { LedgerUsage } from '../types'
@@ -24,11 +24,15 @@ const STEPS = [
 
 export function IntroSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [step, setStep] = useState(0)
-  const current = STEPS[step]
+  useEffect(() => {
+    if (open) setStep(0)
+  }, [open])
+  const current = STEPS[step] ?? STEPS[0]
   const last = step === STEPS.length - 1
   return (
     <SheetFrame
       open={open}
+      front
       title="How FINN works"
       onClose={() => {
         setStep(0)
@@ -38,8 +42,8 @@ export function IntroSheet({ open, onClose }: { open: boolean; onClose: () => vo
       <p className="font-mono text-[11px] text-mute">
         {step + 1} of {STEPS.length}
       </p>
-      <h3 className="mt-2 text-[18px] leading-tight font-medium">{current.title}</h3>
-      <p className="mt-2 text-[15px] leading-snug">{current.body}</p>
+      <h3 className="mt-2 text-[18px] leading-tight font-medium text-ink">{current.title}</h3>
+      <p className="mt-2 text-[15px] leading-snug text-ink">{current.body}</p>
       <div className="mt-4 flex gap-2">
         {step > 0 ? (
           <button type="button" className="h-9 border border-line px-3 text-[13px]" onClick={() => setStep((value) => value - 1)}>

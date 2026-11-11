@@ -1,24 +1,25 @@
 import { useState } from 'react'
 import type { Card, MetricLine } from '../types'
-import { categoryLabel, clock, crore, dayLabel, delta } from '../format'
+import { categoryLabel, clock, crore, dayLabel, delta, filingLinks, largeSwing, resultsTakeaway } from '../format'
 
 function Sources({ card }: { card: Card }) {
   const fromSources = (card.sources ?? []).filter((source) => source.url)
-  const links = fromSources.length
+  const raw = fromSources.length
     ? fromSources
-    : (card.source_urls ?? []).filter(Boolean).map((url) => ({ subject: 'Filing', url }))
+    : (card.source_urls ?? []).filter(Boolean).map((url) => ({ subject: '', url }))
+  const links = filingLinks(raw)
   if (!links.length) return <p className="mt-2 text-[12px] text-mute">No source link on this filing.</p>
   return (
     <ul className="mt-2 flex flex-col gap-1">
       {links.map((source) => (
-        <li key={`${source.subject}-${source.url}`}>
+        <li key={source.url}>
           <a
             href={source.url}
             target="_blank"
             rel="noreferrer"
             className="text-[12px] leading-snug text-accent underline decoration-accent/30 underline-offset-2"
           >
-            {source.subject || 'Filing'}
+            {source.label}
           </a>
         </li>
       ))}
@@ -62,69 +63,112 @@ function Change({ label, line, which }: { label: string; line: MetricLine; which
   const pct = which === 'qoq' ? line.qoq_pct : line.yoy_pct
   const change = delta(line.current, base, pct)
   return (
-    <span className="inline-flex items-baseline gap-1 border border-line px-1.5 py-[1px] font-mono text-[11px] tabular-nums">
+    <span className="inline-flex items-baseline gap-1 border border-line px-1 py-[1px] font-mono text-[10px] whitespace-nowrap tabular-nums">
       <span className="text-mute">{label}</span>
-      <span className={change?.tone === 'up' ? 'text-accent' : 'text-ink'}>{change ? change.text : '—'}</span>
+      <span className={change?.tone === 'up' ? 'text-accent' : change?.tone === 'down' ? 'text-fall' : 'text-ink'}>
+        {change ? change.text : '—'}
+      </span>
     </span>
   )
 }
 
-function Metric({ name, note, line }: { name: string; note?: string; line: MetricLine | undefined }) {
-  if (!line) {
-    return (
-      <div className="border-t border-line py-2">
-        <p className="text-[13px]">{name}</p>
-        <p className="font-mono text-[13px] text-mute">—</p>
-      </div>
-    )
-  }
+function Bars({ line }: { line: MetricLine }) {
   return (
-    <div className="border-t border-line py-2">
-      <div className="flex items-baseline justify-between gap-3">
-        <p className="text-[13px]">
-          {name}
-          {note ? <span className="ml-2 text-[11px] text-mute">{note}</span> : null}
-        </p>
-      </div>
-      <div className="mt-1 flex items-center justify-between gap-3">
-        <p className="font-mono text-[16px] tabular-nums">{crore(line.current)}</p>
-        <span className="flex flex-col items-end">
-          <Levels line={line} />
-          <span className="mt-0.5 font-mono text-[9px] tracking-tight text-mute">ago · prev · now</span>
-        </span>
-      </div>
-      <div className="mt-1.5 flex flex-wrap gap-1">
-        <Change label="QoQ" line={line} which="qoq" />
-        <Change label="YoY" line={line} which="yoy" />
-      </div>
+    <span className="flex flex-col items-end">
+      <Levels line={line} />
+      <span className="mt-0.5 font-mono text-[9px] tracking-tight text-mute">yr ago – prev qtr – now</span>
+    </span>
+  )
+}
+
+function Detail({
+  metrics,
+  openKey,
+  name,
+}: {
+  metrics: NonNullable<Card['body']['metrics']>
+  openKey: string
+  name: string
+}) {
+  const line = metrics[openKey as 'revenue' | 'ebitda' | 'pbt' | 'pat']
+  if (!line) return null
+  return (
+    <div className="mt-2 flex items-center justify-between gap-3 border border-line px-2 py-2">
+      <p className="text-[12px] text-mute">{name}</p>
+      <Bars line={line} />
     </div>
   )
 }
 
+const RESULT_METRICS: { key: 'revenue' | 'ebitda' | 'pbt' | 'pat'; name: string; note?: string }[] = [
+  { key: 'revenue', name: 'Revenue' },
+  { key: 'ebitda', name: 'EBITDA', note: 'derived' },
+  { key: 'pbt', name: 'PBT' },
+  { key: 'pat', name: 'PAT' },
+]
+
 export function ResultsCard({ card, hero = false }: { card: Card; hero?: boolean }) {
+  const [openKey, setOpenKey] = useState<string | null>(null)
   const metrics = card.body.metrics
   const reason = card.body.ebitda_reason?.trim()
+  const hasEbitda = !reason && Boolean(metrics?.ebitda)
   const period = card.body.period ? `Quarter ended ${dayLabel(card.body.period)}` : card.headline
+  const line = resultsTakeaway(metrics, hasEbitda)
+  const swing = largeSwing(metrics, hasEbitda)
+  const cells = RESULT_METRICS.filter((item) => item.key !== 'ebitda' || hasEbitda)
   return (
-    <article id={card.id} className={`border bg-card px-3.5 py-3 ${hero ? 'border-accent' : 'border-line'}`}>
+    <article id={card.id} className={`border bg-card px-3.5 py-2 ${hero ? 'border-accent' : 'border-line'}`}>
       <CardMeta card={card} hero={hero} />
       {hero ? <p className="mt-2 text-[11px] tracking-[0.14em] text-accent uppercase">Lead result</p> : null}
       <p className="mt-1 text-[12px] text-mute">
         Results · {period}
         {card.body.scope ? ` · ${card.body.scope}` : ''}
       </p>
+      {line ? <p className="mt-2 text-[14px] leading-snug">{line}</p> : null}
+      {swing ? (
+        <p className="mt-1 text-[12px] leading-snug text-mute">
+          Large swing. Check for one-off items; derived EBITDA includes exceptional items.
+        </p>
+      ) : null}
       {card.body.error ? <p className="mt-2 text-[13px]">{card.body.error}</p> : null}
       {metrics ? (
         <div className="mt-2">
           <p className="text-[11px] tracking-[0.08em] text-mute uppercase">₹ crore</p>
-          <Metric name="Revenue" line={metrics.revenue} />
-          {reason ? (
-            <p className="border-t border-line py-2 text-[12px] leading-snug text-mute">{reason}</p>
-          ) : (
-            <Metric name="EBITDA" note="approx., derived" line={metrics.ebitda} />
-          )}
-          <Metric name="PBT" line={metrics.pbt} />
-          <Metric name="PAT" line={metrics.pat} />
+          <div className="mt-1 grid grid-cols-2 gap-1">
+            {cells.map((item) => {
+              const metric = metrics[item.key]
+              const open = openKey === item.key
+              return (
+                <button
+                  key={item.key}
+                  type="button"
+                  aria-expanded={open}
+                  className={`border px-1.5 py-1 text-left ${open ? 'border-accent' : 'border-line'}`}
+                  onClick={() => setOpenKey(open ? null : item.key)}
+                >
+                  <span className="block text-[11px] text-mute">
+                    {item.name}
+                    {item.note ? <span className="ml-1">{item.note}</span> : null}
+                  </span>
+                  <span className="mt-0.5 block font-mono text-[15px] tabular-nums">{metric ? crore(metric.current) : '—'}</span>
+                  <span className="mt-1 flex flex-wrap gap-1">
+                    {metric ? (
+                      <>
+                        <Change label="QoQ" line={metric} which="qoq" />
+                        <Change label="YoY" line={metric} which="yoy" />
+                      </>
+                    ) : (
+                      <span className="font-mono text-[11px] text-mute">—</span>
+                    )}
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+          {reason ? <p className="mt-1.5 text-[12px] leading-snug text-mute">{reason}</p> : null}
+          {openKey ? (
+            <Detail metrics={metrics} openKey={openKey} name={cells.find((item) => item.key === openKey)?.name ?? openKey} />
+          ) : null}
         </div>
       ) : (
         <p className="mt-2 text-[13px] text-mute">Figures are not on this card.</p>
