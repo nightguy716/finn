@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { modelLine } from '../format'
 import { PORTFOLIO } from '../portfolio'
+import type { LedgerUsage } from '../types'
 import { SheetFrame } from './Sheets'
 
 export type ThemeChoice = 'system' | 'light' | 'dark'
@@ -73,6 +75,7 @@ export function MenuSheet({
   onClear,
   onThresholds,
   onTheme,
+  usage,
 }: {
   open: boolean
   page: MenuPage
@@ -85,6 +88,7 @@ export function MenuSheet({
   onClear: () => void
   onThresholds: () => void
   onTheme: (theme: ThemeChoice) => void
+  usage: LedgerUsage | null
 }) {
   const title =
     page === 'portfolio' ? 'Portfolio' : page === 'method' ? 'Data and method' : page === 'theme' ? 'Theme' : 'Menu'
@@ -141,6 +145,7 @@ export function MenuSheet({
             <li>Filings come from NSE.</li>
             <li>EBITDA is derived and excludes other income.</li>
             <li>Replay mode keeps the demo on a fixed day so the same filings are here whenever you open it.</li>
+            {modelLine(usage) ? <li>{modelLine(usage)}</li> : null}
           </ul>
         </div>
       ) : null}

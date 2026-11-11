@@ -4,7 +4,7 @@ import { Briefing } from './components/Briefing'
 import { IntroSheet, MenuSheet, type MenuPage, type ThemeChoice } from './components/Menu'
 import { Research } from './components/Research'
 import { AlertSheet, SettingsSheet } from './components/Sheets'
-import type { Alert, AlertConfig, Feed, LoadStatus } from './types'
+import type { Alert, AlertConfig, Feed, LedgerUsage, LoadStatus } from './types'
 
 const INTRO_KEY = 'finn.intro'
 const THEME_KEY = 'finn.theme'
@@ -34,6 +34,7 @@ export default function App() {
   const [menuPage, setMenuPage] = useState<MenuPage>('root')
   const [introOpen, setIntroOpen] = useState(() => localStorage.getItem(INTRO_KEY) !== 'seen')
   const [theme, setTheme] = useState<ThemeChoice>(loadTheme)
+  const [usage, setUsage] = useState<LedgerUsage | null>(null)
 
   useEffect(() => {
     const dark =
@@ -130,6 +131,7 @@ export default function App() {
                 setMenuPage('root')
                 setMenuOpen(true)
               }}
+              onUsage={setUsage}
             />
           )}
         </main>
@@ -169,6 +171,7 @@ export default function App() {
             setSettingsOpen(true)
           }}
           onTheme={setTheme}
+          usage={usage}
         />
         <SettingsSheet
           open={settingsOpen}

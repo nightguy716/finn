@@ -1,3 +1,5 @@
+import type { LedgerUsage } from './types'
+
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 export const WINDOWS = [
@@ -140,4 +142,16 @@ export function windowSummary(cards: { category: string }[], movers: number): st
     plural(movers, 'mover'),
   ].filter(Boolean)
   return `This window: ${parts.join(', ')}.`
+}
+
+/** Which model ran each ledger step. Shown in Data and method, not on the ledger itself. */
+export function modelLine(usage: LedgerUsage | null | undefined): string {
+  if (!usage) return ''
+  const steps = [
+    usage.guidance?.model ? `guidance on ${usage.guidance.model}` : '',
+    usage.verify?.model ? `verification on ${usage.verify.model}` : '',
+    usage.verdict?.model ? `the verdict on ${usage.verdict.model}` : '',
+  ].filter(Boolean)
+  if (!steps.length) return ''
+  return `This ledger: ${steps.join(', ')}.`
 }

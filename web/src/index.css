@@ -10,6 +10,7 @@
   --color-line: #e2ddd2;
   --color-accent: #1b5e45;
   --color-fall: #8f3d32;
+  --color-amber: #8a5a12;
   --color-desk: #e4e0d6;
 }
 
@@ -27,6 +28,7 @@ html[data-theme='dark'] {
   --color-line: #3c3830;
   --color-accent: #8fceb3;
   --color-fall: #e3a396;
+  --color-amber: #e6c27a;
   --color-desk: #0e0d0b;
 }
 

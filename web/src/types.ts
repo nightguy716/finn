@@ -109,6 +109,30 @@ export type LedgerRevision = {
   change: string
   page?: number | null
   quote?: string
+  superseded?: boolean
+}
+
+export type LedgerReading = {
+  metric: string
+  status?: string
+  actual?: string | null
+  actual_value?: number | null
+  detail?: string
+}
+
+export type UsageBucket = {
+  model?: string
+  models?: string[]
+  tokens?: number
+  calls?: number
+  cache_hits?: number
+}
+
+export type LedgerUsage = {
+  guidance?: UsageBucket
+  verify?: UsageBucket
+  verdict?: UsageBucket
+  total_tokens?: number
 }
 
 export type LedgerRow = {
@@ -130,6 +154,8 @@ export type LedgerRow = {
   target_high?: number | null
   call_date?: string
   revisions?: LedgerRevision[]
+  definition_note?: string
+  readings?: LedgerReading[]
 }
 
 export type SnapshotPoint = {
@@ -161,6 +187,7 @@ export type Ledger = {
   revisions?: { raised?: number; cut?: number; maintained?: number }
   verdict?: string
   progress?: LedgerProgress
+  usage?: LedgerUsage
 }
 
 export type LedgerResponse = {

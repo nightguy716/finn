@@ -3,12 +3,13 @@ import { bandNote, dayLabel } from '../format'
 import type { Ledger, LedgerRevision, LedgerRow } from '../types'
 import { CompanySnapshot } from './Snapshot'
 
-const SCORED: { status: string; label: string }[] = [
+const SCORED: { status: string; label: string; tone?: string }[] = [
   { status: 'delivered', label: 'Delivered' },
   { status: 'tracking_ahead', label: 'Tracking ahead' },
   { status: 'tracking_on_track', label: 'On track' },
   { status: 'tracking_behind', label: 'Tracking behind' },
   { status: 'partly', label: 'Partly' },
+  { status: 'borderline', label: 'Borderline', tone: 'text-amber' },
   { status: 'missed', label: 'Missed' },
 ]
 
@@ -48,13 +49,13 @@ export function LedgerView({ ledger }: { ledger: Ledger }) {
         <div className="mt-5 flex flex-col gap-4">
           {scored.map((group) => (
             <section key={group.status}>
-              <h2 className="text-[11px] tracking-[0.14em] text-mute uppercase">
+              <h2 className={`text-[11px] tracking-[0.14em] uppercase ${group.tone || 'text-mute'}`}>
                 {group.label}
                 <span className="ml-2 font-mono">{group.rows.length}</span>
               </h2>
               <div className="mt-2 flex flex-col gap-2">
                 {group.rows.map((row) => (
-                  <ScoredRow key={rowKey(row)} row={row} />
+                  <ScoredRow key={rowKey(row)} row={row} tone={group.tone} />
                 ))}
               </div>
             </section>
@@ -75,7 +76,7 @@ export function LedgerView({ ledger }: { ledger: Ledger }) {
                       <p className="font-mono text-[11px] text-mute tabular-nums">{step.date ? dayLabel(step.date) : 'Date not stated'}</p>
                       <p className="text-[13px]">
                         <span className="font-mono tabular-nums">{step.value}</span>
-                        <span className="ml-2 text-mute">{changeWord(step)}</span>
+                        <span className="ml-2 text-mute">{step.superseded ? 'superseded' : changeWord(step)}</span>
                       </p>
                     </li>
                   ))}
@@ -105,33 +106,37 @@ export function LedgerView({ ledger }: { ledger: Ledger }) {
   )
 }
 
-function ScoredRow({ row }: { row: LedgerRow }) {
+function ScoredRow({ row, tone }: { row: LedgerRow; tone?: string }) {
   const [open, setOpen] = useState(false)
-  const mapped = bandNote(row.source_quote || '', row.target_low, row.target_high)
   const arithmetic = (row.actual_detail || '').trim()
   const note = (row.note || '').trim()
+  const borderline = row.status === 'borderline'
   return (
-    <article className="border border-line bg-card">
+    <article className={`border bg-card ${borderline ? 'border-amber' : 'border-line'}`}>
       <button type="button" className="w-full px-3 py-2.5 text-left" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
         <span className="block text-[14px] leading-snug">{row.promise}</span>
         <span className="mt-1 flex items-baseline justify-between gap-3 font-mono text-[12px] tabular-nums">
-          <span>{row.actual ?? '—'}</span>
+          <span className={tone || ''}>
+            {row.promised || '—'}
+            <span className="mx-1 text-mute">against</span>
+            {row.actual ?? '—'}
+          </span>
           <span className="text-mute">{open ? 'Hide' : 'Source'}</span>
         </span>
       </button>
+      <RowNotes row={row} pad />
+      {borderline ? (
+        <p className="px-3 pb-2.5 text-[12px] leading-snug text-amber">
+          The figure is derived and sits within about 60 bps of the band edge.
+        </p>
+      ) : null}
       {open ? (
         <div className="border-t border-line px-3 py-2.5">
           {row.source_quote ? <p className="text-[13px] leading-snug">“{row.source_quote}”</p> : null}
           <p className="mt-2 text-[12px] text-mute">{row.speaker?.trim() ? `Speaker ${row.speaker.trim()}` : 'Speaker not named'}</p>
           <Source row={row} />
-          <p className="mt-2 text-[13px]">
-            Promised <span className="font-mono tabular-nums">{row.promised || '—'}</span>
-            <span className="mx-1 text-mute">against</span>
-            actual <span className="font-mono tabular-nums">{row.actual ?? '—'}</span>
-          </p>
-          {arithmetic ? <p className="mt-1 text-[13px] leading-snug">{arithmetic}</p> : null}
+          {arithmetic ? <p className="mt-2 text-[13px] leading-snug">{arithmetic}</p> : null}
           {note && note !== arithmetic ? <p className="mt-1 text-[13px] leading-snug text-mute">{note}</p> : null}
-          {mapped ? <p className="mt-2 text-[12px] text-mute">{mapped}</p> : null}
         </div>
       ) : null}
     </article>
@@ -139,17 +144,53 @@ function ScoredRow({ row }: { row: LedgerRow }) {
 }
 
 function PlainRow({ row }: { row: LedgerRow }) {
-  const mapped = bandNote(row.source_quote || '', row.target_low, row.target_high)
-  const reason = (row.note || '').trim() || 'No reason was stored for this row.'
+  const ambiguous = ambiguousReadings(row)
   return (
     <article className="border-t border-line py-2.5">
       <p className="text-[14px] leading-snug">{row.promise}</p>
-      <p className="mt-1 text-[13px] leading-snug text-mute">{reason}</p>
+      {ambiguous ? (
+        <>
+          <p className="mt-1 text-[13px] leading-snug">{ambiguous}</p>
+          <p className="mt-1 text-[13px] leading-snug text-mute">
+            We do not score it because the quote does not define the margin, and the two readings disagree.
+          </p>
+        </>
+      ) : (
+        <p className="mt-1 text-[13px] leading-snug text-mute">{plainReason(row)}</p>
+      )}
       {row.source_quote ? <p className="mt-1 text-[13px] leading-snug">“{row.source_quote}”</p> : null}
-      {mapped ? <p className="mt-1 text-[12px] text-mute">{mapped}</p> : null}
+      <RowNotes row={row} />
       <Source row={row} />
     </article>
   )
+}
+
+function RowNotes({ row, pad = false }: { row: LedgerRow; pad?: boolean }) {
+  const mapped = bandNote(row.source_quote || '', row.target_low, row.target_high)
+  const definition = (row.definition_note || '').trim()
+  if (!definition && !mapped) return null
+  return (
+    <div className={pad ? 'px-3 pb-2' : 'mt-1'}>
+      {definition ? <p className="text-[12px] leading-snug text-mute">{definition}</p> : null}
+      {mapped ? <p className={`text-[12px] leading-snug text-mute ${definition ? 'mt-1' : ''}`}>{mapped}</p> : null}
+    </div>
+  )
+}
+
+function ambiguousReadings(row: LedgerRow): string {
+  const note = (row.note || '').trim()
+  if (!/^definition ambiguous\b/i.test(note)) return ''
+  return note.replace(/^definition ambiguous\.?\s*/i, '')
+}
+
+function plainReason(row: LedgerRow): string {
+  const note = (row.note || '').trim()
+  if (note) return note
+  if (row.status === 'segment_level') return 'This figure is for a segment.'
+  if (row.status === 'low_confidence') return 'Low confidence, so this row is not scored.'
+  if (row.status === 'not_scored') return 'Not scored.'
+  if (row.status === 'long_term') return 'A longer horizon. The quote does not name a year.'
+  return 'No reason was stored for this row.'
 }
 
 function Source({ row }: { row: LedgerRow }) {

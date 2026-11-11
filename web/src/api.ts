@@ -2,6 +2,18 @@ import type { AlertConfig, Feed, LedgerResponse } from './types'
 
 const BASE = (import.meta.env.VITE_API_BASE || 'https://finn-r4y3.vercel.app').replace(/\/$/, '')
 
+export class ApiError extends Error {
+  status: number
+  code: string
+
+  constructor(status: number, code: string, message: string) {
+    super(message)
+    this.name = 'ApiError'
+    this.status = status
+    this.code = code
+  }
+}
+
 export type FeedQuery = {
   asOf: string
   hours: number
@@ -20,7 +32,13 @@ async function getJson<T>(path: string, params: Record<string, string>, signal: 
     if (error instanceof DOMException && error.name === 'AbortError') throw error
     throw new Error(`The ${what} could not be loaded.`)
   }
-  if (!response.ok) throw new Error(`The ${what} could not be loaded (${response.status}).`)
+  if (!response.ok) {
+    const body = (await response.json().catch(() => null)) as { error?: string } | null
+    if (response.status === 429 && body?.error === 'daily_limit') {
+      throw new ApiError(429, 'daily_limit', 'Daily free-tier limit reached. Cached companies still work.')
+    }
+    throw new ApiError(response.status, body?.error || '', `The ${what} could not be loaded (${response.status}).`)
+  }
   return response.json() as Promise<T>
 }
 

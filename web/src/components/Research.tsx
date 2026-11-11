@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
-import { fetchLedger } from '../api'
-import type { Ledger, LedgerProgress } from '../types'
+import { ApiError, fetchLedger } from '../api'
+import type { Ledger, LedgerProgress, LedgerUsage } from '../types'
 import { LedgerView } from './Ledger'
 
 const PRESETS = ['MARICO', 'ASIANPAINT', 'TITAN', 'PIDILITIND']
+const CACHED = ['MARICO', 'ASIANPAINT', 'TITAN', 'CGPOWER', 'DMART', 'PIDILITIND', 'WIPRO']
 const RECENT_KEY = 'finn.recent'
 const SYMBOL = /^[A-Z0-9&-]{1,20}$/
 
-type Phase = 'idle' | 'running' | 'ready' | 'error'
+type Phase = 'idle' | 'running' | 'ready' | 'error' | 'limited'
 
-export function Research({ onOpenMenu }: { onOpenMenu: () => void }) {
+export function Research({ onOpenMenu, onUsage }: { onOpenMenu: () => void; onUsage: (usage: LedgerUsage | null) => void }) {
   const [draft, setDraft] = useState('')
   const [symbol, setSymbol] = useState('')
   const [attempt, setAttempt] = useState(0)
@@ -18,6 +19,7 @@ export function Research({ onOpenMenu }: { onOpenMenu: () => void }) {
   const [progress, setProgress] = useState<LedgerProgress | null>(null)
   const [ledger, setLedger] = useState<Ledger | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [limited, setLimited] = useState(false)
   const [notice, setNotice] = useState('')
 
   useEffect(() => {
@@ -26,19 +28,26 @@ export function Research({ onOpenMenu }: { onOpenMenu: () => void }) {
     let cancelled = false
     setPhase('running')
     setError(null)
+    setLimited(false)
 
+    const existing = ledger
     async function run() {
       let previous = ''
+      let held: Ledger | null = null
       while (!cancelled) {
         try {
           const body = await fetchLedger(symbol, ctrl.signal)
           if (cancelled) return
           const next = body.ledger ?? null
           const step = body.progress ?? next?.progress ?? null
-          if (next) setLedger(next)
+          if (next) {
+            held = next
+            setLedger(next)
+          }
           if (step) setProgress(step)
           if (step?.stage === 'complete' && next) {
             setPhase('ready')
+            onUsage(next.usage ?? null)
             return
           }
           if (!next && !step) throw new Error('The ledger came back in an unexpected shape.')
@@ -47,6 +56,16 @@ export function Research({ onOpenMenu }: { onOpenMenu: () => void }) {
           previous = mark
         } catch (reason) {
           if (cancelled || (reason instanceof DOMException && reason.name === 'AbortError')) return
+          if (reason instanceof ApiError && reason.code === 'daily_limit') {
+            const arrived = held && (held.rows?.length || held.verdict) ? held : null
+            const keep = arrived || (existing?.symbol === symbol ? existing : null)
+            setLimited(true)
+            if (keep) {
+              setLedger(keep)
+              setPhase('ready')
+            } else setPhase('limited')
+            return
+          }
           setError(reason instanceof Error ? reason.message : 'This step failed.')
           setPhase('error')
           return
@@ -59,7 +78,7 @@ export function Research({ onOpenMenu }: { onOpenMenu: () => void }) {
       cancelled = true
       ctrl.abort()
     }
-  }, [symbol, attempt])
+  }, [symbol, attempt, onUsage])
 
   function openSymbol(raw: string) {
     const next = raw.trim().toUpperCase()
@@ -73,6 +92,7 @@ export function Research({ onOpenMenu }: { onOpenMenu: () => void }) {
     setLedger(null)
     setProgress(null)
     setError(null)
+    setLimited(false)
     setPhase('running')
     remember(next)
     if (next === symbol) setAttempt((value) => value + 1)
@@ -151,7 +171,20 @@ export function Research({ onOpenMenu }: { onOpenMenu: () => void }) {
         </div>
       ) : null}
 
-      {symbol && phase !== 'ready' ? (
+      {limited ? (
+        <div className="mt-3 w-full border border-line bg-card px-3 py-3">
+          <p className="text-[14px] leading-snug">Daily free-tier limit reached. Cached companies still work.</p>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {CACHED.map((item) => (
+              <button key={item} type="button" className="h-7 border border-line px-2 font-mono text-[12px]" onClick={() => openSymbol(item)}>
+                {item}
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : null}
+
+      {symbol && phase !== 'ready' && phase !== 'limited' ? (
         <div className="mt-4" aria-live="polite">
           <p className="text-[14px]">{progressLine(progress, busy, ledger?.coverage?.transcripts_found ?? null)}</p>
           <div className="mt-2 h-[3px] bg-line" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(fraction * 100)}>
