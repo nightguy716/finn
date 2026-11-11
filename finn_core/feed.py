@@ -89,7 +89,7 @@ def build_feed(
             continue
         routine[event["symbol"]] = routine.get(event["symbol"], 0) + len(event["filings"])
 
-    alerts = _alerts(symbols, events, start.date(), as_of.date(), move_pct, volume_n, alert_cap, failures)
+    alerts = _alerts(symbols, events, {card["id"]: card for card in cards}, start.date(), as_of.date(), move_pct, volume_n, alert_cap, failures)
     usage["total_tokens"] = usage["management_change"]["tokens"] + usage["summary"]["tokens"]
     payload = {
         "as_of": as_of.isoformat(timespec="seconds"),
@@ -267,7 +267,7 @@ def _event_text(event: dict, client, cache, failures: list[str], limit: int) -> 
     return "\n\n".join(piece[:share] for piece in pieces)[:limit], note, used_pdf
 
 
-def _alerts(symbols, events, start: date, end: date, move_pct: float, volume_n: float, alert_cap: int, failures: list[str]) -> list[dict]:
+def _alerts(symbols, events, cards_by_id: dict, start: date, end: date, move_pct: float, volume_n: float, alert_cap: int, failures: list[str]) -> list[dict]:
     try:
         bars = fetch_eod(symbols, start - timedelta(days=45), end)
     except Exception as exc:
@@ -282,7 +282,16 @@ def _alerts(symbols, events, start: date, end: date, move_pct: float, volume_n: 
                 if event["symbol"] != symbol:
                     continue
                 if abs((event["when"].date() - day).days) <= 1:
-                    nearby.append({"id": event["id"], "category": event["category"], "headline": event["subject"]})
+                    card = cards_by_id.get(event["id"]) or {}
+                    nearby.append(
+                        {
+                            "id": event["id"],
+                            "category": event["category"],
+                            "headline": event["subject"],
+                            "summary": card.get("headline") or "",
+                            "timestamp": event["when"].isoformat(timespec="seconds"),
+                        }
+                    )
             nearby.sort(key=lambda item: item["category"] != "results")
             found.append(
                 {
@@ -291,6 +300,7 @@ def _alerts(symbols, events, start: date, end: date, move_pct: float, volume_n: 
                     "date": alert["date"],
                     "close": alert["close"],
                     "move_pct": alert["move_pct"],
+                    "signed_move_pct": alert["signed_move_pct"],
                     "volume_ratio": alert["volume_ratio"],
                     "severity": alert["severity"],
                     "price_hit": alert["price_hit"],

@@ -46,7 +46,8 @@ def detect_alerts(
             continue
         if index < 1 or not bar["close"] or not bars[index - 1]["close"]:
             continue
-        move = abs(bar["close"] / bars[index - 1]["close"] - 1.0) * 100.0
+        signed = (bar["close"] / bars[index - 1]["close"] - 1.0) * 100.0
+        move = abs(signed)
         prior = bars[max(0, index - 20) : index]
         ratio = None
         if len(prior) >= 20:
@@ -63,6 +64,7 @@ def detect_alerts(
                 "date": bar["date"].isoformat(),
                 "close": round(bar["close"], 2),
                 "move_pct": round(move, 2),
+                "signed_move_pct": round(signed, 2),
                 "volume_ratio": round(ratio, 2) if ratio is not None else None,
                 "volume_hit": volume_hit,
                 "price_hit": price_hit,

@@ -45,6 +45,8 @@ export type AlertEvent = {
   id: string
   category: string
   headline: string
+  summary?: string
+  timestamp?: string
 }
 
 export type Alert = {
@@ -53,6 +55,7 @@ export type Alert = {
   date: string
   close: number
   move_pct: number
+  signed_move_pct?: number
   volume_ratio: number | null
   severity: number
   price_hit: boolean

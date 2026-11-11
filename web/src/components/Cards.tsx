@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { Card, MetricLine } from '../types'
-import { categoryLabel, clock, crore, dayLabel, delta, shortDay } from '../format'
+import { categoryLabel, clock, crore, dayLabel, delta } from '../format'
 
 function Sources({ card }: { card: Card }) {
   const fromSources = (card.sources ?? []).filter((source) => source.url)
@@ -26,12 +26,15 @@ function Sources({ card }: { card: Card }) {
   )
 }
 
-function CardMeta({ card }: { card: Card }) {
+function CardMeta({ card, hero = false }: { card: Card; hero?: boolean }) {
   return (
-    <div className="flex items-baseline justify-between gap-3">
-      <p className="font-mono text-[11px] tracking-[0.04em] text-mute">{card.symbol}</p>
-      <p className="font-mono text-[11px] tabular-nums text-mute">
-        {shortDay(card.timestamp)} {clock(card.timestamp)}
+    <div className="flex items-start justify-between gap-3">
+      <p className="min-w-0">
+        <span className="font-mono text-[12px] text-mute">{card.symbol}</span>
+        <span className={`mt-0.5 block leading-tight font-medium ${hero ? 'text-[20px]' : 'text-[16px]'}`}>{card.company}</span>
+      </p>
+      <p className="shrink-0 font-mono text-[11px] tabular-nums text-mute">
+        {dayLabel(card.timestamp)} {clock(card.timestamp)}
       </p>
     </div>
   )
@@ -104,9 +107,8 @@ export function ResultsCard({ card, hero = false }: { card: Card; hero?: boolean
   const period = card.body.period ? `Quarter ended ${dayLabel(card.body.period)}` : card.headline
   return (
     <article id={card.id} className={`border bg-card px-3.5 py-3 ${hero ? 'border-accent' : 'border-line'}`}>
-      <CardMeta card={card} />
+      <CardMeta card={card} hero={hero} />
       {hero ? <p className="mt-2 text-[11px] tracking-[0.14em] text-accent uppercase">Lead result</p> : null}
-      <h3 className={`leading-tight font-medium ${hero ? 'mt-1 text-[20px]' : 'mt-1 text-[16px]'}`}>{card.company}</h3>
       <p className="mt-1 text-[12px] text-mute">
         Results · {period}
         {card.body.scope ? ` · ${card.body.scope}` : ''}
@@ -140,7 +142,6 @@ export function ManagementCard({ card }: { card: Card }) {
   return (
     <article id={card.id} className="border border-line bg-card px-3.5 py-3">
       <CardMeta card={card} />
-      <p className="mt-1 text-[12px] text-mute">{card.company}</p>
       <p className="mt-2 text-[11px] tracking-[0.14em] text-accent uppercase">{kind}</p>
       <h3 className="mt-1 text-[16px] leading-tight font-medium">{card.body.person || card.headline}</h3>
       {card.body.role ? <p className="mt-0.5 text-[13px] leading-snug">{card.body.role}</p> : null}
@@ -172,10 +173,7 @@ export function MaterialCard({ card }: { card: Card }) {
   return (
     <article id={card.id} className="border border-line bg-card px-3.5 py-3">
       <CardMeta card={card} />
-      <div className="mt-1 flex items-baseline gap-2">
-        <p className="text-[11px] tracking-[0.14em] text-accent uppercase">{categoryLabel(card.category)}</p>
-        <p className="text-[12px] text-mute">{card.company}</p>
-      </div>
+      <p className="mt-2 text-[11px] tracking-[0.14em] text-accent uppercase">{categoryLabel(card.category)}</p>
       <p className="mt-1.5 text-[14px] leading-snug">{line}</p>
       <Sources card={card} />
     </article>

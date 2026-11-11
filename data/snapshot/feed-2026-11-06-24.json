@@ -111,6 +111,7 @@
       "date": "2026-11-05",
       "close": 1070.0,
       "move_pct": 7.65,
+      "signed_move_pct": 7.65,
       "volume_ratio": 3.45,
       "severity": 26.38,
       "price_hit": true,
@@ -119,7 +120,9 @@
         {
           "id": "bajfinance-shareholder_meeting-202611041529-shareholders-meeting",
           "category": "shareholder_meeting",
-          "headline": "Shareholders meeting"
+          "headline": "Shareholders meeting",
+          "summary": "",
+          "timestamp": "2026-11-04T15:29:09"
         }
       ]
     },
@@ -129,6 +132,7 @@
       "date": "2026-11-06",
       "close": 773.0,
       "move_pct": 4.43,
+      "signed_move_pct": -4.43,
       "volume_ratio": 5.12,
       "severity": 22.66,
       "price_hit": false,
@@ -137,7 +141,9 @@
         {
           "id": "cgpower-litigation-202611051235-action-s-taken-or-orders-passed",
           "category": "litigation",
-          "headline": "Action(s) taken or orders passed"
+          "headline": "Action(s) taken or orders passed",
+          "summary": "",
+          "timestamp": "2026-11-05T12:35:21"
         }
       ]
     },
@@ -147,6 +153,7 @@
       "date": "2026-11-06",
       "close": 5000.0,
       "move_pct": 3.42,
+      "signed_move_pct": 3.42,
       "volume_ratio": 5.55,
       "severity": 19.0,
       "price_hit": false,
@@ -155,32 +162,44 @@
         {
           "id": "titan-results-202611051911-financial-results-consolidated-un-audited-period",
           "category": "results",
-          "headline": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026"
+          "headline": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026",
+          "summary": "",
+          "timestamp": "2026-11-05T19:11:12"
         },
         {
           "id": "titan-management_change-202611051851-retirement",
           "category": "management_change",
-          "headline": "Retirement"
+          "headline": "Retirement",
+          "summary": "",
+          "timestamp": "2026-11-05T18:51:55"
         },
         {
           "id": "titan-management_change-202611051836-change-in-auditors",
           "category": "management_change",
-          "headline": "Change in Auditors"
+          "headline": "Change in Auditors",
+          "summary": "",
+          "timestamp": "2026-11-05T18:36:30"
         },
         {
           "id": "titan-concall-202611052033-analysts-institutional-investor-meet-con-call-up",
           "category": "concall",
-          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates",
+          "summary": "",
+          "timestamp": "2026-11-05T20:33:40"
         },
         {
           "id": "titan-routine-202611051823-general-updates",
           "category": "routine",
-          "headline": "General Updates"
+          "headline": "General Updates",
+          "summary": "",
+          "timestamp": "2026-11-05T18:23:47"
         },
         {
           "id": "titan-routine-202611061656-copy-of-newspaper-publication",
           "category": "routine",
-          "headline": "Copy of Newspaper Publication"
+          "headline": "Copy of Newspaper Publication",
+          "summary": "",
+          "timestamp": "2026-11-06T16:56:24"
         }
       ]
     },
@@ -190,6 +209,7 @@
       "date": "2026-11-05",
       "close": 1753.0,
       "move_pct": 3.3,
+      "signed_move_pct": -3.3,
       "volume_ratio": 4.75,
       "severity": 15.67,
       "price_hit": false,
@@ -198,32 +218,44 @@
         {
           "id": "bharatforg-results-202611051854-financial-results-consolidated-un-audited-period",
           "category": "results",
-          "headline": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026"
+          "headline": "Financial Results Consolidated Un-Audited period ended 30-SEP-2026",
+          "summary": "",
+          "timestamp": "2026-11-05T18:54:55"
         },
         {
           "id": "bharatforg-m_and_a-202611051314-acquisition",
           "category": "m_and_a",
-          "headline": "Acquisition"
+          "headline": "Acquisition",
+          "summary": "",
+          "timestamp": "2026-11-05T13:14:31"
         },
         {
           "id": "bharatforg-concall-202611061557-analysts-institutional-investor-meet-con-call-up",
           "category": "concall",
-          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates",
+          "summary": "",
+          "timestamp": "2026-11-06T15:57:58"
         },
         {
           "id": "bharatforg-concall-202611051735-analysts-institutional-investor-meet-con-call-up",
           "category": "concall",
-          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates"
+          "headline": "Analysts/Institutional Investor Meet/Con. Call Updates",
+          "summary": "",
+          "timestamp": "2026-11-05T17:35:03"
         },
         {
           "id": "bharatforg-routine-202611051738-monitoring-agency-report",
           "category": "routine",
-          "headline": "Monitoring Agency Report"
+          "headline": "Monitoring Agency Report",
+          "summary": "",
+          "timestamp": "2026-11-05T17:38:17"
         },
         {
           "id": "bharatforg-routine-202611051727-updates",
           "category": "routine",
-          "headline": "Updates"
+          "headline": "Updates",
+          "summary": "",
+          "timestamp": "2026-11-05T17:27:52"
         }
       ]
     },
@@ -233,6 +265,7 @@
       "date": "2026-11-05",
       "close": 12652.0,
       "move_pct": 5.48,
+      "signed_move_pct": 5.48,
       "volume_ratio": 2.59,
       "severity": 14.2,
       "price_hit": true,

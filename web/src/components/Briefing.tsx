@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import type { Alert, AlertConfig, Feed, LoadStatus } from '../types'
-import { WINDOWS, plural, replayLine, shiftBack, shortDay, windowSummary } from '../format'
+import { WINDOWS, dayLabel, plural, replayLine, shiftBack, windowSummary } from '../format'
 import { FilingCard } from './Cards'
 
 export function Briefing({
@@ -123,13 +123,16 @@ export function Briefing({
                     type="button"
                     className="w-[118px] shrink-0 border border-line bg-card px-2 py-1.5 text-left"
                     onClick={() => onOpenAlert(alert)}
-                    aria-label={`${alert.symbol}, ${alert.date}, move ${alert.move_pct} percent, volume ${alert.volume_ratio ?? 'unknown'} times`}
+                    aria-label={`${alert.symbol}, ${dayLabel(alert.date)}, ${moverLabel(alert.signed_move_pct, alert.move_pct)}, volume ${alert.volume_ratio ?? 'unknown'} times the 20-day average`}
                   >
                     <span className="block font-mono text-[12px]">{alert.symbol}</span>
-                    <span className="mt-0.5 block font-mono text-[10px] text-mute tabular-nums">{shortDay(alert.date)}</span>
-                    <span className="mt-0.5 flex items-baseline justify-between font-mono text-[12px] tabular-nums">
-                      <span>{alert.move_pct.toFixed(1)}%</span>
-                      <span>{alert.volume_ratio == null ? '—' : `${alert.volume_ratio.toFixed(1)}×`}</span>
+                    <span className="mt-0.5 block font-mono text-[10px] text-mute tabular-nums">{dayLabel(alert.date)}</span>
+                    <span className={`mt-0.5 block font-mono text-[13px] tabular-nums ${moverTone(alert.signed_move_pct)}`}>
+                      {moverLabel(alert.signed_move_pct, alert.move_pct)}
+                    </span>
+                    <span className="mt-0.5 block font-mono text-[10px] text-mute tabular-nums">
+                      {alert.volume_ratio == null ? 'Volume n/a' : `${alert.volume_ratio.toFixed(1)}×`}
+                      <span className="mt-px block tracking-normal">vs 20-day avg</span>
                     </span>
                     <span className="mt-1.5 block h-[3px] bg-line" aria-hidden="true">
                       <span
@@ -234,6 +237,18 @@ function Skeleton() {
       </div>
     </div>
   )
+}
+
+function moverLabel(signed: number | undefined, absolute: number): string {
+  if (signed == null || Number.isNaN(signed)) return `${absolute.toFixed(1)}%`
+  const arrow = signed > 0 ? '↑' : signed < 0 ? '↓' : ''
+  const sign = signed > 0 ? '+' : ''
+  return `${arrow} ${sign}${signed.toFixed(1)}%`.trim()
+}
+
+function moverTone(signed: number | undefined): string {
+  if (signed == null || signed === 0) return ''
+  return signed > 0 ? 'text-accent' : 'text-fall'
 }
 
 function heroId(cards: { id: string; category: string }[]): string | undefined {

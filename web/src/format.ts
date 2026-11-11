@@ -72,11 +72,23 @@ export function delta(current: number | null | undefined, base: number | null | 
   return { text: `${sign}${pct.toFixed(1)}%`, tone }
 }
 
-export function replayLine(asOf: string, start?: string): string {
-  const end = dayLabel(asOf)
-  const from = start ? dayLabel(start) : ''
-  const span = from ? `${from} – ${end}` : end
-  return `Replay of ${span}. The same filings, whenever you open it.`
+export function replayLine(asOf: string, _start?: string): string {
+  return `Replay mode: showing ${dayLabel(asOf)} so the demo stays stable.`
+}
+
+/** Where a filing sits relative to the session, without saying the filing caused the move. */
+export function relativeToMove(timestamp: string | undefined, moveDay: string): string {
+  if (!timestamp) return 'Time not on the filing'
+  const filed = timestamp.slice(0, 10)
+  const time = clock(timestamp)
+  const clocked = time ? `, ${time}` : ''
+  if (filed === moveDay.slice(0, 10)) return `Same day as the move${clocked}`
+  const days = Math.round((Date.parse(filed) - Date.parse(moveDay.slice(0, 10))) / 86_400_000)
+  if (days === -1) return `The day before the move${clocked}`
+  if (days === 1) return `The day after the move${clocked}`
+  if (days < 0) return `${Math.abs(days)} days before the move${clocked}`
+  if (Number.isNaN(days)) return 'Time not on the filing'
+  return `${days} days after the move${clocked}`
 }
 
 export function shiftBack(asOf: string, hours: number): string {

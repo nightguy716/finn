@@ -1,7 +1,7 @@
 import { useEffect, useId, useState, type ReactNode } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import type { Alert, AlertConfig, Card } from '../types'
-import { categoryLabel, shortDay } from '../format'
+import { categoryLabel, dayLabel, relativeToMove } from '../format'
 
 type SheetFrameProps = {
   open: boolean
@@ -82,18 +82,19 @@ export function AlertSheet({
         <div className="flex flex-col gap-3">
           <p className="text-[13px] text-mute">{alert.company}</p>
           <p className="font-mono text-[13px] tabular-nums">
-            {shortDay(alert.date)} · close {alert.close.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            {dayLabel(alert.date)} · close {alert.close.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
-          <p className="font-mono text-[13px] tabular-nums">
-            Move {alert.move_pct.toFixed(1)}%
-            {alert.volume_ratio == null ? ' · volume multiple unavailable' : ` · volume ${alert.volume_ratio.toFixed(2)}×`}
+          <p className={`font-mono text-[13px] tabular-nums ${moveTone(alert.signed_move_pct)}`}>
+            {moveText(alert.signed_move_pct, alert.move_pct)}
+            {alert.volume_ratio == null ? ' · volume multiple unavailable' : ` · volume ${alert.volume_ratio.toFixed(2)}× vs 20-day avg`}
           </p>
           <p className="text-[12px] text-mute">Filings around this move.</p>
           <ul className="flex flex-col">
             {alert.events.map((event) => (
               <li key={event.id} className="border-t border-line py-2">
-                <p className="text-[11px] tracking-[0.12em] text-accent uppercase">{categoryLabel(event.category)}</p>
-                <p className="mt-0.5 text-[14px] leading-snug">{event.headline}</p>
+                <p className="font-mono text-[11px] text-mute">{relativeToMove(event.timestamp, alert.date)}</p>
+                <p className="mt-0.5 text-[11px] tracking-[0.12em] text-accent uppercase">{categoryLabel(event.category)}</p>
+                <p className="mt-0.5 text-[14px] leading-snug">{event.summary?.trim() || categoryLabel(event.category)}</p>
                 {known.has(event.id) ? (
                   <button type="button" className="mt-1 text-[12px] text-accent underline" onClick={() => onJump(event.id)}>
                     Show in the brief
@@ -142,7 +143,7 @@ export function SettingsSheet({
   }, [draftMove, draftVolume, open, move, volume, onCommit])
 
   return (
-    <SheetFrame open={open} title="Alert thresholds" onClose={onClose}>
+    <SheetFrame open={open} title="Mover thresholds" onClose={onClose}>
       <p className="text-[13px] leading-snug text-mute">
         A price move beyond this, or volume above this multiple of the recent average, shows in the strip.
       </p>
@@ -186,6 +187,18 @@ export function SettingsSheet({
       <p className="mt-3 text-[12px] text-mute">The strip updates from the live feed a moment after a slider moves.</p>
     </SheetFrame>
   )
+}
+
+function moveText(signed: number | undefined, absolute: number): string {
+  if (signed == null || Number.isNaN(signed)) return `Move ${absolute.toFixed(1)}%`
+  const arrow = signed > 0 ? '↑' : signed < 0 ? '↓' : '·'
+  const sign = signed > 0 ? '+' : ''
+  return `${arrow} ${sign}${signed.toFixed(1)}%`
+}
+
+function moveTone(signed: number | undefined): string {
+  if (signed == null || signed === 0) return ''
+  return signed > 0 ? 'text-accent' : 'text-fall'
 }
 
 function formatNum(value: number): string {
