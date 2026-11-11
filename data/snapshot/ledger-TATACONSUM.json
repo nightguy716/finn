@@ -1,0 +1,1058 @@
+{
+  "symbol": "TATACONSUM",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 5,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 17,
+    "pages_dropped_by_prefilter": 1,
+    "dropped_pages": [
+      {
+        "period": "2025-03-31",
+        "page": 7
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 5661.13,
+    "ebitda_margin_pct": 13.7,
+    "pat": 469.3,
+    "ttm_revenue": 21555.63,
+    "ttm_pat": 1699.97,
+    "ttm_ebitda_margin_pct": 13.89,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 5661.13,
+        "ebitda": 775.85,
+        "ebitda_margin_pct": 13.7,
+        "ebit": 612.04,
+        "ebit_margin_pct": 10.81,
+        "pbt": 624.91,
+        "finance_costs": 25.7,
+        "depreciation": 163.81,
+        "other_income": 38.57,
+        "pat": 469.3,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 5348.88,
+        "ebitda": 724.14,
+        "ebitda_margin_pct": 13.54,
+        "ebit": 559.36,
+        "ebit_margin_pct": 10.46,
+        "pbt": 592.21,
+        "finance_costs": 39.09,
+        "depreciation": 164.78,
+        "other_income": 71.94,
+        "pat": 426.98,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 5433.62,
+        "ebitda": 795.21,
+        "ebitda_margin_pct": 14.63,
+        "ebit": 630.03,
+        "ebit_margin_pct": 11.6,
+        "pbt": 644.17,
+        "finance_costs": 38.42,
+        "depreciation": 165.18,
+        "other_income": 52.56,
+        "pat": 419.08,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 5112.0,
+        "ebitda": 697.81,
+        "ebitda_margin_pct": 13.65,
+        "ebit": 538.52,
+        "ebit_margin_pct": 10.53,
+        "pbt": 539.91,
+        "finance_costs": 31.62,
+        "depreciation": 159.29,
+        "other_income": 33.01,
+        "pat": 384.61,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 4965.9,
+        "ebitda": 671.78,
+        "ebitda_margin_pct": 13.53,
+        "ebit": 518.5,
+        "ebit_margin_pct": 10.44,
+        "pbt": 523.28,
+        "finance_costs": 33.23,
+        "depreciation": 153.28,
+        "other_income": 38.01,
+        "pat": 404.46,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 4778.91,
+        "ebitda": 606.94,
+        "ebitda_margin_pct": 12.7,
+        "ebit": 458.01,
+        "ebit_margin_pct": 9.58,
+        "pbt": 465.42,
+        "finance_costs": 33.76,
+        "depreciation": 148.93,
+        "other_income": 41.17,
+        "pat": 334.15,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth at least 10% for FY2027",
+      "source_quote": "So Percy, with our ambition of growing double digit and continuing to deliver EBITDA margins ahead of -- or EBITDA ahead of top line",
+      "page": 15,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_12052026172225_TCPL_SE_Intimation_EarningsCallTranscript_08052026.pdf",
+      "speaker": "Sunil D'Souza",
+      "period_promised": "FY2027",
+      "actual": "12.98%",
+      "actual_value": 12.98,
+      "actual_detail": "H1 FY2027 revenue 11,010.01 versus H1 FY2026 revenue 9,744.81",
+      "promised": "at least 10%",
+      "status": "tracking_ahead",
+      "note": "H1 FY2027 revenue 11,010.01 versus H1 FY2026 revenue 9,744.81",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Secondly, just wanted to ask on product portfolio. Over the last few quarters, you've launched several products and categories. Do you think that your product portfolio is now more or less complete and you would focus more on driving sales in the existing products or would you plan to expand it further? Sunil D'Souza: So Percy, with our ambition of growing double digit and continuing to deliver EBITDA margins ahead of -- or EBITDA ahead of top line, we will not only grow our organic portfolio, which exists today, but we will continue to drive, as I've clearly mentioned saying, it's distribution, marketing, brand building and innovation. So as we see consumer trends come up, you will continue to see innovation coming out. So I think we are a long, long, long way away from saying we've got the perfect portfolio. I do think we will continue to aggressively expand distribution, continue to spend behind building strong brands and continuing to expand on innovation.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-12",
+      "calls": [
+        {
+          "date": "2026-05-12",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "And top line, we will grow at double digits.",
+          "document": "Sukhvinder_12052026172225_TCPL_SE_Intimation_EarningsCallTranscript_08052026.pdf"
+        },
+        {
+          "date": "2026-05-12",
+          "call_period": "2026-03-31",
+          "page": 15,
+          "quote": "So Percy, with our ambition of growing double digit and continuing to deliver EBITDA margins ahead of -- or EBITDA ahead of top line",
+          "document": "Sukhvinder_12052026172225_TCPL_SE_Intimation_EarningsCallTranscript_08052026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-12",
+          "call_period": "2026-03-31",
+          "value": "at least 10%",
+          "change": "set",
+          "page": 7,
+          "quote": "And top line, we will grow at double digits.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-12",
+          "call_period": "2026-03-31",
+          "value": "at least 10%",
+          "change": "maintained",
+          "page": 15,
+          "quote": "So Percy, with our ambition of growing double digit and continuing to deliver EBITDA margins ahead of -- or EBITDA ahead of top line",
+          "superseded": false
+        }
+      ],
+      "verifier": {
+        "consolidated": true,
+        "reported_basis": true,
+        "independent_of_named_event": true,
+        "metric_named": true,
+        "model": "gemini-3-flash-preview",
+        "evidence": {
+          "consolidated": "our ambition of growing double digit",
+          "reported_basis": "our ambition of growing double digit",
+          "independent_of_named_event": "we will not only grow our organic portfolio, which exists today, but we will continue to drive, as I've clearly mentioned saying, it's distribution, marketing, brand building and innovation.",
+          "metric_named": "growing double digit and continuing to deliver EBITDA margins ahead of -- or EBITDA ahead of top line"
+        }
+      }
+    },
+    {
+      "promise": "EBITDA margin 200\u2013300 bps for FY2026",
+      "source_quote": "So do you still expect somewhere between 200 to 300 basis point improvement in consolidated margins",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_28072025162422_6_TCPL_SE_Intimation_Earnings_Call_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "200\u2013300 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "I know you touched upon this in the presentation. How has the end product prices been in the last 3, 4 months and competitive activity? And when you factor all of these three moving parts, are you still sort of confident that tea margins should -- could normalize to what you had called out couple of quarters ba ck that tea impacted margins by about 300 basis points at a consolidated level? So do you still expect somewhere between 200 to 300 basis point improvement in consolidated margins as -- once commodity prices come into the P&L starting 3Q? So that's first question. And second is a small one. See, Non -branded business margins have in a quarter corrected from 22% to 12%.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 200.0,
+      "target_high": 300.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 6,
+          "quote": "So do you still expect somewhere between 200 to 300 basis point improvement in consolidated margins",
+          "document": "Sukhvinder_28072025162422_6_TCPL_SE_Intimation_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 6\u20138% for FY2026",
+      "source_quote": "I would not change my guidance of overall, I would say between 6% to 7-8% total value growth.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_28072025162422_6_TCPL_SE_Intimation_Earnings_Call_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "6\u20138%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "So this volume value, I think you will keep on seeing the whole thing move. I do think going forward, now you'll see the value coming down and the volume going up. And I do think, as, a ) prices stabilize and more importantly, as tea costs go down and there is reindexing, you should start seeing volumes start to pick up towards the mid -single digit. But overall, I would not change my guidance of overall, I would say between 6% to 7 -8% total value growth. That's number one. Number two, to your question of market share swinging on the upside or downside, I think the most -- this thing that we had seen was during COVID. But you have to remember, that was driven by 2, 3 pieces.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 6.0,
+      "target_high": 8.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 12,
+          "quote": "I would not change my guidance of overall, I would say between 6% to 7-8% total value growth.",
+          "document": "Sukhvinder_28072025162422_6_TCPL_SE_Intimation_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 50\u201370 bps for FY2027",
+      "source_quote": "we\u2019ve guided for 50 bps to 70 bps margin expansion for the year",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Kajal_28072026181108_TCPL_SE_Intimation_EarningsCallTranscript_24072026_sd.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "50\u201370 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Lastly, Sunil, if I can check on -- so while gross margin sequentially, you know, have done better, EBITDA margin has seen some kind of contraction with respect to the other costs. How are you placed with the other costs and how should one think about margins which are sitting at 13.5% now and while you had, you know, I think you had closed at about 14.5% in 4Q. So, can one expect margins to start building up from here on sequentially? Sunil D\u2019Souza: So, we\u2019ve guided for 50 bps to 70 bps margin expansion for the year, Mihir. You have to just bear in mind that we are a food and beverage business and we\u2019ve got seasonality in our business. Tea, for example, will peak in Q3, Q4 because winter sets in in the north. Some of the businesses like Capital Foods, etcetera, Q2, Q3 peaks because of the festive seasons around that time.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 50.0,
+      "target_high": 70.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-28",
+      "calls": [
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 10,
+          "quote": "we\u2019ve guided for 50 bps to 70 bps margin expansion for the year",
+          "document": "Kajal_28072026181108_TCPL_SE_Intimation_EarningsCallTranscript_24072026_sd.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 50\u201375 for FY2027",
+      "source_quote": "50 to 75 for the full year will happen.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_12052026172225_TCPL_SE_Intimation_EarningsCallTranscript_08052026.pdf",
+      "speaker": "Sunil D'Souza",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "50\u201375",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Number two, just a rider, saying that, we've got seasonality in our businesses. So it will be quarter-to-quarter. So it's not that it's automatically jumping up to the 50 to 100 for the full year number straight away. So you have to cycle quarter -by-quarter because we've got seasonality, you will see that in play. 50 to 75 for the full year will happen. Mihir Shah: Understood. That's clear. Secondly, when one looks at the Sampann growth of close to 70%.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 50.0,
+      "target_high": 75.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-12",
+      "calls": [
+        {
+          "date": "2026-05-12",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "50 to 75 for the full year will happen.",
+          "document": "Sukhvinder_12052026172225_TCPL_SE_Intimation_EarningsCallTranscript_08052026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 7\u20139% for an unnamed period",
+      "source_quote": "we have always guided for a mid-to-high single digit growth for the tea business.",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_30012026201315_Q3FY26_transcript.pdf",
+      "speaker": "Sunil D\u2019Souza",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20139%",
+      "status": "segment_level",
+      "note": "tea business guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "India branded business posted underlying volume growth of 15 %. India Tea up 3%, as basically, as the tea prices have come down, we have started passing on pricing back to consumers. Overall, YTD, we are growing at 9%. Just to put it in perspective, we have always guided for a mid-to-high single digit growth for the tea business. Salt had a, I would say, strong quarter, 14% revenue and 15% volume, as we did targeted actions on consumer price and trade promotions, coupled with A&P in specific geographies, yes, so we saw strong results there. Growth businesses, which you always guided for being 30 % of our business growing at 30%, we were quite in the ballpark, growing 2 9% and contributing 30% to our revenue, surpassing Rs. 1,000 crores in quarterly revenue. Tata Sampan n had a strong quarter, 45 % growth, all volume driven.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "tea business",
+      "metric_key": "revenue_growth",
+      "target_low": 7.0,
+      "target_high": 9.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-30",
+      "calls": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 7,
+          "quote": "therefore mid- to high single-digit total revenue growth.",
+          "document": "Sukhvinder_07112025155012_6_TCPL_SE_Intimation_EarningsCallTranscriptsd.pdf"
+        },
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 12,
+          "quote": "overall, we do expect to deliver 30% growing at 30% for at least, I mean, the foreseeable near term",
+          "document": "Sukhvinder_07112025155012_6_TCPL_SE_Intimation_EarningsCallTranscriptsd.pdf"
+        },
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "page": 3,
+          "quote": "we have always guided for a mid-to-high single digit growth for the tea business.",
+          "document": "Sukhvinder_30012026201315_Q3FY26_transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "value": "7\u20139%",
+          "change": "set",
+          "page": 7,
+          "quote": "therefore mid- to high single-digit total revenue growth.",
+          "superseded": true
+        },
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "value": "30%",
+          "change": "raised",
+          "page": 12,
+          "quote": "overall, we do expect to deliver 30% growing at 30% for at least, I mean, the foreseeable near term",
+          "superseded": true
+        },
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "value": "7\u20139%",
+          "change": "cut",
+          "page": 3,
+          "quote": "we have always guided for a mid-to-high single digit growth for the tea business.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 17% for an unnamed period",
+      "source_quote": "Longer term, I have always maintained a good foods business in India should be a 17% plus.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_30012026201315_Q3FY26_transcript.pdf",
+      "speaker": "Sunil D\u2019Souza",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "17%",
+      "status": "segment_level",
+      "note": "good foods business in India guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Longer term, as we continue to drive premiumization in our portfolio and drive premium categories in the portfolio and improve margins for the base categories, for example, pulses, it was a negative 5% when we started 5 years back. Today, it is close to a double digit, right? So, as we improve that as well, we would expect to continue to improve the gross margin profile. Longer term, I have always maintained a good foods business in India should be a 17% plus. We are targeted towards that in the longer term. Mihir Shah: Got it. Thank you, Sunil.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "good foods business in India",
+      "metric_key": "ebitda_margin",
+      "target_low": 17.0,
+      "target_high": 17.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-30",
+      "calls": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "page": 5,
+          "quote": "Broadly, tea margins, we have always maintained, should be operating between the roughly 34% to 36%",
+          "document": "Sukhvinder_07112025155012_6_TCPL_SE_Intimation_EarningsCallTranscriptsd.pdf"
+        },
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "page": 7,
+          "quote": "We remain confident of edging up the total business to close to a 15 % sort of number in the medium term",
+          "document": "Sukhvinder_30012026201315_Q3FY26_transcript.pdf"
+        },
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "page": 10,
+          "quote": "Longer term, I have always maintained a good foods business in India should be a 17% plus.",
+          "document": "Sukhvinder_30012026201315_Q3FY26_transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-11-07",
+          "call_period": "2025-09-30",
+          "value": "34\u201336%",
+          "change": "set",
+          "page": 5,
+          "quote": "Broadly, tea margins, we have always maintained, should be operating between the roughly 34% to 36%",
+          "superseded": true
+        },
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "value": "15%",
+          "change": "cut",
+          "page": 7,
+          "quote": "We remain confident of edging up the total business to close to a 15 % sort of number in the medium term",
+          "superseded": true
+        },
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "value": "17%",
+          "change": "raised",
+          "page": 10,
+          "quote": "Longer term, I have always maintained a good foods business in India should be a 17% plus.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth 4\u20135% for an unnamed period",
+      "source_quote": "Overall, India Tea, about 4%-5% volume and a couple of basis points of price mix. That is what we guide for.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_30012026201315_Q3FY26_transcript.pdf",
+      "speaker": "Sunil D\u2019Souza",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "4\u20135%",
+      "status": "segment_level",
+      "note": "India Tea guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Second, I would urge not to look at quarter-to-quarter. There will be ups and downs because at times you will have volume upsides, price downsides and vice versa. Sometimes, a few quarters, it does take to settle. But overall, India Tea, about 4%-5% volume and a couple of basis points of price mix. That is what we guide for. Percy Panthaki: That is all from me. Thanks and all the best.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "India Tea",
+      "metric_key": "volume_growth",
+      "target_low": 4.0,
+      "target_high": 5.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-30",
+      "calls": [
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "page": 12,
+          "quote": "Overall, India Tea, about 4%-5% volume and a couple of basis points of price mix. That is what we guide for.",
+          "document": "Sukhvinder_30012026201315_Q3FY26_transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 30% for FY2026",
+      "source_quote": "And as I said, we do expect saying for the next 3 quarters, we will grow upwards of 30%.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_28072025162422_6_TCPL_SE_Intimation_Earnings_Call_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "30%",
+      "status": "segment_level",
+      "note": "NourishCo guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Sunil D\u2019Souza: So, Mihir, very simply put, I cannot predict how long competition will hold out. But as long as competition holds out at this price, I'm holding out. And I will, therefore, drive volume to make up for this gap. And as I said, we do expect saying for the next 3 quarters, we will grow upwards of 30%. Mihir Shah: Okay. In the NourishCo business or the entire growth? Sunil D\u2019Souza: In the NourishCo business and the growth -- overall growth businesses also.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "NourishCo",
+      "metric_key": "volume_growth",
+      "target_low": 30.0,
+      "target_high": 30.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 10,
+          "quote": "And as I said, we do expect saying for the next 3 quarters, we will grow upwards of 30%.",
+          "document": "Sukhvinder_28072025162422_6_TCPL_SE_Intimation_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 30% for FY2026",
+      "source_quote": "So in broad terms, you should expect a year-on-year growth of about 30%.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_28072025162422_6_TCPL_SE_Intimation_Earnings_Call_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "30%",
+      "status": "segment_level",
+      "note": "Capital Foods and Organic India guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "In fact, already, we're seeing the stabilization happening in July. That's number one. Number two, Capital Foods and Organic India, as we said, are part of the growth portf olio for us, where we've guided for 30% of the portfolio growing at 30%. So in broad terms, you should expect a year -on-year growth of about 30%. Mihir Shah: Got it. And lastly, a key question on the other expenses. Is there any one -off that is sitting out there?",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Capital Foods and Organic India",
+      "metric_key": "revenue_growth",
+      "target_low": 30.0,
+      "target_high": 30.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 11,
+          "quote": "So in broad terms, you should expect a year-on-year growth of about 30%.",
+          "document": "Sukhvinder_28072025162422_6_TCPL_SE_Intimation_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth at least 10% for FY2026",
+      "source_quote": "So, if you're talking of margin trajectory in EBITDA terms for Tata Consumer Products, we remain continued guidance of double-digit top line and EBITDA growing",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Madhur_28042025185907_TCPL_SEIntimation_EarningsCallTranscript.pdf",
+      "speaker": "Sunil D\u2019Souza",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Moderator: We will now move to text questions. The f irst question comes from the line of Sameer Pitadia, an Individual Investor. The question is, with the Indian food s business now surpassing the international portfolio in size, how should we think about the margin trajectory going forward? Sunil D\u2019Souza: So, if you're talking of margin trajectory in EBITDA terms for Tata Consumer Products, we remain continued guidance of double-digit top line and EBITDA growing ahead of top line. So, in effect, expansion on EBITDA margins as we go ahead. Nidhi Verma: Moderator, we will just go to the webcast for a few questions. Ye s.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "ebitda_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-28",
+      "calls": [
+        {
+          "date": "2025-04-28",
+          "call_period": "2025-03-31",
+          "page": 12,
+          "quote": "So, if you're talking of margin trajectory in EBITDA terms for Tata Consumer Products, we remain continued guidance of double-digit top line and EBITDA growing",
+          "document": "Madhur_28042025185907_TCPL_SEIntimation_EarningsCallTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 25\u201330% for FY2027",
+      "source_quote": "But overall, I would continue to expect 25% to 30% growth that we had guided for Capital Foods and Organic India going forward.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_29102026183741_TCPL_SE_Intimation_EarningsCallTranscript_26102026v1.pdf",
+      "speaker": "Sunil D'Souza",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "25\u201330%",
+      "status": "segment_level",
+      "note": "Capital Foods and Organic India guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "So that is what has impacted our international business overall. Now I don't -- there might be a minor shift that will happen. There will be some uplift because as we catch up that gap, there will be some uplift coming into this quarter. But overall, I would continue to expect 25% to 30% growth that we had guided for Capital Foods and Organic India going forward. Domestic, I think, like I said, having relaid the entire go -to-market by February this year, having proved that system works where we have salt, non-salt, we have core, noncore and then we have regular distributors. I think that has brought back immense amount of focus. And by",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Capital Foods and Organic India",
+      "metric_key": "revenue_growth",
+      "target_low": 25.0,
+      "target_high": 30.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-29",
+      "calls": [
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 7,
+          "quote": "25% to 30% should be the new normal going forward",
+          "document": "Kajal_28072026181108_TCPL_SE_Intimation_EarningsCallTranscript_24072026_sd.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 7,
+          "quote": "our guidance remains 30% growth",
+          "document": "Kajal_28072026181108_TCPL_SE_Intimation_EarningsCallTranscript_24072026_sd.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 8,
+          "quote": "5% to 7% is a good number to target",
+          "document": "Kajal_28072026181108_TCPL_SE_Intimation_EarningsCallTranscript_24072026_sd.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 8,
+          "quote": "25% to 30% growth should be the norm going forward",
+          "document": "Kajal_28072026181108_TCPL_SE_Intimation_EarningsCallTranscript_24072026_sd.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "page": 10,
+          "quote": "for the growth portfolio, we are targeting 30% plus",
+          "document": "Kajal_28072026181108_TCPL_SE_Intimation_EarningsCallTranscript_24072026_sd.pdf"
+        },
+        {
+          "date": "2026-10-29",
+          "call_period": "2026-09-30",
+          "page": 9,
+          "quote": "But overall, I would continue to expect 25% to 30% growth that we had guided for Capital Foods and Organic India going forward.",
+          "document": "Sukhvinder_29102026183741_TCPL_SE_Intimation_EarningsCallTranscript_26102026v1.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "value": "25\u201330%",
+          "change": "set",
+          "page": 7,
+          "quote": "25% to 30% should be the new normal going forward",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "value": "30%",
+          "change": "raised",
+          "page": 7,
+          "quote": "our guidance remains 30% growth",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "value": "5\u20137%",
+          "change": "cut",
+          "page": 8,
+          "quote": "5% to 7% is a good number to target",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "value": "25\u201330%",
+          "change": "raised",
+          "page": 8,
+          "quote": "25% to 30% growth should be the norm going forward",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-28",
+          "call_period": "2026-06-30",
+          "value": "30%",
+          "change": "raised",
+          "page": 10,
+          "quote": "for the growth portfolio, we are targeting 30% plus",
+          "superseded": true
+        },
+        {
+          "date": "2026-10-29",
+          "call_period": "2026-09-30",
+          "value": "25\u201330%",
+          "change": "cut",
+          "page": 9,
+          "quote": "But overall, I would continue to expect 25% to 30% growth that we had guided for Capital Foods and Organic India going forward.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth to rise for FY2027",
+      "source_quote": "We've always mentioned for tea, we will target mid-single-digit growth and a couple of basis points of price mix, therefore, mid- to high single-digit total",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_12052026172225_TCPL_SE_Intimation_EarningsCallTranscript_08052026.pdf",
+      "speaker": "Sunil D'Souza",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "tea guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "And second, on tea, despite obviously, you're doing very well on these channels the 4% of volume growth, would you say that's a satisfactory number? Or would you sort of aspire to see that number improve over the next 3 quarters? Sunil D'Souza: So let me answer the second question first. We've always mentioned for tea, we will target mid-single-digit growth and a couple of basis points of price mix, therefore, mid - to high single-digit total top line growth. From that perspective, we are almost there, but not there in this quarter. So I would aspire for a slightly higher number. That's number one.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "tea",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-12",
+      "calls": [
+        {
+          "date": "2026-05-12",
+          "call_period": "2026-03-31",
+          "page": 12,
+          "quote": "We've always mentioned for tea, we will target mid-single-digit growth and a couple of basis points of price mix, therefore, mid- to high single-digit total",
+          "document": "Sukhvinder_12052026172225_TCPL_SE_Intimation_EarningsCallTranscript_08052026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 7\u20139% for an unnamed period",
+      "source_quote": "we have said mid to high single -digit revenue growth.",
+      "page": 17,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Sukhvinder_30012026201315_Q3FY26_transcript.pdf",
+      "speaker": "Sunil D\u2019Souza",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20139%",
+      "status": "not_scored",
+      "note": "The period is not stated.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Tata Consumer Products Limited January 27, 2026 Page 16 of 16 External-Generic going forward. But as I said, as we have given off price, we expect volume to pick up. And as I said, we have said mid to high single -digit revenue growth. At points in time, volume will be overpowering versus price growth and vice versa. Going forward, at least for the short term, we expect volume to come back stronger and therefore, us continuing to deliver the mid to high single-digit revenue topline. Nidhi Verma: And perhaps one last question before we wrap up.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 7.0,
+      "target_high": 9.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-30",
+      "calls": [
+        {
+          "date": "2026-01-30",
+          "call_period": "2025-12-31",
+          "page": 17,
+          "quote": "we have said mid to high single -digit revenue growth.",
+          "document": "Sukhvinder_30012026201315_Q3FY26_transcript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 5,
+    "cut": 4,
+    "maintained": 1,
+    "items": [
+      {
+        "promise": "Revenue growth 25\u201330% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-07-28",
+            "value": "25\u201330%",
+            "change": "set"
+          },
+          {
+            "date": "2026-07-28",
+            "value": "30%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-07-28",
+            "value": "5\u20137%",
+            "change": "cut"
+          },
+          {
+            "date": "2026-07-28",
+            "value": "25\u201330%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-07-28",
+            "value": "30%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-10-29",
+            "value": "25\u201330%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth at least 10% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-05-12",
+            "value": "at least 10%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-12",
+            "value": "at least 10%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 7\u20139% for an unnamed period",
+        "period": "",
+        "sequence": [
+          {
+            "date": "2025-11-07",
+            "value": "7\u20139%",
+            "change": "set"
+          },
+          {
+            "date": "2025-11-07",
+            "value": "30%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-01-30",
+            "value": "7\u20139%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 17% for an unnamed period",
+        "period": "",
+        "sequence": [
+          {
+            "date": "2025-11-07",
+            "value": "34\u201336%",
+            "change": "set"
+          },
+          {
+            "date": "2026-01-30",
+            "value": "15%",
+            "change": "cut"
+          },
+          {
+            "date": "2026-01-30",
+            "value": "17%",
+            "change": "raised"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "12.98% revenue growth was achieved against the promised at least 10% for FY2027, tracking ahead. This reflects H1 FY2027 revenue of 11,010.01 versus H1 FY2026 revenue of 9,744.81.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.86,
+    "series": 0.91,
+    "guidance": 5.83,
+    "check": 0.01,
+    "verify": 0.08,
+    "verdict": 7.66,
+    "total": 15.35
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 3945,
+      "dropped": 6,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 1,
+      "cache_hits": 0,
+      "tokens": 1223,
+      "model": "gemini-3.6-flash"
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": "gemini-3-flash-preview"
+    },
+    "total_tokens": 5168
+  }
+}

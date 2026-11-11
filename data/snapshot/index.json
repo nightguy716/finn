@@ -45,6 +45,24 @@
     "EICHERMOT": "ledger-EICHERMOT.json",
     "GRASIM": "ledger-GRASIM.json",
     "HDFCLIFE": "ledger-HDFCLIFE.json",
-    "HINDALCO": "ledger-HINDALCO.json"
+    "HINDALCO": "ledger-HINDALCO.json",
+    "INDIGO": "ledger-INDIGO.json",
+    "JSWSTEEL": "ledger-JSWSTEEL.json",
+    "JIOFIN": "ledger-JIOFIN.json",
+    "MAXHEALTH": "ledger-MAXHEALTH.json",
+    "NESTLEIND": "ledger-NESTLEIND.json",
+    "ONGC": "ledger-ONGC.json",
+    "POWERGRID": "ledger-POWERGRID.json",
+    "SBILIFE": "ledger-SBILIFE.json",
+    "SHRIRAMFIN": "ledger-SHRIRAMFIN.json",
+    "TATACONSUM": "ledger-TATACONSUM.json",
+    "TMPV": "ledger-TMPV.json",
+    "TATASTEEL": "ledger-TATASTEEL.json",
+    "TECHM": "ledger-TECHM.json",
+    "BHARATFORG": "ledger-BHARATFORG.json",
+    "PERSISTENT": "ledger-PERSISTENT.json",
+    "POLYCAB": "ledger-POLYCAB.json",
+    "DIXON": "ledger-DIXON.json",
+    "BHARATSEATS": "ledger-BHARATSEATS.json"
   }
 }

@@ -1,0 +1,1031 @@
+{
+  "symbol": "SHRIRAMFIN",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 9,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 32,
+    "pages_dropped_by_prefilter": 2,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 4
+      },
+      {
+        "period": "2025-03-31",
+        "page": 15
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 13792.48,
+    "ebitda_margin_pct": null,
+    "pat": 3683.81,
+    "ttm_revenue": 51877.1,
+    "ttm_pat": 12687.17,
+    "ttm_ebitda_margin_pct": null,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 13792.48,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 4932.34,
+        "finance_costs": 4964.9,
+        "depreciation": 179.92,
+        "other_income": 9.36,
+        "pat": 3683.81,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 13400.43,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 4625.72,
+        "finance_costs": 5204.45,
+        "depreciation": 182.79,
+        "other_income": 18.31,
+        "pat": 3452.77,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 12513.43,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 3917.48,
+        "finance_costs": 5336.08,
+        "depreciation": 174.66,
+        "other_income": 18.92,
+        "pat": 3020.94,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 12170.76,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 3363.52,
+        "finance_costs": 5259.35,
+        "depreciation": 176.63,
+        "other_income": 25.77,
+        "pat": 2529.65,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 11912.44,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 3112.96,
+        "finance_costs": 5524.83,
+        "depreciation": 174.5,
+        "other_income": 8.89,
+        "pat": 2314.17,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 11536.32,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": 2906.23,
+        "finance_costs": 5400.76,
+        "depreciation": 173.11,
+        "other_income": 6.12,
+        "pat": 2159.4,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 12\u201315% for FY2026",
+      "source_quote": "I see we have ended the last financial year with around 12% to 15% growth in most of the segment.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_04052026162648_BSENSE_Transcript_Earnings_call_Q4.pdf",
+      "speaker": "Umesh G. Revankar",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "12\u201315%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "And just a follow-up on that, sir. So when we are saying FY '27 growth to remain muted, so should we assume that it will be lower than FY '26 growth as well? Umesh G. Revankar: I see we have ended the last financial year with around 12% to 15% growth in most of the segment. If you are able to have the same number of sales this year, flat growth, that in itself will be an achievement. So I think that itself will give us growth in all the segments for us because our penetration will go up and we'll able to retain our customers longer. Renish: Got it.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 12.0,
+      "target_high": 15.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-04",
+      "calls": [
+        {
+          "date": "2025-04-29",
+          "call_period": "2025-03-31",
+          "page": 8,
+          "quote": "We are looking at 12% to 15% growth in the next financial year.",
+          "document": "Mathew_29042025141144_Transcript_Earnings_Call_Q4_FY_2024_25.pdf"
+        },
+        {
+          "date": "2025-04-29",
+          "call_period": "2025-03-31",
+          "page": 9,
+          "quote": "You are still expecting other guidance on growth would still be about 15% right? 15% or higher? Umesh G Revankar: Yes.",
+          "document": "Mathew_29042025141144_Transcript_Earnings_Call_Q4_FY_2024_25.pdf"
+        },
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "page": 6,
+          "quote": "I see we have ended the last financial year with around 12% to 15% growth in most of the segment.",
+          "document": "Mathew_04052026162648_BSENSE_Transcript_Earnings_call_Q4.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-04-29",
+          "call_period": "2025-03-31",
+          "value": "12\u201315%",
+          "change": "set",
+          "page": 8,
+          "quote": "We are looking at 12% to 15% growth in the next financial year.",
+          "superseded": true
+        },
+        {
+          "date": "2025-04-29",
+          "call_period": "2025-03-31",
+          "value": "15%",
+          "change": "raised",
+          "page": 9,
+          "quote": "You are still expecting other guidance on growth would still be about 15% right? 15% or higher? Umesh G Revankar: Yes.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "value": "12\u201315%",
+          "change": "cut",
+          "page": 6,
+          "quote": "I see we have ended the last financial year with around 12% to 15% growth in most of the segment.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 8.5\u20138.6 for FY2026",
+      "source_quote": "8.5 for full year, when I said exit, we will close the year at 8.5-8.6 I said.",
+      "page": 18,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_28072025172433_BSENSE_Transcript_EarningsCall_Q1_FY_2025_26.pdf",
+      "speaker": "Umesh G. Revankar",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8.5\u20138.6",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So, which one is it? Just want to get this right because there is obviously a big difference between the two guidance. Umesh G. Revankar: 8.5 for full year, when I said exit, we will close the year at 8.5-8.6 I said. Chintan: Yes, okay. So, that is an exit NIM. It is not for the full year average.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 8.5,
+      "target_high": 8.6,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 18,
+          "quote": "8.5 for full year, when I said exit, we will close the year at 8.5-8.6 I said.",
+          "document": "Mathew_28072025172433_BSENSE_Transcript_EarningsCall_Q1_FY_2025_26.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 2% for FY2027",
+      "source_quote": "And our guidance will remain at 2% credit cost.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_27102026125931_BSENSE_Transcript_Earnings_Call_23102026.pdf",
+      "speaker": "Umesh Revankar",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "2%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "It should contain itself in the festive period if the overall demand remains good. So, we do not really see any kind of alarming situation in increase in the Stage 2 or Stage 1. And we have sufficient provisioning to manage this. And our guidance will remain at 2% credit cost. And in the beginning itself, we said that in case of deficient rainfall, it can go up by around 30 basis point for a short period of time. It will be temporary. I don't really think it is across.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 2.0,
+      "target_high": 2.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-27",
+      "calls": [
+        {
+          "date": "2026-10-27",
+          "call_period": "2026-09-30",
+          "page": 6,
+          "quote": "And our guidance will remain at 2% credit cost.",
+          "document": "Mathew_27102026125931_BSENSE_Transcript_Earnings_Call_23102026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 15\u201317 for FY2027",
+      "source_quote": "Growth, we have been cautious, even though our initial guidance was 18% growth.",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_27102026125931_BSENSE_Transcript_Earnings_Call_23102026.pdf",
+      "speaker": "Umesh Revankar",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15\u201317",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "SHRIRAM Finance Shriram Finance Limited October 23, 2026 Page 7 of 17 Zhixuan Gao: Yeah, thanks for the opportunity. Just on growth strategy in the current situation, given the uncertainty of lower income in the second half, are we going aggressive to push growth, or are we thinking about maybe tightening some filters? How should we thin k about growth for this year? Umesh Revankar: Growth, we have been cautious, even though our initial guidance was 18% growth. Looking at the impact of the war situation in West Asia and the weak monsoon, we have been growing a little less than that. The first quarter, our growth was around 15%. In the second quarter, it was 17%.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 15.0,
+      "target_high": 17.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-27",
+      "calls": [
+        {
+          "date": "2026-10-27",
+          "call_period": "2026-09-30",
+          "page": 8,
+          "quote": "Growth, we have been cautious, even though our initial guidance was 18% growth.",
+          "document": "Mathew_27102026125931_BSENSE_Transcript_Earnings_Call_23102026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 18% for FY2027",
+      "source_quote": "full year guidance still remains at 18% and Q2 might be around 15% to 16%.",
+      "page": 14,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_27072026153856_BSENSE_Transcript_of_Earning_Call.pdf",
+      "speaker": "Bunty Chawla",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "18%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "SHRIRAM Finance Shriram Finance Limited July 24, 2026 Page 13 of 15 format, and that is why whatever portfolio was there was on a monthly amortizing basis has been paid off and not replaced with fresh transactions, which will happen towards the end of the quarter. Bunty Chawla: Okay. Secondly, as you said, the full year guidance still remains at 18% and Q2 might be around 15% to 16%. So it seems to be slightly heavy demand from second half. So on that basis, what we have done in terms of branch expansion, employee base expansion because still we are guiding for the cost-to-income ratio at a stable entity. So any thought process or any data point if you can share?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 18.0,
+      "target_high": 18.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-27",
+      "calls": [
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "page": 12,
+          "quote": "where you budgeted 18% AUM growth for next year.",
+          "document": "Mathew_04052026162648_BSENSE_Transcript_Earnings_call_Q4.pdf"
+        },
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "page": 15,
+          "quote": "18% is broad for full year.",
+          "document": "Mathew_04052026162648_BSENSE_Transcript_Earnings_call_Q4.pdf"
+        },
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 6,
+          "quote": "Our earlier guidance of 18% will hold good unless after second quarter, we revise it.",
+          "document": "Mathew_27072026153856_BSENSE_Transcript_of_Earning_Call.pdf"
+        },
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 14,
+          "quote": "full year guidance still remains at 18% and Q2 might be around 15% to 16%.",
+          "document": "Mathew_27072026153856_BSENSE_Transcript_of_Earning_Call.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "value": "18%",
+          "change": "set",
+          "page": 12,
+          "quote": "where you budgeted 18% AUM growth for next year.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-04",
+          "call_period": "2026-03-31",
+          "value": "18%",
+          "change": "maintained",
+          "page": 15,
+          "quote": "18% is broad for full year.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "value": "18%",
+          "change": "maintained",
+          "page": 6,
+          "quote": "Our earlier guidance of 18% will hold good unless after second quarter, we revise it.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "value": "18%",
+          "change": "maintained",
+          "page": 14,
+          "quote": "full year guidance still remains at 18% and Q2 might be around 15% to 16%.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 100 bps for FY2028",
+      "source_quote": "overall we believe the 100 basis point advantage will get over the next two years on our borrowing cost",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_01012026154346_NSEBSE_Transcipt_Earning_Call_.pdf",
+      "speaker": "",
+      "period_promised": "FY2028",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "100 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "We don't have to really go into unrelated businesses with the addition of new capital. The additional growth what we can provide by having additional capital, that itself will be sufficient for our growth. From where we are getting this confidence is basically when a large strategic partner comes into, we believe our balance sheet being very strong, the borrowing rates will come down. Additionally, with rating upgrade, further the rates will come down and overall we believe the 100 basis point advantage will get over the next two years on our borrowing cost. Our liability side will get re -rated on the borrowing and some of this will get passed on to the customers, especially the customers who are moving away from us for better rate to either bank or other peer NBFCs. So retention and attracting few new customers would be sufficient for us to keep up a growth momentum and grow at around 20%. The immediate impact of the capital infusion will be our gearing increase around 4.3, that is leveraging will come down to 2 .6 and we expect that as we keep using capital that will keep increasing.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 100.0,
+      "target_high": 100.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-01",
+      "calls": [
+        {
+          "date": "2026-01-01",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "overall we believe the 100 basis point advantage will get over the next two years on our borrowing cost",
+          "document": "Mathew_01012026154346_NSEBSE_Transcipt_Earning_Call_.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 8.5% for FY2029",
+      "source_quote": "operational NIM will hold at around 8.5%, and we continue to guide that.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_27072026153856_BSENSE_Transcript_of_Earning_Call.pdf",
+      "speaker": "Sunder Subramanian",
+      "period_promised": "FY2029",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8.5%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Aditya Vikram: Okay. And will that -- so the guidance, which you are giving for the shorter term that the NIMs will hold at this level and considering the cautious commentary, right, because of the uncertain situation, like INR500 crores will remain static for next quarter as well, right, this current quarter? Sunder Subramanian: It will gradually come down. So what we were indicating earlier is that the operational NIM will hold at around 8.5%, and we continue to guide that. And the benefit of the surplus liquidity, which the equity that we had come in will gradually subside over a period of time. Aditya Vikram: Okay. Okay.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 8.5,
+      "target_high": 8.5,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-27",
+      "calls": [
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 12,
+          "quote": "operational NIM will hold at around 8.5%, and we continue to guide that.",
+          "document": "Mathew_27072026153856_BSENSE_Transcript_of_Earning_Call.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 2.8\u20133.6 for FY2031",
+      "source_quote": "We expect it to improve to 3.6",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_01012026154346_NSEBSE_Transcipt_Earning_Call_.pdf",
+      "speaker": "Umesh Revankar",
+      "period_promised": "FY2031",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "2.8\u20133.6",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Firstly, what was the ROA indication that you gave? I could not catch that properly. Umesh Revankar: See, right now, our ROA is around 2.8. We expect it to improve to 3.6. Mahrukh Adajania: Okay. Sir, my questions were that just in terms of growth, where do you see the share of new CV settling? What do you think would be an ideal mix for your new CV?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 2.8,
+      "target_high": 3.6,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-01",
+      "calls": [
+        {
+          "date": "2026-01-01",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "the ROA will expand from current 2.8 to around 3.6 over the period",
+          "document": "Mathew_01012026154346_NSEBSE_Transcipt_Earning_Call_.pdf"
+        },
+        {
+          "date": "2026-01-01",
+          "call_period": "2025-12-31",
+          "page": 5,
+          "quote": "We expect it to improve to 3.6",
+          "document": "Mathew_01012026154346_NSEBSE_Transcipt_Earning_Call_.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-01-01",
+          "call_period": "2025-12-31",
+          "value": "2.8\u20133.6",
+          "change": "set",
+          "page": 4,
+          "quote": "the ROA will expand from current 2.8 to around 3.6 over the period",
+          "superseded": true
+        },
+        {
+          "date": "2026-01-01",
+          "call_period": "2025-12-31",
+          "value": "2.8\u20133.6",
+          "change": "maintained",
+          "page": 5,
+          "quote": "We expect it to improve to 3.6",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 10\u201320 bps for FY2031",
+      "source_quote": "around 10 to 20 basis point improvement in credit cost is a possibility",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_01012026154346_NSEBSE_Transcipt_Earning_Call_.pdf",
+      "speaker": "",
+      "period_promised": "FY2031",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10\u201320 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "So retention and attracting few new customers would be sufficient for us to keep up a growth momentum and grow at around 20%. The immediate impact of the capital infusion will be our gearing increase around 4.3, that is leveraging will come down to 2 .6 and we expect that as we keep using capital that will keep increasing. The ROA part of it, because the capital and lower cost, the ROA will expand from current 2.8 to around 3.6 over the period and the ROE which will come down in next year because of the additional capital to around 13.5 will start growing year after , and we would be able to go back to the current ROE by 31, that is around 5 years from now. So we should be able to have a growth momentum, better ROA, better ROE and we also expect the cre dit cost to come down even though we don't want to give, we have been always a conservative, we don't want to give a very high positive picture on this, but around 10 to 20 basis point improvement in credit cost is a possibility , because we would be able t o retain our top customers, our best paying customers for a longer term. So these are all the positives of the investment. And I think this is the base -- and of course, the other advantages which I would like to highlight, the M UFG has an investment in Mo rgan Stanley with 23.7 . And apart from that , they have investment into 4 Asian countries, that is Philippines, Vietnam, Thailand and Indonesia and their experience in these countries have been good.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 10.0,
+      "target_high": 20.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-01",
+      "calls": [
+        {
+          "date": "2026-01-01",
+          "call_period": "2025-12-31",
+          "page": 4,
+          "quote": "around 10 to 20 basis point improvement in credit cost is a possibility",
+          "document": "Mathew_01012026154346_NSEBSE_Transcipt_Earning_Call_.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 18\u201320% for FY2025",
+      "source_quote": "I think our guidance on MSME would be between 18 %-20% of growth for the financial year.",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_29042025141144_Transcript_Earnings_Call_Q4_FY_2024_25.pdf",
+      "speaker": "Y.S. Chakravarti",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "18\u201320%",
+      "status": "segment_level",
+      "note": "MSME guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Do you expect that this growth rat e would continue and grow at 30% by FY'25? Y.S. Chakravarti: Sorry, this is Chakravarti here. I think our guidance on MSME would be between 18 %-20% of growth for the financial year. Umesh G Revankar: See this 30% growth was mainly due to lower base and also we have activated more number of branches post merger for MSME. So it has given a growth of around 30% in the last year. For next financial year, it will be moderated to around 20% plus.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "MSME",
+      "metric_key": "revenue_growth",
+      "target_low": 18.0,
+      "target_high": 20.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-29",
+      "calls": [
+        {
+          "date": "2025-04-29",
+          "call_period": "2025-03-31",
+          "page": 8,
+          "quote": "I think our guidance on MSME would be between 18 %-20% of growth for the financial year.",
+          "document": "Mathew_29042025141144_Transcript_Earnings_Call_Q4_FY_2024_25.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 8.5% for FY2026",
+      "source_quote": "We are confident that we will reach to 8.5% net interest margin for the full financial year by the end of the year.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_28072025172433_BSENSE_Transcript_EarningsCall_Q1_FY_2025_26.pdf",
+      "speaker": "Umesh G. Revankar",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8.5%",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Even though we have 85% of our borrowing in fixed terms and 15% floating, so that transition will take some time because the 15% floating, the bank will pass on immediately whenever there is a reduction in rate. But 85% will take time. So, over the six months to one year, we would be able to bring down our borrowing cost and that will be able to improve our net interest margin. We are confident that we will reach to 8.5% net interest margin for the full financial year by the end of the year. Abhishek Kumar Jain: And my second question on the credit cost, the guidance is 2.2 to 2.4 and in this quarter basically it is around 2%. So, I just wanted to understand what is t he full year guidance? Will you lower down the guidance post this number?",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 8.5,
+      "target_high": 8.5,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-04-29",
+          "call_period": "2025-03-31",
+          "page": 19,
+          "quote": "Yes, it should be hovering around between 27% to 28%.",
+          "document": "Mathew_29042025141144_Transcript_Earnings_Call_Q4_FY_2024_25.pdf"
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 6,
+          "quote": "Overall, it will remain under 2% for us for the full year.",
+          "document": "Mathew_28072025172433_BSENSE_Transcript_EarningsCall_Q1_FY_2025_26.pdf"
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 11,
+          "quote": "We are confident that we will reach to 8.5% net interest margin for the full financial year by the end of the year.",
+          "document": "Mathew_28072025172433_BSENSE_Transcript_EarningsCall_Q1_FY_2025_26.pdf"
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 11,
+          "quote": "The credit cost will remain around 2% for the total assets.",
+          "document": "Mathew_28072025172433_BSENSE_Transcript_EarningsCall_Q1_FY_2025_26.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-04-29",
+          "call_period": "2025-03-31",
+          "value": "27\u201328%",
+          "change": "set",
+          "page": 19,
+          "quote": "Yes, it should be hovering around between 27% to 28%.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "value": "at most 2%",
+          "change": "cut",
+          "page": 6,
+          "quote": "Overall, it will remain under 2% for us for the full year.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "value": "8.5%",
+          "change": "raised",
+          "page": 11,
+          "quote": "We are confident that we will reach to 8.5% net interest margin for the full financial year by the end of the year.",
+          "superseded": false
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "value": "2%",
+          "change": "cut",
+          "page": 11,
+          "quote": "The credit cost will remain around 2% for the total assets.",
+          "superseded": true
+        }
+      ]
+    }
+  ],
+  "long_term_targets": [
+    {
+      "promise": "Revenue growth 15% for a longer horizon",
+      "source_quote": "So as of now I feel 15% growth at current projection of the government",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_29042025141144_Transcript_Earnings_Call_Q4_FY_2024_25.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15%",
+      "status": "long_term",
+      "note": "The passage says mid-term or near-term, not a fiscal year or a quarter.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Umesh G. Revankar: We have been giving a 15% growth as a medium term growth. And the last 2 years also we had given 15%, but if the economy is growing well and if it can absorb and there is better demand, then it will grow faster. So as of now I feel 15% growth at current projection of the government where the government itself is talking about 6.5% GDP growth and the other economists are talking about 6% GDP growth. 15% is a fair growth we are expecting but if the growth is faster and the credit growth is better, then we will grow faster. Shweta: Sure. And sir, just bookkeeping question. Sorry, sir.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 15.0,
+      "target_high": 15.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-29",
+      "calls": [
+        {
+          "date": "2025-04-29",
+          "call_period": "2025-03-31",
+          "page": 13,
+          "quote": "So as of now I feel 15% growth at current projection of the government",
+          "document": "Mathew_29042025141144_Transcript_Earnings_Call_Q4_FY_2024_25.pdf"
+        },
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 6,
+          "quote": "we are confident that we' ll be able to grow more than 15% at least for next quarter.",
+          "document": "Mathew_27072026153856_BSENSE_Transcript_of_Earning_Call.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-04-29",
+          "call_period": "2025-03-31",
+          "value": "15%",
+          "change": "set",
+          "page": 13,
+          "quote": "So as of now I feel 15% growth at current projection of the government",
+          "superseded": false
+        },
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "value": "at least 15%",
+          "change": "maintained",
+          "page": 6,
+          "quote": "we are confident that we' ll be able to grow more than 15% at least for next quarter.",
+          "superseded": true
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 8.5% for a longer horizon",
+      "source_quote": "we will be able to manage the NIM at around 8.5% in the medium term.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Mathew_27072026153856_BSENSE_Transcript_of_Earning_Call.pdf",
+      "speaker": "Umesh Revankar",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8.5%",
+      "status": "long_term",
+      "note": "The passage says mid-term or near-term, not a fiscal year or a quarter.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Umesh Revankar: See, immediate 2 quarters, I think the current NIM will hold good because we are utilizing the capital. But over the medium term, definitely, it will come down a little because our new vehicle mix will go up. And right now, whatever the benefit we are getting off because of the lower cost of borrowing, to some extent, we are passing on to the new vehicle purchases. So I believe the - - as new vehicle portfolio keep increasing within the hours run, we will be able to manage the NIM at around 8.5% in the medium term. Chintan: I mean this is where I have a problem with your guidance, I don't understand this 8.5% number. You're currently at 9%. You've got excess liquidity on balance sheet.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 8.5,
+      "target_high": 8.5,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-27",
+      "calls": [
+        {
+          "date": "2026-07-27",
+          "call_period": "2026-06-30",
+          "page": 7,
+          "quote": "we will be able to manage the NIM at around 8.5% in the medium term.",
+          "document": "Mathew_27072026153856_BSENSE_Transcript_of_Earning_Call.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "revisions": {
+    "raised": 2,
+    "cut": 3,
+    "maintained": 5,
+    "items": [
+      {
+        "promise": "Revenue growth 15% for a longer horizon",
+        "period": "",
+        "sequence": [
+          {
+            "date": "2025-04-29",
+            "value": "15%",
+            "change": "set"
+          },
+          {
+            "date": "2026-07-27",
+            "value": "at least 15%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 18% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-05-04",
+            "value": "18%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-04",
+            "value": "18%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-07-27",
+            "value": "18%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-07-27",
+            "value": "18%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 12\u201315% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-04-29",
+            "value": "12\u201315%",
+            "change": "set"
+          },
+          {
+            "date": "2025-04-29",
+            "value": "15%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-05-04",
+            "value": "12\u201315%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 2.8\u20133.6 for FY2031",
+        "period": "FY2031",
+        "sequence": [
+          {
+            "date": "2026-01-01",
+            "value": "2.8\u20133.6",
+            "change": "set"
+          },
+          {
+            "date": "2026-01-01",
+            "value": "2.8\u20133.6",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 8.5% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-04-29",
+            "value": "27\u201328%",
+            "change": "set"
+          },
+          {
+            "date": "2025-07-28",
+            "value": "at most 2%",
+            "change": "cut"
+          },
+          {
+            "date": "2025-07-28",
+            "value": "8.5%",
+            "change": "raised"
+          },
+          {
+            "date": "2025-07-28",
+            "value": "2%",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.68,
+    "series": 0.72,
+    "guidance": 6.35,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.13,
+    "total": 7.89
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 5245,
+      "dropped": 6,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 5245
+  }
+}

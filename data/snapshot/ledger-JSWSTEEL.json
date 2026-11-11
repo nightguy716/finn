@@ -1,0 +1,188 @@
+{
+  "symbol": "JSWSTEEL",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 4,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 54486.0,
+    "ebitda_margin_pct": 18.57,
+    "pat": 5279.0,
+    "ttm_revenue": 199021.0,
+    "ttm_pat": 28439.0,
+    "ttm_ebitda_margin_pct": 26.12,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 54486.0,
+        "ebitda": 10120.0,
+        "ebitda_margin_pct": 18.57,
+        "ebit": 7920.0,
+        "ebit_margin_pct": 14.54,
+        "pbt": 6759.0,
+        "finance_costs": 1602.0,
+        "depreciation": 2200.0,
+        "other_income": 441.0,
+        "pat": 5279.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 47364.0,
+        "ebitda": 9383.0,
+        "ebitda_margin_pct": 19.81,
+        "ebit": 7246.0,
+        "ebit_margin_pct": 15.3,
+        "pbt": 6258.0,
+        "finance_costs": 1712.0,
+        "depreciation": 2137.0,
+        "other_income": 724.0,
+        "pat": 4651.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 51180.0,
+        "ebitda": 26522.0,
+        "ebitda_margin_pct": 51.82,
+        "ebit": 24374.0,
+        "ebit_margin_pct": 47.62,
+        "pbt": 22547.0,
+        "finance_costs": 2168.0,
+        "depreciation": 2148.0,
+        "other_income": 341.0,
+        "pat": 16370.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 45991.0,
+        "ebitda": 5967.0,
+        "ebitda_margin_pct": 12.97,
+        "ebit": 3605.0,
+        "ebit_margin_pct": 7.84,
+        "pbt": 1574.0,
+        "finance_costs": 2304.0,
+        "depreciation": 2362.0,
+        "other_income": 273.0,
+        "pat": 2139.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 45152.0,
+        "ebitda": 7115.0,
+        "ebitda_margin_pct": 15.76,
+        "ebit": 4561.0,
+        "ebit_margin_pct": 10.1,
+        "pbt": 2432.0,
+        "finance_costs": 2413.0,
+        "depreciation": 2554.0,
+        "other_income": 284.0,
+        "pat": 1623.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 31613.0,
+        "ebitda": 5585.0,
+        "ebitda_margin_pct": 17.67,
+        "ebit": 4029.0,
+        "ebit_margin_pct": 12.74,
+        "pbt": 2925.0,
+        "finance_costs": 1601.0,
+        "depreciation": 1556.0,
+        "other_income": 497.0,
+        "pat": 2178.0,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.92,
+    "series": 0.62,
+    "guidance": 12.39,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.14,
+    "total": 14.07
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 851,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 851
+  }
+}

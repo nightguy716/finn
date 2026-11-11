@@ -1,0 +1,686 @@
+{
+  "symbol": "PERSISTENT",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 4,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 39,
+    "pages_dropped_by_prefilter": 7,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 18
+      },
+      {
+        "period": "2026-09-30",
+        "page": 25
+      },
+      {
+        "period": "2025-12-31",
+        "page": 9
+      },
+      {
+        "period": "2025-09-30",
+        "page": 3
+      },
+      {
+        "period": "2025-06-30",
+        "page": 1
+      },
+      {
+        "period": "2025-06-30",
+        "page": 8
+      },
+      {
+        "period": "2025-06-30",
+        "page": 16
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 4663.9,
+    "ebitda_margin_pct": 13.58,
+    "pat": 351.51,
+    "ttm_revenue": 16801.27,
+    "ttm_pat": 1320.22,
+    "ttm_ebitda_margin_pct": 16.32,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 4663.9,
+        "ebitda": 633.47,
+        "ebitda_margin_pct": 13.58,
+        "ebit": 466.8,
+        "ebit_margin_pct": 10.01,
+        "pbt": 453.68,
+        "finance_costs": 37.57,
+        "depreciation": 166.67,
+        "other_income": 24.45,
+        "pat": 351.51,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 4303.23,
+        "ebitda": 696.89,
+        "ebitda_margin_pct": 16.19,
+        "ebit": 581.6,
+        "ebit_margin_pct": 13.52,
+        "pbt": 623.1,
+        "finance_costs": 29.14,
+        "depreciation": 115.29,
+        "other_income": 70.64,
+        "pat": 0.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 4055.94,
+        "ebitda": 767.71,
+        "ebitda_margin_pct": 18.93,
+        "ebit": 659.17,
+        "ebit_margin_pct": 16.25,
+        "pbt": 673.98,
+        "finance_costs": 18.68,
+        "depreciation": 108.54,
+        "other_income": 33.49,
+        "pat": 529.26,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 3778.2,
+        "ebitda": 644.03,
+        "ebitda_margin_pct": 17.05,
+        "ebit": 543.45,
+        "ebit_margin_pct": 14.38,
+        "pbt": 564.99,
+        "finance_costs": 18.96,
+        "depreciation": 100.58,
+        "other_income": 40.5,
+        "pat": 439.45,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 3580.72,
+        "ebitda": 683.08,
+        "ebitda_margin_pct": 19.08,
+        "ebit": 583.03,
+        "ebit_margin_pct": 16.28,
+        "pbt": 616.83,
+        "finance_costs": 17.98,
+        "depreciation": 100.05,
+        "other_income": 51.78,
+        "pat": 471.47,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 3333.59,
+        "ebitda": 611.59,
+        "ebitda_margin_pct": 18.35,
+        "ebit": 517.81,
+        "ebit_margin_pct": 15.53,
+        "pbt": 555.41,
+        "finance_costs": 17.06,
+        "depreciation": 93.78,
+        "other_income": 54.66,
+        "pat": 448.25,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA margin 20\u201324% for FY2026",
+      "source_quote": "ETR for FY26 will be in the range of 20%-24%.",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20\u201324%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Increase in Other Income was primarily due to earn-out credit of \u20b9129.8 million from one of our recent acquisitions. Foreign exchange loss of \u20b978.2 million this quarter as against a gain of \u20b9272 million in Q2 of FY26 was primarily on account of mark-to-market losses on hedges. Effective Tax Rate for the quarter came in at 22.2% versus 23.5% last quarter. ETR for FY26 will be in the range of 20%-24%. The ETR needs to be looked at on a yearly basis as all seasonal elements to be taken care of on a yearly basis. Profit After Tax was \u20b94,394.5 million, a growth of 17.8% year-on-year. This translates to a PAT margin of 11.6%.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 20.0,
+      "target_high": 24.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-27",
+      "calls": [
+        {
+          "date": "2025-07-29",
+          "call_period": "2025-06-30",
+          "page": 9,
+          "quote": "We expect our overall effective tax rate for the year to remain in the range of 22.5% to 23.5% going forward.",
+          "document": "PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf"
+        },
+        {
+          "date": "2025-10-20",
+          "call_period": "2025-09-30",
+          "page": 6,
+          "quote": "the effective tax rate for FY26 is likely to remain in the range of 22.5% to 23.5%.",
+          "document": "PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf"
+        },
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 8,
+          "quote": "ETR for FY26 will be in the range of 20%-24%.",
+          "document": "PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-07-29",
+          "call_period": "2025-06-30",
+          "value": "22.5\u201323.5%",
+          "change": "set",
+          "page": 9,
+          "quote": "We expect our overall effective tax rate for the year to remain in the range of 22.5% to 23.5% going forward.",
+          "superseded": true
+        },
+        {
+          "date": "2025-10-20",
+          "call_period": "2025-09-30",
+          "value": "22.5\u201323.5%",
+          "change": "maintained",
+          "page": 6,
+          "quote": "the effective tax rate for FY26 is likely to remain in the range of 22.5% to 23.5%.",
+          "superseded": true
+        },
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "value": "20\u201324%",
+          "change": "cut",
+          "page": 8,
+          "quote": "ETR for FY26 will be in the range of 20%-24%.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 100 bps for FY2026",
+      "source_quote": "we are looking at 100 basis point improvement in FY26",
+      "page": 19,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf",
+      "speaker": "Vinit Teredesai",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "100 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Persistent Systems Limited Page 18 of 21 Next quarter, there might be a little bit of an impact on the account of the points I mentioned, particularly on the wage impact. But on an overall note, if we are looking at our current trajectory, we are looking at 100 basis point improvement in FY26 , and probably another 100 basis point in FY27. That's what we have mentioned. So pretty much on track as far as that trajectory is concerned. As Sandeep called out, after that, we'll take a call in terms of the focus and priority will be on growth.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 100.0,
+      "target_high": 100.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-20",
+      "calls": [
+        {
+          "date": "2025-10-20",
+          "call_period": "2025-09-30",
+          "page": 19,
+          "quote": "we are looking at 100 basis point improvement in FY26",
+          "document": "PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 16\u201317% for FY2027",
+      "source_quote": "we have said we want to be in the 16 to 17 % range, that is our aspiration.",
+      "page": 19,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_23102026204328_PSLTranscriptSubmissionOctober2026Sd.pdf",
+      "speaker": "Sandeep Kalra",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "16\u201317%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "And my second question was around margins. So, with wage hike now behind us and amortization as Vinit was saying should start, at least the optimization should start kicking in, so is it fair to expect the margin should start recovering from here. And any year end margin target you would want to share? Sandeep Kalra: Yeah, so from our perspective we have said we want to be in the 16 to 17 % range, that is our aspiration. That will be our endeavour but we'll let the quarters pan by. We don't give forward looking guidance. Please take this as an aspirational goal.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 16.0,
+      "target_high": 17.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-23",
+      "calls": [
+        {
+          "date": "2026-10-23",
+          "call_period": "2026-09-30",
+          "page": 19,
+          "quote": "we have said we want to be in the 16 to 17 % range, that is our aspiration.",
+          "document": "PERSISTENTUSER1_23102026204328_PSLTranscriptSubmissionOctober2026Sd.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue US$2 billion for FY2027",
+      "source_quote": "advancing confidently towards our aspiration of $2 billion by March 2027",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "US$2 billion",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "passage": "The Huddle successfully concluded last week in Pune. This year's Huddle brought together about 650 senior global leaders across sales, delivery and enabling functions, making it one of our most comprehensive strategic gatherings till date. Over the course of this intensive offsite, we not only charted our priorities and focus areas for FY27 but also assessed our progress towards our long-term aspiration of reaching $5 billion in annual revenue by FY31 and did intensive trainings on the AI side for our entire leadership. I am also happy to share that we remain firmly on track, advancing confidently towards our aspiration of $2 billion by March 2027 and laying the foundation of $5 billion by March 2031. With this, I conclude my prepared remarks and would like to invite Vinit, our CFO, to give a detailed color on quarterly financials and related matters. Vinit, over to you.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 2.0,
+      "target_high": 2.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-27",
+      "calls": [
+        {
+          "date": "2025-04-30",
+          "call_period": "2025-03-31",
+          "page": 19,
+          "quote": "We remain committed to our goal of reaching 2 billion dollars by end of FY27 and are well on that trajectory.",
+          "document": "PERSISTENTUSER1_30042025165933_Persistent_Systems_-_Transcript_of_analyst_call_Q4_FY25-signed.pdf"
+        },
+        {
+          "date": "2025-07-29",
+          "call_period": "2025-06-30",
+          "page": 13,
+          "quote": "We remain committed to our goal of reaching 2 billion dollars by end of FY27.",
+          "document": "PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf"
+        },
+        {
+          "date": "2025-10-20",
+          "call_period": "2025-09-30",
+          "page": 12,
+          "quote": "We are making steady progress towards our aspiration of reaching $2 billion by end of FY27.",
+          "document": "PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf"
+        },
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 6,
+          "quote": "advancing confidently towards our aspiration of $2 billion by March 2027",
+          "document": "PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-04-30",
+          "call_period": "2025-03-31",
+          "value": "at most US$2 billion",
+          "change": "set",
+          "page": 19,
+          "quote": "We remain committed to our goal of reaching 2 billion dollars by end of FY27 and are well on that trajectory.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-29",
+          "call_period": "2025-06-30",
+          "value": "at least US$2 billion",
+          "change": "maintained",
+          "page": 13,
+          "quote": "We remain committed to our goal of reaching 2 billion dollars by end of FY27.",
+          "superseded": true
+        },
+        {
+          "date": "2025-10-20",
+          "call_period": "2025-09-30",
+          "value": "US$2 billion",
+          "change": "maintained",
+          "page": 12,
+          "quote": "We are making steady progress towards our aspiration of reaching $2 billion by end of FY27.",
+          "superseded": true
+        },
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "value": "US$2 billion",
+          "change": "maintained",
+          "page": 6,
+          "quote": "advancing confidently towards our aspiration of $2 billion by March 2027",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 100 bps for FY2027",
+      "source_quote": "probably another 100 basis point in FY27.",
+      "page": 19,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf",
+      "speaker": "Vinit Teredesai",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "100 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Persistent Systems Limited Page 18 of 21 Next quarter, there might be a little bit of an impact on the account of the points I mentioned, particularly on the wage impact. But on an overall note, if we are looking at our current trajectory, we are looking at 100 basis point improvement in FY26 , and probably another 100 basis point in FY27. That's what we have mentioned. So pretty much on track as far as that trajectory is concerned. As Sandeep called out, after that, we'll take a call in terms of the focus and priority will be on growth.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 100.0,
+      "target_high": 100.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-20",
+      "calls": [
+        {
+          "date": "2025-10-20",
+          "call_period": "2025-09-30",
+          "page": 19,
+          "quote": "probably another 100 basis point in FY27.",
+          "document": "PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin to rise for FY2027",
+      "source_quote": "So, net-net we are pretty much confident and we are pretty much on track in terms of delivering our aspirational target of improving our margins",
+      "page": 25,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_30042025165933_Persistent_Systems_-_Transcript_of_analyst_call_Q4_FY25-signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So, these are all the things which will continue . SG&A - while as a percentage is closely watched. We continue to make investment and at the same time the investment also gives benefits in terms of the goals that we are delivering. So, net-net we are pretty much confident and we are pretty much on track in terms of delivering our aspirational target of improving our margins by 200-300 basis points as we hit the 2 billion dollar revenue target by FY27. Moderator: Thank you. The next question is from Abhishek Pathak. Abhishek Pathak: Yeah, hi, am I audible?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-30",
+      "calls": [
+        {
+          "date": "2025-04-30",
+          "call_period": "2025-03-31",
+          "page": 25,
+          "quote": "So, net-net we are pretty much confident and we are pretty much on track in terms of delivering our aspirational target of improving our margins",
+          "document": "PERSISTENTUSER1_30042025165933_Persistent_Systems_-_Transcript_of_analyst_call_Q4_FY25-signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex US$25\u201330 million for FY2027",
+      "source_quote": "Over the next two quarters, we expect an incremental amount ranging between USD 25 to 30 million to be incurred towards the Nagarro transaction.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_23102026204328_PSLTranscriptSubmissionOctober2026Sd.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "US$25\u201330 million",
+      "status": "segment_level",
+      "note": "Nagarro transaction guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "passage": "Operating profit after tax for the quarter was Rs. 4,951.5 million, margin of 10.6% with a year-on-year growth of 5%. We incurred transaction costs worth Rs. 1,853.4 million towards the Nagarro acquisition in this quarter. These expenses include transaction and advisory costs related to regulatory filing, financing charges, legal, communication and travel expenses. Over the next two quarters, we expect an incremental amount ranging between USD 25 to 30 million to be incurred towards the Nagarro transaction. For Q2 FY27, these expenses impacted the reported PAT margin as well as the reported EPS by around 3.1%. Reported profit after tax for the quarter was Rs. 3,515.1 million, a margin of 7.5%, with year-on-year decline of 25.4%. Operating earnings per share was Rs. 31.6 with a year-on-year growth of 4.2%, whereas the reported earnings per share was at Rs. 22.4 which translates into decline of 26%.",
+      "basis": "not_stated",
+      "conditional_on": "Nagarro transaction",
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "other",
+      "scope_name": "Nagarro transaction",
+      "metric_key": "capex",
+      "target_low": 25.0,
+      "target_high": 30.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-23",
+      "calls": [
+        {
+          "date": "2026-10-23",
+          "call_period": "2026-09-30",
+          "page": 9,
+          "quote": "Over the next two quarters, we expect an incremental amount ranging between USD 25 to 30 million to be incurred towards the Nagarro transaction.",
+          "document": "PERSISTENTUSER1_23102026204328_PSLTranscriptSubmissionOctober2026Sd.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue US$5 billion for FY2031",
+      "source_quote": "reaching $5 billion in annual revenue by FY31",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf",
+      "speaker": "",
+      "period_promised": "FY2031",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "US$5 billion",
+      "status": "not_scored",
+      "note": "Guided in US dollars for the IT services segment; our series is consolidated INR.",
+      "quote_check": "ok",
+      "unit": "currency_usd",
+      "kind": "level",
+      "passage": "I am pleased to share an update on our annual planning exercise which we call the \u2018Huddle\u2019. The Huddle successfully concluded last week in Pune. This year's Huddle brought together about 650 senior global leaders across sales, delivery and enabling functions, making it one of our most comprehensive strategic gatherings till date. Over the course of this intensive offsite, we not only charted our priorities and focus areas for FY27 but also assessed our progress towards our long-term aspiration of reaching $5 billion in annual revenue by FY31 and did intensive trainings on the AI side for our entire leadership. I am also happy to share that we remain firmly on track, advancing confidently towards our aspiration of $2 billion by March 2027 and laying the foundation of $5 billion by March 2031. With this, I conclude my prepared remarks and would like to invite Vinit, our CFO, to give a detailed color on quarterly financials and related matters. Vinit, over to you.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 5.0,
+      "target_high": 5.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-27",
+      "calls": [
+        {
+          "date": "2026-01-27",
+          "call_period": "2025-12-31",
+          "page": 6,
+          "quote": "reaching $5 billion in annual revenue by FY31",
+          "document": "PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 1,
+    "maintained": 4,
+    "items": [
+      {
+        "promise": "Revenue US$2 billion for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2025-04-30",
+            "value": "at most US$2 billion",
+            "change": "set"
+          },
+          {
+            "date": "2025-07-29",
+            "value": "at least US$2 billion",
+            "change": "maintained"
+          },
+          {
+            "date": "2025-10-20",
+            "value": "US$2 billion",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-01-27",
+            "value": "US$2 billion",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 20\u201324% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-07-29",
+            "value": "22.5\u201323.5%",
+            "change": "set"
+          },
+          {
+            "date": "2025-10-20",
+            "value": "22.5\u201323.5%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-01-27",
+            "value": "20\u201324%",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.63,
+    "series": 0.77,
+    "guidance": 6.2,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 7.73
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 4293,
+      "dropped": 3,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 4293
+  }
+}

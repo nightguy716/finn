@@ -1,0 +1,1023 @@
+{
+  "symbol": "DIXON",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 14,
+    "next_quarter_statements": 1,
+    "pages_mentioning_fy26_or_next_quarter": 32,
+    "pages_dropped_by_prefilter": 5,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 7
+      },
+      {
+        "period": "2026-03-31",
+        "page": 3
+      },
+      {
+        "period": "2026-03-31",
+        "page": 7
+      },
+      {
+        "period": "2025-03-31",
+        "page": 8
+      },
+      {
+        "period": "2025-03-31",
+        "page": 12
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 21793.64,
+    "ebitda_margin_pct": 2.74,
+    "pat": 343.66,
+    "ttm_revenue": 58523.4,
+    "ttm_pat": 1550.75,
+    "ttm_ebitda_margin_pct": 3.22,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 21793.64,
+        "ebitda": 596.82,
+        "ebitda_margin_pct": 2.74,
+        "ebit": 486.76,
+        "ebit_margin_pct": 2.23,
+        "pbt": 529.54,
+        "finance_costs": 25.95,
+        "depreciation": 110.06,
+        "other_income": 68.73,
+        "pat": 343.66,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 15547.66,
+        "ebitda": 463.12,
+        "ebitda_margin_pct": 2.98,
+        "ebit": 356.17,
+        "ebit_margin_pct": 2.29,
+        "pbt": 860.34,
+        "finance_costs": 24.12,
+        "depreciation": 106.95,
+        "other_income": 528.29,
+        "pat": 663.42,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 10510.51,
+        "ebitda": 408.37,
+        "ebitda_margin_pct": 3.89,
+        "ebit": 303.4,
+        "ebit_margin_pct": 2.89,
+        "pbt": 364.04,
+        "finance_costs": 23.66,
+        "depreciation": 104.97,
+        "other_income": 84.3,
+        "pat": 256.41,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 10671.59,
+        "ebitda": 414.45,
+        "ebitda_margin_pct": 3.88,
+        "ebit": 315.42,
+        "ebit_margin_pct": 2.96,
+        "pbt": 403.87,
+        "finance_costs": 42.87,
+        "depreciation": 99.03,
+        "other_income": 131.32,
+        "pat": 287.26,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 14855.04,
+        "ebitda": 561.33,
+        "ebitda_margin_pct": 3.78,
+        "ebit": 465.05,
+        "ebit_margin_pct": 3.13,
+        "pbt": 922.44,
+        "finance_costs": 38.35,
+        "depreciation": 96.28,
+        "other_income": 495.74,
+        "pat": 670.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 12835.66,
+        "ebitda": 482.37,
+        "ebitda_margin_pct": 3.76,
+        "ebit": 389.67,
+        "ebit_margin_pct": 3.04,
+        "pbt": 358.76,
+        "finance_costs": 32.59,
+        "depreciation": 92.7,
+        "other_income": 1.68,
+        "pat": 224.97,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Volume growth at least 15% for an unnamed period",
+      "source_quote": "Ahead of the festive season we expect volume growth of at least 15% quarter-on-quarter.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_28072025185656_28072025Transcript.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 15%",
+      "status": "segment_level",
+      "note": "telecom IT hardware, hearables and wearables guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Out of this, revenue for telecom IT hardware, hearables and wearables was INR1,410 crores, INR247 crores and INR175 crores, respectively. We witnessed a strong momentum in the quarter with healthy volume growth across various smartphone brands. Order books for Q2 Financial Year \u201825, \u201826 looks even stronger. Ahead of the festive season we expect volume growth of at least 15% quarter-on-quarter. Dixon remains the largest domestic manufacturer of mobile phones with high volume capability, best-in-class infrastructure. Construction of our 0.8 million square feet. mobile manufacturing campus is progressing well in Noida for our anchor customers with much higher capacity and is expected to be completed by March \u201826. Approvals are expected for our 74:26 joint venture with Longcheer shortly and PN3 approval process for our 51.49 joint venture with Vivo is advancing well and also the application for our joint venture with HKC is advancing well.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "telecom IT hardware, hearables and wearables",
+      "metric_key": "volume_growth",
+      "target_low": 15.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 4,
+          "quote": "Ahead of the festive season we expect volume growth of at least 15% quarter-on-quarter.",
+          "document": "DIXON_28072025185656_28072025Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 7\u20137.5 for 2026-03-31",
+      "source_quote": "Q4 volumes are expected to be somewhere between 7 million to 7.5 million.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_03022026170954_EarningCallTranscript_Q3Intimation.pdf",
+      "speaker": "Atul Lall",
+      "period_promised": "2026-03-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20137.5",
+      "status": "segment_level",
+      "note": "smartphone guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So, Ankur, the smartphone volumes for Q3 was around 6.9 m illion. And overall, in 9 months, we have done a volume of closer to 27 million. Ankur Sharma: Okay. Atul Lall: Q4 volumes are expected to be somewhere between 7 million to 7.5 million. For '26 -'27, the numbers are still being worked out. It is -- the situation is slightly fluid because of the memory prices. And also, we are confident and close to a government approval for Vivo.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "smartphone",
+      "metric_key": "volume_growth",
+      "target_low": 7.0,
+      "target_high": 7.5,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-03",
+      "calls": [
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "page": 7,
+          "quote": "Q4 volumes are expected to be somewhere between 7 million to 7.5 million.",
+          "document": "DIXON_03022026170954_EarningCallTranscript_Q3Intimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth to rise for FY2026",
+      "source_quote": "target to expand volumes of smartphone camera modules from 40 million units in this fiscal to 190 million to 200 million units per annum.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_03022026170954_EarningCallTranscript_Q3Intimation.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "smartphone camera modules guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Dixon Technologies (India) Limited January 29, 2026 Page 4 of 20 and target to expand volumes of smartphone camera modules from 40 million units in this fiscal to 190 million to 200 million units per annum. We remain confident of getting the PN3 approval for our Vivo JV soon. Consumer electronics: LED TVs and refrigerators revenue for the quarter was INR567 crores with an operating profit of INR24 crores. This q uarter witnessed a temporary moderation in industry demand, primarily driven by post -Diwali seasonality, withdrawal of consumer offers and elevated channel inventories.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "smartphone camera modules",
+      "metric_key": "volume_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-03",
+      "calls": [
+        {
+          "date": "2025-05-24",
+          "call_period": "2025-03-31",
+          "page": 10,
+          "quote": "'25-'26 volume number for a smartphone is around 45\u2026.",
+          "document": "DIXON_24052025140006_EarningCallTranscriptQ4Intimation24052025.pdf"
+        },
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "page": 7,
+          "quote": "The expected volumes are in the range of around 0.5 million per month.",
+          "document": "DIXON_24102025103411_Transcript17072025.pdf"
+        },
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "page": 9,
+          "quote": "So, we feel that this year numbers are going to be similar, 40 million, 42 million.",
+          "document": "DIXON_24102025103411_Transcript17072025.pdf"
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "page": 5,
+          "quote": "target to expand volumes of smartphone camera modules from 40 million units in this fiscal to 190 million to 200 million units per annum.",
+          "document": "DIXON_03022026170954_EarningCallTranscript_Q3Intimation.pdf"
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "page": 5,
+          "quote": "target to expand volumes of smartphone camera modules from 40 million units in this fiscal to 190 million to 200 million units per annum.",
+          "document": "DIXON_03022026170954_EarningCallTranscript_Q3Intimation.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-24",
+          "call_period": "2025-03-31",
+          "value": "at least 45",
+          "change": "set",
+          "page": 10,
+          "quote": "'25-'26 volume number for a smartphone is around 45\u2026.",
+          "superseded": true
+        },
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "value": "at least 0.5",
+          "change": "cut",
+          "page": 7,
+          "quote": "The expected volumes are in the range of around 0.5 million per month.",
+          "superseded": true
+        },
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "value": "40\u201342",
+          "change": "raised",
+          "page": 9,
+          "quote": "So, we feel that this year numbers are going to be similar, 40 million, 42 million.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "value": "a direction only",
+          "change": "maintained",
+          "page": 5,
+          "quote": "target to expand volumes of smartphone camera modules from 40 million units in this fiscal to 190 million to 200 million units per annum.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "value": "a direction only",
+          "change": "maintained",
+          "page": 5,
+          "quote": "target to expand volumes of smartphone camera modules from 40 million units in this fiscal to 190 million to 200 million units per annum.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Capex \u20b9250\u2013300 crore for FY2026",
+      "source_quote": "In Q Tech, the camera modules capex intensity should be closer to INR250 crores, INR300-odd crores.",
+      "page": 19,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_03022026170954_EarningCallTranscript_Q3Intimation.pdf",
+      "speaker": "Saurabh Gupta",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "\u20b9250\u2013300 crore",
+      "status": "segment_level",
+      "note": "Q Tech camera modules guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "So, Rahul, display business across these 4 categories of smartphones, automotive, IT hardware. And in the second phase also, we're looking at TVs as well. We will be putting capex of closer to INR1,100 crores, INR1,200-odd crores. In Q Tech, the camera modules capex intensity should be closer to INR250 crores, INR300-odd crores.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Q Tech camera modules",
+      "metric_key": "capex",
+      "target_low": 250.0,
+      "target_high": 300.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-03",
+      "calls": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 17,
+          "quote": "So, camera and displays put together, we would be doing a CAPEX closely to almost, I would say, INR750 crores to INR800-odd crores this year",
+          "document": "DIXON_28072025185656_28072025Transcript.pdf"
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "page": 19,
+          "quote": "In Q Tech, the camera modules capex intensity should be closer to INR250 crores, INR300-odd crores.",
+          "document": "DIXON_03022026170954_EarningCallTranscript_Q3Intimation.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "value": "\u20b9750\u2013800 crore",
+          "change": "set",
+          "page": 17,
+          "quote": "So, camera and displays put together, we would be doing a CAPEX closely to almost, I would say, INR750 crores to INR800-odd crores this year",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "value": "\u20b9250\u2013300 crore",
+          "change": "cut",
+          "page": 19,
+          "quote": "In Q Tech, the camera modules capex intensity should be closer to INR250 crores, INR300-odd crores.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBIT margin 50% for FY2026",
+      "source_quote": "The outlook for \u201825, \u201826 is very promising with healthy order book, and we are confident of achieving 50% growth this fiscal.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_28072025185656_28072025Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "50%",
+      "status": "segment_level",
+      "note": "cooling division guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "We are actively working on increasing the capacities and enhancing capabilities for manufacturing for industrial, institutional and automotive displays. Refrigerators: Within one year of operation we have been able to capture around 10% of the Indian market in direct cool category and seeing the encouraging response from the brands, we are now expanding the capacity to 2 million from current 1.2 million at the existing facility in Greater Noida. We are also now foraying into new products in cooling division like frost-free, side-by-side mini bars, deep freezers and visi coolers. The outlook for \u201825, \u201826 is very promising with healthy order book, and we are confident of achieving 50% growth this fiscal. With capacity expansion and new product categories, the business is expected to contribute meaningfully in the next couple of years. Home Appliances: Revenue for the quarter is INR313 crores, operating profit of INR36 crores with a growth of 13% year-on-year with an operating margin of 11.5%. Our construction for capacity expansion for FATL in Tirupati will be ready by August \u201825 to meet the increased order book for our customers.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "segment",
+      "scope_name": "cooling division",
+      "metric_key": "ebit_margin",
+      "target_low": 50.0,
+      "target_high": 50.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 5,
+          "quote": "The outlook for \u201825, \u201826 is very promising with healthy order book, and we are confident of achieving 50% growth this fiscal.",
+          "document": "DIXON_28072025185656_28072025Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex \u20b9300\u2013350 crore for FY2027",
+      "source_quote": "estimate that the expected CAPEX is going to be somewhere around INR 300 crores to INR 350-odd crores",
+      "page": 20,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_05112026163605_EarningCallTranscriptQ2Intimation.pdf",
+      "speaker": "Atul Lall",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "\u20b9300\u2013350 crore",
+      "status": "segment_level",
+      "note": "Vivo JV guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "Can you help us understand the potential cross -log of capital investment required? And if you can also highlight the EBITDA per smartphone in this JV on ex-PLI basis, will it be similar to Dixon? And will this JV also source components from Dixon's own manufactured components? Atul Lall: So the commercials for Vivo JV are still being finalized, but we estimate that the expected CAPEX is going to be somewhere around INR 300 crores to INR 350-odd crores. That is the way it looks. As far as the commercials are concerned, please wait for some time. Akshay Gattani: And how would you expect Q uarter 3 volumes panning out while you maintain your full year guidance?",
+      "basis": "not_stated",
+      "conditional_on": "merger",
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Vivo JV",
+      "metric_key": "capex",
+      "target_low": 300.0,
+      "target_high": 350.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-05",
+      "calls": [
+        {
+          "date": "2026-11-05",
+          "call_period": "2026-09-30",
+          "page": 20,
+          "quote": "estimate that the expected CAPEX is going to be somewhere around INR 300 crores to INR 350-odd crores",
+          "document": "DIXON_05112026163605_EarningCallTranscriptQ2Intimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 12\u201315% for FY2027",
+      "source_quote": "we expect a high -double- digit growth quarter-on-quarter in the smartphones volume along with growth in selling prices by 12% to 15%.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_15052026172845_EarningCallTranscriptQ4Intimation.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "12\u201315%",
+      "status": "segment_level",
+      "note": "smartphones guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Mobile and other EMS businesses. Revenue for th e quarter for mobile and other EMS business was INR9,485 crores and operating profit of INR337 crores. Mobile industry has seen some headwinds from memory price inflation and demand moderation in the last 6 months. Over the past few weeks, supply -demand dynamics are becoming more balanced, and we are beginning to see an improvement in customer ordering pattern, and we expect a high -double- digit growth quarter-on-quarter in the smartphones volume along with growth in selling prices by 12% to 15%. We strongly feel that the momentum will sustain for the balance part of the fiscal year. We expect a strong growth in volume for our existing U.S. brand, and we expect a significa nt uptick in volumes for our subsidiary Ismartu on export for largely feature phones and also smartphones mainly for Africa market from mid -Q2 and will start manufacturing smartphones for HMD in Q1.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "smartphones",
+      "metric_key": "volume_growth",
+      "target_low": 12.0,
+      "target_high": 15.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-15",
+      "calls": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "we expect a high -double- digit growth quarter-on-quarter in the smartphones volume along with growth in selling prices by 12% to 15%.",
+          "document": "DIXON_15052026172845_EarningCallTranscriptQ4Intimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least 10% for FY2027",
+      "source_quote": "We expect this vertical to deliver high double -digit revenue growth in the current fiscal.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_15052026172845_EarningCallTranscriptQ4Intimation.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "segment_level",
+      "note": "Telecom and Networking products guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "We have commenced manufacturing of highly complex telecom and backhaul microwave radios and plan to initiate exports in this fiscal. We have commissioned a new manufacturing plant for capacity expansion and increased warehousing area to support the growth trajectory. Our stra tegy in this vertical is to move up the value chain from pure EMS to design -led solution-centric partnership and have now entered into joint design and manufacturing mo del with a key customer, enabling greater backward integration, localizing a higher share of the BoM. We expect this vertical to deliver high double -digit revenue growth in the current fiscal. IT hardware products. The segment delivered a healthy performance for the quarter under review, and we expect 3x growth in the revenues in the current fiscal against last year with a huge uptake in order books from all customers. Our dedicated IT hardware products manufacturing unit in Chennai has successfully established stabilized mass production of laptops and all -in-ones and has secured orders for desktop from one of our customers.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Telecom and Networking products",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-15",
+      "calls": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "We expect this vertical to deliver high double -digit revenue growth in the current fiscal.",
+          "document": "DIXON_15052026172845_EarningCallTranscriptQ4Intimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2027",
+      "source_quote": "we expect 3x growth in the revenues in the current fiscal against last year",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_15052026172845_EarningCallTranscriptQ4Intimation.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "IT hardware products guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Our stra tegy in this vertical is to move up the value chain from pure EMS to design -led solution-centric partnership and have now entered into joint design and manufacturing mo del with a key customer, enabling greater backward integration, localizing a higher share of the BoM. We expect this vertical to deliver high double -digit revenue growth in the current fiscal. IT hardware products. The segment delivered a healthy performance for the quarter under review, and we expect 3x growth in the revenues in the current fiscal against last year with a huge uptake in order books from all customers. Our dedicated IT hardware products manufacturing unit in Chennai has successfully established stabilized mass production of laptops and all -in-ones and has secured orders for desktop from one of our customers. The execution was the same, should start in Q2 of this fiscal. We have also started manufacturing tablets in addition to laptops for ou r existing customer.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "IT hardware products",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-15",
+      "calls": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "we expect 3x growth in the revenues in the current fiscal against last year",
+          "document": "DIXON_15052026172845_EarningCallTranscriptQ4Intimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 8\u201310 for FY2027",
+      "source_quote": "We feel that the volumes in this JV for the next fiscal should be somewhere around 8 to 10 million",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_24102025103411_Transcript17072025.pdf",
+      "speaker": "Atul Lall",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u201310",
+      "status": "segment_level",
+      "note": "Longcheer JV guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So, if you could just provide an outlook with respect to what kind of volumes are you expecting through this JV? And is it included in the 55 million to 60 million volume guidance that you spoke about now? Atul Lall: So, we feel, Dhruv, that the JV should become operational by first quarter of next fiscal. We feel that the volumes in this JV for the next fiscal should be somewhere around 8 to 10 million, and this is going to be a part of 60 million, 65 million that we are talking about for next fiscal. Dhruv Jain: And sir, the second question is on the PLI. So, if you could just spell out what was the PLI contribution in your EBITDA in this quarter? And we note that there is a large Rs. 1,400 crores receivables from government on PLI.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Longcheer JV",
+      "metric_key": "volume_growth",
+      "target_low": 8.0,
+      "target_high": 10.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-24",
+      "calls": [
+        {
+          "date": "2025-05-24",
+          "call_period": "2025-03-31",
+          "page": 10,
+          "quote": "yes, we are building a capacity of almost 60-65 million and that's the targeted volume that we are aspiring for in '26-'27.",
+          "document": "DIXON_24052025140006_EarningCallTranscriptQ4Intimation24052025.pdf"
+        },
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "page": 9,
+          "quote": "So, next year, we feel that we should be somewhere between 55 to 60 million.",
+          "document": "DIXON_24102025103411_Transcript17072025.pdf"
+        },
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "page": 11,
+          "quote": "We feel that the volumes in this JV for the next fiscal should be somewhere around 8 to 10 million",
+          "document": "DIXON_24102025103411_Transcript17072025.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-24",
+          "call_period": "2025-03-31",
+          "value": "60\u201365",
+          "change": "set",
+          "page": 10,
+          "quote": "yes, we are building a capacity of almost 60-65 million and that's the targeted volume that we are aspiring for in '26-'27.",
+          "superseded": true
+        },
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "value": "55\u201360",
+          "change": "cut",
+          "page": 9,
+          "quote": "So, next year, we feel that we should be somewhere between 55 to 60 million.",
+          "superseded": true
+        },
+        {
+          "date": "2025-10-24",
+          "call_period": "2025-09-30",
+          "value": "8\u201310",
+          "change": "cut",
+          "page": 11,
+          "quote": "We feel that the volumes in this JV for the next fiscal should be somewhere around 8 to 10 million",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin at least 80 for FY2028",
+      "source_quote": "display and camera put together, we feel that over a period of next 2 years, we should be able to expand our margins by 80",
+      "page": 18,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_05112026163605_EarningCallTranscriptQ2Intimation.pdf",
+      "speaker": "",
+      "period_promised": "FY2028",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 80",
+      "status": "segment_level",
+      "note": "display and camera guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Dixon Technologies (India) Limited October 30, 2026 Page 17 of 23 Camera modules, I have already spoken on the, on my previous question. So, clearly both display and camera put together, we feel that over a period of next 2 years, we should be able to expand our margins by 80 to 100 bps. So, that is what we are targeting for. Keyur Pandya: So just one follow -up. So you highlighted FY '28 volume organically in 50s, or so what total volume and X view?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "display and camera",
+      "metric_key": "ebitda_margin",
+      "target_low": 80.0,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-05",
+      "calls": [
+        {
+          "date": "2026-11-05",
+          "call_period": "2026-09-30",
+          "page": 18,
+          "quote": "display and camera put together, we feel that over a period of next 2 years, we should be able to expand our margins by 80",
+          "document": "DIXON_05112026163605_EarningCallTranscriptQ2Intimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex \u20b9800\u2013900 crore for FY2026",
+      "source_quote": "Atul Lall: Yes. So, you see in 1st Quarter, we have made a Capex of around INR287-odd crores and we feel another INR800 crores to",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_28072025185656_28072025Transcript.pdf",
+      "speaker": "Atul Lall",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "\u20b9800\u2013900 crore",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "Not in the quote: 900",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "Siddharth: Okay. Okay. So, given these investments now for the year, how do you see the total CAPEX and investment spend for the company, if you can describe us broadly? Atul Lall: Yes. So, you see in 1st Quarter, we have made a Capex of around INR287-odd crores and we feel another INR800 crores to INR900 crores is going to go into this. Saurabh Gupta: Yes. So, combination of expansion, capacities and also Q Tech acquisition.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 800.0,
+      "target_high": 900.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-05-24",
+          "call_period": "2025-03-31",
+          "page": 18,
+          "quote": "In that '25-'26, the CAPEX should be in a similar range of around Rs. 900 crores to Rs.",
+          "document": "DIXON_24052025140006_EarningCallTranscriptQ4Intimation24052025.pdf"
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 8,
+          "quote": "Atul Lall: Yes. So, you see in 1st Quarter, we have made a Capex of around INR287-odd crores and we feel another INR800 crores to",
+          "document": "DIXON_28072025185656_28072025Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-24",
+          "call_period": "2025-03-31",
+          "value": "at least \u20b9900 crore",
+          "change": "set",
+          "page": 18,
+          "quote": "In that '25-'26, the CAPEX should be in a similar range of around Rs. 900 crores to Rs.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "value": "\u20b9800\u2013900 crore",
+          "change": "cut",
+          "page": 8,
+          "quote": "Atul Lall: Yes. So, you see in 1st Quarter, we have made a Capex of around INR287-odd crores and we feel another INR800 crores to",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 50\u201370 bps for FY2027",
+      "source_quote": "50 to 70 basis points of margin impact may be there.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_15052026172845_EarningCallTranscriptQ4Intimation.pdf",
+      "speaker": "Aditya Bhartia",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "50\u201370 bps",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "So that's the path we are pursuing, which we have shared with you earlier also. But please be rest assured, the anchor relationships are very deep and there is no hit on that. Aditya Bhartia: Sure. So what we had earlier kind of discussed that 50 to 70 basis points of margin impact may be there. Add to that, maybe optically how the margins may look low er on account of higher realizations, but that should be the complete impact, nothing more? Saurabh Gupta: That's right, Aditya.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 50.0,
+      "target_high": 70.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-15",
+      "calls": [
+        {
+          "date": "2026-05-15",
+          "call_period": "2026-03-31",
+          "page": 10,
+          "quote": "50 to 70 basis points of margin impact may be there.",
+          "document": "DIXON_15052026172845_EarningCallTranscriptQ4Intimation.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin to rise for FY2027",
+      "source_quote": "In FY 26-27, we think we can expand the margins. Even after taking into account the PLI margin, which is our share of PLI margin",
+      "page": 16,
+      "source_document": "https://nsearchives.nseindia.com/corporate/DIXON_28072025185656_28072025Transcript.pdf",
+      "speaker": "Saurabh Gupta",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So, how should we look at it? Saurabh Gupta: Yes. So, the math that we have done, we think that FY 27-28 and of course a large part of it will start reflect in FY 26-27 when the PLI also goes away. In FY 26-27, we think we can expand the margins. Even after taking into account the PLI margin, which is our share of PLI margin going away, we can expand the margin to almost 120, 130 bps in FY 26-27and which should even be higher in FY 27-28 once it is completely ramped up, and we have expansion of mobile displays, we have more TV and automotive displays coming in. So, we think FY 27-28 can be a further margin expansion as well. Moderator: The next question is from the line of Neeraj Jain from BNP Paribas.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-28",
+      "calls": [
+        {
+          "date": "2025-07-28",
+          "call_period": "2025-06-30",
+          "page": 16,
+          "quote": "In FY 26-27, we think we can expand the margins. Even after taking into account the PLI margin, which is our share of PLI margin",
+          "document": "DIXON_28072025185656_28072025Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 1,
+    "cut": 5,
+    "maintained": 2,
+    "items": [
+      {
+        "promise": "Volume growth to rise for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-24",
+            "value": "at least 45",
+            "change": "set"
+          },
+          {
+            "date": "2025-10-24",
+            "value": "at least 0.5",
+            "change": "cut"
+          },
+          {
+            "date": "2025-10-24",
+            "value": "40\u201342",
+            "change": "raised"
+          },
+          {
+            "date": "2026-02-03",
+            "value": "a direction only",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-02-03",
+            "value": "a direction only",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Capex \u20b9250\u2013300 crore for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-07-28",
+            "value": "\u20b9750\u2013800 crore",
+            "change": "set"
+          },
+          {
+            "date": "2026-02-03",
+            "value": "\u20b9250\u2013300 crore",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "Volume growth 8\u201310 for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2025-05-24",
+            "value": "60\u201365",
+            "change": "set"
+          },
+          {
+            "date": "2025-10-24",
+            "value": "55\u201360",
+            "change": "cut"
+          },
+          {
+            "date": "2025-10-24",
+            "value": "8\u201310",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "Capex \u20b9800\u2013900 crore for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-24",
+            "value": "at least \u20b9900 crore",
+            "change": "set"
+          },
+          {
+            "date": "2025-07-28",
+            "value": "\u20b9800\u2013900 crore",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.87,
+    "series": 1.13,
+    "guidance": 5.7,
+    "check": 0.02,
+    "verify": 0.0,
+    "verdict": 0.22,
+    "total": 7.94
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 4607,
+      "dropped": 5,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 4607
+  }
+}

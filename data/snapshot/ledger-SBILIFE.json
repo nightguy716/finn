@@ -1,0 +1,868 @@
+{
+  "symbol": "SBILIFE",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 13,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 39,
+    "pages_dropped_by_prefilter": 8,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 5
+      },
+      {
+        "period": "2026-09-30",
+        "page": 10
+      },
+      {
+        "period": "2026-06-30",
+        "page": 12
+      },
+      {
+        "period": "2026-03-31",
+        "page": 5
+      },
+      {
+        "period": "2025-12-31",
+        "page": 18
+      },
+      {
+        "period": "2025-09-30",
+        "page": 3
+      },
+      {
+        "period": "2025-03-31",
+        "page": 13
+      },
+      {
+        "period": "2025-03-31",
+        "page": 15
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 24291.7,
+    "ebitda_margin_pct": null,
+    "pat": null,
+    "ttm_revenue": null,
+    "ttm_pat": null,
+    "ttm_ebitda_margin_pct": null,
+    "ttm_note": "TTM is blank because 2026-09-30, 2026-06-30, 2026-03-31, 2025-12-31 has no quarter figures.",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 24291.7,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 46090.7,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 5657.75,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 45803.0,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 22809.22,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 38695.9,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "xbrl",
+        "flags": [
+          "current-quarter revenue or PAT is missing"
+        ]
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 13\u201314 for FY2026",
+      "source_quote": "we are very sure that in the 4th Quarter also, we will be able to maintain our overall growth number as per our guidance of",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBILIFE_03022026194100_SEECTranscript_03022026_signed.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201314",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "How should we think about SBI as a channel and what are the kind of levers we have there to grow this business more aggressively? Management: So, as far as channel mix is concerned, we are happy that our overall growth number that the guidance that we had provided of about 13 %-14%, we have been able to maintain that and slightly maybe even better than the guidance. Within the channel mix, different channels have their seasonality and third quarter specifically has always been very good for SBI Life. There is some good traction being seen in the SBI also of late and we are very sure that in the 4th Quarter also, we will be able to maintain our overall growth number as per our guidance of 13 %-14% and within that, all the channels are performing as per our expectations. Prayesh Jain: The 13%-14% guidance is for the full year APE growth? Management: Yes. Prayesh Jain: So, what would be your thought process with respect to say now we are already into the 10 th month of this year, how do you see the next year shaping up from a growth perspective?",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 13.0,
+      "target_high": 14.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-03",
+      "calls": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 7,
+          "quote": "Talking of overall growth, we delivered on individual IRP basis, 12% growth and going forward, we expect that we will continue to grow at around",
+          "document": "SBILIFE_02052025133324_SEECTR02052025_signed.pdf"
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "page": 8,
+          "quote": "As far as channel mix is concerned, we are happy that our overall growth number that the guidance that we had provided of about 13",
+          "document": "SBILIFE_03022026194100_SEECTranscript_03022026_signed.pdf"
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "page": 8,
+          "quote": "we are very sure that in the 4th Quarter also, we will be able to maintain our overall growth number as per our guidance of",
+          "document": "SBILIFE_03022026194100_SEECTranscript_03022026_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "13\u201314",
+          "change": "set",
+          "page": 7,
+          "quote": "Talking of overall growth, we delivered on individual IRP basis, 12% growth and going forward, we expect that we will continue to grow at around",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "value": "13\u201314",
+          "change": "maintained",
+          "page": 8,
+          "quote": "As far as channel mix is concerned, we are happy that our overall growth number that the guidance that we had provided of about 13",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "value": "13\u201314",
+          "change": "maintained",
+          "page": 8,
+          "quote": "we are very sure that in the 4th Quarter also, we will be able to maintain our overall growth number as per our guidance of",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth 13\u201314% for FY2026",
+      "source_quote": "As far as growth is concerned, for the entire year, we had given a guidance of 13%-14%. And we continue to stick to that for",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBILIFE_03022026194100_SEECTranscript_03022026_signed.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201314%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Maybe that was not the case pre -COVID. I just wanted to understand that the trend will continue because sales typically get upfronted more in 3Q. So, is it fair to say that in 4th Quarter, your growth will be 20% kind of lower compared to 3Q? Management: So, as far as growth is concerned, for the entire year, we had given a guidance of 13%- 14%. And we continue to stick to that for the entire financial year also. Sanketh Godha: Understood, sir. So, which means that you are already at 16% growth in 9 months.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 13.0,
+      "target_high": 14.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-03",
+      "calls": [
+        {
+          "date": "2025-07-31",
+          "call_period": "2025-06-30",
+          "page": 13,
+          "quote": "we stick to our guidance of growth for the year in the mid-teens",
+          "document": "SBILIFE_31072025181638_SEECTR31072025_signed.pdf"
+        },
+        {
+          "date": "2025-07-31",
+          "call_period": "2025-06-30",
+          "page": 17,
+          "quote": "we stick to the kind of guidance of mid-teens growth on an overall basis in the current financial year.",
+          "document": "SBILIFE_31072025181638_SEECTR31072025_signed.pdf"
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "page": 11,
+          "quote": "As far as growth is concerned, for the entire year, we had given a guidance of 13%-14%. And we continue to stick to that for",
+          "document": "SBILIFE_03022026194100_SEECTranscript_03022026_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-07-31",
+          "call_period": "2025-06-30",
+          "value": "13\u201316%",
+          "change": "set",
+          "page": 13,
+          "quote": "we stick to our guidance of growth for the year in the mid-teens",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-31",
+          "call_period": "2025-06-30",
+          "value": "13\u201316%",
+          "change": "maintained",
+          "page": 17,
+          "quote": "we stick to the kind of guidance of mid-teens growth on an overall basis in the current financial year.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "value": "13\u201314%",
+          "change": "cut",
+          "page": 11,
+          "quote": "As far as growth is concerned, for the entire year, we had given a guidance of 13%-14%. And we continue to stick to that for",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth 13\u201314% for FY2026",
+      "source_quote": "APE growth, as we have mentioned, it will be in the around 13% to 14%.",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBILIFE_31102025185509_EC_Transcript_SE31102025_signed.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201314%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Nidhesh: Okay. Understood. And secondly, what is the APE growth guidance for the full year? Management: APE growth, as we have mentioned, it will be in the around 13% to 14%. And we are talking about individual APE for the overall for FY '26. Nidhesh: Sure. And sir, lastly, if you can break up the group protection APE in Credit Life APE and Non- credit Life APE for the quarter?",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 13.0,
+      "target_high": 14.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-31",
+      "calls": [
+        {
+          "date": "2025-10-31",
+          "call_period": "2025-09-30",
+          "page": 13,
+          "quote": "APE growth, as we have mentioned, it will be in the around 13% to 14%.",
+          "document": "SBILIFE_31102025185509_EC_Transcript_SE31102025_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 14\u201315% for FY2027",
+      "source_quote": "at the start of the financial year, we had given a guidance that we'll be growing for the year at around 14% to 15% and",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBILIFE_03112026221759_SEECTranscript03112026.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "14\u201315%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "So in reality basis your past assumption, your experience continues to turn better, what are these kind of operating adjustment changes that you have made this year that is leading to some minor negative variance in VNB margin? Management: So thank you, Avinash. Regarding IRP growth, yes, first half, we are growing at around 12%. But at the start of the financial year, we had given a guidance that we'll be growing for the year at around 14% to 15% and we are sticking to our guidance for the entire financial year, notwithstanding the quarter -to- quarter or month -to-month variation, we are very sure that for the financial year, we will be closing with 14% to 15% as we had guided for. What makes us kind of satisfied with the growth is that the growth, as we had already told in our earlier commentary will be better than the industry growth, and we are happy that we are at the same level as the industry growth has been in the first half year. So that was regarding your question on IRP. I will ask Mr.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 14.0,
+      "target_high": 15.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-03",
+      "calls": [
+        {
+          "date": "2026-07-30",
+          "call_period": "2026-06-30",
+          "page": 7,
+          "quote": "And our growth projections for the year on IRP basis remains at 14%, 15%.",
+          "document": "SBILIFE_30072026185215_SE30072025_signed.pdf"
+        },
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "page": 8,
+          "quote": "at the start of the financial year, we had given a guidance that we'll be growing for the year at around 14% to 15% and",
+          "document": "SBILIFE_03112026221759_SEECTranscript03112026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-07-30",
+          "call_period": "2026-06-30",
+          "value": "14\u201315%",
+          "change": "set",
+          "page": 7,
+          "quote": "And our growth projections for the year on IRP basis remains at 14%, 15%.",
+          "superseded": true
+        },
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "value": "14\u201315%",
+          "change": "maintained",
+          "page": 8,
+          "quote": "at the start of the financial year, we had given a guidance that we'll be growing for the year at around 14% to 15% and",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth 10% for FY2026",
+      "source_quote": "And we expect that going forward, we will be growing at around 10% or in low double digits in the banca channel.",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBILIFE_02052025133324_SEECTR02052025_signed.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10%",
+      "status": "segment_level",
+      "note": "banca channel guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "SBI Life Insurance Company Limited April 24, 2025 Page 7 of 18 from our continued focus on agency channel, where we are again opening more branches, having addition of more agents and increasing agent productivity as well as their activation. So that growth from agency channel, we are again expecting at around 25% on this strong base. On the banca side, we have grown by around 8% during the year. And we expect that going forward, we will be growing at around 10% or in low double digits in the banca channel. Overall, the growth expectation of 13% to 14%, we are standing by. As far as the number of agents you talked about, so you rightly picked that despite a gross addition of around 97,000 agents, our net addition was slightly negative, marginally negative. That was rightly on account of de -weeding of inactive agents.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "banca channel",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": 10.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-02",
+      "calls": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 8,
+          "quote": "That growth from agency channel, we are again expecting at around 25% on this strong base.",
+          "document": "SBILIFE_02052025133324_SEECTR02052025_signed.pdf"
+        },
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 8,
+          "quote": "And we expect that going forward, we will be growing at around 10% or in low double digits in the banca channel.",
+          "document": "SBILIFE_02052025133324_SEECTR02052025_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "25%",
+          "change": "set",
+          "page": 8,
+          "quote": "That growth from agency channel, we are again expecting at around 25% on this strong base.",
+          "superseded": true
+        },
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "10%",
+          "change": "cut",
+          "page": 8,
+          "quote": "And we expect that going forward, we will be growing at around 10% or in low double digits in the banca channel.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 26\u201328% for FY2026",
+      "source_quote": "So, our guidance for the margin remains what we had given earlier in the range of 26% to 28%.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBILIFE_31102025185509_EC_Transcript_SE31102025_signed.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "26\u201328%",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Sir, just to clarify once more that you said maybe next quarter, 20, 30 basis points kind of impact coming due to the GST impact. And given that group fund management business is relatively lumpy, so maybe only be there next quarter. And if our product mix remains steady, then would it be correct to assume that maybe next qua rter, we'll be able to even build up on the margin profile that we have reported this quarter? Management: So, our guidance for the margin remains what we had given earlier in the range of 26% to 28%. And we are kind of happy that we are sticking to that range despite the headwinds. Going forward also, our guidance and our expectation remains the same of around wh at we guided earlier. Swarnabha Mukherjee: Okay, sir.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 26.0,
+      "target_high": 28.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-31",
+      "calls": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "page": 11,
+          "quote": "So barring spikes or dips from quarter -to-quarter, we expect to maintain the margin of around 27%-28% for the full year.",
+          "document": "SBILIFE_02052025133324_SEECTR02052025_signed.pdf"
+        },
+        {
+          "date": "2025-07-31",
+          "call_period": "2025-06-30",
+          "page": 18,
+          "quote": "So we continue to stick to our earlier guidance of 26% to 28%.",
+          "document": "SBILIFE_31072025181638_SEECTR31072025_signed.pdf"
+        },
+        {
+          "date": "2025-10-31",
+          "call_period": "2025-09-30",
+          "page": 11,
+          "quote": "So, our guidance for the margin remains what we had given earlier in the range of 26% to 28%.",
+          "document": "SBILIFE_31102025185509_EC_Transcript_SE31102025_signed.pdf"
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "page": 8,
+          "quote": "So, we continue to stick to our guidance of between 26 % and 28% in the coming quarter also.",
+          "document": "SBILIFE_03022026194100_SEECTranscript_03022026_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-02",
+          "call_period": "2025-03-31",
+          "value": "27\u201328%",
+          "change": "set",
+          "page": 11,
+          "quote": "So barring spikes or dips from quarter -to-quarter, we expect to maintain the margin of around 27%-28% for the full year.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-31",
+          "call_period": "2025-06-30",
+          "value": "26\u201328%",
+          "change": "cut",
+          "page": 18,
+          "quote": "So we continue to stick to our earlier guidance of 26% to 28%.",
+          "superseded": true
+        },
+        {
+          "date": "2025-10-31",
+          "call_period": "2025-09-30",
+          "value": "26\u201328%",
+          "change": "maintained",
+          "page": 11,
+          "quote": "So, our guidance for the margin remains what we had given earlier in the range of 26% to 28%.",
+          "superseded": false
+        },
+        {
+          "date": "2026-02-03",
+          "call_period": "2025-12-31",
+          "value": "26\u201328%",
+          "change": "maintained",
+          "page": 8,
+          "quote": "So, we continue to stick to our guidance of between 26 % and 28% in the coming quarter also.",
+          "superseded": true
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 26\u201328% for FY2027",
+      "source_quote": "The margin guidance was 26% to 28%, and we are within the range, although at the lower end of that.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SBILIFE_30072026185215_SE30072025_signed.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "26\u201328%",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "See, as a company, we have always communicated that our focus is on Individual Rated Premium. And the guidance for the year also we had given around IRP growth and the VoNB margin. We are happy that on both the fronts, IRP as well as margin, we have delivered what we had promised around 14%, 15% growth and our IRP growth is in that range. The margin guidance was 26% to 28%, and we are within the range, although at the lower end of that. But coming to your specific question, yes, the overall APE mix during the first quarter where we have always said that group business is a lumpy kind of business, and we had a higher share of group business in the first quarter. That has affected margin overall, and it has brought down as compared to last year. But going forward, we are sure that this lumpy kind of business doesn't happen very frequently.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 26.0,
+      "target_high": 28.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-30",
+      "calls": [
+        {
+          "date": "2026-04-28",
+          "call_period": "2026-03-31",
+          "page": 18,
+          "quote": "we are able to deliver the margin that we've just given the guidance of 26% to 28% range.",
+          "document": "SBILIFE_28042026203957_ECTranscriptSE28042026_signed.pdf"
+        },
+        {
+          "date": "2026-07-30",
+          "call_period": "2026-06-30",
+          "page": 7,
+          "quote": "The margin guidance was 26% to 28%, and we are within the range, although at the lower end of that.",
+          "document": "SBILIFE_30072026185215_SE30072025_signed.pdf"
+        },
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "page": 11,
+          "quote": "So we will stick to our guidance of 26% to 28%, and we'll see that how things pan out in the current half year, I",
+          "document": "SBILIFE_03112026221759_SEECTranscript03112026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-04-28",
+          "call_period": "2026-03-31",
+          "value": "26\u201328%",
+          "change": "set",
+          "page": 18,
+          "quote": "we are able to deliver the margin that we've just given the guidance of 26% to 28% range.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-30",
+          "call_period": "2026-06-30",
+          "value": "26\u201328%",
+          "change": "maintained",
+          "page": 7,
+          "quote": "The margin guidance was 26% to 28%, and we are within the range, although at the lower end of that.",
+          "superseded": false
+        },
+        {
+          "date": "2026-11-03",
+          "call_period": "2026-09-30",
+          "value": "26\u201328%",
+          "change": "maintained",
+          "page": 11,
+          "quote": "So we will stick to our guidance of 26% to 28%, and we'll see that how things pan out in the current half year, I",
+          "superseded": true
+        }
+      ]
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 3,
+    "maintained": 8,
+    "items": [
+      {
+        "promise": "Revenue growth 14\u201315% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-07-30",
+            "value": "14\u201315%",
+            "change": "set"
+          },
+          {
+            "date": "2026-11-03",
+            "value": "14\u201315%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 26\u201328% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-04-28",
+            "value": "26\u201328%",
+            "change": "set"
+          },
+          {
+            "date": "2026-07-30",
+            "value": "26\u201328%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-11-03",
+            "value": "26\u201328%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 26\u201328% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-02",
+            "value": "27\u201328%",
+            "change": "set"
+          },
+          {
+            "date": "2025-07-31",
+            "value": "26\u201328%",
+            "change": "cut"
+          },
+          {
+            "date": "2025-10-31",
+            "value": "26\u201328%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-02-03",
+            "value": "26\u201328%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 13\u201314 for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-02",
+            "value": "13\u201314",
+            "change": "set"
+          },
+          {
+            "date": "2026-02-03",
+            "value": "13\u201314",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-02-03",
+            "value": "13\u201314",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 13\u201314% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-07-31",
+            "value": "13\u201316%",
+            "change": "set"
+          },
+          {
+            "date": "2025-07-31",
+            "value": "13\u201316%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-02-03",
+            "value": "13\u201314%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 10% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-02",
+            "value": "25%",
+            "change": "set"
+          },
+          {
+            "date": "2025-05-02",
+            "value": "10%",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.99,
+    "series": 1.09,
+    "guidance": 6.18,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.24,
+    "total": 8.51
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 5139,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 5139
+  }
+}

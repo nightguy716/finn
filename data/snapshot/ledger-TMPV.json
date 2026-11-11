@@ -1,0 +1,705 @@
+{
+  "symbol": "TMPV",
+  "coverage": {
+    "transcripts_found": 6,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [
+      "2026-09-30"
+    ],
+    "series_gaps": [
+      {
+        "period": "2026-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 12,
+    "next_quarter_statements": 1,
+    "pages_mentioning_fy26_or_next_quarter": 37,
+    "pages_dropped_by_prefilter": 6,
+    "dropped_pages": [
+      {
+        "period": "2025-06-30",
+        "page": 8
+      },
+      {
+        "period": "2025-06-30",
+        "page": 17
+      },
+      {
+        "period": "2025-03-31",
+        "page": 6
+      },
+      {
+        "period": "2025-03-31",
+        "page": 8
+      },
+      {
+        "period": "2025-03-31",
+        "page": 10
+      },
+      {
+        "period": "2025-03-31",
+        "page": 20
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-06-30",
+    "revenue": 95799.0,
+    "ebitda_margin_pct": 6.41,
+    "pat": 775.0,
+    "ttm_revenue": 343703.0,
+    "ttm_pat": 79242.0,
+    "ttm_ebitda_margin_pct": 3.72,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": null,
+        "ebitda": null,
+        "ebitda_margin_pct": null,
+        "ebit": null,
+        "ebit_margin_pct": null,
+        "pbt": null,
+        "finance_costs": null,
+        "depreciation": null,
+        "other_income": null,
+        "pat": null,
+        "basis": "",
+        "flags": [
+          "missing"
+        ]
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 95799.0,
+        "ebitda": 6144.0,
+        "ebitda_margin_pct": 6.41,
+        "ebit": 1264.0,
+        "ebit_margin_pct": 1.32,
+        "pbt": 1558.0,
+        "finance_costs": 835.0,
+        "depreciation": 4880.0,
+        "other_income": 1129.0,
+        "pat": 775.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 105447.0,
+        "ebitda": 11369.0,
+        "ebitda_margin_pct": 10.78,
+        "ebit": 6277.0,
+        "ebit_margin_pct": 5.95,
+        "pbt": 7143.0,
+        "finance_costs": 767.0,
+        "depreciation": 5092.0,
+        "other_income": 1633.0,
+        "pat": 5783.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 70108.0,
+        "ebitda": -718.0,
+        "ebitda_margin_pct": -1.02,
+        "ebit": -5687.0,
+        "ebit_margin_pct": -8.11,
+        "pbt": -4902.0,
+        "finance_costs": 682.0,
+        "depreciation": 4969.0,
+        "other_income": 1467.0,
+        "pat": -3486.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 72349.0,
+        "ebitda": -4012.0,
+        "ebitda_margin_pct": -5.55,
+        "ebit": -8883.0,
+        "ebit_margin_pct": -12.28,
+        "pbt": -8108.0,
+        "finance_costs": 686.0,
+        "depreciation": 4871.0,
+        "other_income": 1461.0,
+        "pat": 76170.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 104407.0,
+        "ebitda": 10168.0,
+        "ebitda_margin_pct": 9.74,
+        "ebit": 4848.0,
+        "ebit_margin_pct": 4.64,
+        "pbt": 5429.0,
+        "finance_costs": 938.0,
+        "depreciation": 5320.0,
+        "other_income": 1519.0,
+        "pat": 3924.0,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Revenue growth 15% for FY2025",
+      "source_quote": "Revenue growth is coming back nicely at 15% year -on-year.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_20112025181052_NSEBSETRANSCRIPTPV.pdf",
+      "speaker": "",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15%",
+      "status": "pending",
+      "note": "FY2025 is missing 2024-06-30, 2024-09-30, 2024-12-31, so the year is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Our market share has now been consistently clocking 42% . With a proactive product portfolio strategy which will soon add a Sierra .ev to mix and a lot of other refreshes which will be improving the value proposition, we should look to further build from here in the coming quarters. Next slide please. Revenue growth is coming back nicely at 15% year -on-year. Segment pro\ufb01tability is nearly back to FY 2025 levels. Much of the improvement coming through from improving pro\ufb01tability of the EV business, though a fair ground remains to be recovered on the ICE piece. PBT of approximately Rs. 200 Cr for the quarter, \ufb02attish year-on-year basis.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 15.0,
+      "target_high": 15.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-20",
+      "calls": [
+        {
+          "date": "2025-11-20",
+          "call_period": "2025-09-30",
+          "page": 6,
+          "quote": "Revenue growth is coming back nicely at 15% year -on-year.",
+          "document": "TATAMOTORSSJS_20112025181052_NSEBSETRANSCRIPTPV.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 2% for FY2026",
+      "source_quote": "For the full year, we expect EBIT to be in the range of 0% to 2% positive",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_20112025181052_NSEBSETRANSCRIPTPV.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "2%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "The production losses we have experienced will also impact quite heavily on Q3. It's only in Q4, as our pipeline \ufb01ll completes that we will return to normal. And Q4 is always strong for us. For the full year, we expect EBIT to be in the range of 0% to 2% positive, and free cash \ufb02ow to be in a range of negative GBP 2.2 billion to negative GBP 2.5 billion. We will update you on FY 27 after our next earnings release. On that note, I'll stop and hand you back to Balaji and Dhiman. Thank you.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 2.0,
+      "target_high": 2.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-20",
+      "calls": [
+        {
+          "date": "2025-11-20",
+          "call_period": "2025-09-30",
+          "page": 5,
+          "quote": "For the full year, we expect EBIT to be in the range of 0% to 2% positive",
+          "document": "TATAMOTORSSJS_20112025181052_NSEBSETRANSCRIPTPV.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "So, to summarize, we're on track to deliver our guidance , 4% in what is historically our worst quarter and with tari\ufb00 impacts reducing going",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_14082025125734_NSEBSETRANSCRIPT.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "And that's excluding the tari\ufb00 vision. This will be about circa 5% EBIT to o\ufb00set some of those risks that we mentioned earlier on. Next page. So, to summarize, we're on track to deliver our guidance , 4% in what is historically our worst quarter and with tari\ufb00 impacts reducing going forwards means we are sticking with our 5% to 7% guidance for the year and then we will build from there. So with that, thank you for your attention. I'll hand back to Balaji. P.B.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-14",
+      "calls": [
+        {
+          "date": "2025-08-14",
+          "call_period": "2025-06-30",
+          "page": 5,
+          "quote": "So, to summarize, we're on track to deliver our guidance , 4% in what is historically our worst quarter and with tari\ufb00 impacts reducing going",
+          "document": "TATAMOTORSSJS_14082025125734_NSEBSETRANSCRIPT.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth at least 10% for 2025-12-31",
+      "source_quote": "PV industry growth in FY 2026 I just said that second half, I expect that the growth will be in double-digit.",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_20112025181052_NSEBSETRANSCRIPTPV.pdf",
+      "speaker": "Shailesh Chandra",
+      "period_promised": "2025-12-31",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "segment_level",
+      "note": "India guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Tata Motors Passenger Vehicles Limited November 14, 2025 appointed as the President of OICA. As far as EVs are concerned, it's just a comment, so I don't need to answer that. But as far as growth is concerned, PV industry growth in FY 2026 I just said that second half, I expect that the growth will be in double-digit. That's my estimate. And therefore, at a full year level, the growth rate would be about a 5% or so. Around +/- 2% you can say.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "India",
+      "metric_key": "volume_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2025-09-30",
+      "call_date": "2025-11-20",
+      "calls": [
+        {
+          "date": "2025-11-20",
+          "call_period": "2025-09-30",
+          "page": 13,
+          "quote": "PV industry growth in FY 2026 I just said that second half, I expect that the growth will be in double-digit.",
+          "document": "TATAMOTORSSJS_20112025181052_NSEBSETRANSCRIPTPV.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBIT margin 2% for FY2026",
+      "source_quote": "So we ended up with 0.7% EBIT, within our 0% to 2% guidance.",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_20052026215152_NSEBSETRANSCRIPT.pdf",
+      "speaker": "Richard Molyneux",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "2%",
+      "status": "segment_level",
+      "note": "Jaguar Land Rover guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "That's only a little lower than our bumper Q4 last year , and is actually the same EBIT level as we achieved two years ago. FX revaluation did hold PBT back a little bit further, but we returned to being significantly cash positive, generating GBP829 million in the quarter. This performance allowed us to achieve our external guidance for the year. So we ended up with 0.7% EBIT, within our 0% to 2% guidance. And we ended up at the better end of our cash guidance, with full year cash loss just over GBP2.2 billion versus a minus GBP2.2 billion to minus GBP2.5 billion range. Having said that , and delivered what we promised in Q4, it is accepted that our full year financial performance is far from what we had intended when we started the year. So corrective action is necessary.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "segment",
+      "scope_name": "Jaguar Land Rover",
+      "metric_key": "ebit_margin",
+      "target_low": 2.0,
+      "target_high": 2.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-20",
+      "calls": [
+        {
+          "date": "2026-05-20",
+          "call_period": "2026-03-31",
+          "page": 3,
+          "quote": "So we ended up with 0.7% EBIT, within our 0% to 2% guidance.",
+          "document": "TATAMOTORSSJS_20052026215152_NSEBSETRANSCRIPT.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex 3.6\u20133.7 for FY2026",
+      "source_quote": "Capex guidance, I think, will be GBP 3.6 billion, GBP 3.7 billion from what I can see today.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_11022026205129_NSEBSETRANSCRIPT_signed.pdf",
+      "speaker": "Richard Molyneux",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3.6\u20133.7",
+      "status": "segment_level",
+      "note": "Jaguar Land Rover guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So, the only vehicles in Jaguar that we are currently producing, and that's only for another few weeks, is the F -Pace, where we are building some stock for the U.S. market. Other than that, we are literally in the r un out of all old Jaguars. I have mentioned VME before. Capex guidance, I think, will be GBP 3.6 billion, GBP 3.7 billion from what I can see today. And your point around FCF is correct, that GBP 0.5 billion to GBP 0.8 billion positive is where we are heading and what we need in order to meet the numbers that we have committed to , and Q4 production has normalized. So, the majority of our business is focused on Range Rover, Range Rover Sport and Defender. Those vehicles, the \ufb01rst two were produced in Solihull.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "Jaguar Land Rover",
+      "metric_key": "capex",
+      "target_low": 3.6,
+      "target_high": 3.7,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-11",
+      "calls": [
+        {
+          "date": "2025-05-17",
+          "call_period": "2025-03-31",
+          "page": 21,
+          "quote": "JLR is about GBP3.8 billion this year, it will be broadly in that zone.",
+          "document": "TATAMOTORSSJS_17052025172846_NSEBSELETTER.pdf"
+        },
+        {
+          "date": "2026-02-11",
+          "call_period": "2025-12-31",
+          "page": 5,
+          "quote": "free cash \ufb02ow in the range of negative GBP 2.2 billion to negative GBP 2.5 billion",
+          "document": "TATAMOTORSSJS_11022026205129_NSEBSETRANSCRIPT_signed.pdf"
+        },
+        {
+          "date": "2026-02-11",
+          "call_period": "2025-12-31",
+          "page": 9,
+          "quote": "Capex guidance, I think, will be GBP 3.6 billion, GBP 3.7 billion from what I can see today.",
+          "document": "TATAMOTORSSJS_11022026205129_NSEBSETRANSCRIPT_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-17",
+          "call_period": "2025-03-31",
+          "value": "at least 3.8",
+          "change": "set",
+          "page": 21,
+          "quote": "JLR is about GBP3.8 billion this year, it will be broadly in that zone.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-11",
+          "call_period": "2025-12-31",
+          "value": "2.2\u20132.5",
+          "change": "cut",
+          "page": 5,
+          "quote": "free cash \ufb02ow in the range of negative GBP 2.2 billion to negative GBP 2.5 billion",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-11",
+          "call_period": "2025-12-31",
+          "value": "3.6\u20133.7",
+          "change": "raised",
+          "page": 9,
+          "quote": "Capex guidance, I think, will be GBP 3.6 billion, GBP 3.7 billion from what I can see today.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth 8\u20139% for FY2026",
+      "source_quote": "we expect that for FY26, therefore, the industry would grow by about 8% to 9%, rough estimate, I would say.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_11022026205129_NSEBSETRANSCRIPT_signed.pdf",
+      "speaker": "Shailesh Chandra",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u20139%",
+      "status": "segment_level",
+      "note": "India guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Dhiman Gupta Yeah. Shailesh Chandra So, the \ufb01rst month of quarter four was about 14% growth for the industry, we were at about 46%, we clearly see that the growth of industry in Q4 will be around 13% to 14% kind of a zone. We should be 40%, roughly that kind of a growth rate. So, we expect that for FY26, therefore, the industry would grow by about 8% to 9%, rough estimate, I would say. Whereas for us, we should be somewhere in mid-teens. So, it would be a double-digit industry-leading growth for us. Dhiman Gupta Okay.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "India",
+      "metric_key": "volume_growth",
+      "target_low": 8.0,
+      "target_high": 9.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-11",
+      "calls": [
+        {
+          "date": "2025-08-14",
+          "call_period": "2025-06-30",
+          "page": 14,
+          "quote": "So, I think we still maintain that for the entire year and within that I think HCV should do similar around 3% to 5% kind",
+          "document": "TATAMOTORSSJS_14082025125734_NSEBSETRANSCRIPT.pdf"
+        },
+        {
+          "date": "2025-11-20",
+          "call_period": "2025-09-30",
+          "page": 11,
+          "quote": "overall, it should be in the zone of 5% or so.",
+          "document": "TATAMOTORSSJS_20112025181052_NSEBSETRANSCRIPTPV.pdf"
+        },
+        {
+          "date": "2026-02-11",
+          "call_period": "2025-12-31",
+          "page": 12,
+          "quote": "we expect that for FY26, therefore, the industry would grow by about 8% to 9%, rough estimate, I would say.",
+          "document": "TATAMOTORSSJS_11022026205129_NSEBSETRANSCRIPT_signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-08-14",
+          "call_period": "2025-06-30",
+          "value": "3\u20135%",
+          "change": "set",
+          "page": 14,
+          "quote": "So, I think we still maintain that for the entire year and within that I think HCV should do similar around 3% to 5% kind",
+          "superseded": true
+        },
+        {
+          "date": "2025-11-20",
+          "call_period": "2025-09-30",
+          "value": "5%",
+          "change": "raised",
+          "page": 11,
+          "quote": "overall, it should be in the zone of 5% or so.",
+          "superseded": true
+        },
+        {
+          "date": "2026-02-11",
+          "call_period": "2025-12-31",
+          "value": "8\u20139%",
+          "change": "raised",
+          "page": 12,
+          "quote": "we expect that for FY26, therefore, the industry would grow by about 8% to 9%, rough estimate, I would say.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth to rise for FY2027",
+      "source_quote": "Last financial year, we grew by 4x on a low base of course, but this year, we are targeting more closer to 2x growth of",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_19082026163520_NSEBSETranscript.pdf",
+      "speaker": "Shailesh Chandra",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "export business guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Shailesh Chandra Yes. I think, these are early stages of our growth in export business. As you know, that last year, we opened the South Africa market and that has really helped us significantly grow our export. Last financial year, we grew by 4x on a low base of course, but this year, we are targeting more closer to 2x growth of what we did last year. So, that is the outlook for FY 27. Dhiman Gupta Thank you, Shailesh. On the next two questions, the first question is on proportion of revenues that we are receiving PLI and when do we expect our certifications for all the models?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "export business",
+      "metric_key": "volume_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-19",
+      "calls": [
+        {
+          "date": "2026-08-19",
+          "call_period": "2026-06-30",
+          "page": 12,
+          "quote": "Last financial year, we grew by 4x on a low base of course, but this year, we are targeting more closer to 2x growth of",
+          "document": "TATAMOTORSSJS_19082026163520_NSEBSETranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 70\u2013100% for FY2027",
+      "source_quote": "This year also, we are targeting anywhere between 70% to 100% kind of a growth, depending on how we are able to ramp up our",
+      "page": 14,
+      "source_document": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_20052026215152_NSEBSETRANSCRIPT.pdf",
+      "speaker": "Shailesh Chandra",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "70\u2013100%",
+      "status": "segment_level",
+      "note": "Exports guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Dhiman Gupta Thank you. Shailesh, if you could talk about exports and what's the outlook for FY27? Shailesh Chandra So last year, we had a 4 times jump in exports to 10,000 plus units. And this year also, we are targeting anywhere between 70% to 100% kind of a growth, depending on how we are able to ramp up our production and then further add to our portfolio in South African market. So the timing will be important. So it can be anywhere between 70% to 100% growth. Dhiman Gupta Thank you, Shailesh.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Exports",
+      "metric_key": "volume_growth",
+      "target_low": 70.0,
+      "target_high": 100.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-20",
+      "calls": [
+        {
+          "date": "2026-05-20",
+          "call_period": "2026-03-31",
+          "page": 14,
+          "quote": "This year also, we are targeting anywhere between 70% to 100% kind of a growth, depending on how we are able to ramp up our",
+          "document": "TATAMOTORSSJS_20052026215152_NSEBSETRANSCRIPT.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 3,
+    "cut": 1,
+    "maintained": 0,
+    "items": [
+      {
+        "promise": "Capex 3.6\u20133.7 for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-17",
+            "value": "at least 3.8",
+            "change": "set"
+          },
+          {
+            "date": "2026-02-11",
+            "value": "2.2\u20132.5",
+            "change": "cut"
+          },
+          {
+            "date": "2026-02-11",
+            "value": "3.6\u20133.7",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "Volume growth 8\u20139% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-08-14",
+            "value": "3\u20135%",
+            "change": "set"
+          },
+          {
+            "date": "2025-11-20",
+            "value": "5%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-02-11",
+            "value": "8\u20139%",
+            "change": "raised"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 6,
+    "total": 6
+  },
+  "timing": {
+    "discover": 1.22,
+    "series": 0.93,
+    "guidance": 20.81,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.21,
+    "total": 23.18
+  },
+  "usage": {
+    "guidance": {
+      "calls": 3,
+      "cache_hits": 3,
+      "tokens": 15301,
+      "dropped": 2,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 15301
+  }
+}

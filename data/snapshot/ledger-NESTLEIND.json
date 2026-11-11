@@ -1,0 +1,191 @@
+{
+  "symbol": "NESTLEIND",
+  "coverage": {
+    "transcripts_found": 1,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [
+      "2026-09-30",
+      "2026-03-31",
+      "2025-12-31",
+      "2025-09-30",
+      "2025-06-30",
+      "2025-03-31"
+    ],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": "Only 1 transcript in the last seven quarters. Too thin to judge whether management keeps its word."
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 0,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 6788.34,
+    "ebitda_margin_pct": 23.74,
+    "pat": 1009.61,
+    "ttm_revenue": 25581.34,
+    "ttm_pat": 1009.61,
+    "ttm_ebitda_margin_pct": 24.39,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 6788.34,
+        "ebitda": 1611.79,
+        "ebitda_margin_pct": 23.74,
+        "ebit": 1419.37,
+        "ebit_margin_pct": 20.91,
+        "pbt": 1399.36,
+        "finance_costs": 40.27,
+        "depreciation": 192.42,
+        "other_income": 20.26,
+        "pat": 1009.61,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 6378.18,
+        "ebitda": 1531.9,
+        "ebitda_margin_pct": 24.02,
+        "ebit": 1344.1,
+        "ebit_margin_pct": 21.07,
+        "pbt": 1324.39,
+        "finance_costs": 42.18,
+        "depreciation": 187.8,
+        "other_income": 22.47,
+        "pat": 0.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 6747.78,
+        "ebitda": 1735.43,
+        "ebitda_margin_pct": 25.72,
+        "ebit": 1530.9,
+        "ebit_margin_pct": 22.69,
+        "pbt": 1512.59,
+        "finance_costs": 36.76,
+        "depreciation": 204.53,
+        "other_income": 18.45,
+        "pat": 0.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 5667.04,
+        "ebitda": 1359.02,
+        "ebitda_margin_pct": 23.98,
+        "ebit": 1184.61,
+        "ebit_margin_pct": 20.9,
+        "pbt": 1168.07,
+        "finance_costs": 28.25,
+        "depreciation": 174.41,
+        "other_income": 11.71,
+        "pat": 0.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 5643.61,
+        "ebitda": 1236.64,
+        "ebitda_margin_pct": 21.91,
+        "ebit": 1073.29,
+        "ebit_margin_pct": 19.02,
+        "pbt": 1028.52,
+        "finance_costs": 46.41,
+        "depreciation": 163.35,
+        "other_income": 1.64,
+        "pat": 0.0,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 5096.16,
+        "ebitda": 1100.26,
+        "ebitda_margin_pct": 21.59,
+        "ebit": 943.32,
+        "ebit_margin_pct": 18.51,
+        "pbt": 900.47,
+        "finance_costs": 46.89,
+        "depreciation": 156.94,
+        "other_income": 4.04,
+        "pat": 646.59,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "Only 1 transcript in the last seven quarters. Too thin to judge whether management keeps its word.",
+  "progress": {
+    "stage": "complete",
+    "done": 1,
+    "total": 1
+  },
+  "timing": {
+    "discover": 6.92,
+    "series": 1.29,
+    "guidance": 0.26,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.07,
+    "total": 8.54
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

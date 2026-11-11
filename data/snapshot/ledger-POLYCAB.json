@@ -1,0 +1,1217 @@
+{
+  "symbol": "POLYCAB",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 2,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 46,
+    "pages_dropped_by_prefilter": 9,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 15
+      },
+      {
+        "period": "2026-06-30",
+        "page": 13
+      },
+      {
+        "period": "2026-03-31",
+        "page": 3
+      },
+      {
+        "period": "2025-12-31",
+        "page": 13
+      },
+      {
+        "period": "2025-12-31",
+        "page": 17
+      },
+      {
+        "period": "2025-09-30",
+        "page": 15
+      },
+      {
+        "period": "2025-06-30",
+        "page": 18
+      },
+      {
+        "period": "2025-03-31",
+        "page": 16
+      },
+      {
+        "period": "2025-03-31",
+        "page": 21
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 9898.9,
+    "ebitda_margin_pct": 14.37,
+    "pat": 977.37,
+    "ttm_revenue": 34609.24,
+    "ttm_pat": 3156.17,
+    "ttm_ebitda_margin_pct": 13.54,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 9898.9,
+        "ebitda": 1422.49,
+        "ebitda_margin_pct": 14.37,
+        "ebit": 1311.45,
+        "ebit_margin_pct": 13.25,
+        "pbt": 1306.22,
+        "finance_costs": 93.6,
+        "depreciation": 111.04,
+        "other_income": 88.37,
+        "pat": 977.37,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 8209.73,
+        "ebitda": 1136.19,
+        "ebitda_margin_pct": 13.84,
+        "ebit": 1033.32,
+        "ebit_margin_pct": 12.59,
+        "pbt": 1058.22,
+        "finance_costs": 80.02,
+        "depreciation": 102.87,
+        "other_income": 104.92,
+        "pat": 784.34,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 8864.48,
+        "ebitda": 1161.31,
+        "ebitda_margin_pct": 13.1,
+        "ebit": 1063.51,
+        "ebit_margin_pct": 12.0,
+        "pbt": 1049.29,
+        "finance_costs": 74.64,
+        "depreciation": 97.8,
+        "other_income": 60.42,
+        "pat": 772.77,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 7636.13,
+        "ebitda": 966.06,
+        "ebitda_margin_pct": 12.65,
+        "ebit": 860.47,
+        "ebit_margin_pct": 11.27,
+        "pbt": 842.2,
+        "finance_costs": 68.73,
+        "depreciation": 105.59,
+        "other_income": 50.46,
+        "pat": 621.69,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 6477.21,
+        "ebitda": 1020.76,
+        "ebitda_margin_pct": 15.76,
+        "ebit": 923.98,
+        "ebit_margin_pct": 14.27,
+        "pbt": 921.0,
+        "finance_costs": 48.41,
+        "depreciation": 96.78,
+        "other_income": 45.43,
+        "pat": 685.46,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 5905.98,
+        "ebitda": 857.61,
+        "ebitda_margin_pct": 14.52,
+        "ebit": 771.91,
+        "ebit_margin_pct": 13.07,
+        "pbt": 800.59,
+        "finance_costs": 51.26,
+        "depreciation": 85.7,
+        "other_income": 79.94,
+        "pat": 592.12,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Capex \u20b912\u201316 for FY2026",
+      "source_quote": "in line with our Project Spring guidance of investing \u20b9 12 billion - \u20b9 16 billion annually through to FY 2030.",
+      "page": 6,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a5825e0-67d1-41af-96e0-d78387aaba8d.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "\u20b912\u201316",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "On working capital front, inventory days were marginally higher as we built up inventory in anticipation of strong demand in Q3 FY 2026. Given the use of letters of credits for raw material procurement, payable days also increased correspondingly, resulting in the working capital cycle temporarily reducing to 33 days at the end of Q2. We expect this to normalize to our long-term steady range of 50 to 55 days over the coming quarters. Capital expenditure for the quarter was at \u20b9 3.3 billion, taking the H1 FY 2026 expenditure to around \u20b9 7.5 billion, in line with our Project Spring guidance of investing \u20b9 12 billion - \u20b9 16 billion annually through to FY 2030. On a half yearly basis, I'm proud to share that our revenues, EBITDA and PAT are the highest ever in the Company's history for any half yearly period. Revenues grew 21% YoY, crossing the \u20b9 120 billion milestone. EBITDA grew 55% YoY with margins strong at 15.2%.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 12.0,
+      "target_high": 16.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-01",
+      "calls": [
+        {
+          "date": "2025-10-01",
+          "call_period": "2025-09-30",
+          "page": 6,
+          "quote": "in line with our Project Spring guidance of investing \u20b9 12 billion - \u20b9 16 billion annually through to FY 2030.",
+          "document": "AnnPdfOpen.aspx?Pname=7a5825e0-67d1-41af-96e0-d78387aaba8d.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 11\u201313% for FY2030",
+      "source_quote": "The guidance of 11% to 13% of margins is a 5-year guidance.",
+      "page": 12,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a5825e0-67d1-41af-96e0-d78387aaba8d.pdf",
+      "speaker": "Chirayu Upadhyaya",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "11\u201313%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Given what we have delivered the number, I presume, I mean, this is 14% -15% margin, the implied EBITDA margin is 16% +, while we continue to guide for a lower margin. So , if you could quantify if there is anything specific which is helping these extra margins, which you think may not be sustainable? Anything you want to call out? Chirayu Upadhyaya: Achal, the guidance of 11% to 13% of margins is a 5-year guidance. It is not something that we believe will be the case immediately next quarter or the quarter after that. Currently, we are seeing very good traction. The utilizations rates are quite good.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 11.0,
+      "target_high": 13.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-01",
+      "calls": [
+        {
+          "date": "2025-10-01",
+          "call_period": "2025-09-30",
+          "page": 12,
+          "quote": "The guidance of 11% to 13% of margins is a 5-year guidance.",
+          "document": "AnnPdfOpen.aspx?Pname=7a5825e0-67d1-41af-96e0-d78387aaba8d.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 12\u201314% for an unnamed period",
+      "source_quote": "and in the near to mid term, we may expect 12% to 14% EBITDA.",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Shashank Yagnick",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "12\u201314%",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "So that will continue. In terms of price volatility, yes, we don't have any guidance on copper price. But whatever is the price, it is the pattern of the industry that we pass through that price to our customers and so far, that is how it has happened. So again, that's a very calibrated guidance which we have given that over long term, we should expect 11% to 13% EBITDA margin. and in the near to mid term, we may expect 12% to 14% EBITDA. And we'll continue to deliver that kind of margins. Keyur Pandya: But in the near term, are you seeing any challenge to primary demand or secondary demand? Shashank Yagnick: No.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "ebitda_margin",
+      "target_low": 12.0,
+      "target_high": 14.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-08",
+      "calls": [
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "page": 13,
+          "quote": "that over long term, we should expect 11% to 13% EBITDA margin.",
+          "document": "POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf"
+        },
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "page": 13,
+          "quote": "and in the near to mid term, we may expect 12% to 14% EBITDA.",
+          "document": "POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "value": "11\u201313%",
+          "change": "set",
+          "page": 13,
+          "quote": "that over long term, we should expect 11% to 13% EBITDA margin.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "value": "12\u201314%",
+          "change": "raised",
+          "page": 13,
+          "quote": "and in the near to mid term, we may expect 12% to 14% EBITDA.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 11\u201313% for an unnamed period",
+      "source_quote": "expect the EBITDA margins in the cables and wires business to be consistently in the 11% to 13% range.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_14052025172938_SIGNED_Intimation_of_Earnings_Call_Transcript-combined.pdf",
+      "speaker": "Chirayu Upadhyaya",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "11\u201313%",
+      "status": "segment_level",
+      "note": "cables and wires guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Polycab India Limited May 07, 2025 Chirayu Upadhyaya: Our guidance, as a part of Project Spring, is on EBITDA and we\u2019ve given the guidance that over the near to mid-term we expect the EBITDA margins in the cables and wires business to be consistently in the 11% to 13% range. Achal Lohade: This is only for cables and wires piece, right? Chirayu Upadhyaya: Yes. Achal Lohade: And what was it for FY25?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "cables and wires",
+      "metric_key": "ebitda_margin",
+      "target_low": 11.0,
+      "target_high": 13.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-14",
+      "calls": [
+        {
+          "date": "2025-05-14",
+          "call_period": "2025-03-31",
+          "page": 11,
+          "quote": "expect the EBITDA margins in the cables and wires business to be consistently in the 11% to 13% range.",
+          "document": "POLYCAB_14052025172938_SIGNED_Intimation_of_Earnings_Call_Transcript-combined.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue \u20b9800 crore for FY2027",
+      "source_quote": "And again, in case of RDSS, since the execution piece is around 3 years, we should expect about INR 800-odd crores translating this year.",
+      "page": 14,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Shashank Yagnick",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "\u20b9800 crore",
+      "status": "segment_level",
+      "note": "RDSS guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "And RDSS, we had overall order book when we started the execution was around INR 3,250 crores. Today, I think we have recognized some of it. But overall, put together, Bharat Net and RDSS, the order book stands at around INR 10,900 crores. And again, in case of RDSS, since the execution piece is around 3 years, we should expect about INR 800-odd crores translating this year. Moderator: Next question comes from the line of Sameer Gupta with IIFL Capital. Sameer Gupta: Congrats on a good set of numbers. Sir, first question is on the FMEG piece, taking it from Ashish.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "RDSS",
+      "metric_key": "revenue_growth",
+      "target_low": 800.0,
+      "target_high": 800.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-20",
+      "calls": [
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "page": 14,
+          "quote": "And again, in case of RDSS, since the execution piece is around 3 years, we should expect about INR 800-odd crores translating this year.",
+          "document": "POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 8\u201310% for FY2030",
+      "source_quote": "I believe we would end up in that kind of a range of 8% to 10% of the EBITDA margin.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_19102026163912_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Aditya Nathany",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u201310%",
+      "status": "segment_level",
+      "note": "FMEG guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Our Polyratna plans that we have put together in the market is also complementing towards this. So I think all of this synthesized is getting us the results for FMEG. To answer your second question on the growth, I think when we started the Project Spring and we laid ou t our margin profile, I think it's for FY30. So over the longer term, I believe we would end up in that kind of a range of 8% to 10% of the EBITDA margin. Today, we are already at an EBIT margin of 10.1%, which is very high. I would believe you would appreciate the kind of efforts that we have put to gether to get this segment turnaround in the way we have been seeing the results in this quarter. Kevin Shah: Understood.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "other",
+      "scope_name": "FMEG",
+      "metric_key": "ebitda_margin",
+      "target_low": 8.0,
+      "target_high": 10.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-10-19",
+      "calls": [
+        {
+          "date": "2026-10-19",
+          "call_period": "2026-09-30",
+          "page": 9,
+          "quote": "I believe we would end up in that kind of a range of 8% to 10% of the EBITDA margin.",
+          "document": "POLYCAB_19102026163912_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 11\u201313% for FY2030",
+      "source_quote": "Consistent with our Project Spring roadmap, we continue to maintain our medium- to long-term margin guidance of 11% to 13% for this business.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "11\u201313%",
+      "status": "segment_level",
+      "note": "Wires & Cables guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "We continue to maintain a healthy order book and remain confident of a strong recovery, supported by a positive long-term outlook. EBIT margins for the Wires & Cables business stood at 13.3%. Sequential margin improvement was driven by a favourable business mix and continued focus on operational excellence. Consistent with our Project Spring roadmap, we continue to maintain our medium- to long-term margin guidance of 11% to 13% for this business. Turning now to Slide number 8 for our FMEG business. The FMEG segment delivered another outstanding quarter, recording 71% year-on-year growth with strong contributions across all product categories. This marks the tenth consecutive quarter in which we have outperformed industry growth rates, reinforcing the strength of our business model and execution capabilities.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Wires & Cables",
+      "metric_key": "ebitda_margin",
+      "target_low": 11.0,
+      "target_high": 13.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-20",
+      "calls": [
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "page": 5,
+          "quote": "Consistent with our Project Spring roadmap, we continue to maintain our medium- to long-term margin guidance of 11% to 13% for this business.",
+          "document": "POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 8\u201310% for FY2030",
+      "source_quote": "And of course, the ambition is that on a full year basis, we should be able to reach 8% to 10% of EBITDA margins on",
+      "page": 19,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Shashank Yagnick",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u201310%",
+      "status": "segment_level",
+      "note": "FMEG guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Lights, of course, will have a seasonality. So all of this definitely has seasonality. But on top line basis, like we' have guided, whatever the market growth will deliver 1.5x to 2x of that growth. And of course, the ambition is that on a full year basis, we should be able to reach 8% to 10% of EBITDA margins on FMEG. So currently, what you can read is a very, very good trajectory. If you look at last 5 quarters and today, we have come by leaps and bounds in the right direction, both on top line and bottomline front. Topline growth of 71% year-on-year is a phenomenal growth.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "FMEG",
+      "metric_key": "ebitda_margin",
+      "target_low": 8.0,
+      "target_high": 10.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-20",
+      "calls": [
+        {
+          "date": "2025-07-25",
+          "call_period": "2025-06-30",
+          "page": 8,
+          "quote": "Going forward, we expect to see our profitability improv e each year, reaching the targeted EBITDA margins of 8% to 10% by FY30.",
+          "document": "POLYCAB_25072025164059_Intimation_of_Earnings_Call_Transcript.pdf"
+        },
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "page": 9,
+          "quote": "progressing towards our EBITDA margin goal of 8% to 10% by FY2030.",
+          "document": "POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf"
+        },
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "page": 6,
+          "quote": "EBIT margins for the quarter were 8%, very much in line with the milestones laid out under Project Spring, where we target EBITDA margins of",
+          "document": "POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf"
+        },
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "page": 6,
+          "quote": "Over the medium to long term, we continue to expect sustainable operating margins for the EPC business to remain in the high single-digit range.",
+          "document": "POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf"
+        },
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "page": 19,
+          "quote": "And of course, the ambition is that on a full year basis, we should be able to reach 8% to 10% of EBITDA margins on",
+          "document": "POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-07-25",
+          "call_period": "2025-06-30",
+          "value": "8\u201310%",
+          "change": "set",
+          "page": 8,
+          "quote": "Going forward, we expect to see our profitability improv e each year, reaching the targeted EBITDA margins of 8% to 10% by FY30.",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "value": "8\u201310%",
+          "change": "maintained",
+          "page": 9,
+          "quote": "progressing towards our EBITDA margin goal of 8% to 10% by FY2030.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "value": "8\u201310%",
+          "change": "maintained",
+          "page": 6,
+          "quote": "EBIT margins for the quarter were 8%, very much in line with the milestones laid out under Project Spring, where we target EBITDA margins of",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "value": "7\u20139%",
+          "change": "cut",
+          "page": 6,
+          "quote": "Over the medium to long term, we continue to expect sustainable operating margins for the EPC business to remain in the high single-digit range.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "value": "8\u201310%",
+          "change": "raised",
+          "page": 19,
+          "quote": "And of course, the ambition is that on a full year basis, we should be able to reach 8% to 10% of EBITDA margins on",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth to rise for FY2030",
+      "source_quote": "We have guided that we'll continue to grow at 1.5x of market growth.",
+      "page": 18,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Shashank Yagnick",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "And that's also true that, that is why so much of competition is jumping into this sector because they see a significant potential. I mean that's the only good thing to take from that. So definitely, there is volume growth, which is going to come. We have guided that we'll continue to grow at 1.5x of market growth. And we still believe in that, and we have delivered that in the last 1-1.5 years ever since we have made that commitment. And we believe that will continue to happen until FY30. There are significant pockets of demand.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "volume_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-20",
+      "calls": [
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "page": 18,
+          "quote": "We have guided that we'll continue to grow at 1.5x of market growth.",
+          "document": "POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 10% for FY2030",
+      "source_quote": "We have given our guidance of going north of 10% of our overall top line by 2030.",
+      "page": 19,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Shashank Yagnick",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "10%",
+      "status": "segment_level",
+      "note": "exports guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "We believe that India has immense potential and more so for Polycab because we have the right approvals and right products and right availability guarantee. We assure that we'll be able to deliver higher growth. And there is no specific target because it's an uncapped growth opportunity. We have given our guidance of going north of 10% of our overall top line by 2030. And that's one indication that our export growth should be higher than domestic. And we believe if there are no more trade barriers and it's a level playing field, today, we are very well poised to leverage on that growth, and that should reflect in the numbers in the coming quarters. Keyur Pandya: Understood.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "exports",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": 10.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-20",
+      "calls": [
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "page": 8,
+          "quote": "We remain firm on track to achieve our target of greater than 10% contribution from exports by financial year 2030.",
+          "document": "POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf"
+        },
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "page": 19,
+          "quote": "We have given our guidance of going north of 10% of our overall top line by 2030.",
+          "document": "POLYCAB_20072026120857_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "value": "10%",
+          "change": "set",
+          "page": 8,
+          "quote": "We remain firm on track to achieve our target of greater than 10% contribution from exports by financial year 2030.",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-20",
+          "call_period": "2026-06-30",
+          "value": "10%",
+          "change": "maintained",
+          "page": 19,
+          "quote": "We have given our guidance of going north of 10% of our overall top line by 2030.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBIT margin to rise for FY2030",
+      "source_quote": "Within the Wires & Cable segment, growth since the launch of this program has consistently exceeded our guidance, tracking at 1.5x to 2x of the",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "Wires & Cable guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Looking ahead, the annual sustainable operating margin is expected to remain in the mid- to high single digits over mid- to long term. Moving on to Slide 17, which provides an update on our Project Spring. Under Spring, we continue to make steady progress in line with our FY2030 strategic objectives. Within the Wires & Cable segment, growth since the launch of this program has consistently exceeded our guidance, tracking at 1.5x to 2x of the industry growth with margins remaining far above the guided range. While export contribution appears lower on a relative basis, exports on an absolute basis have continued to grow during FY26. The relative contribution decline is largely due to stronger domestic growth, which has expanded the overall revenue base. We remain firm on track to achieve our target of greater than 10% contribution from exports by financial year 2030.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "Company says EBIT margin; we compute EBIT as PBT + finance costs \u2212 other income, as a percent of revenue.",
+      "scope": "segment",
+      "scope_name": "Wires & Cable",
+      "metric_key": "ebit_margin",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-08",
+      "calls": [
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "page": 8,
+          "quote": "Within the Wires & Cable segment, growth since the launch of this program has consistently exceeded our guidance, tracking at 1.5x to 2x of the",
+          "document": "POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2030",
+      "source_quote": "In FMEG, we are also progressing well consistently, outpacing industry growth in line with our target of growing at 1.5x to 2x of market rate",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Shashank Yagnick",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "FMEG guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Polycab India Limited May 06, 2026 Page 8 of 18 In FMEG, we are also progressing well consistently, outpacing industry growth in line with our target of growing at 1.5x to 2x of market rate, while maintaining a clear focus on margin expansion and progressing towards our EBITDA margin goal of 8% to 10% by FY2030. During FY26, we incurred capex of INR 14.8 billion, in line with our annual guidance of INR 12 billion to INR 16 billion per annum. We also increased our dividend payout to approximately 27.2%, up from 26.3% last year as we move steadily towards our stated objective of exceeding 30% by FY 2030. Overall, we believe we have made a strong start to Project Spring and remain confident in ou r ability to deliver on our long-term strategic and financial goals.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "FMEG",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-08",
+      "calls": [
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "page": 9,
+          "quote": "In FMEG, we are also progressing well consistently, outpacing industry growth in line with our target of growing at 1.5x to 2x of market rate",
+          "document": "POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 8\u201310 for FY2030",
+      "source_quote": "Looking ahead, we are confident in the long -term potential of the FMEG segment and remain on track to achieve our Project Spring targets of",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_22012026193636_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Shashank Yagnick",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u201310",
+      "status": "segment_level",
+      "note": "FMEG guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Other product categories delivered steady, in line performance, reinforcing the segment's balanced and resilient portfolio. Importantly, the FMEG segment remained profitable for the fourth consecutive quarter, even while strategically ramping up our A&P investments to strengthen brand presence and drive long-term growth. As we continue to scale, we expect profitability to expand further, reflecting the leverage in our business model. Looking ahead, we are confident in the long -term potential of the FMEG segment and remain on track to achieve our Project Spring targets of 1.5x - 2x industry growth and EBITDA margins in the range of 8% to 10% by FY30, positioning the business for sustai ned growth and value creation. Moving on to Slide 10, which provides an update on our EPC business. During Q3 FY26, EPC revenues grew by 4% YoY, reaching \u20b9 4,069 million. This quarter, we commenced execution of our existing orders under BharatNet scheme, which is expected to generate \u20b9 4.5 billion over the next 3 years for project execution and an additi onal \u20b9 3.5 billion for 10 years for project O&M.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "FMEG",
+      "metric_key": "ebitda_margin",
+      "target_low": 8.0,
+      "target_high": 10.0,
+      "call_period": "2025-12-31",
+      "call_date": "2026-01-22",
+      "calls": [
+        {
+          "date": "2026-01-22",
+          "call_period": "2025-12-31",
+          "page": 7,
+          "quote": "Looking ahead, we are confident in the long -term potential of the FMEG segment and remain on track to achieve our Project Spring targets of",
+          "document": "POLYCAB_22012026193636_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 8\u201310% for FY2030",
+      "source_quote": "targeting 1.5 to 2x of industry growth and improving EBITDA margins to 8% to 10% range by FY30.",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_25072025164059_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "8\u201310%",
+      "status": "segment_level",
+      "note": "FMEG guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "We expect this momentum to continue backed by supportive government policies and rising adoption of renewable energy solutions. The continued focus on premiumization helped the FMEG business achieve its second consecutive profitable quarter. Margin expansion was driven by a better product mix and operating leverage from scaling efficiencies. We remain confident in the long- term potential of our FMEG business, continuing to align our efforts with Project Spring, targeting 1.5 to 2x of industry growth and improving EBITDA margins to 8% to 10% range by FY30. Moving on to Slide 10, which provides an update on our EPC business.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "FMEG",
+      "metric_key": "ebitda_margin",
+      "target_low": 8.0,
+      "target_high": 10.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-25",
+      "calls": [
+        {
+          "date": "2025-05-14",
+          "call_period": "2025-03-31",
+          "page": 8,
+          "quote": "improving EBITDA margins to 8% - 10% by FY30.",
+          "document": "POLYCAB_14052025172938_SIGNED_Intimation_of_Earnings_Call_Transcript-combined.pdf"
+        },
+        {
+          "date": "2025-07-25",
+          "call_period": "2025-06-30",
+          "page": 6,
+          "quote": "targeting 1.5 to 2x of industry growth and improving EBITDA margins to 8% to 10% range by FY30.",
+          "document": "POLYCAB_25072025164059_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-14",
+          "call_period": "2025-03-31",
+          "value": "8\u201310%",
+          "change": "set",
+          "page": 8,
+          "quote": "improving EBITDA margins to 8% - 10% by FY30.",
+          "superseded": true
+        },
+        {
+          "date": "2025-07-25",
+          "call_period": "2025-06-30",
+          "value": "8\u201310%",
+          "change": "maintained",
+          "page": 6,
+          "quote": "targeting 1.5 to 2x of industry growth and improving EBITDA margins to 8% to 10% range by FY30.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 11\u201313% for FY2030",
+      "source_quote": "It is more like 5 -year guidance, and that is where we've given an 11% to 13% of EBITDA margins in the cables and wires",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_25072025164059_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Chirayu Upadhyaya",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "11\u201313%",
+      "status": "segment_level",
+      "note": "cables and wires guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "What's the reason for that? Chirayu Upadhyaya: So Pulkit, as you're aware, we don't give near-term or yearly guidance. Our guidance is for the longer term. It is more like 5 -year guidance, and that is where we've given an 11% to 13% of EBITDA margins in the cables and wires business as our guidance. When you look at the longer term, there are multiple variables that you have to look at and which will impact your profitability. While obviously, the cables and wires mix, if it goes in favor of wires, that can help your profitability. As the exports mix increases, that also helps the profitability.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "cables and wires",
+      "metric_key": "ebitda_margin",
+      "target_low": 11.0,
+      "target_high": 13.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-25",
+      "calls": [
+        {
+          "date": "2025-07-25",
+          "call_period": "2025-06-30",
+          "page": 11,
+          "quote": "It is more like 5 -year guidance, and that is where we've given an 11% to 13% of EBITDA margins in the cables and wires",
+          "document": "POLYCAB_25072025164059_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex 60\u201380 for FY2030",
+      "source_quote": "And we are continuing to expand, again, in line with our Project Spring guidance of INR 6,000 crores to INR 8,000 crores capex by financial",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Shashank Yagnick",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "60\u201380",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So if you look at this year, again, FY26, we've invested almost INR 1,500 crores, massive number. So again, this capacity will get added when we discuss next time, we'll possibly again be sitting at somewhere around mid-70-80, right? So I think that's where we are. And we are continuing to expand, again, in line with our Project Spring guidance of INR 6,000 crores to INR 8,000 crores capex by financial year 2030. Puneet Gulati: And what is the peak utilization you can actually reach? Shashank Yagnick: See, practically, I think at times, we have reached early 90s, but the standard percentages always remain around 80 -85%. You don't expect a plant to operate at 90 -plus percent.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 60.0,
+      "target_high": 80.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-08",
+      "calls": [
+        {
+          "date": "2026-01-22",
+          "call_period": "2025-12-31",
+          "page": 5,
+          "quote": "Capital expenditure for the quarter was \u20b9 3.4 billion, taking the 9M FY26 total to \u20b9 10.9 billion, in-line with our Project Spring guidance of",
+          "document": "POLYCAB_22012026193636_Intimation_of_Earnings_Call_Transcript.pdf"
+        },
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "page": 12,
+          "quote": "And we are continuing to expand, again, in line with our Project Spring guidance of INR 6,000 crores to INR 8,000 crores capex by financial",
+          "document": "POLYCAB_08052026185934_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-01-22",
+          "call_period": "2025-12-31",
+          "value": "12\u201316",
+          "change": "set",
+          "page": 5,
+          "quote": "Capital expenditure for the quarter was \u20b9 3.4 billion, taking the 9M FY26 total to \u20b9 10.9 billion, in-line with our Project Spring guidance of",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-08",
+          "call_period": "2026-03-31",
+          "value": "60\u201380",
+          "change": "raised",
+          "page": 12,
+          "quote": "And we are continuing to expand, again, in line with our Project Spring guidance of INR 6,000 crores to INR 8,000 crores capex by financial",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Capex \u20b912\u201316 for FY2030",
+      "source_quote": "Capital expenditure for the quarter was \u20b9 4.1 billion, in -line with our Project Spring guidance of investing \u20b9 12 billion to \u20b9 16 billion",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_25072025164059_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "\u20b912\u201316",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "We continue to maintain a strong balance sheet, closing the quarter with a net cash position of \u20b9 31 billion. Our working capital cycle stood at 43 days in Q1 FY26, positively impacted by a temporary increase in payable days. We expect this to normalize and revert to a long-term steady range of 50 days to 55 days in the coming quarters. Capital expenditure for the quarter was \u20b9 4.1 billion, in -line with our Project Spring guidance of investing \u20b9 12 billion to \u20b9 16 billion annually through FY30. On the advertising front, spends were lower during the quarter, largely due to limited promotional activity in the fans business due to an early onset of monsoon, which impacted the seasonal campaign cycle. However, with the upcoming festive season, the advertising and promotion spends will start tracking towards our targeted range of 3% to 5% of B2C top-line. Moving on to Slide 6.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 12.0,
+      "target_high": 16.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-25",
+      "calls": [
+        {
+          "date": "2025-07-25",
+          "call_period": "2025-06-30",
+          "page": 5,
+          "quote": "Capital expenditure for the quarter was \u20b9 4.1 billion, in -line with our Project Spring guidance of investing \u20b9 12 billion to \u20b9 16 billion",
+          "document": "POLYCAB_25072025164059_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [
+    {
+      "promise": "EBITDA margin 11\u201313% for FY2030",
+      "source_quote": "In the longer term, 11% to 13% of EBITDA margins is what we will be able to generate",
+      "page": 16,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POLYCAB_25072025164059_Intimation_of_Earnings_Call_Transcript.pdf",
+      "speaker": "Chirayu Upadhyaya",
+      "period_promised": "FY2030",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "11\u201313%",
+      "status": "long_term",
+      "note": "More than three years out.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "So therefore, C&W margins can be maintained broadly? Chirayu Upadhyaya: Sujit we have a long -term guidance in place. And again, I'll take you back to the FY 30 guidance that we have. In the longer term, 11% to 13% of EBITDA margins is what we will be able to generate irrespective of what happens on what type of business or procurement or commodity prices irrespective of that. In the near term, we will obviously try to maximize as far as whatever variables are presented in front of us. And hopefully, we should be able to maintain our margin profile. Sujit Jain: And one last question about your cables capacity being ahead of the industry in the sense people didn't have capacity you had.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 11.0,
+      "target_high": 13.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-07-25",
+      "calls": [
+        {
+          "date": "2025-07-25",
+          "call_period": "2025-06-30",
+          "page": 16,
+          "quote": "In the longer term, 11% to 13% of EBITDA margins is what we will be able to generate",
+          "document": "POLYCAB_25072025164059_Intimation_of_Earnings_Call_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "revisions": {
+    "raised": 3,
+    "cut": 1,
+    "maintained": 4,
+    "items": [
+      {
+        "promise": "EBITDA margin 8\u201310% for FY2030",
+        "period": "FY2030",
+        "sequence": [
+          {
+            "date": "2025-07-25",
+            "value": "8\u201310%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-08",
+            "value": "8\u201310%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-07-20",
+            "value": "8\u201310%",
+            "change": "maintained"
+          },
+          {
+            "date": "2026-07-20",
+            "value": "7\u20139%",
+            "change": "cut"
+          },
+          {
+            "date": "2026-07-20",
+            "value": "8\u201310%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 10% for FY2030",
+        "period": "FY2030",
+        "sequence": [
+          {
+            "date": "2026-05-08",
+            "value": "10%",
+            "change": "set"
+          },
+          {
+            "date": "2026-07-20",
+            "value": "10%",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Capex 60\u201380 for FY2030",
+        "period": "FY2030",
+        "sequence": [
+          {
+            "date": "2026-01-22",
+            "value": "12\u201316",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-08",
+            "value": "60\u201380",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 12\u201314% for an unnamed period",
+        "period": "",
+        "sequence": [
+          {
+            "date": "2026-05-08",
+            "value": "11\u201313%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-08",
+            "value": "12\u201314%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin 8\u201310% for FY2030",
+        "period": "FY2030",
+        "sequence": [
+          {
+            "date": "2025-05-14",
+            "value": "8\u201310%",
+            "change": "set"
+          },
+          {
+            "date": "2025-07-25",
+            "value": "8\u201310%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 1.03,
+    "series": 0.88,
+    "guidance": 4.14,
+    "check": 0.03,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 6.2
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 5876,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 5876
+  }
+}

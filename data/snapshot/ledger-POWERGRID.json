@@ -1,0 +1,397 @@
+{
+  "symbol": "POWERGRID",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 13,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 23,
+    "pages_dropped_by_prefilter": 2,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 20
+      },
+      {
+        "period": "2025-12-31",
+        "page": 7
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 11816.22,
+    "ebitda_margin_pct": 82.26,
+    "pat": 3866.16,
+    "ttm_revenue": 47373.64,
+    "ttm_pat": 16195.87,
+    "ttm_ebitda_margin_pct": 82.27,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 11816.22,
+        "ebitda": 9720.0,
+        "ebitda_margin_pct": 82.26,
+        "ebit": 6524.47,
+        "ebit_margin_pct": 55.22,
+        "pbt": 4572.02,
+        "finance_costs": 2191.34,
+        "depreciation": 3195.53,
+        "other_income": 238.89,
+        "pat": 3866.16,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 11496.72,
+        "ebitda": 9536.47,
+        "ebitda_margin_pct": 82.95,
+        "ebit": 6408.0,
+        "ebit_margin_pct": 55.74,
+        "pbt": 4585.06,
+        "finance_costs": 2022.94,
+        "depreciation": 3128.47,
+        "other_income": 200.0,
+        "pat": 3598.42,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 11665.61,
+        "ebitda": 9065.61,
+        "ebitda_margin_pct": 77.71,
+        "ebit": 5770.98,
+        "ebit_margin_pct": 49.47,
+        "pbt": 3901.33,
+        "finance_costs": 2174.73,
+        "depreciation": 3294.63,
+        "other_income": 305.08,
+        "pat": 4546.33,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 12395.09,
+        "ebitda": 10652.98,
+        "ebitda_margin_pct": 85.95,
+        "ebit": 7271.52,
+        "ebit_margin_pct": 58.66,
+        "pbt": 5285.01,
+        "finance_costs": 2190.5,
+        "depreciation": 3381.46,
+        "other_income": 203.99,
+        "pat": 4184.96,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 11475.95,
+        "ebitda": 9113.74,
+        "ebitda_margin_pct": 79.42,
+        "ebit": 5890.62,
+        "ebit_margin_pct": 51.33,
+        "pbt": 3936.84,
+        "finance_costs": 2148.07,
+        "depreciation": 3223.12,
+        "other_income": 194.29,
+        "pat": 3566.08,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 11196.22,
+        "ebitda": 9146.74,
+        "ebitda_margin_pct": 81.69,
+        "ebit": 6016.27,
+        "ebit_margin_pct": 53.73,
+        "pbt": 4330.19,
+        "finance_costs": 1934.28,
+        "depreciation": 3130.47,
+        "other_income": 248.2,
+        "pat": 3630.58,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Capex at least \u20b937000 crore for FY2027",
+      "source_quote": "We have already committed to Government of India for next financial year, FY27, \u20b937000 crores and FY28, \u20b945000 crores.",
+      "page": 21,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POWERGRID1_09022026231720_BSENSEReg30Transcript09022026.pdf",
+      "speaker": "Dr. R.K. Tyagi",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least \u20b937000 crore",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "Can it impact the Cap Ex guidance, let's say, from FY 28 to 30, and can the overall transmission CapEx outlook be impacted because of this? - Dr. R.K. Tyagi \u2013 Chairman & MD: - Like I told that, we have now \u20b932,000 crores for FY26. We have already committed to Government of India for next financial year, FY27, \u20b937000 crores and FY28, \u20b945000 crores. So when I'm talking about \u20b937,000 crores and \u20b945,000 crores. So definitely our HVDC projects, major expenditure will be during that period. So, once it is commissioned, because this project already , it has already completed one year.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 37000.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-09",
+      "calls": [
+        {
+          "date": "2026-02-09",
+          "call_period": "2025-12-31",
+          "page": 21,
+          "quote": "We have already committed to Government of India for next financial year, FY27, \u20b937000 crores and FY28, \u20b945000 crores.",
+          "document": "POWERGRID1_09022026231720_BSENSEReg30Transcript09022026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex at least \u20b945000 crore for FY2028",
+      "source_quote": "We have already committed to Government of India for next financial year, FY27, \u20b937000 crores and FY28, \u20b945000 crores.",
+      "page": 21,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POWERGRID1_09022026231720_BSENSEReg30Transcript09022026.pdf",
+      "speaker": "Dr. R.K. Tyagi",
+      "period_promised": "FY2028",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least \u20b945000 crore",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "Can it impact the Cap Ex guidance, let's say, from FY 28 to 30, and can the overall transmission CapEx outlook be impacted because of this? - Dr. R.K. Tyagi \u2013 Chairman & MD: - Like I told that, we have now \u20b932,000 crores for FY26. We have already committed to Government of India for next financial year, FY27, \u20b937000 crores and FY28, \u20b945000 crores. So when I'm talking about \u20b937,000 crores and \u20b945,000 crores. So definitely our HVDC projects, major expenditure will be during that period. So, once it is commissioned, because this project already , it has already completed one year.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 45000.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-09",
+      "calls": [
+        {
+          "date": "2026-02-09",
+          "call_period": "2025-12-31",
+          "page": 21,
+          "quote": "We have already committed to Government of India for next financial year, FY27, \u20b937000 crores and FY28, \u20b945000 crores.",
+          "document": "POWERGRID1_09022026231720_BSENSEReg30Transcript09022026.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex to rise for FY2026",
+      "source_quote": "It can further reduce depending on the capex, which we are expecting, say, about INR 28,000 crores to INR 30,000 crores.",
+      "page": 17,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POWERGRID1_28052025185626_BSENSEReg30Transcript28052025finalsigned.pdf",
+      "speaker": "R.K. Tyagi",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So that is why our dividend payout is reduced by about INR 2 \u2013 INR 2.25. So, we will require more money in future. So may be next year also, there may be some change from INR 9. It can further reduce depending on the capex, which we are expecting, say, about INR 28,000 crores to INR 30,000 crores. So that was the reason why we have reduced our dividend payout. As far as this ROE impact, last year, we had INR 15,500 crores. And this year, also, our profit is again in the same range, but our Net Worth has increased from INR 87,000 crore to about more than INR 90,000 crores.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-28",
+      "calls": [
+        {
+          "date": "2025-05-28",
+          "call_period": "2025-03-31",
+          "page": 17,
+          "quote": "It can further reduce depending on the capex, which we are expecting, say, about INR 28,000 crores to INR 30,000 crores.",
+          "document": "POWERGRID1_28052025185626_BSENSEReg30Transcript28052025finalsigned.pdf"
+        },
+        {
+          "date": "2026-02-09",
+          "call_period": "2025-12-31",
+          "page": 11,
+          "quote": "Last year, sorry, last meet, we have given \u20b928,000 crores for FY26. We are increasing it to \u20b932,000 crores as I told and for FY27,",
+          "document": "POWERGRID1_09022026231720_BSENSEReg30Transcript09022026.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-28",
+          "call_period": "2025-03-31",
+          "value": "a direction only",
+          "change": "set",
+          "page": 17,
+          "quote": "It can further reduce depending on the capex, which we are expecting, say, about INR 28,000 crores to INR 30,000 crores.",
+          "superseded": false
+        },
+        {
+          "date": "2026-02-09",
+          "call_period": "2025-12-31",
+          "value": "a direction only",
+          "change": "maintained",
+          "page": 11,
+          "quote": "Last year, sorry, last meet, we have given \u20b928,000 crores for FY26. We are increasing it to \u20b932,000 crores as I told and for FY27,",
+          "superseded": true
+        }
+      ]
+    },
+    {
+      "promise": "Capex to rise for FY2027",
+      "source_quote": "We are increasing it to \u20b932,000 crores as I told and for FY27, CapEx will be \u20b937,000 crores.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/POWERGRID1_09022026231720_BSENSEReg30Transcript09022026.pdf",
+      "speaker": "Dr. R.K. Tyagi",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So, as you've already charted out the guidance for CapEx and Capitalisations for 26, for FY27 and FY28, can you give us your revised numbers for Capex and capitalization? - Dr. R.K. Tyagi \u2013 Chairman & MD: - Last year, sorry, last meet, we have given \u20b928,000 crores for FY26. We are increasing it to \u20b932,000 crores as I told and for FY27, CapEx will be \u20b937,000 crores. In FY28, it will be \u20b945,000 crores. - Mr. Shubhdeep \u2013 Nuvama: - And for capitalization? - Dr. R.K.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-09",
+      "calls": [
+        {
+          "date": "2026-02-09",
+          "call_period": "2025-12-31",
+          "page": 11,
+          "quote": "We are increasing it to \u20b932,000 crores as I told and for FY27, CapEx will be \u20b937,000 crores.",
+          "document": "POWERGRID1_09022026231720_BSENSEReg30Transcript09022026.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 1,
+    "items": [
+      {
+        "promise": "Capex to rise for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-28",
+            "value": "a direction only",
+            "change": "set"
+          },
+          {
+            "date": "2026-02-09",
+            "value": "a direction only",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.84,
+    "series": 0.86,
+    "guidance": 5.28,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.2,
+    "total": 7.19
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 4472,
+      "dropped": 0,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 4472
+  }
+}

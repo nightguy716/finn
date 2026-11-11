@@ -1,0 +1,528 @@
+{
+  "symbol": "TATASTEEL",
+  "coverage": {
+    "transcripts_found": 6,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [
+      "2026-09-30"
+    ],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 6,
+    "next_quarter_statements": 4,
+    "pages_mentioning_fy26_or_next_quarter": 18,
+    "pages_dropped_by_prefilter": 4,
+    "dropped_pages": [
+      {
+        "period": "2026-03-31",
+        "page": 18
+      },
+      {
+        "period": "2025-12-31",
+        "page": 19
+      },
+      {
+        "period": "2025-06-30",
+        "page": 6
+      },
+      {
+        "period": "2025-03-31",
+        "page": 16
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 65436.24,
+    "ebitda_margin_pct": 16.63,
+    "pat": 3666.41,
+    "ttm_revenue": 246503.06,
+    "ttm_pat": 11599.2,
+    "ttm_ebitda_margin_pct": 15.15,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 65436.24,
+        "ebitda": 10881.75,
+        "ebitda_margin_pct": 16.63,
+        "ebit": 7099.92,
+        "ebit_margin_pct": 10.85,
+        "pbt": 5342.88,
+        "finance_costs": 2005.32,
+        "depreciation": 3781.83,
+        "other_income": 248.28,
+        "pat": 3666.41,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 60794.29,
+        "ebitda": 8918.86,
+        "ebitda_margin_pct": 14.67,
+        "ebit": 5279.21,
+        "ebit_margin_pct": 8.68,
+        "pbt": 3741.38,
+        "finance_costs": 1770.51,
+        "depreciation": 3639.65,
+        "other_income": 232.68,
+        "pat": 2318.35,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 63270.13,
+        "ebitda": 9488.61,
+        "ebitda_margin_pct": 15.0,
+        "ebit": 6220.21,
+        "ebit_margin_pct": 9.83,
+        "pbt": 4676.3,
+        "finance_costs": 1792.38,
+        "depreciation": 3268.4,
+        "other_income": 248.47,
+        "pat": 2925.74,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 57002.4,
+        "ebitda": 8059.82,
+        "ebitda_margin_pct": 14.14,
+        "ebit": 5011.01,
+        "ebit_margin_pct": 8.79,
+        "pbt": 3764.81,
+        "finance_costs": 1747.29,
+        "depreciation": 3048.81,
+        "other_income": 501.09,
+        "pat": 2688.7,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 58689.29,
+        "ebitda": 8476.13,
+        "ebitda_margin_pct": 14.44,
+        "ebit": 5583.13,
+        "ebit_margin_pct": 9.51,
+        "pbt": 4171.72,
+        "finance_costs": 1774.96,
+        "depreciation": 2893.0,
+        "other_income": 363.55,
+        "pat": 3101.75,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 53178.12,
+        "ebitda": 7295.42,
+        "ebitda_margin_pct": 13.72,
+        "ebit": 4551.12,
+        "ebit_margin_pct": 8.56,
+        "pbt": 2987.36,
+        "finance_costs": 1852.43,
+        "depreciation": 2744.3,
+        "other_income": 288.67,
+        "pat": 2077.68,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Volume growth at least 2 for FY2027",
+      "source_quote": "So we expect it to be 2 million tons plus for this financial year compared to the previous financial year.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_20052026212711_BSENSE_EarningsTranscript.pdf",
+      "speaker": "T. V. Narendran",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 2",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So we expect it to be 2 million tons plus for this financial year compared to the previous financial year.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 2.0,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-20",
+      "calls": [
+        {
+          "date": "2026-05-20",
+          "call_period": "2026-03-31",
+          "page": 10,
+          "quote": "So we expect it to be 2 million tons plus for this financial year compared to the previous financial year.",
+          "document": "NIDHIFADNAVIS_20052026212711_BSENSE_EarningsTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth to fall for an unnamed period",
+      "source_quote": "we had guided earlier that we expect the cost to decline by at least \u00a3150 per ton once we shift to the EAF.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/SAKSHIKAPUR_06082025180333_BSENSE_signed.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "UK guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "So, they are themselves feeling the pinch. We do expect that some of these policy issues will get sorted out. Going forward, when the EAF is there, we are going to use locally available scrap which is one of the reasons why we set up the EAF where UK is a big exporter of scrap. So that's a big part of the cost, and we believe we will be much more competitive buying local scrap than importing scrap or the earlier model of bringing in iron or coal and running it in the UK and we had guided earlier that we expect the cost to decline by at least \u00a3150 per ton once we shift to the EAF. The second part is energy cost in the UK. Here again, the UK government has recently announced some more concessions, and that's going to help us as well. That was one of our asks.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "UK",
+      "metric_key": "ebitda_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-06",
+      "calls": [
+        {
+          "date": "2025-08-06",
+          "call_period": "2025-06-30",
+          "page": 10,
+          "quote": "we had guided earlier that we expect the cost to decline by at least \u00a3150 per ton once we shift to the EAF.",
+          "document": "SAKSHIKAPUR_06082025180333_BSENSE_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth at least 10 for 2026-09-30",
+      "source_quote": "this quarter the guidance is about \u20ac10 per ton increase.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_06082026160127_BSENSE.pdf",
+      "speaker": "",
+      "period_promised": "2026-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10",
+      "status": "segment_level",
+      "note": "Netherlands guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "But all of it doesn't flow to the margins because UK is fed out of substrate . So, the substrate costs will also go up to reflect market, right, and it's not that the entire \u00a380 per ton will flow into the bottom line. So, so that's one mention I want to make. As far as Netherlands is concerned, we had guided \u20ac80 per ton increase in 1Q, and I think we delivered \u20ac70 per ton last quarter and this quarter the guidance is about \u20ac10 per ton increase. As Koushik mentioned in Europe, we are lot more impacted by contracts, because we have long term so some of the flow happens over a period of time. In India, I also want to add that we will get some of the benefit of the auto increases that we got , because most of that was negotiated towards the end of 1Q and so all the increases, some of it has flown through into 1Q numbers, some of it will flow through into the 2Q numbers, but the 1,500 per ton drop has factored all that in. Koushik, you want to talk on the cost side?",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Netherlands",
+      "metric_key": "revenue_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-06",
+      "calls": [
+        {
+          "date": "2026-08-06",
+          "call_period": "2026-06-30",
+          "page": 11,
+          "quote": "it will be another \u00a370 \u2013 \u00a380 per ton increase is what we are expecting in 2Q over 1Q.",
+          "document": "NIDHIFADNAVIS_06082026160127_BSENSE.pdf"
+        },
+        {
+          "date": "2026-08-06",
+          "call_period": "2026-06-30",
+          "page": 11,
+          "quote": "this quarter the guidance is about \u20ac10 per ton increase.",
+          "document": "NIDHIFADNAVIS_06082026160127_BSENSE.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-08-06",
+          "call_period": "2026-06-30",
+          "value": "70\u201380",
+          "change": "set",
+          "page": 11,
+          "quote": "it will be another \u00a370 \u2013 \u00a380 per ton increase is what we are expecting in 2Q over 1Q.",
+          "superseded": true
+        },
+        {
+          "date": "2026-08-06",
+          "call_period": "2026-06-30",
+          "value": "at least 10",
+          "change": "cut",
+          "page": 11,
+          "quote": "this quarter the guidance is about \u20ac10 per ton increase.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 70\u201380 for FY2026",
+      "source_quote": "\u20ac70 - 80 per ton is what we are seeing in Netherlands, we will move towards.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/MELISAALVA_18052025120512_BSENSE_Q4Transcript_signed.pdf",
+      "speaker": "Koushik Chatterjee",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "70\u201380",
+      "status": "segment_level",
+      "note": "Netherlands guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Prices are the same, raw material prices, coal, power, should we be look ing \u20ac100 per ton EBITDA for Netherlands given cost takeout. You were talking about \u20ac500 million, which is about \u20ac70 per ton and the cost savings. Everything remaining the same, you are saying we should be looking at \u20ac100 per ton EBITDA for Netherlands? Koushik Chatterjee: ED & CFO \u2013 Tata Steel Limited \u20ac70 - 80 per ton is what we are seeing in Netherlands, we will move towards. Eventually, yes, we should be aiming towards \u20ac100 per ton but \u20ac70 - 80 per ton is what we have basically said we should be chasing. In UK, all things remaining same, just through the cost takeouts etc. we should be EBITDA neutral or EBITDA positive, which if the steel prices have not dropped so much in the last few quarters, we would have already achieved. I think that is where we are.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Netherlands",
+      "metric_key": "ebitda_margin",
+      "target_low": 70.0,
+      "target_high": 80.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-18",
+      "calls": [
+        {
+          "date": "2025-05-18",
+          "call_period": "2025-03-31",
+          "page": 12,
+          "quote": "\u20ac70 - 80 per ton is what we are seeing in Netherlands, we will move towards.",
+          "document": "MELISAALVA_18052025120512_BSENSE_Q4Transcript_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Capex to rise for FY2027",
+      "source_quote": "we intend to increase the same in FY2027 to around Rs 20,000 crores of which more than 60% will be spend in India.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_20052026212711_BSENSE_EarningsTranscript.pdf",
+      "speaker": "Koushik Chatterjee",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Hence you see only ~Rs 2,418 c rores as the net reduction. Collectively, these measures reinforce Tata Steel\u2019s position as the one of few steel companies globally rated as investment \u2011grade by international rating agencies. Our year end Net Debt to EBITDA has reduced to 2.3x [inaudible] compared to 3.3x two years back. During FY2026, our total spend on capex was about Rs 14,000 crores on a consolidated basis and we intend to increase the same in FY2027 to around Rs 20,000 crores of which more than 60% will be spend in India. I would now like to explain a bit on what you would have seen in the press release and filing on the material uncertainty on TSN. Over the last two years , as Naren mentioned, a lot of work has been undertaken in the Coke and Gas Plants (CGP) and the company has resolved many issues raised by the Environmental Agencies. I must mention that some of the standard\u2019s requirements are above industry standards globally , some are technically not achievable and not followed anywhere in the world.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "capex",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-20",
+      "calls": [
+        {
+          "date": "2026-05-20",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "we intend to increase the same in FY2027 to around Rs 20,000 crores of which more than 60% will be spend in India.",
+          "document": "NIDHIFADNAVIS_20052026212711_BSENSE_EarningsTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth at least 1.5 for FY2026",
+      "source_quote": "The volume guidance is roughly 1.5 million tons of additional deliveries.",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/MELISAALVA_18052025120512_BSENSE_Q4Transcript_signed.pdf",
+      "speaker": "T. V. Narendran",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 1.5",
+      "status": "not_checkable",
+      "note": "Volume and capex cannot be verified from the quarterly series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Amit Dixit, ICICI Securities Could you please tell us the volume guidance for India and consolidated for FY2026? T. V. Narendran: CEO & MD - Tata Steel Limited The volume guidance is roughly 1.5 million tons of additional deliveries. Most of it is in India because UK will be flat, Netherlands will be slightly higher. In India, basically, we'll have about 2 million tons extra out of Kalinganagar, but we have the H blast furnace reline due in Jamshedpur. This year, we had G blast furnace relining.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 1.5,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-18",
+      "calls": [
+        {
+          "date": "2025-05-18",
+          "call_period": "2025-03-31",
+          "page": 12,
+          "quote": "The volume guidance is roughly 1.5 million tons of additional deliveries.",
+          "document": "MELISAALVA_18052025120512_BSENSE_Q4Transcript_signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth 35% for FY2026",
+      "source_quote": "Our Consolidated EBITDA increased by 35% YoY from Rs 25,802 crores in the full year ended Mar\u201925 to Rs 34,848 crores in the full year",
+      "page": 3,
+      "source_document": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_20052026212711_BSENSE_EarningsTranscript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "35%",
+      "status": "not_scored",
+      "note": "The numbers sit with a different measure in the same sentence.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Today, I will talk on three areas, firstly on performance management, secondly on Balance Sheet & Growth and thirdly on some recent developments in Netherlands and the UK. Firstly, on performance, the financial year 2025-2026 was challenging on one hand but represents the continuation of the strategic journey, and in many ways, a precursor to also what also lies ahead. The focus is clearly on the quality of earnings. Our Consolidated EBITDA increased by 35% YoY from Rs 25,802 crores in the full year ended Mar\u201925 to Rs 34,848 crores in the full year ended Mar\u201926. The consolidated EBITDA margin expanded by 320 bps from ~12% to ~15%. Our full year performance demonstrates the im pact of the cost transformation program, which has achieved Rs 10,868 crores of savings across geographies. India delivered cost transformation benefits of ~Rs 3,927 crores.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": 35.0,
+      "target_high": 35.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-20",
+      "calls": [
+        {
+          "date": "2026-05-20",
+          "call_period": "2026-03-31",
+          "page": 3,
+          "quote": "Our Consolidated EBITDA increased by 35% YoY from Rs 25,802 crores in the full year ended Mar\u201925 to Rs 34,848 crores in the full year",
+          "document": "NIDHIFADNAVIS_20052026212711_BSENSE_EarningsTranscript.pdf"
+        }
+      ],
+      "revisions": [],
+      "split_measure": true
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 1,
+    "maintained": 0,
+    "items": [
+      {
+        "promise": "Revenue growth at least 10 for 2026-09-30",
+        "period": "2026-09-30",
+        "sequence": [
+          {
+            "date": "2026-08-06",
+            "value": "70\u201380",
+            "change": "set"
+          },
+          {
+            "date": "2026-08-06",
+            "value": "at least 10",
+            "change": "cut"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 6,
+    "total": 6
+  },
+  "timing": {
+    "discover": 15.66,
+    "series": 0.82,
+    "guidance": 21.57,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.18,
+    "total": 38.24
+  },
+  "usage": {
+    "guidance": {
+      "calls": 3,
+      "cache_hits": 3,
+      "tokens": 14011,
+      "dropped": 3,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 14011
+  }
+}

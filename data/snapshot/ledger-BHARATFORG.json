@@ -1,0 +1,794 @@
+{
+  "symbol": "BHARATFORG",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 6,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 14,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 4869.97,
+    "ebitda_margin_pct": 15.26,
+    "pat": 275.87,
+    "ttm_revenue": 18380.88,
+    "ttm_pat": 682.91,
+    "ttm_ebitda_margin_pct": 13.43,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 4869.97,
+        "ebitda": 743.11,
+        "ebitda_margin_pct": 15.26,
+        "ebit": 473.35,
+        "ebit_margin_pct": 9.72,
+        "pbt": 423.95,
+        "finance_costs": 96.92,
+        "depreciation": 269.76,
+        "other_income": 47.52,
+        "pat": 275.87,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 4639.94,
+        "ebitda": 351.46,
+        "ebitda_margin_pct": 7.57,
+        "ebit": 88.18,
+        "ebit_margin_pct": 1.9,
+        "pbt": 55.71,
+        "finance_costs": 89.71,
+        "depreciation": 263.28,
+        "other_income": 57.24,
+        "pat": -89.73,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 4528.04,
+        "ebitda": 679.48,
+        "ebitda_margin_pct": 15.01,
+        "ebit": 424.39,
+        "ebit_margin_pct": 9.37,
+        "pbt": 392.96,
+        "finance_costs": 84.4,
+        "depreciation": 255.09,
+        "other_income": 52.97,
+        "pat": 232.56,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 4342.93,
+        "ebitda": 694.19,
+        "ebitda_margin_pct": 15.98,
+        "ebit": 445.35,
+        "ebit_margin_pct": 10.25,
+        "pbt": 411.19,
+        "finance_costs": 76.64,
+        "depreciation": 248.84,
+        "other_income": 42.48,
+        "pat": 264.21,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 4031.93,
+        "ebitda": 725.65,
+        "ebitda_margin_pct": 18.0,
+        "ebit": 484.76,
+        "ebit_margin_pct": 12.02,
+        "pbt": 458.19,
+        "finance_costs": 80.08,
+        "depreciation": 240.89,
+        "other_income": 53.51,
+        "pat": 299.2,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 3908.75,
+        "ebitda": 672.91,
+        "ebitda_margin_pct": 17.22,
+        "ebit": 446.81,
+        "ebit_margin_pct": 11.43,
+        "pbt": 414.31,
+        "finance_costs": 82.22,
+        "depreciation": 226.1,
+        "other_income": 49.72,
+        "pat": 283.68,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Capex \u20b9500 crore for FY2026",
+      "source_quote": "I think roughly both put together would be in the region of Rs.500 crores next year.",
+      "page": 12,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a583be3c-1e0c-49cf-bb27-2c462a749205.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "\u20b9500 crore",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "Please go ahead. Kapil Singh: Just one question. On the CAPEX, if you could give an in dication for next year for standalone and consol what kind of numbers to expect? Amit Kalyani: I think roughly both put together would be in the region of Rs.500 crores next year. Kapil Singh: Okay. Alright. That is it from my side.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "capex",
+      "target_low": 500.0,
+      "target_high": 500.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-01",
+      "calls": [
+        {
+          "date": "2025-05-01",
+          "call_period": "2025-03-31",
+          "page": 12,
+          "quote": "I think roughly both put together would be in the region of Rs.500 crores next year.",
+          "document": "AnnPdfOpen.aspx?Pname=a583be3c-1e0c-49cf-bb27-2c462a749205.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 20\u201325% for an unnamed period",
+      "source_quote": "I would say that the defense business margins will vary between 20 % to 24%, 25% depending on the product mix",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_06112026155750_SEIntimationTranscript_sd.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20\u201325%",
+      "status": "segment_level",
+      "note": "defense business guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "Is it going to change materially? Is it going to be similar? Any broad indication? Amit Kalyani: You know, I would say that the defense business margins will vary between 20 % to 24%, 25% depending on the product mix that we are supplying. So, initially\u2026 Amyn Pirani: Okay. Amit Kalyani: It may be in the 20%, 21% range, but as we start making more sophisticated products and as we start doing the fully filled ammunition, that should increase even further. Okay?",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "defense business",
+      "metric_key": "ebitda_margin",
+      "target_low": 20.0,
+      "target_high": 25.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-06",
+      "calls": [
+        {
+          "date": "2026-11-06",
+          "call_period": "2026-09-30",
+          "page": 10,
+          "quote": "I would say that the defense business margins will vary between 20 % to 24%, 25% depending on the product mix",
+          "document": "ANILSHINDE_06112026155750_SEIntimationTranscript_sd.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 22\u201323 for an unnamed period",
+      "source_quote": "The margins are all a result of the product mix. But as we have mentioned, the margins on a steady state annual basis we are",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_13082026192619_SEIntimationTranscript.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "22\u201323",
+      "status": "segment_level",
+      "note": "defense business guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Amyn Pirani: Sure, sure. And just secondly on your defense or the KSSL business, I know that it tends to be very volatile on a quarterly basis, but the margin outcome in this quarter, seems to be a very strong one. So anything that you can help us understand, you know, how should we think about this margin and how should we think about the future, you know... Amit Kalyani: The margins are all a result of the product mix. But as we have mentioned, the margins on a steady state annual basis we are targeting in the 22% to 23% or so range. Moderator: Amyn, does that answer your question? Amyn Pirani: Hello, sorry, there was some disturbance.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "defense business",
+      "metric_key": "ebitda_margin",
+      "target_low": 22.0,
+      "target_high": 23.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-13",
+      "calls": [
+        {
+          "date": "2026-08-13",
+          "call_period": "2026-06-30",
+          "page": 8,
+          "quote": "The margins are all a result of the product mix. But as we have mentioned, the margins on a steady state annual basis we are",
+          "document": "ANILSHINDE_13082026192619_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 30\u201340 for an unnamed period",
+      "source_quote": "And then on the semiconductor side, I think we are aiming, for something in the region of 30, 40 million of business in the next",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_13082026192619_SEIntimationTranscript.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "30\u201340",
+      "status": "segment_level",
+      "note": "semiconductor guidance is not compared with the consolidated series.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "On aerospace, we will double our business in the next 2 years or so. In -- hello, can you hear me? Gunjan: Yes, sir. Amit Kalyani: And then on the semiconductor side, I think we are aiming, for something in the region of 30, 40 million of business in the next 2 years organically, and then we also have to set up some machining facilities which will then allow us to grow that business a lmost double it. So that's the kind of business that we're looking at to doing in the semiconductor space. I will let Subodh answer the question on the semiconductor and related sectors. Gunjan: Sorry, how big is aerospace at the moment, you said doubling , where would that revenues be right now?",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "semiconductor",
+      "metric_key": "revenue_growth",
+      "target_low": 30.0,
+      "target_high": 40.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-13",
+      "calls": [
+        {
+          "date": "2026-08-13",
+          "call_period": "2026-06-30",
+          "page": 9,
+          "quote": "And then on the semiconductor side, I think we are aiming, for something in the region of 30, 40 million of business in the next",
+          "document": "ANILSHINDE_13082026192619_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 15\u201316% for an unnamed period",
+      "source_quote": "See, the steel will be at about 12% and the aluminum EBITDA margin can be in the 15%, 16%.",
+      "page": 17,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_13082026192619_SEIntimationTranscript.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15\u201316%",
+      "status": "segment_level",
+      "note": "aluminum guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "And that will provide us significant growth going forward. Kapil Singh: Thanks. And sir lastly on the US manufacturing operations, when the operations normalize, what kind of margins can we expect in this business? Amit Kalyani: See, the steel will be at about 12% and the aluminum EBITDA margin can be in the 15%, 16%. Kapil Singh: And sir, by when can we get there? Amit Kalyani: Hopefully next year. Kapil Singh: Okay, great.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "aluminum",
+      "metric_key": "ebitda_margin",
+      "target_low": 15.0,
+      "target_high": 16.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-08-13",
+      "calls": [
+        {
+          "date": "2026-08-13",
+          "call_period": "2026-06-30",
+          "page": 17,
+          "quote": "See, the steel will be at about 12% and the aluminum EBITDA margin can be in the 15%, 16%.",
+          "document": "ANILSHINDE_13082026192619_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin at least 200 bps for FY2026",
+      "source_quote": "Our margins have grown by almost 200 basis points.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_13022026182458_SEIntimationTranscript.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 200 bps",
+      "status": "segment_level",
+      "note": "American Axle guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Aakash Javeri: Good afternoon, sir, and thank you for the opportunity. My first question is how has the acquisition of American Axle been performing and what is our view on this segment? Amit Kalyani: The acquisition has performed well. Our margins have grown by almost 200 basis points. And I expect that this sector will do well. This is a high growth sector and we're already winning quite a lot of new business from Indian OEMs. So this has been a good acquisition for us and we expect this to turn out to be a very positive step for the company.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "American Axle",
+      "metric_key": "ebitda_margin",
+      "target_low": 200.0,
+      "target_high": null,
+      "call_period": "2025-12-31",
+      "call_date": "2026-02-13",
+      "calls": [
+        {
+          "date": "2026-02-13",
+          "call_period": "2025-12-31",
+          "page": 10,
+          "quote": "Our margins have grown by almost 200 basis points.",
+          "document": "ANILSHINDE_13022026182458_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 20% for FY2026",
+      "source_quote": "we expect that aerospace should continue its 20% plus growth annually YOY.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_11082025175605_SEIntimationTranscript.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20%",
+      "status": "segment_level",
+      "note": "aerospace guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "With a good RFQ pipeline in the defense business, we expect to see some orders getting finalized additionally in this fiscal. Q2 looks a little weaker driven by U.S. exports and hopefully marks a low for this cycle. Second half should be better than the first half. Talking about the rest of the year, we expect that aerospace should continue its 20% plus growth annually YOY. This business has limited exposure to the U.S. market. American Axles should add Rs. 1,000 crores to the consolidated topline for the year. We will see it consolidate from Q2 FY26.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "aerospace",
+      "metric_key": "revenue_growth",
+      "target_low": 20.0,
+      "target_high": 20.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-11",
+      "calls": [
+        {
+          "date": "2025-05-01",
+          "call_period": "2025-03-31",
+          "page": 5,
+          "quote": "In defense: We expect to see a 15 % to 20% growth in FY26.",
+          "document": "AnnPdfOpen.aspx?Pname=a583be3c-1e0c-49cf-bb27-2c462a749205.pdf"
+        },
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "page": 4,
+          "quote": "we expect that aerospace should continue its 20% plus growth annually YOY.",
+          "document": "ANILSHINDE_11082025175605_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-01",
+          "call_period": "2025-03-31",
+          "value": "15\u201320%",
+          "change": "set",
+          "page": 5,
+          "quote": "In defense: We expect to see a 15 % to 20% growth in FY26.",
+          "superseded": true
+        },
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "value": "20%",
+          "change": "raised",
+          "page": 4,
+          "quote": "we expect that aerospace should continue its 20% plus growth annually YOY.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "aerospace, we will have strong growth in the year.",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_11082025175605_SEIntimationTranscript.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "aerospace guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Sir, especially in construction, mining and aerospace, those areas witnessed weak performance. Is this a demand side issue or execution related and when we can expect the recovery? And secondly, this KPTL E -Mobility subsidiary, when we can expect a breakeven, whether it is in H2 or beyond that? Amit Kalyani: So, first of all, aerospace, we will have strong growth in the year. Again, you have to look at it on a YOY basis. We should see upwards of 20% growth, maybe even higher than that. Construction and mining, there has been a dip but hopefully that will also improve in the second half.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "aerospace",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-11",
+      "calls": [
+        {
+          "date": "2025-08-11",
+          "call_period": "2025-06-30",
+          "page": 11,
+          "quote": "aerospace, we will have strong growth in the year.",
+          "document": "ANILSHINDE_11082025175605_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth to rise for FY2026",
+      "source_quote": "Aerospace is now 15% of industrial exports. It has grown 4x in the past five years and we expect this to continue growing at a",
+      "page": 4,
+      "source_document": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a583be3c-1e0c-49cf-bb27-2c462a749205.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "segment_level",
+      "note": "Aerospace guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Few things will stand out are the fact that the business is becoming more diversified and resilient . Over the 2019 to 2025 timeframe, industrial exports have been flat at around Rs.1,600 crores despite oil and gas declining from around Rs.1,100, Rs.1,200 crores to about Rs.400 crores. This drop has been compensated by other areas such as High horsepower and Aerospace. Aerospace is now 15% of industrial exports. It has grown 4x in the past five years and we expect this to continue growing at a high pace going forward. We are now setting up a new dedicated forging and machining facility for aerospace backed by both business wins and customer commitments, including financial commitments. You will witness one new business adding to the growth of industrial exports in the next three to four years.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "Aerospace",
+      "metric_key": "revenue_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-01",
+      "calls": [
+        {
+          "date": "2025-05-01",
+          "call_period": "2025-03-31",
+          "page": 4,
+          "quote": "Aerospace is now 15% of industrial exports. It has grown 4x in the past five years and we expect this to continue growing at a",
+          "document": "AnnPdfOpen.aspx?Pname=a583be3c-1e0c-49cf-bb27-2c462a749205.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 30\u201340% for FY2027",
+      "source_quote": "In the last call, we talked about revenue guidance on defense of 30% to 40%.",
+      "page": 7,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_11052026174428_SEIntimationTranscript.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "30\u201340%",
+      "status": "segment_level",
+      "note": "defense guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Just on aerospace, what exactly was the number for FY '26 for you? Amit Kalyani: It was about INR400 crores. Binay Singh: And lastly, just on defense. In the last call, we talked about revenue guidance on defense of 30% to 40%. But just looking at the order book, what are the key sort of milestones to watch out for? You've talked about opportunity in Europe and all, but any key things that we should expect or milestones to see this year? Amit Kalyani: So the first thing that you should look at is the fact that the ATAGS FOPM will happen, and then the ATAGS production will start and ramp up .",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "defense",
+      "metric_key": "revenue_growth",
+      "target_low": 30.0,
+      "target_high": 40.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-11",
+      "calls": [
+        {
+          "date": "2026-05-11",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "we should see a close to 25% growth in our India business",
+          "document": "ANILSHINDE_11052026174428_SEIntimationTranscript.pdf"
+        },
+        {
+          "date": "2026-05-11",
+          "call_period": "2026-03-31",
+          "page": 7,
+          "quote": "In the last call, we talked about revenue guidance on defense of 30% to 40%.",
+          "document": "ANILSHINDE_11052026174428_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-05-11",
+          "call_period": "2026-03-31",
+          "value": "25%",
+          "change": "set",
+          "page": 5,
+          "quote": "we should see a close to 25% growth in our India business",
+          "superseded": true
+        },
+        {
+          "date": "2026-05-11",
+          "call_period": "2026-03-31",
+          "value": "30\u201340%",
+          "change": "raised",
+          "page": 7,
+          "quote": "In the last call, we talked about revenue guidance on defense of 30% to 40%.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Capex \u20b9800\u2013850 crore for FY2027",
+      "source_quote": "Our ongoing capex programs across forging, casting and products platform will translate into INR800 crores to INR850 crores capex in a 15, 18-month period.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_11052026174428_SEIntimationTranscript.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "\u20b9800\u2013850 crore",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "currency_inr",
+      "kind": "level",
+      "passage": "We also intend to evaluate additional business opportunities in the automotive sector to leverage our market position our customers and our footprint globally. If we look at 2027 as a whole, I think it's going to be a strong year for our India manufacturing operations, as the growth impetus across sectors and the kind of strategies we have put in place will bring in higher execution and growth. Barring any further geopolitical crisis and their impact on demand, we should see a close to 25% growth in our India business. Our ongoing capex programs across forging, casting and products platform will translate into INR800 crores to INR850 crores capex in a 15, 18-month period. We",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "capex",
+      "target_low": 800.0,
+      "target_high": 850.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-05-11",
+      "calls": [
+        {
+          "date": "2026-05-11",
+          "call_period": "2026-03-31",
+          "page": 5,
+          "quote": "Our ongoing capex programs across forging, casting and products platform will translate into INR800 crores to INR850 crores capex in a 15, 18-month period.",
+          "document": "ANILSHINDE_11052026174428_SEIntimationTranscript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 200\u2013250 bps for FY2028",
+      "source_quote": "And I would say an accretion in margin of at least 200 basis points to 250 basis points.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_06112026155750_SEIntimationTranscript_sd.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "FY2028",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "200\u2013250 bps",
+      "status": "segment_level",
+      "note": "India manufacturing guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Is there a number that you know, would help us? Amit Kalyani: Depending -- it's a very good question, Gunjan. Depending on the mix and you know, where we are in the mix at that point in time, I would say our India manufacturing, which is today running at somewhere in the region of close to INR3,000 crores -- INR3,400 crores per quarter, you know, and a 22% margin, I would expect this to, you know, be well in excess of INR5,000 crores of sales by the time we come to the end of next year. And I would say an accretion in margin of at least 200 basis points to 250 basis points. Gunjan Prithyani: Got it. That's really helpful. Thank you so much.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "segment",
+      "scope_name": "India manufacturing",
+      "metric_key": "ebitda_margin",
+      "target_low": 200.0,
+      "target_high": 250.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-06",
+      "calls": [
+        {
+          "date": "2026-11-06",
+          "call_period": "2026-09-30",
+          "page": 10,
+          "quote": "And I would say an accretion in margin of at least 200 basis points to 250 basis points.",
+          "document": "ANILSHINDE_06112026155750_SEIntimationTranscript_sd.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 20\u201325 for FY2027",
+      "source_quote": "revenue guidance. So sequentially when you look at second half, what is the driver of this jump in revenues that we will see to meet",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_06112026155750_SEIntimationTranscript_sd.pdf",
+      "speaker": "Amit Kalyani",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "20\u201325",
+      "status": "not_scored",
+      "note": "The quote does not state the unit.",
+      "quote_check": "The quote does not state the unit.",
+      "unit": "other",
+      "kind": "level",
+      "passage": "Now that we have enough orders, we need facilities that can be semi -dedicated for doing these and do this very efficiently and at scale. So that investment itself should be able to cater to these 2-3 sectors at least for the next 2-3 years. Binay Singh: And just, you know, like in your press release you added that the ATAGS revenue recognition will start from next year, which means that this 20 %-25% revenue guidance. So sequentially when you look at second half, what is the driver of this jump in revenues that we will see to meet this 20%-25% guidance? Amit Kalyani: So, it's across the board. It is our aerospace business, it is our industrial exports, it is some of the semicon business, it is the CV business, it is our pass car exports, all of these, marine and then JSA and K-Drive, all of it. We have lots of new programs and projects which are moving into revenue.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 20.0,
+      "target_high": 25.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-06",
+      "calls": [
+        {
+          "date": "2026-11-06",
+          "call_period": "2026-09-30",
+          "page": 6,
+          "quote": "revenue guidance. So sequentially when you look at second half, what is the driver of this jump in revenues that we will see to meet",
+          "document": "ANILSHINDE_06112026155750_SEIntimationTranscript_sd.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 2,
+    "cut": 0,
+    "maintained": 0,
+    "items": [
+      {
+        "promise": "Revenue growth 30\u201340% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-05-11",
+            "value": "25%",
+            "change": "set"
+          },
+          {
+            "date": "2026-05-11",
+            "value": "30\u201340%",
+            "change": "raised"
+          }
+        ]
+      },
+      {
+        "promise": "Revenue growth 20% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-01",
+            "value": "15\u201320%",
+            "change": "set"
+          },
+          {
+            "date": "2025-08-11",
+            "value": "20%",
+            "change": "raised"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.83,
+    "series": 0.81,
+    "guidance": 6.92,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.16,
+    "total": 8.73
+  },
+  "usage": {
+    "guidance": {
+      "calls": 1,
+      "cache_hits": 6,
+      "tokens": 3029,
+      "dropped": 3,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 3029
+  }
+}

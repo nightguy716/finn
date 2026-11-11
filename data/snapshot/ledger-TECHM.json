@@ -1,0 +1,656 @@
+{
+  "symbol": "TECHM",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 6,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2025-03-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 1,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 41,
+    "pages_dropped_by_prefilter": 10,
+    "dropped_pages": [
+      {
+        "period": "2026-09-30",
+        "page": 9
+      },
+      {
+        "period": "2026-06-30",
+        "page": 19
+      },
+      {
+        "period": "2025-12-31",
+        "page": 13
+      },
+      {
+        "period": "2025-12-31",
+        "page": 16
+      },
+      {
+        "period": "2025-03-31",
+        "page": 11
+      },
+      {
+        "period": "2025-03-31",
+        "page": 29
+      },
+      {
+        "period": "2025-03-31",
+        "page": 31
+      },
+      {
+        "period": "2025-03-31",
+        "page": 42
+      },
+      {
+        "period": "2025-03-31",
+        "page": 44
+      },
+      {
+        "period": "2025-03-31",
+        "page": 46
+      }
+    ]
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 16180.2,
+    "ebitda_margin_pct": 17.79,
+    "pat": 1585.6,
+    "ttm_revenue": 61361.4,
+    "ttm_pat": 4603.2,
+    "ttm_ebitda_margin_pct": 16.75,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 16180.2,
+        "ebitda": 2878.5,
+        "ebitda_margin_pct": 17.79,
+        "ebit": 2387.1,
+        "ebit_margin_pct": 14.75,
+        "pbt": 2296.1,
+        "finance_costs": 83.6,
+        "depreciation": 491.4,
+        "other_income": -7.4,
+        "pat": 1585.6,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 15711.9,
+        "ebitda": 2742.5,
+        "ebitda_margin_pct": 17.45,
+        "ebit": 2263.9,
+        "ebit_margin_pct": 14.41,
+        "pbt": 2046.2,
+        "finance_costs": 111.3,
+        "depreciation": 478.6,
+        "other_income": -106.4,
+        "pat": 1465.1,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 15076.1,
+        "ebitda": 2565.2,
+        "ebitda_margin_pct": 17.02,
+        "ebit": 2084.1,
+        "ebit_margin_pct": 13.82,
+        "pbt": 1790.6,
+        "finance_costs": 88.8,
+        "depreciation": 481.1,
+        "other_income": -204.7,
+        "pat": 1353.8,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 14393.2,
+        "ebitda": 2093.2,
+        "ebitda_margin_pct": 14.54,
+        "ebit": 1619.5,
+        "ebit_margin_pct": 11.25,
+        "pbt": 1504.2,
+        "finance_costs": 93.6,
+        "depreciation": 473.7,
+        "other_income": -21.7,
+        "pat": 198.7,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 13994.9,
+        "ebitda": 2165.2,
+        "ebitda_margin_pct": 15.47,
+        "ebit": 1696.5,
+        "ebit_margin_pct": 12.12,
+        "pbt": 1659.3,
+        "finance_costs": 77.2,
+        "depreciation": 468.7,
+        "other_income": 40.0,
+        "pat": 1194.5,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 13351.2,
+        "ebitda": 1935.2,
+        "ebitda_margin_pct": 14.49,
+        "ebit": 1477.1,
+        "ebit_margin_pct": 11.06,
+        "pbt": 1617.6,
+        "finance_costs": 77.8,
+        "depreciation": 458.1,
+        "other_income": 218.3,
+        "pat": 1140.6,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "EBITDA growth 60% for FY2025",
+      "source_quote": "Our operating profit for the full year stood at about $607 million. This is 60 percent year-on-year growth.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Ruchie_khanna_30042025200150_IntimationforTransacriptofearningsmeetQ4_Signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "60%",
+      "status": "pending",
+      "note": "FY2025 is missing 2024-06-30, 2024-09-30, 2024-12-31, 2025-03-31, so the year is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "And also, this contrasts with about a 5 percent decline that we had the previous year. If you recollect, and all of you obviously know our numbers, Q4 last year we actually exited at a minus 7 percent year-on-year revenue growth rate. Importantly, this year I think we achieved the goal that we'd set for ourselves, to stabilize the organization, to stabilize key accounts, and I think this is a key milestone in our transformation journey. Our operating profit for the full year stood at about $607 million. This is 60 percent year-on-year growth. We expanded the margins by about 360 basis points to 9.7 percent. This is primarily due to the operational efficiencies and the savings from Project Fortius, and Atul will be sharing details about how we performed and how we expect to perform over the next two years.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_growth",
+      "target_low": 60.0,
+      "target_high": 60.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-30",
+      "calls": [
+        {
+          "date": "2025-04-30",
+          "call_period": "2025-03-31",
+          "page": 5,
+          "quote": "Our operating profit for the full year stood at about $607 million. This is 60 percent year-on-year growth.",
+          "document": "Ruchie_khanna_30042025200150_IntimationforTransacriptofearningsmeetQ4_Signed.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 12.6 bps for FY2026",
+      "source_quote": "Operating profit is USD 797 million, up 31.4% year-on-year, with margins expanding by about 290 basis points to 12.6%.",
+      "page": 4,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Apekshakhemka_28042026190700_SEintimationtranscriptQ4_S.pdf",
+      "speaker": "",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "12.6 bps",
+      "status": "pending",
+      "note": "FY2025 is outside the series, so a change in margin cannot be checked.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "We have made investments to embed AI across services, to augment capabilities, and to bring in seasoned industry specialists to drive innovation and execution at scale. Full-year revenues stand at US D 6.385 billion, up 1.9% on a reported basis and 0.6% in constant currency. During the year, our focus remained on disciplined execution, staying close to clients, and progressing our solution -led approach. Operating profit is USD 797 million, up 31.4% year-on-year, with margins expanding by about 290 basis points to 12.6%. Rohit will walk you through this in more detail. Moving on to vertical performance for the year, we delivered about growth of 5.9% year-on- year in manufacturing. Growth in the vertical was led by aerospace and industrial process manufacturing, where it helped us to navigate a softer environment in US aut o.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 12.6,
+      "target_high": 12.6,
+      "call_period": "2026-03-31",
+      "call_date": "2026-04-28",
+      "calls": [
+        {
+          "date": "2026-04-28",
+          "call_period": "2026-03-31",
+          "page": 4,
+          "quote": "Operating profit is USD 797 million, up 31.4% year-on-year, with margins expanding by about 290 basis points to 12.6%.",
+          "document": "Apekshakhemka_28042026190700_SEintimationtranscriptQ4_S.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "PAT growth 28.2% for FY2026",
+      "source_quote": "Our PAT for the quarter is $135 million, an increase of 28.2% Y-o-Y",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Apekshakhemka_17102025210802_IntimationoftranscriptQ2Fy26_S.pdf",
+      "speaker": "Management",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "28.2%",
+      "status": "pending",
+      "note": "The year before FY2026 is outside the series, so growth is not checked.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Based on hedge accounting, the mark-to-market loss for the quarter was $32.2 million, out of which $7 million was taken to the P&L and the loss of $26 million went to the reserves. Our effective tax rate for the quarter stood at 27.6% in line with expectations. The normalized ETR for the full year is close to 27%. Our PAT for the quarter is $135 million, an increase of 28.2% Y-o-Y outside of exceptional item of land sale during Q2 F\u201925. In INR terms, PAT was at INR 1,194 crores with margin rate of 8.5%. Our return on capital employed stands at 24.4% this quarter. This demonstrates the significant progress we have made in improving financial efficiency and return since the beginning of the plan.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "pat_growth",
+      "target_low": 28.2,
+      "target_high": 28.2,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-17",
+      "calls": [
+        {
+          "date": "2025-10-17",
+          "call_period": "2025-09-30",
+          "page": 9,
+          "quote": "Our PAT for the quarter is $135 million, an increase of 28.2% Y-o-Y",
+          "document": "Apekshakhemka_17102025210802_IntimationoftranscriptQ2Fy26_S.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin at least 360 bps for FY2025",
+      "source_quote": "We expanded the margins by about 360 basis points to 9.7 percent.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Ruchie_khanna_30042025200150_IntimationforTransacriptofearningsmeetQ4_Signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 360 bps",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Importantly, this year I think we achieved the goal that we'd set for ourselves, to stabilize the organization, to stabilize key accounts, and I think this is a key milestone in our transformation journey. Our operating profit for the full year stood at about $607 million. This is 60 percent year-on-year growth. We expanded the margins by about 360 basis points to 9.7 percent. This is primarily due to the operational efficiencies and the savings from Project Fortius, and Atul will be sharing details about how we performed and how we expect to perform over the next two years. Also just want to give you a flavor on our vertical wise performance for the full year. This is on a constant currency basis.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 360.0,
+      "target_high": null,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-30",
+      "calls": [
+        {
+          "date": "2025-04-30",
+          "call_period": "2025-03-31",
+          "page": 5,
+          "quote": "We expanded the margins by about 360 basis points to 9.7 percent.",
+          "document": "Ruchie_khanna_30042025200150_IntimationforTransacriptofearningsmeetQ4_Signed.pdf"
+        },
+        {
+          "date": "2025-04-30",
+          "call_period": "2025-03-31",
+          "page": 5,
+          "quote": "We expanded the margins by about 360 basis points to 9.7 percent.",
+          "document": "Ruchie_khanna_30042025200150_IntimationforTransacriptofearningsmeetQ4_Signed.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-04-30",
+          "call_period": "2025-03-31",
+          "value": "at least 9.7 bps",
+          "change": "set",
+          "page": 5,
+          "quote": "We expanded the margins by about 360 basis points to 9.7 percent.",
+          "superseded": true
+        },
+        {
+          "date": "2025-04-30",
+          "call_period": "2025-03-31",
+          "value": "at least 360 bps",
+          "change": "raised",
+          "page": 5,
+          "quote": "We expanded the margins by about 360 basis points to 9.7 percent.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 15% for FY2027",
+      "source_quote": "it has to be upwards of 15% for the fourth quarter",
+      "page": 12,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Apekshakhemka_22072026121038_Signed_SEintimationtranscript.pdf",
+      "speaker": "Rohit Anand",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "15%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "level",
+      "passage": "So it will be a mix of both, but actions are all over to make sure that we are on track for the 15%. Kumar Rakesh: Thanks, Rohit. Any target which you have in mind to exit the year at? Rohit Anand: We've not articulated that, but I mean if you look at Q1, we're at 14.4%, and as we move forward incrementally, as I mentioned, we'll keep on improving margins, so it has to be upwards of 15% for the fourth quarter, and we'll see how each quarter progresses from here and now. Kumar Rakesh: Got it. Just one clarification. We have seen strong improvement in DSO and free cash flow generation as well.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 15.0,
+      "target_high": 15.0,
+      "call_period": "2026-06-30",
+      "call_date": "2026-07-22",
+      "calls": [
+        {
+          "date": "2026-04-28",
+          "call_period": "2026-03-31",
+          "page": 16,
+          "quote": "When we look at our FY27 ambitions, clearly commitment to deliver the 15% EBIT.",
+          "document": "Apekshakhemka_28042026190700_SEintimationtranscriptQ4_S.pdf"
+        },
+        {
+          "date": "2026-04-28",
+          "call_period": "2026-03-31",
+          "page": 20,
+          "quote": "And then looking at Return on Capital Employed, we are close to 26% and our commitment to all of you is get to 30% for",
+          "document": "Apekshakhemka_28042026190700_SEintimationtranscriptQ4_S.pdf"
+        },
+        {
+          "date": "2026-07-22",
+          "call_period": "2026-06-30",
+          "page": 12,
+          "quote": "it has to be upwards of 15% for the fourth quarter",
+          "document": "Apekshakhemka_22072026121038_Signed_SEintimationtranscript.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-04-28",
+          "call_period": "2026-03-31",
+          "value": "15%",
+          "change": "set",
+          "page": 16,
+          "quote": "When we look at our FY27 ambitions, clearly commitment to deliver the 15% EBIT.",
+          "superseded": true
+        },
+        {
+          "date": "2026-04-28",
+          "call_period": "2026-03-31",
+          "value": "30%",
+          "change": "raised",
+          "page": 20,
+          "quote": "And then looking at Return on Capital Employed, we are close to 26% and our commitment to all of you is get to 30% for",
+          "superseded": true
+        },
+        {
+          "date": "2026-07-22",
+          "call_period": "2026-06-30",
+          "value": "15%",
+          "change": "cut",
+          "page": 12,
+          "quote": "it has to be upwards of 15% for the fourth quarter",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "EBITDA margin 108 bps for 2025-09-30",
+      "source_quote": "Our operating margins increased by 108 basis point to 12.1%",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Apekshakhemka_17102025210802_IntimationoftranscriptQ2Fy26_S.pdf",
+      "speaker": "",
+      "period_promised": "2025-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "108 bps",
+      "status": "not_checkable",
+      "note": "The year-ago margin for 2025-09-30 is not in the series.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "On a constant currency basis, revenue grew by 1.6% Q-o-Q, and a decline of 0.3% Y-o-Y. The growth this quarter was broad -based, driven by performance in manufacturing, retail, BFSI, travel and logistics. From an INR perspective, revenue was at INR 13,995 crores compared to INR 13,351 crores in the previous quarter, a growth of 4.8% on a sequential basis and 5.1% on a Y-o-Y basis, aided by the INR depreciation. Our operating margins increased by 108 basis point to 12.1%, marking the 8th consecutive quarter of margin expansion. This consistent improvement reflects our ongoing focus on operating efficiency, cost optimization and value-driven execution. Margin expansion this quarter was primarily driven by improvement in fixed -price project productivity, volume growth and savings from SG&A optimization. Additionally, we benefit from a currency tailfall of approximately 40 basis points.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 108.0,
+      "target_high": 108.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-17",
+      "calls": [
+        {
+          "date": "2025-10-17",
+          "call_period": "2025-09-30",
+          "page": 8,
+          "quote": "Our operating margins increased by 108 basis point to 12.1%",
+          "document": "Apekshakhemka_17102025210802_IntimationoftranscriptQ2Fy26_S.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA margin 40\u201350 bps for 2025-09-30",
+      "source_quote": "gross margin improved by around 40-50 basis points sequentially",
+      "page": 11,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Apekshakhemka_17102025210802_IntimationoftranscriptQ2Fy26_S.pdf",
+      "speaker": "",
+      "period_promised": "2025-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "40\u201350 bps",
+      "status": "not_scored",
+      "note": "The passage does not say whether this margin is EBITDA or EBIT.",
+      "quote_check": "ok",
+      "unit": "bps",
+      "kind": "change",
+      "passage": "Surendra Goyal: Hi. Good evening. A few questions on margins for you. Firstly, the gross margin improved by around 40-50 basis points sequentially, which would be almost entirely currency-led, would you just help us reconcile that in terms of percentage? Rohit Anand: Not really, Surendra, because the currency benefit happens at a G&A level also, right? The INR costs get converted at a lower rate, right, to USD. That benefit is split.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "ebitda_margin",
+      "target_low": 40.0,
+      "target_high": 50.0,
+      "call_period": "2025-09-30",
+      "call_date": "2025-10-17",
+      "calls": [
+        {
+          "date": "2025-10-17",
+          "call_period": "2025-09-30",
+          "page": 11,
+          "quote": "gross margin improved by around 40-50 basis points sequentially",
+          "document": "Apekshakhemka_17102025210802_IntimationoftranscriptQ2Fy26_S.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 0.3% for FY2025",
+      "source_quote": "We closed the year with a revenue of $6,264 million, with 0.3 percent growth on a constant currency basis.",
+      "page": 5,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Ruchie_khanna_30042025200150_IntimationforTransacriptofearningsmeetQ4_Signed.pdf",
+      "speaker": "",
+      "period_promised": "FY2025",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "0.3%",
+      "status": "not_scored",
+      "note": "Constant-currency guidance is not the consolidated rupee series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Tech Mahindra Limited April 24, 2025 for our strategic roadmap, giving you an update on where we are about the FY27 plan. We'll talk about the progress that we made over the last year and how we see the next two years shaping up. Let me just start with the performance for the quarter and for the full year. So Q4 and our FY25 performance, we closed the year with a revenue of $6,264 million, with 0.3 percent growth on a constant currency basis. This year's stable revenue performance comes after absorbing more than 1 percent of top-line reduction. This is because of the strategic decision that we'd made to scale down our non-core and our loss -making businesses. And also, this contrasts with about a 5 percent decline that we had the previous year.",
+      "basis": "constant_currency",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 0.3,
+      "target_high": 0.3,
+      "call_period": "2025-03-31",
+      "call_date": "2025-04-30",
+      "calls": [
+        {
+          "date": "2025-04-30",
+          "call_period": "2025-03-31",
+          "page": 5,
+          "quote": "We closed the year with a revenue of $6,264 million, with 0.3 percent growth on a constant currency basis.",
+          "document": "Ruchie_khanna_30042025200150_IntimationforTransacriptofearningsmeetQ4_Signed.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 2,
+    "cut": 1,
+    "maintained": 0,
+    "items": [
+      {
+        "promise": "EBITDA margin 15% for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-04-28",
+            "value": "15%",
+            "change": "set"
+          },
+          {
+            "date": "2026-04-28",
+            "value": "30%",
+            "change": "raised"
+          },
+          {
+            "date": "2026-07-22",
+            "value": "15%",
+            "change": "cut"
+          }
+        ]
+      },
+      {
+        "promise": "EBITDA margin at least 360 bps for FY2025",
+        "period": "FY2025",
+        "sequence": [
+          {
+            "date": "2025-04-30",
+            "value": "at least 9.7 bps",
+            "change": "set"
+          },
+          {
+            "date": "2025-04-30",
+            "value": "at least 360 bps",
+            "change": "raised"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.72,
+    "series": 0.84,
+    "guidance": 1.59,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.1,
+    "total": 3.26
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 7,
+      "tokens": 0,
+      "dropped": 5,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 1,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

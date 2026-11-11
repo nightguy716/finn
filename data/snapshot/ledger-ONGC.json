@@ -1,0 +1,183 @@
+{
+  "symbol": "ONGC",
+  "coverage": {
+    "transcripts_found": 6,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [
+      "2026-09-30"
+    ],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 0,
+    "next_quarter_statements": 0,
+    "pages_mentioning_fy26_or_next_quarter": 0,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 198263.33,
+    "ebitda_margin_pct": 18.67,
+    "pat": 16743.54,
+    "ttm_revenue": 744478.8,
+    "ttm_pat": 49477.9,
+    "ttm_ebitda_margin_pct": 13.87,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 198263.33,
+        "ebitda": 37011.46,
+        "ebitda_margin_pct": 18.67,
+        "ebit": 25280.25,
+        "ebit_margin_pct": 12.75,
+        "pbt": 25063.98,
+        "finance_costs": 3411.41,
+        "depreciation": 11731.21,
+        "other_income": 3195.14,
+        "pat": 16743.54,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 204987.35,
+        "ebitda": 15957.11,
+        "ebitda_margin_pct": 7.78,
+        "ebit": 6479.76,
+        "ebit_margin_pct": 3.16,
+        "pbt": 6414.56,
+        "finance_costs": 2853.78,
+        "depreciation": 9477.35,
+        "other_income": 2788.58,
+        "pat": 11898.93,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 173805.19,
+        "ebitda": 24893.97,
+        "ebitda_margin_pct": 14.32,
+        "ebit": 15549.0,
+        "ebit_margin_pct": 8.95,
+        "pbt": 15847.16,
+        "finance_costs": 3069.61,
+        "depreciation": 9344.97,
+        "other_income": 3367.77,
+        "pat": 10819.65,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 167422.93,
+        "ebitda": 25380.46,
+        "ebitda_margin_pct": 15.16,
+        "ebit": 15992.19,
+        "ebit_margin_pct": 9.55,
+        "pbt": 16092.84,
+        "finance_costs": 3206.85,
+        "depreciation": 9388.27,
+        "other_income": 3307.5,
+        "pat": 10015.78,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 157911.08,
+        "ebitda": 26521.0,
+        "ebitda_margin_pct": 16.79,
+        "ebit": 17247.53,
+        "ebit_margin_pct": 10.92,
+        "pbt": 16944.57,
+        "finance_costs": 3410.98,
+        "depreciation": 9273.47,
+        "other_income": 3108.02,
+        "pat": 10784.88,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 163108.12,
+        "ebitda": 25888.61,
+        "ebitda_margin_pct": 15.87,
+        "ebit": 16504.65,
+        "ebit_margin_pct": 10.12,
+        "pbt": 15736.47,
+        "finance_costs": 3341.41,
+        "depreciation": 9383.96,
+        "other_income": 2573.23,
+        "pat": 9804.07,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 0,
+    "items": []
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 6,
+    "total": 6
+  },
+  "timing": {
+    "discover": 1.91,
+    "series": 0.87,
+    "guidance": 1.13,
+    "check": 0.0,
+    "verify": 0.0,
+    "verdict": 0.12,
+    "total": 4.03
+  },
+  "usage": {
+    "guidance": {
+      "calls": 0,
+      "cache_hits": 3,
+      "tokens": 0,
+      "dropped": 0,
+      "model": ""
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 0
+  }
+}

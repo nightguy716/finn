@@ -1,0 +1,592 @@
+{
+  "symbol": "INDIGO",
+  "coverage": {
+    "transcripts_found": 7,
+    "transcripts_of": 7,
+    "quarters_with_results": 7,
+    "quarters_of": 10,
+    "audio_only": [],
+    "missing_quarters": [],
+    "series_gaps": [
+      {
+        "period": "2024-12-31",
+        "why": "missing"
+      },
+      {
+        "period": "2024-09-30",
+        "why": "missing"
+      },
+      {
+        "period": "2024-06-30",
+        "why": "missing"
+      }
+    ],
+    "note": ""
+  },
+  "lookback": {
+    "quarters": 7,
+    "fy26_statements": 2,
+    "next_quarter_statements": 2,
+    "pages_mentioning_fy26_or_next_quarter": 15,
+    "pages_dropped_by_prefilter": 0,
+    "dropped_pages": []
+  },
+  "snapshot": {
+    "latest_quarter": "2026-09-30",
+    "revenue": 23363.8,
+    "ebitda_margin_pct": 8.16,
+    "pat": -1878.6,
+    "ttm_revenue": 93858.2,
+    "ttm_pat": -4102.7,
+    "ttm_ebitda_margin_pct": 10.18,
+    "ttm_note": "",
+    "series": [
+      {
+        "period": "2026-09-30",
+        "revenue": 23363.8,
+        "ebitda": 1907.4,
+        "ebitda_margin_pct": 8.16,
+        "ebit": -1166.8,
+        "ebit_margin_pct": -4.99,
+        "pbt": -1876.5,
+        "finance_costs": 1657.8,
+        "depreciation": 3074.2,
+        "other_income": 948.1,
+        "pat": -1878.6,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-06-30",
+        "revenue": 24584.1,
+        "ebitda": 3267.1,
+        "ebitda_margin_pct": 13.29,
+        "ebit": 296.9,
+        "ebit_margin_pct": 1.21,
+        "pbt": -238.4,
+        "finance_costs": 1565.3,
+        "depreciation": 2970.2,
+        "other_income": 1030.0,
+        "pat": -237.6,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2026-03-31",
+        "revenue": 22438.4,
+        "ebitda": 560.1,
+        "ebitda_margin_pct": 2.5,
+        "ebit": -2259.4,
+        "ebit_margin_pct": -10.07,
+        "pbt": -2351.7,
+        "finance_costs": 1484.6,
+        "depreciation": 2819.5,
+        "other_income": 1392.3,
+        "pat": -2536.3,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-12-31",
+        "revenue": 23471.9,
+        "ebitda": 3820.9,
+        "ebitda_margin_pct": 16.28,
+        "ebit": 1038.7,
+        "ebit_margin_pct": 4.43,
+        "pbt": 562.2,
+        "finance_costs": 1545.2,
+        "depreciation": 2782.2,
+        "other_income": 1068.7,
+        "pat": 549.8,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-09-30",
+        "revenue": 18555.3,
+        "ebitda": 579.5,
+        "ebitda_margin_pct": 3.12,
+        "ebit": -2061.0,
+        "ebit_margin_pct": -11.11,
+        "pbt": -2481.7,
+        "finance_costs": 1464.9,
+        "depreciation": 2640.5,
+        "other_income": 1044.2,
+        "pat": -2581.7,
+        "basis": "xbrl",
+        "flags": []
+      },
+      {
+        "period": "2025-06-30",
+        "revenue": 20496.3,
+        "ebitda": 5226.5,
+        "ebitda_margin_pct": 25.5,
+        "ebit": 2660.5,
+        "ebit_margin_pct": 12.98,
+        "pbt": 2310.7,
+        "finance_costs": 1396.1,
+        "depreciation": 2566.0,
+        "other_income": 1046.3,
+        "pat": 2176.3,
+        "basis": "xbrl",
+        "flags": []
+      }
+    ]
+  },
+  "rows": [
+    {
+      "promise": "Volume growth 3\u20134% for an unnamed period",
+      "source_quote": "we are expecting to add capacity of around 3 -4 percent in Q1FY27 as compared to the same period last year.",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Indigo1_04062026144311_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "3\u20134%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "BluChip\u2019s ecosystem has more than 11 million registered members and spans banking partnerships through multiple co\u2011branded cards such as SBI Cards, Kotak Mahindra Bank, Axis Bank and IDFC first Bank, hospitality partnerships including The Postcard Hotels, and everyday\u2011spend and lifestyle partners such as Swiggy, EazyDiner, and Adani Duty Free. Our focus is on building a simple, asset\u2011light program that strengthens the customer ecosystem and supports revenue quality over time, while remaining economically disciplined. Further, given the financial performance for the year and position of distributable reserves we have decided not to recommend a dividend for FY2026. With the capacity deployed in the last two months wherein middle east has seen an upward trajectory through April and May, we are expecting to add capacity of around 3 -4 percent in Q1FY27 as compared to the same period last year. Further on the revenue side, based on booking and pricing trends observed across April and May, we currently estimate a mid -teens improvement in unit passenger revenue in Q1FY27 vs Q1FY26, primarily driven by the calibrated fuel charge s which has been imposed, and a lower base during the same period last year due to the geopolitical developments in the Indian sub - continent. However, it is equally important to note that the costs have also become more elevated, driven by higher fuel prices, significant rupee depreciation and annual contractual escalations. Further, as we enter a seasonally softer demand environment from mid-June onwards, combined with elevated fuel prices, we are adopting a measured approach to optimize capacity.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 3.0,
+      "target_high": 4.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-06-04",
+      "calls": [
+        {
+          "date": "2026-06-04",
+          "call_period": "2026-03-31",
+          "page": 9,
+          "quote": "we are expecting to add capacity of around 3 -4 percent in Q1FY27 as compared to the same period last year.",
+          "document": "Indigo1_04062026144311_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 13\u201316% for 2025-06-30",
+      "source_quote": "For the first quarter of financial year 2026, we expect to add mid-teens capacity compared to the same period last year.",
+      "page": 8,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Indigo1_28052025152152_Disclosure_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "2025-06-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201316%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "We ended the quarter with a capitalized operating lease liability of around 480 billion rupees and total debt, including the capitalized operating lease liability of around 668 billion rupees. Our right to use assets at the quarter end were 491 billion rupees. Now, for the financial year 2026, we have already provided capacity guidance that we will broadly grow our capacity by early double digits as compared to the financial year 2025. For the first quarter of financial year 2026, we expect to add mid-teens capacity compared to the same period last year. April performed well from a revenue standpoint. However, following the geopolitical disruptions, we have seen some impact on the overall revenue environment due to increase in cancellations and impact on booking trends. We are closely monitoring the evolving trends to assess the impact on PRASK for Q1 FY2026.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 13.0,
+      "target_high": 16.0,
+      "call_period": "2025-03-31",
+      "call_date": "2025-05-28",
+      "calls": [
+        {
+          "date": "2025-05-28",
+          "call_period": "2025-03-31",
+          "page": 8,
+          "quote": "For the first quarter of financial year 2026, we expect to add mid-teens capacity compared to the same period last year.",
+          "document": "Indigo1_28052025152152_Disclosure_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth 7\u20139% for 2025-09-30",
+      "source_quote": "As a result of these adjustments, we are expecting to add capacity in the mid to high single digit as compared to the same period",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Indigo1_05082025205558_Earnings_call_Transcript_Q1_FY26_.pdf",
+      "speaker": "",
+      "period_promised": "2025-09-30",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "7\u20139%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "IndiGo Jul 30, 2025 Page 8 of 18 double-digit capacity addition. For the second quarter, we have taken a number of proactive steps, as part of our annual plan, to align capacity with demand, by adjusting frequencies on certain low- demand sectors. At the same time, we are using the downtime to co nduct structural inspections on some aircraft and implement fleet upgrades, ensuring the fleet is fully prepared for the seasonally strong third quarter. As a result of these adjustments, we are expecting to add capacity in the mid to high single digit as compared to the same period last year. Further, on the revenue side, basis the July trends, we are estimating similar passenger unit revenues (PRASK) for the second quarter as compared to the same period last year. As Pieter mentioned, the July trends confirm stabilization, we are expecting further recovery in August and September. We are focused on our holistic growth to be able to offer affordable, convenient, on -time travel experience to our customers on a growing domestic and international route network.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 7.0,
+      "target_high": 9.0,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-05",
+      "calls": [
+        {
+          "date": "2025-08-05",
+          "call_period": "2025-06-30",
+          "page": 9,
+          "quote": "As a result of these adjustments, we are expecting to add capacity in the mid to high single digit as compared to the same period",
+          "document": "Indigo1_05082025205558_Earnings_call_Transcript_Q1_FY26_.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Volume growth at least 10% for FY2026",
+      "source_quote": "And on the whole, what I also mentioned for the whole year, we are still committed to an early double-digit growth in the capacity numbers.",
+      "page": 10,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Indigo1_05082025205558_Earnings_call_Transcript_Q1_FY26_.pdf",
+      "speaker": "Gaurav Negi",
+      "period_promised": "FY2026",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 10%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "And on the whole, what I also mentioned for the whole year, we are still committed to an early double-digit growth in the capacity numbers.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": 10.0,
+      "target_high": null,
+      "call_period": "2025-06-30",
+      "call_date": "2025-08-05",
+      "calls": [
+        {
+          "date": "2025-05-28",
+          "call_period": "2025-03-31",
+          "page": 8,
+          "quote": "Now, for the financial year 2026, we have already provided capacity guidance that we will broadly grow our capacity by early double digits",
+          "document": "Indigo1_28052025152152_Disclosure_Transcript.pdf"
+        },
+        {
+          "date": "2025-08-05",
+          "call_period": "2025-06-30",
+          "page": 10,
+          "quote": "And on the whole, what I also mentioned for the whole year, we are still committed to an early double-digit growth in the capacity numbers.",
+          "document": "Indigo1_05082025205558_Earnings_call_Transcript_Q1_FY26_.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2025-05-28",
+          "call_period": "2025-03-31",
+          "value": "at least 10%",
+          "change": "set",
+          "page": 8,
+          "quote": "Now, for the financial year 2026, we have already provided capacity guidance that we will broadly grow our capacity by early double digits",
+          "superseded": true
+        },
+        {
+          "date": "2025-08-05",
+          "call_period": "2025-06-30",
+          "value": "at least 10%",
+          "change": "maintained",
+          "page": 10,
+          "quote": "And on the whole, what I also mentioned for the whole year, we are still committed to an early double-digit growth in the capacity numbers.",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Volume growth to rise for FY2027",
+      "source_quote": "For the full financial year 2027, we expect capacity to grow in the early single digits",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Indigo1_04112026174231_Transcript_Q2_FY27.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "a direction only",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "other",
+      "kind": "level",
+      "passage": "The capacity outlook reflects the conclusion of our damp- leased widebody operations, the prevailing geopolitical environment and our disciplined approach to capacity deployment. On the revenue side, the environment remains supportive, with pricing continuing to reflect the higher cost backdrop and the base impact from last year. Based on the trends observed in October, we expect PRASK to grow by more than 25 percent year-on-year. For the full financial year 2027, we expect capacity to grow in the early single digits. On the cost side, we expect CASK ex fuel ex forex MTM to increase in the high single digits to early double digits range, largely reflecting the impact of rupee depreciation in addition to the usual escalations. We remain mindful of the near-term challenges posed by elevated costs and continued volatility. At the same time, pricing remains supportive, and our liquidity position is strong.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "volume_growth",
+      "target_low": null,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-04",
+      "calls": [
+        {
+          "date": "2026-11-04",
+          "call_period": "2026-09-30",
+          "page": 6,
+          "quote": "we expect capacity to grow in the early single digit year-on-year",
+          "document": "Indigo1_04112026174231_Transcript_Q2_FY27.pdf"
+        },
+        {
+          "date": "2026-11-04",
+          "call_period": "2026-09-30",
+          "page": 6,
+          "quote": "For the full financial year 2027, we expect capacity to grow in the early single digits",
+          "document": "Indigo1_04112026174231_Transcript_Q2_FY27.pdf"
+        }
+      ],
+      "revisions": [
+        {
+          "date": "2026-11-04",
+          "call_period": "2026-09-30",
+          "value": "a direction only",
+          "change": "set",
+          "page": 6,
+          "quote": "we expect capacity to grow in the early single digit year-on-year",
+          "superseded": true
+        },
+        {
+          "date": "2026-11-04",
+          "call_period": "2026-09-30",
+          "value": "a direction only",
+          "change": "maintained",
+          "page": 6,
+          "quote": "For the full financial year 2027, we expect capacity to grow in the early single digits",
+          "superseded": false
+        }
+      ]
+    },
+    {
+      "promise": "Revenue growth at least 25% for FY2027",
+      "source_quote": "we expect PRASK to grow by more than 25 percent year-on-year",
+      "page": 6,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Indigo1_04112026174231_Transcript_Q2_FY27.pdf",
+      "speaker": "",
+      "period_promised": "FY2027",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "at least 25%",
+      "status": "low_confidence",
+      "note": "The quoted sentence does not name the metric.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Moving to our outlook for the third quarter of this financial year, we expect capacity to grow in the early single digit year-on-year. The capacity outlook reflects the conclusion of our damp- leased widebody operations, the prevailing geopolitical environment and our disciplined approach to capacity deployment. On the revenue side, the environment remains supportive, with pricing continuing to reflect the higher cost backdrop and the base impact from last year. Based on the trends observed in October, we expect PRASK to grow by more than 25 percent year-on-year. For the full financial year 2027, we expect capacity to grow in the early single digits. On the cost side, we expect CASK ex fuel ex forex MTM to increase in the high single digits to early double digits range, largely reflecting the impact of rupee depreciation in addition to the usual escalations. We remain mindful of the near-term challenges posed by elevated costs and continued volatility.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 25.0,
+      "target_high": null,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-04",
+      "calls": [
+        {
+          "date": "2026-11-04",
+          "call_period": "2026-09-30",
+          "page": 6,
+          "quote": "we expect PRASK to grow by more than 25 percent year-on-year",
+          "document": "Indigo1_04112026174231_Transcript_Q2_FY27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "EBITDA growth 13\u201316% for FY2028",
+      "source_quote": "right now, we're not changing the financial year '28 growth guidance of mid-teens",
+      "page": 13,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Indigo1_04112026174231_Transcript_Q2_FY27.pdf",
+      "speaker": "Willie Walsh",
+      "period_promised": "FY2028",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201316%",
+      "status": "segment_level",
+      "note": "international guidance is not compared with the consolidated series.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Given the fuel volatility, is there a possibility that ASK growth could be slightly back -ended even next year, given the fuel-led volatility and the macro? Willie Walsh: We keep all of this under review. And I think we demonstrated our flexibility during the second quarter and also our ability to move quickly to respond to any opportunities or challenges we see. So right now, we're not changing the financial year '28 growth guidance of mid-teens. But clearly, we'll keep that under review. The aircraft deliveries are coming. There may be some short -term delays to some aircraft given some of the issues we see with the OEMs.",
+      "basis": "not_stated",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "geography",
+      "scope_name": "international",
+      "metric_key": "ebitda_growth",
+      "target_low": 13.0,
+      "target_high": 16.0,
+      "call_period": "2026-09-30",
+      "call_date": "2026-11-04",
+      "calls": [
+        {
+          "date": "2026-11-04",
+          "call_period": "2026-09-30",
+          "page": 13,
+          "quote": "right now, we're not changing the financial year '28 growth guidance of mid-teens",
+          "document": "Indigo1_04112026174231_Transcript_Q2_FY27.pdf"
+        }
+      ],
+      "revisions": []
+    },
+    {
+      "promise": "Revenue growth 13\u201316% for an unnamed period",
+      "source_quote": "we currently estimate a mid -teens improvement in unit passenger revenue in Q1FY27 vs Q1FY26",
+      "page": 9,
+      "source_document": "https://nsearchives.nseindia.com/corporate/Indigo1_04062026144311_Transcript.pdf",
+      "speaker": "",
+      "period_promised": "",
+      "actual": null,
+      "actual_value": null,
+      "actual_detail": "",
+      "promised": "13\u201316%",
+      "status": "not_scored",
+      "note": "The period is not stated.",
+      "quote_check": "ok",
+      "unit": "percent",
+      "kind": "change",
+      "passage": "Our focus is on building a simple, asset\u2011light program that strengthens the customer ecosystem and supports revenue quality over time, while remaining economically disciplined. Further, given the financial performance for the year and position of distributable reserves we have decided not to recommend a dividend for FY2026. With the capacity deployed in the last two months wherein middle east has seen an upward trajectory through April and May, we are expecting to add capacity of around 3 -4 percent in Q1FY27 as compared to the same period last year. Further on the revenue side, based on booking and pricing trends observed across April and May, we currently estimate a mid -teens improvement in unit passenger revenue in Q1FY27 vs Q1FY26, primarily driven by the calibrated fuel charge s which has been imposed, and a lower base during the same period last year due to the geopolitical developments in the Indian sub - continent. However, it is equally important to note that the costs have also become more elevated, driven by higher fuel prices, significant rupee depreciation and annual contractual escalations. Further, as we enter a seasonally softer demand environment from mid-June onwards, combined with elevated fuel prices, we are adopting a measured approach to optimize capacity. As a part of this, selective recalibration of certain routes is warranted to protect margins, as was done last year as well.",
+      "basis": "reported",
+      "conditional_on": null,
+      "basis_note": "",
+      "caveat": "",
+      "definition_note": "",
+      "scope": "consolidated",
+      "scope_name": "",
+      "metric_key": "revenue_growth",
+      "target_low": 13.0,
+      "target_high": 16.0,
+      "call_period": "2026-03-31",
+      "call_date": "2026-06-04",
+      "calls": [
+        {
+          "date": "2026-06-04",
+          "call_period": "2026-03-31",
+          "page": 9,
+          "quote": "we currently estimate a mid -teens improvement in unit passenger revenue in Q1FY27 vs Q1FY26",
+          "document": "Indigo1_04062026144311_Transcript.pdf"
+        }
+      ],
+      "revisions": []
+    }
+  ],
+  "long_term_targets": [],
+  "revisions": {
+    "raised": 0,
+    "cut": 0,
+    "maintained": 2,
+    "items": [
+      {
+        "promise": "Volume growth to rise for FY2027",
+        "period": "FY2027",
+        "sequence": [
+          {
+            "date": "2026-11-04",
+            "value": "a direction only",
+            "change": "set"
+          },
+          {
+            "date": "2026-11-04",
+            "value": "a direction only",
+            "change": "maintained"
+          }
+        ]
+      },
+      {
+        "promise": "Volume growth at least 10% for FY2026",
+        "period": "FY2026",
+        "sequence": [
+          {
+            "date": "2025-05-28",
+            "value": "at least 10%",
+            "change": "set"
+          },
+          {
+            "date": "2025-08-05",
+            "value": "at least 10%",
+            "change": "maintained"
+          }
+        ]
+      }
+    ]
+  },
+  "verdict": "No consolidated guidance in these transcripts can be checked against the series.",
+  "progress": {
+    "stage": "complete",
+    "done": 7,
+    "total": 7
+  },
+  "timing": {
+    "discover": 0.65,
+    "series": 0.84,
+    "guidance": 20.97,
+    "check": 0.01,
+    "verify": 0.0,
+    "verdict": 0.2,
+    "total": 22.67
+  },
+  "usage": {
+    "guidance": {
+      "calls": 2,
+      "cache_hits": 5,
+      "tokens": 7160,
+      "dropped": 11,
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite",
+        "qwen/qwen3.8-27b",
+        "openai/gpt-oss-20b"
+      ]
+    },
+    "verdict": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "verify": {
+      "calls": 0,
+      "cache_hits": 0,
+      "tokens": 0,
+      "model": ""
+    },
+    "total_tokens": 7160
+  }
+}
