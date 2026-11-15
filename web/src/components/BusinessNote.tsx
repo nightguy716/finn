@@ -11,26 +11,28 @@ export function BusinessNoteView({ note }: { note: BusinessNote | null }) {
     return <p className="mt-4 text-[14px] leading-snug text-mute">{note.message || 'No annual report is available for this company.'}</p>
   }
   const fact = note.snapshot.does
+  const money = note.snapshot.makes_money
   const segmentLine = (note.snapshot.segments ?? []).map((item) => (item.share ? `${item.name} ${item.share}` : item.name)).join(', ')
-  const summary = fact?.text || note.snapshot.makes_money?.text || (segmentLine ? `Segments: ${segmentLine}` : '')
+  const summary = fact?.text || money?.text || (segmentLine ? `Segments: ${segmentLine}` : '')
   if (!summary && !(note.snapshot.segments ?? []).length && !(note.snapshot.geographies ?? []).length) {
     return <p className="mt-4 text-[14px] leading-snug text-mute">The annual report did not state a business overview on the pages that were read.</p>
   }
+  const showMoney = Boolean(money?.text && money.text !== summary)
   return (
-    <section className="mt-4 rounded-2xl border border-line bg-card px-4 py-3">
+    <section className="mt-4 overflow-hidden rounded-2xl border border-line bg-card px-4 py-3">
       <div className="flex items-baseline justify-between gap-3">
         <h2 className="text-[12px] tracking-[0.14em] text-mute uppercase">From the annual report</h2>
         <button type="button" className="min-h-11 rounded-full px-2 text-[13px] text-accent" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
           {open ? 'Less' : 'More'}
         </button>
       </div>
-      <p className={`mt-1 text-[15px] leading-snug ${open ? '' : 'line-clamp-2'}`}>{summary}</p>
+      <p className={`mt-1 break-words text-[15px] leading-snug ${open ? '' : 'line-clamp-2'}`}>{summary}</p>
       {open ? (
-        <div className="mt-2 flex flex-col gap-2">
-          {note.snapshot.makes_money ? <Fact label="How it makes money" fact={note.snapshot.makes_money} /> : null}
+        <div className="mt-2 flex min-w-0 flex-col gap-2 overflow-hidden">
+          {showMoney && money ? <Fact label="How it makes money" fact={money} /> : null}
           <ItemList label="Segments" items={note.snapshot.segments ?? []} />
           <ItemList label="Geographies" items={note.snapshot.geographies ?? []} />
-          {fact ? <p className="font-mono text-[12px] text-mute">What it does, p. {fact.page}</p> : null}
+          {fact ? <p className="break-words font-mono text-[12px] text-mute">What it does, p. {fact.page}</p> : null}
           {note.url ? (
             <a href={note.url} target="_blank" rel="noreferrer" className="text-[13px] text-accent underline decoration-accent/30 underline-offset-2">
               Annual report{note.year ? ` ${note.year}` : ''}
@@ -44,7 +46,7 @@ export function BusinessNoteView({ note }: { note: BusinessNote | null }) {
 
 function Fact({ label, fact }: { label: string; fact: CitedFact }) {
   return (
-    <p className="text-[15px] leading-snug">
+    <p className="break-words text-[15px] leading-snug">
       <span className="text-mute">{label}. </span>
       {fact.text} <span className="font-mono text-[12px] text-mute">p. {fact.page}</span>
     </p>
@@ -58,7 +60,7 @@ function ItemList({ label, items }: { label: string; items: CitedItem[] }) {
       <p className="text-[12px] tracking-[0.14em] text-mute uppercase">{label}</p>
       <ul className="mt-1 flex flex-col gap-1">
         {items.map((item) => (
-          <li key={`${item.name}-${item.page}`} className="text-[15px] leading-snug">
+          <li key={`${item.name}-${item.page}`} className="break-words text-[15px] leading-snug">
             {item.name}
             {item.share ? <span className="font-mono text-[13px]"> {item.share}</span> : null}
             <span className="ml-1 font-mono text-[12px] text-mute">p. {item.page}</span>
