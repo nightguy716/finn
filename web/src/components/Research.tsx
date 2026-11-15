@@ -203,18 +203,18 @@ export function Research({
 
   return (
     <div className="px-4 pt-4 pb-6">
-      <div className="flex items-center gap-2">
-        <button type="button" className="flex h-7 w-7 items-center justify-center border border-line" aria-label="Menu" onClick={onOpenMenu}>
+      <div className="flex items-center gap-3">
+        <button type="button" className="flex h-11 w-11 items-center justify-center rounded-full border border-line" aria-label="Menu" onClick={onOpenMenu}>
           <span className="flex flex-col gap-[3px]" aria-hidden="true">
             <span className="block h-px w-3.5 bg-ink" />
             <span className="block h-px w-3.5 bg-ink" />
             <span className="block h-px w-3.5 bg-ink" />
           </span>
         </button>
-        <p className="text-[13px] font-medium tracking-[0.22em]">FINN</p>
+        <p className="text-[14px] font-medium tracking-[0.22em]">FINN</p>
       </div>
       <form
-        className="mt-3 flex gap-2"
+        className="mt-3 flex gap-3"
         onSubmit={(event) => {
           event.preventDefault()
           submitQuery()
@@ -234,24 +234,24 @@ export function Research({
             autoCapitalize="off"
             autoCorrect="off"
             spellCheck={false}
-            className="h-9 w-full border border-line bg-card px-2 text-[14px]"
+            className="min-h-11 w-full rounded-2xl border border-line bg-card px-3 text-[15px]"
           />
         </label>
-        <button type="submit" className="h-9 border border-accent px-3 text-[13px] text-accent">
+        <button type="submit" className="min-h-11 shrink-0 rounded-full border border-primary bg-primary px-4 text-[14px] text-white">
           Open
         </button>
       </form>
-      <p className="mt-2 text-[12px] leading-snug text-mute">Any listed NSE company, by name or symbol.</p>
-      {showMiss ? <p className="mt-2 text-[13px]">No listed company found</p> : null}
-      {notice && !showMiss ? <p className="mt-2 text-[13px]">{notice}</p> : null}
+      <p className="mt-2 text-[13px] leading-snug text-mute">Any listed NSE company, by name or symbol.</p>
+      {showMiss ? <p className="mt-2 text-[14px]">No listed company found</p> : null}
+      {notice && !showMiss ? <p className="mt-2 text-[14px]">{notice}</p> : null}
       {found.matches.length ? <SuggestionList items={found.matches} onPick={openSymbol} /> : null}
-      <div className="mt-2 flex flex-wrap gap-1.5">
+      <div className="mt-3 flex flex-wrap gap-3">
         {PRESETS.map((item) => (
           <button
             key={item}
             type="button"
             aria-pressed={symbol === item}
-            className={`h-7 border px-2 font-mono text-[12px] ${symbol === item ? 'border-accent text-accent' : 'border-line'}`}
+            className={`min-h-11 rounded-full border px-3 font-mono text-[13px] ${symbol === item ? 'border-primary text-primary' : 'border-line'}`}
             onClick={() => openSymbol(item)}
           >
             {item}
@@ -259,9 +259,9 @@ export function Research({
         ))}
       </div>
       {extras.length ? (
-        <div className="mt-2 flex flex-wrap gap-1.5">
+        <div className="mt-3 flex flex-wrap gap-3">
           {extras.map((item) => (
-            <button key={item} type="button" className="h-7 border border-line px-2 font-mono text-[12px] text-mute" onClick={() => openSymbol(item)}>
+            <button key={item} type="button" className="min-h-11 rounded-full border border-line px-3 font-mono text-[13px] text-mute" onClick={() => openSymbol(item)}>
               {item}
             </button>
           ))}
@@ -269,11 +269,11 @@ export function Research({
       ) : null}
 
       {limited ? (
-        <div className="mt-3 w-full border border-line bg-card px-3 py-3">
-          <p className="text-[14px] leading-snug">Daily free-tier limit reached. Cached companies still work.</p>
-          <div className="mt-2 flex flex-wrap gap-1.5">
+        <div className="mt-3 w-full rounded-2xl border border-line bg-card px-4 py-3">
+          <p className="text-[15px] leading-snug">Daily free-tier limit reached. Cached companies still work.</p>
+          <div className="mt-3 flex flex-wrap gap-3">
             {CACHED.map((item) => (
-              <button key={item} type="button" className="h-7 border border-line px-2 font-mono text-[12px]" onClick={() => openSymbol(item)}>
+              <button key={item} type="button" className="min-h-11 rounded-full border border-line px-3 font-mono text-[13px]" onClick={() => openSymbol(item)}>
                 {item}
               </button>
             ))}
@@ -285,15 +285,15 @@ export function Research({
 
       {symbol && phase !== 'ready' && phase !== 'limited' ? (
         <div className="mt-4" aria-live="polite">
-          <p className="text-[14px]">{progressLine(progress, busy, ledger?.coverage?.transcripts_found ?? null)}</p>
+          <p className="text-[15px]">{progressLine(progress, busy, ledger?.coverage?.transcripts_found ?? null)}</p>
           <div className="mt-2 h-[3px] bg-line" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(fraction * 100)}>
             <div className="h-full bg-accent" style={{ width: `${Math.round(fraction * 100)}%` }} />
           </div>
           {error ? (
-            <div className="mt-3 border border-line bg-card px-3 py-3">
-              <p className="text-[14px] leading-snug">{error}</p>
-              <p className="mt-1 text-[12px] text-mute">Retry continues from the step it stopped on.</p>
-              <button type="button" className="mt-2 text-[13px] text-accent" onClick={() => setAttempt((value) => value + 1)}>
+            <div className="mt-3 rounded-2xl border border-line bg-card px-4 py-3">
+              <p className="text-[15px] leading-snug">{error}</p>
+              <p className="mt-1 text-[13px] text-mute">Retry continues from the step it stopped on.</p>
+              <button type="button" className="mt-2 min-h-11 rounded-full px-3 text-[14px] text-accent" onClick={() => setAttempt((value) => value + 1)}>
                 Retry
               </button>
             </div>
@@ -344,11 +344,11 @@ function barFraction(progress: LedgerProgress | null, busy: boolean, transcripts
 
 function SuggestionList({ items, onPick }: { items: Suggestion[]; onPick: (symbol: string) => void }) {
   return (
-    <ul className="mt-2 border border-line bg-card">
+    <ul className="mt-2 overflow-hidden rounded-2xl border border-line bg-card">
       {items.map((item) => (
         <li key={item.symbol} className="border-b border-line last:border-b-0">
-          <button type="button" className="w-full px-2 py-2 text-left text-[14px] leading-snug" onClick={() => onPick(item.symbol)}>
-            {item.name} <span className="font-mono text-[12px] text-mute">({item.symbol})</span>
+          <button type="button" className="min-h-11 w-full px-3 py-3 text-left text-[15px] leading-snug" onClick={() => onPick(item.symbol)}>
+            {item.name} <span className="font-mono text-[13px] text-mute">({item.symbol})</span>
           </button>
         </li>
       ))}

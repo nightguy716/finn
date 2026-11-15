@@ -4,11 +4,11 @@ import type { Financials, MoneyLine, MoneyRatio } from '../types'
 
 export function Books({ books, waiting }: { books: Financials | null; waiting: boolean }) {
   if (!books && waiting) {
-    return <p className="mt-4 text-[13px] leading-snug text-mute">Reading the balance sheet.</p>
+    return <p className="mt-4 text-[14px] leading-snug text-mute">Reading the balance sheet.</p>
   }
   if (!books || books.status !== 'ready' || !books.balance_sheet || !books.cash) {
     if (!books) return null
-    return <p className="mt-4 text-[13px] leading-snug text-mute">{books.message || 'No balance sheet was found for this company.'}</p>
+    return <p className="mt-4 text-[14px] leading-snug text-mute">{books.message || 'No balance sheet was found for this company.'}</p>
   }
   const scope = books.scope ? `${books.scope}. ` : ''
   return (
@@ -70,52 +70,52 @@ function Panel({
 }) {
   const [open, setOpen] = useState(false)
   return (
-    <section className="border border-line bg-card px-3 py-2">
+    <section className="rounded-2xl border border-line bg-card px-4 py-3">
       <div className="flex items-baseline justify-between gap-3">
-        <h2 className="text-[11px] tracking-[0.14em] text-mute uppercase">{title}</h2>
-        <button type="button" className="text-[12px] text-accent" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
+        <h2 className="text-[12px] tracking-[0.14em] text-mute uppercase">{title}</h2>
+        <button type="button" className="min-h-11 rounded-full px-2 text-[13px] text-accent" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
           {open ? 'Less' : 'More'}
         </button>
       </div>
-      <p className="mt-1 font-mono text-[11px] text-mute">{meta}</p>
-      <p className={`mt-1 text-[14px] leading-snug ${open ? '' : 'line-clamp-2'}`}>{takeaway}</p>
-      {caveat ? <p className="mt-1 text-[12px] leading-snug text-mute">{caveat}</p> : null}
+      <p className="mt-1 font-mono text-[12px] text-mute">{meta}</p>
+      <p className={`mt-1 text-[15px] leading-snug ${open ? '' : 'line-clamp-2'}`}>{takeaway}</p>
+      {caveat ? <p className="mt-1 text-[13px] leading-snug text-mute">{caveat}</p> : null}
       {open ? (
         <div className="mt-2 flex flex-col gap-2">
           {flags.map((flag) => (
-            <p key={flag} className="text-[13px] leading-snug text-fall">
+            <p key={flag} className="text-[14px] leading-snug text-fall">
               {flag}
             </p>
           ))}
           <ul className="flex flex-col gap-1">
             {lines.map((line) => (
-              <li key={line.key} className="flex items-baseline justify-between gap-3 text-[14px]">
+              <li key={line.key} className="flex items-baseline justify-between gap-3 text-[15px]">
                 <span>
                   {line.label}
-                  <span className="mt-0.5 block font-mono text-[10px] text-mute">{line.tag}</span>
-                  {line.note ? <span className="mt-0.5 block text-[11px] text-mute">{line.note}</span> : null}
+                  <span className="mt-0.5 block font-mono text-[11px] text-mute">{line.tag}</span>
+                  {line.note ? <span className="mt-0.5 block text-[12px] text-mute">{line.note}</span> : null}
                 </span>
-                <span className="shrink-0 text-right font-mono text-[13px] tabular-nums">
+                <span className="shrink-0 text-right font-mono text-[14px] tabular-nums">
                   {money(line.value)}
-                  {line.prior != null ? <span className="block text-[11px] text-mute">was {money(line.prior)}</span> : null}
+                  {line.prior != null ? <span className="block text-[12px] text-mute">was {money(line.prior)}</span> : null}
                 </span>
               </li>
             ))}
           </ul>
           {ratios.map(([label, ratio, kind]) =>
             ratio ? (
-              <p key={label} className="text-[13px] leading-snug">
+              <p key={label} className="text-[14px] leading-snug">
                 <span className="text-mute">{label}. </span>
                 {ratio.meaningful === false ? ratio.reason : shown(ratio, kind)}
-                <span className="mt-0.5 block text-[12px] text-mute">{ratio.definition}</span>
-                {ratio.note ? <span className="mt-0.5 block text-[12px] text-mute">{ratio.note}</span> : null}
+                <span className="mt-0.5 block text-[13px] text-mute">{ratio.definition}</span>
+                {ratio.note ? <span className="mt-0.5 block text-[13px] text-mute">{ratio.note}</span> : null}
               </p>
             ) : null,
           )}
-          {missing.length ? <p className="text-[12px] leading-snug text-mute">Not in this filing: {missing.join(', ')}.</p> : null}
-          {note ? <p className="text-[12px] leading-snug text-mute">{note}</p> : null}
+          {missing.length ? <p className="text-[13px] leading-snug text-mute">Not in this filing: {missing.join(', ')}.</p> : null}
+          {note ? <p className="text-[13px] leading-snug text-mute">{note}</p> : null}
           {source ? (
-            <a href={source} target="_blank" rel="noreferrer" className="text-[12px] text-accent underline decoration-accent/30 underline-offset-2">
+            <a href={source} target="_blank" rel="noreferrer" className="text-[13px] text-accent underline decoration-accent/30 underline-offset-2">
               XBRL filing
             </a>
           ) : null}

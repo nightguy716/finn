@@ -39,20 +39,20 @@ export function IntroSheet({ open, onClose }: { open: boolean; onClose: () => vo
         onClose()
       }}
     >
-      <p className="font-mono text-[11px] text-mute">
+      <p className="font-mono text-[12px] text-mute">
         {step + 1} of {STEPS.length}
       </p>
       <h3 className="mt-2 text-[18px] leading-tight font-medium text-ink">{current.title}</h3>
-      <p className="mt-2 text-[15px] leading-snug text-ink">{current.body}</p>
-      <div className="mt-4 flex gap-2">
+      <p className="mt-2 text-[16px] leading-snug text-ink">{current.body}</p>
+      <div className="mt-4 flex gap-3">
         {step > 0 ? (
-          <button type="button" className="h-9 border border-line px-3 text-[13px]" onClick={() => setStep((value) => value - 1)}>
+          <button type="button" className="min-h-11 rounded-full border border-line px-4 text-[14px]" onClick={() => setStep((value) => value - 1)}>
             Back
           </button>
         ) : null}
         <button
           type="button"
-          className="h-9 border border-accent px-3 text-[13px] text-accent"
+          className="min-h-11 rounded-full border border-primary bg-primary px-4 text-[14px] text-white"
           onClick={() => {
             if (last) {
               setStep(0)
@@ -114,11 +114,11 @@ export function MenuSheet({
       ) : null}
       {page === 'watch' ? (
         <div>
-          <button type="button" className="text-[13px] text-accent" onClick={() => onPage('root')}>
+          <button type="button" className="min-h-11 rounded-full px-1 text-[14px] text-accent" onClick={() => onPage('root')}>
             Back
           </button>
-          <p className="mt-2 text-[13px] leading-snug text-mute">Watched filings stay at the top of the briefing.</p>
-          <div className="mt-3 flex flex-wrap gap-1.5">
+          <p className="mt-2 text-[14px] leading-snug text-mute">Watched filings stay at the top of the briefing.</p>
+          <div className="mt-3 flex flex-wrap gap-3">
             {WATCH.map((item) => {
               const on = watch.includes(item.id)
               return (
@@ -126,7 +126,7 @@ export function MenuSheet({
                   key={item.id}
                   type="button"
                   aria-pressed={on}
-                  className={`h-7 border px-2 text-[12px] ${on ? 'border-accent text-accent' : 'border-line'}`}
+                  className={`min-h-11 rounded-full border px-3 text-[13px] ${on ? 'border-primary text-primary' : 'border-line'}`}
                   onClick={() => onWatch(item.id)}
                 >
                   {item.label}
@@ -138,11 +138,11 @@ export function MenuSheet({
       ) : null}
       {page === 'portfolio' ? (
         <div>
-          <button type="button" className="text-[13px] text-accent" onClick={() => onPage('root')}>
+          <button type="button" className="min-h-11 rounded-full px-1 text-[14px] text-accent" onClick={() => onPage('root')}>
             Back
           </button>
-          <p className="mt-2 text-[13px] leading-snug text-mute">Tap a company to show only its filings. Tap again to put it back.</p>
-          <button type="button" className="mt-2 text-[13px] text-accent" onClick={onClear}>
+          <p className="mt-2 text-[14px] leading-snug text-mute">Tap a company to show only its filings. Tap again to put it back.</p>
+          <button type="button" className="mt-2 min-h-11 rounded-full px-1 text-[14px] text-accent" onClick={onClear}>
             Show all 18
           </button>
           <ul className="mt-2">
@@ -153,14 +153,14 @@ export function MenuSheet({
                   <button
                     type="button"
                     aria-pressed={on}
-                    className="flex w-full items-baseline justify-between gap-3 py-2 text-left"
+                    className="flex min-h-11 w-full items-baseline justify-between gap-3 py-3 text-left"
                     onClick={() => onToggle(company.symbol)}
                   >
                     <span>
-                      <span className="font-mono text-[12px]">{company.symbol}</span>
-                      <span className="mt-0.5 block text-[13px]">{company.company}</span>
+                      <span className="font-mono text-[13px]">{company.symbol}</span>
+                      <span className="mt-0.5 block text-[14px]">{company.company}</span>
                     </span>
-                    <span className={`font-mono text-[12px] ${on ? 'text-accent' : 'text-mute'}`}>{on ? 'On' : 'Off'}</span>
+                    <span className={`font-mono text-[13px] ${on ? 'text-accent' : 'text-mute'}`}>{on ? 'On' : 'Off'}</span>
                   </button>
                 </li>
               )
@@ -170,10 +170,10 @@ export function MenuSheet({
       ) : null}
       {page === 'method' ? (
         <div>
-          <button type="button" className="text-[13px] text-accent" onClick={() => onPage('root')}>
+          <button type="button" className="min-h-11 rounded-full px-1 text-[14px] text-accent" onClick={() => onPage('root')}>
             Back
           </button>
-          <ul className="mt-3 flex flex-col gap-2 text-[14px] leading-snug">
+          <ul className="mt-3 flex flex-col gap-3 text-[15px] leading-snug">
             <li>Primary sources only. No broker notes and no news.</li>
             <li>Filings come from NSE.</li>
             <li>EBITDA is derived and excludes other income.</li>
@@ -184,16 +184,16 @@ export function MenuSheet({
       ) : null}
       {page === 'theme' ? (
         <div>
-          <button type="button" className="text-[13px] text-accent" onClick={() => onPage('root')}>
+          <button type="button" className="min-h-11 rounded-full px-1 text-[14px] text-accent" onClick={() => onPage('root')}>
             Back
           </button>
-          <div className="mt-3 flex flex-col gap-2">
+          <div className="mt-3 flex flex-col gap-3">
             {(['system', 'light', 'dark'] as const).map((choice) => (
               <button
                 key={choice}
                 type="button"
                 aria-pressed={theme === choice}
-                className={`h-9 border px-3 text-left text-[14px] ${theme === choice ? 'border-accent text-accent' : 'border-line'}`}
+                className={`min-h-11 rounded-full border px-4 text-left text-[15px] ${theme === choice ? 'border-primary bg-primary/15 text-primary' : 'border-line'}`}
                 onClick={() => onTheme(choice)}
               >
                 {themeLabel(choice)}
@@ -209,9 +209,9 @@ export function MenuSheet({
 function MenuRow({ label, detail, onClick }: { label: string; detail?: string; onClick: () => void }) {
   return (
     <li className="border-b border-line">
-      <button type="button" className="flex w-full items-baseline justify-between gap-3 py-3 text-left" onClick={onClick}>
-        <span className="text-[15px]">{label}</span>
-        {detail ? <span className="font-mono text-[12px] text-mute">{detail}</span> : null}
+      <button type="button" className="flex min-h-11 w-full items-baseline justify-between gap-3 py-3.5 text-left" onClick={onClick}>
+        <span className="text-[16px]">{label}</span>
+        {detail ? <span className="font-mono text-[13px] text-mute">{detail}</span> : null}
       </button>
     </li>
   )

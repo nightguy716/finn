@@ -7,8 +7,8 @@ export function CompanySnapshot({ snapshot }: { snapshot: Snapshot }) {
   const margin = ratio(snapshot.pat, snapshot.revenue)
   return (
     <section className="mt-4">
-      <h2 className="text-[11px] tracking-[0.14em] text-mute uppercase">Snapshot</h2>
-      <p className="mt-2 text-[12px] text-mute">
+      <h2 className="text-[12px] tracking-[0.14em] text-mute uppercase">Snapshot</h2>
+      <p className="mt-2 text-[13px] text-mute">
         {snapshot.latest_quarter ? `Quarter ended ${dayLabel(snapshot.latest_quarter)}` : 'Latest quarter'}
       </p>
       <dl className="mt-1">
@@ -17,9 +17,9 @@ export function CompanySnapshot({ snapshot }: { snapshot: Snapshot }) {
         <Line label="PAT" value={crore(snapshot.pat)} unit="₹ crore" />
         {margin != null ? <Line label="PAT margin" value={percent(margin)} note="PAT ÷ revenue" /> : null}
       </dl>
-      <p className="mt-3 text-[12px] text-mute">Trailing twelve months</p>
+      <p className="mt-3 text-[13px] text-mute">Trailing twelve months</p>
       {snapshot.ttm_note ? (
-        <p className="mt-1 text-[13px] leading-snug">{snapshot.ttm_note}</p>
+        <p className="mt-1 text-[14px] leading-snug">{snapshot.ttm_note}</p>
       ) : (
         <dl className="mt-1">
           <Line label="Revenue" value={crore(snapshot.ttm_revenue)} unit="₹ crore" />
@@ -35,13 +35,13 @@ export function CompanySnapshot({ snapshot }: { snapshot: Snapshot }) {
 function Line({ label, value, unit, note }: { label: string; value: string; unit?: string; note?: string }) {
   return (
     <div className="flex items-baseline justify-between gap-3 border-t border-line py-1.5">
-      <dt className="text-[13px]">
+      <dt className="text-[14px]">
         {label}
-        {note ? <span className="mt-0.5 block text-[11px] text-mute">{note}</span> : null}
+        {note ? <span className="mt-0.5 block text-[12px] text-mute">{note}</span> : null}
       </dt>
-      <dd className="font-mono text-[14px] tabular-nums">
+      <dd className="font-mono text-[15px] tabular-nums">
         {value}
-        {unit && value !== '—' ? <span className="ml-1 text-[10px] text-mute">{unit}</span> : null}
+        {unit && value !== '—' ? <span className="ml-1 text-[11px] text-mute">{unit}</span> : null}
       </dd>
     </div>
   )
@@ -105,7 +105,7 @@ function QuarterChart({ points }: { points: SnapshotPoint[] }) {
           </text>
         ))}
       </svg>
-      <figcaption className="text-[11px] text-mute">Bars are revenue. The line is EBITDA margin, derived, and it excludes other income.</figcaption>
+      <figcaption className="text-[12px] text-mute">Bars are revenue. The line is EBITDA margin, derived, and it excludes other income.</figcaption>
     </figure>
   )
 }
