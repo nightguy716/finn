@@ -17,7 +17,7 @@ function Sources({ card }: { card: Card }) {
     ? fromSources
     : (card.source_urls ?? []).filter(Boolean).map((url) => ({ subject: '', url }))
   const links = filingLinks(raw)
-  if (!links.length) return <p className="mt-2 text-[12px] text-mute">No source link on this filing.</p>
+  if (!links.length) return <p className="mt-2 text-[13px] text-mute">No source link on this filing.</p>
   const onlyRaw = links.length === 1 && links[0].label.startsWith('XBRL')
   return (
     <div className="mt-2">
@@ -28,14 +28,14 @@ function Sources({ card }: { card: Card }) {
               href={source.url}
               target="_blank"
               rel="noreferrer"
-              className="text-[12px] leading-snug text-accent underline decoration-accent/30 underline-offset-2"
+              className="text-[13px] leading-snug text-accent underline decoration-accent/30 underline-offset-2"
             >
               {source.label}
             </a>
           </li>
         ))}
       </ul>
-      {onlyRaw ? <p className="mt-1 text-[12px] leading-snug text-mute">This file is machine-readable data, not a page to read.</p> : null}
+      {onlyRaw ? <p className="mt-1 text-[13px] leading-snug text-mute">This file is machine-readable data, not a page to read.</p> : null}
     </div>
   )
 }
@@ -44,11 +44,11 @@ function CardMeta({ card, hero = false, watching = false }: { card: Card; hero?:
   return (
     <div className="flex items-start justify-between gap-3">
       <p className="min-w-0">
-        <span className="font-mono text-[12px] text-mute">{card.symbol}</span>
+        <span className="font-mono text-[13px] text-mute">{card.symbol}</span>
         <span className={`mt-0.5 block leading-tight font-medium ${hero ? 'text-[20px]' : 'text-[16px]'}`}>{card.company}</span>
       </p>
-      {watching ? <span className="shrink-0 text-[11px] tracking-[0.12em] text-accent uppercase">Watching</span> : null}
-      <p className="shrink-0 font-mono text-[11px] tabular-nums text-mute">
+      {watching ? <span className="shrink-0 text-[12px] tracking-[0.12em] text-accent uppercase">Watching</span> : null}
+      <p className="shrink-0 font-mono text-[12px] tabular-nums text-mute">
         {dayLabel(card.timestamp)} {clock(card.timestamp)}
       </p>
     </div>
@@ -77,7 +77,7 @@ function Change({ label, line, which }: { label: string; line: MetricLine; which
   const pct = which === 'qoq' ? line.qoq_pct : line.yoy_pct
   const change = delta(line.current, base, pct)
   return (
-    <span className="inline-flex items-baseline gap-1 border border-line px-1 py-[1px] font-mono text-[10px] whitespace-nowrap tabular-nums">
+    <span className="inline-flex items-baseline gap-1 rounded-full border border-line px-1.5 py-[2px] font-mono text-[11px] whitespace-nowrap tabular-nums">
       <span className="text-mute">{label}</span>
       <span className={change?.tone === 'up' ? 'text-accent' : change?.tone === 'down' ? 'text-fall' : 'text-ink'}>
         {change ? change.text : '—'}
@@ -90,7 +90,7 @@ function Bars({ line }: { line: MetricLine }) {
   return (
     <span className="flex flex-col items-end">
       <Levels line={line} />
-      <span className="mt-0.5 font-mono text-[9px] tracking-tight text-mute">yr ago – prev qtr – now</span>
+      <span className="mt-0.5 font-mono text-[10px] tracking-tight text-mute">yr ago – prev qtr – now</span>
     </span>
   )
 }
@@ -107,8 +107,8 @@ function Detail({
   const line = metrics[openKey as 'revenue' | 'ebitda' | 'pbt' | 'pat']
   if (!line) return null
   return (
-    <div className="mt-2 flex items-center justify-between gap-3 border border-line px-2 py-2">
-      <p className="text-[12px] text-mute">{name}</p>
+    <div className="mt-2 flex items-center justify-between gap-3 rounded-2xl border border-line px-3 py-2.5">
+      <p className="text-[13px] text-mute">{name}</p>
       <Bars line={line} />
     </div>
   )
@@ -141,24 +141,24 @@ export function ResultsCard({
   const swing = largeSwing(metrics, hasEbitda)
   const cells = RESULT_METRICS.filter((item) => item.key !== 'ebitda' || hasEbitda)
   return (
-    <article id={card.id} className={`border bg-card px-3.5 py-2 ${hero ? 'border-accent' : 'border-line'}`}>
+    <article id={card.id} className={`rounded-2xl border bg-card px-4 py-3 ${hero ? 'border-accent' : 'border-line'}`}>
       <CardMeta card={card} hero={hero} watching={watching} />
-      {hero ? <p className="mt-2 text-[11px] tracking-[0.14em] text-accent uppercase">Lead result</p> : null}
-      <p className="mt-1 text-[12px] text-mute">
+      {hero ? <p className="mt-2 text-[12px] tracking-[0.14em] text-accent uppercase">Lead result</p> : null}
+      <p className="mt-1 text-[13px] text-mute">
         Results · {period}
         {card.body.scope ? ` · ${card.body.scope}` : ''}
       </p>
-      {line ? <p className="mt-2 text-[14px] leading-snug">{line}</p> : null}
+      {line ? <p className="mt-2 text-[15px] leading-snug">{line}</p> : null}
       {swing ? (
-        <p className="mt-1 text-[12px] leading-snug text-mute">
+        <p className="mt-1 text-[13px] leading-snug text-mute">
           Large swing. Check for one-off items; derived EBITDA includes exceptional items.
         </p>
       ) : null}
-      {card.body.error ? <p className="mt-2 text-[13px]">{card.body.error}</p> : null}
+      {card.body.error ? <p className="mt-2 text-[14px]">{card.body.error}</p> : null}
       {metrics ? (
         <div className="mt-2">
-          <p className="text-[11px] tracking-[0.08em] text-mute uppercase">₹ crore</p>
-          <div className="mt-1 grid grid-cols-2 gap-1">
+          <p className="text-[12px] tracking-[0.08em] text-mute uppercase">₹ crore</p>
+          <div className="mt-1 grid grid-cols-2 gap-3">
             {cells.map((item) => {
               const metric = metrics[item.key]
               const open = openKey === item.key
@@ -167,14 +167,14 @@ export function ResultsCard({
                   key={item.key}
                   type="button"
                   aria-expanded={open}
-                  className={`border px-1.5 py-1 text-left ${open ? 'border-accent' : 'border-line'}`}
+                  className={`min-h-11 rounded-2xl border px-2.5 py-2 text-left ${open ? 'border-accent' : 'border-line'}`}
                   onClick={() => setOpenKey(open ? null : item.key)}
                 >
-                  <span className="block text-[11px] text-mute">
+                  <span className="block text-[12px] text-mute">
                     {item.name}
                     {item.note ? <span className="ml-1">{item.note}</span> : null}
                   </span>
-                  <span className="mt-0.5 block font-mono text-[15px] tabular-nums">{metric ? crore(metric.current) : '—'}</span>
+                  <span className="mt-0.5 block font-mono text-[16px] tabular-nums">{metric ? crore(metric.current) : '—'}</span>
                   <span className="mt-1 flex flex-wrap gap-1">
                     {metric ? (
                       <>
@@ -182,20 +182,20 @@ export function ResultsCard({
                         <Change label="YoY" line={metric} which="yoy" />
                       </>
                     ) : (
-                      <span className="font-mono text-[11px] text-mute">—</span>
+                      <span className="font-mono text-[12px] text-mute">—</span>
                     )}
                   </span>
                 </button>
               )
             })}
           </div>
-          {reason ? <p className="mt-1.5 text-[12px] leading-snug text-mute">{reason}</p> : null}
+          {reason ? <p className="mt-1.5 text-[13px] leading-snug text-mute">{reason}</p> : null}
           {openKey ? (
             <Detail metrics={metrics} openKey={openKey} name={cells.find((item) => item.key === openKey)?.name ?? openKey} />
           ) : null}
         </div>
       ) : (
-        <p className="mt-2 text-[13px] text-mute">Figures are not on this card.</p>
+        <p className="mt-2 text-[14px] text-mute">Figures are not on this card.</p>
       )}
       <Sources card={card} />
       <ResearchCompany onResearch={onResearch} />
@@ -217,28 +217,28 @@ export function ManagementCard({
   const missing = card.body.profile_note?.trim() || 'The disclosure has no biographical profile.'
   const kind = card.body.change_type ? sentenceCase(card.body.change_type) : categoryLabel(card.category)
   return (
-    <article id={card.id} className="border border-line bg-card px-3.5 py-3">
+    <article id={card.id} className="rounded-2xl border border-line bg-card px-4 py-3">
       <CardMeta card={card} watching={watching} />
-      <p className="mt-2 text-[11px] tracking-[0.14em] text-accent uppercase">{kind}</p>
+      <p className="mt-2 text-[12px] tracking-[0.14em] text-accent uppercase">{kind}</p>
       <h3 className="mt-1 text-[16px] leading-tight font-medium">{card.body.person || card.headline}</h3>
-      {card.body.role ? <p className="mt-0.5 text-[13px] leading-snug">{card.body.role}</p> : null}
-      <p className="mt-1 font-mono text-[12px] text-mute">
+      {card.body.role ? <p className="mt-0.5 text-[14px] leading-snug">{card.body.role}</p> : null}
+      <p className="mt-1 font-mono text-[13px] text-mute">
         {card.body.effective_date ? `Effective ${card.body.effective_date}` : 'Effective date not in the filing'}
       </p>
       {profile ? (
         <div className="mt-2">
           <button
             type="button"
-            className="text-[13px] text-accent"
+            className="min-h-11 rounded-full px-1 text-[14px] text-accent"
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
           >
             {open ? 'Hide profile' : 'Profile from the filing'}
           </button>
-          {open ? <p className="mt-1.5 text-[13px] leading-snug">{profile}</p> : null}
+          {open ? <p className="mt-1.5 text-[14px] leading-snug">{profile}</p> : null}
         </div>
       ) : (
-        <p className="mt-2 text-[13px] text-mute">{missing}</p>
+        <p className="mt-2 text-[14px] text-mute">{missing}</p>
       )}
       <Sources card={card} />
       <ResearchCompany onResearch={onResearch} />
@@ -257,10 +257,10 @@ export function MaterialCard({
 }) {
   const line = card.body.line?.trim() || card.headline
   return (
-    <article id={card.id} className="border border-line bg-card px-3.5 py-3">
+    <article id={card.id} className="rounded-2xl border border-line bg-card px-4 py-3">
       <CardMeta card={card} watching={watching} />
-      <p className="mt-2 text-[11px] tracking-[0.14em] text-accent uppercase">{categoryLabel(card.category)}</p>
-      <p className="mt-1.5 text-[14px] leading-snug">{line}</p>
+      <p className="mt-2 text-[12px] tracking-[0.14em] text-accent uppercase">{categoryLabel(card.category)}</p>
+      <p className="mt-1.5 text-[15px] leading-snug">{line}</p>
       <Sources card={card} />
       <ResearchCompany onResearch={onResearch} />
     </article>

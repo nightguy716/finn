@@ -29,7 +29,7 @@ function todayIST(): string {
 function loadTheme(): ThemeChoice {
   const stored = localStorage.getItem(THEME_KEY)
   if (stored === 'light' || stored === 'dark' || stored === 'system') return stored
-  return 'system'
+  return 'dark'
 }
 
 export default function App() {
@@ -59,13 +59,13 @@ export default function App() {
     const dark =
       theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
     document.documentElement.dataset.theme = dark ? 'dark' : 'light'
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#171611' : '#f3f1eb')
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#0b1224' : '#f3f5fb')
     localStorage.setItem(THEME_KEY, theme)
     if (theme !== 'system') return
     const media = window.matchMedia('(prefers-color-scheme: dark)')
     const onChange = () => {
       document.documentElement.dataset.theme = media.matches ? 'dark' : 'light'
-      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', media.matches ? '#171611' : '#f3f1eb')
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', media.matches ? '#0b1224' : '#f3f5fb')
     }
     media.addEventListener('change', onChange)
     return () => media.removeEventListener('change', onChange)
@@ -173,7 +173,7 @@ export default function App() {
             />
           )}
         </main>
-        <nav className="flex shrink-0 border-t border-line bg-paper pb-[env(safe-area-inset-bottom)]" aria-label="Primary">
+        <nav className="flex shrink-0 gap-3 border-t border-line bg-paper px-3 pb-[env(safe-area-inset-bottom)] pt-1" aria-label="Primary">
           <TabButton current={tab === 'briefing'} onClick={() => setTab('briefing')}>
             Briefing
           </TabButton>
@@ -236,7 +236,7 @@ function TabButton({ current, onClick, children }: { current: boolean; onClick: 
   return (
     <button
       type="button"
-      className={`h-12 flex-1 text-[13px] ${current ? 'text-accent' : 'text-mute'}`}
+      className={`min-h-11 flex-1 rounded-full text-[15px] ${current ? 'text-primary' : 'text-mute'}`}
       aria-current={current ? 'page' : undefined}
       onClick={onClick}
     >

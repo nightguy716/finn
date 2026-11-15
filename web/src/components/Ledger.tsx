@@ -34,15 +34,15 @@ export function LedgerView({ ledger, books = null, booksWaiting = false }: { led
 
   return (
     <div className="mt-4">
-      {verdict && verdict !== note ? <p className="text-[15px] leading-snug">{verdict}</p> : null}
+      {verdict && verdict !== note ? <p className="text-[16px] leading-snug">{verdict}</p> : null}
       {coverage ? (
-        <p className="mt-2 inline-block border border-line px-2 py-1 font-mono text-[11px] text-mute">
+        <p className="mt-2 inline-block rounded-full border border-line px-3 py-1.5 font-mono text-[12px] text-mute">
           {coverage.transcripts_found} of {coverage.transcripts_of} transcripts, {coverage.quarters_with_results} quarters of results
         </p>
       ) : null}
-      {note ? <p className="mt-2 text-[14px] leading-snug">{note}</p> : null}
+      {note ? <p className="mt-2 text-[15px] leading-snug">{note}</p> : null}
       {!verdict && !note && scored.length === 0 ? (
-        <p className="mt-2 text-[14px] leading-snug">No consolidated guidance in these transcripts can be checked.</p>
+        <p className="mt-2 text-[15px] leading-snug">No consolidated guidance in these transcripts can be checked.</p>
       ) : null}
 
       {ledger.snapshot ? <Glance series={ledger.snapshot.series} /> : null}
@@ -53,11 +53,11 @@ export function LedgerView({ ledger, books = null, booksWaiting = false }: { led
         <div className="mt-5 flex flex-col gap-4">
           {scored.map((group) => (
             <section key={group.status}>
-              <h2 className={`text-[11px] tracking-[0.14em] uppercase ${group.tone || 'text-mute'}`}>
+              <h2 className={`text-[12px] tracking-[0.14em] uppercase ${group.tone || 'text-mute'}`}>
                 {group.label}
                 <span className="ml-2 font-mono">{group.rows.length}</span>
               </h2>
-              <div className="mt-2 flex flex-col gap-2">
+              <div className="mt-2 flex flex-col gap-3">
                 {group.rows.map((row) => (
                   <ScoredRow key={rowKey(row)} row={row} tone={group.tone} />
                 ))}
@@ -69,16 +69,16 @@ export function LedgerView({ ledger, books = null, booksWaiting = false }: { led
 
       {revisions.length ? (
         <section className="mt-5">
-          <h2 className="text-[11px] tracking-[0.14em] text-mute uppercase">Revisions</h2>
+          <h2 className="text-[12px] tracking-[0.14em] text-mute uppercase">Revisions</h2>
           <div className="mt-2 flex flex-col gap-3">
             {revisions.map((row) => (
-              <div key={rowKey(row)} className="border border-line bg-card px-3 py-2">
-                <p className="text-[13px] leading-snug">{row.promise}</p>
+              <div key={rowKey(row)} className="rounded-2xl border border-line bg-card px-4 py-3">
+                <p className="text-[14px] leading-snug">{row.promise}</p>
                 <ol className="mt-2 border-l border-line pl-3">
                   {(row.revisions ?? []).map((step, index) => (
                     <li key={`${step.date}-${index}`} className="pb-2">
-                      <p className="font-mono text-[11px] text-mute tabular-nums">{step.date ? dayLabel(step.date) : 'Date not stated'}</p>
-                      <p className="text-[13px]">
+                      <p className="font-mono text-[12px] text-mute tabular-nums">{step.date ? dayLabel(step.date) : 'Date not stated'}</p>
+                      <p className="text-[14px]">
                         <span className="font-mono tabular-nums">{step.value}</span>
                         <span className="ml-2 text-mute">{step.superseded ? 'superseded' : changeWord(step)}</span>
                       </p>
@@ -116,10 +116,10 @@ function ScoredRow({ row, tone }: { row: LedgerRow; tone?: string }) {
   const note = (row.note || '').trim()
   const borderline = row.status === 'borderline'
   return (
-    <article className={`border bg-card ${borderline ? 'border-amber' : 'border-line'}`}>
-      <button type="button" className="w-full px-3 py-2.5 text-left" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
-        <span className="block text-[14px] leading-snug">{row.promise}</span>
-        <span className="mt-1 flex items-baseline justify-between gap-3 font-mono text-[12px] tabular-nums">
+    <article className={`overflow-hidden rounded-2xl border bg-card ${borderline ? 'border-amber' : 'border-line'}`}>
+      <button type="button" className="min-h-11 w-full px-4 py-3 text-left" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
+        <span className="block text-[15px] leading-snug">{row.promise}</span>
+        <span className="mt-1 flex items-baseline justify-between gap-3 font-mono text-[13px] tabular-nums">
           <span className={tone || ''}>
             {row.promised || '—'}
             <span className="mx-1 text-mute">against</span>
@@ -130,17 +130,17 @@ function ScoredRow({ row, tone }: { row: LedgerRow; tone?: string }) {
       </button>
       <RowNotes row={row} pad />
       {borderline ? (
-        <p className="px-3 pb-2.5 text-[12px] leading-snug text-amber">
+        <p className="px-4 pb-3 text-[13px] leading-snug text-amber">
           The figure is derived and sits within about 60 bps of the band edge.
         </p>
       ) : null}
       {open ? (
-        <div className="border-t border-line px-3 py-2.5">
-          {row.source_quote ? <p className="text-[13px] leading-snug">“{row.source_quote}”</p> : null}
-          <p className="mt-2 text-[12px] text-mute">{row.speaker?.trim() ? `Speaker ${row.speaker.trim()}` : 'Speaker not named'}</p>
+        <div className="border-t border-line px-4 py-3">
+          {row.source_quote ? <p className="text-[14px] leading-snug">“{row.source_quote}”</p> : null}
+          <p className="mt-2 text-[13px] text-mute">{row.speaker?.trim() ? `Speaker ${row.speaker.trim()}` : 'Speaker not named'}</p>
           <Source row={row} />
-          {arithmetic ? <p className="mt-2 text-[13px] leading-snug">{arithmetic}</p> : null}
-          {note && note !== arithmetic ? <p className="mt-1 text-[13px] leading-snug text-mute">{note}</p> : null}
+          {arithmetic ? <p className="mt-2 text-[14px] leading-snug">{arithmetic}</p> : null}
+          {note && note !== arithmetic ? <p className="mt-1 text-[14px] leading-snug text-mute">{note}</p> : null}
         </div>
       ) : null}
     </article>
@@ -151,18 +151,18 @@ function PlainRow({ row }: { row: LedgerRow }) {
   const ambiguous = ambiguousReadings(row)
   return (
     <article className="border-t border-line py-2.5">
-      <p className="text-[14px] leading-snug">{row.promise}</p>
+      <p className="text-[15px] leading-snug">{row.promise}</p>
       {ambiguous ? (
         <>
-          <p className="mt-1 text-[13px] leading-snug">{ambiguous}</p>
-          <p className="mt-1 text-[13px] leading-snug text-mute">
+          <p className="mt-1 text-[14px] leading-snug">{ambiguous}</p>
+          <p className="mt-1 text-[14px] leading-snug text-mute">
             We do not score it because the quote does not define the margin, and the two readings disagree.
           </p>
         </>
       ) : (
-        <p className="mt-1 text-[13px] leading-snug text-mute">{plainReason(row)}</p>
+        <p className="mt-1 text-[14px] leading-snug text-mute">{plainReason(row)}</p>
       )}
-      {row.source_quote ? <p className="mt-1 text-[13px] leading-snug">“{row.source_quote}”</p> : null}
+      {row.source_quote ? <p className="mt-1 text-[14px] leading-snug">“{row.source_quote}”</p> : null}
       <RowNotes row={row} />
       <Source row={row} />
     </article>
@@ -174,9 +174,9 @@ function RowNotes({ row, pad = false }: { row: LedgerRow; pad?: boolean }) {
   const definition = (row.definition_note || '').trim()
   if (!definition && !mapped) return null
   return (
-    <div className={pad ? 'px-3 pb-2' : 'mt-1'}>
-      {definition ? <p className="text-[12px] leading-snug text-mute">{definition}</p> : null}
-      {mapped ? <p className={`text-[12px] leading-snug text-mute ${definition ? 'mt-1' : ''}`}>{mapped}</p> : null}
+    <div className={pad ? 'px-4 pb-2' : 'mt-1'}>
+      {definition ? <p className="text-[13px] leading-snug text-mute">{definition}</p> : null}
+      {mapped ? <p className={`text-[13px] leading-snug text-mute ${definition ? 'mt-1' : ''}`}>{mapped}</p> : null}
     </div>
   )
 }
@@ -201,7 +201,7 @@ function Source({ row }: { row: LedgerRow }) {
   const url = row.source_document || ''
   const name = fileName(url)
   return (
-    <p className="mt-1 text-[12px]">
+    <p className="mt-1 text-[13px]">
       {url ? (
         <a href={url} target="_blank" rel="noreferrer" className="text-accent underline decoration-accent/30 underline-offset-2">
           {name}
@@ -218,15 +218,15 @@ function Fold({ title, count, startOpen, children }: { title: string; count: num
   const [open, setOpen] = useState(startOpen)
   if (!count) return null
   return (
-    <section className="mt-4 border border-line bg-card">
-      <button type="button" className="flex w-full items-center justify-between gap-3 px-3 py-3 text-left" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
-        <span className="text-[14px] leading-snug">
+    <section className="mt-4 overflow-hidden rounded-2xl border border-line bg-card">
+      <button type="button" className="flex min-h-11 w-full items-center justify-between gap-3 px-4 py-3 text-left" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
+        <span className="text-[15px] leading-snug">
           {title}
-          <span className="ml-2 font-mono text-[12px] text-mute">{count}</span>
+          <span className="ml-2 font-mono text-[13px] text-mute">{count}</span>
         </span>
-        <span className="font-mono text-[12px] text-mute">{open ? 'Hide' : 'Show'}</span>
+        <span className="font-mono text-[13px] text-mute">{open ? 'Hide' : 'Show'}</span>
       </button>
-      {open ? <div className="border-t border-line px-3">{children}</div> : null}
+      {open ? <div className="border-t border-line px-4">{children}</div> : null}
     </section>
   )
 }

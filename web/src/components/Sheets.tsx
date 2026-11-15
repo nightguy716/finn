@@ -44,21 +44,21 @@ export function SheetFrame({ open, title, onClose, children, front = false }: Sh
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="absolute inset-x-0 bottom-0 max-h-[78%] overflow-y-auto border-t border-line bg-card"
+            className="absolute inset-x-0 bottom-0 max-h-[78%] overflow-y-auto rounded-t-2xl border-t border-line bg-card"
             initial={{ y: reduce ? 0 : '100%' }}
             animate={{ y: 0 }}
             exit={{ y: reduce ? 0 : '100%' }}
             transition={transition}
           >
             <div className="sticky top-0 flex items-center justify-between border-b border-line bg-card px-4 py-3">
-              <h2 id={titleId} className="text-[15px] font-medium">
+              <h2 id={titleId} className="text-[16px] font-medium">
                 {title}
               </h2>
-              <button type="button" className="text-[13px] text-accent" onClick={onClose} autoFocus>
+              <button type="button" className="min-h-11 rounded-full px-3 text-[14px] text-accent" onClick={onClose} autoFocus>
                 Close
               </button>
             </div>
-            <div className="px-4 py-3 pb-[max(12px,env(safe-area-inset-bottom))]">{children}</div>
+            <div className="px-4 py-4 pb-[max(12px,env(safe-area-inset-bottom))]">{children}</div>
           </motion.div>
         </div>
       ) : null}
@@ -84,30 +84,30 @@ export function AlertSheet({
     <SheetFrame open={alert != null} title={alert ? alert.symbol : 'Move'} onClose={onClose}>
       {alert ? (
         <div className="flex flex-col gap-3">
-          <p className="text-[13px] text-mute">{alert.company}</p>
-          <p className="font-mono text-[13px] tabular-nums">
+          <p className="text-[14px] text-mute">{alert.company}</p>
+          <p className="font-mono text-[14px] tabular-nums">
             {dayLabel(alert.date)} · close {alert.close.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
-          <p className={`font-mono text-[13px] tabular-nums ${moveTone(alert.signed_move_pct)}`}>
+          <p className={`font-mono text-[14px] tabular-nums ${moveTone(alert.signed_move_pct)}`}>
             {moveText(alert.signed_move_pct, alert.move_pct)}
             {alert.volume_ratio == null ? ' · volume multiple unavailable' : ` · volume ${alert.volume_ratio.toFixed(2)}× vs 20-day avg`}
           </p>
-          <p className="text-[12px] text-mute">Filings around this move.</p>
+          <p className="text-[13px] text-mute">Filings around this move.</p>
           <ul className="flex flex-col">
             {alert.events.map((event) => (
               <li key={event.id} className="border-t border-line py-2">
-                <p className="font-mono text-[11px] text-mute">{relativeToMove(event.timestamp, alert.date)}</p>
-                <p className="mt-0.5 text-[11px] tracking-[0.12em] text-accent uppercase">{categoryLabel(event.category)}</p>
-                <p className="mt-0.5 text-[14px] leading-snug">{event.summary?.trim() || categoryLabel(event.category)}</p>
+                <p className="font-mono text-[12px] text-mute">{relativeToMove(event.timestamp, alert.date)}</p>
+                <p className="mt-0.5 text-[12px] tracking-[0.12em] text-accent uppercase">{categoryLabel(event.category)}</p>
+                <p className="mt-0.5 text-[15px] leading-snug">{event.summary?.trim() || categoryLabel(event.category)}</p>
                 {known.has(event.id) ? (
-                  <button type="button" className="mt-1 text-[12px] text-accent underline" onClick={() => onJump(event.id)}>
+                  <button type="button" className="mt-1 min-h-11 rounded-full px-1 text-[13px] text-accent underline" onClick={() => onJump(event.id)}>
                     Show in the brief
                   </button>
                 ) : null}
               </li>
             ))}
           </ul>
-          {alert.events.length === 0 ? <p className="text-[14px]">No filings were attached to this move.</p> : null}
+          {alert.events.length === 0 ? <p className="text-[15px]">No filings were attached to this move.</p> : null}
           <button type="button" className="research-company" onClick={() => onResearch(alert.symbol)}>
             Research this company
           </button>
@@ -151,16 +151,16 @@ export function SettingsSheet({
 
   return (
     <SheetFrame open={open} title="Mover thresholds" onClose={onClose}>
-      <p className="text-[13px] leading-snug text-mute">
+      <p className="text-[14px] leading-snug text-mute">
         A price move beyond this, or volume above this multiple of the recent average, shows in the strip.
       </p>
-      <p className="mt-2 text-[12px] text-mute">
+      <p className="mt-2 text-[13px] text-mute">
         {defaults
           ? `Default ${formatNum(defaults.move_pct)}% and ${formatNum(defaults.volume_n)}×.`
           : 'Reading the defaults.'}
       </p>
       <label className="mt-4 block">
-        <span className="flex items-baseline justify-between text-[13px]">
+        <span className="flex items-baseline justify-between text-[14px]">
           Price move
           <span className="font-mono tabular-nums">{formatNum(draftMove)}%</span>
         </span>
@@ -176,7 +176,7 @@ export function SettingsSheet({
         />
       </label>
       <label className="mt-4 block">
-        <span className="flex items-baseline justify-between text-[13px]">
+        <span className="flex items-baseline justify-between text-[14px]">
           Volume multiple
           <span className="font-mono tabular-nums">{formatNum(draftVolume)}×</span>
         </span>
@@ -191,11 +191,11 @@ export function SettingsSheet({
           onChange={(event) => setDraftVolume(Number(event.target.value))}
         />
       </label>
-      <p className="mt-3 text-[12px] text-mute">The strip updates from the live feed a moment after a slider moves.</p>
+      <p className="mt-3 text-[13px] text-mute">The strip updates from the live feed a moment after a slider moves.</p>
       {defaults ? (
         <button
           type="button"
-          className="mt-3 text-[13px] text-accent"
+          className="mt-3 min-h-11 rounded-full px-3 text-[14px] text-accent"
           onClick={() => {
             setDraftMove(defaults.move_pct)
             setDraftVolume(defaults.volume_n)
